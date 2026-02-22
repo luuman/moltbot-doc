@@ -1,0 +1,155 @@
+---
+title: 在 Render 上部署
+---
+
+使用基础设施即代码在 Render 上部署 Moltbot。包含的 `render.yaml` 蓝图以声明方式定义整个堆栈、服务、磁盘、环境变量，因此您可以一键部署并与代码一起版本化您的基础设施。
+
+## 先决条件
+
+- 一个 [Render 账户](https://render.com)（提供免费套餐）
+- 来自您首选 [模型提供者](/providers) 的 API 密钥
+
+## 使用 Render 蓝图部署
+
+<a href="https://render.com/deploy?repo=https://github.com/moltbot/moltbot" target="_blank" rel="noreferrer">部署到 Render</a>
+
+点击此链接将：
+
+1. 从本仓库根目录的 `render.yaml` 蓝图创建一个新的 Render 服务。
+2. 提示您设置 `SETUP_PASSWORD`
+3. 构建 Docker 镜像并部署
+
+部署后，您的服务 URL 遵循 `https://<service-name>.onrender.com` 模式。
+
+## 了解蓝图
+
+Render 蓝图是定义基础设施的 YAML 文件。此仓库中的 `render.yaml` 配置了运行 Moltbot 所需的一切：
+
+```yaml
+services:
+  - type: web
+    name: moltbot
+    runtime: docker
+    plan: starter
+    healthCheckPath: /health
+    envVars:
+      - key: PORT
+        value: "8080"
+      - key: SETUP_PASSWORD
+        sync: false          # 部署期间提示
+      - key: CLAWDBOT_STATE_DIR
+        value: /data/.clawdbot
+      - key: CLAWDBOT_WORKSPACE_DIR
+        value: /data/workspace
+      - key: CLAWDBOT_GATEWAY_TOKEN
+        generateValue: true  # 自动生成安全令牌
+    disk:
+      name: moltbot-data
+      mountPath: /data
+      sizeGB: 1
+```
+
+使用的关键蓝图功能：
+
+| 功能 | 用途 |
+|---------|---------|
+| `runtime: docker` | 从仓库的 Dockerfile 构建 |
+| `healthCheckPath` | Render 监控 `/health` 并重启不健康的实例 |
+| `sync: false` | 部署期间提示值（密钥） |
+| `generateValue: true` | 自动生成密码学安全值 |
+| `disk` | 持久存储，可承受重新部署 |
+
+## 选择计划
+
+| 计划 | 关闭 | 磁盘 | 最适合 |
+|------|-----------|------|----------|
+| 免费 | 空闲 15 分钟后 | 不可用 | 测试、演示 |
+| 入门 | 从不 | 1GB+ | 个人使用、小团队 |
+| 标准+ | 从不 | 1GB+ | 生产环境、多个渠道 |
+
+蓝图默认为 `starter`。要使用免费套餐，请在您的复刻仓库的 `render.yaml` 中更改为 `plan: free`（但请注意：没有持久磁盘意味着每次部署都会重置配置）。
+
+## 部署后
+
+### 完成设置向导
+
+1. 导航到 `https://<your-service>.onrender.com/setup`
+2. 输入您的 `SETUP_PASSWORD`
+3. 选择模型提供者并粘贴您的 API 密钥
+4. 可选地配置消息通道（Telegram、Discord、Slack）
+5. 点击 **运行设置**
+
+### 访问控制界面
+
+Web 仪表板可在 `https://<your-service>.onrender.com/moltbot` 获得。
+
+## Render 仪表板功能
+
+### 日志
+
+在 **仪表板 → 您的服务 → 日志** 中查看实时日志。按以下内容过滤：
+- 构建日志（Docker 镜像创建）
+- 部署日志（服务启动）
+- 运行时日志（应用程序输出）
+
+### Shell 访问
+
+对于调试，通过 **仪表板 → 您的服务 → Shell** 打开 shell 会话。持久磁盘挂载在 `/data`。
+
+### 环境变量
+
+在 **仪表板 → 您的服务 → 环境** 中修改变量。更改会触发自动重新部署。
+
+### 自动部署
+
+如果您使用原始 Moltbot 仓库，Render 不会自动部署您的 Moltbot。要更新它，请从仪表板运行手动蓝图同步。
+
+## 自定义域名
+
+1. 前往 **仪表板 → 您的服务 → 设置 → 自定义域名**
+2. 添加您的域名
+3. 按指示配置 DNS（CNAME 到 `*.onrender.com`）
+4. Render 自动提供 TLS 证书
+
+## 扩展
+
+Render 支持水平和垂直扩展：
+
+- **垂直**：更改计划以获得更多 CPU/RAM
+- **水平**：增加实例计数（标准计划及以上）
+
+对于 Moltbot，通常垂直扩展就足够了。水平扩展需要粘性会话或外部状态管理。
+
+## 备份和迁移
+
+随时导出您的配置和工作区：
+
+```
+https://<your-service>.onrender.com/setup/export
+```
+
+这会下载一个可移植备份，您可以在任何 Moltbot 主机上恢复。
+
+## 故障排除
+
+### 服务无法启动
+
+在 Render 仪表板中检查部署日志。常见问题：
+
+- 缺少 `SETUP_PASSWORD` — 蓝图会提示此问题，但请验证是否已设置
+- 端口不匹配 — 确保 `PORT=8080` 与 Dockerfile 中暴露的端口匹配
+
+### 冷启动缓慢（免费套餐）
+
+免费套餐服务在 15 分钟不活动后关闭。关闭后的第一次请求需要几秒钟，因为容器正在启动。升级到入门计划以获得始终在线。
+
+### 重新部署后数据丢失
+
+这发生在免费套餐上（没有持久磁盘）。升级到付费计划，或定期通过 `/setup/export` 导出您的配置。
+
+### 健康检查失败
+
+Render 期望在 30 秒内从 `/health` 获得 200 响应。如果构建成功但部署失败，服务启动时间可能过长。检查：
+
+- 构建日志中的错误
+- 容器是否在本地使用 `docker build && docker run` 运行
