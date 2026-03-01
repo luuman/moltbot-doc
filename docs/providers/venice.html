@@ -1,0 +1,417 @@
+<!doctype html>
+<html lang="zh" dir="ltr" class="docs-wrapper plugin-docs plugin-id-default docs-version-current docs-doc-page docs-doc-id-providers/venice" data-has-hydrated="false">
+<head>
+<meta charset="UTF-8">
+<meta name="generator" content="Docusaurus v3.9.2">
+<title data-rh="true">Venice AI (Venice highlight) | Moltbot Docs</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:url" content="https://luuman.github.io/moltbot-doc/docs/providers/venice"><meta data-rh="true" property="og:locale" content="zh"><meta data-rh="true" name="docusaurus_locale" content="zh"><meta data-rh="true" name="docsearch:language" content="zh"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="Venice AI (Venice highlight) | Moltbot Docs"><meta data-rh="true" name="description" content="Venice is our highlight Venice setup for privacy-first inference with optional anonymized access to proprietary models."><meta data-rh="true" property="og:description" content="Venice is our highlight Venice setup for privacy-first inference with optional anonymized access to proprietary models."><link data-rh="true" rel="icon" href="/moltbot-doc/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://luuman.github.io/moltbot-doc/docs/providers/venice"><link data-rh="true" rel="alternate" href="https://luuman.github.io/moltbot-doc/docs/providers/venice" hreflang="zh"><link data-rh="true" rel="alternate" href="https://luuman.github.io/moltbot-doc/docs/providers/venice" hreflang="x-default"><link rel="alternate" type="application/rss+xml" href="/moltbot-doc/blog/rss.xml" title="Moltbot Docs RSS Feed">
+<link rel="alternate" type="application/atom+xml" href="/moltbot-doc/blog/atom.xml" title="Moltbot Docs Atom Feed"><link rel="stylesheet" href="/moltbot-doc/assets/css/styles.484b4c98.css">
+<script src="/moltbot-doc/assets/js/runtime~main.6cf495cf.js" defer="defer"></script>
+<script src="/moltbot-doc/assets/js/main.f9205183.js" defer="defer"></script>
+</head>
+<body class="navigation-with-keyboard">
+<svg style="display: none;"><defs>
+<symbol id="theme-svg-external-link" viewBox="0 0 24 24"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"/></symbol>
+</defs></svg>
+<script>!function(){var t=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme")}catch(t){}}();document.documentElement.setAttribute("data-theme",t||"dark"),document.documentElement.setAttribute("data-theme-choice",t||"dark")}(),function(){try{const c=new URLSearchParams(window.location.search).entries();for(var[t,e]of c)if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id="__docusaurus"><div role="region" aria-label="跳到主要内容"><a class="skipToContent_fXgn" href="#__docusaurus_skipToContent_fallback">跳到主要内容</a></div><nav class="navbar navbar--fixed-top navbar_MONK" role="navigation" aria-label="Main"><div class="navbarInner_ASTH"><div class="navbarLeft_pUmY"><button aria-label="切换导航栏" aria-expanded="false" class="navbar__toggle clean-btn" type="button"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg></button><a class="brand_SXL9" href="/moltbot-doc/"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="24" height="24" rx="6" fill="var(--ifm-color-primary)"></rect><path d="M7 8.5h10M7 12h7M7 15.5h10" stroke="white" stroke-width="1.8" stroke-linecap="round"></path></svg><span class="brandTitle_XbyU">Moltbot</span></a><div class="dropdown_GrgZ"><button class="dropdownToggle_Nf_z">全部站点<svg class="dropdownArrow_Eka8" viewBox="0 0 12 12" fill="none"><path d="M2 4l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg></button><ul class="dropdownMenu_zsxH"><li><a href="https://luuman.github.io/docs-workspace/docs" class="dropdownMenuItem_VBaP">Workspace</a></li><li><a href="https://luuman.github.io/claude-doc/docs" class="dropdownMenuItem_VBaP">Claude</a></li><li><a href="https://luuman.github.io/electron-doc/docs" class="dropdownMenuItem_VBaP">Electron</a></li><li><a href="https://luuman.github.io/tauri-doc/docs" class="dropdownMenuItem_VBaP">Tauri</a></li><li><a href="https://luuman.github.io/matrx-doc/docs" class="dropdownMenuItem_VBaP">Matrx</a></li><li><a href="https://luuman.github.io/brainboard-doc/docs" class="dropdownMenuItem_VBaP">Brainboard</a></li><li><a href="https://luuman.github.io/synology-doc/docs" class="dropdownMenuItem_VBaP">Synology</a></li><li><a href="https://luuman.github.io/codex-doc/docs" class="dropdownMenuItem_VBaP">Codex</a></li><li><a href="https://luuman.github.io/ai-doc/docs" class="dropdownMenuItem_VBaP">AI</a></li></ul></div></div><div class="navbarCenter_Zdr3"><div class="root_OF3s"><span class="icon_UcOK" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor" width="15" height="15"><path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"></path></svg></span><div class="slot__FGx"><div class="navbar__search searchBarContainer_NW3z" dir="ltr"><input placeholder="搜索" aria-label="Search" class="navbar__search-input searchInput_YFbd" value=""><div class="loadingRing_RJI3 searchBarLoadingRing_YnHq"><div></div><div></div><div></div><div></div></div></div></div></div></div><div class="navbarRight_q16u"><a class="navLink_RnnM" href="/moltbot-doc/docs">Docs</a><a class="navLink_RnnM" href="/moltbot-doc/blog">Blog</a><button class="themeToggle_zD_x" aria-label="Switch to light theme" title="Light"><svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M12 18a6 6 0 1 1 0-12 6 6 0 0 1 0 12zm0-2a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM11 1h2v3h-2V1zm0 19h2v3h-2v-3zM3.515 4.929l1.414-1.414L7.05 5.636 5.636 7.05 3.515 4.93zM16.95 18.364l1.414-1.414 2.121 2.121-1.414 1.414-2.121-2.121zm2.121-14.85l1.414 1.415-2.121 2.121-1.414-1.414 2.121-2.121zM5.636 16.95l1.414 1.414-2.121 2.121-1.414-1.414 2.121-2.121zM23 11v2h-3v-2h3zM4 11v2H1v-2h3z"></path></svg></button></div></div></nav><div id="__docusaurus_skipToContent_fallback" class="theme-layout-main main-wrapper mainWrapper_z2l0"><div class="docsWrapper_hBAB"><button aria-label="回到顶部" class="clean-btn theme-back-to-top-button backToTopButton_sjWU" type="button"></button><div class="docRoot_UBD9"><main class="docMainContainer_TBSr docMainContainerEnhanced_lQrH"><div class="container padding-top--md padding-bottom--lg"><div class="row"><div class="col docItemCol_VOVn"><div class="docItemContainer_Djhp"><article><div class="tocCollapsible_ETCw theme-doc-toc-mobile tocMobile_ITEo"><button type="button" class="clean-btn tocCollapsibleButton_TO0P">本页总览</button></div><div class="theme-doc-markdown markdown"><header><h1>Venice AI (Venice highlight)</h1></header>
+<p><strong>Venice</strong> is our highlight Venice setup for privacy-first inference with optional anonymized access to proprietary models.</p>
+<p>Venice AI provides privacy-focused AI inference with support for uncensored models and access to major proprietary models through their anonymized proxy. All inference is private by default—no training on your data, no logging.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="why-venice-in-moltbot">Why Venice in Moltbot<a href="#why-venice-in-moltbot" class="hash-link" aria-label="Why Venice in Moltbot的直接链接" title="Why Venice in Moltbot的直接链接" translate="no">​</a></h2>
+<ul>
+<li class=""><strong>Private inference</strong> for open-source models (no logging).</li>
+<li class=""><strong>Uncensored models</strong> when you need them.</li>
+<li class=""><strong>Anonymized access</strong> to proprietary models (Opus/GPT/Gemini) when quality matters.</li>
+<li class="">OpenAI-compatible <code>/v1</code> endpoints.</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="privacy-modes">Privacy Modes<a href="#privacy-modes" class="hash-link" aria-label="Privacy Modes的直接链接" title="Privacy Modes的直接链接" translate="no">​</a></h2>
+<p>Venice offers two privacy levels — understanding this is key to choosing your model:</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Mode</th><th>Description</th><th>Models</th></tr></thead><tbody><tr><td><strong>Private</strong></td><td>Fully private. Prompts/responses are <strong>never stored or logged</strong>. Ephemeral.</td><td>Llama, Qwen, DeepSeek, Venice Uncensored, etc.</td></tr><tr><td><strong>Anonymized</strong></td><td>Proxied through Venice with metadata stripped. The underlying provider (OpenAI, Anthropic) sees anonymized requests.</td><td>Claude, GPT, Gemini, Grok, Kimi, MiniMax</td></tr></tbody></table>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="features">Features<a href="#features" class="hash-link" aria-label="Features的直接链接" title="Features的直接链接" translate="no">​</a></h2>
+<ul>
+<li class=""><strong>Privacy-focused</strong>: Choose between &quot;private&quot; (fully private) and &quot;anonymized&quot; (proxied) modes</li>
+<li class=""><strong>Uncensored models</strong>: Access to models without content restrictions</li>
+<li class=""><strong>Major model access</strong>: Use Claude, GPT-5.2, Gemini, Grok via Venice&#x27;s anonymized proxy</li>
+<li class=""><strong>OpenAI-compatible API</strong>: Standard <code>/v1</code> endpoints for easy integration</li>
+<li class=""><strong>Streaming</strong>: ✅ Supported on all models</li>
+<li class=""><strong>Function calling</strong>: ✅ Supported on select models (check model capabilities)</li>
+<li class=""><strong>Vision</strong>: ✅ Supported on models with vision capability</li>
+<li class=""><strong>No hard rate limits</strong>: Fair-use throttling may apply for extreme usage</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="setup">Setup<a href="#setup" class="hash-link" aria-label="Setup的直接链接" title="Setup的直接链接" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="1-get-api-key">1. Get API Key<a href="#1-get-api-key" class="hash-link" aria-label="1. Get API Key的直接链接" title="1. Get API Key的直接链接" translate="no">​</a></h3>
+<ol>
+<li class="">Sign up at <a href="https://venice.ai" target="_blank" rel="noopener noreferrer" class="">venice.ai</a></li>
+<li class="">Go to <strong>Settings → API Keys → Create new key</strong></li>
+<li class="">Copy your API key (format: <code>vapi_xxxxxxxxxxxx</code>)</li>
+</ol>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="2-configure-moltbot">2. Configure Moltbot<a href="#2-configure-moltbot" class="hash-link" aria-label="2. Configure Moltbot的直接链接" title="2. Configure Moltbot的直接链接" translate="no">​</a></h3>
+<p><strong>Option A: Environment Variable</strong></p>
+<div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#D6DEEB;--prism-background-color:#001122"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#D6DEEB;background-color:#001122"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#D6DEEB"><span class="token plain">export VENICE_API_KEY=&quot;vapi_xxxxxxxxxxxx&quot;</span><br></span></code></pre></div></div>
+<p><strong>Option B: Interactive Setup (Recommended)</strong></p>
+<div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#D6DEEB;--prism-background-color:#001122"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#D6DEEB;background-color:#001122"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#D6DEEB"><span class="token plain">moltbot onboard --auth-choice venice-api-key</span><br></span></code></pre></div></div>
+<p>This will:</p>
+<ol>
+<li class="">Prompt for your API key (or use existing <code>VENICE_API_KEY</code>)</li>
+<li class="">Show all available Venice models</li>
+<li class="">Let you pick your default model</li>
+<li class="">Configure the provider automatically</li>
+</ol>
+<p><strong>Option C: Non-interactive</strong></p>
+<div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#D6DEEB;--prism-background-color:#001122"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#D6DEEB;background-color:#001122"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#D6DEEB"><span class="token plain">moltbot onboard --non-interactive \</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">  --auth-choice venice-api-key \</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">  --venice-api-key &quot;vapi_xxxxxxxxxxxx&quot;</span><br></span></code></pre></div></div>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="3-verify-setup">3. Verify Setup<a href="#3-verify-setup" class="hash-link" aria-label="3. Verify Setup的直接链接" title="3. Verify Setup的直接链接" translate="no">​</a></h3>
+<div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#D6DEEB;--prism-background-color:#001122"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#D6DEEB;background-color:#001122"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#D6DEEB"><span class="token plain">moltbot chat --model venice/llama-3.3-70b &quot;Hello, are you working?&quot;</span><br></span></code></pre></div></div>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="model-selection">Model Selection<a href="#model-selection" class="hash-link" aria-label="Model Selection的直接链接" title="Model Selection的直接链接" translate="no">​</a></h2>
+<p>After setup, Moltbot shows all available Venice models. Pick based on your needs:</p>
+<ul>
+<li class=""><strong>Default (our pick)</strong>: <code>venice/llama-3.3-70b</code> for private, balanced performance.</li>
+<li class=""><strong>Best overall quality</strong>: <code>venice/claude-opus-45</code> for hard jobs (Opus remains the strongest).</li>
+<li class=""><strong>Privacy</strong>: Choose &quot;private&quot; models for fully private inference.</li>
+<li class=""><strong>Capability</strong>: Choose &quot;anonymized&quot; models to access Claude, GPT, Gemini via Venice&#x27;s proxy.</li>
+</ul>
+<p>Change your default model anytime:</p>
+<div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#D6DEEB;--prism-background-color:#001122"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#D6DEEB;background-color:#001122"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#D6DEEB"><span class="token plain">moltbot models set venice/claude-opus-45</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">moltbot models set venice/llama-3.3-70b</span><br></span></code></pre></div></div>
+<p>List all available models:</p>
+<div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#D6DEEB;--prism-background-color:#001122"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#D6DEEB;background-color:#001122"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#D6DEEB"><span class="token plain">moltbot models list | grep venice</span><br></span></code></pre></div></div>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="configure-via-moltbot-configure">Configure via <code>moltbot configure</code><a href="#configure-via-moltbot-configure" class="hash-link" aria-label="configure-via-moltbot-configure的直接链接" title="configure-via-moltbot-configure的直接链接" translate="no">​</a></h2>
+<ol>
+<li class="">Run <code>moltbot configure</code></li>
+<li class="">Select <strong>Model/auth</strong></li>
+<li class="">Choose <strong>Venice AI</strong></li>
+</ol>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="which-model-should-i-use">Which Model Should I Use?<a href="#which-model-should-i-use" class="hash-link" aria-label="Which Model Should I Use?的直接链接" title="Which Model Should I Use?的直接链接" translate="no">​</a></h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Use Case</th><th>Recommended Model</th><th>Why</th></tr></thead><tbody><tr><td><strong>General chat</strong></td><td><code>llama-3.3-70b</code></td><td>Good all-around, fully private</td></tr><tr><td><strong>Best overall quality</strong></td><td><code>claude-opus-45</code></td><td>Opus remains the strongest for hard tasks</td></tr><tr><td><strong>Privacy + Claude quality</strong></td><td><code>claude-opus-45</code></td><td>Best reasoning via anonymized proxy</td></tr><tr><td><strong>Coding</strong></td><td><code>qwen3-coder-480b-a35b-instruct</code></td><td>Code-optimized, 262k context</td></tr><tr><td><strong>Vision tasks</strong></td><td><code>qwen3-vl-235b-a22b</code></td><td>Best private vision model</td></tr><tr><td><strong>Uncensored</strong></td><td><code>venice-uncensored</code></td><td>No content restrictions</td></tr><tr><td><strong>Fast + cheap</strong></td><td><code>qwen3-4b</code></td><td>Lightweight, still capable</td></tr><tr><td><strong>Complex reasoning</strong></td><td><code>deepseek-v3.2</code></td><td>Strong reasoning, private</td></tr></tbody></table>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="available-models-25-total">Available Models (25 Total)<a href="#available-models-25-total" class="hash-link" aria-label="Available Models (25 Total)的直接链接" title="Available Models (25 Total)的直接链接" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="private-models-15--fully-private-no-logging">Private Models (15) — Fully Private, No Logging<a href="#private-models-15--fully-private-no-logging" class="hash-link" aria-label="Private Models (15) — Fully Private, No Logging的直接链接" title="Private Models (15) — Fully Private, No Logging的直接链接" translate="no">​</a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Model ID</th><th>Name</th><th>Context (tokens)</th><th>Features</th></tr></thead><tbody><tr><td><code>llama-3.3-70b</code></td><td>Llama 3.3 70B</td><td>131k</td><td>General</td></tr><tr><td><code>llama-3.2-3b</code></td><td>Llama 3.2 3B</td><td>131k</td><td>Fast, lightweight</td></tr><tr><td><code>hermes-3-llama-3.1-405b</code></td><td>Hermes 3 Llama 3.1 405B</td><td>131k</td><td>Complex tasks</td></tr><tr><td><code>qwen3-235b-a22b-thinking-2507</code></td><td>Qwen3 235B Thinking</td><td>131k</td><td>Reasoning</td></tr><tr><td><code>qwen3-235b-a22b-instruct-2507</code></td><td>Qwen3 235B Instruct</td><td>131k</td><td>General</td></tr><tr><td><code>qwen3-coder-480b-a35b-instruct</code></td><td>Qwen3 Coder 480B</td><td>262k</td><td>Code</td></tr><tr><td><code>qwen3-next-80b</code></td><td>Qwen3 Next 80B</td><td>262k</td><td>General</td></tr><tr><td><code>qwen3-vl-235b-a22b</code></td><td>Qwen3 VL 235B</td><td>262k</td><td>Vision</td></tr><tr><td><code>qwen3-4b</code></td><td>Venice Small (Qwen3 4B)</td><td>32k</td><td>Fast, reasoning</td></tr><tr><td><code>deepseek-v3.2</code></td><td>DeepSeek V3.2</td><td>163k</td><td>Reasoning</td></tr><tr><td><code>venice-uncensored</code></td><td>Venice Uncensored</td><td>32k</td><td>Uncensored</td></tr><tr><td><code>mistral-31-24b</code></td><td>Venice Medium (Mistral)</td><td>131k</td><td>Vision</td></tr><tr><td><code>google-gemma-3-27b-it</code></td><td>Gemma 3 27B Instruct</td><td>202k</td><td>Vision</td></tr><tr><td><code>openai-gpt-oss-120b</code></td><td>OpenAI GPT OSS 120B</td><td>131k</td><td>General</td></tr><tr><td><code>zai-org-glm-4.7</code></td><td>GLM 4.7</td><td>202k</td><td>Reasoning, multilingual</td></tr></tbody></table>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="anonymized-models-10--via-venice-proxy">Anonymized Models (10) — Via Venice Proxy<a href="#anonymized-models-10--via-venice-proxy" class="hash-link" aria-label="Anonymized Models (10) — Via Venice Proxy的直接链接" title="Anonymized Models (10) — Via Venice Proxy的直接链接" translate="no">​</a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Model ID</th><th>Original</th><th>Context (tokens)</th><th>Features</th></tr></thead><tbody><tr><td><code>claude-opus-45</code></td><td>Claude Opus 4.5</td><td>202k</td><td>Reasoning, vision</td></tr><tr><td><code>claude-sonnet-45</code></td><td>Claude Sonnet 4.5</td><td>202k</td><td>Reasoning, vision</td></tr><tr><td><code>openai-gpt-52</code></td><td>GPT-5.2</td><td>262k</td><td>Reasoning</td></tr><tr><td><code>openai-gpt-52-codex</code></td><td>GPT-5.2 Codex</td><td>262k</td><td>Reasoning, vision</td></tr><tr><td><code>gemini-3-pro-preview</code></td><td>Gemini 3 Pro</td><td>202k</td><td>Reasoning, vision</td></tr><tr><td><code>gemini-3-flash-preview</code></td><td>Gemini 3 Flash</td><td>262k</td><td>Reasoning, vision</td></tr><tr><td><code>grok-41-fast</code></td><td>Grok 4.1 Fast</td><td>262k</td><td>Reasoning, vision</td></tr><tr><td><code>grok-code-fast-1</code></td><td>Grok Code Fast 1</td><td>262k</td><td>Reasoning, code</td></tr><tr><td><code>kimi-k2-thinking</code></td><td>Kimi K2 Thinking</td><td>262k</td><td>Reasoning</td></tr><tr><td><code>minimax-m21</code></td><td>MiniMax M2.1</td><td>202k</td><td>Reasoning</td></tr></tbody></table>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="model-discovery">Model Discovery<a href="#model-discovery" class="hash-link" aria-label="Model Discovery的直接链接" title="Model Discovery的直接链接" translate="no">​</a></h2>
+<p>Moltbot automatically discovers models from the Venice API when <code>VENICE_API_KEY</code> is set. If the API is unreachable, it falls back to a static catalog.</p>
+<p>The <code>/models</code> endpoint is public (no auth needed for listing), but inference requires a valid API key.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="streaming--tool-support">Streaming &amp; Tool Support<a href="#streaming--tool-support" class="hash-link" aria-label="Streaming &amp; Tool Support的直接链接" title="Streaming &amp; Tool Support的直接链接" translate="no">​</a></h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Feature</th><th>Support</th></tr></thead><tbody><tr><td><strong>Streaming</strong></td><td>✅ All models</td></tr><tr><td><strong>Function calling</strong></td><td>✅ Most models (check <code>supportsFunctionCalling</code> in API)</td></tr><tr><td><strong>Vision/Images</strong></td><td>✅ Models marked with &quot;Vision&quot; feature</td></tr><tr><td><strong>JSON mode</strong></td><td>✅ Supported via <code>response_format</code></td></tr></tbody></table>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="pricing">Pricing<a href="#pricing" class="hash-link" aria-label="Pricing的直接链接" title="Pricing的直接链接" translate="no">​</a></h2>
+<p>Venice uses a credit-based system. Check <a href="https://venice.ai/pricing" target="_blank" rel="noopener noreferrer" class="">venice.ai/pricing</a> for current rates:</p>
+<ul>
+<li class=""><strong>Private models</strong>: Generally lower cost</li>
+<li class=""><strong>Anonymized models</strong>: Similar to direct API pricing + small Venice fee</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="comparison-venice-vs-direct-api">Comparison: Venice vs Direct API<a href="#comparison-venice-vs-direct-api" class="hash-link" aria-label="Comparison: Venice vs Direct API的直接链接" title="Comparison: Venice vs Direct API的直接链接" translate="no">​</a></h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Aspect</th><th>Venice (Anonymized)</th><th>Direct API</th></tr></thead><tbody><tr><td><strong>Privacy</strong></td><td>Metadata stripped, anonymized</td><td>Your account linked</td></tr><tr><td><strong>Latency</strong></td><td>+10-50ms (proxy)</td><td>Direct</td></tr><tr><td><strong>Features</strong></td><td>Most features supported</td><td>Full features</td></tr><tr><td><strong>Billing</strong></td><td>Venice credits</td><td>Provider billing</td></tr></tbody></table>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="usage-examples">Usage Examples<a href="#usage-examples" class="hash-link" aria-label="Usage Examples的直接链接" title="Usage Examples的直接链接" translate="no">​</a></h2>
+<div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#D6DEEB;--prism-background-color:#001122"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#D6DEEB;background-color:#001122"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#D6DEEB"><span class="token plain"># Use default private model</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">moltbot chat --model venice/llama-3.3-70b</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain"># Use Claude via Venice (anonymized)</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">moltbot chat --model venice/claude-opus-45</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain"># Use uncensored model</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">moltbot chat --model venice/venice-uncensored</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain"># Use vision model with image</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">moltbot chat --model venice/qwen3-vl-235b-a22b</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain"># Use coding model</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">moltbot chat --model venice/qwen3-coder-480b-a35b-instruct</span><br></span></code></pre></div></div>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="troubleshooting">Troubleshooting<a href="#troubleshooting" class="hash-link" aria-label="Troubleshooting的直接链接" title="Troubleshooting的直接链接" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="api-key-not-recognized">API key not recognized<a href="#api-key-not-recognized" class="hash-link" aria-label="API key not recognized的直接链接" title="API key not recognized的直接链接" translate="no">​</a></h3>
+<div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#D6DEEB;--prism-background-color:#001122"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#D6DEEB;background-color:#001122"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#D6DEEB"><span class="token plain">echo $VENICE_API_KEY</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">moltbot models list | grep venice</span><br></span></code></pre></div></div>
+<p>Ensure the key starts with <code>vapi_</code>.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="model-not-available">Model not available<a href="#model-not-available" class="hash-link" aria-label="Model not available的直接链接" title="Model not available的直接链接" translate="no">​</a></h3>
+<p>The Venice model catalog updates dynamically. Run <code>moltbot models list</code> to see currently available models. Some models may be temporarily offline.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="connection-issues">Connection issues<a href="#connection-issues" class="hash-link" aria-label="Connection issues的直接链接" title="Connection issues的直接链接" translate="no">​</a></h3>
+<p>Venice API is at <code>https://api.venice.ai/api/v1</code>. Ensure your network allows HTTPS connections.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="config-file-example">Config file example<a href="#config-file-example" class="hash-link" aria-label="Config file example的直接链接" title="Config file example的直接链接" translate="no">​</a></h2>
+<div class="language-json5 codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#D6DEEB;--prism-background-color:#001122"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-json5 codeBlock_bY9V thin-scrollbar" style="color:#D6DEEB;background-color:#001122"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#D6DEEB"><span class="token plain">{</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">  env: { VENICE_API_KEY: &quot;vapi_...&quot; },</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">  agents: { defaults: { model: { primary: &quot;venice/llama-3.3-70b&quot; } } },</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">  models: {</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">    mode: &quot;merge&quot;,</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">    providers: {</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">      venice: {</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">        baseUrl: &quot;https://api.venice.ai/api/v1&quot;,</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">        apiKey: &quot;${VENICE_API_KEY}&quot;,</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">        api: &quot;openai-completions&quot;,</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">        models: [</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">          {</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">            id: &quot;llama-3.3-70b&quot;,</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">            name: &quot;Llama 3.3 70B&quot;,</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">            reasoning: false,</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">            input: [&quot;text&quot;],</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">            cost: { input: 0, output: 0, cacheRead: 0, cacheWrite: 0 },</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">            contextWindow: 131072,</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">            maxTokens: 8192</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">          }</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">        ]</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">      }</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">    }</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">  }</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">}</span><br></span></code></pre></div></div>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="links">Links<a href="#links" class="hash-link" aria-label="Links的直接链接" title="Links的直接链接" translate="no">​</a></h2>
+<ul>
+<li class=""><a href="https://venice.ai" target="_blank" rel="noopener noreferrer" class="">Venice AI</a></li>
+<li class=""><a href="https://docs.venice.ai" target="_blank" rel="noopener noreferrer" class="">API Documentation</a></li>
+<li class=""><a href="https://venice.ai/pricing" target="_blank" rel="noopener noreferrer" class="">Pricing</a></li>
+<li class=""><a href="https://status.venice.ai" target="_blank" rel="noopener noreferrer" class="">Status</a></li>
+</ul></div></article><nav class="docusaurus-mt-lg pagination-nav" aria-label="文件选项卡"></nav></div></div><div class="col col--3"><div class="tocWrapper_xKoj"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#why-venice-in-moltbot" class="table-of-contents__link toc-highlight">Why Venice in Moltbot</a></li><li><a href="#privacy-modes" class="table-of-contents__link toc-highlight">Privacy Modes</a></li><li><a href="#features" class="table-of-contents__link toc-highlight">Features</a></li><li><a href="#setup" class="table-of-contents__link toc-highlight">Setup</a><ul><li><a href="#1-get-api-key" class="table-of-contents__link toc-highlight">1. Get API Key</a></li><li><a href="#2-configure-moltbot" class="table-of-contents__link toc-highlight">2. Configure Moltbot</a></li><li><a href="#3-verify-setup" class="table-of-contents__link toc-highlight">3. Verify Setup</a></li></ul></li><li><a href="#model-selection" class="table-of-contents__link toc-highlight">Model Selection</a></li><li><a href="#configure-via-moltbot-configure" class="table-of-contents__link toc-highlight">Configure via <code>moltbot configure</code></a></li><li><a href="#which-model-should-i-use" class="table-of-contents__link toc-highlight">Which Model Should I Use?</a></li><li><a href="#available-models-25-total" class="table-of-contents__link toc-highlight">Available Models (25 Total)</a><ul><li><a href="#private-models-15--fully-private-no-logging" class="table-of-contents__link toc-highlight">Private Models (15) — Fully Private, No Logging</a></li><li><a href="#anonymized-models-10--via-venice-proxy" class="table-of-contents__link toc-highlight">Anonymized Models (10) — Via Venice Proxy</a></li></ul></li><li><a href="#model-discovery" class="table-of-contents__link toc-highlight">Model Discovery</a></li><li><a href="#streaming--tool-support" class="table-of-contents__link toc-highlight">Streaming &amp; Tool Support</a></li><li><a href="#pricing" class="table-of-contents__link toc-highlight">Pricing</a></li><li><a href="#comparison-venice-vs-direct-api" class="table-of-contents__link toc-highlight">Comparison: Venice vs Direct API</a></li><li><a href="#usage-examples" class="table-of-contents__link toc-highlight">Usage Examples</a></li><li><a href="#troubleshooting" class="table-of-contents__link toc-highlight">Troubleshooting</a><ul><li><a href="#api-key-not-recognized" class="table-of-contents__link toc-highlight">API key not recognized</a></li><li><a href="#model-not-available" class="table-of-contents__link toc-highlight">Model not available</a></li><li><a href="#connection-issues" class="table-of-contents__link toc-highlight">Connection issues</a></li></ul></li><li><a href="#config-file-example" class="table-of-contents__link toc-highlight">Config file example</a></li><li><a href="#links" class="table-of-contents__link toc-highlight">Links</a></li></ul></div><div class="tocFooter_Fu2z"><div class="themeGroup_RzWV" role="group" aria-label="Theme"><button class="themeBtn_tGr6" aria-label="Light theme" title="Light"><svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor" aria-hidden="true"><path d="M12 18a6 6 0 1 1 0-12 6 6 0 0 1 0 12zm0-2a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM11 1h2v3h-2V1zm0 19h2v3h-2v-3zM3.515 4.929l1.414-1.414L7.05 5.636 5.636 7.05 3.515 4.93zM16.95 18.364l1.414-1.414 2.121 2.121-1.414 1.414-2.121-2.121zm2.121-14.85l1.414 1.415-2.121 2.121-1.414-1.414 2.121-2.121zM5.636 16.95l1.414 1.414-2.121 2.121-1.414-1.414 2.121-2.121zM23 11v2h-3v-2h3zM4 11v2H1v-2h3z"></path></svg></button><button class="themeBtn_tGr6 themeBtnActive_A6tm" aria-label="Dark theme" title="Dark"><svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor" aria-hidden="true"><path d="M11.38 2.019a7.5 7.5 0 1 0 10.6 10.6C21.83 17.963 17.315 22 12.002 22 6.477 22 2 17.523 2 12c0-5.314 4.038-9.827 9.38-10.28z"></path></svg></button></div></div></div></div></div></div></main></div></div></div><footer class="theme-layout-footer footer footer--dark"><div class="container container-fluid"><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2026 Moltbot Docs.</div></div></div></footer></div>
+</body>
+</html>

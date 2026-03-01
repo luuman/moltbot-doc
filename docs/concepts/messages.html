@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="zh" dir="ltr" class="docs-wrapper plugin-docs plugin-id-default docs-version-current docs-doc-page docs-doc-id-concepts/messages" data-has-hydrated="false">
+<head>
+<meta charset="UTF-8">
+<meta name="generator" content="Docusaurus v3.9.2">
+<title data-rh="true">消息 | Moltbot Docs</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:url" content="https://luuman.github.io/moltbot-doc/docs/concepts/messages"><meta data-rh="true" property="og:locale" content="zh"><meta data-rh="true" name="docusaurus_locale" content="zh"><meta data-rh="true" name="docsearch:language" content="zh"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="消息 | Moltbot Docs"><meta data-rh="true" name="description" content="本页面整合了 Moltbot 如何处理入站消息、会话、排队、"><meta data-rh="true" property="og:description" content="本页面整合了 Moltbot 如何处理入站消息、会话、排队、"><link data-rh="true" rel="icon" href="/moltbot-doc/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://luuman.github.io/moltbot-doc/docs/concepts/messages"><link data-rh="true" rel="alternate" href="https://luuman.github.io/moltbot-doc/docs/concepts/messages" hreflang="zh"><link data-rh="true" rel="alternate" href="https://luuman.github.io/moltbot-doc/docs/concepts/messages" hreflang="x-default"><link rel="alternate" type="application/rss+xml" href="/moltbot-doc/blog/rss.xml" title="Moltbot Docs RSS Feed">
+<link rel="alternate" type="application/atom+xml" href="/moltbot-doc/blog/atom.xml" title="Moltbot Docs Atom Feed"><link rel="stylesheet" href="/moltbot-doc/assets/css/styles.484b4c98.css">
+<script src="/moltbot-doc/assets/js/runtime~main.6cf495cf.js" defer="defer"></script>
+<script src="/moltbot-doc/assets/js/main.f9205183.js" defer="defer"></script>
+</head>
+<body class="navigation-with-keyboard">
+<svg style="display: none;"><defs>
+<symbol id="theme-svg-external-link" viewBox="0 0 24 24"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"/></symbol>
+</defs></svg>
+<script>!function(){var t=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme")}catch(t){}}();document.documentElement.setAttribute("data-theme",t||"dark"),document.documentElement.setAttribute("data-theme-choice",t||"dark")}(),function(){try{const c=new URLSearchParams(window.location.search).entries();for(var[t,e]of c)if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id="__docusaurus"><div role="region" aria-label="跳到主要内容"><a class="skipToContent_fXgn" href="#__docusaurus_skipToContent_fallback">跳到主要内容</a></div><nav class="navbar navbar--fixed-top navbar_MONK" role="navigation" aria-label="Main"><div class="navbarInner_ASTH"><div class="navbarLeft_pUmY"><button aria-label="切换导航栏" aria-expanded="false" class="navbar__toggle clean-btn" type="button"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg></button><a class="brand_SXL9" href="/moltbot-doc/"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="24" height="24" rx="6" fill="var(--ifm-color-primary)"></rect><path d="M7 8.5h10M7 12h7M7 15.5h10" stroke="white" stroke-width="1.8" stroke-linecap="round"></path></svg><span class="brandTitle_XbyU">Moltbot</span></a><div class="dropdown_GrgZ"><button class="dropdownToggle_Nf_z">全部站点<svg class="dropdownArrow_Eka8" viewBox="0 0 12 12" fill="none"><path d="M2 4l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg></button><ul class="dropdownMenu_zsxH"><li><a href="https://luuman.github.io/docs-workspace/docs" class="dropdownMenuItem_VBaP">Workspace</a></li><li><a href="https://luuman.github.io/claude-doc/docs" class="dropdownMenuItem_VBaP">Claude</a></li><li><a href="https://luuman.github.io/electron-doc/docs" class="dropdownMenuItem_VBaP">Electron</a></li><li><a href="https://luuman.github.io/tauri-doc/docs" class="dropdownMenuItem_VBaP">Tauri</a></li><li><a href="https://luuman.github.io/matrx-doc/docs" class="dropdownMenuItem_VBaP">Matrx</a></li><li><a href="https://luuman.github.io/brainboard-doc/docs" class="dropdownMenuItem_VBaP">Brainboard</a></li><li><a href="https://luuman.github.io/synology-doc/docs" class="dropdownMenuItem_VBaP">Synology</a></li><li><a href="https://luuman.github.io/codex-doc/docs" class="dropdownMenuItem_VBaP">Codex</a></li><li><a href="https://luuman.github.io/ai-doc/docs" class="dropdownMenuItem_VBaP">AI</a></li></ul></div></div><div class="navbarCenter_Zdr3"><div class="root_OF3s"><span class="icon_UcOK" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor" width="15" height="15"><path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"></path></svg></span><div class="slot__FGx"><div class="navbar__search searchBarContainer_NW3z" dir="ltr"><input placeholder="搜索" aria-label="Search" class="navbar__search-input searchInput_YFbd" value=""><div class="loadingRing_RJI3 searchBarLoadingRing_YnHq"><div></div><div></div><div></div><div></div></div></div></div></div></div><div class="navbarRight_q16u"><a class="navLink_RnnM" href="/moltbot-doc/docs">Docs</a><a class="navLink_RnnM" href="/moltbot-doc/blog">Blog</a><button class="themeToggle_zD_x" aria-label="Switch to light theme" title="Light"><svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M12 18a6 6 0 1 1 0-12 6 6 0 0 1 0 12zm0-2a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM11 1h2v3h-2V1zm0 19h2v3h-2v-3zM3.515 4.929l1.414-1.414L7.05 5.636 5.636 7.05 3.515 4.93zM16.95 18.364l1.414-1.414 2.121 2.121-1.414 1.414-2.121-2.121zm2.121-14.85l1.414 1.415-2.121 2.121-1.414-1.414 2.121-2.121zM5.636 16.95l1.414 1.414-2.121 2.121-1.414-1.414 2.121-2.121zM23 11v2h-3v-2h3zM4 11v2H1v-2h3z"></path></svg></button></div></div></nav><div id="__docusaurus_skipToContent_fallback" class="theme-layout-main main-wrapper mainWrapper_z2l0"><div class="docsWrapper_hBAB"><button aria-label="回到顶部" class="clean-btn theme-back-to-top-button backToTopButton_sjWU" type="button"></button><div class="docRoot_UBD9"><main class="docMainContainer_TBSr docMainContainerEnhanced_lQrH"><div class="container padding-top--md padding-bottom--lg"><div class="row"><div class="col docItemCol_VOVn"><div class="docItemContainer_Djhp"><article><div class="tocCollapsible_ETCw theme-doc-toc-mobile tocMobile_ITEo"><button type="button" class="clean-btn tocCollapsibleButton_TO0P">本页总览</button></div><div class="theme-doc-markdown markdown"><header><h1>消息</h1></header>
+<p>本页面整合了 Moltbot 如何处理入站消息、会话、排队、
+流式传输和推理可见性的方式。</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="消息流高级别">消息流（高级别）<a href="#消息流高级别" class="hash-link" aria-label="消息流（高级别）的直接链接" title="消息流（高级别）的直接链接" translate="no">​</a></h2>
+<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#D6DEEB;--prism-background-color:#001122"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#D6DEEB;background-color:#001122"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#D6DEEB"><span class="token plain">入站消息</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">  -&gt; 路由/绑定 -&gt; 会话密钥</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">  -&gt; 队列（如果运行处于活动状态）</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">  -&gt; 代理运行（流式传输 + 工具）</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">  -&gt; 出站回复（通道限制 + 分块）</span><br></span></code></pre></div></div>
+<p>关键调节器位于配置中：</p>
+<ul>
+<li class=""><code>messages.*</code> 用于前缀、排队和群组行为。</li>
+<li class=""><code>agents.defaults.*</code> 用于块流式传输和分块默认值。</li>
+<li class="">通道覆盖（<code>channels.whatsapp.*</code>, <code>channels.telegram.*</code> 等）用于容量和流式传输切换。</li>
+</ul>
+<p>参见 <a class="" href="/moltbot-doc/gateway/configuration">配置</a> 获取完整架构。</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="入站去重">入站去重<a href="#入站去重" class="hash-link" aria-label="入站去重的直接链接" title="入站去重的直接链接" translate="no">​</a></h2>
+<p>通道可能会在重新连接后重新传递相同的消息。Moltbot 保留一个
+短暂缓存，按键为通道/账户/对等方/会话/消息 id，因此重复
+传递不会触发另一个代理运行。</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="入站防抖">入站防抖<a href="#入站防抖" class="hash-link" aria-label="入站防抖的直接链接" title="入站防抖的直接链接" translate="no">​</a></h2>
+<p>来自 <strong>同一发送者</strong> 的快速连续消息可以通过 <code>messages.inbound</code> 批量处理为单个
+代理回合。防抖范围限定为每个通道 + 对话
+并使用最新消息进行回复线程/ID。</p>
+<p>配置（全局默认值 + 每通道覆盖）：</p>
+<div class="language-json5 codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#D6DEEB;--prism-background-color:#001122"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-json5 codeBlock_bY9V thin-scrollbar" style="color:#D6DEEB;background-color:#001122"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#D6DEEB"><span class="token plain">{</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">  messages: {</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">    inbound: {</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">      debounceMs: 2000,</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">      byChannel: {</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">        whatsapp: 5000,</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">        slack: 1500,</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">        discord: 1500</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">      }</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">    }</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">  }</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">}</span><br></span></code></pre></div></div>
+<p>注意事项：</p>
+<ul>
+<li class="">防抖适用于 <strong>纯文本</strong> 消息；媒体/附件立即刷新。</li>
+<li class="">控制命令绕过防抖，因此它们保持独立。</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="会话和设备">会话和设备<a href="#会话和设备" class="hash-link" aria-label="会话和设备的直接链接" title="会话和设备的直接链接" translate="no">​</a></h2>
+<p>会话由网关拥有，而不是由客户端拥有。</p>
+<ul>
+<li class="">直接聊天合并到代理主会话密钥中。</li>
+<li class="">群组/通道获得自己的会话密钥。</li>
+<li class="">会话存储和记录存在于网关主机上。</li>
+</ul>
+<p>多个设备/通道可以映射到同一个会话，但历史记录不会完全
+同步回每个客户端。建议：使用一个主要设备进行长
+对话，以避免分歧的上下文。控制 UI 和 TUI 始终显示
+网关支持的会话记录，因此它们是真相来源。</p>
+<p>详情：<a class="" href="/moltbot-doc/concepts/session">会话管理</a>。</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="入站正文和历史上下文">入站正文和历史上下文<a href="#入站正文和历史上下文" class="hash-link" aria-label="入站正文和历史上下文的直接链接" title="入站正文和历史上下文的直接链接" translate="no">​</a></h2>
+<p>Moltbot 将 <strong>提示正文</strong> 与 <strong>命令正文</strong> 分开：</p>
+<ul>
+<li class=""><code>正文</code>：发送给代理的提示文本。这可能包括通道信封和
+可选的历史包装器。</li>
+<li class=""><code>命令正文</code>：用于指令/命令解析的原始用户文本。</li>
+<li class=""><code>原始正文</code>：<code>命令正文</code> 的遗留别名（为兼容性保留）。</li>
+</ul>
+<p>当通道提供历史记录时，它使用共享包装器：</p>
+<ul>
+<li class=""><code>[Chat messages since your last reply - for context]</code></li>
+<li class=""><code>[Current message - respond to this]</code></li>
+</ul>
+<p>对于 <strong>非直接聊天</strong>（群组/通道/房间），<strong>当前消息正文</strong> 前缀为
+发送者标签（与历史条目使用的样式相同）。这保持了实时和排队/历史
+消息在代理提示中的一致性。</p>
+<p>历史缓冲区是 <strong>仅待处理的</strong>：它们包括没有
+触发运行的群组消息（例如，提及控制的消息）并 <strong>排除</strong>
+已在会话记录中的消息。</p>
+<p>指令剥离仅适用于 <strong>当前消息</strong> 部分，因此历史记录
+保持不变。包装历史的通道应将 <code>命令正文</code>（或
+<code>原始正文</code>）设置为原始消息文本，并将 <code>正文</code> 保持为组合提示。
+历史缓冲区可通过 <code>messages.groupChat.historyLimit</code>（全局
+默认值）和每通道覆盖如 <code>channels.slack.historyLimit</code> 或
+<code>channels.telegram.accounts.&lt;id&gt;.historyLimit</code> 进行配置（设置 <code>0</code> 以禁用）。</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="排队和后续">排队和后续<a href="#排队和后续" class="hash-link" aria-label="排队和后续的直接链接" title="排队和后续的直接链接" translate="no">​</a></h2>
+<p>如果运行已处于活动状态，入站消息可以排队、引导到
+当前运行或收集用于后续回合。</p>
+<ul>
+<li class="">通过 <code>messages.queue</code>（和 <code>messages.queue.byChannel</code>）进行配置。</li>
+<li class="">模式：<code>interrupt</code>, <code>steer</code>, <code>followup</code>, <code>collect</code>，加上积压变体。</li>
+</ul>
+<p>详情：<a class="" href="/moltbot-doc/concepts/queue">排队</a>。</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="流式传输分块和批处理">流式传输、分块和批处理<a href="#流式传输分块和批处理" class="hash-link" aria-label="流式传输、分块和批处理的直接链接" title="流式传输、分块和批处理的直接链接" translate="no">​</a></h2>
+<p>块流式传输在模型生成文本块时发送部分回复。
+分块尊重通道文本限制并避免分割围栏代码。</p>
+<p>关键设置：</p>
+<ul>
+<li class=""><code>agents.defaults.blockStreamingDefault</code> (<code>on|off</code>，默认关闭)</li>
+<li class=""><code>agents.defaults.blockStreamingBreak</code> (<code>text_end|message_end</code>)</li>
+<li class=""><code>agents.defaults.blockStreamingChunk</code> (<code>minChars|maxChars|breakPreference</code>)</li>
+<li class=""><code>agents.defaults.blockStreamingCoalesce</code>（基于空闲的批处理）</li>
+<li class=""><code>agents.defaults.humanDelay</code>（块回复之间的人类样暂停）</li>
+<li class="">通道覆盖：<code>*.blockStreaming</code> 和 <code>*.blockStreamingCoalesce</code>（非 Telegram 通道需要显式 <code>*.blockStreaming: true</code>）</li>
+</ul>
+<p>详情：<a class="" href="/moltbot-doc/concepts/streaming">流式传输 + 分块</a>。</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="推理可见性和令牌">推理可见性和令牌<a href="#推理可见性和令牌" class="hash-link" aria-label="推理可见性和令牌的直接链接" title="推理可见性和令牌的直接链接" translate="no">​</a></h2>
+<p>Moltbot 可以暴露或隐藏模型推理：</p>
+<ul>
+<li class=""><code>/reasoning on|off|stream</code> 控制可见性。</li>
+<li class="">推理内容在模型生成时仍计入令牌使用情况。</li>
+<li class="">Telegram 支持推理流到草稿气泡中。</li>
+</ul>
+<p>详情：<a class="" href="/moltbot-doc/tools/thinking">思考 + 推理指令</a> 和 <a class="" href="/moltbot-doc/token-use">令牌使用</a>。</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="前缀线程和回复">前缀、线程和回复<a href="#前缀线程和回复" class="hash-link" aria-label="前缀、线程和回复的直接链接" title="前缀、线程和回复的直接链接" translate="no">​</a></h2>
+<p>出站消息格式集中在 <code>messages</code> 中：</p>
+<ul>
+<li class=""><code>messages.responsePrefix</code>（出站前缀）和 <code>channels.whatsapp.messagePrefix</code>（WhatsApp 入站前缀）</li>
+<li class="">通过 <code>replyToMode</code> 和每通道默认值进行回复线程</li>
+</ul>
+<p>详情：<a class="" href="/moltbot-doc/gateway/configuration#messages">配置</a> 和通道文档。</p></div></article><nav class="docusaurus-mt-lg pagination-nav" aria-label="文件选项卡"></nav></div></div><div class="col col--3"><div class="tocWrapper_xKoj"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#消息流高级别" class="table-of-contents__link toc-highlight">消息流（高级别）</a></li><li><a href="#入站去重" class="table-of-contents__link toc-highlight">入站去重</a></li><li><a href="#入站防抖" class="table-of-contents__link toc-highlight">入站防抖</a></li><li><a href="#会话和设备" class="table-of-contents__link toc-highlight">会话和设备</a></li><li><a href="#入站正文和历史上下文" class="table-of-contents__link toc-highlight">入站正文和历史上下文</a></li><li><a href="#排队和后续" class="table-of-contents__link toc-highlight">排队和后续</a></li><li><a href="#流式传输分块和批处理" class="table-of-contents__link toc-highlight">流式传输、分块和批处理</a></li><li><a href="#推理可见性和令牌" class="table-of-contents__link toc-highlight">推理可见性和令牌</a></li><li><a href="#前缀线程和回复" class="table-of-contents__link toc-highlight">前缀、线程和回复</a></li></ul></div><div class="tocFooter_Fu2z"><div class="themeGroup_RzWV" role="group" aria-label="Theme"><button class="themeBtn_tGr6" aria-label="Light theme" title="Light"><svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor" aria-hidden="true"><path d="M12 18a6 6 0 1 1 0-12 6 6 0 0 1 0 12zm0-2a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM11 1h2v3h-2V1zm0 19h2v3h-2v-3zM3.515 4.929l1.414-1.414L7.05 5.636 5.636 7.05 3.515 4.93zM16.95 18.364l1.414-1.414 2.121 2.121-1.414 1.414-2.121-2.121zm2.121-14.85l1.414 1.415-2.121 2.121-1.414-1.414 2.121-2.121zM5.636 16.95l1.414 1.414-2.121 2.121-1.414-1.414 2.121-2.121zM23 11v2h-3v-2h3zM4 11v2H1v-2h3z"></path></svg></button><button class="themeBtn_tGr6 themeBtnActive_A6tm" aria-label="Dark theme" title="Dark"><svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor" aria-hidden="true"><path d="M11.38 2.019a7.5 7.5 0 1 0 10.6 10.6C21.83 17.963 17.315 22 12.002 22 6.477 22 2 17.523 2 12c0-5.314 4.038-9.827 9.38-10.28z"></path></svg></button></div></div></div></div></div></div></main></div></div></div><footer class="theme-layout-footer footer footer--dark"><div class="container container-fluid"><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2026 Moltbot Docs.</div></div></div></footer></div>
+</body>
+</html>

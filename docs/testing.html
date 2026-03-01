@@ -1,0 +1,438 @@
+<!doctype html>
+<html lang="zh" dir="ltr" class="docs-wrapper plugin-docs plugin-id-default docs-version-current docs-doc-page docs-doc-id-testing" data-has-hydrated="false">
+<head>
+<meta charset="UTF-8">
+<meta name="generator" content="Docusaurus v3.9.2">
+<title data-rh="true">测试 | Moltbot Docs</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:url" content="https://luuman.github.io/moltbot-doc/docs/testing"><meta data-rh="true" property="og:locale" content="zh"><meta data-rh="true" name="docusaurus_locale" content="zh"><meta data-rh="true" name="docsearch:language" content="zh"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="测试 | Moltbot Docs"><meta data-rh="true" name="description" content="Moltbot 有三个 Vitest 套件（单元/集成、端到端、实时）和一小套 Docker 运行器。"><meta data-rh="true" property="og:description" content="Moltbot 有三个 Vitest 套件（单元/集成、端到端、实时）和一小套 Docker 运行器。"><link data-rh="true" rel="icon" href="/moltbot-doc/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://luuman.github.io/moltbot-doc/docs/testing"><link data-rh="true" rel="alternate" href="https://luuman.github.io/moltbot-doc/docs/testing" hreflang="zh"><link data-rh="true" rel="alternate" href="https://luuman.github.io/moltbot-doc/docs/testing" hreflang="x-default"><link rel="alternate" type="application/rss+xml" href="/moltbot-doc/blog/rss.xml" title="Moltbot Docs RSS Feed">
+<link rel="alternate" type="application/atom+xml" href="/moltbot-doc/blog/atom.xml" title="Moltbot Docs Atom Feed"><link rel="stylesheet" href="/moltbot-doc/assets/css/styles.484b4c98.css">
+<script src="/moltbot-doc/assets/js/runtime~main.6cf495cf.js" defer="defer"></script>
+<script src="/moltbot-doc/assets/js/main.f9205183.js" defer="defer"></script>
+</head>
+<body class="navigation-with-keyboard">
+<svg style="display: none;"><defs>
+<symbol id="theme-svg-external-link" viewBox="0 0 24 24"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"/></symbol>
+</defs></svg>
+<script>!function(){var t=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme")}catch(t){}}();document.documentElement.setAttribute("data-theme",t||"dark"),document.documentElement.setAttribute("data-theme-choice",t||"dark")}(),function(){try{const c=new URLSearchParams(window.location.search).entries();for(var[t,e]of c)if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id="__docusaurus"><div role="region" aria-label="跳到主要内容"><a class="skipToContent_fXgn" href="#__docusaurus_skipToContent_fallback">跳到主要内容</a></div><nav class="navbar navbar--fixed-top navbar_MONK" role="navigation" aria-label="Main"><div class="navbarInner_ASTH"><div class="navbarLeft_pUmY"><button aria-label="切换导航栏" aria-expanded="false" class="navbar__toggle clean-btn" type="button"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg></button><a class="brand_SXL9" href="/moltbot-doc/"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="24" height="24" rx="6" fill="var(--ifm-color-primary)"></rect><path d="M7 8.5h10M7 12h7M7 15.5h10" stroke="white" stroke-width="1.8" stroke-linecap="round"></path></svg><span class="brandTitle_XbyU">Moltbot</span></a><div class="dropdown_GrgZ"><button class="dropdownToggle_Nf_z">全部站点<svg class="dropdownArrow_Eka8" viewBox="0 0 12 12" fill="none"><path d="M2 4l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg></button><ul class="dropdownMenu_zsxH"><li><a href="https://luuman.github.io/docs-workspace/docs" class="dropdownMenuItem_VBaP">Workspace</a></li><li><a href="https://luuman.github.io/claude-doc/docs" class="dropdownMenuItem_VBaP">Claude</a></li><li><a href="https://luuman.github.io/electron-doc/docs" class="dropdownMenuItem_VBaP">Electron</a></li><li><a href="https://luuman.github.io/tauri-doc/docs" class="dropdownMenuItem_VBaP">Tauri</a></li><li><a href="https://luuman.github.io/matrx-doc/docs" class="dropdownMenuItem_VBaP">Matrx</a></li><li><a href="https://luuman.github.io/brainboard-doc/docs" class="dropdownMenuItem_VBaP">Brainboard</a></li><li><a href="https://luuman.github.io/synology-doc/docs" class="dropdownMenuItem_VBaP">Synology</a></li><li><a href="https://luuman.github.io/codex-doc/docs" class="dropdownMenuItem_VBaP">Codex</a></li><li><a href="https://luuman.github.io/ai-doc/docs" class="dropdownMenuItem_VBaP">AI</a></li></ul></div></div><div class="navbarCenter_Zdr3"><div class="root_OF3s"><span class="icon_UcOK" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor" width="15" height="15"><path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"></path></svg></span><div class="slot__FGx"><div class="navbar__search searchBarContainer_NW3z" dir="ltr"><input placeholder="搜索" aria-label="Search" class="navbar__search-input searchInput_YFbd" value=""><div class="loadingRing_RJI3 searchBarLoadingRing_YnHq"><div></div><div></div><div></div><div></div></div></div></div></div></div><div class="navbarRight_q16u"><a class="navLink_RnnM" href="/moltbot-doc/docs">Docs</a><a class="navLink_RnnM" href="/moltbot-doc/blog">Blog</a><button class="themeToggle_zD_x" aria-label="Switch to light theme" title="Light"><svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M12 18a6 6 0 1 1 0-12 6 6 0 0 1 0 12zm0-2a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM11 1h2v3h-2V1zm0 19h2v3h-2v-3zM3.515 4.929l1.414-1.414L7.05 5.636 5.636 7.05 3.515 4.93zM16.95 18.364l1.414-1.414 2.121 2.121-1.414 1.414-2.121-2.121zm2.121-14.85l1.414 1.415-2.121 2.121-1.414-1.414 2.121-2.121zM5.636 16.95l1.414 1.414-2.121 2.121-1.414-1.414 2.121-2.121zM23 11v2h-3v-2h3zM4 11v2H1v-2h3z"></path></svg></button></div></div></nav><div id="__docusaurus_skipToContent_fallback" class="theme-layout-main main-wrapper mainWrapper_z2l0"><div class="docsWrapper_hBAB"><button aria-label="回到顶部" class="clean-btn theme-back-to-top-button backToTopButton_sjWU" type="button"></button><div class="docRoot_UBD9"><main class="docMainContainer_TBSr docMainContainerEnhanced_lQrH"><div class="container padding-top--md padding-bottom--lg"><div class="row"><div class="col docItemCol_VOVn"><div class="docItemContainer_Djhp"><article><div class="tocCollapsible_ETCw theme-doc-toc-mobile tocMobile_ITEo"><button type="button" class="clean-btn tocCollapsibleButton_TO0P">本页总览</button></div><div class="theme-doc-markdown markdown"><header><h1>测试</h1></header>
+<p>Moltbot 有三个 Vitest 套件（单元/集成、端到端、实时）和一小套 Docker 运行器。</p>
+<p>本文档是&quot;我们如何测试&quot;的指南：</p>
+<ul>
+<li class="">每个套件涵盖的内容（以及故意<em>不</em>涵盖的内容）</li>
+<li class="">用于常见工作流程的命令（本地、推送前、调试）</li>
+<li class="">实时测试如何发现凭据和选择模型/提供者</li>
+<li class="">如何为现实世界的模型/提供者问题添加回归测试</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="快速开始">快速开始<a href="#快速开始" class="hash-link" aria-label="快速开始的直接链接" title="快速开始的直接链接" translate="no">​</a></h2>
+<p>大部分时间：</p>
+<ul>
+<li class="">完整门控（推送前预期）：<code>pnpm lint &amp;&amp; pnpm build &amp;&amp; pnpm test</code></li>
+</ul>
+<p>当您接触测试或想要额外信心时：</p>
+<ul>
+<li class="">覆盖门控：<code>pnpm test:coverage</code></li>
+<li class="">端到端套件：<code>pnpm test:e2e</code></li>
+</ul>
+<p>当调试真实提供者/模型时（需要真实凭据）：</p>
+<ul>
+<li class="">实时套件（模型 + 网关工具/图像探测）：<code>pnpm test:live</code></li>
+</ul>
+<p>提示：当您只需要一个失败案例时，优先通过下面描述的白名单环境变量缩小实时测试范围。</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="测试套件在哪里运行">测试套件（在哪里运行）<a href="#测试套件在哪里运行" class="hash-link" aria-label="测试套件（在哪里运行）的直接链接" title="测试套件（在哪里运行）的直接链接" translate="no">​</a></h2>
+<p>将套件视为&quot;增加的现实性&quot;（以及增加的不稳定/成本）：</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="单元--集成默认">单元 / 集成（默认）<a href="#单元--集成默认" class="hash-link" aria-label="单元 / 集成（默认）的直接链接" title="单元 / 集成（默认）的直接链接" translate="no">​</a></h3>
+<ul>
+<li class="">命令：<code>pnpm test</code></li>
+<li class="">配置：<code>vitest.config.ts</code></li>
+<li class="">文件：<code>src/**/*.test.ts</code></li>
+<li class="">范围：
+<ul>
+<li class="">纯单元测试</li>
+<li class="">进程内集成测试（网关认证、路由、工具、解析、配置）</li>
+<li class="">已知错误的确定性回归</li>
+</ul>
+</li>
+<li class="">期望：
+<ul>
+<li class="">在 CI 中运行</li>
+<li class="">不需要真实密钥</li>
+<li class="">应该快速且稳定</li>
+</ul>
+</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="端到端网关冒烟">端到端（网关冒烟）<a href="#端到端网关冒烟" class="hash-link" aria-label="端到端（网关冒烟）的直接链接" title="端到端（网关冒烟）的直接链接" translate="no">​</a></h3>
+<ul>
+<li class="">命令：<code>pnpm test:e2e</code></li>
+<li class="">配置：<code>vitest.e2e.config.ts</code></li>
+<li class="">文件：<code>src/**/*.e2e.test.ts</code></li>
+<li class="">范围：
+<ul>
+<li class="">多实例网关端到端行为</li>
+<li class="">WebSocket/HTTP 界面、节点配对和更重的网络</li>
+</ul>
+</li>
+<li class="">期望：
+<ul>
+<li class="">在 CI 中运行（当在流水线中启用时）</li>
+<li class="">不需要真实密钥</li>
+<li class="">比单元测试有更多的活动部件（可能较慢）</li>
+</ul>
+</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="实时真实提供者--真实模型">实时（真实提供者 + 真实模型）<a href="#实时真实提供者--真实模型" class="hash-link" aria-label="实时（真实提供者 + 真实模型）的直接链接" title="实时（真实提供者 + 真实模型）的直接链接" translate="no">​</a></h3>
+<ul>
+<li class="">命令：<code>pnpm test:live</code></li>
+<li class="">配置：<code>vitest.live.config.ts</code></li>
+<li class="">文件：<code>src/**/*.live.test.ts</code></li>
+<li class="">默认：<strong>启用</strong> 通过 <code>pnpm test:live</code>（设置 <code>CLAWDBOT_LIVE_TEST=1</code>）</li>
+<li class="">范围：
+<ul>
+<li class="">&quot;这个提供者/模型今天是否真的能用真实凭据工作？&quot;</li>
+<li class="">捕获提供者格式变化、工具调用怪癖、认证问题和速率限制行为</li>
+</ul>
+</li>
+<li class="">期望：
+<ul>
+<li class="">按设计不是 CI 稳定的（真实网络、真实提供者策略、配额、停机）</li>
+<li class="">花费金钱 / 使用速率限制</li>
+<li class="">优先运行缩小的子集而不是&quot;所有&quot;</li>
+<li class="">实时运行将源 <code>~/.profile</code> 以获取缺失的 API 密钥</li>
+<li class="">Anthropic 密钥轮换：设置 <code>CLAWDBOT_LIVE_ANTHROPIC_KEYS=&quot;sk-...,sk-...&quot;</code>（或 <code>CLAWDBOT_LIVE_ANTHROPIC_KEY=sk-...</code>）或多个 <code>ANTHROPIC_API_KEY*</code> 变量；测试将在速率限制时重试</li>
+</ul>
+</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="我应该运行哪个套件">我应该运行哪个套件？<a href="#我应该运行哪个套件" class="hash-link" aria-label="我应该运行哪个套件？的直接链接" title="我应该运行哪个套件？的直接链接" translate="no">​</a></h2>
+<p>使用此决策表：</p>
+<ul>
+<li class="">编辑逻辑/测试：运行 <code>pnpm test</code>（如果更改很多则运行 <code>pnpm test:coverage</code>）</li>
+<li class="">接触网关网络 / WS 协议 / 配对：添加 <code>pnpm test:e2e</code></li>
+<li class="">调试&quot;我的机器人宕机了&quot; / 提供者特定故障 / 工具调用：运行缩小的 <code>pnpm test:live</code></li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="实时模型冒烟配置文件密钥">实时：模型冒烟（配置文件密钥）<a href="#实时模型冒烟配置文件密钥" class="hash-link" aria-label="实时：模型冒烟（配置文件密钥）的直接链接" title="实时：模型冒烟（配置文件密钥）的直接链接" translate="no">​</a></h2>
+<p>实时测试分为两层，以便我们可以隔离故障：</p>
+<ul>
+<li class="">&quot;直接模型&quot;告诉我们提供者/模型是否能使用给定密钥回答。</li>
+<li class="">&quot;网关冒烟&quot;告诉我们完整网关+代理管道是否适用于该模型（会话、历史、工具、沙盒策略等）。</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="第一层直接模型完成无网关">第一层：直接模型完成（无网关）<a href="#第一层直接模型完成无网关" class="hash-link" aria-label="第一层：直接模型完成（无网关）的直接链接" title="第一层：直接模型完成（无网关）的直接链接" translate="no">​</a></h3>
+<ul>
+<li class="">测试：<code>src/agents/models.profiles.live.test.ts</code></li>
+<li class="">目标：
+<ul>
+<li class="">枚举发现的模型</li>
+<li class="">使用 <code>getApiKeyForModel</code> 选择您有凭据的模型</li>
+<li class="">每个模型运行一个小的完成（以及需要时的目标回归）</li>
+</ul>
+</li>
+<li class="">如何启用：
+<ul>
+<li class=""><code>pnpm test:live</code>（或 <code>CLAWDBOT_LIVE_TEST=1</code> 如果直接调用 Vitest）</li>
+</ul>
+</li>
+<li class="">设置 <code>CLAWDBOT_LIVE_MODELS=modern</code>（或 <code>all</code>，现代白名单的别名）以实际运行此套件；否则跳过以保持 <code>pnpm test:live</code> 专注于网关冒烟</li>
+<li class="">如何选择模型：
+<ul>
+<li class=""><code>CLAWDBOT_LIVE_MODELS=modern</code> 以运行现代白名单（Opus/Sonnet/Haiku 4.5，GPT-5.x + Codex，Gemini 3，GLM 4.7，MiniMax M2.1，Grok 4）</li>
+<li class=""><code>CLAWDBOT_LIVE_MODELS=all</code> 是现代白名单的别名</li>
+<li class="">或 <code>CLAWDBOT_LIVE_MODELS=&quot;openai/gpt-5.2,anthropic/claude-opus-4-5,...&quot;</code>（逗号白名单）</li>
+</ul>
+</li>
+<li class="">如何选择提供者：
+<ul>
+<li class=""><code>CLAWDBOT_LIVE_PROVIDERS=&quot;google,google-antigravity,google-gemini-cli&quot;</code>（逗号白名单）</li>
+</ul>
+</li>
+<li class="">密钥来源：
+<ul>
+<li class="">默认：配置文件存储和环境回退</li>
+<li class="">设置 <code>CLAWDBOT_LIVE_REQUIRE_PROFILE_KEYS=1</code> 以仅强制 <strong>配置文件存储</strong></li>
+</ul>
+</li>
+<li class="">存在原因：
+<ul>
+<li class="">分离&quot;提供者 API 损坏 / 密钥无效&quot;与&quot;网关代理管道损坏&quot;</li>
+<li class="">包含小的、孤立的回归（示例：OpenAI Responses/Codex Responses 推理重播 + 工具调用流程）</li>
+</ul>
+</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="第二层网关--开发代理冒烟moltbot-实际做的事情">第二层：网关 + 开发代理冒烟（&quot;@moltbot&quot; 实际做的事情）<a href="#第二层网关--开发代理冒烟moltbot-实际做的事情" class="hash-link" aria-label="第二层：网关 + 开发代理冒烟（&quot;@moltbot&quot; 实际做的事情）的直接链接" title="第二层：网关 + 开发代理冒烟（&quot;@moltbot&quot; 实际做的事情）的直接链接" translate="no">​</a></h3>
+<ul>
+<li class="">测试：<code>src/gateway/gateway-models.profiles.live.test.ts</code></li>
+<li class="">目标：
+<ul>
+<li class="">启动一个进程内网关</li>
+<li class="">创建/修补一个 <code>agent:dev:*</code> 会话（每个运行的模型覆盖）</li>
+<li class="">迭代模型+密钥并断言：
+<ul>
+<li class="">&quot;有意义&quot;的响应（无工具）</li>
+<li class="">真实工具调用工作（读取探测）</li>
+<li class="">可选的额外工具探测（exec+read 探测）</li>
+<li class="">OpenAI 回归路径（仅工具调用 → 后续）继续工作</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="">探测详情（以便您可以快速解释故障）：
+<ul>
+<li class=""><code>read</code> 探测：测试在工作区中写入一个随机文件并要求代理 <code>read</code> 它并回显随机数。</li>
+<li class=""><code>exec+read</code> 探测：测试要求代理 <code>exec</code>-write 一个随机数到临时文件，然后 <code>read</code> 回来。</li>
+<li class="">图像探测：测试附加一个生成的 PNG（猫 + 随机代码）并期望模型返回 <code>cat &lt;CODE&gt;</code>。</li>
+<li class="">实现参考：<code>src/gateway/gateway-models.profiles.live.test.ts</code> 和 <code>src/gateway/live-image-probe.ts</code>。</li>
+</ul>
+</li>
+<li class="">如何启用：
+<ul>
+<li class=""><code>pnpm test:live</code>（或 <code>CLAWDBOT_LIVE_TEST=1</code> 如果直接调用 Vitest）</li>
+</ul>
+</li>
+<li class="">如何选择模型：
+<ul>
+<li class="">默认：现代白名单（Opus/Sonnet/Haiku 4.5，GPT-5.x + Codex，Gemini 3，GLM 4.7，MiniMax M2.1，Grok 4）</li>
+<li class=""><code>CLAWDBOT_LIVE_GATEWAY_MODELS=all</code> 是现代白名单的别名</li>
+<li class="">或设置 <code>CLAWDBOT_LIVE_GATEWAY_MODELS=&quot;provider/model&quot;</code>（或逗号列表）以缩小范围</li>
+</ul>
+</li>
+<li class="">如何选择提供者（避免&quot;OpenRouter 一切&quot;）：
+<ul>
+<li class=""><code>CLAWDBOT_LIVE_GATEWAY_PROVIDERS=&quot;google,google-antigravity,google-gemini-cli,openai,anthropic,zai,minimax&quot;</code>（逗号白名单）</li>
+</ul>
+</li>
+<li class="">工具 + 图像探测在此实时测试中始终开启：
+<ul>
+<li class=""><code>read</code> 探测 + <code>exec+read</code> 探测（工具压力）</li>
+<li class="">当模型宣传图像输入支持时运行图像探测</li>
+<li class="">流程（高层级）：
+<ul>
+<li class="">测试生成一个带有&quot;CATA&quot; + 随机代码的小 PNG（<code>src/gateway/live-image-probe.ts</code>）</li>
+<li class="">通过 <code>agent</code> <code>attachments: [{ mimeType: &quot;image/png&quot;, content: &quot;&lt;base64&gt;&quot; }]</code> 发送它</li>
+<li class="">网关将附件解析为 <code>images[]</code>（<code>src/gateway/server-methods/agent.ts</code> + <code>src/gateway/chat-attachments.ts</code>）</li>
+<li class="">嵌入代理将多模态用户消息转发给模型</li>
+<li class="">断言：回复包含 <code>cat</code> + 代码（OCR 容差：允许小错误）</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>提示：要查看您可以在机器上测试什么（以及确切的 <code>provider/model</code> id），运行：</p>
+<div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#D6DEEB;--prism-background-color:#001122"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#D6DEEB;background-color:#001122"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#D6DEEB"><span class="token plain">moltbot models list</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">moltbot models list --json</span><br></span></code></pre></div></div>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="实时anthropic-设置令牌冒烟">实时：Anthropic 设置令牌冒烟<a href="#实时anthropic-设置令牌冒烟" class="hash-link" aria-label="实时：Anthropic 设置令牌冒烟的直接链接" title="实时：Anthropic 设置令牌冒烟的直接链接" translate="no">​</a></h2>
+<ul>
+<li class="">测试：<code>src/agents/anthropic.setup-token.live.test.ts</code></li>
+<li class="">目标：验证 Claude Code CLI 设置令牌（或粘贴的设置令牌配置文件）能否完成 Anthropic 提示。</li>
+<li class="">启用：
+<ul>
+<li class=""><code>pnpm test:live</code>（或 <code>CLAWDBOT_LIVE_TEST=1</code> 如果直接调用 Vitest）</li>
+<li class=""><code>CLAWDBOT_LIVE_SETUP_TOKEN=1</code></li>
+</ul>
+</li>
+<li class="">令牌来源（选择一个）：
+<ul>
+<li class="">配置文件：<code>CLAWDBOT_LIVE_SETUP_TOKEN_PROFILE=anthropic:setup-token-test</code></li>
+<li class="">原始令牌：<code>CLAWDBOT_LIVE_SETUP_TOKEN_VALUE=sk-ant-oat01-...</code></li>
+</ul>
+</li>
+<li class="">模型覆盖（可选）：
+<ul>
+<li class=""><code>CLAWDBOT_LIVE_SETUP_TOKEN_MODEL=anthropic/claude-opus-4-5</code></li>
+</ul>
+</li>
+</ul>
+<p>设置示例：</p>
+<div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#D6DEEB;--prism-background-color:#001122"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#D6DEEB;background-color:#001122"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#D6DEEB"><span class="token plain">moltbot models auth paste-token --provider anthropic --profile-id anthropic:setup-token-test</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">CLAWDBOT_LIVE_SETUP_TOKEN=1 CLAWDBOT_LIVE_SETUP_TOKEN_PROFILE=anthropic:setup-token-test pnpm test:live src/agents/anthropic.setup-token.live.test.ts</span><br></span></code></pre></div></div>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="实时cli-后端冒烟claude-code-cli-或其他本地-cli">实时：CLI 后端冒烟（Claude Code CLI 或其他本地 CLI）<a href="#实时cli-后端冒烟claude-code-cli-或其他本地-cli" class="hash-link" aria-label="实时：CLI 后端冒烟（Claude Code CLI 或其他本地 CLI）的直接链接" title="实时：CLI 后端冒烟（Claude Code CLI 或其他本地 CLI）的直接链接" translate="no">​</a></h2>
+<ul>
+<li class="">测试：<code>src/gateway/gateway-cli-backend.live.test.ts</code></li>
+<li class="">目标：使用本地 CLI 后端验证网关 + 代理管道，不接触您的默认配置。</li>
+<li class="">启用：
+<ul>
+<li class=""><code>pnpm test:live</code>（或 <code>CLAWDBOT_LIVE_TEST=1</code> 如果直接调用 Vitest）</li>
+<li class=""><code>CLAWDBOT_LIVE_CLI_BACKEND=1</code></li>
+</ul>
+</li>
+<li class="">默认值：
+<ul>
+<li class="">模型：<code>claude-cli/claude-sonnet-4-5</code></li>
+<li class="">命令：<code>claude</code></li>
+<li class="">参数：<code>[&quot;-p&quot;,&quot;--output-format&quot;,&quot;json&quot;,&quot;--dangerously-skip-permissions&quot;]</code></li>
+</ul>
+</li>
+<li class="">覆盖（可选）：
+<ul>
+<li class=""><code>CLAWDBOT_LIVE_CLI_BACKEND_MODEL=&quot;claude-cli/claude-opus-4-5&quot;</code></li>
+<li class=""><code>CLAWDBOT_LIVE_CLI_BACKEND_MODEL=&quot;codex-cli/gpt-5.2-codex&quot;</code></li>
+<li class=""><code>CLAWDBOT_LIVE_CLI_BACKEND_COMMAND=&quot;/full/path/to/claude&quot;</code></li>
+<li class=""><code>CLAWDBOT_LIVE_CLI_BACKEND_ARGS=&#x27;[&quot;-p&quot;,&quot;--output-format&quot;,&quot;json&quot;,&quot;--permission-mode&quot;,&quot;bypassPermissions&quot;]&#x27;</code></li>
+<li class=""><code>CLAWDBOT_LIVE_CLI_BACKEND_CLEAR_ENV=&#x27;[&quot;ANTHROPIC_API_KEY&quot;,&quot;ANTHROPIC_API_KEY_OLD&quot;]&#x27;</code></li>
+<li class=""><code>CLAWDBOT_LIVE_CLI_BACKEND_IMAGE_PROBE=1</code> 以发送真实图像附件（路径注入到提示中）。</li>
+<li class=""><code>CLAWDBOT_LIVE_CLI_BACKEND_IMAGE_ARG=&quot;--image&quot;</code> 以将图像文件路径作为 CLI 参数传递而不是提示注入。</li>
+<li class=""><code>CLAWDBOT_LIVE_CLI_BACKEND_IMAGE_MODE=&quot;repeat&quot;</code>（或 <code>&quot;list&quot;</code>）以控制当设置 <code>IMAGE_ARG</code> 时如何传递图像参数。</li>
+<li class=""><code>CLAWDBOT_LIVE_CLI_BACKEND_RESUME_PROBE=1</code> 以发送第二个回合并验证恢复流程。</li>
+</ul>
+</li>
+<li class=""><code>CLAWDBOT_LIVE_CLI_BACKEND_DISABLE_MCP_CONFIG=0</code> 以保持 Claude Code CLI MCP 配置启用（默认使用临时空文件禁用 MCP 配置）。</li>
+</ul>
+<p>示例：</p>
+<div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#D6DEEB;--prism-background-color:#001122"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#D6DEEB;background-color:#001122"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#D6DEEB"><span class="token plain">CLAWDBOT_LIVE_CLI_BACKEND=1 \</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">  CLAWDBOT_LIVE_CLI_BACKEND_MODEL=&quot;claude-cli/claude-sonnet-4-5&quot; \</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">  pnpm test:live src/gateway/gateway-cli-backend.live.test.ts</span><br></span></code></pre></div></div>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="推荐的实时配方">推荐的实时配方<a href="#推荐的实时配方" class="hash-link" aria-label="推荐的实时配方的直接链接" title="推荐的实时配方的直接链接" translate="no">​</a></h3>
+<p>窄的、明确的白名单最快且最不容易出错：</p>
+<ul>
+<li class="">
+<p>单个模型，直接（无网关）：</p>
+<ul>
+<li class=""><code>CLAWDBOT_LIVE_MODELS=&quot;openai/gpt-5.2&quot; pnpm test:live src/agents/models.profiles.live.test.ts</code></li>
+</ul>
+</li>
+<li class="">
+<p>单个模型，网关冒烟：</p>
+<ul>
+<li class=""><code>CLAWDBOT_LIVE_GATEWAY_MODELS=&quot;openai/gpt-5.2&quot; pnpm test:live src/gateway/gateway-models.profiles.live.test.ts</code></li>
+</ul>
+</li>
+<li class="">
+<p>跨几个提供者的工具调用：</p>
+<ul>
+<li class=""><code>CLAWDBOT_LIVE_GATEWAY_MODELS=&quot;openai/gpt-5.2,anthropic/claude-opus-4-5,google/gemini-3-flash-preview,zai/glm-4.7,minimax/minimax-m2.1&quot; pnpm test:live src/gateway/gateway-models.profiles.live.test.ts</code></li>
+</ul>
+</li>
+<li class="">
+<p>Google 重点（Gemini API 密钥 + Antigravity）：</p>
+<ul>
+<li class="">Gemini（API 密钥）：<code>CLAWDBOT_LIVE_GATEWAY_MODELS=&quot;google/gemini-3-flash-preview&quot; pnpm test:live src/gateway/gateway-models.profiles.live.test.ts</code></li>
+<li class="">Antigravity（OAuth）：<code>CLAWDBOT_LIVE_GATEWAY_MODELS=&quot;google-antigravity/claude-opus-4-5-thinking,google-antigravity/gemini-3-pro-high&quot; pnpm test:live src/gateway/gateway-models.profiles.live.test.ts</code></li>
+</ul>
+</li>
+</ul>
+<p>注意事项：</p>
+<ul>
+<li class=""><code>google/...</code> 使用 Gemini API（API 密钥）。</li>
+<li class=""><code>google-antigravity/...</code> 使用 Antigravity OAuth 桥接（Cloud Code Assist 风格代理端点）。</li>
+<li class=""><code>google-gemini-cli/...</code> 使用您机器上的本地 Gemini CLI（单独的认证 + 工具怪癖）。</li>
+<li class="">Gemini API 与 Gemini CLI：
+<ul>
+<li class="">API：Moltbot 通过 HTTP 调用 Google 的托管 Gemini API（API 密钥 / 配置文件认证）；这是大多数用户所说的&quot;Gemini&quot;。</li>
+<li class="">CLI：Moltbot 调用本地 <code>gemini</code> 二进制文件；它有自己的认证，行为可能不同（流/工具支持/版本差异）。</li>
+</ul>
+</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="实时模型矩阵我们涵盖的内容">实时：模型矩阵（我们涵盖的内容）<a href="#实时模型矩阵我们涵盖的内容" class="hash-link" aria-label="实时：模型矩阵（我们涵盖的内容）的直接链接" title="实时：模型矩阵（我们涵盖的内容）的直接链接" translate="no">​</a></h2>
+<p>没有固定的&quot;CI 模型列表&quot;（实时是可选的），但在有密钥的开发机器上，这些是<strong>推荐</strong>定期覆盖的模型。</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="现代冒烟集工具调用--图像">现代冒烟集（工具调用 + 图像）<a href="#现代冒烟集工具调用--图像" class="hash-link" aria-label="现代冒烟集（工具调用 + 图像）的直接链接" title="现代冒烟集（工具调用 + 图像）的直接链接" translate="no">​</a></h3>
+<p>这是我们期望保持工作的&quot;常见模型&quot;运行：</p>
+<ul>
+<li class="">OpenAI（非 Codex）：<code>openai/gpt-5.2</code>（可选：<code>openai/gpt-5.1</code>）</li>
+<li class="">OpenAI Codex：<code>openai-codex/gpt-5.2</code>（可选：<code>openai-codex/gpt-5.2-codex</code>）</li>
+<li class="">Anthropic：<code>anthropic/claude-opus-4-5</code>（或 <code>anthropic/claude-sonnet-4-5</code>）</li>
+<li class="">Google（Gemini API）：<code>google/gemini-3-pro-preview</code> 和 <code>google/gemini-3-flash-preview</code>（避免较老的 Gemini 2.x 模型）</li>
+<li class="">Google（Antigravity）：<code>google-antigravity/claude-opus-4-5-thinking</code> 和 <code>google-antigravity/gemini-3-pro-high</code></li>
+<li class="">Z.AI（GLM）：<code>zai/glm-4.7</code></li>
+<li class="">MiniMax：<code>minimax/minimax-m2.1</code></li>
+</ul>
+<p>使用工具 + 图像运行网关冒烟：
+<code>CLAWDBOT_LIVE_GATEWAY_MODELS=&quot;openai/gpt-5.2,openai-codex/gpt-5.2,anthropic/claude-opus-4-5,google/gemini-3-pro-preview,google/gemini-3-flash-preview,google-antigravity/claude-opus-4-5-thinking,google-antigravity/gemini-3-pro-high,zai/glm-4.7,minimax/minimax-m2.1&quot; pnpm test:live src/gateway/gateway-models.profiles.live.test.ts</code></p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="基线工具调用读取--可选执行">基线：工具调用（读取 + 可选执行）<a href="#基线工具调用读取--可选执行" class="hash-link" aria-label="基线：工具调用（读取 + 可选执行）的直接链接" title="基线：工具调用（读取 + 可选执行）的直接链接" translate="no">​</a></h3>
+<p>为每个提供者系列至少选择一个：</p>
+<ul>
+<li class="">OpenAI：<code>openai/gpt-5.2</code>（或 <code>openai/gpt-5-mini</code>）</li>
+<li class="">Anthropic：<code>anthropic/claude-opus-4-5</code>（或 <code>anthropic/claude-sonnet-4-5</code>）</li>
+<li class="">Google：<code>google/gemini-3-flash-preview</code>（或 <code>google/gemini-3-pro-preview</code>）</li>
+<li class="">Z.AI（GLM）：<code>zai/glm-4.7</code></li>
+<li class="">MiniMax：<code>minimax/minimax-m2.1</code></li>
+</ul>
+<p>可选的额外覆盖（很好有）：</p>
+<ul>
+<li class="">xAI：<code>xai/grok-4</code>（或最新可用）</li>
+<li class="">Mistral：<code>mistral/</code>…（选择一个您已启用的&quot;工具&quot;能力模型）</li>
+<li class="">Cerebras：<code>cerebras/</code>…（如果您有访问权限）</li>
+<li class="">LM Studio：<code>lmstudio/</code>…（本地；工具调用取决于 API 模式）</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="视觉图像发送附件--多模态消息">视觉：图像发送（附件 → 多模态消息）<a href="#视觉图像发送附件--多模态消息" class="hash-link" aria-label="视觉：图像发送（附件 → 多模态消息）的直接链接" title="视觉：图像发送（附件 → 多模态消息）的直接链接" translate="no">​</a></h3>
+<p>在 <code>CLAWDBOT_LIVE_GATEWAY_MODELS</code> 中至少包含一个图像能力模型（Claude/Gemini/OpenAI 视觉能力变体等）以练习图像探测。</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="聚合器--替代网关">聚合器 / 替代网关<a href="#聚合器--替代网关" class="hash-link" aria-label="聚合器 / 替代网关的直接链接" title="聚合器 / 替代网关的直接链接" translate="no">​</a></h3>
+<p>如果您有启用的密钥，我们也支持通过以下方式进行测试：</p>
+<ul>
+<li class="">OpenRouter：<code>openrouter/...</code>（数百个模型；使用 <code>moltbot models scan</code> 查找工具+图像能力候选）</li>
+<li class="">OpenCode Zen：<code>opencode/...</code>（通过 <code>OPENCODE_API_KEY</code> / <code>OPENCODE_ZEN_API_KEY</code> 认证）</li>
+</ul>
+<p>更多您可以在实时矩阵中包含的提供者（如果您有凭据/配置）：</p>
+<ul>
+<li class="">内置：<code>openai</code>，<code>openai-codex</code>，<code>anthropic</code>，<code>google</code>，<code>google-vertex</code>，<code>google-antigravity</code>，<code>google-gemini-cli</code>，<code>zai</code>，<code>openrouter</code>，<code>opencode</code>，<code>xai</code>，<code>groq</code>，<code>cerebras</code>，<code>mistral</code>，<code>github-copilot</code></li>
+<li class="">通过 <code>models.providers</code>（自定义端点）：<code>minimax</code>（云/API），以及任何 OpenAI/Anthropic 兼容代理（LM Studio，vLLM，LiteLLM 等）</li>
+</ul>
+<p>提示：不要试图在文档中硬编码&quot;所有模型&quot;。权威列表是您机器上 <code>discoverModels(...)</code> 返回的内容以及可用的密钥。</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="凭据永远不要提交">凭据（永远不要提交）<a href="#凭据永远不要提交" class="hash-link" aria-label="凭据（永远不要提交）的直接链接" title="凭据（永远不要提交）的直接链接" translate="no">​</a></h2>
+<p>实时测试发现凭据的方式与 CLI 相同。实际影响：</p>
+<ul>
+<li class="">
+<p>如果 CLI 工作，实时测试应该找到相同的密钥。</p>
+</li>
+<li class="">
+<p>如果实时测试说&quot;无凭据&quot;，以调试 <code>moltbot models list</code> / 模型选择的方式进行调试。</p>
+</li>
+<li class="">
+<p>配置文件存储：<code>~/.clawdbot/credentials/</code>（首选；测试中&quot;配置文件密钥&quot;的含义）</p>
+</li>
+<li class="">
+<p>配置：<code>~/.clawdbot/moltbot.json</code>（或 <code>CLAWDBOT_CONFIG_PATH</code>）</p>
+</li>
+</ul>
+<p>如果您想依赖环境密钥（例如在 <code>~/.profile</code> 中导出），在 <code>source ~/.profile</code> 后运行本地测试，或使用下面的 Docker 运行器（它们可以将 <code>~/.profile</code> 挂载到容器中）。</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="deepgram-实时音频转录">Deepgram 实时（音频转录）<a href="#deepgram-实时音频转录" class="hash-link" aria-label="Deepgram 实时（音频转录）的直接链接" title="Deepgram 实时（音频转录）的直接链接" translate="no">​</a></h2>
+<ul>
+<li class="">测试：<code>src/media-understanding/providers/deepgram/audio.live.test.ts</code></li>
+<li class="">启用：<code>DEEPGRAM_API_KEY=... DEEPGRAM_LIVE_TEST=1 pnpm test:live src/media-understanding/providers/deepgram/audio.live.test.ts</code></li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="docker-运行器可选的在-linux-中工作检查">Docker 运行器（可选的&quot;在 Linux 中工作&quot;检查）<a href="#docker-运行器可选的在-linux-中工作检查" class="hash-link" aria-label="Docker 运行器（可选的&quot;在 Linux 中工作&quot;检查）的直接链接" title="Docker 运行器（可选的&quot;在 Linux 中工作&quot;检查）的直接链接" translate="no">​</a></h2>
+<p>这些在仓库 Docker 镜像内运行 <code>pnpm test:live</code>，挂载您的本地配置目录和工作区（并在挂载时源 <code>~/.profile</code>）：</p>
+<ul>
+<li class="">直接模型：<code>pnpm test:docker:live-models</code>（脚本：<code>scripts/test-live-models-docker.sh</code>）</li>
+<li class="">网关 + 开发代理：<code>pnpm test:docker:live-gateway</code>（脚本：<code>scripts/test-live-gateway-models-docker.sh</code>）</li>
+<li class="">入门向导（TTY，完整脚手架）：<code>pnpm test:docker:onboard</code>（脚本：<code>scripts/e2e/onboard-docker.sh</code>）</li>
+<li class="">网关网络（两个容器，WS 认证 + 健康检查）：<code>pnpm test:docker:gateway-network</code>（脚本：<code>scripts/e2e/gateway-network-docker.sh</code>）</li>
+<li class="">插件（自定义扩展加载 + 注册冒烟）：<code>pnpm test:docker:plugins</code>（脚本：<code>scripts/e2e/plugins-docker.sh</code>）</li>
+</ul>
+<p>有用的环境变量：</p>
+<ul>
+<li class=""><code>CLAWDBOT_CONFIG_DIR=...</code>（默认：<code>~/.clawdbot</code>）挂载到 <code>/home/node/.clawdbot</code></li>
+<li class=""><code>CLAWDBOT_WORKSPACE_DIR=...</code>（默认：<code>~/clawd</code>）挂载到 <code>/home/node/clawd</code></li>
+<li class=""><code>CLAWDBOT_PROFILE_FILE=...</code>（默认：<code>~/.profile</code>）挂载到 <code>/home/node/.profile</code> 并在运行测试前源</li>
+<li class=""><code>CLAWDBOT_LIVE_GATEWAY_MODELS=...</code> / <code>CLAWDBOT_LIVE_MODELS=...</code> 以缩小运行</li>
+<li class=""><code>CLAWDBOT_LIVE_REQUIRE_PROFILE_KEYS=1</code> 以确保凭据来自配置文件存储（而非环境）</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="文档完整性">文档完整性<a href="#文档完整性" class="hash-link" aria-label="文档完整性的直接链接" title="文档完整性的直接链接" translate="no">​</a></h2>
+<p>在文档编辑后运行文档检查：<code>pnpm docs:list</code>。</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="离线回归ci-安全">离线回归（CI 安全）<a href="#离线回归ci-安全" class="hash-link" aria-label="离线回归（CI 安全）的直接链接" title="离线回归（CI 安全）的直接链接" translate="no">​</a></h2>
+<p>这些是没有真实提供者的&quot;真实管道&quot;回归：</p>
+<ul>
+<li class="">网关工具调用（模拟 OpenAI，真实网关 + 代理循环）：<code>src/gateway/gateway.tool-calling.mock-openai.test.ts</code></li>
+<li class="">网关向导（WS <code>wizard.start</code>/<code>wizard.next</code>，写入配置 + 认证强制执行）：<code>src/gateway/gateway.wizard.e2e.test.ts</code></li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="代理可靠性评估技能">代理可靠性评估（技能）<a href="#代理可靠性评估技能" class="hash-link" aria-label="代理可靠性评估（技能）的直接链接" title="代理可靠性评估（技能）的直接链接" translate="no">​</a></h2>
+<p>我们已经有一些 CI 安全测试表现得像&quot;代理可靠性评估&quot;：</p>
+<ul>
+<li class="">通过真实网关 + 代理循环的模拟工具调用（<code>src/gateway/gateway.tool-calling.mock-openai.test.ts</code>）。</li>
+<li class="">验证会话布线和配置效果的端到端向导流程（<code>src/gateway/gateway.wizard.e2e.test.ts</code>）。</li>
+</ul>
+<p>技能方面仍缺少的内容（参见 <a class="" href="/moltbot-doc/tools/skills">技能</a>）：</p>
+<ul>
+<li class=""><strong>决策</strong>：当技能在提示中列出时，代理是否选择正确的技能（或避免无关的）？</li>
+<li class=""><strong>合规</strong>：代理在使用前是否读取 <code>SKILL.md</code> 并遵循必需的步骤/参数？</li>
+<li class=""><strong>工作流程合同</strong>：多回合场景，断言工具顺序、会话历史继承和沙盒边界。</li>
+</ul>
+<p>未来的评估应首先保持确定性：</p>
+<ul>
+<li class="">使用模拟提供者的场景运行器来断言工具调用 + 顺序、技能文件读取和会话布线。</li>
+<li class="">一套技能重点场景（使用与避免、门控、提示注入）。</li>
+<li class="">可选的实时评估（可选，环境门控）仅在 CI 安全套件到位后。</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="添加回归指导">添加回归（指导）<a href="#添加回归指导" class="hash-link" aria-label="添加回归（指导）的直接链接" title="添加回归（指导）的直接链接" translate="no">​</a></h2>
+<p>当您修复在实时中发现的提供者/模型问题时：</p>
+<ul>
+<li class="">如果可能，添加 CI 安全回归（模拟/存根提供者，或捕获确切的请求形状转换）</li>
+<li class="">如果本质上只能实时（速率限制、认证策略），保持实时测试狭窄并通过环境变量可选</li>
+<li class="">优先针对捕捉错误的最小层：
+<ul>
+<li class="">提供者请求转换/重放错误 → 直接模型测试</li>
+<li class="">网关会话/历史/工具管道错误 → 网关实时冒烟或 CI 安全网关模拟测试</li>
+</ul>
+</li>
+</ul></div></article><nav class="docusaurus-mt-lg pagination-nav" aria-label="文件选项卡"></nav></div></div><div class="col col--3"><div class="tocWrapper_xKoj"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#快速开始" class="table-of-contents__link toc-highlight">快速开始</a></li><li><a href="#测试套件在哪里运行" class="table-of-contents__link toc-highlight">测试套件（在哪里运行）</a><ul><li><a href="#单元--集成默认" class="table-of-contents__link toc-highlight">单元 / 集成（默认）</a></li><li><a href="#端到端网关冒烟" class="table-of-contents__link toc-highlight">端到端（网关冒烟）</a></li><li><a href="#实时真实提供者--真实模型" class="table-of-contents__link toc-highlight">实时（真实提供者 + 真实模型）</a></li></ul></li><li><a href="#我应该运行哪个套件" class="table-of-contents__link toc-highlight">我应该运行哪个套件？</a></li><li><a href="#实时模型冒烟配置文件密钥" class="table-of-contents__link toc-highlight">实时：模型冒烟（配置文件密钥）</a><ul><li><a href="#第一层直接模型完成无网关" class="table-of-contents__link toc-highlight">第一层：直接模型完成（无网关）</a></li><li><a href="#第二层网关--开发代理冒烟moltbot-实际做的事情" class="table-of-contents__link toc-highlight">第二层：网关 + 开发代理冒烟（&quot;@moltbot&quot; 实际做的事情）</a></li></ul></li><li><a href="#实时anthropic-设置令牌冒烟" class="table-of-contents__link toc-highlight">实时：Anthropic 设置令牌冒烟</a></li><li><a href="#实时cli-后端冒烟claude-code-cli-或其他本地-cli" class="table-of-contents__link toc-highlight">实时：CLI 后端冒烟（Claude Code CLI 或其他本地 CLI）</a><ul><li><a href="#推荐的实时配方" class="table-of-contents__link toc-highlight">推荐的实时配方</a></li></ul></li><li><a href="#实时模型矩阵我们涵盖的内容" class="table-of-contents__link toc-highlight">实时：模型矩阵（我们涵盖的内容）</a><ul><li><a href="#现代冒烟集工具调用--图像" class="table-of-contents__link toc-highlight">现代冒烟集（工具调用 + 图像）</a></li><li><a href="#基线工具调用读取--可选执行" class="table-of-contents__link toc-highlight">基线：工具调用（读取 + 可选执行）</a></li><li><a href="#视觉图像发送附件--多模态消息" class="table-of-contents__link toc-highlight">视觉：图像发送（附件 → 多模态消息）</a></li><li><a href="#聚合器--替代网关" class="table-of-contents__link toc-highlight">聚合器 / 替代网关</a></li></ul></li><li><a href="#凭据永远不要提交" class="table-of-contents__link toc-highlight">凭据（永远不要提交）</a></li><li><a href="#deepgram-实时音频转录" class="table-of-contents__link toc-highlight">Deepgram 实时（音频转录）</a></li><li><a href="#docker-运行器可选的在-linux-中工作检查" class="table-of-contents__link toc-highlight">Docker 运行器（可选的&quot;在 Linux 中工作&quot;检查）</a></li><li><a href="#文档完整性" class="table-of-contents__link toc-highlight">文档完整性</a></li><li><a href="#离线回归ci-安全" class="table-of-contents__link toc-highlight">离线回归（CI 安全）</a></li><li><a href="#代理可靠性评估技能" class="table-of-contents__link toc-highlight">代理可靠性评估（技能）</a></li><li><a href="#添加回归指导" class="table-of-contents__link toc-highlight">添加回归（指导）</a></li></ul></div><div class="tocFooter_Fu2z"><div class="themeGroup_RzWV" role="group" aria-label="Theme"><button class="themeBtn_tGr6" aria-label="Light theme" title="Light"><svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor" aria-hidden="true"><path d="M12 18a6 6 0 1 1 0-12 6 6 0 0 1 0 12zm0-2a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM11 1h2v3h-2V1zm0 19h2v3h-2v-3zM3.515 4.929l1.414-1.414L7.05 5.636 5.636 7.05 3.515 4.93zM16.95 18.364l1.414-1.414 2.121 2.121-1.414 1.414-2.121-2.121zm2.121-14.85l1.414 1.415-2.121 2.121-1.414-1.414 2.121-2.121zM5.636 16.95l1.414 1.414-2.121 2.121-1.414-1.414 2.121-2.121zM23 11v2h-3v-2h3zM4 11v2H1v-2h3z"></path></svg></button><button class="themeBtn_tGr6 themeBtnActive_A6tm" aria-label="Dark theme" title="Dark"><svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor" aria-hidden="true"><path d="M11.38 2.019a7.5 7.5 0 1 0 10.6 10.6C21.83 17.963 17.315 22 12.002 22 6.477 22 2 17.523 2 12c0-5.314 4.038-9.827 9.38-10.28z"></path></svg></button></div></div></div></div></div></div></main></div></div></div><footer class="theme-layout-footer footer footer--dark"><div class="container container-fluid"><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2026 Moltbot Docs.</div></div></div></footer></div>
+</body>
+</html>

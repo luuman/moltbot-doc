@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="zh" dir="ltr" class="docs-wrapper plugin-docs plugin-id-default docs-version-current docs-doc-page docs-doc-id-channels/signal" data-has-hydrated="false">
+<head>
+<meta charset="UTF-8">
+<meta name="generator" content="Docusaurus v3.9.2">
+<title data-rh="true">Signal (signal-cli) | Moltbot Docs</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:url" content="https://luuman.github.io/moltbot-doc/docs/channels/signal"><meta data-rh="true" property="og:locale" content="zh"><meta data-rh="true" name="docusaurus_locale" content="zh"><meta data-rh="true" name="docsearch:language" content="zh"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="Signal (signal-cli) | Moltbot Docs"><meta data-rh="true" name="description" content="状态：外部 CLI 集成。网关通过 HTTP JSON-RPC + SSE 与 signal-cli 通信。"><meta data-rh="true" property="og:description" content="状态：外部 CLI 集成。网关通过 HTTP JSON-RPC + SSE 与 signal-cli 通信。"><link data-rh="true" rel="icon" href="/moltbot-doc/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://luuman.github.io/moltbot-doc/docs/channels/signal"><link data-rh="true" rel="alternate" href="https://luuman.github.io/moltbot-doc/docs/channels/signal" hreflang="zh"><link data-rh="true" rel="alternate" href="https://luuman.github.io/moltbot-doc/docs/channels/signal" hreflang="x-default"><link rel="alternate" type="application/rss+xml" href="/moltbot-doc/blog/rss.xml" title="Moltbot Docs RSS Feed">
+<link rel="alternate" type="application/atom+xml" href="/moltbot-doc/blog/atom.xml" title="Moltbot Docs Atom Feed"><link rel="stylesheet" href="/moltbot-doc/assets/css/styles.484b4c98.css">
+<script src="/moltbot-doc/assets/js/runtime~main.6cf495cf.js" defer="defer"></script>
+<script src="/moltbot-doc/assets/js/main.f9205183.js" defer="defer"></script>
+</head>
+<body class="navigation-with-keyboard">
+<svg style="display: none;"><defs>
+<symbol id="theme-svg-external-link" viewBox="0 0 24 24"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"/></symbol>
+</defs></svg>
+<script>!function(){var t=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme")}catch(t){}}();document.documentElement.setAttribute("data-theme",t||"dark"),document.documentElement.setAttribute("data-theme-choice",t||"dark")}(),function(){try{const c=new URLSearchParams(window.location.search).entries();for(var[t,e]of c)if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id="__docusaurus"><div role="region" aria-label="跳到主要内容"><a class="skipToContent_fXgn" href="#__docusaurus_skipToContent_fallback">跳到主要内容</a></div><nav class="navbar navbar--fixed-top navbar_MONK" role="navigation" aria-label="Main"><div class="navbarInner_ASTH"><div class="navbarLeft_pUmY"><button aria-label="切换导航栏" aria-expanded="false" class="navbar__toggle clean-btn" type="button"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg></button><a class="brand_SXL9" href="/moltbot-doc/"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="24" height="24" rx="6" fill="var(--ifm-color-primary)"></rect><path d="M7 8.5h10M7 12h7M7 15.5h10" stroke="white" stroke-width="1.8" stroke-linecap="round"></path></svg><span class="brandTitle_XbyU">Moltbot</span></a><div class="dropdown_GrgZ"><button class="dropdownToggle_Nf_z">全部站点<svg class="dropdownArrow_Eka8" viewBox="0 0 12 12" fill="none"><path d="M2 4l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg></button><ul class="dropdownMenu_zsxH"><li><a href="https://luuman.github.io/docs-workspace/docs" class="dropdownMenuItem_VBaP">Workspace</a></li><li><a href="https://luuman.github.io/claude-doc/docs" class="dropdownMenuItem_VBaP">Claude</a></li><li><a href="https://luuman.github.io/electron-doc/docs" class="dropdownMenuItem_VBaP">Electron</a></li><li><a href="https://luuman.github.io/tauri-doc/docs" class="dropdownMenuItem_VBaP">Tauri</a></li><li><a href="https://luuman.github.io/matrx-doc/docs" class="dropdownMenuItem_VBaP">Matrx</a></li><li><a href="https://luuman.github.io/brainboard-doc/docs" class="dropdownMenuItem_VBaP">Brainboard</a></li><li><a href="https://luuman.github.io/synology-doc/docs" class="dropdownMenuItem_VBaP">Synology</a></li><li><a href="https://luuman.github.io/codex-doc/docs" class="dropdownMenuItem_VBaP">Codex</a></li><li><a href="https://luuman.github.io/ai-doc/docs" class="dropdownMenuItem_VBaP">AI</a></li></ul></div></div><div class="navbarCenter_Zdr3"><div class="root_OF3s"><span class="icon_UcOK" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor" width="15" height="15"><path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"></path></svg></span><div class="slot__FGx"><div class="navbar__search searchBarContainer_NW3z" dir="ltr"><input placeholder="搜索" aria-label="Search" class="navbar__search-input searchInput_YFbd" value=""><div class="loadingRing_RJI3 searchBarLoadingRing_YnHq"><div></div><div></div><div></div><div></div></div></div></div></div></div><div class="navbarRight_q16u"><a class="navLink_RnnM" href="/moltbot-doc/docs">Docs</a><a class="navLink_RnnM" href="/moltbot-doc/blog">Blog</a><button class="themeToggle_zD_x" aria-label="Switch to light theme" title="Light"><svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M12 18a6 6 0 1 1 0-12 6 6 0 0 1 0 12zm0-2a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM11 1h2v3h-2V1zm0 19h2v3h-2v-3zM3.515 4.929l1.414-1.414L7.05 5.636 5.636 7.05 3.515 4.93zM16.95 18.364l1.414-1.414 2.121 2.121-1.414 1.414-2.121-2.121zm2.121-14.85l1.414 1.415-2.121 2.121-1.414-1.414 2.121-2.121zM5.636 16.95l1.414 1.414-2.121 2.121-1.414-1.414 2.121-2.121zM23 11v2h-3v-2h3zM4 11v2H1v-2h3z"></path></svg></button></div></div></nav><div id="__docusaurus_skipToContent_fallback" class="theme-layout-main main-wrapper mainWrapper_z2l0"><div class="docsWrapper_hBAB"><button aria-label="回到顶部" class="clean-btn theme-back-to-top-button backToTopButton_sjWU" type="button"></button><div class="docRoot_UBD9"><main class="docMainContainer_TBSr docMainContainerEnhanced_lQrH"><div class="container padding-top--md padding-bottom--lg"><div class="row"><div class="col docItemCol_VOVn"><div class="docItemContainer_Djhp"><article><div class="tocCollapsible_ETCw theme-doc-toc-mobile tocMobile_ITEo"><button type="button" class="clean-btn tocCollapsibleButton_TO0P">本页总览</button></div><div class="theme-doc-markdown markdown"><header><h1>Signal (signal-cli)</h1></header>
+<p>状态：外部 CLI 集成。网关通过 HTTP JSON-RPC + SSE 与 <code>signal-cli</code> 通信。</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="快速设置初学者">快速设置（初学者）<a href="#快速设置初学者" class="hash-link" aria-label="快速设置（初学者）的直接链接" title="快速设置（初学者）的直接链接" translate="no">​</a></h2>
+<ol>
+<li class="">为机器人使用<strong>单独的 Signal 号码</strong>（推荐）。</li>
+<li class="">安装 <code>signal-cli</code>（需要 Java）。</li>
+<li class="">链接机器人设备并启动守护进程：
+<ul>
+<li class=""><code>signal-cli link -n &quot;Moltbot&quot;</code></li>
+</ul>
+</li>
+<li class="">配置 Moltbot 并启动网关。</li>
+</ol>
+<p>最小配置：</p>
+<div class="language-json5 codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#D6DEEB;--prism-background-color:#001122"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-json5 codeBlock_bY9V thin-scrollbar" style="color:#D6DEEB;background-color:#001122"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#D6DEEB"><span class="token plain">{</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">  channels: {</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">    signal: {</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">      enabled: true,</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">      account: &quot;+15551234567&quot;,</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">      cliPath: &quot;signal-cli&quot;,</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">      dmPolicy: &quot;pairing&quot;,</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">      allowFrom: [&quot;+15557654321&quot;]</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">    }</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">  }</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">}</span><br></span></code></pre></div></div>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="它是什么">它是什么<a href="#它是什么" class="hash-link" aria-label="它是什么的直接链接" title="它是什么的直接链接" translate="no">​</a></h2>
+<ul>
+<li class="">通过 <code>signal-cli</code>（非嵌入式 libsignal）的 Signal 通道。</li>
+<li class="">确定性路由：回复始终返回到 Signal。</li>
+<li class="">私信共享代理的主会话；群组是隔离的（<code>agent:&lt;agentId&gt;:signal:group:&lt;groupId&gt;</code>）。</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="配置写入">配置写入<a href="#配置写入" class="hash-link" aria-label="配置写入的直接链接" title="配置写入的直接链接" translate="no">​</a></h2>
+<p>默认情况下，Signal 允许写入由 <code>/config set|unset</code> 触发的配置更新（需要 <code>commands.config: true</code>）。</p>
+<p>禁用方法：</p>
+<div class="language-json5 codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#D6DEEB;--prism-background-color:#001122"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-json5 codeBlock_bY9V thin-scrollbar" style="color:#D6DEEB;background-color:#001122"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#D6DEEB"><span class="token plain">{</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">  channels: { signal: { configWrites: false } }</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">}</span><br></span></code></pre></div></div>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="号码模型重要">号码模型（重要）<a href="#号码模型重要" class="hash-link" aria-label="号码模型（重要）的直接链接" title="号码模型（重要）的直接链接" translate="no">​</a></h2>
+<ul>
+<li class="">网关连接到一个<strong>Signal 设备</strong>（<code>signal-cli</code> 账户）。</li>
+<li class="">如果您在<strong>您的个人 Signal 账户</strong>上运行机器人，它将忽略您自己的消息（循环保护）。</li>
+<li class="">对于&quot;我发短信给机器人，它回复&quot;，使用<strong>单独的机器人号码</strong>。</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="设置快速路径">设置（快速路径）<a href="#设置快速路径" class="hash-link" aria-label="设置（快速路径）的直接链接" title="设置（快速路径）的直接链接" translate="no">​</a></h2>
+<ol>
+<li class="">安装 <code>signal-cli</code>（需要 Java）。</li>
+<li class="">链接机器人账户：
+<ul>
+<li class=""><code>signal-cli link -n &quot;Moltbot&quot;</code> 然后扫描 Signal 中的二维码。</li>
+</ul>
+</li>
+<li class="">配置 Signal 并启动网关。</li>
+</ol>
+<p>示例：</p>
+<div class="language-json5 codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#D6DEEB;--prism-background-color:#001122"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-json5 codeBlock_bY9V thin-scrollbar" style="color:#D6DEEB;background-color:#001122"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#D6DEEB"><span class="token plain">{</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">  channels: {</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">    signal: {</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">      enabled: true,</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">      account: &quot;+15551234567&quot;,</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">      cliPath: &quot;signal-cli&quot;,</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">      dmPolicy: &quot;pairing&quot;,</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">      allowFrom: [&quot;+15557654321&quot;]</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">    }</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">  }</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">}</span><br></span></code></pre></div></div>
+<p>多账户支持：使用 <code>channels.signal.accounts</code> 配置每个账户的配置和可选的 <code>name</code>。参见 <a class="" href="/moltbot-doc/gateway/configuration#telegramaccounts--discordaccounts--slackaccounts--signalaccounts--imessageaccounts"><code>gateway/configuration</code></a> 了解共享模式。</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="外部守护进程模式httpurl">外部守护进程模式（httpUrl）<a href="#外部守护进程模式httpurl" class="hash-link" aria-label="外部守护进程模式（httpUrl）的直接链接" title="外部守护进程模式（httpUrl）的直接链接" translate="no">​</a></h2>
+<p>如果您想自己管理 <code>signal-cli</code>（慢 JVM 冷启动、容器初始化或共享 CPU），单独运行守护进程并让 Moltbot 指向它：</p>
+<div class="language-json5 codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#D6DEEB;--prism-background-color:#001122"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-json5 codeBlock_bY9V thin-scrollbar" style="color:#D6DEEB;background-color:#001122"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#D6DEEB"><span class="token plain">{</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">  channels: {</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">    signal: {</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">      httpUrl: &quot;http://127.0.0.1:8080&quot;,</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">      autoStart: false</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">    }</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">  }</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">}</span><br></span></code></pre></div></div>
+<p>这跳过了自动产生和 Moltbot 内部的启动等待。对于自动产生时的慢启动，设置 <code>channels.signal.startupTimeoutMs</code>。</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="访问控制私信--群组">访问控制（私信 + 群组）<a href="#访问控制私信--群组" class="hash-link" aria-label="访问控制（私信 + 群组）的直接链接" title="访问控制（私信 + 群组）的直接链接" translate="no">​</a></h2>
+<p>私信：</p>
+<ul>
+<li class="">默认：<code>channels.signal.dmPolicy = &quot;pairing&quot;</code>。</li>
+<li class="">未知发送者收到配对码；在批准之前忽略消息（代码在 1 小时后过期）。</li>
+<li class="">批准方式：
+<ul>
+<li class=""><code>moltbot pairing list signal</code></li>
+<li class=""><code>moltbot pairing approve signal &lt;CODE&gt;</code></li>
+</ul>
+</li>
+<li class="">配对是 Signal 私信的默认令牌交换。详情：<a class="" href="/moltbot-doc/start/pairing">配对</a></li>
+<li class="">UUID-only 发送者（来自 <code>sourceUuid</code>）存储为 <code>channels.signal.allowFrom</code> 中的 <code>uuid:&lt;id&gt;</code>。</li>
+</ul>
+<p>群组：</p>
+<ul>
+<li class=""><code>channels.signal.groupPolicy = open | allowlist | disabled</code>。</li>
+<li class=""><code>channels.signal.groupAllowFrom</code> 控制在设置为 <code>allowlist</code> 时谁可以在群组中触发。</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="工作原理行为">工作原理（行为）<a href="#工作原理行为" class="hash-link" aria-label="工作原理（行为）的直接链接" title="工作原理（行为）的直接链接" translate="no">​</a></h2>
+<ul>
+<li class=""><code>signal-cli</code> 作为守护进程运行；网关通过 SSE 读取事件。</li>
+<li class="">入站消息被规范化为共享通道信封。</li>
+<li class="">回复始终路由回同一个号码或群组。</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="媒体--限制">媒体 + 限制<a href="#媒体--限制" class="hash-link" aria-label="媒体 + 限制的直接链接" title="媒体 + 限制的直接链接" translate="no">​</a></h2>
+<ul>
+<li class="">出站文本分割到 <code>channels.signal.textChunkLimit</code>（默认 4000）。</li>
+<li class="">可选的换行分割：设置 <code>channels.signal.chunkMode=&quot;newline&quot;</code> 以在长度分割之前按空行（段落边界）分割。</li>
+<li class="">支持附件（从 <code>signal-cli</code> 获取 base64）。</li>
+<li class="">默认媒体上限：<code>channels.signal.mediaMaxMb</code>（默认 8）。</li>
+<li class="">使用 <code>channels.signal.ignoreAttachments</code> 跳过下载媒体。</li>
+<li class="">群组历史上下文使用 <code>channels.signal.historyLimit</code>（或 <code>channels.signal.accounts.*.historyLimit</code>），回退到 <code>messages.groupChat.historyLimit</code>。设置 <code>0</code> 以禁用（默认 50）。</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="输入--已读回执">输入 + 已读回执<a href="#输入--已读回执" class="hash-link" aria-label="输入 + 已读回执的直接链接" title="输入 + 已读回执的直接链接" translate="no">​</a></h2>
+<ul>
+<li class=""><strong>输入指示器</strong>：Moltbot 通过 <code>signal-cli sendTyping</code> 发送输入信号并在回复运行时刷新它们。</li>
+<li class=""><strong>已读回执</strong>：当 <code>channels.signal.sendReadReceipts</code> 为真时，Moltbot 转发允许的私信的已读回执。</li>
+<li class="">Signal-cli 不公开群组的已读回执。</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="反应消息工具">反应（消息工具）<a href="#反应消息工具" class="hash-link" aria-label="反应（消息工具）的直接链接" title="反应（消息工具）的直接链接" translate="no">​</a></h2>
+<ul>
+<li class="">使用 <code>message action=react</code> 和 <code>channel=signal</code>。</li>
+<li class="">目标：发送者 E.164 或 UUID（使用配对输出中的 <code>uuid:&lt;id&gt;</code>；裸 UUID 也有效）。</li>
+<li class=""><code>messageId</code> 是您正在反应的消息的 Signal 时间戳。</li>
+<li class="">群组反应需要 <code>targetAuthor</code> 或 <code>targetAuthorUuid</code>。</li>
+</ul>
+<p>示例：</p>
+<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#D6DEEB;--prism-background-color:#001122"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#D6DEEB;background-color:#001122"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#D6DEEB"><span class="token plain">message action=react channel=signal target=uuid:123e4567-e89b-12d3-a456-426614174000 messageId=1737630212345 emoji=🔥</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">message action=react channel=signal target=+15551234567 messageId=1737630212345 emoji=🔥 remove=true</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">message action=react channel=signal target=signal:group:&lt;groupId&gt; targetAuthor=uuid:&lt;sender-uuid&gt; messageId=1737630212345 emoji=✅</span><br></span></code></pre></div></div>
+<p>配置：</p>
+<ul>
+<li class=""><code>channels.signal.actions.reactions</code>：启用/禁用反应动作（默认 true）。</li>
+<li class=""><code>channels.signal.reactionLevel</code>：<code>off | ack | minimal | extensive</code>。
+<ul>
+<li class=""><code>off</code>/<code>ack</code> 禁用代理反应（消息工具 <code>react</code> 将出错）。</li>
+<li class=""><code>minimal</code>/<code>extensive</code> 启用代理反应并设置指导级别。</li>
+</ul>
+</li>
+<li class="">按账户覆盖：<code>channels.signal.accounts.&lt;id&gt;.actions.reactions</code>，<code>channels.signal.accounts.&lt;id&gt;.reactionLevel</code>。</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="交付目标clicron">交付目标（CLI/cron）<a href="#交付目标clicron" class="hash-link" aria-label="交付目标（CLI/cron）的直接链接" title="交付目标（CLI/cron）的直接链接" translate="no">​</a></h2>
+<ul>
+<li class="">私信：<code>signal:+15551234567</code>（或纯 E.164）。</li>
+<li class="">UUID 私信：<code>uuid:&lt;id&gt;</code>（或裸 UUID）。</li>
+<li class="">群组：<code>signal:group:&lt;groupId&gt;</code>。</li>
+<li class="">用户名：<code>username:&lt;name&gt;</code>（如果您的 Signal 账户支持）。</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="配置参考signal">配置参考（Signal）<a href="#配置参考signal" class="hash-link" aria-label="配置参考（Signal）的直接链接" title="配置参考（Signal）的直接链接" translate="no">​</a></h2>
+<p>完整配置：<a class="" href="/moltbot-doc/gateway/configuration">配置</a></p>
+<p>提供者选项：</p>
+<ul>
+<li class=""><code>channels.signal.enabled</code>：启用/禁用通道启动。</li>
+<li class=""><code>channels.signal.account</code>：机器人账户的 E.164。</li>
+<li class=""><code>channels.signal.cliPath</code>：<code>signal-cli</code> 的路径。</li>
+<li class=""><code>channels.signal.httpUrl</code>：完整守护进程 URL（覆盖主机/端口）。</li>
+<li class=""><code>channels.signal.httpHost</code>，<code>channels.signal.httpPort</code>：守护进程绑定（默认 127.0.0.1:8080）。</li>
+<li class=""><code>channels.signal.autoStart</code>：自动产生守护进程（如果未设置 <code>httpUrl</code> 默认为 true）。</li>
+<li class=""><code>channels.signal.startupTimeoutMs</code>：启动等待超时（毫秒）（上限 120000）。</li>
+<li class=""><code>channels.signal.receiveMode</code>：<code>on-start | manual</code>。</li>
+<li class=""><code>channels.signal.ignoreAttachments</code>：跳过附件下载。</li>
+<li class=""><code>channels.signal.ignoreStories</code>：忽略守护进程的故事。</li>
+<li class=""><code>channels.signal.sendReadReceipts</code>：转发已读回执。</li>
+<li class=""><code>channels.signal.dmPolicy</code>：<code>pairing | allowlist | open | disabled</code>（默认：配对）。</li>
+<li class=""><code>channels.signal.allowFrom</code>：私信允许列表（E.164 或 <code>uuid:&lt;id&gt;</code>）。<code>open</code> 需要 <code>&quot;*&quot;</code>。Signal 没有用户名；使用电话/UUID id。</li>
+<li class=""><code>channels.signal.groupPolicy</code>：<code>open | allowlist | disabled</code>（默认：允许列表）。</li>
+<li class=""><code>channels.signal.groupAllowFrom</code>：群组发送者允许列表。</li>
+<li class=""><code>channels.signal.historyLimit</code>：作为上下文包含的最大群组消息数（0 禁用）。</li>
+<li class=""><code>channels.signal.dmHistoryLimit</code>：私信历史限制（用户回合）。按用户覆盖：<code>channels.signal.dms[&quot;&lt;phone_or_uuid&gt;&quot;].historyLimit</code>。</li>
+<li class=""><code>channels.signal.textChunkLimit</code>：出站分块大小（字符）。</li>
+<li class=""><code>channels.signal.chunkMode</code>：<code>length</code>（默认）或 <code>newline</code> 以在长度分割之前按空行（段落边界）分割。</li>
+<li class=""><code>channels.signal.mediaMaxMb</code>：入站/出站媒体上限（MB）。</li>
+</ul>
+<p>相关全局选项：</p>
+<ul>
+<li class=""><code>agents.list[].groupChat.mentionPatterns</code>（Signal 不支持原生提及）。</li>
+<li class=""><code>messages.groupChat.mentionPatterns</code>（全局回退）。</li>
+<li class=""><code>messages.responsePrefix</code>。</li>
+</ul></div></article><nav class="docusaurus-mt-lg pagination-nav" aria-label="文件选项卡"></nav></div></div><div class="col col--3"><div class="tocWrapper_xKoj"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#快速设置初学者" class="table-of-contents__link toc-highlight">快速设置（初学者）</a></li><li><a href="#它是什么" class="table-of-contents__link toc-highlight">它是什么</a></li><li><a href="#配置写入" class="table-of-contents__link toc-highlight">配置写入</a></li><li><a href="#号码模型重要" class="table-of-contents__link toc-highlight">号码模型（重要）</a></li><li><a href="#设置快速路径" class="table-of-contents__link toc-highlight">设置（快速路径）</a></li><li><a href="#外部守护进程模式httpurl" class="table-of-contents__link toc-highlight">外部守护进程模式（httpUrl）</a></li><li><a href="#访问控制私信--群组" class="table-of-contents__link toc-highlight">访问控制（私信 + 群组）</a></li><li><a href="#工作原理行为" class="table-of-contents__link toc-highlight">工作原理（行为）</a></li><li><a href="#媒体--限制" class="table-of-contents__link toc-highlight">媒体 + 限制</a></li><li><a href="#输入--已读回执" class="table-of-contents__link toc-highlight">输入 + 已读回执</a></li><li><a href="#反应消息工具" class="table-of-contents__link toc-highlight">反应（消息工具）</a></li><li><a href="#交付目标clicron" class="table-of-contents__link toc-highlight">交付目标（CLI/cron）</a></li><li><a href="#配置参考signal" class="table-of-contents__link toc-highlight">配置参考（Signal）</a></li></ul></div><div class="tocFooter_Fu2z"><div class="themeGroup_RzWV" role="group" aria-label="Theme"><button class="themeBtn_tGr6" aria-label="Light theme" title="Light"><svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor" aria-hidden="true"><path d="M12 18a6 6 0 1 1 0-12 6 6 0 0 1 0 12zm0-2a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM11 1h2v3h-2V1zm0 19h2v3h-2v-3zM3.515 4.929l1.414-1.414L7.05 5.636 5.636 7.05 3.515 4.93zM16.95 18.364l1.414-1.414 2.121 2.121-1.414 1.414-2.121-2.121zm2.121-14.85l1.414 1.415-2.121 2.121-1.414-1.414 2.121-2.121zM5.636 16.95l1.414 1.414-2.121 2.121-1.414-1.414 2.121-2.121zM23 11v2h-3v-2h3zM4 11v2H1v-2h3z"></path></svg></button><button class="themeBtn_tGr6 themeBtnActive_A6tm" aria-label="Dark theme" title="Dark"><svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor" aria-hidden="true"><path d="M11.38 2.019a7.5 7.5 0 1 0 10.6 10.6C21.83 17.963 17.315 22 12.002 22 6.477 22 2 17.523 2 12c0-5.314 4.038-9.827 9.38-10.28z"></path></svg></button></div></div></div></div></div></div></main></div></div></div><footer class="theme-layout-footer footer footer--dark"><div class="container container-fluid"><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2026 Moltbot Docs.</div></div></div></footer></div>
+</body>
+</html>

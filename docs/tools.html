@@ -1,0 +1,375 @@
+<!doctype html>
+<html lang="zh" dir="ltr" class="docs-wrapper plugin-docs plugin-id-default docs-version-current docs-doc-page docs-doc-id-tools/index" data-has-hydrated="false">
+<head>
+<meta charset="UTF-8">
+<meta name="generator" content="Docusaurus v3.9.2">
+<title data-rh="true">工具（Moltbot） | Moltbot Docs</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:url" content="https://luuman.github.io/moltbot-doc/docs/tools"><meta data-rh="true" property="og:locale" content="zh"><meta data-rh="true" name="docusaurus_locale" content="zh"><meta data-rh="true" name="docsearch:language" content="zh"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="工具（Moltbot） | Moltbot Docs"><meta data-rh="true" name="description" content="Moltbot 为浏览器、画布、节点和 cron 暴露 一流代理工具。"><meta data-rh="true" property="og:description" content="Moltbot 为浏览器、画布、节点和 cron 暴露 一流代理工具。"><link data-rh="true" rel="icon" href="/moltbot-doc/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://luuman.github.io/moltbot-doc/docs/tools"><link data-rh="true" rel="alternate" href="https://luuman.github.io/moltbot-doc/docs/tools" hreflang="zh"><link data-rh="true" rel="alternate" href="https://luuman.github.io/moltbot-doc/docs/tools" hreflang="x-default"><link rel="alternate" type="application/rss+xml" href="/moltbot-doc/blog/rss.xml" title="Moltbot Docs RSS Feed">
+<link rel="alternate" type="application/atom+xml" href="/moltbot-doc/blog/atom.xml" title="Moltbot Docs Atom Feed"><link rel="stylesheet" href="/moltbot-doc/assets/css/styles.484b4c98.css">
+<script src="/moltbot-doc/assets/js/runtime~main.6cf495cf.js" defer="defer"></script>
+<script src="/moltbot-doc/assets/js/main.f9205183.js" defer="defer"></script>
+</head>
+<body class="navigation-with-keyboard">
+<svg style="display: none;"><defs>
+<symbol id="theme-svg-external-link" viewBox="0 0 24 24"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"/></symbol>
+</defs></svg>
+<script>!function(){var t=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme")}catch(t){}}();document.documentElement.setAttribute("data-theme",t||"dark"),document.documentElement.setAttribute("data-theme-choice",t||"dark")}(),function(){try{const c=new URLSearchParams(window.location.search).entries();for(var[t,e]of c)if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id="__docusaurus"><div role="region" aria-label="跳到主要内容"><a class="skipToContent_fXgn" href="#__docusaurus_skipToContent_fallback">跳到主要内容</a></div><nav class="navbar navbar--fixed-top navbar_MONK" role="navigation" aria-label="Main"><div class="navbarInner_ASTH"><div class="navbarLeft_pUmY"><button aria-label="切换导航栏" aria-expanded="false" class="navbar__toggle clean-btn" type="button"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg></button><a class="brand_SXL9" href="/moltbot-doc/"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="24" height="24" rx="6" fill="var(--ifm-color-primary)"></rect><path d="M7 8.5h10M7 12h7M7 15.5h10" stroke="white" stroke-width="1.8" stroke-linecap="round"></path></svg><span class="brandTitle_XbyU">Moltbot</span></a><div class="dropdown_GrgZ"><button class="dropdownToggle_Nf_z">全部站点<svg class="dropdownArrow_Eka8" viewBox="0 0 12 12" fill="none"><path d="M2 4l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg></button><ul class="dropdownMenu_zsxH"><li><a href="https://luuman.github.io/docs-workspace/docs" class="dropdownMenuItem_VBaP">Workspace</a></li><li><a href="https://luuman.github.io/claude-doc/docs" class="dropdownMenuItem_VBaP">Claude</a></li><li><a href="https://luuman.github.io/electron-doc/docs" class="dropdownMenuItem_VBaP">Electron</a></li><li><a href="https://luuman.github.io/tauri-doc/docs" class="dropdownMenuItem_VBaP">Tauri</a></li><li><a href="https://luuman.github.io/matrx-doc/docs" class="dropdownMenuItem_VBaP">Matrx</a></li><li><a href="https://luuman.github.io/brainboard-doc/docs" class="dropdownMenuItem_VBaP">Brainboard</a></li><li><a href="https://luuman.github.io/synology-doc/docs" class="dropdownMenuItem_VBaP">Synology</a></li><li><a href="https://luuman.github.io/codex-doc/docs" class="dropdownMenuItem_VBaP">Codex</a></li><li><a href="https://luuman.github.io/ai-doc/docs" class="dropdownMenuItem_VBaP">AI</a></li></ul></div></div><div class="navbarCenter_Zdr3"><div class="root_OF3s"><span class="icon_UcOK" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor" width="15" height="15"><path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"></path></svg></span><div class="slot__FGx"><div class="navbar__search searchBarContainer_NW3z" dir="ltr"><input placeholder="搜索" aria-label="Search" class="navbar__search-input searchInput_YFbd" value=""><div class="loadingRing_RJI3 searchBarLoadingRing_YnHq"><div></div><div></div><div></div><div></div></div></div></div></div></div><div class="navbarRight_q16u"><a class="navLink_RnnM" href="/moltbot-doc/docs">Docs</a><a class="navLink_RnnM" href="/moltbot-doc/blog">Blog</a><button class="themeToggle_zD_x" aria-label="Switch to light theme" title="Light"><svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M12 18a6 6 0 1 1 0-12 6 6 0 0 1 0 12zm0-2a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM11 1h2v3h-2V1zm0 19h2v3h-2v-3zM3.515 4.929l1.414-1.414L7.05 5.636 5.636 7.05 3.515 4.93zM16.95 18.364l1.414-1.414 2.121 2.121-1.414 1.414-2.121-2.121zm2.121-14.85l1.414 1.415-2.121 2.121-1.414-1.414 2.121-2.121zM5.636 16.95l1.414 1.414-2.121 2.121-1.414-1.414 2.121-2.121zM23 11v2h-3v-2h3zM4 11v2H1v-2h3z"></path></svg></button></div></div></nav><div id="__docusaurus_skipToContent_fallback" class="theme-layout-main main-wrapper mainWrapper_z2l0"><div class="docsWrapper_hBAB"><button aria-label="回到顶部" class="clean-btn theme-back-to-top-button backToTopButton_sjWU" type="button"></button><div class="docRoot_UBD9"><main class="docMainContainer_TBSr docMainContainerEnhanced_lQrH"><div class="container padding-top--md padding-bottom--lg"><div class="row"><div class="col docItemCol_VOVn"><div class="docItemContainer_Djhp"><article><div class="tocCollapsible_ETCw theme-doc-toc-mobile tocMobile_ITEo"><button type="button" class="clean-btn tocCollapsibleButton_TO0P">本页总览</button></div><div class="theme-doc-markdown markdown"><header><h1>工具（Moltbot）</h1></header>
+<p>Moltbot 为浏览器、画布、节点和 cron 暴露 <strong>一流代理工具</strong>。
+这些替换了旧的 <code>moltbot-*</code> 技能：工具是类型化的，无需外壳，
+代理应直接依赖它们。</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="禁用工具">禁用工具<a href="#禁用工具" class="hash-link" aria-label="禁用工具的直接链接" title="禁用工具的直接链接" translate="no">​</a></h2>
+<p>您可以通过 <code>moltbot.json</code> 中的 <code>tools.allow</code> / <code>tools.deny</code> 全局允许/拒绝工具
+（拒绝优先）。这阻止不允许的工具被发送到模型提供者。</p>
+<div class="language-json5 codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#D6DEEB;--prism-background-color:#001122"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-json5 codeBlock_bY9V thin-scrollbar" style="color:#D6DEEB;background-color:#001122"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#D6DEEB"><span class="token plain">{</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">  tools: { deny: [&quot;browser&quot;] }</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">}</span><br></span></code></pre></div></div>
+<p>注意事项：</p>
+<ul>
+<li class="">匹配不区分大小写。</li>
+<li class="">支持 <code>*</code> 通配符（<code>&quot;*&quot;</code> 表示所有工具）。</li>
+<li class="">如果 <code>tools.allow</code> 仅引用未知或未加载的插件工具名称，Moltbot 记录警告并忽略允许列表，以便核心工具保持可用。</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="工具配置文件基础允许列表">工具配置文件（基础允许列表）<a href="#工具配置文件基础允许列表" class="hash-link" aria-label="工具配置文件（基础允许列表）的直接链接" title="工具配置文件（基础允许列表）的直接链接" translate="no">​</a></h2>
+<p><code>tools.profile</code> 在 <code>tools.allow</code>/<code>tools.deny</code> 之前设置 <strong>基础工具允许列表</strong>。
+每个代理覆盖：<code>agents.list[].tools.profile</code>。</p>
+<p>配置文件：</p>
+<ul>
+<li class=""><code>minimal</code>：仅 <code>session_status</code></li>
+<li class=""><code>coding</code>：<code>group:fs</code>, <code>group:runtime</code>, <code>group:sessions</code>, <code>group:memory</code>, <code>image</code></li>
+<li class=""><code>messaging</code>：<code>group:messaging</code>, <code>sessions_list</code>, <code>sessions_history</code>, <code>sessions_send</code>, <code>session_status</code></li>
+<li class=""><code>full</code>：无限制（与未设置相同）</li>
+</ul>
+<p>示例（默认仅限消息，也允许 Slack + Discord 工具）：</p>
+<div class="language-json5 codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#D6DEEB;--prism-background-color:#001122"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-json5 codeBlock_bY9V thin-scrollbar" style="color:#D6DEEB;background-color:#001122"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#D6DEEB"><span class="token plain">{</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">  tools: {</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">    profile: &quot;messaging&quot;,</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">    allow: [&quot;slack&quot;]</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">  }</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">}</span><br></span></code></pre></div></div>
+<p>示例（编码配置文件，但在任何地方拒绝 exec/process）：</p>
+<div class="language-json5 codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#D6DEEB;--prism-background-color:#001122"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-json5 codeBlock_bY9V thin-scrollbar" style="color:#D6DEEB;background-color:#001122"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#D6DEEB"><span class="token plain">{</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">  tools: {</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">    profile: &quot;coding&quot;,</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">    deny: [&quot;group:runtime&quot;]</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">  }</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">}</span><br></span></code></pre></div></div>
+<p>示例（全局编码配置文件，仅限消息支持代理）：</p>
+<div class="language-json5 codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#D6DEEB;--prism-background-color:#001122"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-json5 codeBlock_bY9V thin-scrollbar" style="color:#D6DEEB;background-color:#001122"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#D6DEEB"><span class="token plain">{</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">  tools: { profile: &quot;coding&quot; },</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">  agents: {</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">    list: [</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">      {</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">        id: &quot;support&quot;,</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">        tools: { profile: &quot;messaging&quot;, allow: [&quot;slack&quot;] }</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">      }</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">    ]</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">  }</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">}</span><br></span></code></pre></div></div>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="特定提供者的工具策略">特定提供者的工具策略<a href="#特定提供者的工具策略" class="hash-link" aria-label="特定提供者的工具策略的直接链接" title="特定提供者的工具策略的直接链接" translate="no">​</a></h2>
+<p>使用 <code>tools.byProvider</code> 来 <strong>进一步限制</strong> 特定提供者
+（或单个 <code>provider/model</code>）的工具，而不更改您的全局默认值。
+每个代理覆盖：<code>agents.list[].tools.byProvider</code>。</p>
+<p>这在基础工具配置文件之后和允许/拒绝列表之前应用，
+因此它只能缩小工具集。
+提供者键接受 <code>provider</code>（例如 <code>google-antigravity</code>）或
+<code>provider/model</code>（例如 <code>openai/gpt-5.2</code>）。</p>
+<p>示例（保持全局编码配置文件，但 Google Antigravity 使用最小工具）：</p>
+<div class="language-json5 codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#D6DEEB;--prism-background-color:#001122"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-json5 codeBlock_bY9V thin-scrollbar" style="color:#D6DEEB;background-color:#001122"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#D6DEEB"><span class="token plain">{</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">  tools: {</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">    profile: &quot;coding&quot;,</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">    byProvider: {</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">      &quot;google-antigravity&quot;: { profile: &quot;minimal&quot; }</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">    }</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">  }</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">}</span><br></span></code></pre></div></div>
+<p>示例（特定提供者/模型的允许列表，针对不稳定的端点）：</p>
+<div class="language-json5 codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#D6DEEB;--prism-background-color:#001122"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-json5 codeBlock_bY9V thin-scrollbar" style="color:#D6DEEB;background-color:#001122"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#D6DEEB"><span class="token plain">{</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">  tools: {</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">    allow: [&quot;group:fs&quot;, &quot;group:runtime&quot;, &quot;sessions_list&quot;],</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">    byProvider: {</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">      &quot;openai/gpt-5.2&quot;: { allow: [&quot;group:fs&quot;, &quot;sessions_list&quot;] }</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">    }</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">  }</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">}</span><br></span></code></pre></div></div>
+<p>示例（针对单个提供者的代理特定覆盖）：</p>
+<div class="language-json5 codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#D6DEEB;--prism-background-color:#001122"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-json5 codeBlock_bY9V thin-scrollbar" style="color:#D6DEEB;background-color:#001122"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#D6DEEB"><span class="token plain">{</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">  agents: {</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">    list: [</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">      {</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">        id: &quot;support&quot;,</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">        tools: {</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">          byProvider: {</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">            &quot;google-antigravity&quot;: { allow: [&quot;message&quot;, &quot;sessions_list&quot;] }</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">          }</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">        }</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">      }</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">    ]</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">  }</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">}</span><br></span></code></pre></div></div>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="工具组简写">工具组（简写）<a href="#工具组简写" class="hash-link" aria-label="工具组（简写）的直接链接" title="工具组（简写）的直接链接" translate="no">​</a></h2>
+<p>工具策略（全局、代理、沙盒）支持 <code>group:*</code> 条目，扩展为多个工具。
+在 <code>tools.allow</code> / <code>tools.deny</code> 中使用这些。</p>
+<p>可用组：</p>
+<ul>
+<li class=""><code>group:runtime</code>: <code>exec</code>, <code>bash</code>, <code>process</code></li>
+<li class=""><code>group:fs</code>: <code>read</code>, <code>write</code>, <code>edit</code>, <code>apply_patch</code></li>
+<li class=""><code>group:sessions</code>: <code>sessions_list</code>, <code>sessions_history</code>, <code>sessions_send</code>, <code>sessions_spawn</code>, <code>session_status</code></li>
+<li class=""><code>group:memory</code>: <code>memory_search</code>, <code>memory_get</code></li>
+<li class=""><code>group:web</code>: <code>web_search</code>, <code>web_fetch</code></li>
+<li class=""><code>group:ui</code>: <code>browser</code>, <code>canvas</code></li>
+<li class=""><code>group:automation</code>: <code>cron</code>, <code>gateway</code></li>
+<li class=""><code>group:messaging</code>: <code>message</code></li>
+<li class=""><code>group:nodes</code>: <code>nodes</code></li>
+<li class=""><code>group:moltbot</code>: 所有内置 Moltbot 工具（不包括提供者插件）</li>
+</ul>
+<p>示例（仅允许文件工具 + 浏览器）：</p>
+<div class="language-json5 codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#D6DEEB;--prism-background-color:#001122"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-json5 codeBlock_bY9V thin-scrollbar" style="color:#D6DEEB;background-color:#001122"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#D6DEEB"><span class="token plain">{</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">  tools: {</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">    allow: [&quot;group:fs&quot;, &quot;browser&quot;]</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">  }</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">}</span><br></span></code></pre></div></div>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="插件--工具">插件 + 工具<a href="#插件--工具" class="hash-link" aria-label="插件 + 工具的直接链接" title="插件 + 工具的直接链接" translate="no">​</a></h2>
+<p>插件可以注册核心集之外的 <strong>额外工具</strong>（和 CLI 命令）。
+有关安装 + 配置，请参见 <a class="" href="/moltbot-doc/plugin">插件</a>，有关
+工具使用指导如何注入到提示中，请参见 <a class="" href="/moltbot-doc/tools/skills">技能</a>。一些插件随工具一起发布自己的技能
+（例如，语音通话插件）。</p>
+<p>可选插件工具：</p>
+<ul>
+<li class=""><a class="" href="/moltbot-doc/tools/lobster">Lobster</a>：带有可恢复审批的类型化工作流运行时（需要网关主机上的 Lobster CLI）。</li>
+<li class=""><a class="" href="/moltbot-doc/tools/llm-task">LLM 任务</a>：用于结构化工作流输出的仅 JSON LLM 步骤（可选架构验证）。</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="工具清单">工具清单<a href="#工具清单" class="hash-link" aria-label="工具清单的直接链接" title="工具清单的直接链接" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="apply_patch"><code>apply_patch</code><a href="#apply_patch" class="hash-link" aria-label="apply_patch的直接链接" title="apply_patch的直接链接" translate="no">​</a></h3>
+<p>跨一个或多个文件应用结构化补丁。用于多块编辑。
+实验性：通过 <code>tools.exec.applyPatch.enabled</code> 启用（仅 OpenAI 模型）。</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="exec"><code>exec</code><a href="#exec" class="hash-link" aria-label="exec的直接链接" title="exec的直接链接" translate="no">​</a></h3>
+<p>在工作区中运行 shell 命令。</p>
+<p>核心参数：</p>
+<ul>
+<li class=""><code>command</code>（必需）</li>
+<li class=""><code>yieldMs</code>（超时后自动后台化，默认 10000）</li>
+<li class=""><code>background</code>（立即后台化）</li>
+<li class=""><code>timeout</code>（秒；超过时间杀死进程，默认 1800）</li>
+<li class=""><code>elevated</code>（布尔值；如果启用/允许提升模式，则在主机上运行；仅当代理沙盒化时才改变行为）</li>
+<li class=""><code>host</code>（<code>sandbox | gateway | node</code>）</li>
+<li class=""><code>security</code>（<code>deny | allowlist | full</code>）</li>
+<li class=""><code>ask</code>（<code>off | on-miss | always</code>）</li>
+<li class=""><code>node</code>（<code>host=node</code> 的节点 ID/名称）
+需要真正的 TTY？设置 <code>pty: true</code>。</li>
+</ul>
+<p>注意事项：</p>
+<ul>
+<li class="">后台化时返回 <code>status: &quot;running&quot;</code> 和 <code>sessionId</code>。</li>
+<li class="">使用 <code>process</code> 来轮询/日志/写入/杀死/清除后台会话。</li>
+<li class="">如果 <code>process</code> 被禁止，<code>exec</code> 同步运行并忽略 <code>yieldMs</code>/<code>background</code>。</li>
+<li class=""><code>elevated</code> 受 <code>tools.elevated</code> 和任何 <code>agents.list[].tools.elevated</code> 覆盖控制（两者都必须允许）并且是 <code>host=gateway</code> + <code>security=full</code> 的别名。</li>
+<li class=""><code>elevated</code> 仅在代理沙盒化时改变行为（否则是无操作）。</li>
+<li class=""><code>host=node</code> 可以定位 macOS 伴侣应用或无头节点主机（<code>moltbot node run</code>）。</li>
+<li class="">网关/节点审批和允许列表：<a class="" href="/moltbot-doc/tools/exec-approvals">执行审批</a>。</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="process"><code>process</code><a href="#process" class="hash-link" aria-label="process的直接链接" title="process的直接链接" translate="no">​</a></h3>
+<p>管理后台 exec 会话。</p>
+<p>核心操作：</p>
+<ul>
+<li class=""><code>list</code>, <code>poll</code>, <code>log</code>, <code>write</code>, <code>kill</code>, <code>clear</code>, <code>remove</code></li>
+</ul>
+<p>注意事项：</p>
+<ul>
+<li class=""><code>poll</code> 在完成时返回新输出和退出状态。</li>
+<li class=""><code>log</code> 支持基于行的 <code>offset</code>/<code>limit</code>（省略 <code>offset</code> 以获取最后 N 行）。</li>
+<li class=""><code>process</code> 按代理范围；其他代理的会话不可见。</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="web_search"><code>web_search</code><a href="#web_search" class="hash-link" aria-label="web_search的直接链接" title="web_search的直接链接" translate="no">​</a></h3>
+<p>使用 Brave Search API 搜索网络。</p>
+<p>核心参数：</p>
+<ul>
+<li class=""><code>query</code>（必需）</li>
+<li class=""><code>count</code>（1–10；默认来自 <code>tools.web.search.maxResults</code>）</li>
+</ul>
+<p>注意事项：</p>
+<ul>
+<li class="">需要 Brave API 密钥（推荐：<code>moltbot configure --section web</code>，或设置 <code>BRAVE_API_KEY</code>）。</li>
+<li class="">通过 <code>tools.web.search.enabled</code> 启用。</li>
+<li class="">响应被缓存（默认 15 分钟）。</li>
+<li class="">请参见 <a class="" href="/moltbot-doc/tools/web">Web 工具</a> 了解设置。</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="web_fetch"><code>web_fetch</code><a href="#web_fetch" class="hash-link" aria-label="web_fetch的直接链接" title="web_fetch的直接链接" translate="no">​</a></h3>
+<p>从 URL 获取并提取可读内容（HTML → markdown/文本）。</p>
+<p>核心参数：</p>
+<ul>
+<li class=""><code>url</code>（必需）</li>
+<li class=""><code>extractMode</code>（<code>markdown</code> | <code>text</code>）</li>
+<li class=""><code>maxChars</code>（截断长页面）</li>
+</ul>
+<p>注意事项：</p>
+<ul>
+<li class="">通过 <code>tools.web.fetch.enabled</code> 启用。</li>
+<li class="">响应被缓存（默认 15 分钟）。</li>
+<li class="">对于 JS 密集型网站，优先使用浏览器工具。</li>
+<li class="">请参见 <a class="" href="/moltbot-doc/tools/web">Web 工具</a> 了解设置。</li>
+<li class="">请参见 <a class="" href="/moltbot-doc/tools/firecrawl">Firecrawl</a> 了解可选的反机器人回退。</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="browser"><code>browser</code><a href="#browser" class="hash-link" aria-label="browser的直接链接" title="browser的直接链接" translate="no">​</a></h3>
+<p>控制专用的 clawd 浏览器。</p>
+<p>核心操作：</p>
+<ul>
+<li class=""><code>status</code>, <code>start</code>, <code>stop</code>, <code>tabs</code>, <code>open</code>, <code>focus</code>, <code>close</code></li>
+<li class=""><code>snapshot</code>（aria/ai）</li>
+<li class=""><code>screenshot</code>（返回图像块 + <code>MEDIA:&lt;path&gt;</code>）</li>
+<li class=""><code>act</code>（UI 操作：click/type/press/hover/drag/select/fill/resize/wait/evaluate）</li>
+<li class=""><code>navigate</code>, <code>console</code>, <code>pdf</code>, <code>upload</code>, <code>dialog</code></li>
+</ul>
+<p>配置文件管理：</p>
+<ul>
+<li class=""><code>profiles</code> — 列出所有浏览器配置文件及其状态</li>
+<li class=""><code>create-profile</code> — 创建新配置文件，自动分配端口（或 <code>cdpUrl</code>）</li>
+<li class=""><code>delete-profile</code> — 停止浏览器，删除用户数据，从配置中移除（仅本地）</li>
+<li class=""><code>reset-profile</code> — 在配置文件端口上杀死孤立进程（仅本地）</li>
+</ul>
+<p>常用参数：</p>
+<ul>
+<li class=""><code>profile</code>（可选；默认为 <code>browser.defaultProfile</code>）</li>
+<li class=""><code>target</code>（<code>sandbox</code> | <code>host</code> | <code>node</code>）</li>
+<li class=""><code>node</code>（可选；选择特定节点 ID/名称）
+注意事项：</li>
+<li class="">需要 <code>browser.enabled=true</code>（默认为 <code>true</code>；设置为 <code>false</code> 以禁用）。</li>
+<li class="">所有操作接受可选的 <code>profile</code> 参数以支持多实例。</li>
+<li class="">当省略 <code>profile</code> 时，使用 <code>browser.defaultProfile</code>（默认为 &quot;chrome&quot;）。</li>
+<li class="">配置文件名称：仅小写字母数字 + 连字符（最多 64 个字符）。</li>
+<li class="">端口范围：18800-18899（约 100 个配置文件最大）。</li>
+<li class="">远程配置文件仅可附加（无启动/停止/重置）。</li>
+<li class="">如果连接了支持浏览器的节点，工具可能会自动路由到它（除非您固定 <code>target</code>）。</li>
+<li class=""><code>snapshot</code> 在安装 Playwright 时默认为 <code>ai</code>；使用 <code>aria</code> 获取无障碍树。</li>
+<li class=""><code>snapshot</code> 还支持角色快照选项（<code>interactive</code>, <code>compact</code>, <code>depth</code>, <code>selector</code>），返回像 <code>e12</code> 这样的引用。</li>
+<li class=""><code>act</code> 需要来自 <code>snapshot</code> 的 <code>ref</code>（AI 快照中的数字 <code>12</code>，或角色快照中的 <code>e12</code>）；对于罕见的 CSS 选择器需求使用 <code>evaluate</code>。</li>
+<li class="">默认避免 <code>act</code> → <code>wait</code>；仅在特殊情况下使用（没有可靠的 UI 状态等待）。</li>
+<li class=""><code>upload</code> 可选择传递 <code>ref</code> 以在武装后自动点击。</li>
+<li class=""><code>upload</code> 还支持 <code>inputRef</code>（aria 引用）或 <code>element</code>（CSS 选择器）来直接设置 <code>&lt;input type=&quot;file&quot;&gt;</code>。</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="canvas"><code>canvas</code><a href="#canvas" class="hash-link" aria-label="canvas的直接链接" title="canvas的直接链接" translate="no">​</a></h3>
+<p>驱动节点画布（呈现、评估、快照、A2UI）。</p>
+<p>核心操作：</p>
+<ul>
+<li class=""><code>present</code>, <code>hide</code>, <code>navigate</code>, <code>eval</code></li>
+<li class=""><code>snapshot</code>（返回图像块 + <code>MEDIA:&lt;path&gt;</code>）</li>
+<li class=""><code>a2ui_push</code>, <code>a2ui_reset</code></li>
+</ul>
+<p>注意事项：</p>
+<ul>
+<li class="">在底层使用网关 <code>node.invoke</code>。</li>
+<li class="">如果未提供 <code>node</code>，工具会选择默认值（单个连接节点或本地 mac 节点）。</li>
+<li class="">A2UI 仅 v0.8（无 <code>createSurface</code>）；CLI 拒绝带有行错误的 v0.9 JSONL。</li>
+<li class="">快速烟雾测试：<code>moltbot nodes canvas a2ui push --node &lt;id&gt; --text &quot;Hello from A2UI&quot;</code>。</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="nodes"><code>nodes</code><a href="#nodes" class="hash-link" aria-label="nodes的直接链接" title="nodes的直接链接" translate="no">​</a></h3>
+<p>发现和定位配对节点；发送通知；捕获相机/屏幕。</p>
+<p>核心操作：</p>
+<ul>
+<li class=""><code>status</code>, <code>describe</code></li>
+<li class=""><code>pending</code>, <code>approve</code>, <code>reject</code>（配对）</li>
+<li class=""><code>notify</code>（macOS <code>system.notify</code>）</li>
+<li class=""><code>run</code>（macOS <code>system.run</code>）</li>
+<li class=""><code>camera_snap</code>, <code>camera_clip</code>, <code>screen_record</code></li>
+<li class=""><code>location_get</code></li>
+</ul>
+<p>注意事项：</p>
+<ul>
+<li class="">相机/屏幕命令需要节点应用处于前台。</li>
+<li class="">图像返回图像块 + <code>MEDIA:&lt;path&gt;</code>。</li>
+<li class="">视频返回 <code>FILE:&lt;path&gt;</code>（mp4）。</li>
+<li class="">位置返回 JSON 载荷（纬度/经度/精度/时间戳）。</li>
+<li class=""><code>run</code> 参数：<code>command</code> argv 数组；可选 <code>cwd</code>, <code>env</code>（<code>KEY=VAL</code>）, <code>commandTimeoutMs</code>, <code>invokeTimeoutMs</code>, <code>needsScreenRecording</code>。</li>
+</ul>
+<p>示例（<code>run</code>）：</p>
+<div class="language-json codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#D6DEEB;--prism-background-color:#001122"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-json codeBlock_bY9V thin-scrollbar" style="color:#D6DEEB;background-color:#001122"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#D6DEEB"><span class="token punctuation" style="color:#C792EA">{</span><span class="token plain"></span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">  </span><span class="token property" style="color:#F78C6C">&quot;action&quot;</span><span class="token operator" style="color:#7FDBCA">:</span><span class="token plain"> </span><span class="token string" style="color:#ECC48D">&quot;run&quot;</span><span class="token punctuation" style="color:#C792EA">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">  </span><span class="token property" style="color:#F78C6C">&quot;node&quot;</span><span class="token operator" style="color:#7FDBCA">:</span><span class="token plain"> </span><span class="token string" style="color:#ECC48D">&quot;office-mac&quot;</span><span class="token punctuation" style="color:#C792EA">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">  </span><span class="token property" style="color:#F78C6C">&quot;command&quot;</span><span class="token operator" style="color:#7FDBCA">:</span><span class="token plain"> </span><span class="token punctuation" style="color:#C792EA">[</span><span class="token string" style="color:#ECC48D">&quot;echo&quot;</span><span class="token punctuation" style="color:#C792EA">,</span><span class="token plain"> </span><span class="token string" style="color:#ECC48D">&quot;Hello&quot;</span><span class="token punctuation" style="color:#C792EA">]</span><span class="token punctuation" style="color:#C792EA">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">  </span><span class="token property" style="color:#F78C6C">&quot;env&quot;</span><span class="token operator" style="color:#7FDBCA">:</span><span class="token plain"> </span><span class="token punctuation" style="color:#C792EA">[</span><span class="token string" style="color:#ECC48D">&quot;FOO=bar&quot;</span><span class="token punctuation" style="color:#C792EA">]</span><span class="token punctuation" style="color:#C792EA">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">  </span><span class="token property" style="color:#F78C6C">&quot;commandTimeoutMs&quot;</span><span class="token operator" style="color:#7FDBCA">:</span><span class="token plain"> </span><span class="token number" style="color:#F78C6C">12000</span><span class="token punctuation" style="color:#C792EA">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">  </span><span class="token property" style="color:#F78C6C">&quot;invokeTimeoutMs&quot;</span><span class="token operator" style="color:#7FDBCA">:</span><span class="token plain"> </span><span class="token number" style="color:#F78C6C">45000</span><span class="token punctuation" style="color:#C792EA">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">  </span><span class="token property" style="color:#F78C6C">&quot;needsScreenRecording&quot;</span><span class="token operator" style="color:#7FDBCA">:</span><span class="token plain"> </span><span class="token boolean" style="color:#F78C6C">false</span><span class="token plain"></span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain"></span><span class="token punctuation" style="color:#C792EA">}</span><br></span></code></pre></div></div>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="image"><code>image</code><a href="#image" class="hash-link" aria-label="image的直接链接" title="image的直接链接" translate="no">​</a></h3>
+<p>使用配置的图像模型分析图像。</p>
+<p>核心参数：</p>
+<ul>
+<li class=""><code>image</code>（必需路径或 URL）</li>
+<li class=""><code>prompt</code>（可选；默认为 &quot;描述图像。&quot;）</li>
+<li class=""><code>model</code>（可选覆盖）</li>
+<li class=""><code>maxBytesMb</code>（可选大小限制）</li>
+</ul>
+<p>注意事项：</p>
+<ul>
+<li class="">仅当配置了 <code>agents.defaults.imageModel</code>（主要或备用），或可以从您的默认模型 + 配置的身份验证推断隐式图像模型时（尽力配对）才可用。</li>
+<li class="">直接使用图像模型（独立于主要聊天模型）。</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="message"><code>message</code><a href="#message" class="hash-link" aria-label="message的直接链接" title="message的直接链接" translate="no">​</a></h3>
+<p>跨 Discord/Google Chat/Slack/Telegram/WhatsApp/Signal/iMessage/MS Teams 发送消息和频道操作。</p>
+<p>核心操作：</p>
+<ul>
+<li class=""><code>send</code>（文本 + 可选媒体；MS Teams 还支持用于自适应卡片的 <code>card</code>）</li>
+<li class=""><code>poll</code>（WhatsApp/Discord/MS Teams 投票）</li>
+<li class=""><code>react</code> / <code>reactions</code> / <code>read</code> / <code>edit</code> / <code>delete</code></li>
+<li class=""><code>pin</code> / <code>unpin</code> / <code>list-pins</code></li>
+<li class=""><code>permissions</code></li>
+<li class=""><code>thread-create</code> / <code>thread-list</code> / <code>thread-reply</code></li>
+<li class=""><code>search</code></li>
+<li class=""><code>sticker</code></li>
+<li class=""><code>member-info</code> / <code>role-info</code></li>
+<li class=""><code>emoji-list</code> / <code>emoji-upload</code> / <code>sticker-upload</code></li>
+<li class=""><code>role-add</code> / <code>role-remove</code></li>
+<li class=""><code>channel-info</code> / <code>channel-list</code></li>
+<li class=""><code>voice-status</code></li>
+<li class=""><code>event-list</code> / <code>event-create</code></li>
+<li class=""><code>timeout</code> / <code>kick</code> / <code>ban</code></li>
+</ul>
+<p>注意事项：</p>
+<ul>
+<li class=""><code>send</code> 通过网关路由 WhatsApp；其他频道直接发送。</li>
+<li class=""><code>poll</code> 为 WhatsApp 和 MS Teams 使用网关；Discord 投票直接发送。</li>
+<li class="">当消息工具调用绑定到活动聊天会话时，发送受限于该会话的目标，以避免跨上下文泄漏。</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="cron"><code>cron</code><a href="#cron" class="hash-link" aria-label="cron的直接链接" title="cron的直接链接" translate="no">​</a></h3>
+<p>管理网关 cron 作业和唤醒。</p>
+<p>核心操作：</p>
+<ul>
+<li class=""><code>status</code>, <code>list</code></li>
+<li class=""><code>add</code>, <code>update</code>, <code>remove</code>, <code>run</code>, <code>runs</code></li>
+<li class=""><code>wake</code>（排队系统事件 + 可选立即心跳）</li>
+</ul>
+<p>注意事项：</p>
+<ul>
+<li class=""><code>add</code> 期望完整的 cron 作业对象（与 <code>cron.add</code> RPC 相同架构）。</li>
+<li class=""><code>update</code> 使用 <code>{ id, patch }</code>。</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="gateway"><code>gateway</code><a href="#gateway" class="hash-link" aria-label="gateway的直接链接" title="gateway的直接链接" translate="no">​</a></h3>
+<p>重启或应用更新到运行中的网关进程（就地）。</p>
+<p>核心操作：</p>
+<ul>
+<li class=""><code>restart</code>（授权 + 发送 <code>SIGUSR1</code> 以就地重启；<code>moltbot gateway</code> 就地重启）</li>
+<li class=""><code>config.get</code> / <code>config.schema</code></li>
+<li class=""><code>config.apply</code>（验证 + 写入配置 + 重启 + 唤醒）</li>
+<li class=""><code>config.patch</code>（合并部分更新 + 重启 + 唤醒）</li>
+<li class=""><code>update.run</code>（运行更新 + 重启 + 唤醒）</li>
+</ul>
+<p>注意事项：</p>
+<ul>
+<li class="">使用 <code>delayMs</code>（默认 2000）以避免中断正在进行的回复。</li>
+<li class=""><code>restart</code> 默认禁用；通过 <code>commands.restart: true</code> 启用。</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="sessions_list--sessions_history--sessions_send--sessions_spawn--session_status"><code>sessions_list</code> / <code>sessions_history</code> / <code>sessions_send</code> / <code>sessions_spawn</code> / <code>session_status</code><a href="#sessions_list--sessions_history--sessions_send--sessions_spawn--session_status" class="hash-link" aria-label="sessions_list--sessions_history--sessions_send--sessions_spawn--session_status的直接链接" title="sessions_list--sessions_history--sessions_send--sessions_spawn--session_status的直接链接" translate="no">​</a></h3>
+<p>列出会话，检查转录历史，或发送到另一个会话。</p>
+<p>核心参数：</p>
+<ul>
+<li class=""><code>sessions_list</code>: <code>kinds?</code>, <code>limit?</code>, <code>activeMinutes?</code>, <code>messageLimit?</code>（0 = 无）</li>
+<li class=""><code>sessions_history</code>: <code>sessionKey</code>（或 <code>sessionId</code>），<code>limit?</code>, <code>includeTools?</code></li>
+<li class=""><code>sessions_send</code>: <code>sessionKey</code>（或 <code>sessionId</code>），<code>message</code>，<code>timeoutSeconds?</code>（0 = 发送即忘）</li>
+<li class=""><code>sessions_spawn</code>: <code>task</code>, <code>label?</code>, <code>agentId?</code>, <code>model?</code>, <code>runTimeoutSeconds?</code>, <code>cleanup?</code></li>
+<li class=""><code>session_status</code>: <code>sessionKey?</code>（默认当前；接受 <code>sessionId</code>），<code>model?</code>（<code>default</code> 清除覆盖）</li>
+</ul>
+<p>注意事项：</p>
+<ul>
+<li class=""><code>main</code> 是规范的直接聊天键；全局/未知被隐藏。</li>
+<li class=""><code>messageLimit &gt; 0</code> 获取每个会话的最后 N 条消息（过滤工具消息）。</li>
+<li class=""><code>sessions_send</code> 在 <code>timeoutSeconds &gt; 0</code> 时等待最终完成。</li>
+<li class="">交付/公告发生在完成后，是尽力而为的；<code>status: &quot;ok&quot;</code> 确认代理运行完成，不是公告已送达。</li>
+<li class=""><code>sessions_spawn</code> 启动子代理运行并将公告回复发布回请求者聊天。</li>
+<li class=""><code>sessions_spawn</code> 是非阻塞的，立即返回 <code>status: &quot;accepted&quot;</code>。</li>
+<li class=""><code>sessions_send</code> 运行回复回_ping_pong（回复 <code>REPLY_SKIP</code> 以停止；最大回合数通过 <code>session.agentToAgent.maxPingPongTurns</code>，0–5）。</li>
+<li class="">ping_pong 之后，目标代理运行一个 <strong>公告步骤</strong>；回复 <code>ANNOUNCE_SKIP</code> 以抑制公告。</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="agents_list"><code>agents_list</code><a href="#agents_list" class="hash-link" aria-label="agents_list的直接链接" title="agents_list的直接链接" translate="no">​</a></h3>
+<p>列出当前会话可能使用 <code>sessions_spawn</code> 目标的代理 ID。</p>
+<p>注意事项：</p>
+<ul>
+<li class="">结果受每个代理允许列表限制（<code>agents.list[].subagents.allowAgents</code>）。</li>
+<li class="">当配置为 <code>[&quot;*&quot;]</code> 时，工具包含所有配置的代理并标记 <code>allowAny: true</code>。</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="参数通用">参数（通用）<a href="#参数通用" class="hash-link" aria-label="参数（通用）的直接链接" title="参数（通用）的直接链接" translate="no">​</a></h2>
+<p>网关支持的工具（<code>canvas</code>, <code>nodes</code>, <code>cron</code>）：</p>
+<ul>
+<li class=""><code>gatewayUrl</code>（默认 <code>ws://127.0.0.1:18789</code>）</li>
+<li class=""><code>gatewayToken</code>（如果启用身份验证）</li>
+<li class=""><code>timeoutMs</code></li>
+</ul>
+<p>浏览器工具：</p>
+<ul>
+<li class=""><code>profile</code>（可选；默认为 <code>browser.defaultProfile</code>）</li>
+<li class=""><code>target</code>（<code>sandbox</code> | <code>host</code> | <code>node</code>）</li>
+<li class=""><code>node</code>（可选；固定特定节点 ID/名称）</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="推荐的代理流程">推荐的代理流程<a href="#推荐的代理流程" class="hash-link" aria-label="推荐的代理流程的直接链接" title="推荐的代理流程的直接链接" translate="no">​</a></h2>
+<p>浏览器自动化：</p>
+<ol>
+<li class=""><code>browser</code> → <code>status</code> / <code>start</code></li>
+<li class=""><code>snapshot</code>（ai 或 aria）</li>
+<li class=""><code>act</code>（click/type/press）</li>
+<li class=""><code>screenshot</code> 如果您需要视觉确认</li>
+</ol>
+<p>画布渲染：</p>
+<ol>
+<li class=""><code>canvas</code> → <code>present</code></li>
+<li class=""><code>a2ui_push</code>（可选）</li>
+<li class=""><code>snapshot</code></li>
+</ol>
+<p>节点定位：</p>
+<ol>
+<li class=""><code>nodes</code> → <code>status</code></li>
+<li class="">在选定节点上 <code>describe</code></li>
+<li class=""><code>notify</code> / <code>run</code> / <code>camera_snap</code> / <code>screen_record</code></li>
+</ol>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="安全">安全<a href="#安全" class="hash-link" aria-label="安全的直接链接" title="安全的直接链接" translate="no">​</a></h2>
+<ul>
+<li class="">避免直接 <code>system.run</code>；仅在明确用户同意的情况下使用 <code>nodes</code> → <code>run</code>。</li>
+<li class="">尊重用户对相机/屏幕捕获的同意。</li>
+<li class="">使用 <code>status/describe</code> 在调用媒体命令之前确保权限。</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="工具如何呈现给代理">工具如何呈现给代理<a href="#工具如何呈现给代理" class="hash-link" aria-label="工具如何呈现给代理的直接链接" title="工具如何呈现给代理的直接链接" translate="no">​</a></h2>
+<p>工具在两个并行通道中公开：</p>
+<ol>
+<li class=""><strong>系统提示文本</strong>：人类可读的列表 + 指导。</li>
+<li class=""><strong>工具架构</strong>：发送到模型 API 的结构化函数定义。</li>
+</ol>
+<p>这意味着代理既能看到&quot;有什么工具&quot;也能看到&quot;如何调用它们&quot;。如果工具
+没有出现在系统提示或架构中，模型无法调用它。</p></div></article><nav class="docusaurus-mt-lg pagination-nav" aria-label="文件选项卡"></nav></div></div><div class="col col--3"><div class="tocWrapper_xKoj"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#禁用工具" class="table-of-contents__link toc-highlight">禁用工具</a></li><li><a href="#工具配置文件基础允许列表" class="table-of-contents__link toc-highlight">工具配置文件（基础允许列表）</a></li><li><a href="#特定提供者的工具策略" class="table-of-contents__link toc-highlight">特定提供者的工具策略</a></li><li><a href="#工具组简写" class="table-of-contents__link toc-highlight">工具组（简写）</a></li><li><a href="#插件--工具" class="table-of-contents__link toc-highlight">插件 + 工具</a></li><li><a href="#工具清单" class="table-of-contents__link toc-highlight">工具清单</a><ul><li><a href="#apply_patch" class="table-of-contents__link toc-highlight"><code>apply_patch</code></a></li><li><a href="#exec" class="table-of-contents__link toc-highlight"><code>exec</code></a></li><li><a href="#process" class="table-of-contents__link toc-highlight"><code>process</code></a></li><li><a href="#web_search" class="table-of-contents__link toc-highlight"><code>web_search</code></a></li><li><a href="#web_fetch" class="table-of-contents__link toc-highlight"><code>web_fetch</code></a></li><li><a href="#browser" class="table-of-contents__link toc-highlight"><code>browser</code></a></li><li><a href="#canvas" class="table-of-contents__link toc-highlight"><code>canvas</code></a></li><li><a href="#nodes" class="table-of-contents__link toc-highlight"><code>nodes</code></a></li><li><a href="#image" class="table-of-contents__link toc-highlight"><code>image</code></a></li><li><a href="#message" class="table-of-contents__link toc-highlight"><code>message</code></a></li><li><a href="#cron" class="table-of-contents__link toc-highlight"><code>cron</code></a></li><li><a href="#gateway" class="table-of-contents__link toc-highlight"><code>gateway</code></a></li><li><a href="#sessions_list--sessions_history--sessions_send--sessions_spawn--session_status" class="table-of-contents__link toc-highlight"><code>sessions_list</code> / <code>sessions_history</code> / <code>sessions_send</code> / <code>sessions_spawn</code> / <code>session_status</code></a></li><li><a href="#agents_list" class="table-of-contents__link toc-highlight"><code>agents_list</code></a></li></ul></li><li><a href="#参数通用" class="table-of-contents__link toc-highlight">参数（通用）</a></li><li><a href="#推荐的代理流程" class="table-of-contents__link toc-highlight">推荐的代理流程</a></li><li><a href="#安全" class="table-of-contents__link toc-highlight">安全</a></li><li><a href="#工具如何呈现给代理" class="table-of-contents__link toc-highlight">工具如何呈现给代理</a></li></ul></div><div class="tocFooter_Fu2z"><div class="themeGroup_RzWV" role="group" aria-label="Theme"><button class="themeBtn_tGr6" aria-label="Light theme" title="Light"><svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor" aria-hidden="true"><path d="M12 18a6 6 0 1 1 0-12 6 6 0 0 1 0 12zm0-2a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM11 1h2v3h-2V1zm0 19h2v3h-2v-3zM3.515 4.929l1.414-1.414L7.05 5.636 5.636 7.05 3.515 4.93zM16.95 18.364l1.414-1.414 2.121 2.121-1.414 1.414-2.121-2.121zm2.121-14.85l1.414 1.415-2.121 2.121-1.414-1.414 2.121-2.121zM5.636 16.95l1.414 1.414-2.121 2.121-1.414-1.414 2.121-2.121zM23 11v2h-3v-2h3zM4 11v2H1v-2h3z"></path></svg></button><button class="themeBtn_tGr6 themeBtnActive_A6tm" aria-label="Dark theme" title="Dark"><svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor" aria-hidden="true"><path d="M11.38 2.019a7.5 7.5 0 1 0 10.6 10.6C21.83 17.963 17.315 22 12.002 22 6.477 22 2 17.523 2 12c0-5.314 4.038-9.827 9.38-10.28z"></path></svg></button></div></div></div></div></div></div></main></div></div></div><footer class="theme-layout-footer footer footer--dark"><div class="container container-fluid"><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2026 Moltbot Docs.</div></div></div></footer></div>
+</body>
+</html>

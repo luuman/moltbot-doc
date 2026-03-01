@@ -1,0 +1,276 @@
+<!doctype html>
+<html lang="zh" dir="ltr" class="docs-wrapper plugin-docs plugin-id-default docs-version-current docs-doc-page docs-doc-id-platforms/raspberry-pi" data-has-hydrated="false">
+<head>
+<meta charset="UTF-8">
+<meta name="generator" content="Docusaurus v3.9.2">
+<title data-rh="true">树莓派上的 Moltbot | Moltbot Docs</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:url" content="https://luuman.github.io/moltbot-doc/docs/platforms/raspberry-pi"><meta data-rh="true" property="og:locale" content="zh"><meta data-rh="true" name="docusaurus_locale" content="zh"><meta data-rh="true" name="docsearch:language" content="zh"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="树莓派上的 Moltbot | Moltbot Docs"><meta data-rh="true" name="description" content="目标"><meta data-rh="true" property="og:description" content="目标"><link data-rh="true" rel="icon" href="/moltbot-doc/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://luuman.github.io/moltbot-doc/docs/platforms/raspberry-pi"><link data-rh="true" rel="alternate" href="https://luuman.github.io/moltbot-doc/docs/platforms/raspberry-pi" hreflang="zh"><link data-rh="true" rel="alternate" href="https://luuman.github.io/moltbot-doc/docs/platforms/raspberry-pi" hreflang="x-default"><link rel="alternate" type="application/rss+xml" href="/moltbot-doc/blog/rss.xml" title="Moltbot Docs RSS Feed">
+<link rel="alternate" type="application/atom+xml" href="/moltbot-doc/blog/atom.xml" title="Moltbot Docs Atom Feed"><link rel="stylesheet" href="/moltbot-doc/assets/css/styles.484b4c98.css">
+<script src="/moltbot-doc/assets/js/runtime~main.6cf495cf.js" defer="defer"></script>
+<script src="/moltbot-doc/assets/js/main.f9205183.js" defer="defer"></script>
+</head>
+<body class="navigation-with-keyboard">
+<svg style="display: none;"><defs>
+<symbol id="theme-svg-external-link" viewBox="0 0 24 24"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"/></symbol>
+</defs></svg>
+<script>!function(){var t=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme")}catch(t){}}();document.documentElement.setAttribute("data-theme",t||"dark"),document.documentElement.setAttribute("data-theme-choice",t||"dark")}(),function(){try{const c=new URLSearchParams(window.location.search).entries();for(var[t,e]of c)if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id="__docusaurus"><div role="region" aria-label="跳到主要内容"><a class="skipToContent_fXgn" href="#__docusaurus_skipToContent_fallback">跳到主要内容</a></div><nav class="navbar navbar--fixed-top navbar_MONK" role="navigation" aria-label="Main"><div class="navbarInner_ASTH"><div class="navbarLeft_pUmY"><button aria-label="切换导航栏" aria-expanded="false" class="navbar__toggle clean-btn" type="button"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg></button><a class="brand_SXL9" href="/moltbot-doc/"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="24" height="24" rx="6" fill="var(--ifm-color-primary)"></rect><path d="M7 8.5h10M7 12h7M7 15.5h10" stroke="white" stroke-width="1.8" stroke-linecap="round"></path></svg><span class="brandTitle_XbyU">Moltbot</span></a><div class="dropdown_GrgZ"><button class="dropdownToggle_Nf_z">全部站点<svg class="dropdownArrow_Eka8" viewBox="0 0 12 12" fill="none"><path d="M2 4l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg></button><ul class="dropdownMenu_zsxH"><li><a href="https://luuman.github.io/docs-workspace/docs" class="dropdownMenuItem_VBaP">Workspace</a></li><li><a href="https://luuman.github.io/claude-doc/docs" class="dropdownMenuItem_VBaP">Claude</a></li><li><a href="https://luuman.github.io/electron-doc/docs" class="dropdownMenuItem_VBaP">Electron</a></li><li><a href="https://luuman.github.io/tauri-doc/docs" class="dropdownMenuItem_VBaP">Tauri</a></li><li><a href="https://luuman.github.io/matrx-doc/docs" class="dropdownMenuItem_VBaP">Matrx</a></li><li><a href="https://luuman.github.io/brainboard-doc/docs" class="dropdownMenuItem_VBaP">Brainboard</a></li><li><a href="https://luuman.github.io/synology-doc/docs" class="dropdownMenuItem_VBaP">Synology</a></li><li><a href="https://luuman.github.io/codex-doc/docs" class="dropdownMenuItem_VBaP">Codex</a></li><li><a href="https://luuman.github.io/ai-doc/docs" class="dropdownMenuItem_VBaP">AI</a></li></ul></div></div><div class="navbarCenter_Zdr3"><div class="root_OF3s"><span class="icon_UcOK" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor" width="15" height="15"><path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"></path></svg></span><div class="slot__FGx"><div class="navbar__search searchBarContainer_NW3z" dir="ltr"><input placeholder="搜索" aria-label="Search" class="navbar__search-input searchInput_YFbd" value=""><div class="loadingRing_RJI3 searchBarLoadingRing_YnHq"><div></div><div></div><div></div><div></div></div></div></div></div></div><div class="navbarRight_q16u"><a class="navLink_RnnM" href="/moltbot-doc/docs">Docs</a><a class="navLink_RnnM" href="/moltbot-doc/blog">Blog</a><button class="themeToggle_zD_x" aria-label="Switch to light theme" title="Light"><svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M12 18a6 6 0 1 1 0-12 6 6 0 0 1 0 12zm0-2a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM11 1h2v3h-2V1zm0 19h2v3h-2v-3zM3.515 4.929l1.414-1.414L7.05 5.636 5.636 7.05 3.515 4.93zM16.95 18.364l1.414-1.414 2.121 2.121-1.414 1.414-2.121-2.121zm2.121-14.85l1.414 1.415-2.121 2.121-1.414-1.414 2.121-2.121zM5.636 16.95l1.414 1.414-2.121 2.121-1.414-1.414 2.121-2.121zM23 11v2h-3v-2h3zM4 11v2H1v-2h3z"></path></svg></button></div></div></nav><div id="__docusaurus_skipToContent_fallback" class="theme-layout-main main-wrapper mainWrapper_z2l0"><div class="docsWrapper_hBAB"><button aria-label="回到顶部" class="clean-btn theme-back-to-top-button backToTopButton_sjWU" type="button"></button><div class="docRoot_UBD9"><main class="docMainContainer_TBSr docMainContainerEnhanced_lQrH"><div class="container padding-top--md padding-bottom--lg"><div class="row"><div class="col docItemCol_VOVn"><div class="docItemContainer_Djhp"><article><div class="tocCollapsible_ETCw theme-doc-toc-mobile tocMobile_ITEo"><button type="button" class="clean-btn tocCollapsibleButton_TO0P">本页总览</button></div><div class="theme-doc-markdown markdown"><header><h1>树莓派上的 Moltbot</h1></header>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="目标">目标<a href="#目标" class="hash-link" aria-label="目标的直接链接" title="目标的直接链接" translate="no">​</a></h2>
+<p>在树莓派上运行一个持久的、始终在线的 Moltbot 网关，<strong>~$35-80</strong> 一次性成本（无月费）。</p>
+<p>非常适合：</p>
+<ul>
+<li class="">24/7 个人 AI 助手</li>
+<li class="">家庭自动化中心</li>
+<li class="">低功耗、始终可用的 Telegram/WhatsApp 机器人</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="硬件要求">硬件要求<a href="#硬件要求" class="hash-link" aria-label="硬件要求的直接链接" title="硬件要求的直接链接" translate="no">​</a></h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Pi 型号</th><th>RAM</th><th>是否可用?</th><th>注释</th></tr></thead><tbody><tr><td><strong>Pi 5</strong></td><td>4GB/8GB</td><td>✅ 最佳</td><td>最快，推荐</td></tr><tr><td><strong>Pi 4</strong></td><td>4GB</td><td>✅ 良好</td><td>大多数用户的理想选择</td></tr><tr><td><strong>Pi 4</strong></td><td>2GB</td><td>✅ 可以</td><td>可用，添加交换空间</td></tr><tr><td><strong>Pi 4</strong></td><td>1GB</td><td>⚠️ 紧张</td><td>可能需要交换空间，最小配置</td></tr><tr><td><strong>Pi 3B+</strong></td><td>1GB</td><td>⚠️ 慢</td><td>可用但缓慢</td></tr><tr><td><strong>Pi Zero 2 W</strong></td><td>512MB</td><td>❌</td><td>不推荐</td></tr></tbody></table>
+<p><strong>最低规格：</strong> 1GB RAM, 1 核, 500MB 磁盘
+<strong>推荐：</strong> 2GB+ RAM, 64 位操作系统, 16GB+ SD 卡（或 USB SSD）</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="您需要什么">您需要什么<a href="#您需要什么" class="hash-link" aria-label="您需要什么的直接链接" title="您需要什么的直接链接" translate="no">​</a></h2>
+<ul>
+<li class="">树莓派 4 或 5（推荐 2GB+）</li>
+<li class="">MicroSD 卡（16GB+）或 USB SSD（更好性能）</li>
+<li class="">电源适配器（推荐官方 Pi 电源适配器）</li>
+<li class="">网络连接（以太网或 WiFi）</li>
+<li class="">~30 分钟</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="1-刷入操作系统">1) 刷入操作系统<a href="#1-刷入操作系统" class="hash-link" aria-label="1) 刷入操作系统的直接链接" title="1) 刷入操作系统的直接链接" translate="no">​</a></h2>
+<p>使用 <strong>Raspberry Pi OS Lite (64 位)</strong> — 无桌面，适合无头服务器。</p>
+<ol>
+<li class="">下载 <a href="https://www.raspberrypi.com/software/" target="_blank" rel="noopener noreferrer" class="">Raspberry Pi Imager</a></li>
+<li class="">选择操作系统: <strong>Raspberry Pi OS Lite (64 位)</strong></li>
+<li class="">点击齿轮图标 (⚙️) 预配置:
+<ul>
+<li class="">设置主机名: <code>gateway-host</code></li>
+<li class="">启用 SSH</li>
+<li class="">设置用户名/密码</li>
+<li class="">配置 WiFi（如果不使用以太网）</li>
+</ul>
+</li>
+<li class="">刷入到您的 SD 卡 / USB 驱动器</li>
+<li class="">插入并启动 Pi</li>
+</ol>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="2-通过-ssh-连接">2) 通过 SSH 连接<a href="#2-通过-ssh-连接" class="hash-link" aria-label="2) 通过 SSH 连接的直接链接" title="2) 通过 SSH 连接的直接链接" translate="no">​</a></h2>
+<div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#D6DEEB;--prism-background-color:#001122"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#D6DEEB;background-color:#001122"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#D6DEEB"><span class="token plain">ssh user@gateway-host</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain"># 或使用 IP 地址</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">ssh user@192.168.x.x</span><br></span></code></pre></div></div>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="3-系统设置">3) 系统设置<a href="#3-系统设置" class="hash-link" aria-label="3) 系统设置的直接链接" title="3) 系统设置的直接链接" translate="no">​</a></h2>
+<div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#D6DEEB;--prism-background-color:#001122"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#D6DEEB;background-color:#001122"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#D6DEEB"><span class="token plain"># 更新系统</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">sudo apt update &amp;&amp; sudo apt upgrade -y</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain"># 安装基本包</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">sudo apt install -y git curl build-essential</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain"># 设置时区（对 cron/提醒很重要）</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">sudo timedatectl set-timezone America/Chicago  # 改为您所在的时区</span><br></span></code></pre></div></div>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="4-安装-nodejs-22-arm64">4) 安装 Node.js 22 (ARM64)<a href="#4-安装-nodejs-22-arm64" class="hash-link" aria-label="4) 安装 Node.js 22 (ARM64)的直接链接" title="4) 安装 Node.js 22 (ARM64)的直接链接" translate="no">​</a></h2>
+<div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#D6DEEB;--prism-background-color:#001122"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#D6DEEB;background-color:#001122"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#D6DEEB"><span class="token plain"># 通过 NodeSource 安装 Node.js</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">curl -fsSL https://deb.nodesource.com/setup_22.x | sudo -E bash -</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">sudo apt install -y nodejs</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain"># 验证</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">node --version  # 应显示 v22.x.x</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">npm --version</span><br></span></code></pre></div></div>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="5-添加交换空间对-2gb-或更少内存很重要">5) 添加交换空间（对 2GB 或更少内存很重要）<a href="#5-添加交换空间对-2gb-或更少内存很重要" class="hash-link" aria-label="5) 添加交换空间（对 2GB 或更少内存很重要）的直接链接" title="5) 添加交换空间（对 2GB 或更少内存很重要）的直接链接" translate="no">​</a></h2>
+<p>交换空间防止内存不足崩溃：</p>
+<div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#D6DEEB;--prism-background-color:#001122"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#D6DEEB;background-color:#001122"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#D6DEEB"><span class="token plain"># 创建 2GB 交换文件</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">sudo fallocate -l 2GB /swapfile</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">sudo chmod 600 /swapfile</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">sudo mkswap /swapfile</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">sudo swapon /swapfile</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain"># 永久化</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">echo &#x27;/swapfile none swap sw 0 0&#x27; | sudo tee -a /etc/fstab</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain"># 优化低内存（减少交换倾向）</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">echo &#x27;vm.swappiness=10&#x27; | sudo tee -a /etc/sysctl.conf</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">sudo sysctl -p</span><br></span></code></pre></div></div>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="6-安装-moltbot">6) 安装 Moltbot<a href="#6-安装-moltbot" class="hash-link" aria-label="6) 安装 Moltbot的直接链接" title="6) 安装 Moltbot的直接链接" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="选项-a-标准安装推荐">选项 A: 标准安装（推荐）<a href="#选项-a-标准安装推荐" class="hash-link" aria-label="选项 A: 标准安装（推荐）的直接链接" title="选项 A: 标准安装（推荐）的直接链接" translate="no">​</a></h3>
+<div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#D6DEEB;--prism-background-color:#001122"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#D6DEEB;background-color:#001122"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#D6DEEB"><span class="token plain">curl -fsSL https://molt.bot/install.sh | bash</span><br></span></code></pre></div></div>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="选项-b-可修改安装用于调试">选项 B: 可修改安装（用于调试）<a href="#选项-b-可修改安装用于调试" class="hash-link" aria-label="选项 B: 可修改安装（用于调试）的直接链接" title="选项 B: 可修改安装（用于调试）的直接链接" translate="no">​</a></h3>
+<div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#D6DEEB;--prism-background-color:#001122"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#D6DEEB;background-color:#001122"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#D6DEEB"><span class="token plain">git clone https://github.com/moltbot/moltbot.git</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">cd moltbot</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">npm install</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">npm run build</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">npm link</span><br></span></code></pre></div></div>
+<p>可修改安装让您直接访问日志和代码 — 有助于调试 ARM 特定问题。</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="7-运行入门向导">7) 运行入门向导<a href="#7-运行入门向导" class="hash-link" aria-label="7) 运行入门向导的直接链接" title="7) 运行入门向导的直接链接" translate="no">​</a></h2>
+<div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#D6DEEB;--prism-background-color:#001122"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#D6DEEB;background-color:#001122"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#D6DEEB"><span class="token plain">moltbot onboard --install-daemon</span><br></span></code></pre></div></div>
+<p>跟随向导：</p>
+<ol>
+<li class=""><strong>网关模式：</strong> 本地</li>
+<li class=""><strong>认证：</strong> API 密钥推荐（OAuth 在无头 Pi 上可能不稳定）</li>
+<li class=""><strong>频道：</strong> Telegram 是最容易开始的</li>
+<li class=""><strong>守护进程：</strong> 是（systemd）</li>
+</ol>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="8-验证安装">8) 验证安装<a href="#8-验证安装" class="hash-link" aria-label="8) 验证安装的直接链接" title="8) 验证安装的直接链接" translate="no">​</a></h2>
+<div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#D6DEEB;--prism-background-color:#001122"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#D6DEEB;background-color:#001122"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#D6DEEB"><span class="token plain"># 检查状态</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">moltbot status</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain"># 检查服务</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">sudo systemctl status moltbot</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain"># 查看日志</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">journalctl -u moltbot -f</span><br></span></code></pre></div></div>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="9-访问仪表板">9) 访问仪表板<a href="#9-访问仪表板" class="hash-link" aria-label="9) 访问仪表板的直接链接" title="9) 访问仪表板的直接链接" translate="no">​</a></h2>
+<p>由于 Pi 是无头的，使用 SSH 隧道：</p>
+<div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#D6DEEB;--prism-background-color:#001122"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#D6DEEB;background-color:#001122"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#D6DEEB"><span class="token plain"># 从您的笔记本电脑/桌面</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">ssh -L 18789:localhost:18789 user@gateway-host</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain"># 然后在浏览器中打开</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">open http://localhost:18789</span><br></span></code></pre></div></div>
+<p>或使用 Tailscale 进行始终访问：</p>
+<div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#D6DEEB;--prism-background-color:#001122"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#D6DEEB;background-color:#001122"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#D6DEEB"><span class="token plain"># 在 Pi 上</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">curl -fsSL https://tailscale.com/install.sh | sh</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">sudo tailscale up</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain"># 更新配置</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">moltbot config set gateway.bind tailnet</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">sudo systemctl restart moltbot</span><br></span></code></pre></div></div>
+<hr>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="性能优化">性能优化<a href="#性能优化" class="hash-link" aria-label="性能优化的直接链接" title="性能优化的直接链接" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="使用-usb-ssd巨大改进">使用 USB SSD（巨大改进）<a href="#使用-usb-ssd巨大改进" class="hash-link" aria-label="使用 USB SSD（巨大改进）的直接链接" title="使用 USB SSD（巨大改进）的直接链接" translate="no">​</a></h3>
+<p>SD 卡很慢且易磨损。USB SSD 大大提高性能：</p>
+<div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#D6DEEB;--prism-background-color:#001122"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#D6DEEB;background-color:#001122"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#D6DEEB"><span class="token plain"># 检查是否从 USB 启动</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">lsblk</span><br></span></code></pre></div></div>
+<p>参见 <a href="https://www.raspberrypi.com/documentation/computers/raspberry-pi.html#usb-mass-storage-boot" target="_blank" rel="noopener noreferrer" class="">Pi USB 启动指南</a> 了解设置。</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="减少内存使用">减少内存使用<a href="#减少内存使用" class="hash-link" aria-label="减少内存使用的直接链接" title="减少内存使用的直接链接" translate="no">​</a></h3>
+<div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#D6DEEB;--prism-background-color:#001122"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#D6DEEB;background-color:#001122"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#D6DEEB"><span class="token plain"># 禁用 GPU 内存分配（无头）</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">echo &#x27;gpu_mem=16&#x27; | sudo tee -a /boot/config.txt</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain"># 如不需要，禁用蓝牙</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">sudo systemctl disable bluetooth</span><br></span></code></pre></div></div>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="监控资源">监控资源<a href="#监控资源" class="hash-link" aria-label="监控资源的直接链接" title="监控资源的直接链接" translate="no">​</a></h3>
+<div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#D6DEEB;--prism-background-color:#001122"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#D6DEEB;background-color:#001122"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#D6DEEB"><span class="token plain"># 检查内存</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">free -h</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain"># 检查 CPU 温度</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">vcgencmd measure_temp</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain"># 实时监控</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">htop</span><br></span></code></pre></div></div>
+<hr>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="arm-特定说明">ARM 特定说明<a href="#arm-特定说明" class="hash-link" aria-label="ARM 特定说明的直接链接" title="ARM 特定说明的直接链接" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="二进制兼容性">二进制兼容性<a href="#二进制兼容性" class="hash-link" aria-label="二进制兼容性的直接链接" title="二进制兼容性的直接链接" translate="no">​</a></h3>
+<p>大多数 Moltbot 功能在 ARM64 上工作，但某些外部二进制文件可能需要 ARM 构建：</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>工具</th><th>ARM64 状态</th><th>注释</th></tr></thead><tbody><tr><td>Node.js</td><td>✅</td><td>工作很好</td></tr><tr><td>WhatsApp (Baileys)</td><td>✅</td><td>纯 JS，无问题</td></tr><tr><td>Telegram</td><td>✅</td><td>纯 JS，无问题</td></tr><tr><td>gog (Gmail CLI)</td><td>⚠️</td><td>检查是否有 ARM 版本</td></tr><tr><td>Chromium (浏览器)</td><td>✅</td><td><code>sudo apt install chromium-browser</code></td></tr></tbody></table>
+<p>如果技能失败，检查其二进制文件是否有 ARM 构建。许多 Go/Rust 工具有；有些没有。</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="32-位-vs-64-位">32 位 vs 64 位<a href="#32-位-vs-64-位" class="hash-link" aria-label="32 位 vs 64 位的直接链接" title="32 位 vs 64 位的直接链接" translate="no">​</a></h3>
+<p><strong>始终使用 64 位操作系统。</strong> Node.js 和许多现代工具需要它。检查：</p>
+<div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#D6DEEB;--prism-background-color:#001122"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#D6DEEB;background-color:#001122"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#D6DEEB"><span class="token plain">uname -m</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain"># 应显示: aarch64 (64 位) 而不是 armv7l (32 位)</span><br></span></code></pre></div></div>
+<hr>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="推荐的模型设置">推荐的模型设置<a href="#推荐的模型设置" class="hash-link" aria-label="推荐的模型设置的直接链接" title="推荐的模型设置的直接链接" translate="no">​</a></h2>
+<p>由于 Pi 只是网关（模型在云端运行），使用基于 API 的模型：</p>
+<div class="language-json codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#D6DEEB;--prism-background-color:#001122"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-json codeBlock_bY9V thin-scrollbar" style="color:#D6DEEB;background-color:#001122"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#D6DEEB"><span class="token punctuation" style="color:#C792EA">{</span><span class="token plain"></span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">  </span><span class="token property" style="color:#F78C6C">&quot;agents&quot;</span><span class="token operator" style="color:#7FDBCA">:</span><span class="token plain"> </span><span class="token punctuation" style="color:#C792EA">{</span><span class="token plain"></span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">    </span><span class="token property" style="color:#F78C6C">&quot;defaults&quot;</span><span class="token operator" style="color:#7FDBCA">:</span><span class="token plain"> </span><span class="token punctuation" style="color:#C792EA">{</span><span class="token plain"></span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">      </span><span class="token property" style="color:#F78C6C">&quot;model&quot;</span><span class="token operator" style="color:#7FDBCA">:</span><span class="token plain"> </span><span class="token punctuation" style="color:#C792EA">{</span><span class="token plain"></span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">        </span><span class="token property" style="color:#F78C6C">&quot;primary&quot;</span><span class="token operator" style="color:#7FDBCA">:</span><span class="token plain"> </span><span class="token string" style="color:#ECC48D">&quot;anthropic/claude-sonnet-4-20250514&quot;</span><span class="token punctuation" style="color:#C792EA">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">        </span><span class="token property" style="color:#F78C6C">&quot;fallbacks&quot;</span><span class="token operator" style="color:#7FDBCA">:</span><span class="token plain"> </span><span class="token punctuation" style="color:#C792EA">[</span><span class="token string" style="color:#ECC48D">&quot;openai/gpt-4o-mini&quot;</span><span class="token punctuation" style="color:#C792EA">]</span><span class="token plain"></span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">      </span><span class="token punctuation" style="color:#C792EA">}</span><span class="token plain"></span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">    </span><span class="token punctuation" style="color:#C792EA">}</span><span class="token plain"></span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">  </span><span class="token punctuation" style="color:#C792EA">}</span><span class="token plain"></span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain"></span><span class="token punctuation" style="color:#C792EA">}</span><br></span></code></pre></div></div>
+<p><strong>不要尝试在 Pi 上运行本地 LLM</strong> — 即使小模型也太慢。让 Claude/GPT 做繁重的工作。</p>
+<hr>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="开机自启">开机自启<a href="#开机自启" class="hash-link" aria-label="开机自启的直接链接" title="开机自启的直接链接" translate="no">​</a></h2>
+<p>入门向导已设置此功能，但要验证：</p>
+<div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#D6DEEB;--prism-background-color:#001122"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#D6DEEB;background-color:#001122"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#D6DEEB"><span class="token plain"># 检查服务是否已启用</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">sudo systemctl is-enabled moltbot</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain"># 如未启用则启用</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">sudo systemctl enable moltbot</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain"># 开机启动</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">sudo systemctl start moltbot</span><br></span></code></pre></div></div>
+<hr>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="故障排除">故障排除<a href="#故障排除" class="hash-link" aria-label="故障排除的直接链接" title="故障排除的直接链接" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="内存不足-oom">内存不足 (OOM)<a href="#内存不足-oom" class="hash-link" aria-label="内存不足 (OOM)的直接链接" title="内存不足 (OOM)的直接链接" translate="no">​</a></h3>
+<div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#D6DEEB;--prism-background-color:#001122"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#D6DEEB;background-color:#001122"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#D6DEEB"><span class="token plain"># 检查内存</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">free -h</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain"># 添加更多交换空间（参见第 5 步）</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain"># 或减少在 Pi 上运行的服务</span><br></span></code></pre></div></div>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="性能缓慢">性能缓慢<a href="#性能缓慢" class="hash-link" aria-label="性能缓慢的直接链接" title="性能缓慢的直接链接" translate="no">​</a></h3>
+<ul>
+<li class="">使用 USB SSD 而不是 SD 卡</li>
+<li class="">禁用未使用的服务: <code>sudo systemctl disable cups bluetooth avahi-daemon</code></li>
+<li class="">检查 CPU 降频: <code>vcgencmd get_throttled</code>（应返回 <code>0x0</code>）</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="服务无法启动">服务无法启动<a href="#服务无法启动" class="hash-link" aria-label="服务无法启动的直接链接" title="服务无法启动的直接链接" translate="no">​</a></h3>
+<div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#D6DEEB;--prism-background-color:#001122"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#D6DEEB;background-color:#001122"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#D6DEEB"><span class="token plain"># 检查日志</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">journalctl -u moltbot --no-pager -n 100</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain"># 常见修复：重新构建</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">cd ~/moltbot  # 如果使用可修改安装</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">npm run build</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">sudo systemctl restart moltbot</span><br></span></code></pre></div></div>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="arm-二进制问题">ARM 二进制问题<a href="#arm-二进制问题" class="hash-link" aria-label="ARM 二进制问题的直接链接" title="ARM 二进制问题的直接链接" translate="no">​</a></h3>
+<p>如果技能失败并显示&quot;exec format error&quot;：</p>
+<ol>
+<li class="">检查二进制文件是否有 ARM64 构建</li>
+<li class="">尝试从源代码构建</li>
+<li class="">或使用支持 ARM 的 Docker 容器</li>
+</ol>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="wifi-断开">WiFi 断开<a href="#wifi-断开" class="hash-link" aria-label="WiFi 断开的直接链接" title="WiFi 断开的直接链接" translate="no">​</a></h3>
+<p>对于使用 WiFi 的无头 Pi：</p>
+<div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#D6DEEB;--prism-background-color:#001122"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#D6DEEB;background-color:#001122"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#D6DEEB"><span class="token plain"># 禁用 WiFi 功率管理</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">sudo iwconfig wlan0 power off</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain"># 永久化</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">echo &#x27;wireless-power off&#x27; | sudo tee -a /etc/network/interfaces</span><br></span></code></pre></div></div>
+<hr>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="成本对比">成本对比<a href="#成本对比" class="hash-link" aria-label="成本对比的直接链接" title="成本对比的直接链接" translate="no">​</a></h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>设置</th><th>一次性成本</th><th>月成本</th><th>注释</th></tr></thead><tbody><tr><td><strong>Pi 4 (2GB)</strong></td><td>~$45</td><td>$0</td><td>+ 电力 (~$5/年)</td></tr><tr><td><strong>Pi 4 (4GB)</strong></td><td>~$55</td><td>$0</td><td>推荐</td></tr><tr><td><strong>Pi 5 (4GB)</strong></td><td>~$60</td><td>$0</td><td>最佳性能</td></tr><tr><td><strong>Pi 5 (8GB)</strong></td><td>~$80</td><td>$0</td><td>性能过剩但面向未来</td></tr><tr><td>DigitalOcean</td><td>$0</td><td>$6/月</td><td>$72/年</td></tr><tr><td>Hetzner</td><td>$0</td><td>€3.79/月</td><td>~$50/年</td></tr></tbody></table>
+<p><strong>盈亏平衡：</strong> Pi 在 ~6-12 个月内相比云 VPS 支付成本。</p>
+<hr>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="参见">参见<a href="#参见" class="hash-link" aria-label="参见的直接链接" title="参见的直接链接" translate="no">​</a></h2>
+<ul>
+<li class=""><a class="" href="/moltbot-doc/platforms/linux">Linux 指南</a> — 通用 Linux 设置</li>
+<li class=""><a class="" href="/moltbot-doc/platforms/digitalocean">DigitalOcean 指南</a> — 云替代方案</li>
+<li class=""><a class="" href="/moltbot-doc/platforms/hetzner">Hetzner 指南</a> — Docker 设置</li>
+<li class=""><a class="" href="/moltbot-doc/gateway/tailscale">Tailscale</a> — 远程访问</li>
+<li class=""><a class="" href="/moltbot-doc/nodes">节点</a> — 将您的笔记本电脑/手机与 Pi 网关配对</li>
+</ul></div></article><nav class="docusaurus-mt-lg pagination-nav" aria-label="文件选项卡"></nav></div></div><div class="col col--3"><div class="tocWrapper_xKoj"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#目标" class="table-of-contents__link toc-highlight">目标</a></li><li><a href="#硬件要求" class="table-of-contents__link toc-highlight">硬件要求</a></li><li><a href="#您需要什么" class="table-of-contents__link toc-highlight">您需要什么</a></li><li><a href="#1-刷入操作系统" class="table-of-contents__link toc-highlight">1) 刷入操作系统</a></li><li><a href="#2-通过-ssh-连接" class="table-of-contents__link toc-highlight">2) 通过 SSH 连接</a></li><li><a href="#3-系统设置" class="table-of-contents__link toc-highlight">3) 系统设置</a></li><li><a href="#4-安装-nodejs-22-arm64" class="table-of-contents__link toc-highlight">4) 安装 Node.js 22 (ARM64)</a></li><li><a href="#5-添加交换空间对-2gb-或更少内存很重要" class="table-of-contents__link toc-highlight">5) 添加交换空间（对 2GB 或更少内存很重要）</a></li><li><a href="#6-安装-moltbot" class="table-of-contents__link toc-highlight">6) 安装 Moltbot</a><ul><li><a href="#选项-a-标准安装推荐" class="table-of-contents__link toc-highlight">选项 A: 标准安装（推荐）</a></li><li><a href="#选项-b-可修改安装用于调试" class="table-of-contents__link toc-highlight">选项 B: 可修改安装（用于调试）</a></li></ul></li><li><a href="#7-运行入门向导" class="table-of-contents__link toc-highlight">7) 运行入门向导</a></li><li><a href="#8-验证安装" class="table-of-contents__link toc-highlight">8) 验证安装</a></li><li><a href="#9-访问仪表板" class="table-of-contents__link toc-highlight">9) 访问仪表板</a></li><li><a href="#性能优化" class="table-of-contents__link toc-highlight">性能优化</a><ul><li><a href="#使用-usb-ssd巨大改进" class="table-of-contents__link toc-highlight">使用 USB SSD（巨大改进）</a></li><li><a href="#减少内存使用" class="table-of-contents__link toc-highlight">减少内存使用</a></li><li><a href="#监控资源" class="table-of-contents__link toc-highlight">监控资源</a></li></ul></li><li><a href="#arm-特定说明" class="table-of-contents__link toc-highlight">ARM 特定说明</a><ul><li><a href="#二进制兼容性" class="table-of-contents__link toc-highlight">二进制兼容性</a></li><li><a href="#32-位-vs-64-位" class="table-of-contents__link toc-highlight">32 位 vs 64 位</a></li></ul></li><li><a href="#推荐的模型设置" class="table-of-contents__link toc-highlight">推荐的模型设置</a></li><li><a href="#开机自启" class="table-of-contents__link toc-highlight">开机自启</a></li><li><a href="#故障排除" class="table-of-contents__link toc-highlight">故障排除</a><ul><li><a href="#内存不足-oom" class="table-of-contents__link toc-highlight">内存不足 (OOM)</a></li><li><a href="#性能缓慢" class="table-of-contents__link toc-highlight">性能缓慢</a></li><li><a href="#服务无法启动" class="table-of-contents__link toc-highlight">服务无法启动</a></li><li><a href="#arm-二进制问题" class="table-of-contents__link toc-highlight">ARM 二进制问题</a></li><li><a href="#wifi-断开" class="table-of-contents__link toc-highlight">WiFi 断开</a></li></ul></li><li><a href="#成本对比" class="table-of-contents__link toc-highlight">成本对比</a></li><li><a href="#参见" class="table-of-contents__link toc-highlight">参见</a></li></ul></div><div class="tocFooter_Fu2z"><div class="themeGroup_RzWV" role="group" aria-label="Theme"><button class="themeBtn_tGr6" aria-label="Light theme" title="Light"><svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor" aria-hidden="true"><path d="M12 18a6 6 0 1 1 0-12 6 6 0 0 1 0 12zm0-2a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM11 1h2v3h-2V1zm0 19h2v3h-2v-3zM3.515 4.929l1.414-1.414L7.05 5.636 5.636 7.05 3.515 4.93zM16.95 18.364l1.414-1.414 2.121 2.121-1.414 1.414-2.121-2.121zm2.121-14.85l1.414 1.415-2.121 2.121-1.414-1.414 2.121-2.121zM5.636 16.95l1.414 1.414-2.121 2.121-1.414-1.414 2.121-2.121zM23 11v2h-3v-2h3zM4 11v2H1v-2h3z"></path></svg></button><button class="themeBtn_tGr6 themeBtnActive_A6tm" aria-label="Dark theme" title="Dark"><svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor" aria-hidden="true"><path d="M11.38 2.019a7.5 7.5 0 1 0 10.6 10.6C21.83 17.963 17.315 22 12.002 22 6.477 22 2 17.523 2 12c0-5.314 4.038-9.827 9.38-10.28z"></path></svg></button></div></div></div></div></div></div></main></div></div></div><footer class="theme-layout-footer footer footer--dark"><div class="container container-fluid"><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2026 Moltbot Docs.</div></div></div></footer></div>
+</body>
+</html>

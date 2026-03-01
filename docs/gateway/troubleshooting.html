@@ -1,0 +1,509 @@
+<!doctype html>
+<html lang="zh" dir="ltr" class="docs-wrapper plugin-docs plugin-id-default docs-version-current docs-doc-page docs-doc-id-gateway/troubleshooting" data-has-hydrated="false">
+<head>
+<meta charset="UTF-8">
+<meta name="generator" content="Docusaurus v3.9.2">
+<title data-rh="true">故障排除 🔧 | Moltbot Docs</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:url" content="https://luuman.github.io/moltbot-doc/docs/gateway/troubleshooting"><meta data-rh="true" property="og:locale" content="zh"><meta data-rh="true" name="docusaurus_locale" content="zh"><meta data-rh="true" name="docsearch:language" content="zh"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="故障排除 🔧 | Moltbot Docs"><meta data-rh="true" name="description" content="当 Moltbot 表现异常时，这里是如何修复它的方法。"><meta data-rh="true" property="og:description" content="当 Moltbot 表现异常时，这里是如何修复它的方法。"><link data-rh="true" rel="icon" href="/moltbot-doc/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://luuman.github.io/moltbot-doc/docs/gateway/troubleshooting"><link data-rh="true" rel="alternate" href="https://luuman.github.io/moltbot-doc/docs/gateway/troubleshooting" hreflang="zh"><link data-rh="true" rel="alternate" href="https://luuman.github.io/moltbot-doc/docs/gateway/troubleshooting" hreflang="x-default"><link rel="alternate" type="application/rss+xml" href="/moltbot-doc/blog/rss.xml" title="Moltbot Docs RSS Feed">
+<link rel="alternate" type="application/atom+xml" href="/moltbot-doc/blog/atom.xml" title="Moltbot Docs Atom Feed"><link rel="stylesheet" href="/moltbot-doc/assets/css/styles.484b4c98.css">
+<script src="/moltbot-doc/assets/js/runtime~main.6cf495cf.js" defer="defer"></script>
+<script src="/moltbot-doc/assets/js/main.f9205183.js" defer="defer"></script>
+</head>
+<body class="navigation-with-keyboard">
+<svg style="display: none;"><defs>
+<symbol id="theme-svg-external-link" viewBox="0 0 24 24"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"/></symbol>
+</defs></svg>
+<script>!function(){var t=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme")}catch(t){}}();document.documentElement.setAttribute("data-theme",t||"dark"),document.documentElement.setAttribute("data-theme-choice",t||"dark")}(),function(){try{const c=new URLSearchParams(window.location.search).entries();for(var[t,e]of c)if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id="__docusaurus"><div role="region" aria-label="跳到主要内容"><a class="skipToContent_fXgn" href="#__docusaurus_skipToContent_fallback">跳到主要内容</a></div><nav class="navbar navbar--fixed-top navbar_MONK" role="navigation" aria-label="Main"><div class="navbarInner_ASTH"><div class="navbarLeft_pUmY"><button aria-label="切换导航栏" aria-expanded="false" class="navbar__toggle clean-btn" type="button"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg></button><a class="brand_SXL9" href="/moltbot-doc/"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="24" height="24" rx="6" fill="var(--ifm-color-primary)"></rect><path d="M7 8.5h10M7 12h7M7 15.5h10" stroke="white" stroke-width="1.8" stroke-linecap="round"></path></svg><span class="brandTitle_XbyU">Moltbot</span></a><div class="dropdown_GrgZ"><button class="dropdownToggle_Nf_z">全部站点<svg class="dropdownArrow_Eka8" viewBox="0 0 12 12" fill="none"><path d="M2 4l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg></button><ul class="dropdownMenu_zsxH"><li><a href="https://luuman.github.io/docs-workspace/docs" class="dropdownMenuItem_VBaP">Workspace</a></li><li><a href="https://luuman.github.io/claude-doc/docs" class="dropdownMenuItem_VBaP">Claude</a></li><li><a href="https://luuman.github.io/electron-doc/docs" class="dropdownMenuItem_VBaP">Electron</a></li><li><a href="https://luuman.github.io/tauri-doc/docs" class="dropdownMenuItem_VBaP">Tauri</a></li><li><a href="https://luuman.github.io/matrx-doc/docs" class="dropdownMenuItem_VBaP">Matrx</a></li><li><a href="https://luuman.github.io/brainboard-doc/docs" class="dropdownMenuItem_VBaP">Brainboard</a></li><li><a href="https://luuman.github.io/synology-doc/docs" class="dropdownMenuItem_VBaP">Synology</a></li><li><a href="https://luuman.github.io/codex-doc/docs" class="dropdownMenuItem_VBaP">Codex</a></li><li><a href="https://luuman.github.io/ai-doc/docs" class="dropdownMenuItem_VBaP">AI</a></li></ul></div></div><div class="navbarCenter_Zdr3"><div class="root_OF3s"><span class="icon_UcOK" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor" width="15" height="15"><path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"></path></svg></span><div class="slot__FGx"><div class="navbar__search searchBarContainer_NW3z" dir="ltr"><input placeholder="搜索" aria-label="Search" class="navbar__search-input searchInput_YFbd" value=""><div class="loadingRing_RJI3 searchBarLoadingRing_YnHq"><div></div><div></div><div></div><div></div></div></div></div></div></div><div class="navbarRight_q16u"><a class="navLink_RnnM" href="/moltbot-doc/docs">Docs</a><a class="navLink_RnnM" href="/moltbot-doc/blog">Blog</a><button class="themeToggle_zD_x" aria-label="Switch to light theme" title="Light"><svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M12 18a6 6 0 1 1 0-12 6 6 0 0 1 0 12zm0-2a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM11 1h2v3h-2V1zm0 19h2v3h-2v-3zM3.515 4.929l1.414-1.414L7.05 5.636 5.636 7.05 3.515 4.93zM16.95 18.364l1.414-1.414 2.121 2.121-1.414 1.414-2.121-2.121zm2.121-14.85l1.414 1.415-2.121 2.121-1.414-1.414 2.121-2.121zM5.636 16.95l1.414 1.414-2.121 2.121-1.414-1.414 2.121-2.121zM23 11v2h-3v-2h3zM4 11v2H1v-2h3z"></path></svg></button></div></div></nav><div id="__docusaurus_skipToContent_fallback" class="theme-layout-main main-wrapper mainWrapper_z2l0"><div class="docsWrapper_hBAB"><button aria-label="回到顶部" class="clean-btn theme-back-to-top-button backToTopButton_sjWU" type="button"></button><div class="docRoot_UBD9"><main class="docMainContainer_TBSr docMainContainerEnhanced_lQrH"><div class="container padding-top--md padding-bottom--lg"><div class="row"><div class="col docItemCol_VOVn"><div class="docItemContainer_Djhp"><article><div class="tocCollapsible_ETCw theme-doc-toc-mobile tocMobile_ITEo"><button type="button" class="clean-btn tocCollapsibleButton_TO0P">本页总览</button></div><div class="theme-doc-markdown markdown"><header><h1>故障排除 🔧</h1></header>
+<p>当 Moltbot 表现异常时，这里是如何修复它的方法。</p>
+<p>如果你只想快速分类处理，从 FAQ 的 <a class="" href="/moltbot-doc/help/faq#first-60-seconds-if-somethings-broken">前 60 秒</a> 开始。本页面深入探讨运行时故障和诊断。</p>
+<p>特定提供商快捷方式：<a class="" href="/moltbot-doc/channels/troubleshooting">/channels/troubleshooting</a></p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="状态和诊断">状态和诊断<a href="#状态和诊断" class="hash-link" aria-label="状态和诊断的直接链接" title="状态和诊断的直接链接" translate="no">​</a></h2>
+<p>快速分类命令（按顺序）：</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>命令</th><th>它告诉你什么</th><th>何时使用</th></tr></thead><tbody><tr><td><code>moltbot status</code></td><td>本地摘要：操作系统 + 更新，网关可达性/模式，服务，代理/会话，提供商配置状态</td><td>首次检查，快速概览</td></tr><tr><td><code>moltbot status --all</code></td><td>完整本地诊断（只读，可粘贴，相对安全）包括日志尾部</td><td>当你需要分享调试报告时</td></tr><tr><td><code>moltbot status --deep</code></td><td>运行网关健康检查（包括提供商探测；需要可访问的网关）</td><td>当&quot;配置&quot;不等于&quot;工作&quot;时</td></tr><tr><td><code>moltbot gateway probe</code></td><td>网关发现 + 可达性（本地 + 远程目标）</td><td>当你怀疑你在探测错误的网关时</td></tr><tr><td><code>moltbot channels status --probe</code></td><td>向运行中的网关询问通道状态（可选探测）</td><td>当网关可达但通道表现异常时</td></tr><tr><td><code>moltbot gateway status</code></td><td>监督程序状态（launchd/systemd/schtasks），运行时 PID/退出，最后网关错误</td><td>当服务&quot;看起来已加载&quot;但没有运行任何东西时</td></tr><tr><td><code>moltbot logs --follow</code></td><td>实时日志（运行时问题的最佳信号）</td><td>当你需要实际的失败原因时</td></tr></tbody></table>
+<p><strong>分享输出：</strong> 建议使用 <code>moltbot status --all</code>（它会脱敏令牌）。如果你粘贴 <code>moltbot status</code>，请考虑先设置 <code>CLAWDBOT_SHOW_SECRETS=0</code>（令牌预览）。</p>
+<p>另请参阅：<a class="" href="/moltbot-doc/gateway/health">健康检查</a> 和 <a class="" href="/moltbot-doc/logging">日志</a>。</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="常见问题">常见问题<a href="#常见问题" class="hash-link" aria-label="常见问题的直接链接" title="常见问题的直接链接" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="找不到提供商-anthropic-的-api-密钥">找不到提供商 &quot;anthropic&quot; 的 API 密钥<a href="#找不到提供商-anthropic-的-api-密钥" class="hash-link" aria-label="找不到提供商 &quot;anthropic&quot; 的 API 密钥的直接链接" title="找不到提供商 &quot;anthropic&quot; 的 API 密钥的直接链接" translate="no">​</a></h3>
+<p>这意味着 <strong>代理的身份验证存储为空</strong> 或缺少 Anthropic 凭证。
+身份验证是 <strong>按代理的</strong>，所以新代理不会继承主代理的密钥。</p>
+<p>修复选项：</p>
+<ul>
+<li class="">重新运行入职流程并为该代理选择 <strong>Anthropic</strong>。</li>
+<li class="">或者在 <strong>网关主机</strong> 上粘贴一个设置令牌：
+<div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#D6DEEB;--prism-background-color:#001122"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#D6DEEB;background-color:#001122"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#D6DEEB"><span class="token plain">moltbot models auth setup-token --provider anthropic</span><br></span></code></pre></div></div>
+</li>
+<li class="">或者从主代理目录复制 <code>auth-profiles.json</code> 到新代理目录。</li>
+</ul>
+<p>验证：</p>
+<div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#D6DEEB;--prism-background-color:#001122"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#D6DEEB;background-color:#001122"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#D6DEEB"><span class="token plain">moltbot models status</span><br></span></code></pre></div></div>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="oauth-令牌刷新失败anthropic-claude-订阅">OAuth 令牌刷新失败（Anthropic Claude 订阅）<a href="#oauth-令牌刷新失败anthropic-claude-订阅" class="hash-link" aria-label="OAuth 令牌刷新失败（Anthropic Claude 订阅）的直接链接" title="OAuth 令牌刷新失败（Anthropic Claude 订阅）的直接链接" translate="no">​</a></h3>
+<p>这意味着存储的 Anthropic OAuth 令牌已过期且刷新失败。
+如果你使用 Claude 订阅（无 API 密钥），最可靠的修复方法是
+切换到 <strong>Claude Code 设置令牌</strong> 并在 <strong>网关主机</strong> 上粘贴它。</p>
+<p><strong>推荐（设置令牌）：</strong></p>
+<div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#D6DEEB;--prism-background-color:#001122"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#D6DEEB;background-color:#001122"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#D6DEEB"><span class="token plain"># 在网关主机上运行（粘贴设置令牌）</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">moltbot models auth setup-token --provider anthropic</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">moltbot models status</span><br></span></code></pre></div></div>
+<p>如果你在其他地方生成了令牌：</p>
+<div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#D6DEEB;--prism-background-color:#001122"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#D6DEEB;background-color:#001122"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#D6DEEB"><span class="token plain">moltbot models auth paste-token --provider anthropic</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">moltbot models status</span><br></span></code></pre></div></div>
+<p>更多细节：<a class="" href="/moltbot-doc/providers/anthropic">Anthropic</a> 和 <a class="" href="/moltbot-doc/concepts/oauth">OAuth</a>。</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="控制-ui-在-http-上失败需要设备身份--连接失败">控制 UI 在 HTTP 上失败（&quot;需要设备身份&quot; / &quot;连接失败&quot;）<a href="#控制-ui-在-http-上失败需要设备身份--连接失败" class="hash-link" aria-label="控制 UI 在 HTTP 上失败（&quot;需要设备身份&quot; / &quot;连接失败&quot;）的直接链接" title="控制 UI 在 HTTP 上失败（&quot;需要设备身份&quot; / &quot;连接失败&quot;）的直接链接" translate="no">​</a></h3>
+<p>如果你通过纯 HTTP 打开仪表板（例如 <code>http://&lt;lan-ip&gt;:18789/</code> 或
+<code>http://&lt;tailscale-ip&gt;:18789/</code>），浏览器在 <strong>非安全上下文</strong> 中运行并
+阻止 WebCrypto，因此无法生成设备身份。</p>
+<p><strong>修复：</strong></p>
+<ul>
+<li class="">优先使用 <a class="" href="/moltbot-doc/gateway/tailscale">Tailscale Serve</a> 的 HTTPS。</li>
+<li class="">或者在网关主机上本地打开：<code>http://127.0.0.1:18789/</code>。</li>
+<li class="">如果你必须停留在 HTTP，启用 <code>gateway.controlUi.allowInsecureAuth: true</code> 并
+使用网关令牌（仅令牌；无设备身份/配对）。参见
+<a class="" href="/moltbot-doc/web/control-ui#insecure-http">控制 UI</a>。</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="ci-密钥扫描失败">CI 密钥扫描失败<a href="#ci-密钥扫描失败" class="hash-link" aria-label="CI 密钥扫描失败的直接链接" title="CI 密钥扫描失败的直接链接" translate="no">​</a></h3>
+<p>这意味着 <code>detect-secrets</code> 找到了基线中尚未包含的新候选者。
+遵循 <a class="" href="/moltbot-doc/gateway/security#secret-scanning-detect-secrets">密钥扫描</a>。</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="服务已安装但没有任何运行">服务已安装但没有任何运行<a href="#服务已安装但没有任何运行" class="hash-link" aria-label="服务已安装但没有任何运行的直接链接" title="服务已安装但没有任何运行的直接链接" translate="no">​</a></h3>
+<p>如果网关服务已安装但进程立即退出，服务
+可能看起来&quot;已加载&quot;但实际上没有运行任何东西。</p>
+<p><strong>检查：</strong></p>
+<div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#D6DEEB;--prism-background-color:#001122"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#D6DEEB;background-color:#001122"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#D6DEEB"><span class="token plain">moltbot gateway status</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">moltbot doctor</span><br></span></code></pre></div></div>
+<p>医生/服务将显示运行时状态（PID/上次退出）和日志提示。</p>
+<p><strong>日志：</strong></p>
+<ul>
+<li class="">首选：<code>moltbot logs --follow</code></li>
+<li class="">文件日志（始终）：<code>/tmp/moltbot/moltbot-YYYY-MM-DD.log</code>（或你配置的 <code>logging.file</code>）</li>
+<li class="">macOS LaunchAgent（如已安装）：<code>$CLAWDBOT_STATE_DIR/logs/gateway.log</code> 和 <code>gateway.err.log</code></li>
+<li class="">Linux systemd（如已安装）：<code>journalctl --user -u moltbot-gateway[-&lt;profile&gt;].service -n 200 --no-pager</code></li>
+<li class="">Windows：<code>schtasks /Query /TN &quot;Moltbot Gateway (&lt;profile&gt;)&quot; /V /FO LIST</code></li>
+</ul>
+<p><strong>启用更多日志记录：</strong></p>
+<ul>
+<li class="">提升文件日志详细程度（持久化 JSONL）：
+<div class="language-json codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#D6DEEB;--prism-background-color:#001122"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-json codeBlock_bY9V thin-scrollbar" style="color:#D6DEEB;background-color:#001122"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#D6DEEB"><span class="token punctuation" style="color:#C792EA">{</span><span class="token plain"> </span><span class="token property" style="color:#F78C6C">&quot;logging&quot;</span><span class="token operator" style="color:#7FDBCA">:</span><span class="token plain"> </span><span class="token punctuation" style="color:#C792EA">{</span><span class="token plain"> </span><span class="token property" style="color:#F78C6C">&quot;level&quot;</span><span class="token operator" style="color:#7FDBCA">:</span><span class="token plain"> </span><span class="token string" style="color:#ECC48D">&quot;debug&quot;</span><span class="token plain"> </span><span class="token punctuation" style="color:#C792EA">}</span><span class="token plain"> </span><span class="token punctuation" style="color:#C792EA">}</span><br></span></code></pre></div></div>
+</li>
+<li class="">提升控制台详细程度（仅 TTY 输出）：
+<div class="language-json codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#D6DEEB;--prism-background-color:#001122"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-json codeBlock_bY9V thin-scrollbar" style="color:#D6DEEB;background-color:#001122"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#D6DEEB"><span class="token punctuation" style="color:#C792EA">{</span><span class="token plain"> </span><span class="token property" style="color:#F78C6C">&quot;logging&quot;</span><span class="token operator" style="color:#7FDBCA">:</span><span class="token plain"> </span><span class="token punctuation" style="color:#C792EA">{</span><span class="token plain"> </span><span class="token property" style="color:#F78C6C">&quot;consoleLevel&quot;</span><span class="token operator" style="color:#7FDBCA">:</span><span class="token plain"> </span><span class="token string" style="color:#ECC48D">&quot;debug&quot;</span><span class="token punctuation" style="color:#C792EA">,</span><span class="token plain"> </span><span class="token property" style="color:#F78C6C">&quot;consoleStyle&quot;</span><span class="token operator" style="color:#7FDBCA">:</span><span class="token plain"> </span><span class="token string" style="color:#ECC48D">&quot;pretty&quot;</span><span class="token plain"> </span><span class="token punctuation" style="color:#C792EA">}</span><span class="token plain"> </span><span class="token punctuation" style="color:#C792EA">}</span><br></span></code></pre></div></div>
+</li>
+<li class="">快速提示：<code>--verbose</code> 仅影响 <strong>控制台</strong> 输出。文件日志仍由 <code>logging.level</code> 控制。</li>
+</ul>
+<p>参见 <a class="" href="/moltbot-doc/logging">/logging</a> 获取格式、配置和访问的完整概述。</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="网关启动被阻止设置-gatewaymodelocal">&quot;网关启动被阻止：设置 gateway.mode=local&quot;<a href="#网关启动被阻止设置-gatewaymodelocal" class="hash-link" aria-label="&quot;网关启动被阻止：设置 gateway.mode=local&quot;的直接链接" title="&quot;网关启动被阻止：设置 gateway.mode=local&quot;的直接链接" translate="no">​</a></h3>
+<p>这意味着配置存在但 <code>gateway.mode</code> 未设置（或不是 <code>local</code>），所以
+网关拒绝启动。</p>
+<p><strong>修复（推荐）：</strong></p>
+<ul>
+<li class="">运行向导并将网关运行模式设置为 <strong>本地</strong>：
+<div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#D6DEEB;--prism-background-color:#001122"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#D6DEEB;background-color:#001122"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#D6DEEB"><span class="token plain">moltbot configure</span><br></span></code></pre></div></div>
+</li>
+<li class="">或直接设置：
+<div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#D6DEEB;--prism-background-color:#001122"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#D6DEEB;background-color:#001122"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#D6DEEB"><span class="token plain">moltbot config set gateway.mode local</span><br></span></code></pre></div></div>
+</li>
+</ul>
+<p><strong>如果你想运行远程网关：</strong></p>
+<ul>
+<li class="">设置远程 URL 并保持 <code>gateway.mode=remote</code>：
+<div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#D6DEEB;--prism-background-color:#001122"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#D6DEEB;background-color:#001122"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#D6DEEB"><span class="token plain">moltbot config set gateway.mode remote</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">moltbot config set gateway.remote.url &quot;wss://gateway.example.com&quot;</span><br></span></code></pre></div></div>
+</li>
+</ul>
+<p><strong>仅临时/开发：</strong> 传递 <code>--allow-unconfigured</code> 在没有
+<code>gateway.mode=local</code> 的情况下启动网关。</p>
+<p><strong>还没有配置文件？</strong> 运行 <code>moltbot setup</code> 创建起始配置，然后重新运行
+网关。</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="服务环境path--运行时">服务环境（PATH + 运行时）<a href="#服务环境path--运行时" class="hash-link" aria-label="服务环境（PATH + 运行时）的直接链接" title="服务环境（PATH + 运行时）的直接链接" translate="no">​</a></h3>
+<p>网关服务使用 <strong>最小 PATH</strong> 以避免 shell/manager 混乱：</p>
+<ul>
+<li class="">macOS：<code>/opt/homebrew/bin</code>, <code>/usr/local/bin</code>, <code>/usr/bin</code>, <code>/bin</code></li>
+<li class="">Linux：<code>/usr/local/bin</code>, <code>/usr/bin</code>, <code>/bin</code></li>
+</ul>
+<p>这故意排除了版本管理器（nvm/fnm/volta/asdf）和包
+管理器（pnpm/npm），因为服务不会加载你的 shell 初始化。运行时
+变量如 <code>DISPLAY</code> 应该保存在 <code>~/.clawdbot/.env</code> 中（由
+网关早期加载）。
+在 <code>host=gateway</code> 上运行 exec 会将你的登录 shell <code>PATH</code> 合并到 exec 环境中，
+所以缺少工具通常意味着你的 shell 初始化没有导出它们（或设置
+<code>tools.exec.pathPrepend</code>）。参见 <a class="" href="/moltbot-doc/tools/exec">/tools/exec</a>。</p>
+<p>WhatsApp + Telegram 通道需要 <strong>Node</strong>；Bun 不支持。如果你的
+服务是用 Bun 或版本管理的 Node 路径安装的，运行 <code>moltbot doctor</code>
+迁移到系统 Node 安装。</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="沙盒中技能缺少-api-密钥">沙盒中技能缺少 API 密钥<a href="#沙盒中技能缺少-api-密钥" class="hash-link" aria-label="沙盒中技能缺少 API 密钥的直接链接" title="沙盒中技能缺少 API 密钥的直接链接" translate="no">​</a></h3>
+<p><strong>症状：</strong> 技能在主机上工作但在沙盒中因缺少 API 密钥而失败。</p>
+<p><strong>原因：</strong> 沙盒 exec 在 Docker 内部运行，<strong>不</strong> 继承主机 <code>process.env</code>。</p>
+<p><strong>修复：</strong></p>
+<ul>
+<li class="">设置 <code>agents.defaults.sandbox.docker.env</code>（或按代理 <code>agents.list[].sandbox.docker.env</code>）</li>
+<li class="">或将密钥烘焙到你的自定义沙盒镜像中</li>
+<li class="">然后运行 <code>moltbot sandbox recreate --agent &lt;id&gt;</code>（或 <code>--all</code>）</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="服务运行但端口未监听">服务运行但端口未监听<a href="#服务运行但端口未监听" class="hash-link" aria-label="服务运行但端口未监听的直接链接" title="服务运行但端口未监听的直接链接" translate="no">​</a></h3>
+<p>如果服务报告 <strong>运行中</strong> 但网关端口上没有监听任何东西，
+网关可能拒绝绑定。</p>
+<p><strong>&quot;运行中&quot; 在这里意味着什么</strong></p>
+<ul>
+<li class=""><code>Runtime: running</code> 意味着你的监督程序（launchd/systemd/schtasks）认为进程是活动的。</li>
+<li class=""><code>RPC probe</code> 意味着 CLI 实际上可以连接到网关 WebSocket 并调用 <code>status</code>。</li>
+<li class="">始终信任 <code>Probe target:</code> + <code>Config (service):</code> 作为&quot;我们实际上尝试了什么？&quot;的行。</li>
+</ul>
+<p><strong>检查：</strong></p>
+<ul>
+<li class=""><code>gateway.mode</code> 对于 <code>moltbot gateway</code> 和服务必须是 <code>local</code>。</li>
+<li class="">如果你设置了 <code>gateway.mode=remote</code>，<strong>CLI 默认</strong> 为远程 URL。服务仍可能在本地运行，但你的 CLI 可能在探测错误的位置。使用 <code>moltbot gateway status</code> 查看服务解析的端口 + 探测目标（或传递 <code>--url</code>）。</li>
+<li class=""><code>moltbot gateway status</code> 和 <code>moltbot doctor</code> 会在服务看起来运行但端口关闭时从日志中显示 <strong>最后网关错误</strong>。</li>
+<li class="">非环回绑定（<code>lan</code>/<code>tailnet</code>/<code>custom</code>，或在环回不可用时的 <code>auto</code>）需要身份验证：
+<code>gateway.auth.token</code>（或 <code>CLAWDBOT_GATEWAY_TOKEN</code>）。</li>
+<li class=""><code>gateway.remote.token</code> 仅用于远程 CLI 调用；它 <strong>不</strong> 启用本地身份验证。</li>
+<li class=""><code>gateway.token</code> 被忽略；使用 <code>gateway.auth.token</code>。</li>
+</ul>
+<p><strong>如果 <code>moltbot gateway status</code> 显示配置不匹配</strong></p>
+<ul>
+<li class=""><code>Config (cli): ...</code> 和 <code>Config (service): ...</code> 应该通常匹配。</li>
+<li class="">如果不匹配，你几乎肯定在编辑一个配置的同时服务正在运行另一个配置。</li>
+<li class="">修复：从你希望服务使用的相同 <code>--profile</code> / <code>CLAWDBOT_STATE_DIR</code> 重新运行 <code>moltbot gateway install --force</code>。</li>
+</ul>
+<p><strong>如果 <code>moltbot gateway status</code> 报告服务配置问题</strong></p>
+<ul>
+<li class="">监督程序配置（launchd/systemd/schtasks）缺少当前默认值。</li>
+<li class="">修复：运行 <code>moltbot doctor</code> 更新它（或 <code>moltbot gateway install --force</code> 进行完全重写）。</li>
+</ul>
+<p><strong>如果 <code>Last gateway error:</code> 提到&quot;拒绝在没有身份验证的情况下绑定 …&quot;</strong></p>
+<ul>
+<li class="">你将 <code>gateway.bind</code> 设置为非环回模式（<code>lan</code>/<code>tailnet</code>/<code>custom</code>，或在环回不可用时的 <code>auto</code>）但没有配置身份验证。</li>
+<li class="">修复：设置 <code>gateway.auth.mode</code> + <code>gateway.auth.token</code>（或导出 <code>CLAWDBOT_GATEWAY_TOKEN</code>）并重启服务。</li>
+</ul>
+<p><strong>如果 <code>moltbot gateway status</code> 说 <code>bind=tailnet</code> 但没有找到 tailnet 接口</strong></p>
+<ul>
+<li class="">网关试图绑定到 Tailscale IP（100.64.0.0/10）但在主机上没有检测到。</li>
+<li class="">修复：在该机器上启动 Tailscale（或将 <code>gateway.bind</code> 更改为 <code>loopback</code>/<code>lan</code>）。</li>
+</ul>
+<p><strong>如果 <code>Probe note:</code> 说探测使用环回</strong></p>
+<ul>
+<li class="">这对于 <code>bind=lan</code> 是预期的：网关监听 <code>0.0.0.0</code>（所有接口），环回应该仍能本地连接。</li>
+<li class="">对于远程客户端，使用真实的 LAN IP（不是 <code>0.0.0.0</code>）加上端口，并确保配置了身份验证。</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="地址已在使用端口-18789">地址已在使用（端口 18789）<a href="#地址已在使用端口-18789" class="hash-link" aria-label="地址已在使用（端口 18789）的直接链接" title="地址已在使用（端口 18789）的直接链接" translate="no">​</a></h3>
+<p>这意味着已经有其他东西在监听网关端口。</p>
+<p><strong>检查：</strong></p>
+<div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#D6DEEB;--prism-background-color:#001122"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#D6DEEB;background-color:#001122"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#D6DEEB"><span class="token plain">moltbot gateway status</span><br></span></code></pre></div></div>
+<p>它将显示监听器和可能的原因（网关已在运行，SSH 隧道）。
+如果需要，停止服务或选择不同的端口。</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="检测到额外的工作空间文件夹">检测到额外的工作空间文件夹<a href="#检测到额外的工作空间文件夹" class="hash-link" aria-label="检测到额外的工作空间文件夹的直接链接" title="检测到额外的工作空间文件夹的直接链接" translate="no">​</a></h3>
+<p>如果你从旧安装升级，你可能仍有 <code>~/moltbot</code> 在磁盘上。
+多个工作空间目录可能导致混乱的身份验证或状态漂移，因为
+只有一个工作空间处于活动状态。</p>
+<p><strong>修复：</strong> 保留单个活动工作空间并归档/删除其余的。参见
+<a class="" href="/moltbot-doc/concepts/agent-workspace#extra-workspace-folders">代理工作空间</a>。</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="主聊天在沙盒工作空间中运行">主聊天在沙盒工作空间中运行<a href="#主聊天在沙盒工作空间中运行" class="hash-link" aria-label="主聊天在沙盒工作空间中运行的直接链接" title="主聊天在沙盒工作空间中运行的直接链接" translate="no">​</a></h3>
+<p>症状：<code>pwd</code> 或文件工具显示 <code>~/.clawdbot/sandboxes/...</code> 即使你
+期望的是主机工作空间。</p>
+<p><strong>原因：</strong> <code>agents.defaults.sandbox.mode: &quot;non-main&quot;</code> 基于 <code>session.mainKey</code>（默认为 <code>&quot;main&quot;</code>）。
+组/频道会话使用自己的密钥，所以它们被视为非主会话并
+获得沙盒工作空间。</p>
+<p><strong>修复选项：</strong></p>
+<ul>
+<li class="">如果你希望代理使用主机工作空间：设置 <code>agents.list[].sandbox.mode: &quot;off&quot;</code>。</li>
+<li class="">如果你希望在沙盒内访问主机工作空间：为该代理设置 <code>workspaceAccess: &quot;rw&quot;</code>。</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="代理被中止">&quot;代理被中止&quot;<a href="#代理被中止" class="hash-link" aria-label="&quot;代理被中止&quot;的直接链接" title="&quot;代理被中止&quot;的直接链接" translate="no">​</a></h3>
+<p>代理在响应中途被中断。</p>
+<p><strong>原因：</strong></p>
+<ul>
+<li class="">用户发送了 <code>stop</code>、<code>abort</code>、<code>esc</code>、<code>wait</code> 或 <code>exit</code></li>
+<li class="">超时超出</li>
+<li class="">进程崩溃</li>
+</ul>
+<p><strong>修复：</strong> 只需发送另一条消息。会话继续。</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="代理在回复前失败未知模型anthropicclaude-haiku-3-5">&quot;代理在回复前失败：未知模型：anthropic/claude-haiku-3-5&quot;<a href="#代理在回复前失败未知模型anthropicclaude-haiku-3-5" class="hash-link" aria-label="&quot;代理在回复前失败：未知模型：anthropic/claude-haiku-3-5&quot;的直接链接" title="&quot;代理在回复前失败：未知模型：anthropic/claude-haiku-3-5&quot;的直接链接" translate="no">​</a></h3>
+<p>Moltbot 故意拒绝 <strong>较旧/不安全的模型</strong>（尤其是那些更容易
+受到提示注入攻击的模型）。如果你看到此错误，该模型名称已不再
+支持。</p>
+<p><strong>修复：</strong></p>
+<ul>
+<li class="">为提供商选择 <strong>最新</strong> 模型并更新你的配置或模型别名。</li>
+<li class="">如果你不确定哪些模型可用，运行 <code>moltbot models list</code> 或
+<code>moltbot models scan</code> 并选择一个支持的模型。</li>
+<li class="">检查网关日志以获取详细的失败原因。</li>
+</ul>
+<p>另请参见：<a class="" href="/moltbot-doc/cli/models">模型 CLI</a> 和 <a class="" href="/moltbot-doc/concepts/model-providers">模型提供商</a>。</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="消息未触发">消息未触发<a href="#消息未触发" class="hash-link" aria-label="消息未触发的直接链接" title="消息未触发的直接链接" translate="no">​</a></h3>
+<p><strong>检查 1：</strong> 发送者是否在白名单中？</p>
+<div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#D6DEEB;--prism-background-color:#001122"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#D6DEEB;background-color:#001122"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#D6DEEB"><span class="token plain">moltbot status</span><br></span></code></pre></div></div>
+<p>在输出中查找 <code>AllowFrom: ...</code>。</p>
+<p><strong>检查 2：</strong> 对于群聊，是否需要提及？</p>
+<div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#D6DEEB;--prism-background-color:#001122"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#D6DEEB;background-color:#001122"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#D6DEEB"><span class="token plain"># 消息必须匹配 mentionPatterns 或明确提及；默认值位于频道组/公会中。</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain"># 多代理：`agents.list[].groupChat.mentionPatterns` 覆盖全局模式。</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">grep -n &quot;agents\\|groupChat\\|mentionPatterns\\|channels\\.whatsapp\\.groups\\|channels\\.telegram\\.groups\\|channels\\.imessage\\.groups\\|channels\\.discord\\.guilds&quot; \</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">  &quot;${CLAWDBOT_CONFIG_PATH:-$HOME/.clawdbot/moltbot.json}&quot;</span><br></span></code></pre></div></div>
+<p><strong>检查 3：</strong> 检查日志</p>
+<div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#D6DEEB;--prism-background-color:#001122"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#D6DEEB;background-color:#001122"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#D6DEEB"><span class="token plain">moltbot logs --follow</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain"># 或如果你想要快速过滤：</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">tail -f &quot;$(ls -t /tmp/moltbot/moltbot-*.log | head -1)&quot; | grep &quot;blocked\\|skip\\|unauthorized&quot;</span><br></span></code></pre></div></div>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="配对码未到达">配对码未到达<a href="#配对码未到达" class="hash-link" aria-label="配对码未到达的直接链接" title="配对码未到达的直接链接" translate="no">​</a></h3>
+<p>如果 <code>dmPolicy</code> 是 <code>pairing</code>，未知发送者应该收到一个码，他们的消息会被忽略直到批准。</p>
+<p><strong>检查 1：</strong> 是否已有待处理请求？</p>
+<div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#D6DEEB;--prism-background-color:#001122"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#D6DEEB;background-color:#001122"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#D6DEEB"><span class="token plain">moltbot pairing list &lt;channel&gt;</span><br></span></code></pre></div></div>
+<p>待处理 DM 配对请求默认限制为 <strong>每频道 3 个</strong>。如果列表已满，新请求不会生成码，直到其中一个被批准或过期。</p>
+<p><strong>检查 2：</strong> 请求是否已创建但没有发送回复？</p>
+<div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#D6DEEB;--prism-background-color:#001122"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#D6DEEB;background-color:#001122"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#D6DEEB"><span class="token plain">moltbot logs --follow | grep &quot;pairing request&quot;</span><br></span></code></pre></div></div>
+<p><strong>检查 3：</strong> 确认该频道的 <code>dmPolicy</code> 不是 <code>open</code>/<code>allowlist</code>。</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="图像--提及不起作用">图像 + 提及不起作用<a href="#图像--提及不起作用" class="hash-link" aria-label="图像 + 提及不起作用的直接链接" title="图像 + 提及不起作用的直接链接" translate="no">​</a></h3>
+<p>已知问题：当你只发送带有提及（没有其他文本）的图像时，WhatsApp 有时不包含提及元数据。</p>
+<p><strong>解决方法：</strong> 在提及中添加一些文本：</p>
+<ul>
+<li class="">❌ <code>@clawd</code> + 图像</li>
+<li class="">✅ <code>@clawd check this</code> + 图像</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="会话未恢复">会话未恢复<a href="#会话未恢复" class="hash-link" aria-label="会话未恢复的直接链接" title="会话未恢复的直接链接" translate="no">​</a></h3>
+<p><strong>检查 1：</strong> 会话文件是否存在？</p>
+<div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#D6DEEB;--prism-background-color:#001122"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#D6DEEB;background-color:#001122"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#D6DEEB"><span class="token plain">ls -la ~/.clawdbot/agents/&lt;agentId&gt;/sessions/</span><br></span></code></pre></div></div>
+<p><strong>检查 2：</strong> 重置窗口是否太短？</p>
+<div class="language-json codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#D6DEEB;--prism-background-color:#001122"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-json codeBlock_bY9V thin-scrollbar" style="color:#D6DEEB;background-color:#001122"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#D6DEEB"><span class="token punctuation" style="color:#C792EA">{</span><span class="token plain"></span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">  </span><span class="token property" style="color:#F78C6C">&quot;session&quot;</span><span class="token operator" style="color:#7FDBCA">:</span><span class="token plain"> </span><span class="token punctuation" style="color:#C792EA">{</span><span class="token plain"></span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">    </span><span class="token property" style="color:#F78C6C">&quot;reset&quot;</span><span class="token operator" style="color:#7FDBCA">:</span><span class="token plain"> </span><span class="token punctuation" style="color:#C792EA">{</span><span class="token plain"></span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">      </span><span class="token property" style="color:#F78C6C">&quot;mode&quot;</span><span class="token operator" style="color:#7FDBCA">:</span><span class="token plain"> </span><span class="token string" style="color:#ECC48D">&quot;daily&quot;</span><span class="token punctuation" style="color:#C792EA">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">      </span><span class="token property" style="color:#F78C6C">&quot;atHour&quot;</span><span class="token operator" style="color:#7FDBCA">:</span><span class="token plain"> </span><span class="token number" style="color:#F78C6C">4</span><span class="token punctuation" style="color:#C792EA">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">      </span><span class="token property" style="color:#F78C6C">&quot;idleMinutes&quot;</span><span class="token operator" style="color:#7FDBCA">:</span><span class="token plain"> </span><span class="token number" style="color:#F78C6C">10080</span><span class="token plain">  </span><span class="token comment" style="color:#637777;font-style:italic">// 7 天</span><span class="token plain"></span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">    </span><span class="token punctuation" style="color:#C792EA">}</span><span class="token plain"></span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">  </span><span class="token punctuation" style="color:#C792EA">}</span><span class="token plain"></span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain"></span><span class="token punctuation" style="color:#C792EA">}</span><br></span></code></pre></div></div>
+<p><strong>检查 3：</strong> 是否有人发送了 <code>/new</code>、<code>/reset</code> 或重置触发器？</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="代理超时">代理超时<a href="#代理超时" class="hash-link" aria-label="代理超时的直接链接" title="代理超时的直接链接" translate="no">​</a></h3>
+<p>默认超时为 30 分钟。对于长时间任务：</p>
+<div class="language-json codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#D6DEEB;--prism-background-color:#001122"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-json codeBlock_bY9V thin-scrollbar" style="color:#D6DEEB;background-color:#001122"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#D6DEEB"><span class="token punctuation" style="color:#C792EA">{</span><span class="token plain"></span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">  </span><span class="token property" style="color:#F78C6C">&quot;reply&quot;</span><span class="token operator" style="color:#7FDBCA">:</span><span class="token plain"> </span><span class="token punctuation" style="color:#C792EA">{</span><span class="token plain"></span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">    </span><span class="token property" style="color:#F78C6C">&quot;timeoutSeconds&quot;</span><span class="token operator" style="color:#7FDBCA">:</span><span class="token plain"> </span><span class="token number" style="color:#F78C6C">3600</span><span class="token plain">  </span><span class="token comment" style="color:#637777;font-style:italic">// 1 小时</span><span class="token plain"></span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">  </span><span class="token punctuation" style="color:#C792EA">}</span><span class="token plain"></span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain"></span><span class="token punctuation" style="color:#C792EA">}</span><br></span></code></pre></div></div>
+<p>或使用 <code>process</code> 工具将长时间命令后台化。</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="whatsapp-断开连接">WhatsApp 断开连接<a href="#whatsapp-断开连接" class="hash-link" aria-label="WhatsApp 断开连接的直接链接" title="WhatsApp 断开连接的直接链接" translate="no">​</a></h3>
+<div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#D6DEEB;--prism-background-color:#001122"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#D6DEEB;background-color:#001122"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#D6DEEB"><span class="token plain"># 检查本地状态（凭据、会话、排队事件）</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">moltbot status</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain"># 探测运行中的网关 + 通道（WA 连接 + Telegram + Discord API）</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">moltbot status --deep</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain"># 查看最近的连接事件</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">moltbot logs --limit 200 | grep &quot;connection\\|disconnect\\|logout&quot;</span><br></span></code></pre></div></div>
+<p><strong>修复：</strong> 一旦网关运行通常会自动重新连接。如果你卡住了，重启网关进程（无论你如何监督它），或使用详细输出手动运行：</p>
+<div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#D6DEEB;--prism-background-color:#001122"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#D6DEEB;background-color:#001122"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#D6DEEB"><span class="token plain">moltbot gateway --verbose</span><br></span></code></pre></div></div>
+<p>如果你已登出/取消链接：</p>
+<div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#D6DEEB;--prism-background-color:#001122"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#D6DEEB;background-color:#001122"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#D6DEEB"><span class="token plain">moltbot channels logout</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">trash &quot;${CLAWDBOT_STATE_DIR:-$HOME/.clawdbot}/credentials&quot; # 如果登出不能干净地移除所有内容</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">moltbot channels login --verbose       # 重新扫描 QR</span><br></span></code></pre></div></div>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="媒体发送失败">媒体发送失败<a href="#媒体发送失败" class="hash-link" aria-label="媒体发送失败的直接链接" title="媒体发送失败的直接链接" translate="no">​</a></h3>
+<p><strong>检查 1：</strong> 文件路径是否有效？</p>
+<div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#D6DEEB;--prism-background-color:#001122"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#D6DEEB;background-color:#001122"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#D6DEEB"><span class="token plain">ls -la /path/to/your/image.jpg</span><br></span></code></pre></div></div>
+<p><strong>检查 2：</strong> 文件是否太大？</p>
+<ul>
+<li class="">图像：最大 6MB</li>
+<li class="">音频/视频：最大 16MB</li>
+<li class="">文档：最大 100MB</li>
+</ul>
+<p><strong>检查 3：</strong> 检查媒体日志</p>
+<div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#D6DEEB;--prism-background-color:#001122"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#D6DEEB;background-color:#001122"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#D6DEEB"><span class="token plain">grep &quot;media\\|fetch\\|download&quot; &quot;$(ls -t /tmp/moltbot/moltbot-*.log | head -1)&quot; | tail -20</span><br></span></code></pre></div></div>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="高内存使用率">高内存使用率<a href="#高内存使用率" class="hash-link" aria-label="高内存使用率的直接链接" title="高内存使用率的直接链接" translate="no">​</a></h3>
+<p>Moltbot 在内存中保持对话历史。</p>
+<p><strong>修复：</strong> 定期重启或设置会话限制：</p>
+<div class="language-json codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#D6DEEB;--prism-background-color:#001122"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-json codeBlock_bY9V thin-scrollbar" style="color:#D6DEEB;background-color:#001122"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#D6DEEB"><span class="token punctuation" style="color:#C792EA">{</span><span class="token plain"></span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">  </span><span class="token property" style="color:#F78C6C">&quot;session&quot;</span><span class="token operator" style="color:#7FDBCA">:</span><span class="token plain"> </span><span class="token punctuation" style="color:#C792EA">{</span><span class="token plain"></span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">    </span><span class="token property" style="color:#F78C6C">&quot;historyLimit&quot;</span><span class="token operator" style="color:#7FDBCA">:</span><span class="token plain"> </span><span class="token number" style="color:#F78C6C">100</span><span class="token plain">  </span><span class="token comment" style="color:#637777;font-style:italic">// 保留的最大消息数</span><span class="token plain"></span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">  </span><span class="token punctuation" style="color:#C792EA">}</span><span class="token plain"></span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain"></span><span class="token punctuation" style="color:#C792EA">}</span><br></span></code></pre></div></div>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="常见故障排除">常见故障排除<a href="#常见故障排除" class="hash-link" aria-label="常见故障排除的直接链接" title="常见故障排除的直接链接" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="网关无法启动--配置无效">&quot;网关无法启动 — 配置无效&quot;<a href="#网关无法启动--配置无效" class="hash-link" aria-label="&quot;网关无法启动 — 配置无效&quot;的直接链接" title="&quot;网关无法启动 — 配置无效&quot;的直接链接" translate="no">​</a></h3>
+<p>当配置包含未知键、格式错误的值或无效类型时，Moltbot 现在拒绝启动。
+这是出于安全考虑的故意行为。</p>
+<p>用 Doctor 修复它：</p>
+<div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#D6DEEB;--prism-background-color:#001122"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#D6DEEB;background-color:#001122"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#D6DEEB"><span class="token plain">moltbot doctor</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">moltbot doctor --fix</span><br></span></code></pre></div></div>
+<p>说明：</p>
+<ul>
+<li class=""><code>moltbot doctor</code> 报告每个无效条目。</li>
+<li class=""><code>moltbot doctor --fix</code> 应用迁移/修复并重写配置。</li>
+<li class="">即使配置无效，<code>moltbot logs</code>、<code>moltbot health</code>、<code>moltbot status</code>、<code>moltbot gateway status</code> 和 <code>moltbot gateway probe</code> 等诊断命令仍可运行。</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="所有模型都失败了--我应该首先检查什么">&quot;所有模型都失败了&quot; — 我应该首先检查什么？<a href="#所有模型都失败了--我应该首先检查什么" class="hash-link" aria-label="&quot;所有模型都失败了&quot; — 我应该首先检查什么？的直接链接" title="&quot;所有模型都失败了&quot; — 我应该首先检查什么？的直接链接" translate="no">​</a></h3>
+<ul>
+<li class=""><strong>凭据</strong> 是否为正在尝试的提供商提供（身份验证配置文件 + 环境变量）。</li>
+<li class=""><strong>模型路由</strong>：确认 <code>agents.defaults.model.primary</code> 和备用项是你能访问的模型。</li>
+<li class=""><strong>网关日志</strong> 在 <code>/tmp/moltbot/…</code> 中查找确切的提供商错误。</li>
+<li class=""><strong>模型状态</strong>：使用 <code>/model status</code>（聊天）或 <code>moltbot models status</code>（CLI）。</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="我在我的个人-whatsapp-号码上运行--为什么自聊很奇怪">我在我的个人 WhatsApp 号码上运行 — 为什么自聊很奇怪？<a href="#我在我的个人-whatsapp-号码上运行--为什么自聊很奇怪" class="hash-link" aria-label="我在我的个人 WhatsApp 号码上运行 — 为什么自聊很奇怪？的直接链接" title="我在我的个人 WhatsApp 号码上运行 — 为什么自聊很奇怪？的直接链接" translate="no">​</a></h3>
+<p>启用自聊模式并允许白名单你的号码：</p>
+<div class="language-json5 codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#D6DEEB;--prism-background-color:#001122"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-json5 codeBlock_bY9V thin-scrollbar" style="color:#D6DEEB;background-color:#001122"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#D6DEEB"><span class="token plain">{</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">  channels: {</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">    whatsapp: {</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">      selfChatMode: true,</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">      dmPolicy: &quot;allowlist&quot;,</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">      allowFrom: [&quot;+15555550123&quot;]</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">    }</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">  }</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">}</span><br></span></code></pre></div></div>
+<p>参见 <a class="" href="/moltbot-doc/channels/whatsapp">WhatsApp 设置</a>。</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="whatsapp-登出我了我如何重新认证">WhatsApp 登出我了。我如何重新认证？<a href="#whatsapp-登出我了我如何重新认证" class="hash-link" aria-label="WhatsApp 登出我了。我如何重新认证？的直接链接" title="WhatsApp 登出我了。我如何重新认证？的直接链接" translate="no">​</a></h3>
+<p>再次运行登录命令并扫描 QR 码：</p>
+<div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#D6DEEB;--prism-background-color:#001122"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#D6DEEB;background-color:#001122"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#D6DEEB"><span class="token plain">moltbot channels login</span><br></span></code></pre></div></div>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="main-上的构建错误--标准修复路径是什么"><code>main</code> 上的构建错误 — 标准修复路径是什么？<a href="#main-上的构建错误--标准修复路径是什么" class="hash-link" aria-label="main-上的构建错误--标准修复路径是什么的直接链接" title="main-上的构建错误--标准修复路径是什么的直接链接" translate="no">​</a></h3>
+<ol>
+<li class=""><code>git pull origin main &amp;&amp; pnpm install</code></li>
+<li class=""><code>moltbot doctor</code></li>
+<li class="">检查 GitHub 问题或 Discord</li>
+<li class="">临时解决方法：检出较早的提交</li>
+</ol>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="npm-install-失败allow-build-scripts--缺少-tar-或-yargs现在怎么办">npm install 失败（allow-build-scripts / 缺少 tar 或 yargs）。现在怎么办？<a href="#npm-install-失败allow-build-scripts--缺少-tar-或-yargs现在怎么办" class="hash-link" aria-label="npm install 失败（allow-build-scripts / 缺少 tar 或 yargs）。现在怎么办？的直接链接" title="npm install 失败（allow-build-scripts / 缺少 tar 或 yargs）。现在怎么办？的直接链接" translate="no">​</a></h3>
+<p>如果你从源码运行，请使用仓库的包管理器：<strong>pnpm</strong>（首选）。
+仓库声明了 <code>packageManager: &quot;pnpm@…&quot;</code>。</p>
+<p>典型恢复：</p>
+<div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#D6DEEB;--prism-background-color:#001122"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#D6DEEB;background-color:#001122"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#D6DEEB"><span class="token plain">git status   # 确保你在仓库根目录</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">pnpm install</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">pnpm build</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">moltbot doctor</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">moltbot gateway restart</span><br></span></code></pre></div></div>
+<p>原因：pnpm 是此仓库配置的包管理器。</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="如何在-git-安装和-npm-安装之间切换">如何在 git 安装和 npm 安装之间切换？<a href="#如何在-git-安装和-npm-安装之间切换" class="hash-link" aria-label="如何在 git 安装和 npm 安装之间切换？的直接链接" title="如何在 git 安装和 npm 安装之间切换？的直接链接" translate="no">​</a></h3>
+<p>使用 <strong>网站安装程序</strong> 并使用标志选择安装方法。它
+就地升级并将网关服务重写为指向新安装。</p>
+<p>切换 <strong>到 git 安装</strong>：</p>
+<div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#D6DEEB;--prism-background-color:#001122"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#D6DEEB;background-color:#001122"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#D6DEEB"><span class="token plain">curl -fsSL https://molt.bot/install.sh | bash -s -- --install-method git --no-onboard</span><br></span></code></pre></div></div>
+<p>切换 <strong>到 npm 全局</strong>：</p>
+<div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#D6DEEB;--prism-background-color:#001122"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#D6DEEB;background-color:#001122"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#D6DEEB"><span class="token plain">curl -fsSL https://molt.bot/install.sh | bash</span><br></span></code></pre></div></div>
+<p>说明：</p>
+<ul>
+<li class="">git 流程仅在仓库干净时才会变基。先提交或暂存更改。</li>
+<li class="">切换后，运行：
+<div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#D6DEEB;--prism-background-color:#001122"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#D6DEEB;background-color:#001122"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#D6DEEB"><span class="token plain">moltbot doctor</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">moltbot gateway restart</span><br></span></code></pre></div></div>
+</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="telegram-块流在工具调用之间不分割文本为什么">Telegram 块流在工具调用之间不分割文本。为什么？<a href="#telegram-块流在工具调用之间不分割文本为什么" class="hash-link" aria-label="Telegram 块流在工具调用之间不分割文本。为什么？的直接链接" title="Telegram 块流在工具调用之间不分割文本。为什么？的直接链接" translate="no">​</a></h3>
+<p>块流仅发送 <strong>已完成的文本块</strong>。你看到单条消息的常见原因：</p>
+<ul>
+<li class=""><code>agents.defaults.blockStreamingDefault</code> 仍是 <code>&quot;off&quot;</code>。</li>
+<li class=""><code>channels.telegram.blockStreaming</code> 设置为 <code>false</code>。</li>
+<li class=""><code>channels.telegram.streamMode</code> 是 <code>partial</code> 或 <code>block</code> <strong>且草稿流处于活动状态</strong>
+（私聊 + 主题）。在这种情况下，草稿流禁用块流。</li>
+<li class="">你的 <code>minChars</code> / 合并设置太高，所以块被合并。</li>
+<li class="">模型发出一个大文本块（没有中间回复刷新点）。</li>
+</ul>
+<p>修复清单：</p>
+<ol>
+<li class="">将块流设置放在 <code>agents.defaults</code> 下，而不是根目录。</li>
+<li class="">如果你想要真正的多消息块回复，设置 <code>channels.telegram.streamMode: &quot;off&quot;</code>。</li>
+<li class="">调试时使用较小的块/合并阈值。</li>
+</ol>
+<p>参见 <a class="" href="/moltbot-doc/concepts/streaming">流</a>。</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="discord-在我的服务器中不回复即使设置了-requiremention-false为什么">Discord 在我的服务器中不回复，即使设置了 <code>requireMention: false</code>。为什么？<a href="#discord-在我的服务器中不回复即使设置了-requiremention-false为什么" class="hash-link" aria-label="discord-在我的服务器中不回复即使设置了-requiremention-false为什么的直接链接" title="discord-在我的服务器中不回复即使设置了-requiremention-false为什么的直接链接" translate="no">​</a></h3>
+<p><code>requireMention</code> 仅在频道通过白名单后控制提及门控。
+默认情况下 <code>channels.discord.groupPolicy</code> 是 <strong>白名单</strong>，所以公会必须明确启用。
+如果你设置了 <code>channels.discord.guilds.&lt;guildId&gt;.channels</code>，只允许列出的频道；省略它以允许公会中的所有频道。</p>
+<p>修复清单：</p>
+<ol>
+<li class="">设置 <code>channels.discord.groupPolicy: &quot;open&quot;</code> <strong>或</strong> 添加公会白名单条目（可选频道白名单）。</li>
+<li class="">在 <code>channels.discord.guilds.&lt;guildId&gt;.channels</code> 中使用 <strong>数字频道 ID</strong>。</li>
+<li class="">将 <code>requireMention: false</code> 放在 <code>channels.discord.guilds</code> <strong>下</strong>（全局或按频道）。
+顶级 <code>channels.discord.requireMention</code> 不是受支持的键。</li>
+<li class="">确保机器人有 <strong>消息内容意图</strong> 和频道权限。</li>
+<li class="">运行 <code>moltbot channels status --probe</code> 获取审计提示。</li>
+</ol>
+<p>文档：<a class="" href="/moltbot-doc/channels/discord">Discord</a>，<a class="" href="/moltbot-doc/channels/troubleshooting">通道故障排除</a>。</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="云代码助手-api-错误无效工具架构400现在怎么办">云代码助手 API 错误：无效工具架构（400）。现在怎么办？<a href="#云代码助手-api-错误无效工具架构400现在怎么办" class="hash-link" aria-label="云代码助手 API 错误：无效工具架构（400）。现在怎么办？的直接链接" title="云代码助手 API 错误：无效工具架构（400）。现在怎么办？的直接链接" translate="no">​</a></h3>
+<p>这几乎总是一个 <strong>工具架构兼容性</strong> 问题。云代码助手
+端点接受 JSON 架构的严格子集。Moltbot 在当前 <code>main</code> 中清理/规范化工具
+架构，但修复尚未包含在最新发布版中（截至
+2026年1月13日）。</p>
+<p>修复清单：</p>
+<ol>
+<li class=""><strong>更新 Moltbot</strong>：
+<ul>
+<li class="">如果你能从源码运行，拉取 <code>main</code> 并重启网关。</li>
+<li class="">否则，等待包含架构清理器的下次发布。</li>
+</ul>
+</li>
+<li class="">避免不支持的关键字如 <code>anyOf/oneOf/allOf</code>、<code>patternProperties</code>、
+<code>additionalProperties</code>、<code>minLength</code>、<code>maxLength</code>、<code>format</code> 等。</li>
+<li class="">如果你定义自定义工具，将顶层架构保持为 <code>type: &quot;object&quot;</code> 带
+<code>properties</code> 和简单枚举。</li>
+</ol>
+<p>参见 <a class="" href="/moltbot-doc/tools">工具</a> 和 <a class="" href="/moltbot-doc/concepts/typebox">TypeBox 架构</a>。</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="macos-特定问题">macOS 特定问题<a href="#macos-特定问题" class="hash-link" aria-label="macOS 特定问题的直接链接" title="macOS 特定问题的直接链接" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="授予权限时应用程序崩溃语音麦克风">授予权限时应用程序崩溃（语音/麦克风）<a href="#授予权限时应用程序崩溃语音麦克风" class="hash-link" aria-label="授予权限时应用程序崩溃（语音/麦克风）的直接链接" title="授予权限时应用程序崩溃（语音/麦克风）的直接链接" translate="no">​</a></h3>
+<p>如果你点击隐私提示上的&quot;允许&quot;时应用程序消失或显示&quot;Abort trap 6&quot;：</p>
+<p><strong>修复 1：重置 TCC 缓存</strong></p>
+<div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#D6DEEB;--prism-background-color:#001122"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#D6DEEB;background-color:#001122"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#D6DEEB"><span class="token plain">tccutil reset All bot.molt.mac.debug</span><br></span></code></pre></div></div>
+<p><strong>修复 2：强制新捆绑 ID</strong>
+如果重置不起作用，更改 <a href="https://github.com/moltbot/moltbot/blob/main/scripts/package-mac-app.sh" target="_blank" rel="noopener noreferrer" class=""><code>scripts/package-mac-app.sh</code></a> 中的 <code>BUNDLE_ID</code>（例如，添加 <code>.test</code> 后缀）并重建。这强制 macOS 将其视为新应用程序。</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="网关卡在启动中">网关卡在&quot;启动中...&quot;<a href="#网关卡在启动中" class="hash-link" aria-label="网关卡在&quot;启动中...&quot;的直接链接" title="网关卡在&quot;启动中...&quot;的直接链接" translate="no">​</a></h3>
+<p>应用程序连接到端口 <code>18789</code> 上的本地网关。如果它持续卡住：</p>
+<p><strong>修复 1：停止监督程序（首选）</strong>
+如果网关由 launchd 监督，杀死 PID 只会使它重生。先停止监督程序：</p>
+<div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#D6DEEB;--prism-background-color:#001122"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#D6DEEB;background-color:#001122"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#D6DEEB"><span class="token plain">moltbot gateway status</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">moltbot gateway stop</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain"># 或：launchctl bootout gui/$UID/bot.molt.gateway（替换为 bot.molt.&lt;profile&gt;；遗留的 com.clawdbot.* 仍有效）</span><br></span></code></pre></div></div>
+<p><strong>修复 2：端口忙（查找监听器）</strong></p>
+<div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#D6DEEB;--prism-background-color:#001122"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#D6DEEB;background-color:#001122"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#D6DEEB"><span class="token plain">lsof -nP -iTCP:18789 -sTCP:LISTEN</span><br></span></code></pre></div></div>
+<p>如果是无人监督的进程，先尝试优雅停止，然后升级：</p>
+<div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#D6DEEB;--prism-background-color:#001122"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#D6DEEB;background-color:#001122"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#D6DEEB"><span class="token plain">kill -TERM &lt;PID&gt;</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">sleep 1</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">kill -9 &lt;PID&gt; # 最后手段</span><br></span></code></pre></div></div>
+<p><strong>修复 3：检查 CLI 安装</strong>
+确保全局 <code>moltbot</code> CLI 已安装并与应用程序版本匹配：</p>
+<div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#D6DEEB;--prism-background-color:#001122"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#D6DEEB;background-color:#001122"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#D6DEEB"><span class="token plain">moltbot --version</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">npm install -g moltbot@&lt;version&gt;</span><br></span></code></pre></div></div>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="调试模式">调试模式<a href="#调试模式" class="hash-link" aria-label="调试模式的直接链接" title="调试模式的直接链接" translate="no">​</a></h2>
+<p>获取详细日志：</p>
+<div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#D6DEEB;--prism-background-color:#001122"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#D6DEEB;background-color:#001122"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#D6DEEB"><span class="token plain"># 在配置中打开跟踪日志：</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">#   ${CLAWDBOT_CONFIG_PATH:-$HOME/.clawdbot/moltbot.json} -&gt; { logging: { level: &quot;trace&quot; } }</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">#</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain"># 然后运行详细命令将调试输出镜像到标准输出：</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">moltbot gateway --verbose</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">moltbot channels login --verbose</span><br></span></code></pre></div></div>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="日志位置">日志位置<a href="#日志位置" class="hash-link" aria-label="日志位置的直接链接" title="日志位置的直接链接" translate="no">​</a></h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>日志</th><th>位置</th></tr></thead><tbody><tr><td>网关文件日志（结构化）</td><td><code>/tmp/moltbot/moltbot-YYYY-MM-DD.log</code>（或 <code>logging.file</code>）</td></tr><tr><td>网关服务日志（监督程序）</td><td>macOS：<code>$CLAWDBOT_STATE_DIR/logs/gateway.log</code> + <code>gateway.err.log</code>（默认：<code>~/.clawdbot/logs/...</code>；配置文件使用 <code>~/.clawdbot-&lt;profile&gt;/logs/...</code>）<br>Linux：<code>journalctl --user -u moltbot-gateway[-&lt;profile&gt;].service -n 200 --no-pager</code><br>Windows：<code>schtasks /Query /TN &quot;Moltbot Gateway (&lt;profile&gt;)&quot; /V /FO LIST</code></td></tr><tr><td>会话文件</td><td><code>$CLAWDBOT_STATE_DIR/agents/&lt;agentId&gt;/sessions/</code></td></tr><tr><td>媒体缓存</td><td><code>$CLAWDBOT_STATE_DIR/media/</code></td></tr><tr><td>凭据</td><td><code>$CLAWDBOT_STATE_DIR/credentials/</code></td></tr></tbody></table>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="健康检查">健康检查<a href="#健康检查" class="hash-link" aria-label="健康检查的直接链接" title="健康检查的直接链接" translate="no">​</a></h2>
+<div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#D6DEEB;--prism-background-color:#001122"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#D6DEEB;background-color:#001122"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#D6DEEB"><span class="token plain"># 监督程序 + 探测目标 + 配置路径</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">moltbot gateway status</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain"># 包括系统级扫描（遗留/额外服务，端口监听器）</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">moltbot gateway status --deep</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain"># 网关是否可达？</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">moltbot health --json</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain"># 如果失败，使用连接详情重新运行：</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">moltbot health --verbose</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain"># 默认端口上是否有东西在监听？</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">lsof -nP -iTCP:18789 -sTCP:LISTEN</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain"># 最近活动（RPC 日志尾部）</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">moltbot logs --follow</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain"># 如果 RPC 停止的后备方案</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">tail -20 /tmp/moltbot/moltbot-*.log</span><br></span></code></pre></div></div>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="重置一切">重置一切<a href="#重置一切" class="hash-link" aria-label="重置一切的直接链接" title="重置一切的直接链接" translate="no">​</a></h2>
+<p>终极选项：</p>
+<div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#D6DEEB;--prism-background-color:#001122"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#D6DEEB;background-color:#001122"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#D6DEEB"><span class="token plain">moltbot gateway stop</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain"># 如果你安装了服务并希望干净安装：</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain"># moltbot gateway uninstall</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">trash &quot;${CLAWDBOT_STATE_DIR:-$HOME/.clawdbot}&quot;</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">moltbot channels login         # 重新配对 WhatsApp</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">moltbot gateway restart           # 或：moltbot gateway</span><br></span></code></pre></div></div>
+<p>⚠️ 这会丢失所有会话并需要重新配对 WhatsApp。</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="获取帮助">获取帮助<a href="#获取帮助" class="hash-link" aria-label="获取帮助的直接链接" title="获取帮助的直接链接" translate="no">​</a></h2>
+<ol>
+<li class="">首先检查日志：<code>/tmp/moltbot/</code>（默认：<code>moltbot-YYYY-MM-DD.log</code>，或你配置的 <code>logging.file</code>）</li>
+<li class="">搜索 GitHub 上的现有问题</li>
+<li class="">开启新问题，包含：
+<ul>
+<li class="">Moltbot 版本</li>
+<li class="">相关日志片段</li>
+<li class="">重现步骤</li>
+<li class="">你的配置（脱敏密钥！）</li>
+</ul>
+</li>
+</ol>
+<hr>
+<p><em>&quot;你试过关闭再打开吗？&quot;</em> — 每个 IT 人员都说过</p>
+<p>🦞🔧</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="浏览器未启动linux">浏览器未启动（Linux）<a href="#浏览器未启动linux" class="hash-link" aria-label="浏览器未启动（Linux）的直接链接" title="浏览器未启动（Linux）的直接链接" translate="no">​</a></h3>
+<p>如果你看到 <code>&quot;Failed to start Chrome CDP on port 18800&quot;</code>：</p>
+<p><strong>最可能的原因：</strong> Ubuntu 上的 Snap 打包的 Chromium。</p>
+<p><strong>快速修复：</strong> 改为安装 Google Chrome：</p>
+<div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#D6DEEB;--prism-background-color:#001122"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#D6DEEB;background-color:#001122"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#D6DEEB"><span class="token plain">wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">sudo dpkg -i google-chrome-stable_current_amd64.deb</span><br></span></code></pre></div></div>
+<p>然后在配置中设置：</p>
+<div class="language-json codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#D6DEEB;--prism-background-color:#001122"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-json codeBlock_bY9V thin-scrollbar" style="color:#D6DEEB;background-color:#001122"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#D6DEEB"><span class="token punctuation" style="color:#C792EA">{</span><span class="token plain"></span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">  </span><span class="token property" style="color:#F78C6C">&quot;browser&quot;</span><span class="token operator" style="color:#7FDBCA">:</span><span class="token plain"> </span><span class="token punctuation" style="color:#C792EA">{</span><span class="token plain"></span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">    </span><span class="token property" style="color:#F78C6C">&quot;executablePath&quot;</span><span class="token operator" style="color:#7FDBCA">:</span><span class="token plain"> </span><span class="token string" style="color:#ECC48D">&quot;/usr/bin/google-chrome-stable&quot;</span><span class="token plain"></span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">  </span><span class="token punctuation" style="color:#C792EA">}</span><span class="token plain"></span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain"></span><span class="token punctuation" style="color:#C792EA">}</span><br></span></code></pre></div></div>
+<p><strong>完整指南：</strong> 参见 <a class="" href="/moltbot-doc/tools/browser-linux-troubleshooting">browser-linux-troubleshooting</a></p></div></article><nav class="docusaurus-mt-lg pagination-nav" aria-label="文件选项卡"></nav></div></div><div class="col col--3"><div class="tocWrapper_xKoj"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#状态和诊断" class="table-of-contents__link toc-highlight">状态和诊断</a></li><li><a href="#常见问题" class="table-of-contents__link toc-highlight">常见问题</a><ul><li><a href="#找不到提供商-anthropic-的-api-密钥" class="table-of-contents__link toc-highlight">找不到提供商 &quot;anthropic&quot; 的 API 密钥</a></li><li><a href="#oauth-令牌刷新失败anthropic-claude-订阅" class="table-of-contents__link toc-highlight">OAuth 令牌刷新失败（Anthropic Claude 订阅）</a></li><li><a href="#控制-ui-在-http-上失败需要设备身份--连接失败" class="table-of-contents__link toc-highlight">控制 UI 在 HTTP 上失败（&quot;需要设备身份&quot; / &quot;连接失败&quot;）</a></li><li><a href="#ci-密钥扫描失败" class="table-of-contents__link toc-highlight">CI 密钥扫描失败</a></li><li><a href="#服务已安装但没有任何运行" class="table-of-contents__link toc-highlight">服务已安装但没有任何运行</a></li><li><a href="#网关启动被阻止设置-gatewaymodelocal" class="table-of-contents__link toc-highlight">&quot;网关启动被阻止：设置 gateway.mode=local&quot;</a></li><li><a href="#服务环境path--运行时" class="table-of-contents__link toc-highlight">服务环境（PATH + 运行时）</a></li><li><a href="#沙盒中技能缺少-api-密钥" class="table-of-contents__link toc-highlight">沙盒中技能缺少 API 密钥</a></li><li><a href="#服务运行但端口未监听" class="table-of-contents__link toc-highlight">服务运行但端口未监听</a></li><li><a href="#地址已在使用端口-18789" class="table-of-contents__link toc-highlight">地址已在使用（端口 18789）</a></li><li><a href="#检测到额外的工作空间文件夹" class="table-of-contents__link toc-highlight">检测到额外的工作空间文件夹</a></li><li><a href="#主聊天在沙盒工作空间中运行" class="table-of-contents__link toc-highlight">主聊天在沙盒工作空间中运行</a></li><li><a href="#代理被中止" class="table-of-contents__link toc-highlight">&quot;代理被中止&quot;</a></li><li><a href="#代理在回复前失败未知模型anthropicclaude-haiku-3-5" class="table-of-contents__link toc-highlight">&quot;代理在回复前失败：未知模型：anthropic/claude-haiku-3-5&quot;</a></li><li><a href="#消息未触发" class="table-of-contents__link toc-highlight">消息未触发</a></li><li><a href="#配对码未到达" class="table-of-contents__link toc-highlight">配对码未到达</a></li><li><a href="#图像--提及不起作用" class="table-of-contents__link toc-highlight">图像 + 提及不起作用</a></li><li><a href="#会话未恢复" class="table-of-contents__link toc-highlight">会话未恢复</a></li><li><a href="#代理超时" class="table-of-contents__link toc-highlight">代理超时</a></li><li><a href="#whatsapp-断开连接" class="table-of-contents__link toc-highlight">WhatsApp 断开连接</a></li><li><a href="#媒体发送失败" class="table-of-contents__link toc-highlight">媒体发送失败</a></li><li><a href="#高内存使用率" class="table-of-contents__link toc-highlight">高内存使用率</a></li></ul></li><li><a href="#常见故障排除" class="table-of-contents__link toc-highlight">常见故障排除</a><ul><li><a href="#网关无法启动--配置无效" class="table-of-contents__link toc-highlight">&quot;网关无法启动 — 配置无效&quot;</a></li><li><a href="#所有模型都失败了--我应该首先检查什么" class="table-of-contents__link toc-highlight">&quot;所有模型都失败了&quot; — 我应该首先检查什么？</a></li><li><a href="#我在我的个人-whatsapp-号码上运行--为什么自聊很奇怪" class="table-of-contents__link toc-highlight">我在我的个人 WhatsApp 号码上运行 — 为什么自聊很奇怪？</a></li><li><a href="#whatsapp-登出我了我如何重新认证" class="table-of-contents__link toc-highlight">WhatsApp 登出我了。我如何重新认证？</a></li><li><a href="#main-上的构建错误--标准修复路径是什么" class="table-of-contents__link toc-highlight"><code>main</code> 上的构建错误 — 标准修复路径是什么？</a></li><li><a href="#npm-install-失败allow-build-scripts--缺少-tar-或-yargs现在怎么办" class="table-of-contents__link toc-highlight">npm install 失败（allow-build-scripts / 缺少 tar 或 yargs）。现在怎么办？</a></li><li><a href="#如何在-git-安装和-npm-安装之间切换" class="table-of-contents__link toc-highlight">如何在 git 安装和 npm 安装之间切换？</a></li><li><a href="#telegram-块流在工具调用之间不分割文本为什么" class="table-of-contents__link toc-highlight">Telegram 块流在工具调用之间不分割文本。为什么？</a></li><li><a href="#discord-在我的服务器中不回复即使设置了-requiremention-false为什么" class="table-of-contents__link toc-highlight">Discord 在我的服务器中不回复，即使设置了 <code>requireMention: false</code>。为什么？</a></li><li><a href="#云代码助手-api-错误无效工具架构400现在怎么办" class="table-of-contents__link toc-highlight">云代码助手 API 错误：无效工具架构（400）。现在怎么办？</a></li></ul></li><li><a href="#macos-特定问题" class="table-of-contents__link toc-highlight">macOS 特定问题</a><ul><li><a href="#授予权限时应用程序崩溃语音麦克风" class="table-of-contents__link toc-highlight">授予权限时应用程序崩溃（语音/麦克风）</a></li><li><a href="#网关卡在启动中" class="table-of-contents__link toc-highlight">网关卡在&quot;启动中...&quot;</a></li></ul></li><li><a href="#调试模式" class="table-of-contents__link toc-highlight">调试模式</a></li><li><a href="#日志位置" class="table-of-contents__link toc-highlight">日志位置</a></li><li><a href="#健康检查" class="table-of-contents__link toc-highlight">健康检查</a></li><li><a href="#重置一切" class="table-of-contents__link toc-highlight">重置一切</a></li><li><a href="#获取帮助" class="table-of-contents__link toc-highlight">获取帮助</a><ul><li><a href="#浏览器未启动linux" class="table-of-contents__link toc-highlight">浏览器未启动（Linux）</a></li></ul></li></ul></div><div class="tocFooter_Fu2z"><div class="themeGroup_RzWV" role="group" aria-label="Theme"><button class="themeBtn_tGr6" aria-label="Light theme" title="Light"><svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor" aria-hidden="true"><path d="M12 18a6 6 0 1 1 0-12 6 6 0 0 1 0 12zm0-2a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM11 1h2v3h-2V1zm0 19h2v3h-2v-3zM3.515 4.929l1.414-1.414L7.05 5.636 5.636 7.05 3.515 4.93zM16.95 18.364l1.414-1.414 2.121 2.121-1.414 1.414-2.121-2.121zm2.121-14.85l1.414 1.415-2.121 2.121-1.414-1.414 2.121-2.121zM5.636 16.95l1.414 1.414-2.121 2.121-1.414-1.414 2.121-2.121zM23 11v2h-3v-2h3zM4 11v2H1v-2h3z"></path></svg></button><button class="themeBtn_tGr6 themeBtnActive_A6tm" aria-label="Dark theme" title="Dark"><svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor" aria-hidden="true"><path d="M11.38 2.019a7.5 7.5 0 1 0 10.6 10.6C21.83 17.963 17.315 22 12.002 22 6.477 22 2 17.523 2 12c0-5.314 4.038-9.827 9.38-10.28z"></path></svg></button></div></div></div></div></div></div></main></div></div></div><footer class="theme-layout-footer footer footer--dark"><div class="container container-fluid"><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2026 Moltbot Docs.</div></div></div></footer></div>
+</body>
+</html>

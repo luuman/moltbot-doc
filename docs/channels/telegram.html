@@ -1,0 +1,508 @@
+<!doctype html>
+<html lang="zh" dir="ltr" class="docs-wrapper plugin-docs plugin-id-default docs-version-current docs-doc-page docs-doc-id-channels/telegram" data-has-hydrated="false">
+<head>
+<meta charset="UTF-8">
+<meta name="generator" content="Docusaurus v3.9.2">
+<title data-rh="true">Telegram (Bot API) | Moltbot Docs</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:url" content="https://luuman.github.io/moltbot-doc/docs/channels/telegram"><meta data-rh="true" property="og:locale" content="zh"><meta data-rh="true" name="docusaurus_locale" content="zh"><meta data-rh="true" name="docsearch:language" content="zh"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="Telegram (Bot API) | Moltbot Docs"><meta data-rh="true" name="description" content="Status: production-ready for bot DMs + groups via grammY. Long-polling by default; webhook optional."><meta data-rh="true" property="og:description" content="Status: production-ready for bot DMs + groups via grammY. Long-polling by default; webhook optional."><link data-rh="true" rel="icon" href="/moltbot-doc/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://luuman.github.io/moltbot-doc/docs/channels/telegram"><link data-rh="true" rel="alternate" href="https://luuman.github.io/moltbot-doc/docs/channels/telegram" hreflang="zh"><link data-rh="true" rel="alternate" href="https://luuman.github.io/moltbot-doc/docs/channels/telegram" hreflang="x-default"><link rel="alternate" type="application/rss+xml" href="/moltbot-doc/blog/rss.xml" title="Moltbot Docs RSS Feed">
+<link rel="alternate" type="application/atom+xml" href="/moltbot-doc/blog/atom.xml" title="Moltbot Docs Atom Feed"><link rel="stylesheet" href="/moltbot-doc/assets/css/styles.484b4c98.css">
+<script src="/moltbot-doc/assets/js/runtime~main.6cf495cf.js" defer="defer"></script>
+<script src="/moltbot-doc/assets/js/main.f9205183.js" defer="defer"></script>
+</head>
+<body class="navigation-with-keyboard">
+<svg style="display: none;"><defs>
+<symbol id="theme-svg-external-link" viewBox="0 0 24 24"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"/></symbol>
+</defs></svg>
+<script>!function(){var t=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme")}catch(t){}}();document.documentElement.setAttribute("data-theme",t||"dark"),document.documentElement.setAttribute("data-theme-choice",t||"dark")}(),function(){try{const c=new URLSearchParams(window.location.search).entries();for(var[t,e]of c)if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id="__docusaurus"><div role="region" aria-label="跳到主要内容"><a class="skipToContent_fXgn" href="#__docusaurus_skipToContent_fallback">跳到主要内容</a></div><nav class="navbar navbar--fixed-top navbar_MONK" role="navigation" aria-label="Main"><div class="navbarInner_ASTH"><div class="navbarLeft_pUmY"><button aria-label="切换导航栏" aria-expanded="false" class="navbar__toggle clean-btn" type="button"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg></button><a class="brand_SXL9" href="/moltbot-doc/"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="24" height="24" rx="6" fill="var(--ifm-color-primary)"></rect><path d="M7 8.5h10M7 12h7M7 15.5h10" stroke="white" stroke-width="1.8" stroke-linecap="round"></path></svg><span class="brandTitle_XbyU">Moltbot</span></a><div class="dropdown_GrgZ"><button class="dropdownToggle_Nf_z">全部站点<svg class="dropdownArrow_Eka8" viewBox="0 0 12 12" fill="none"><path d="M2 4l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg></button><ul class="dropdownMenu_zsxH"><li><a href="https://luuman.github.io/docs-workspace/docs" class="dropdownMenuItem_VBaP">Workspace</a></li><li><a href="https://luuman.github.io/claude-doc/docs" class="dropdownMenuItem_VBaP">Claude</a></li><li><a href="https://luuman.github.io/electron-doc/docs" class="dropdownMenuItem_VBaP">Electron</a></li><li><a href="https://luuman.github.io/tauri-doc/docs" class="dropdownMenuItem_VBaP">Tauri</a></li><li><a href="https://luuman.github.io/matrx-doc/docs" class="dropdownMenuItem_VBaP">Matrx</a></li><li><a href="https://luuman.github.io/brainboard-doc/docs" class="dropdownMenuItem_VBaP">Brainboard</a></li><li><a href="https://luuman.github.io/synology-doc/docs" class="dropdownMenuItem_VBaP">Synology</a></li><li><a href="https://luuman.github.io/codex-doc/docs" class="dropdownMenuItem_VBaP">Codex</a></li><li><a href="https://luuman.github.io/ai-doc/docs" class="dropdownMenuItem_VBaP">AI</a></li></ul></div></div><div class="navbarCenter_Zdr3"><div class="root_OF3s"><span class="icon_UcOK" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor" width="15" height="15"><path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"></path></svg></span><div class="slot__FGx"><div class="navbar__search searchBarContainer_NW3z" dir="ltr"><input placeholder="搜索" aria-label="Search" class="navbar__search-input searchInput_YFbd" value=""><div class="loadingRing_RJI3 searchBarLoadingRing_YnHq"><div></div><div></div><div></div><div></div></div></div></div></div></div><div class="navbarRight_q16u"><a class="navLink_RnnM" href="/moltbot-doc/docs">Docs</a><a class="navLink_RnnM" href="/moltbot-doc/blog">Blog</a><button class="themeToggle_zD_x" aria-label="Switch to light theme" title="Light"><svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M12 18a6 6 0 1 1 0-12 6 6 0 0 1 0 12zm0-2a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM11 1h2v3h-2V1zm0 19h2v3h-2v-3zM3.515 4.929l1.414-1.414L7.05 5.636 5.636 7.05 3.515 4.93zM16.95 18.364l1.414-1.414 2.121 2.121-1.414 1.414-2.121-2.121zm2.121-14.85l1.414 1.415-2.121 2.121-1.414-1.414 2.121-2.121zM5.636 16.95l1.414 1.414-2.121 2.121-1.414-1.414 2.121-2.121zM23 11v2h-3v-2h3zM4 11v2H1v-2h3z"></path></svg></button></div></div></nav><div id="__docusaurus_skipToContent_fallback" class="theme-layout-main main-wrapper mainWrapper_z2l0"><div class="docsWrapper_hBAB"><button aria-label="回到顶部" class="clean-btn theme-back-to-top-button backToTopButton_sjWU" type="button"></button><div class="docRoot_UBD9"><main class="docMainContainer_TBSr docMainContainerEnhanced_lQrH"><div class="container padding-top--md padding-bottom--lg"><div class="row"><div class="col docItemCol_VOVn"><div class="docItemContainer_Djhp"><article><div class="tocCollapsible_ETCw theme-doc-toc-mobile tocMobile_ITEo"><button type="button" class="clean-btn tocCollapsibleButton_TO0P">本页总览</button></div><div class="theme-doc-markdown markdown"><header><h1>Telegram (Bot API)</h1></header>
+<p>Status: production-ready for bot DMs + groups via grammY. Long-polling by default; webhook optional.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="quick-setup-beginner">Quick setup (beginner)<a href="#quick-setup-beginner" class="hash-link" aria-label="Quick setup (beginner)的直接链接" title="Quick setup (beginner)的直接链接" translate="no">​</a></h2>
+<ol>
+<li class="">Create a bot with <strong>@BotFather</strong> and copy the token.</li>
+<li class="">Set the token:
+<ul>
+<li class="">Env: <code>TELEGRAM_BOT_TOKEN=...</code></li>
+<li class="">Or config: <code>channels.telegram.botToken: &quot;...&quot;</code>.</li>
+<li class="">If both are set, config takes precedence (env fallback is default-account only).</li>
+</ul>
+</li>
+<li class="">Start the gateway.</li>
+<li class="">DM access is pairing by default; approve the pairing code on first contact.</li>
+</ol>
+<p>Minimal config:</p>
+<div class="language-json5 codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#D6DEEB;--prism-background-color:#001122"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-json5 codeBlock_bY9V thin-scrollbar" style="color:#D6DEEB;background-color:#001122"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#D6DEEB"><span class="token plain">{</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">  channels: {</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">    telegram: {</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">      enabled: true,</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">      botToken: &quot;123:abc&quot;,</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">      dmPolicy: &quot;pairing&quot;</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">    }</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">  }</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">}</span><br></span></code></pre></div></div>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="what-it-is">What it is<a href="#what-it-is" class="hash-link" aria-label="What it is的直接链接" title="What it is的直接链接" translate="no">​</a></h2>
+<ul>
+<li class="">A Telegram Bot API channel owned by the Gateway.</li>
+<li class="">Deterministic routing: replies go back to Telegram; the model never chooses channels.</li>
+<li class="">DMs share the agent&#x27;s main session; groups stay isolated (<code>agent:&lt;agentId&gt;:telegram:group:&lt;chatId&gt;</code>).</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="setup-fast-path">Setup (fast path)<a href="#setup-fast-path" class="hash-link" aria-label="Setup (fast path)的直接链接" title="Setup (fast path)的直接链接" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="1-create-a-bot-token-botfather">1) Create a bot token (BotFather)<a href="#1-create-a-bot-token-botfather" class="hash-link" aria-label="1) Create a bot token (BotFather)的直接链接" title="1) Create a bot token (BotFather)的直接链接" translate="no">​</a></h3>
+<ol>
+<li class="">Open Telegram and chat with <strong>@BotFather</strong>.</li>
+<li class="">Run <code>/newbot</code>, then follow the prompts (name + username ending in <code>bot</code>).</li>
+<li class="">Copy the token and store it safely.</li>
+</ol>
+<p>Optional BotFather settings:</p>
+<ul>
+<li class=""><code>/setjoingroups</code> — allow/deny adding the bot to groups.</li>
+<li class=""><code>/setprivacy</code> — control whether the bot sees all group messages.</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="2-configure-the-token-env-or-config">2) Configure the token (env or config)<a href="#2-configure-the-token-env-or-config" class="hash-link" aria-label="2) Configure the token (env or config)的直接链接" title="2) Configure the token (env or config)的直接链接" translate="no">​</a></h3>
+<p>Example:</p>
+<div class="language-json5 codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#D6DEEB;--prism-background-color:#001122"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-json5 codeBlock_bY9V thin-scrollbar" style="color:#D6DEEB;background-color:#001122"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#D6DEEB"><span class="token plain">{</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">  channels: {</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">    telegram: {</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">      enabled: true,</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">      botToken: &quot;123:abc&quot;,</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">      dmPolicy: &quot;pairing&quot;,</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">      groups: { &quot;*&quot;: { requireMention: true } }</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">    }</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">  }</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">}</span><br></span></code></pre></div></div>
+<p>Env option: <code>TELEGRAM_BOT_TOKEN=...</code> (works for the default account).
+If both env and config are set, config takes precedence.</p>
+<p>Multi-account support: use <code>channels.telegram.accounts</code> with per-account tokens and optional <code>name</code>. See <a class="" href="/moltbot-doc/gateway/configuration#telegramaccounts--discordaccounts--slackaccounts--signalaccounts--imessageaccounts"><code>gateway/configuration</code></a> for the shared pattern.</p>
+<ol start="3">
+<li class="">Start the gateway. Telegram starts when a token is resolved (config first, env fallback).</li>
+<li class="">DM access defaults to pairing. Approve the code when the bot is first contacted.</li>
+<li class="">For groups: add the bot, decide privacy/admin behavior (below), then set <code>channels.telegram.groups</code> to control mention gating + allowlists.</li>
+</ol>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="token--privacy--permissions-telegram-side">Token + privacy + permissions (Telegram side)<a href="#token--privacy--permissions-telegram-side" class="hash-link" aria-label="Token + privacy + permissions (Telegram side)的直接链接" title="Token + privacy + permissions (Telegram side)的直接链接" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="token-creation-botfather">Token creation (BotFather)<a href="#token-creation-botfather" class="hash-link" aria-label="Token creation (BotFather)的直接链接" title="Token creation (BotFather)的直接链接" translate="no">​</a></h3>
+<ul>
+<li class=""><code>/newbot</code> creates the bot and returns the token (keep it secret).</li>
+<li class="">If a token leaks, revoke/regenerate it via @BotFather and update your config.</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="group-message-visibility-privacy-mode">Group message visibility (Privacy Mode)<a href="#group-message-visibility-privacy-mode" class="hash-link" aria-label="Group message visibility (Privacy Mode)的直接链接" title="Group message visibility (Privacy Mode)的直接链接" translate="no">​</a></h3>
+<p>Telegram bots default to <strong>Privacy Mode</strong>, which limits which group messages they receive.
+If your bot must see <em>all</em> group messages, you have two options:</p>
+<ul>
+<li class="">Disable privacy mode with <code>/setprivacy</code> <strong>or</strong></li>
+<li class="">Add the bot as a group <strong>admin</strong> (admin bots receive all messages).</li>
+</ul>
+<p><strong>Note:</strong> When you toggle privacy mode, Telegram requires removing + re‑adding the bot
+to each group for the change to take effect.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="group-permissions-admin-rights">Group permissions (admin rights)<a href="#group-permissions-admin-rights" class="hash-link" aria-label="Group permissions (admin rights)的直接链接" title="Group permissions (admin rights)的直接链接" translate="no">​</a></h3>
+<p>Admin status is set inside the group (Telegram UI). Admin bots always receive all
+group messages, so use admin if you need full visibility.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="how-it-works-behavior">How it works (behavior)<a href="#how-it-works-behavior" class="hash-link" aria-label="How it works (behavior)的直接链接" title="How it works (behavior)的直接链接" translate="no">​</a></h2>
+<ul>
+<li class="">Inbound messages are normalized into the shared channel envelope with reply context and media placeholders.</li>
+<li class="">Group replies require a mention by default (native @mention or <code>agents.list[].groupChat.mentionPatterns</code> / <code>messages.groupChat.mentionPatterns</code>).</li>
+<li class="">Multi-agent override: set per-agent patterns on <code>agents.list[].groupChat.mentionPatterns</code>.</li>
+<li class="">Replies always route back to the same Telegram chat.</li>
+<li class="">Long-polling uses grammY runner with per-chat sequencing; overall concurrency is capped by <code>agents.defaults.maxConcurrent</code>.</li>
+<li class="">Telegram Bot API does not support read receipts; there is no <code>sendReadReceipts</code> option.</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="formatting-telegram-html">Formatting (Telegram HTML)<a href="#formatting-telegram-html" class="hash-link" aria-label="Formatting (Telegram HTML)的直接链接" title="Formatting (Telegram HTML)的直接链接" translate="no">​</a></h2>
+<ul>
+<li class="">Outbound Telegram text uses <code>parse_mode: &quot;HTML&quot;</code> (Telegram’s supported tag subset).</li>
+<li class="">Markdown-ish input is rendered into <strong>Telegram-safe HTML</strong> (bold/italic/strike/code/links); block elements are flattened to text with newlines/bullets.</li>
+<li class="">Raw HTML from models is escaped to avoid Telegram parse errors.</li>
+<li class="">If Telegram rejects the HTML payload, Moltbot retries the same message as plain text.</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="commands-native--custom">Commands (native + custom)<a href="#commands-native--custom" class="hash-link" aria-label="Commands (native + custom)的直接链接" title="Commands (native + custom)的直接链接" translate="no">​</a></h2>
+<p>Moltbot registers native commands (like <code>/status</code>, <code>/reset</code>, <code>/model</code>) with Telegram’s bot menu on startup.
+You can add custom commands to the menu via config:</p>
+<div class="language-json5 codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#D6DEEB;--prism-background-color:#001122"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-json5 codeBlock_bY9V thin-scrollbar" style="color:#D6DEEB;background-color:#001122"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#D6DEEB"><span class="token plain">{</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">  channels: {</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">    telegram: {</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">      customCommands: [</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">        { command: &quot;backup&quot;, description: &quot;Git backup&quot; },</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">        { command: &quot;generate&quot;, description: &quot;Create an image&quot; }</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">      ]</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">    }</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">  }</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">}</span><br></span></code></pre></div></div>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="troubleshooting">Troubleshooting<a href="#troubleshooting" class="hash-link" aria-label="Troubleshooting的直接链接" title="Troubleshooting的直接链接" translate="no">​</a></h2>
+<ul>
+<li class=""><code>setMyCommands failed</code> in logs usually means outbound HTTPS/DNS is blocked to <code>api.telegram.org</code>.</li>
+<li class="">If you see <code>sendMessage</code> or <code>sendChatAction</code> failures, check IPv6 routing and DNS.</li>
+</ul>
+<p>More help: <a class="" href="/moltbot-doc/channels/troubleshooting">Channel troubleshooting</a>.</p>
+<p>Notes:</p>
+<ul>
+<li class="">Custom commands are <strong>menu entries only</strong>; Moltbot does not implement them unless you handle them elsewhere.</li>
+<li class="">Command names are normalized (leading <code>/</code> stripped, lowercased) and must match <code>a-z</code>, <code>0-9</code>, <code>_</code> (1–32 chars).</li>
+<li class="">Custom commands <strong>cannot override native commands</strong>. Conflicts are ignored and logged.</li>
+<li class="">If <code>commands.native</code> is disabled, only custom commands are registered (or cleared if none).</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="limits">Limits<a href="#limits" class="hash-link" aria-label="Limits的直接链接" title="Limits的直接链接" translate="no">​</a></h2>
+<ul>
+<li class="">Outbound text is chunked to <code>channels.telegram.textChunkLimit</code> (default 4000).</li>
+<li class="">Optional newline chunking: set <code>channels.telegram.chunkMode=&quot;newline&quot;</code> to split on blank lines (paragraph boundaries) before length chunking.</li>
+<li class="">Media downloads/uploads are capped by <code>channels.telegram.mediaMaxMb</code> (default 5).</li>
+<li class="">Telegram Bot API requests time out after <code>channels.telegram.timeoutSeconds</code> (default 500 via grammY). Set lower to avoid long hangs.</li>
+<li class="">Group history context uses <code>channels.telegram.historyLimit</code> (or <code>channels.telegram.accounts.*.historyLimit</code>), falling back to <code>messages.groupChat.historyLimit</code>. Set <code>0</code> to disable (default 50).</li>
+<li class="">DM history can be limited with <code>channels.telegram.dmHistoryLimit</code> (user turns). Per-user overrides: <code>channels.telegram.dms[&quot;&lt;user_id&gt;&quot;].historyLimit</code>.</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="group-activation-modes">Group activation modes<a href="#group-activation-modes" class="hash-link" aria-label="Group activation modes的直接链接" title="Group activation modes的直接链接" translate="no">​</a></h2>
+<p>By default, the bot only responds to mentions in groups (<code>@botname</code> or patterns in <code>agents.list[].groupChat.mentionPatterns</code>). To change this behavior:</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="via-config-recommended">Via config (recommended)<a href="#via-config-recommended" class="hash-link" aria-label="Via config (recommended)的直接链接" title="Via config (recommended)的直接链接" translate="no">​</a></h3>
+<div class="language-json5 codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#D6DEEB;--prism-background-color:#001122"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-json5 codeBlock_bY9V thin-scrollbar" style="color:#D6DEEB;background-color:#001122"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#D6DEEB"><span class="token plain">{</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">  channels: {</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">    telegram: {</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">      groups: {</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">        &quot;-1001234567890&quot;: { requireMention: false }  // always respond in this group</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">      }</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">    }</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">  }</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">}</span><br></span></code></pre></div></div>
+<p><strong>Important:</strong> Setting <code>channels.telegram.groups</code> creates an <strong>allowlist</strong> - only listed groups (or <code>&quot;*&quot;</code>) will be accepted.
+Forum topics inherit their parent group config (allowFrom, requireMention, skills, prompts) unless you add per-topic overrides under <code>channels.telegram.groups.&lt;groupId&gt;.topics.&lt;topicId&gt;</code>.</p>
+<p>To allow all groups with always-respond:</p>
+<div class="language-json5 codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#D6DEEB;--prism-background-color:#001122"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-json5 codeBlock_bY9V thin-scrollbar" style="color:#D6DEEB;background-color:#001122"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#D6DEEB"><span class="token plain">{</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">  channels: {</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">    telegram: {</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">      groups: {</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">        &quot;*&quot;: { requireMention: false }  // all groups, always respond</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">      }</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">    }</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">  }</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">}</span><br></span></code></pre></div></div>
+<p>To keep mention-only for all groups (default behavior):</p>
+<div class="language-json5 codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#D6DEEB;--prism-background-color:#001122"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-json5 codeBlock_bY9V thin-scrollbar" style="color:#D6DEEB;background-color:#001122"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#D6DEEB"><span class="token plain">{</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">  channels: {</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">    telegram: {</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">      groups: {</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">        &quot;*&quot;: { requireMention: true }  // or omit groups entirely</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">      }</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">    }</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">  }</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">}</span><br></span></code></pre></div></div>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="via-command-session-level">Via command (session-level)<a href="#via-command-session-level" class="hash-link" aria-label="Via command (session-level)的直接链接" title="Via command (session-level)的直接链接" translate="no">​</a></h3>
+<p>Send in the group:</p>
+<ul>
+<li class=""><code>/activation always</code> - respond to all messages</li>
+<li class=""><code>/activation mention</code> - require mentions (default)</li>
+</ul>
+<p><strong>Note:</strong> Commands update session state only. For persistent behavior across restarts, use config.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="getting-the-group-chat-id">Getting the group chat ID<a href="#getting-the-group-chat-id" class="hash-link" aria-label="Getting the group chat ID的直接链接" title="Getting the group chat ID的直接链接" translate="no">​</a></h3>
+<p>Forward any message from the group to <code>@userinfobot</code> or <code>@getidsbot</code> on Telegram to see the chat ID (negative number like <code>-1001234567890</code>).</p>
+<p><strong>Tip:</strong> For your own user ID, DM the bot and it will reply with your user ID (pairing message), or use <code>/whoami</code> once commands are enabled.</p>
+<p><strong>Privacy note:</strong> <code>@userinfobot</code> is a third-party bot. If you prefer, add the bot to the group, send a message, and use <code>moltbot logs --follow</code> to read <code>chat.id</code>, or use the Bot API <code>getUpdates</code>.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="config-writes">Config writes<a href="#config-writes" class="hash-link" aria-label="Config writes的直接链接" title="Config writes的直接链接" translate="no">​</a></h2>
+<p>By default, Telegram is allowed to write config updates triggered by channel events or <code>/config set|unset</code>.</p>
+<p>This happens when:</p>
+<ul>
+<li class="">A group is upgraded to a supergroup and Telegram emits <code>migrate_to_chat_id</code> (chat ID changes). Moltbot can migrate <code>channels.telegram.groups</code> automatically.</li>
+<li class="">You run <code>/config set</code> or <code>/config unset</code> in a Telegram chat (requires <code>commands.config: true</code>).</li>
+</ul>
+<p>Disable with:</p>
+<div class="language-json5 codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#D6DEEB;--prism-background-color:#001122"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-json5 codeBlock_bY9V thin-scrollbar" style="color:#D6DEEB;background-color:#001122"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#D6DEEB"><span class="token plain">{</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">  channels: { telegram: { configWrites: false } }</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">}</span><br></span></code></pre></div></div>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="topics-forum-supergroups">Topics (forum supergroups)<a href="#topics-forum-supergroups" class="hash-link" aria-label="Topics (forum supergroups)的直接链接" title="Topics (forum supergroups)的直接链接" translate="no">​</a></h2>
+<p>Telegram forum topics include a <code>message_thread_id</code> per message. Moltbot:</p>
+<ul>
+<li class="">Appends <code>:topic:&lt;threadId&gt;</code> to the Telegram group session key so each topic is isolated.</li>
+<li class="">Sends typing indicators and replies with <code>message_thread_id</code> so responses stay in the topic.</li>
+<li class="">General topic (thread id <code>1</code>) is special: message sends omit <code>message_thread_id</code> (Telegram rejects it), but typing indicators still include it.</li>
+<li class="">Exposes <code>MessageThreadId</code> + <code>IsForum</code> in template context for routing/templating.</li>
+<li class="">Topic-specific configuration is available under <code>channels.telegram.groups.&lt;chatId&gt;.topics.&lt;threadId&gt;</code> (skills, allowlists, auto-reply, system prompts, disable).</li>
+<li class="">Topic configs inherit group settings (requireMention, allowlists, skills, prompts, enabled) unless overridden per topic.</li>
+</ul>
+<p>Private chats can include <code>message_thread_id</code> in some edge cases. Moltbot keeps the DM session key unchanged, but still uses the thread id for replies/draft streaming when it is present.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="inline-buttons">Inline Buttons<a href="#inline-buttons" class="hash-link" aria-label="Inline Buttons的直接链接" title="Inline Buttons的直接链接" translate="no">​</a></h2>
+<p>Telegram supports inline keyboards with callback buttons.</p>
+<div class="language-json5 codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#D6DEEB;--prism-background-color:#001122"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-json5 codeBlock_bY9V thin-scrollbar" style="color:#D6DEEB;background-color:#001122"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#D6DEEB"><span class="token plain">{</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">  &quot;channels&quot;: {</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">    &quot;telegram&quot;: {</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">      &quot;capabilities&quot;: {</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">        &quot;inlineButtons&quot;: &quot;allowlist&quot;</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">      }</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">    }</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">  }</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">}</span><br></span></code></pre></div></div>
+<p>For per-account configuration:</p>
+<div class="language-json5 codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#D6DEEB;--prism-background-color:#001122"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-json5 codeBlock_bY9V thin-scrollbar" style="color:#D6DEEB;background-color:#001122"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#D6DEEB"><span class="token plain">{</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">  &quot;channels&quot;: {</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">    &quot;telegram&quot;: {</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">      &quot;accounts&quot;: {</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">        &quot;main&quot;: {</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">          &quot;capabilities&quot;: {</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">            &quot;inlineButtons&quot;: &quot;allowlist&quot;</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">          }</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">        }</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">      }</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">    }</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">  }</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">}</span><br></span></code></pre></div></div>
+<p>Scopes:</p>
+<ul>
+<li class=""><code>off</code> — inline buttons disabled</li>
+<li class=""><code>dm</code> — only DMs (group targets blocked)</li>
+<li class=""><code>group</code> — only groups (DM targets blocked)</li>
+<li class=""><code>all</code> — DMs + groups</li>
+<li class=""><code>allowlist</code> — DMs + groups, but only senders allowed by <code>allowFrom</code>/<code>groupAllowFrom</code> (same rules as control commands)</li>
+</ul>
+<p>Default: <code>allowlist</code>.
+Legacy: <code>capabilities: [&quot;inlineButtons&quot;]</code> = <code>inlineButtons: &quot;all&quot;</code>.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="sending-buttons">Sending buttons<a href="#sending-buttons" class="hash-link" aria-label="Sending buttons的直接链接" title="Sending buttons的直接链接" translate="no">​</a></h3>
+<p>Use the message tool with the <code>buttons</code> parameter:</p>
+<div class="language-json5 codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#D6DEEB;--prism-background-color:#001122"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-json5 codeBlock_bY9V thin-scrollbar" style="color:#D6DEEB;background-color:#001122"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#D6DEEB"><span class="token plain">{</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">  &quot;action&quot;: &quot;send&quot;,</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">  &quot;channel&quot;: &quot;telegram&quot;,</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">  &quot;to&quot;: &quot;123456789&quot;,</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">  &quot;message&quot;: &quot;Choose an option:&quot;,</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">  &quot;buttons&quot;: [</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">    [</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">      {&quot;text&quot;: &quot;Yes&quot;, &quot;callback_data&quot;: &quot;yes&quot;},</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">      {&quot;text&quot;: &quot;No&quot;, &quot;callback_data&quot;: &quot;no&quot;}</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">    ],</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">    [</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">      {&quot;text&quot;: &quot;Cancel&quot;, &quot;callback_data&quot;: &quot;cancel&quot;}</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">    ]</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">  ]</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">}</span><br></span></code></pre></div></div>
+<p>When a user clicks a button, the callback data is sent back to the agent as a message with the format:
+<code>callback_data: value</code></p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="configuration-options">Configuration options<a href="#configuration-options" class="hash-link" aria-label="Configuration options的直接链接" title="Configuration options的直接链接" translate="no">​</a></h3>
+<p>Telegram capabilities can be configured at two levels (object form shown above; legacy string arrays still supported):</p>
+<ul>
+<li class=""><code>channels.telegram.capabilities</code>: Global default capability config applied to all Telegram accounts unless overridden.</li>
+<li class=""><code>channels.telegram.accounts.&lt;account&gt;.capabilities</code>: Per-account capabilities that override the global defaults for that specific account.</li>
+</ul>
+<p>Use the global setting when all Telegram bots/accounts should behave the same. Use per-account configuration when different bots need different behaviors (for example, one account only handles DMs while another is allowed in groups).</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="access-control-dms--groups">Access control (DMs + groups)<a href="#access-control-dms--groups" class="hash-link" aria-label="Access control (DMs + groups)的直接链接" title="Access control (DMs + groups)的直接链接" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="dm-access">DM access<a href="#dm-access" class="hash-link" aria-label="DM access的直接链接" title="DM access的直接链接" translate="no">​</a></h3>
+<ul>
+<li class="">Default: <code>channels.telegram.dmPolicy = &quot;pairing&quot;</code>. Unknown senders receive a pairing code; messages are ignored until approved (codes expire after 1 hour).</li>
+<li class="">Approve via:
+<ul>
+<li class=""><code>moltbot pairing list telegram</code></li>
+<li class=""><code>moltbot pairing approve telegram &lt;CODE&gt;</code></li>
+</ul>
+</li>
+<li class="">Pairing is the default token exchange used for Telegram DMs. Details: <a class="" href="/moltbot-doc/start/pairing">Pairing</a></li>
+<li class=""><code>channels.telegram.allowFrom</code> accepts numeric user IDs (recommended) or <code>@username</code> entries. It is <strong>not</strong> the bot username; use the human sender’s ID. The wizard accepts <code>@username</code> and resolves it to the numeric ID when possible.</li>
+</ul>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="finding-your-telegram-user-id">Finding your Telegram user ID<a href="#finding-your-telegram-user-id" class="hash-link" aria-label="Finding your Telegram user ID的直接链接" title="Finding your Telegram user ID的直接链接" translate="no">​</a></h4>
+<p>Safer (no third-party bot):</p>
+<ol>
+<li class="">Start the gateway and DM your bot.</li>
+<li class="">Run <code>moltbot logs --follow</code> and look for <code>from.id</code>.</li>
+</ol>
+<p>Alternate (official Bot API):</p>
+<ol>
+<li class="">DM your bot.</li>
+<li class="">Fetch updates with your bot token and read <code>message.from.id</code>:
+<div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#D6DEEB;--prism-background-color:#001122"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#D6DEEB;background-color:#001122"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#D6DEEB"><span class="token plain">curl &quot;https://api.telegram.org/bot&lt;bot_token&gt;/getUpdates&quot;</span><br></span></code></pre></div></div>
+</li>
+</ol>
+<p>Third-party (less private):</p>
+<ul>
+<li class="">DM <code>@userinfobot</code> or <code>@getidsbot</code> and use the returned user id.</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="group-access">Group access<a href="#group-access" class="hash-link" aria-label="Group access的直接链接" title="Group access的直接链接" translate="no">​</a></h3>
+<p>Two independent controls:</p>
+<p><strong>1. Which groups are allowed</strong> (group allowlist via <code>channels.telegram.groups</code>):</p>
+<ul>
+<li class="">No <code>groups</code> config = all groups allowed</li>
+<li class="">With <code>groups</code> config = only listed groups or <code>&quot;*&quot;</code> are allowed</li>
+<li class="">Example: <code>&quot;groups&quot;: { &quot;-1001234567890&quot;: {}, &quot;*&quot;: {} }</code> allows all groups</li>
+</ul>
+<p><strong>2. Which senders are allowed</strong> (sender filtering via <code>channels.telegram.groupPolicy</code>):</p>
+<ul>
+<li class=""><code>&quot;open&quot;</code> = all senders in allowed groups can message</li>
+<li class=""><code>&quot;allowlist&quot;</code> = only senders in <code>channels.telegram.groupAllowFrom</code> can message</li>
+<li class=""><code>&quot;disabled&quot;</code> = no group messages accepted at all
+Default is <code>groupPolicy: &quot;allowlist&quot;</code> (blocked unless you add <code>groupAllowFrom</code>).</li>
+</ul>
+<p>Most users want: <code>groupPolicy: &quot;allowlist&quot;</code> + <code>groupAllowFrom</code> + specific groups listed in <code>channels.telegram.groups</code></p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="long-polling-vs-webhook">Long-polling vs webhook<a href="#long-polling-vs-webhook" class="hash-link" aria-label="Long-polling vs webhook的直接链接" title="Long-polling vs webhook的直接链接" translate="no">​</a></h2>
+<ul>
+<li class="">Default: long-polling (no public URL required).</li>
+<li class="">Webhook mode: set <code>channels.telegram.webhookUrl</code> (optionally <code>channels.telegram.webhookSecret</code> + <code>channels.telegram.webhookPath</code>).
+<ul>
+<li class="">The local listener binds to <code>0.0.0.0:8787</code> and serves <code>POST /telegram-webhook</code> by default.</li>
+<li class="">If your public URL is different, use a reverse proxy and point <code>channels.telegram.webhookUrl</code> at the public endpoint.</li>
+</ul>
+</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="reply-threading">Reply threading<a href="#reply-threading" class="hash-link" aria-label="Reply threading的直接链接" title="Reply threading的直接链接" translate="no">​</a></h2>
+<p>Telegram supports optional threaded replies via tags:</p>
+<ul>
+<li class=""><code>[[reply_to_current]]</code> -- reply to the triggering message.</li>
+<li class=""><code>[[reply_to:&lt;id&gt;]]</code> -- reply to a specific message id.</li>
+</ul>
+<p>Controlled by <code>channels.telegram.replyToMode</code>:</p>
+<ul>
+<li class=""><code>first</code> (default), <code>all</code>, <code>off</code>.</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="audio-messages-voice-vs-file">Audio messages (voice vs file)<a href="#audio-messages-voice-vs-file" class="hash-link" aria-label="Audio messages (voice vs file)的直接链接" title="Audio messages (voice vs file)的直接链接" translate="no">​</a></h2>
+<p>Telegram distinguishes <strong>voice notes</strong> (round bubble) from <strong>audio files</strong> (metadata card).
+Moltbot defaults to audio files for backward compatibility.</p>
+<p>To force a voice note bubble in agent replies, include this tag anywhere in the reply:</p>
+<ul>
+<li class=""><code>[[audio_as_voice]]</code> — send audio as a voice note instead of a file.</li>
+</ul>
+<p>The tag is stripped from the delivered text. Other channels ignore this tag.</p>
+<p>For message tool sends, set <code>asVoice: true</code> with a voice-compatible audio <code>media</code> URL
+(<code>message</code> is optional when media is present):</p>
+<div class="language-json5 codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#D6DEEB;--prism-background-color:#001122"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-json5 codeBlock_bY9V thin-scrollbar" style="color:#D6DEEB;background-color:#001122"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#D6DEEB"><span class="token plain">{</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">  &quot;action&quot;: &quot;send&quot;,</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">  &quot;channel&quot;: &quot;telegram&quot;,</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">  &quot;to&quot;: &quot;123456789&quot;,</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">  &quot;media&quot;: &quot;https://example.com/voice.ogg&quot;,</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">  &quot;asVoice&quot;: true</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">}</span><br></span></code></pre></div></div>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="stickers">Stickers<a href="#stickers" class="hash-link" aria-label="Stickers的直接链接" title="Stickers的直接链接" translate="no">​</a></h2>
+<p>Moltbot supports receiving and sending Telegram stickers with intelligent caching.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="receiving-stickers">Receiving stickers<a href="#receiving-stickers" class="hash-link" aria-label="Receiving stickers的直接链接" title="Receiving stickers的直接链接" translate="no">​</a></h3>
+<p>When a user sends a sticker, Moltbot handles it based on the sticker type:</p>
+<ul>
+<li class=""><strong>Static stickers (WEBP):</strong> Downloaded and processed through vision. The sticker appears as a <code>&lt;media:sticker&gt;</code> placeholder in the message content.</li>
+<li class=""><strong>Animated stickers (TGS):</strong> Skipped (Lottie format not supported for processing).</li>
+<li class=""><strong>Video stickers (WEBM):</strong> Skipped (video format not supported for processing).</li>
+</ul>
+<p>Template context field available when receiving stickers:</p>
+<ul>
+<li class=""><code>Sticker</code> — object with:
+<ul>
+<li class=""><code>emoji</code> — emoji associated with the sticker</li>
+<li class=""><code>setName</code> — name of the sticker set</li>
+<li class=""><code>fileId</code> — Telegram file ID (send the same sticker back)</li>
+<li class=""><code>fileUniqueId</code> — stable ID for cache lookup</li>
+<li class=""><code>cachedDescription</code> — cached vision description when available</li>
+</ul>
+</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="sticker-cache">Sticker cache<a href="#sticker-cache" class="hash-link" aria-label="Sticker cache的直接链接" title="Sticker cache的直接链接" translate="no">​</a></h3>
+<p>Stickers are processed through the AI&#x27;s vision capabilities to generate descriptions. Since the same stickers are often sent repeatedly, Moltbot caches these descriptions to avoid redundant API calls.</p>
+<p><strong>How it works:</strong></p>
+<ol>
+<li class=""><strong>First encounter:</strong> The sticker image is sent to the AI for vision analysis. The AI generates a description (e.g., &quot;A cartoon cat waving enthusiastically&quot;).</li>
+<li class=""><strong>Cache storage:</strong> The description is saved along with the sticker&#x27;s file ID, emoji, and set name.</li>
+<li class=""><strong>Subsequent encounters:</strong> When the same sticker is seen again, the cached description is used directly. The image is not sent to the AI.</li>
+</ol>
+<p><strong>Cache location:</strong> <code>~/.clawdbot/telegram/sticker-cache.json</code></p>
+<p><strong>Cache entry format:</strong></p>
+<div class="language-json codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#D6DEEB;--prism-background-color:#001122"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-json codeBlock_bY9V thin-scrollbar" style="color:#D6DEEB;background-color:#001122"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#D6DEEB"><span class="token punctuation" style="color:#C792EA">{</span><span class="token plain"></span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">  </span><span class="token property" style="color:#F78C6C">&quot;fileId&quot;</span><span class="token operator" style="color:#7FDBCA">:</span><span class="token plain"> </span><span class="token string" style="color:#ECC48D">&quot;CAACAgIAAxkBAAI...&quot;</span><span class="token punctuation" style="color:#C792EA">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">  </span><span class="token property" style="color:#F78C6C">&quot;fileUniqueId&quot;</span><span class="token operator" style="color:#7FDBCA">:</span><span class="token plain"> </span><span class="token string" style="color:#ECC48D">&quot;AgADBAADb6cxG2Y&quot;</span><span class="token punctuation" style="color:#C792EA">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">  </span><span class="token property" style="color:#F78C6C">&quot;emoji&quot;</span><span class="token operator" style="color:#7FDBCA">:</span><span class="token plain"> </span><span class="token string" style="color:#ECC48D">&quot;👋&quot;</span><span class="token punctuation" style="color:#C792EA">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">  </span><span class="token property" style="color:#F78C6C">&quot;setName&quot;</span><span class="token operator" style="color:#7FDBCA">:</span><span class="token plain"> </span><span class="token string" style="color:#ECC48D">&quot;CoolCats&quot;</span><span class="token punctuation" style="color:#C792EA">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">  </span><span class="token property" style="color:#F78C6C">&quot;description&quot;</span><span class="token operator" style="color:#7FDBCA">:</span><span class="token plain"> </span><span class="token string" style="color:#ECC48D">&quot;A cartoon cat waving enthusiastically&quot;</span><span class="token punctuation" style="color:#C792EA">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">  </span><span class="token property" style="color:#F78C6C">&quot;cachedAt&quot;</span><span class="token operator" style="color:#7FDBCA">:</span><span class="token plain"> </span><span class="token string" style="color:#ECC48D">&quot;2026-01-15T10:30:00.000Z&quot;</span><span class="token plain"></span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain"></span><span class="token punctuation" style="color:#C792EA">}</span><br></span></code></pre></div></div>
+<p><strong>Benefits:</strong></p>
+<ul>
+<li class="">Reduces API costs by avoiding repeated vision calls for the same sticker</li>
+<li class="">Faster response times for cached stickers (no vision processing delay)</li>
+<li class="">Enables sticker search functionality based on cached descriptions</li>
+</ul>
+<p>The cache is populated automatically as stickers are received. There is no manual cache management required.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="sending-stickers">Sending stickers<a href="#sending-stickers" class="hash-link" aria-label="Sending stickers的直接链接" title="Sending stickers的直接链接" translate="no">​</a></h3>
+<p>The agent can send and search stickers using the <code>sticker</code> and <code>sticker-search</code> actions. These are disabled by default and must be enabled in config:</p>
+<div class="language-json5 codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#D6DEEB;--prism-background-color:#001122"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-json5 codeBlock_bY9V thin-scrollbar" style="color:#D6DEEB;background-color:#001122"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#D6DEEB"><span class="token plain">{</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">  channels: {</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">    telegram: {</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">      actions: {</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">        sticker: true</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">      }</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">    }</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">  }</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">}</span><br></span></code></pre></div></div>
+<p><strong>Send a sticker:</strong></p>
+<div class="language-json5 codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#D6DEEB;--prism-background-color:#001122"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-json5 codeBlock_bY9V thin-scrollbar" style="color:#D6DEEB;background-color:#001122"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#D6DEEB"><span class="token plain">{</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">  &quot;action&quot;: &quot;sticker&quot;,</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">  &quot;channel&quot;: &quot;telegram&quot;,</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">  &quot;to&quot;: &quot;123456789&quot;,</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">  &quot;fileId&quot;: &quot;CAACAgIAAxkBAAI...&quot;</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">}</span><br></span></code></pre></div></div>
+<p>Parameters:</p>
+<ul>
+<li class=""><code>fileId</code> (required) — the Telegram file ID of the sticker. Obtain this from <code>Sticker.fileId</code> when receiving a sticker, or from a <code>sticker-search</code> result.</li>
+<li class=""><code>replyTo</code> (optional) — message ID to reply to.</li>
+<li class=""><code>threadId</code> (optional) — message thread ID for forum topics.</li>
+</ul>
+<p><strong>Search for stickers:</strong></p>
+<p>The agent can search cached stickers by description, emoji, or set name:</p>
+<div class="language-json5 codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#D6DEEB;--prism-background-color:#001122"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-json5 codeBlock_bY9V thin-scrollbar" style="color:#D6DEEB;background-color:#001122"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#D6DEEB"><span class="token plain">{</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">  &quot;action&quot;: &quot;sticker-search&quot;,</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">  &quot;channel&quot;: &quot;telegram&quot;,</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">  &quot;query&quot;: &quot;cat waving&quot;,</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">  &quot;limit&quot;: 5</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">}</span><br></span></code></pre></div></div>
+<p>Returns matching stickers from the cache:</p>
+<div class="language-json5 codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#D6DEEB;--prism-background-color:#001122"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-json5 codeBlock_bY9V thin-scrollbar" style="color:#D6DEEB;background-color:#001122"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#D6DEEB"><span class="token plain">{</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">  &quot;ok&quot;: true,</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">  &quot;count&quot;: 2,</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">  &quot;stickers&quot;: [</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">    {</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">      &quot;fileId&quot;: &quot;CAACAgIAAxkBAAI...&quot;,</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">      &quot;emoji&quot;: &quot;👋&quot;,</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">      &quot;description&quot;: &quot;A cartoon cat waving enthusiastically&quot;,</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">      &quot;setName&quot;: &quot;CoolCats&quot;</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">    }</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">  ]</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">}</span><br></span></code></pre></div></div>
+<p>The search uses fuzzy matching across description text, emoji characters, and set names.</p>
+<p><strong>Example with threading:</strong></p>
+<div class="language-json5 codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#D6DEEB;--prism-background-color:#001122"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-json5 codeBlock_bY9V thin-scrollbar" style="color:#D6DEEB;background-color:#001122"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#D6DEEB"><span class="token plain">{</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">  &quot;action&quot;: &quot;sticker&quot;,</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">  &quot;channel&quot;: &quot;telegram&quot;,</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">  &quot;to&quot;: &quot;-1001234567890&quot;,</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">  &quot;fileId&quot;: &quot;CAACAgIAAxkBAAI...&quot;,</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">  &quot;replyTo&quot;: 42,</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">  &quot;threadId&quot;: 123</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">}</span><br></span></code></pre></div></div>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="streaming-drafts">Streaming (drafts)<a href="#streaming-drafts" class="hash-link" aria-label="Streaming (drafts)的直接链接" title="Streaming (drafts)的直接链接" translate="no">​</a></h2>
+<p>Telegram can stream <strong>draft bubbles</strong> while the agent is generating a response.
+Moltbot uses Bot API <code>sendMessageDraft</code> (not real messages) and then sends the
+final reply as a normal message.</p>
+<p>Requirements (Telegram Bot API 9.3+):</p>
+<ul>
+<li class=""><strong>Private chats with topics enabled</strong> (forum topic mode for the bot).</li>
+<li class="">Incoming messages must include <code>message_thread_id</code> (private topic thread).</li>
+<li class="">Streaming is ignored for groups/supergroups/channels.</li>
+</ul>
+<p>Config:</p>
+<ul>
+<li class=""><code>channels.telegram.streamMode: &quot;off&quot; | &quot;partial&quot; | &quot;block&quot;</code> (default: <code>partial</code>)
+<ul>
+<li class=""><code>partial</code>: update the draft bubble with the latest streaming text.</li>
+<li class=""><code>block</code>: update the draft bubble in larger blocks (chunked).</li>
+<li class=""><code>off</code>: disable draft streaming.</li>
+</ul>
+</li>
+<li class="">Optional (only for <code>streamMode: &quot;block&quot;</code>):
+<ul>
+<li class=""><code>channels.telegram.draftChunk: { minChars?, maxChars?, breakPreference? }</code>
+<ul>
+<li class="">defaults: <code>minChars: 200</code>, <code>maxChars: 800</code>, <code>breakPreference: &quot;paragraph&quot;</code> (clamped to <code>channels.telegram.textChunkLimit</code>).</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>Note: draft streaming is separate from <strong>block streaming</strong> (channel messages).
+Block streaming is off by default and requires <code>channels.telegram.blockStreaming: true</code>
+if you want early Telegram messages instead of draft updates.</p>
+<p>Reasoning stream (Telegram only):</p>
+<ul>
+<li class=""><code>/reasoning stream</code> streams reasoning into the draft bubble while the reply is
+generating, then sends the final answer without reasoning.</li>
+<li class="">If <code>channels.telegram.streamMode</code> is <code>off</code>, reasoning stream is disabled.
+More context: <a class="" href="/moltbot-doc/concepts/streaming">Streaming + chunking</a>.</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="retry-policy">Retry policy<a href="#retry-policy" class="hash-link" aria-label="Retry policy的直接链接" title="Retry policy的直接链接" translate="no">​</a></h2>
+<p>Outbound Telegram API calls retry on transient network/429 errors with exponential backoff and jitter. Configure via <code>channels.telegram.retry</code>. See <a class="" href="/moltbot-doc/concepts/retry">Retry policy</a>.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="agent-tool-messages--reactions">Agent tool (messages + reactions)<a href="#agent-tool-messages--reactions" class="hash-link" aria-label="Agent tool (messages + reactions)的直接链接" title="Agent tool (messages + reactions)的直接链接" translate="no">​</a></h2>
+<ul>
+<li class="">Tool: <code>telegram</code> with <code>sendMessage</code> action (<code>to</code>, <code>content</code>, optional <code>mediaUrl</code>, <code>replyToMessageId</code>, <code>messageThreadId</code>).</li>
+<li class="">Tool: <code>telegram</code> with <code>react</code> action (<code>chatId</code>, <code>messageId</code>, <code>emoji</code>).</li>
+<li class="">Tool: <code>telegram</code> with <code>deleteMessage</code> action (<code>chatId</code>, <code>messageId</code>).</li>
+<li class="">Reaction removal semantics: see <a class="" href="/moltbot-doc/tools/reactions">/tools/reactions</a>.</li>
+<li class="">Tool gating: <code>channels.telegram.actions.reactions</code>, <code>channels.telegram.actions.sendMessage</code>, <code>channels.telegram.actions.deleteMessage</code> (default: enabled), and <code>channels.telegram.actions.sticker</code> (default: disabled).</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="reaction-notifications">Reaction notifications<a href="#reaction-notifications" class="hash-link" aria-label="Reaction notifications的直接链接" title="Reaction notifications的直接链接" translate="no">​</a></h2>
+<p><strong>How reactions work:</strong>
+Telegram reactions arrive as <strong>separate <code>message_reaction</code> events</strong>, not as properties in message payloads. When a user adds a reaction, Moltbot:</p>
+<ol>
+<li class="">Receives the <code>message_reaction</code> update from Telegram API</li>
+<li class="">Converts it to a <strong>system event</strong> with format: <code>&quot;Telegram reaction added: {emoji} by {user} on msg {id}&quot;</code></li>
+<li class="">Enqueues the system event using the <strong>same session key</strong> as regular messages</li>
+<li class="">When the next message arrives in that conversation, system events are drained and prepended to the agent&#x27;s context</li>
+</ol>
+<p>The agent sees reactions as <strong>system notifications</strong> in the conversation history, not as message metadata.</p>
+<p><strong>Configuration:</strong></p>
+<ul>
+<li class="">
+<p><code>channels.telegram.reactionNotifications</code>: Controls which reactions trigger notifications</p>
+<ul>
+<li class=""><code>&quot;off&quot;</code> — ignore all reactions</li>
+<li class=""><code>&quot;own&quot;</code> — notify when users react to bot messages (best-effort; in-memory) (default)</li>
+<li class=""><code>&quot;all&quot;</code> — notify for all reactions</li>
+</ul>
+</li>
+<li class="">
+<p><code>channels.telegram.reactionLevel</code>: Controls agent&#x27;s reaction capability</p>
+<ul>
+<li class=""><code>&quot;off&quot;</code> — agent cannot react to messages</li>
+<li class=""><code>&quot;ack&quot;</code> — bot sends acknowledgment reactions (👀 while processing) (default)</li>
+<li class=""><code>&quot;minimal&quot;</code> — agent can react sparingly (guideline: 1 per 5-10 exchanges)</li>
+<li class=""><code>&quot;extensive&quot;</code> — agent can react liberally when appropriate</li>
+</ul>
+</li>
+</ul>
+<p><strong>Forum groups:</strong> Reactions in forum groups include <code>message_thread_id</code> and use session keys like <code>agent:main:telegram:group:{chatId}:topic:{threadId}</code>. This ensures reactions and messages in the same topic stay together.</p>
+<p><strong>Example config:</strong></p>
+<div class="language-json5 codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#D6DEEB;--prism-background-color:#001122"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-json5 codeBlock_bY9V thin-scrollbar" style="color:#D6DEEB;background-color:#001122"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#D6DEEB"><span class="token plain">{</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">  channels: {</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">    telegram: {</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">      reactionNotifications: &quot;all&quot;,  // See all reactions</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">      reactionLevel: &quot;minimal&quot;        // Agent can react sparingly</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">    }</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">  }</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">}</span><br></span></code></pre></div></div>
+<p><strong>Requirements:</strong></p>
+<ul>
+<li class="">Telegram bots must explicitly request <code>message_reaction</code> in <code>allowed_updates</code> (configured automatically by Moltbot)</li>
+<li class="">For webhook mode, reactions are included in the webhook <code>allowed_updates</code></li>
+<li class="">For polling mode, reactions are included in the <code>getUpdates</code> <code>allowed_updates</code></li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="delivery-targets-clicron">Delivery targets (CLI/cron)<a href="#delivery-targets-clicron" class="hash-link" aria-label="Delivery targets (CLI/cron)的直接链接" title="Delivery targets (CLI/cron)的直接链接" translate="no">​</a></h2>
+<ul>
+<li class="">Use a chat id (<code>123456789</code>) or a username (<code>@name</code>) as the target.</li>
+<li class="">Example: <code>moltbot message send --channel telegram --target 123456789 --message &quot;hi&quot;</code>.</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="troubleshooting-1">Troubleshooting<a href="#troubleshooting-1" class="hash-link" aria-label="Troubleshooting的直接链接" title="Troubleshooting的直接链接" translate="no">​</a></h2>
+<p><strong>Bot doesn’t respond to non-mention messages in a group:</strong></p>
+<ul>
+<li class="">If you set <code>channels.telegram.groups.*.requireMention=false</code>, Telegram’s Bot API <strong>privacy mode</strong> must be disabled.
+<ul>
+<li class="">BotFather: <code>/setprivacy</code> → <strong>Disable</strong> (then remove + re-add the bot to the group)</li>
+</ul>
+</li>
+<li class=""><code>moltbot channels status</code> shows a warning when config expects unmentioned group messages.</li>
+<li class=""><code>moltbot channels status --probe</code> can additionally check membership for explicit numeric group IDs (it can’t audit wildcard <code>&quot;*&quot;</code> rules).</li>
+<li class="">Quick test: <code>/activation always</code> (session-only; use config for persistence)</li>
+</ul>
+<p><strong>Bot not seeing group messages at all:</strong></p>
+<ul>
+<li class="">If <code>channels.telegram.groups</code> is set, the group must be listed or use <code>&quot;*&quot;</code></li>
+<li class="">Check Privacy Settings in @BotFather → &quot;Group Privacy&quot; should be <strong>OFF</strong></li>
+<li class="">Verify bot is actually a member (not just an admin with no read access)</li>
+<li class="">Check gateway logs: <code>moltbot logs --follow</code> (look for &quot;skipping group message&quot;)</li>
+</ul>
+<p><strong>Bot responds to mentions but not <code>/activation always</code>:</strong></p>
+<ul>
+<li class="">The <code>/activation</code> command updates session state but doesn&#x27;t persist to config</li>
+<li class="">For persistent behavior, add group to <code>channels.telegram.groups</code> with <code>requireMention: false</code></li>
+</ul>
+<p><strong>Commands like <code>/status</code> don&#x27;t work:</strong></p>
+<ul>
+<li class="">Make sure your Telegram user ID is authorized (via pairing or <code>channels.telegram.allowFrom</code>)</li>
+<li class="">Commands require authorization even in groups with <code>groupPolicy: &quot;open&quot;</code></li>
+</ul>
+<p><strong>Long-polling aborts immediately on Node 22+ (often with proxies/custom fetch):</strong></p>
+<ul>
+<li class="">Node 22+ is stricter about <code>AbortSignal</code> instances; foreign signals can abort <code>fetch</code> calls right away.</li>
+<li class="">Upgrade to a Moltbot build that normalizes abort signals, or run the gateway on Node 20 until you can upgrade.</li>
+</ul>
+<p><strong>Bot starts, then silently stops responding (or logs <code>HttpError: Network request ... failed</code>):</strong></p>
+<ul>
+<li class="">Some hosts resolve <code>api.telegram.org</code> to IPv6 first. If your server does not have working IPv6 egress, grammY can get stuck on IPv6-only requests.</li>
+<li class="">Fix by enabling IPv6 egress <strong>or</strong> forcing IPv4 resolution for <code>api.telegram.org</code> (for example, add an <code>/etc/hosts</code> entry using the IPv4 A record, or prefer IPv4 in your OS DNS stack), then restart the gateway.</li>
+<li class="">Quick check: <code>dig +short api.telegram.org A</code> and <code>dig +short api.telegram.org AAAA</code> to confirm what DNS returns.</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="configuration-reference-telegram">Configuration reference (Telegram)<a href="#configuration-reference-telegram" class="hash-link" aria-label="Configuration reference (Telegram)的直接链接" title="Configuration reference (Telegram)的直接链接" translate="no">​</a></h2>
+<p>Full configuration: <a class="" href="/moltbot-doc/gateway/configuration">Configuration</a></p>
+<p>Provider options:</p>
+<ul>
+<li class=""><code>channels.telegram.enabled</code>: enable/disable channel startup.</li>
+<li class=""><code>channels.telegram.botToken</code>: bot token (BotFather).</li>
+<li class=""><code>channels.telegram.tokenFile</code>: read token from file path.</li>
+<li class=""><code>channels.telegram.dmPolicy</code>: <code>pairing | allowlist | open | disabled</code> (default: pairing).</li>
+<li class=""><code>channels.telegram.allowFrom</code>: DM allowlist (ids/usernames). <code>open</code> requires <code>&quot;*&quot;</code>.</li>
+<li class=""><code>channels.telegram.groupPolicy</code>: <code>open | allowlist | disabled</code> (default: allowlist).</li>
+<li class=""><code>channels.telegram.groupAllowFrom</code>: group sender allowlist (ids/usernames).</li>
+<li class=""><code>channels.telegram.groups</code>: per-group defaults + allowlist (use <code>&quot;*&quot;</code> for global defaults).
+<ul>
+<li class=""><code>channels.telegram.groups.&lt;id&gt;.requireMention</code>: mention gating default.</li>
+<li class=""><code>channels.telegram.groups.&lt;id&gt;.skills</code>: skill filter (omit = all skills, empty = none).</li>
+<li class=""><code>channels.telegram.groups.&lt;id&gt;.allowFrom</code>: per-group sender allowlist override.</li>
+<li class=""><code>channels.telegram.groups.&lt;id&gt;.systemPrompt</code>: extra system prompt for the group.</li>
+<li class=""><code>channels.telegram.groups.&lt;id&gt;.enabled</code>: disable the group when <code>false</code>.</li>
+<li class=""><code>channels.telegram.groups.&lt;id&gt;.topics.&lt;threadId&gt;.*</code>: per-topic overrides (same fields as group).</li>
+<li class=""><code>channels.telegram.groups.&lt;id&gt;.topics.&lt;threadId&gt;.requireMention</code>: per-topic mention gating override.</li>
+</ul>
+</li>
+<li class=""><code>channels.telegram.capabilities.inlineButtons</code>: <code>off | dm | group | all | allowlist</code> (default: allowlist).</li>
+<li class=""><code>channels.telegram.accounts.&lt;account&gt;.capabilities.inlineButtons</code>: per-account override.</li>
+<li class=""><code>channels.telegram.replyToMode</code>: <code>off | first | all</code> (default: <code>first</code>).</li>
+<li class=""><code>channels.telegram.textChunkLimit</code>: outbound chunk size (chars).</li>
+<li class=""><code>channels.telegram.chunkMode</code>: <code>length</code> (default) or <code>newline</code> to split on blank lines (paragraph boundaries) before length chunking.</li>
+<li class=""><code>channels.telegram.linkPreview</code>: toggle link previews for outbound messages (default: true).</li>
+<li class=""><code>channels.telegram.streamMode</code>: <code>off | partial | block</code> (draft streaming).</li>
+<li class=""><code>channels.telegram.mediaMaxMb</code>: inbound/outbound media cap (MB).</li>
+<li class=""><code>channels.telegram.retry</code>: retry policy for outbound Telegram API calls (attempts, minDelayMs, maxDelayMs, jitter).</li>
+<li class=""><code>channels.telegram.network.autoSelectFamily</code>: override Node autoSelectFamily (true=enable, false=disable). Defaults to disabled on Node 22 to avoid Happy Eyeballs timeouts.</li>
+<li class=""><code>channels.telegram.proxy</code>: proxy URL for Bot API calls (SOCKS/HTTP).</li>
+<li class=""><code>channels.telegram.webhookUrl</code>: enable webhook mode.</li>
+<li class=""><code>channels.telegram.webhookSecret</code>: webhook secret (optional).</li>
+<li class=""><code>channels.telegram.webhookPath</code>: local webhook path (default <code>/telegram-webhook</code>).</li>
+<li class=""><code>channels.telegram.actions.reactions</code>: gate Telegram tool reactions.</li>
+<li class=""><code>channels.telegram.actions.sendMessage</code>: gate Telegram tool message sends.</li>
+<li class=""><code>channels.telegram.actions.deleteMessage</code>: gate Telegram tool message deletes.</li>
+<li class=""><code>channels.telegram.actions.sticker</code>: gate Telegram sticker actions — send and search (default: false).</li>
+<li class=""><code>channels.telegram.reactionNotifications</code>: <code>off | own | all</code> — control which reactions trigger system events (default: <code>own</code> when not set).</li>
+<li class=""><code>channels.telegram.reactionLevel</code>: <code>off | ack | minimal | extensive</code> — control agent&#x27;s reaction capability (default: <code>minimal</code> when not set).</li>
+</ul>
+<p>Related global options:</p>
+<ul>
+<li class=""><code>agents.list[].groupChat.mentionPatterns</code> (mention gating patterns).</li>
+<li class=""><code>messages.groupChat.mentionPatterns</code> (global fallback).</li>
+<li class=""><code>commands.native</code> (defaults to <code>&quot;auto&quot;</code> → on for Telegram/Discord, off for Slack), <code>commands.text</code>, <code>commands.useAccessGroups</code> (command behavior). Override with <code>channels.telegram.commands.native</code>.</li>
+<li class=""><code>messages.responsePrefix</code>, <code>messages.ackReaction</code>, <code>messages.ackReactionScope</code>, <code>messages.removeAckAfterReply</code>.</li>
+</ul></div></article><nav class="docusaurus-mt-lg pagination-nav" aria-label="文件选项卡"></nav></div></div><div class="col col--3"><div class="tocWrapper_xKoj"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#quick-setup-beginner" class="table-of-contents__link toc-highlight">Quick setup (beginner)</a></li><li><a href="#what-it-is" class="table-of-contents__link toc-highlight">What it is</a></li><li><a href="#setup-fast-path" class="table-of-contents__link toc-highlight">Setup (fast path)</a><ul><li><a href="#1-create-a-bot-token-botfather" class="table-of-contents__link toc-highlight">1) Create a bot token (BotFather)</a></li><li><a href="#2-configure-the-token-env-or-config" class="table-of-contents__link toc-highlight">2) Configure the token (env or config)</a></li></ul></li><li><a href="#token--privacy--permissions-telegram-side" class="table-of-contents__link toc-highlight">Token + privacy + permissions (Telegram side)</a><ul><li><a href="#token-creation-botfather" class="table-of-contents__link toc-highlight">Token creation (BotFather)</a></li><li><a href="#group-message-visibility-privacy-mode" class="table-of-contents__link toc-highlight">Group message visibility (Privacy Mode)</a></li><li><a href="#group-permissions-admin-rights" class="table-of-contents__link toc-highlight">Group permissions (admin rights)</a></li></ul></li><li><a href="#how-it-works-behavior" class="table-of-contents__link toc-highlight">How it works (behavior)</a></li><li><a href="#formatting-telegram-html" class="table-of-contents__link toc-highlight">Formatting (Telegram HTML)</a></li><li><a href="#commands-native--custom" class="table-of-contents__link toc-highlight">Commands (native + custom)</a></li><li><a href="#troubleshooting" class="table-of-contents__link toc-highlight">Troubleshooting</a></li><li><a href="#limits" class="table-of-contents__link toc-highlight">Limits</a></li><li><a href="#group-activation-modes" class="table-of-contents__link toc-highlight">Group activation modes</a><ul><li><a href="#via-config-recommended" class="table-of-contents__link toc-highlight">Via config (recommended)</a></li><li><a href="#via-command-session-level" class="table-of-contents__link toc-highlight">Via command (session-level)</a></li><li><a href="#getting-the-group-chat-id" class="table-of-contents__link toc-highlight">Getting the group chat ID</a></li></ul></li><li><a href="#config-writes" class="table-of-contents__link toc-highlight">Config writes</a></li><li><a href="#topics-forum-supergroups" class="table-of-contents__link toc-highlight">Topics (forum supergroups)</a></li><li><a href="#inline-buttons" class="table-of-contents__link toc-highlight">Inline Buttons</a><ul><li><a href="#sending-buttons" class="table-of-contents__link toc-highlight">Sending buttons</a></li><li><a href="#configuration-options" class="table-of-contents__link toc-highlight">Configuration options</a></li></ul></li><li><a href="#access-control-dms--groups" class="table-of-contents__link toc-highlight">Access control (DMs + groups)</a><ul><li><a href="#dm-access" class="table-of-contents__link toc-highlight">DM access</a></li><li><a href="#group-access" class="table-of-contents__link toc-highlight">Group access</a></li></ul></li><li><a href="#long-polling-vs-webhook" class="table-of-contents__link toc-highlight">Long-polling vs webhook</a></li><li><a href="#reply-threading" class="table-of-contents__link toc-highlight">Reply threading</a></li><li><a href="#audio-messages-voice-vs-file" class="table-of-contents__link toc-highlight">Audio messages (voice vs file)</a></li><li><a href="#stickers" class="table-of-contents__link toc-highlight">Stickers</a><ul><li><a href="#receiving-stickers" class="table-of-contents__link toc-highlight">Receiving stickers</a></li><li><a href="#sticker-cache" class="table-of-contents__link toc-highlight">Sticker cache</a></li><li><a href="#sending-stickers" class="table-of-contents__link toc-highlight">Sending stickers</a></li></ul></li><li><a href="#streaming-drafts" class="table-of-contents__link toc-highlight">Streaming (drafts)</a></li><li><a href="#retry-policy" class="table-of-contents__link toc-highlight">Retry policy</a></li><li><a href="#agent-tool-messages--reactions" class="table-of-contents__link toc-highlight">Agent tool (messages + reactions)</a></li><li><a href="#reaction-notifications" class="table-of-contents__link toc-highlight">Reaction notifications</a></li><li><a href="#delivery-targets-clicron" class="table-of-contents__link toc-highlight">Delivery targets (CLI/cron)</a></li><li><a href="#troubleshooting-1" class="table-of-contents__link toc-highlight">Troubleshooting</a></li><li><a href="#configuration-reference-telegram" class="table-of-contents__link toc-highlight">Configuration reference (Telegram)</a></li></ul></div><div class="tocFooter_Fu2z"><div class="themeGroup_RzWV" role="group" aria-label="Theme"><button class="themeBtn_tGr6" aria-label="Light theme" title="Light"><svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor" aria-hidden="true"><path d="M12 18a6 6 0 1 1 0-12 6 6 0 0 1 0 12zm0-2a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM11 1h2v3h-2V1zm0 19h2v3h-2v-3zM3.515 4.929l1.414-1.414L7.05 5.636 5.636 7.05 3.515 4.93zM16.95 18.364l1.414-1.414 2.121 2.121-1.414 1.414-2.121-2.121zm2.121-14.85l1.414 1.415-2.121 2.121-1.414-1.414 2.121-2.121zM5.636 16.95l1.414 1.414-2.121 2.121-1.414-1.414 2.121-2.121zM23 11v2h-3v-2h3zM4 11v2H1v-2h3z"></path></svg></button><button class="themeBtn_tGr6 themeBtnActive_A6tm" aria-label="Dark theme" title="Dark"><svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor" aria-hidden="true"><path d="M11.38 2.019a7.5 7.5 0 1 0 10.6 10.6C21.83 17.963 17.315 22 12.002 22 6.477 22 2 17.523 2 12c0-5.314 4.038-9.827 9.38-10.28z"></path></svg></button></div></div></div></div></div></div></main></div></div></div><footer class="theme-layout-footer footer footer--dark"><div class="container container-fluid"><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2026 Moltbot Docs.</div></div></div></footer></div>
+</body>
+</html>

@@ -1,0 +1,709 @@
+<!doctype html>
+<html lang="zh" dir="ltr" class="docs-wrapper plugin-docs plugin-id-default docs-version-current docs-doc-page docs-doc-id-channels/msteams" data-has-hydrated="false">
+<head>
+<meta charset="UTF-8">
+<meta name="generator" content="Docusaurus v3.9.2">
+<title data-rh="true">Microsoft Teams（插件） | Moltbot Docs</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:url" content="https://luuman.github.io/moltbot-doc/docs/channels/msteams"><meta data-rh="true" property="og:locale" content="zh"><meta data-rh="true" name="docusaurus_locale" content="zh"><meta data-rh="true" name="docsearch:language" content="zh"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="Microsoft Teams（插件） | Moltbot Docs"><meta data-rh="true" name="description" content="&quot;进入这里的人，放弃一切希望。&quot;"><meta data-rh="true" property="og:description" content="&quot;进入这里的人，放弃一切希望。&quot;"><link data-rh="true" rel="icon" href="/moltbot-doc/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://luuman.github.io/moltbot-doc/docs/channels/msteams"><link data-rh="true" rel="alternate" href="https://luuman.github.io/moltbot-doc/docs/channels/msteams" hreflang="zh"><link data-rh="true" rel="alternate" href="https://luuman.github.io/moltbot-doc/docs/channels/msteams" hreflang="x-default"><link rel="alternate" type="application/rss+xml" href="/moltbot-doc/blog/rss.xml" title="Moltbot Docs RSS Feed">
+<link rel="alternate" type="application/atom+xml" href="/moltbot-doc/blog/atom.xml" title="Moltbot Docs Atom Feed"><link rel="stylesheet" href="/moltbot-doc/assets/css/styles.484b4c98.css">
+<script src="/moltbot-doc/assets/js/runtime~main.6cf495cf.js" defer="defer"></script>
+<script src="/moltbot-doc/assets/js/main.f9205183.js" defer="defer"></script>
+</head>
+<body class="navigation-with-keyboard">
+<svg style="display: none;"><defs>
+<symbol id="theme-svg-external-link" viewBox="0 0 24 24"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"/></symbol>
+</defs></svg>
+<script>!function(){var t=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme")}catch(t){}}();document.documentElement.setAttribute("data-theme",t||"dark"),document.documentElement.setAttribute("data-theme-choice",t||"dark")}(),function(){try{const c=new URLSearchParams(window.location.search).entries();for(var[t,e]of c)if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id="__docusaurus"><div role="region" aria-label="跳到主要内容"><a class="skipToContent_fXgn" href="#__docusaurus_skipToContent_fallback">跳到主要内容</a></div><nav class="navbar navbar--fixed-top navbar_MONK" role="navigation" aria-label="Main"><div class="navbarInner_ASTH"><div class="navbarLeft_pUmY"><button aria-label="切换导航栏" aria-expanded="false" class="navbar__toggle clean-btn" type="button"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg></button><a class="brand_SXL9" href="/moltbot-doc/"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="24" height="24" rx="6" fill="var(--ifm-color-primary)"></rect><path d="M7 8.5h10M7 12h7M7 15.5h10" stroke="white" stroke-width="1.8" stroke-linecap="round"></path></svg><span class="brandTitle_XbyU">Moltbot</span></a><div class="dropdown_GrgZ"><button class="dropdownToggle_Nf_z">全部站点<svg class="dropdownArrow_Eka8" viewBox="0 0 12 12" fill="none"><path d="M2 4l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg></button><ul class="dropdownMenu_zsxH"><li><a href="https://luuman.github.io/docs-workspace/docs" class="dropdownMenuItem_VBaP">Workspace</a></li><li><a href="https://luuman.github.io/claude-doc/docs" class="dropdownMenuItem_VBaP">Claude</a></li><li><a href="https://luuman.github.io/electron-doc/docs" class="dropdownMenuItem_VBaP">Electron</a></li><li><a href="https://luuman.github.io/tauri-doc/docs" class="dropdownMenuItem_VBaP">Tauri</a></li><li><a href="https://luuman.github.io/matrx-doc/docs" class="dropdownMenuItem_VBaP">Matrx</a></li><li><a href="https://luuman.github.io/brainboard-doc/docs" class="dropdownMenuItem_VBaP">Brainboard</a></li><li><a href="https://luuman.github.io/synology-doc/docs" class="dropdownMenuItem_VBaP">Synology</a></li><li><a href="https://luuman.github.io/codex-doc/docs" class="dropdownMenuItem_VBaP">Codex</a></li><li><a href="https://luuman.github.io/ai-doc/docs" class="dropdownMenuItem_VBaP">AI</a></li></ul></div></div><div class="navbarCenter_Zdr3"><div class="root_OF3s"><span class="icon_UcOK" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor" width="15" height="15"><path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"></path></svg></span><div class="slot__FGx"><div class="navbar__search searchBarContainer_NW3z" dir="ltr"><input placeholder="搜索" aria-label="Search" class="navbar__search-input searchInput_YFbd" value=""><div class="loadingRing_RJI3 searchBarLoadingRing_YnHq"><div></div><div></div><div></div><div></div></div></div></div></div></div><div class="navbarRight_q16u"><a class="navLink_RnnM" href="/moltbot-doc/docs">Docs</a><a class="navLink_RnnM" href="/moltbot-doc/blog">Blog</a><button class="themeToggle_zD_x" aria-label="Switch to light theme" title="Light"><svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M12 18a6 6 0 1 1 0-12 6 6 0 0 1 0 12zm0-2a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM11 1h2v3h-2V1zm0 19h2v3h-2v-3zM3.515 4.929l1.414-1.414L7.05 5.636 5.636 7.05 3.515 4.93zM16.95 18.364l1.414-1.414 2.121 2.121-1.414 1.414-2.121-2.121zm2.121-14.85l1.414 1.415-2.121 2.121-1.414-1.414 2.121-2.121zM5.636 16.95l1.414 1.414-2.121 2.121-1.414-1.414 2.121-2.121zM23 11v2h-3v-2h3zM4 11v2H1v-2h3z"></path></svg></button></div></div></nav><div id="__docusaurus_skipToContent_fallback" class="theme-layout-main main-wrapper mainWrapper_z2l0"><div class="docsWrapper_hBAB"><button aria-label="回到顶部" class="clean-btn theme-back-to-top-button backToTopButton_sjWU" type="button"></button><div class="docRoot_UBD9"><main class="docMainContainer_TBSr docMainContainerEnhanced_lQrH"><div class="container padding-top--md padding-bottom--lg"><div class="row"><div class="col docItemCol_VOVn"><div class="docItemContainer_Djhp"><article><div class="tocCollapsible_ETCw theme-doc-toc-mobile tocMobile_ITEo"><button type="button" class="clean-btn tocCollapsibleButton_TO0P">本页总览</button></div><div class="theme-doc-markdown markdown"><header><h1>Microsoft Teams（插件）</h1></header>
+<blockquote>
+<p>&quot;进入这里的人，放弃一切希望。&quot;</p>
+</blockquote>
+<p>更新日期：2026-01-21</p>
+<p>状态：支持文本 + 私信附件；频道/群组文件发送需要 <code>sharePointSiteId</code> + Graph 权限（参见 <a href="#%E5%9C%A8%E7%BE%A4%E7%BB%84%E8%81%8A%E5%A4%A9%E4%B8%AD%E5%8F%91%E9%80%81%E6%96%87%E4%BB%B6" class="">在群组聊天中发送文件</a>）。投票通过自适应卡片发送。</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="需要插件">需要插件<a href="#需要插件" class="hash-link" aria-label="需要插件的直接链接" title="需要插件的直接链接" translate="no">​</a></h2>
+<p>Microsoft Teams 作为插件提供，未与核心安装捆绑。</p>
+<p><strong>重大变更（2026.1.15）：</strong> MS Teams 已移出核心。如果您使用它，必须安装插件。</p>
+<p>解释：使核心安装更轻量，并让 MS Teams 依赖项独立更新。</p>
+<p>通过 CLI（npm 注册表）安装：</p>
+<div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#D6DEEB;--prism-background-color:#001122"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#D6DEEB;background-color:#001122"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#D6DEEB"><span class="token plain">moltbot plugins install @moltbot/msteams</span><br></span></code></pre></div></div>
+<p>本地检出（从 git 仓库运行时）：</p>
+<div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#D6DEEB;--prism-background-color:#001122"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#D6DEEB;background-color:#001122"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#D6DEEB"><span class="token plain">moltbot plugins install ./extensions/msteams</span><br></span></code></pre></div></div>
+<p>如果您在配置/入门过程中选择 Teams 并检测到 git 检出，
+Moltbot 将自动提供本地安装路径。</p>
+<p>详情：<a class="" href="/moltbot-doc/plugin">插件</a></p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="快速设置初学者">快速设置（初学者）<a href="#快速设置初学者" class="hash-link" aria-label="快速设置（初学者）的直接链接" title="快速设置（初学者）的直接链接" translate="no">​</a></h2>
+<ol>
+<li class="">安装 Microsoft Teams 插件。</li>
+<li class="">创建 <strong>Azure 机器人</strong>（应用 ID + 客户端密钥 + 租户 ID）。</li>
+<li class="">使用这些凭证配置 Moltbot。</li>
+<li class="">通过公共 URL 或隧道公开 <code>/api/messages</code>（默认端口 3978）。</li>
+<li class="">安装 Teams 应用包并启动网关。</li>
+</ol>
+<p>最小配置：</p>
+<div class="language-json5 codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#D6DEEB;--prism-background-color:#001122"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-json5 codeBlock_bY9V thin-scrollbar" style="color:#D6DEEB;background-color:#001122"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#D6DEEB"><span class="token plain">{</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">  channels: {</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">    msteams: {</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">      enabled: true,</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">      appId: &quot;&lt;APP_ID&gt;&quot;,</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">      appPassword: &quot;&lt;APP_PASSWORD&gt;&quot;,</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">      tenantId: &quot;&lt;TENANT_ID&gt;&quot;,</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">      webhook: { port: 3978, path: &quot;/api/messages&quot; }</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">    }</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">  }</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">}</span><br></span></code></pre></div></div>
+<p>注意：群组聊天默认被阻止（<code>channels.msteams.groupPolicy: &quot;allowlist&quot;</code>）。要允许群组回复，请设置 <code>channels.msteams.groupAllowFrom</code>（或使用 <code>groupPolicy: &quot;open&quot;</code> 允许任何成员，提及门控）。</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="目标">目标<a href="#目标" class="hash-link" aria-label="目标的直接链接" title="目标的直接链接" translate="no">​</a></h2>
+<ul>
+<li class="">通过 Teams 私信、群组聊天或频道与 Moltbot 交谈。</li>
+<li class="">保持路由确定性：回复始终返回到它们到达的频道。</li>
+<li class="">默认采用安全的频道行为（除非另有配置，否则需要提及）。</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="配置写入">配置写入<a href="#配置写入" class="hash-link" aria-label="配置写入的直接链接" title="配置写入的直接链接" translate="no">​</a></h2>
+<p>默认情况下，Microsoft Teams 允许写入由 <code>/config set|unset</code> 触发的配置更新（需要 <code>commands.config: true</code>）。</p>
+<p>禁用方法：</p>
+<div class="language-json5 codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#D6DEEB;--prism-background-color:#001122"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-json5 codeBlock_bY9V thin-scrollbar" style="color:#D6DEEB;background-color:#001122"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#D6DEEB"><span class="token plain">{</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">  channels: { msteams: { configWrites: false } }</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">}</span><br></span></code></pre></div></div>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="访问控制私信--群组">访问控制（私信 + 群组）<a href="#访问控制私信--群组" class="hash-link" aria-label="访问控制（私信 + 群组）的直接链接" title="访问控制（私信 + 群组）的直接链接" translate="no">​</a></h2>
+<p><strong>私信访问</strong></p>
+<ul>
+<li class="">默认：<code>channels.msteams.dmPolicy = &quot;pairing&quot;</code>。未知发送者在获准之前被忽略。</li>
+<li class=""><code>channels.msteams.allowFrom</code> 接受 AAD 对象 ID、UPN 或显示名称。当凭证允许时，向导通过 Microsoft Graph 将名称解析为 ID。</li>
+</ul>
+<p><strong>群组访问</strong></p>
+<ul>
+<li class="">默认：<code>channels.msteams.groupPolicy = &quot;allowlist&quot;</code>（除非添加 <code>groupAllowFrom</code> 否则被阻止）。使用 <code>channels.defaults.groupPolicy</code> 在未设置时覆盖默认值。</li>
+<li class=""><code>channels.msteams.groupAllowFrom</code> 控制哪些发送者可以在群组聊天/频道中触发（回退到 <code>channels.msteams.allowFrom</code>）。</li>
+<li class="">设置 <code>groupPolicy: &quot;open&quot;</code> 以允许任何成员（仍默认提及门控）。</li>
+<li class="">要允许 <strong>没有频道</strong>，设置 <code>channels.msteams.groupPolicy: &quot;disabled&quot;</code>。</li>
+</ul>
+<p>示例：</p>
+<div class="language-json5 codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#D6DEEB;--prism-background-color:#001122"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-json5 codeBlock_bY9V thin-scrollbar" style="color:#D6DEEB;background-color:#001122"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#D6DEEB"><span class="token plain">{</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">  channels: {</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">    msteams: {</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">      groupPolicy: &quot;allowlist&quot;,</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">      groupAllowFrom: [&quot;user@org.com&quot;]</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">    }</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">  }</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">}</span><br></span></code></pre></div></div>
+<p><strong>Teams + 频道允许列表</strong></p>
+<ul>
+<li class="">通过在 <code>channels.msteams.teams</code> 下列出团队和频道来限定群组/频道回复范围。</li>
+<li class="">键可以是团队 ID 或名称；频道键可以是对话 ID 或名称。</li>
+<li class="">当 <code>groupPolicy=&quot;allowlist&quot;</code> 且存在团队允许列表时，只接受列出的团队/频道（提及门控）。</li>
+<li class="">配置向导接受 <code>Team/Channel</code> 条目并为您存储。</li>
+<li class="">启动时，Moltbot 将团队/频道和用户允许列表名称解析为 ID（当 Graph 权限允许时）
+并记录映射；未解析的条目保持键入的格式。</li>
+</ul>
+<p>示例：</p>
+<div class="language-json5 codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#D6DEEB;--prism-background-color:#001122"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-json5 codeBlock_bY9V thin-scrollbar" style="color:#D6DEEB;background-color:#001122"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#D6DEEB"><span class="token plain">{</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">  channels: {</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">    msteams: {</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">      groupPolicy: &quot;allowlist&quot;,</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">      teams: {</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">        &quot;My Team&quot;: {</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">          channels: {</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">            &quot;General&quot;: { requireMention: true }</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">          }</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">        }</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">      }</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">    }</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">  }</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">}</span><br></span></code></pre></div></div>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="工作原理">工作原理<a href="#工作原理" class="hash-link" aria-label="工作原理的直接链接" title="工作原理的直接链接" translate="no">​</a></h2>
+<ol>
+<li class="">安装 Microsoft Teams 插件。</li>
+<li class="">创建 <strong>Azure 机器人</strong>（应用 ID + 密钥 + 租户 ID）。</li>
+<li class="">构建引用机器人的 <strong>Teams 应用包</strong> 并包含下面的 RSC 权限。</li>
+<li class="">将 Teams 应用上传/安装到团队（或用于私信的个人范围）。</li>
+<li class="">在 <code>~/.clawdbot/moltbot.json</code> 中配置 <code>msteams</code>（或环境变量）并启动网关。</li>
+<li class="">网关默认监听 <code>/api/messages</code> 上的 Bot Framework webhook 流量。</li>
+</ol>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="azure-机器人设置先决条件">Azure 机器人设置（先决条件）<a href="#azure-机器人设置先决条件" class="hash-link" aria-label="Azure 机器人设置（先决条件）的直接链接" title="Azure 机器人设置（先决条件）的直接链接" translate="no">​</a></h2>
+<p>配置 Moltbot 之前，您需要创建一个 Azure 机器人资源。</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="步骤-1创建-azure-机器人">步骤 1：创建 Azure 机器人<a href="#步骤-1创建-azure-机器人" class="hash-link" aria-label="步骤 1：创建 Azure 机器人的直接链接" title="步骤 1：创建 Azure 机器人的直接链接" translate="no">​</a></h3>
+<ol>
+<li class="">
+<p>前往 <a href="https://portal.azure.com/#create/Microsoft.AzureBot" target="_blank" rel="noopener noreferrer" class="">创建 Azure 机器人</a></p>
+</li>
+<li class="">
+<p>填写 <strong>基本</strong> 选项卡：</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>字段</th><th>值</th></tr></thead><tbody><tr><td><strong>机器人句柄</strong></td><td>您的机器人名称，例如 <code>moltbot-msteams</code>（必须唯一）</td></tr><tr><td><strong>订阅</strong></td><td>选择您的 Azure 订阅</td></tr><tr><td><strong>资源组</strong></td><td>创建新的或使用现有的</td></tr><tr><td><strong>定价层</strong></td><td><strong>免费</strong> 用于开发/测试</td></tr><tr><td><strong>应用类型</strong></td><td><strong>单租户</strong>（推荐 - 参见下面的注释）</td></tr><tr><td><strong>创建类型</strong></td><td><strong>创建新的 Microsoft 应用 ID</strong></td></tr></tbody></table>
+</li>
+</ol>
+<blockquote>
+<p><strong>弃用通知：</strong> 新的多租户机器人创建已于 2025-07-31 后弃用。新机器人使用 <strong>单租户</strong>。</p>
+</blockquote>
+<ol start="3">
+<li class="">点击 <strong>审查 + 创建</strong> → <strong>创建</strong>（等待约 1-2 分钟）</li>
+</ol>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="步骤-2获取凭证">步骤 2：获取凭证<a href="#步骤-2获取凭证" class="hash-link" aria-label="步骤 2：获取凭证的直接链接" title="步骤 2：获取凭证的直接链接" translate="no">​</a></h3>
+<ol>
+<li class="">前往您的 Azure 机器人资源 → <strong>配置</strong></li>
+<li class="">复制 <strong>Microsoft 应用 ID</strong> → 这是您的 <code>appId</code></li>
+<li class="">点击 <strong>管理密码</strong> → 前往应用注册</li>
+<li class="">在 <strong>证书和机密</strong> 下 → <strong>新建客户端机密</strong> → 复制 <strong>值</strong> → 这是您的 <code>appPassword</code></li>
+<li class="">前往 <strong>概览</strong> → 复制 <strong>目录（租户）ID</strong> → 这是您的 <code>tenantId</code></li>
+</ol>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="步骤-3配置消息端点">步骤 3：配置消息端点<a href="#步骤-3配置消息端点" class="hash-link" aria-label="步骤 3：配置消息端点的直接链接" title="步骤 3：配置消息端点的直接链接" translate="no">​</a></h3>
+<ol>
+<li class="">在 Azure 机器人 → <strong>配置</strong></li>
+<li class="">设置 <strong>消息端点</strong> 为您的 webhook URL：
+<ul>
+<li class="">生产环境：<code>https://your-domain.com/api/messages</code></li>
+<li class="">本地开发：使用隧道（参见下面的 [本地开发（隧道）](#本地开发（隧道）））</li>
+</ul>
+</li>
+</ol>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="步骤-4启用-teams-频道">步骤 4：启用 Teams 频道<a href="#步骤-4启用-teams-频道" class="hash-link" aria-label="步骤 4：启用 Teams 频道的直接链接" title="步骤 4：启用 Teams 频道的直接链接" translate="no">​</a></h3>
+<ol>
+<li class="">在 Azure 机器人 → <strong>频道</strong></li>
+<li class="">点击 <strong>Microsoft Teams</strong> → 配置 → 保存</li>
+<li class="">接受服务条款</li>
+</ol>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="本地开发隧道">本地开发（隧道）<a href="#本地开发隧道" class="hash-link" aria-label="本地开发（隧道）的直接链接" title="本地开发（隧道）的直接链接" translate="no">​</a></h2>
+<p>Teams 无法访问 <code>localhost</code>。本地开发使用隧道：</p>
+<p><strong>选项 A：ngrok</strong></p>
+<div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#D6DEEB;--prism-background-color:#001122"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#D6DEEB;background-color:#001122"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#D6DEEB"><span class="token plain">ngrok http 3978</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain"># 复制 https URL，例如 https://abc123.ngrok.io</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain"># 将消息端点设置为：https://abc123.ngrok.io/api/messages</span><br></span></code></pre></div></div>
+<p><strong>选项 B：Tailscale Funnel</strong></p>
+<div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#D6DEEB;--prism-background-color:#001122"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#D6DEEB;background-color:#001122"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#D6DEEB"><span class="token plain">tailscale funnel 3978</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain"># 使用您的 Tailscale funnel URL 作为消息端点</span><br></span></code></pre></div></div>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="teams-开发者门户替代方案">Teams 开发者门户（替代方案）<a href="#teams-开发者门户替代方案" class="hash-link" aria-label="Teams 开发者门户（替代方案）的直接链接" title="Teams 开发者门户（替代方案）的直接链接" translate="no">​</a></h2>
+<p>除了手动创建清单 ZIP，您可以使用 <a href="https://dev.teams.microsoft.com/apps" target="_blank" rel="noopener noreferrer" class="">Teams 开发者门户</a>：</p>
+<ol>
+<li class="">点击 <strong>+ 新应用</strong></li>
+<li class="">填写基本信息（名称、描述、开发者信息）</li>
+<li class="">前往 <strong>应用功能</strong> → <strong>机器人</strong></li>
+<li class="">选择 <strong>手动输入机器人 ID</strong> 并粘贴您的 Azure 机器人应用 ID</li>
+<li class="">检查范围：<strong>个人</strong>、<strong>团队</strong>、<strong>群组聊天</strong></li>
+<li class="">点击 <strong>分发</strong> → <strong>下载应用包</strong></li>
+<li class="">在 Teams 中：<strong>应用</strong> → <strong>管理您的应用</strong> → <strong>上传自定义应用</strong> → 选择 ZIP</li>
+</ol>
+<p>这通常比手工编辑 JSON 清单更容易。</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="测试机器人">测试机器人<a href="#测试机器人" class="hash-link" aria-label="测试机器人的直接链接" title="测试机器人的直接链接" translate="no">​</a></h2>
+<p><strong>选项 A：Azure Web Chat（先验证 webhook）</strong></p>
+<ol>
+<li class="">在 Azure 门户 → 您的 Azure 机器人资源 → <strong>在 Web Chat 中测试</strong></li>
+<li class="">发送消息 - 您应该看到回复</li>
+<li class="">这确认您的 webhook 端点在 Teams 设置之前工作正常</li>
+</ol>
+<p><strong>选项 B：Teams（安装应用后）</strong></p>
+<ol>
+<li class="">安装 Teams 应用（侧载或组织目录）</li>
+<li class="">在 Teams 中找到机器人并发送私信</li>
+<li class="">检查网关日志中的传入活动</li>
+</ol>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="设置最小文本版">设置（最小文本版）<a href="#设置最小文本版" class="hash-link" aria-label="设置（最小文本版）的直接链接" title="设置（最小文本版）的直接链接" translate="no">​</a></h2>
+<ol>
+<li class="">
+<p><strong>安装 Microsoft Teams 插件</strong></p>
+<ul>
+<li class="">从 npm：<code>moltbot plugins install @moltbot/msteams</code></li>
+<li class="">从本地检出：<code>moltbot plugins install ./extensions/msteams</code></li>
+</ul>
+</li>
+<li class="">
+<p><strong>机器人注册</strong></p>
+<ul>
+<li class="">创建 Azure 机器人（参见上文）并注意：
+<ul>
+<li class="">应用 ID</li>
+<li class="">客户端密钥（应用密码）</li>
+<li class="">租户 ID（单租户）</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="">
+<p><strong>Teams 应用清单</strong></p>
+<ul>
+<li class="">包含带有 <code>botId = &lt;App ID&gt;</code> 的 <code>bot</code> 条目。</li>
+<li class="">范围：<code>personal</code>、<code>team</code>、<code>groupChat</code>。</li>
+<li class=""><code>supportsFiles: true</code>（个人范围文件处理所需）。</li>
+<li class="">添加 RSC 权限（如下）。</li>
+<li class="">创建图标：<code>outline.png</code>（32x32）和 <code>color.png</code>（192x192）。</li>
+<li class="">将三个文件打包在一起：<code>manifest.json</code>、<code>outline.png</code>、<code>color.png</code>。</li>
+</ul>
+</li>
+<li class="">
+<p><strong>配置 Moltbot</strong></p>
+<div class="language-json codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#D6DEEB;--prism-background-color:#001122"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-json codeBlock_bY9V thin-scrollbar" style="color:#D6DEEB;background-color:#001122"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#D6DEEB"><span class="token punctuation" style="color:#C792EA">{</span><span class="token plain"></span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">  </span><span class="token property" style="color:#F78C6C">&quot;msteams&quot;</span><span class="token operator" style="color:#7FDBCA">:</span><span class="token plain"> </span><span class="token punctuation" style="color:#C792EA">{</span><span class="token plain"></span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">    </span><span class="token property" style="color:#F78C6C">&quot;enabled&quot;</span><span class="token operator" style="color:#7FDBCA">:</span><span class="token plain"> </span><span class="token boolean" style="color:#F78C6C">true</span><span class="token punctuation" style="color:#C792EA">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">    </span><span class="token property" style="color:#F78C6C">&quot;appId&quot;</span><span class="token operator" style="color:#7FDBCA">:</span><span class="token plain"> </span><span class="token string" style="color:#ECC48D">&quot;&lt;APP_ID&gt;&quot;</span><span class="token punctuation" style="color:#C792EA">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">    </span><span class="token property" style="color:#F78C6C">&quot;appPassword&quot;</span><span class="token operator" style="color:#7FDBCA">:</span><span class="token plain"> </span><span class="token string" style="color:#ECC48D">&quot;&lt;APP_PASSWORD&gt;&quot;</span><span class="token punctuation" style="color:#C792EA">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">    </span><span class="token property" style="color:#F78C6C">&quot;tenantId&quot;</span><span class="token operator" style="color:#7FDBCA">:</span><span class="token plain"> </span><span class="token string" style="color:#ECC48D">&quot;&lt;TENANT_ID&gt;&quot;</span><span class="token punctuation" style="color:#C792EA">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">    </span><span class="token property" style="color:#F78C6C">&quot;webhook&quot;</span><span class="token operator" style="color:#7FDBCA">:</span><span class="token plain"> </span><span class="token punctuation" style="color:#C792EA">{</span><span class="token plain"> </span><span class="token property" style="color:#F78C6C">&quot;port&quot;</span><span class="token operator" style="color:#7FDBCA">:</span><span class="token plain"> </span><span class="token number" style="color:#F78C6C">3978</span><span class="token punctuation" style="color:#C792EA">,</span><span class="token plain"> </span><span class="token property" style="color:#F78C6C">&quot;path&quot;</span><span class="token operator" style="color:#7FDBCA">:</span><span class="token plain"> </span><span class="token string" style="color:#ECC48D">&quot;/api/messages&quot;</span><span class="token plain"> </span><span class="token punctuation" style="color:#C792EA">}</span><span class="token plain"></span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">  </span><span class="token punctuation" style="color:#C792EA">}</span><span class="token plain"></span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain"></span><span class="token punctuation" style="color:#C792EA">}</span><br></span></code></pre></div></div>
+<p>您也可以使用环境变量代替配置键：</p>
+<ul>
+<li class=""><code>MSTEAMS_APP_ID</code></li>
+<li class=""><code>MSTEAMS_APP_PASSWORD</code></li>
+<li class=""><code>MSTEAMS_TENANT_ID</code></li>
+</ul>
+</li>
+<li class="">
+<p><strong>机器人端点</strong></p>
+<ul>
+<li class="">将 Azure 机器人消息端点设置为：
+<ul>
+<li class=""><code>https://&lt;host&gt;:3978/api/messages</code>（或您选择的路径/端口）。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="">
+<p><strong>运行网关</strong></p>
+<ul>
+<li class="">安装插件且存在带有凭证的 <code>msteams</code> 配置时，Teams 通道自动启动。</li>
+</ul>
+</li>
+</ol>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="历史上下文">历史上下文<a href="#历史上下文" class="hash-link" aria-label="历史上下文的直接链接" title="历史上下文的直接链接" translate="no">​</a></h2>
+<ul>
+<li class=""><code>channels.msteams.historyLimit</code> 控制有多少最近的频道/群组消息被包装到提示中。</li>
+<li class="">回退到 <code>messages.groupChat.historyLimit</code>。设置 <code>0</code> 以禁用（默认 50）。</li>
+<li class="">私信历史可以用 <code>channels.msteams.dmHistoryLimit</code>（用户回合）限制。按用户覆盖：<code>channels.msteams.dms[&quot;&lt;user_id&gt;&quot;].historyLimit</code>。</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="当前-teams-rsc-权限清单">当前 Teams RSC 权限（清单）<a href="#当前-teams-rsc-权限清单" class="hash-link" aria-label="当前 Teams RSC 权限（清单）的直接链接" title="当前 Teams RSC 权限（清单）的直接链接" translate="no">​</a></h2>
+<p>这些是我们 Teams 应用清单中的 <strong>现有资源特定权限</strong>。它们只在安装应用的团队/聊天内部生效。</p>
+<p><strong>对于频道（团队范围）：</strong></p>
+<ul>
+<li class=""><code>ChannelMessage.Read.Group</code>（应用）- 无需 @提及即可接收所有频道消息</li>
+<li class=""><code>ChannelMessage.Send.Group</code>（应用）</li>
+<li class=""><code>Member.Read.Group</code>（应用）</li>
+<li class=""><code>Owner.Read.Group</code>（应用）</li>
+<li class=""><code>ChannelSettings.Read.Group</code>（应用）</li>
+<li class=""><code>TeamMember.Read.Group</code>（应用）</li>
+<li class=""><code>TeamSettings.Read.Group</code>（应用）</li>
+</ul>
+<p><strong>对于群组聊天：</strong></p>
+<ul>
+<li class=""><code>ChatMessage.Read.Chat</code>（应用）- 无需 @提及即可接收所有群组聊天消息</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="示例-teams-清单删节版">示例 Teams 清单（删节版）<a href="#示例-teams-清单删节版" class="hash-link" aria-label="示例 Teams 清单（删节版）的直接链接" title="示例 Teams 清单（删节版）的直接链接" translate="no">​</a></h2>
+<p>具有必需字段的最小有效示例。替换 ID 和 URL。</p>
+<div class="language-json codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#D6DEEB;--prism-background-color:#001122"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-json codeBlock_bY9V thin-scrollbar" style="color:#D6DEEB;background-color:#001122"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#D6DEEB"><span class="token punctuation" style="color:#C792EA">{</span><span class="token plain"></span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">  </span><span class="token property" style="color:#F78C6C">&quot;$schema&quot;</span><span class="token operator" style="color:#7FDBCA">:</span><span class="token plain"> </span><span class="token string" style="color:#ECC48D">&quot;https://developer.microsoft.com/en-us/json-schemas/teams/v1.23/MicrosoftTeams.schema.json&quot;</span><span class="token punctuation" style="color:#C792EA">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">  </span><span class="token property" style="color:#F78C6C">&quot;manifestVersion&quot;</span><span class="token operator" style="color:#7FDBCA">:</span><span class="token plain"> </span><span class="token string" style="color:#ECC48D">&quot;1.23&quot;</span><span class="token punctuation" style="color:#C792EA">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">  </span><span class="token property" style="color:#F78C6C">&quot;version&quot;</span><span class="token operator" style="color:#7FDBCA">:</span><span class="token plain"> </span><span class="token string" style="color:#ECC48D">&quot;1.0.0&quot;</span><span class="token punctuation" style="color:#C792EA">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">  </span><span class="token property" style="color:#F78C6C">&quot;id&quot;</span><span class="token operator" style="color:#7FDBCA">:</span><span class="token plain"> </span><span class="token string" style="color:#ECC48D">&quot;00000000-0000-0000-0000-000000000000&quot;</span><span class="token punctuation" style="color:#C792EA">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">  </span><span class="token property" style="color:#F78C6C">&quot;name&quot;</span><span class="token operator" style="color:#7FDBCA">:</span><span class="token plain"> </span><span class="token punctuation" style="color:#C792EA">{</span><span class="token plain"> </span><span class="token property" style="color:#F78C6C">&quot;short&quot;</span><span class="token operator" style="color:#7FDBCA">:</span><span class="token plain"> </span><span class="token string" style="color:#ECC48D">&quot;Moltbot&quot;</span><span class="token plain"> </span><span class="token punctuation" style="color:#C792EA">}</span><span class="token punctuation" style="color:#C792EA">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">  </span><span class="token property" style="color:#F78C6C">&quot;developer&quot;</span><span class="token operator" style="color:#7FDBCA">:</span><span class="token plain"> </span><span class="token punctuation" style="color:#C792EA">{</span><span class="token plain"></span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">    </span><span class="token property" style="color:#F78C6C">&quot;name&quot;</span><span class="token operator" style="color:#7FDBCA">:</span><span class="token plain"> </span><span class="token string" style="color:#ECC48D">&quot;Your Org&quot;</span><span class="token punctuation" style="color:#C792EA">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">    </span><span class="token property" style="color:#F78C6C">&quot;websiteUrl&quot;</span><span class="token operator" style="color:#7FDBCA">:</span><span class="token plain"> </span><span class="token string" style="color:#ECC48D">&quot;https://example.com&quot;</span><span class="token punctuation" style="color:#C792EA">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">    </span><span class="token property" style="color:#F78C6C">&quot;privacyUrl&quot;</span><span class="token operator" style="color:#7FDBCA">:</span><span class="token plain"> </span><span class="token string" style="color:#ECC48D">&quot;https://example.com/privacy&quot;</span><span class="token punctuation" style="color:#C792EA">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">    </span><span class="token property" style="color:#F78C6C">&quot;termsOfUseUrl&quot;</span><span class="token operator" style="color:#7FDBCA">:</span><span class="token plain"> </span><span class="token string" style="color:#ECC48D">&quot;https://example.com/terms&quot;</span><span class="token plain"></span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">  </span><span class="token punctuation" style="color:#C792EA">}</span><span class="token punctuation" style="color:#C792EA">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">  </span><span class="token property" style="color:#F78C6C">&quot;description&quot;</span><span class="token operator" style="color:#7FDBCA">:</span><span class="token plain"> </span><span class="token punctuation" style="color:#C792EA">{</span><span class="token plain"> </span><span class="token property" style="color:#F78C6C">&quot;short&quot;</span><span class="token operator" style="color:#7FDBCA">:</span><span class="token plain"> </span><span class="token string" style="color:#ECC48D">&quot;Moltbot in Teams&quot;</span><span class="token punctuation" style="color:#C792EA">,</span><span class="token plain"> </span><span class="token property" style="color:#F78C6C">&quot;full&quot;</span><span class="token operator" style="color:#7FDBCA">:</span><span class="token plain"> </span><span class="token string" style="color:#ECC48D">&quot;Moltbot in Teams&quot;</span><span class="token plain"> </span><span class="token punctuation" style="color:#C792EA">}</span><span class="token punctuation" style="color:#C792EA">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">  </span><span class="token property" style="color:#F78C6C">&quot;icons&quot;</span><span class="token operator" style="color:#7FDBCA">:</span><span class="token plain"> </span><span class="token punctuation" style="color:#C792EA">{</span><span class="token plain"> </span><span class="token property" style="color:#F78C6C">&quot;outline&quot;</span><span class="token operator" style="color:#7FDBCA">:</span><span class="token plain"> </span><span class="token string" style="color:#ECC48D">&quot;outline.png&quot;</span><span class="token punctuation" style="color:#C792EA">,</span><span class="token plain"> </span><span class="token property" style="color:#F78C6C">&quot;color&quot;</span><span class="token operator" style="color:#7FDBCA">:</span><span class="token plain"> </span><span class="token string" style="color:#ECC48D">&quot;color.png&quot;</span><span class="token plain"> </span><span class="token punctuation" style="color:#C792EA">}</span><span class="token punctuation" style="color:#C792EA">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">  </span><span class="token property" style="color:#F78C6C">&quot;accentColor&quot;</span><span class="token operator" style="color:#7FDBCA">:</span><span class="token plain"> </span><span class="token string" style="color:#ECC48D">&quot;#5B6DEF&quot;</span><span class="token punctuation" style="color:#C792EA">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">  </span><span class="token property" style="color:#F78C6C">&quot;bots&quot;</span><span class="token operator" style="color:#7FDBCA">:</span><span class="token plain"> </span><span class="token punctuation" style="color:#C792EA">[</span><span class="token plain"></span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">    </span><span class="token punctuation" style="color:#C792EA">{</span><span class="token plain"></span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">      </span><span class="token property" style="color:#F78C6C">&quot;botId&quot;</span><span class="token operator" style="color:#7FDBCA">:</span><span class="token plain"> </span><span class="token string" style="color:#ECC48D">&quot;11111111-1111-1111-1111-111111111111&quot;</span><span class="token punctuation" style="color:#C792EA">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">      </span><span class="token property" style="color:#F78C6C">&quot;scopes&quot;</span><span class="token operator" style="color:#7FDBCA">:</span><span class="token plain"> </span><span class="token punctuation" style="color:#C792EA">[</span><span class="token string" style="color:#ECC48D">&quot;personal&quot;</span><span class="token punctuation" style="color:#C792EA">,</span><span class="token plain"> </span><span class="token string" style="color:#ECC48D">&quot;team&quot;</span><span class="token punctuation" style="color:#C792EA">,</span><span class="token plain"> </span><span class="token string" style="color:#ECC48D">&quot;groupChat&quot;</span><span class="token punctuation" style="color:#C792EA">]</span><span class="token punctuation" style="color:#C792EA">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">      </span><span class="token property" style="color:#F78C6C">&quot;isNotificationOnly&quot;</span><span class="token operator" style="color:#7FDBCA">:</span><span class="token plain"> </span><span class="token boolean" style="color:#F78C6C">false</span><span class="token punctuation" style="color:#C792EA">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">      </span><span class="token property" style="color:#F78C6C">&quot;supportsCalling&quot;</span><span class="token operator" style="color:#7FDBCA">:</span><span class="token plain"> </span><span class="token boolean" style="color:#F78C6C">false</span><span class="token punctuation" style="color:#C792EA">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">      </span><span class="token property" style="color:#F78C6C">&quot;supportsVideo&quot;</span><span class="token operator" style="color:#7FDBCA">:</span><span class="token plain"> </span><span class="token boolean" style="color:#F78C6C">false</span><span class="token punctuation" style="color:#C792EA">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">      </span><span class="token property" style="color:#F78C6C">&quot;supportsFiles&quot;</span><span class="token operator" style="color:#7FDBCA">:</span><span class="token plain"> </span><span class="token boolean" style="color:#F78C6C">true</span><span class="token plain"></span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">    </span><span class="token punctuation" style="color:#C792EA">}</span><span class="token plain"></span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">  </span><span class="token punctuation" style="color:#C792EA">]</span><span class="token punctuation" style="color:#C792EA">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">  </span><span class="token property" style="color:#F78C6C">&quot;webApplicationInfo&quot;</span><span class="token operator" style="color:#7FDBCA">:</span><span class="token plain"> </span><span class="token punctuation" style="color:#C792EA">{</span><span class="token plain"></span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">    </span><span class="token property" style="color:#F78C6C">&quot;id&quot;</span><span class="token operator" style="color:#7FDBCA">:</span><span class="token plain"> </span><span class="token string" style="color:#ECC48D">&quot;11111111-1111-1111-1111-111111111111&quot;</span><span class="token plain"></span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">  </span><span class="token punctuation" style="color:#C792EA">}</span><span class="token punctuation" style="color:#C792EA">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">  </span><span class="token property" style="color:#F78C6C">&quot;authorization&quot;</span><span class="token operator" style="color:#7FDBCA">:</span><span class="token plain"> </span><span class="token punctuation" style="color:#C792EA">{</span><span class="token plain"></span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">    </span><span class="token property" style="color:#F78C6C">&quot;permissions&quot;</span><span class="token operator" style="color:#7FDBCA">:</span><span class="token plain"> </span><span class="token punctuation" style="color:#C792EA">{</span><span class="token plain"></span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">      </span><span class="token property" style="color:#F78C6C">&quot;resourceSpecific&quot;</span><span class="token operator" style="color:#7FDBCA">:</span><span class="token plain"> </span><span class="token punctuation" style="color:#C792EA">[</span><span class="token plain"></span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">        </span><span class="token punctuation" style="color:#C792EA">{</span><span class="token plain"> </span><span class="token property" style="color:#F78C6C">&quot;name&quot;</span><span class="token operator" style="color:#7FDBCA">:</span><span class="token plain"> </span><span class="token string" style="color:#ECC48D">&quot;ChannelMessage.Read.Group&quot;</span><span class="token punctuation" style="color:#C792EA">,</span><span class="token plain"> </span><span class="token property" style="color:#F78C6C">&quot;type&quot;</span><span class="token operator" style="color:#7FDBCA">:</span><span class="token plain"> </span><span class="token string" style="color:#ECC48D">&quot;Application&quot;</span><span class="token plain"> </span><span class="token punctuation" style="color:#C792EA">}</span><span class="token punctuation" style="color:#C792EA">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">        </span><span class="token punctuation" style="color:#C792EA">{</span><span class="token plain"> </span><span class="token property" style="color:#F78C6C">&quot;name&quot;</span><span class="token operator" style="color:#7FDBCA">:</span><span class="token plain"> </span><span class="token string" style="color:#ECC48D">&quot;ChannelMessage.Send.Group&quot;</span><span class="token punctuation" style="color:#C792EA">,</span><span class="token plain"> </span><span class="token property" style="color:#F78C6C">&quot;type&quot;</span><span class="token operator" style="color:#7FDBCA">:</span><span class="token plain"> </span><span class="token string" style="color:#ECC48D">&quot;Application&quot;</span><span class="token plain"> </span><span class="token punctuation" style="color:#C792EA">}</span><span class="token punctuation" style="color:#C792EA">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">        </span><span class="token punctuation" style="color:#C792EA">{</span><span class="token plain"> </span><span class="token property" style="color:#F78C6C">&quot;name&quot;</span><span class="token operator" style="color:#7FDBCA">:</span><span class="token plain"> </span><span class="token string" style="color:#ECC48D">&quot;Member.Read.Group&quot;</span><span class="token punctuation" style="color:#C792EA">,</span><span class="token plain"> </span><span class="token property" style="color:#F78C6C">&quot;type&quot;</span><span class="token operator" style="color:#7FDBCA">:</span><span class="token plain"> </span><span class="token string" style="color:#ECC48D">&quot;Application&quot;</span><span class="token plain"> </span><span class="token punctuation" style="color:#C792EA">}</span><span class="token punctuation" style="color:#C792EA">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">        </span><span class="token punctuation" style="color:#C792EA">{</span><span class="token plain"> </span><span class="token property" style="color:#F78C6C">&quot;name&quot;</span><span class="token operator" style="color:#7FDBCA">:</span><span class="token plain"> </span><span class="token string" style="color:#ECC48D">&quot;Owner.Read.Group&quot;</span><span class="token punctuation" style="color:#C792EA">,</span><span class="token plain"> </span><span class="token property" style="color:#F78C6C">&quot;type&quot;</span><span class="token operator" style="color:#7FDBCA">:</span><span class="token plain"> </span><span class="token string" style="color:#ECC48D">&quot;Application&quot;</span><span class="token plain"> </span><span class="token punctuation" style="color:#C792EA">}</span><span class="token punctuation" style="color:#C792EA">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">        </span><span class="token punctuation" style="color:#C792EA">{</span><span class="token plain"> </span><span class="token property" style="color:#F78C6C">&quot;name&quot;</span><span class="token operator" style="color:#7FDBCA">:</span><span class="token plain"> </span><span class="token string" style="color:#ECC48D">&quot;ChannelSettings.Read.Group&quot;</span><span class="token punctuation" style="color:#C792EA">,</span><span class="token plain"> </span><span class="token property" style="color:#F78C6C">&quot;type&quot;</span><span class="token operator" style="color:#7FDBCA">:</span><span class="token plain"> </span><span class="token string" style="color:#ECC48D">&quot;Application&quot;</span><span class="token plain"> </span><span class="token punctuation" style="color:#C792EA">}</span><span class="token punctuation" style="color:#C792EA">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">        </span><span class="token punctuation" style="color:#C792EA">{</span><span class="token plain"> </span><span class="token property" style="color:#F78C6C">&quot;name&quot;</span><span class="token operator" style="color:#7FDBCA">:</span><span class="token plain"> </span><span class="token string" style="color:#ECC48D">&quot;TeamMember.Read.Group&quot;</span><span class="token punctuation" style="color:#C792EA">,</span><span class="token plain"> </span><span class="token property" style="color:#F78C6C">&quot;type&quot;</span><span class="token operator" style="color:#7FDBCA">:</span><span class="token plain"> </span><span class="token string" style="color:#ECC48D">&quot;Application&quot;</span><span class="token plain"> </span><span class="token punctuation" style="color:#C792EA">}</span><span class="token punctuation" style="color:#C792EA">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">        </span><span class="token punctuation" style="color:#C792EA">{</span><span class="token plain"> </span><span class="token property" style="color:#F78C6C">&quot;name&quot;</span><span class="token operator" style="color:#7FDBCA">:</span><span class="token plain"> </span><span class="token string" style="color:#ECC48D">&quot;TeamSettings.Read.Group&quot;</span><span class="token punctuation" style="color:#C792EA">,</span><span class="token plain"> </span><span class="token property" style="color:#F78C6C">&quot;type&quot;</span><span class="token operator" style="color:#7FDBCA">:</span><span class="token plain"> </span><span class="token string" style="color:#ECC48D">&quot;Application&quot;</span><span class="token plain"> </span><span class="token punctuation" style="color:#C792EA">}</span><span class="token punctuation" style="color:#C792EA">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">        </span><span class="token punctuation" style="color:#C792EA">{</span><span class="token plain"> </span><span class="token property" style="color:#F78C6C">&quot;name&quot;</span><span class="token operator" style="color:#7FDBCA">:</span><span class="token plain"> </span><span class="token string" style="color:#ECC48D">&quot;ChatMessage.Read.Chat&quot;</span><span class="token punctuation" style="color:#C792EA">,</span><span class="token plain"> </span><span class="token property" style="color:#F78C6C">&quot;type&quot;</span><span class="token operator" style="color:#7FDBCA">:</span><span class="token plain"> </span><span class="token string" style="color:#ECC48D">&quot;Application&quot;</span><span class="token plain"> </span><span class="token punctuation" style="color:#C792EA">}</span><span class="token plain"></span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">      </span><span class="token punctuation" style="color:#C792EA">]</span><span class="token plain"></span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">    </span><span class="token punctuation" style="color:#C792EA">}</span><span class="token plain"></span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">  </span><span class="token punctuation" style="color:#C792EA">}</span><span class="token plain"></span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain"></span><span class="token punctuation" style="color:#C792EA">}</span><br></span></code></pre></div></div>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="清单注意事项必填字段">清单注意事项（必填字段）<a href="#清单注意事项必填字段" class="hash-link" aria-label="清单注意事项（必填字段）的直接链接" title="清单注意事项（必填字段）的直接链接" translate="no">​</a></h3>
+<ul>
+<li class=""><code>bots[].botId</code> <strong>必须</strong> 与 Azure 机器人应用 ID 匹配。</li>
+<li class=""><code>webApplicationInfo.id</code> <strong>必须</strong> 与 Azure 机器人应用 ID 匹配。</li>
+<li class=""><code>bots[].scopes</code> 必须包含您计划使用的表面（<code>personal</code>、<code>team</code>、<code>groupChat</code>）。</li>
+<li class=""><code>bots[].supportsFiles: true</code> 是个人范围内文件处理所需的。</li>
+<li class=""><code>authorization.permissions.resourceSpecific</code> 必须包含频道读取/发送，如果您想要频道流量。</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="更新现有应用">更新现有应用<a href="#更新现有应用" class="hash-link" aria-label="更新现有应用的直接链接" title="更新现有应用的直接链接" translate="no">​</a></h3>
+<p>要更新已安装的 Teams 应用（例如添加 RSC 权限）：</p>
+<ol>
+<li class="">用新设置更新您的 <code>manifest.json</code></li>
+<li class=""><strong>增加 <code>version</code> 字段</strong>（例如 <code>1.0.0</code> → <code>1.1.0</code>）</li>
+<li class=""><strong>重新压缩</strong> 清单与图标（<code>manifest.json</code>、<code>outline.png</code>、<code>color.png</code>）</li>
+<li class="">上传新 zip：
+<ul>
+<li class=""><strong>选项 A（Teams 管理中心）：</strong> Teams 管理中心 → Teams 应用 → 管理应用 → 找到您的应用 → 上传新版本</li>
+<li class=""><strong>选项 B（侧载）：</strong> 在 Teams → 应用 → 管理您的应用 → 上传自定义应用</li>
+</ul>
+</li>
+<li class=""><strong>对于团队频道：</strong> 在每个团队中重新安装应用以使新权限生效</li>
+<li class=""><strong>完全退出并重新启动 Teams</strong>（不仅仅是关闭窗口）以清除缓存的应用元数据</li>
+</ol>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="功能仅-rsc-vs-graph">功能：仅 RSC vs Graph<a href="#功能仅-rsc-vs-graph" class="hash-link" aria-label="功能：仅 RSC vs Graph的直接链接" title="功能：仅 RSC vs Graph的直接链接" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="仅-teams-rsc应用已安装无-graph-api-权限">仅 <strong>Teams RSC</strong>（应用已安装，无 Graph API 权限）<a href="#仅-teams-rsc应用已安装无-graph-api-权限" class="hash-link" aria-label="仅-teams-rsc应用已安装无-graph-api-权限的直接链接" title="仅-teams-rsc应用已安装无-graph-api-权限的直接链接" translate="no">​</a></h3>
+<p>可工作：</p>
+<ul>
+<li class="">读取频道消息 <strong>文本</strong> 内容。</li>
+<li class="">发送频道消息 <strong>文本</strong> 内容。</li>
+<li class="">接收 <strong>个人（私信）</strong> 文件附件。</li>
+</ul>
+<p>不工作：</p>
+<ul>
+<li class="">频道/群组 <strong>图像或文件内容</strong>（负载仅包含 HTML 存根）。</li>
+<li class="">下载存储在 SharePoint/OneDrive 中的附件。</li>
+<li class="">读取消息历史（超出实时 webhook 事件）。</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="teams-rsc--microsoft-graph-应用权限"><strong>Teams RSC + Microsoft Graph 应用权限</strong><a href="#teams-rsc--microsoft-graph-应用权限" class="hash-link" aria-label="teams-rsc--microsoft-graph-应用权限的直接链接" title="teams-rsc--microsoft-graph-应用权限的直接链接" translate="no">​</a></h3>
+<p>增加：</p>
+<ul>
+<li class="">下载托管内容（粘贴到消息中的图像）。</li>
+<li class="">下载存储在 SharePoint/OneDrive 中的文件附件。</li>
+<li class="">通过 Graph 读取频道/聊天消息历史。</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="rsc-vs-graph-api">RSC vs Graph API<a href="#rsc-vs-graph-api" class="hash-link" aria-label="RSC vs Graph API的直接链接" title="RSC vs Graph API的直接链接" translate="no">​</a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>功能</th><th>RSC 权限</th><th>Graph API</th></tr></thead><tbody><tr><td><strong>实时消息</strong></td><td>是（通过 webhook）</td><td>否（仅轮询）</td></tr><tr><td><strong>历史消息</strong></td><td>否</td><td>是（可以查询历史）</td></tr><tr><td><strong>设置复杂度</strong></td><td>仅应用清单</td><td>需要管理员同意 + 令牌流</td></tr><tr><td><strong>离线工作</strong></td><td>否（必须运行）</td><td>是（随时查询）</td></tr></tbody></table>
+<p><strong>底线：</strong> RSC 用于实时监听；Graph API 用于历史访问。要捕获离线时错过的消息，您需要具有 <code>ChannelMessage.Read.All</code> 的 Graph API（需要管理员同意）。</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="启用-graph-的媒体--历史频道必需">启用 Graph 的媒体 + 历史（频道必需）<a href="#启用-graph-的媒体--历史频道必需" class="hash-link" aria-label="启用 Graph 的媒体 + 历史（频道必需）的直接链接" title="启用 Graph 的媒体 + 历史（频道必需）的直接链接" translate="no">​</a></h2>
+<p>如果您需要 <strong>频道</strong> 中的图像/文件或想要获取 <strong>消息历史</strong>，您必须启用 Microsoft Graph 权限并授予管理员同意。</p>
+<ol>
+<li class="">在 Entra ID（Azure AD）<strong>应用注册</strong> 中，添加 Microsoft Graph <strong>应用权限</strong>：
+<ul>
+<li class=""><code>ChannelMessage.Read.All</code>（频道附件 + 历史）</li>
+<li class=""><code>Chat.Read.All</code> 或 <code>ChatMessage.Read.All</code>（群组聊天）</li>
+</ul>
+</li>
+<li class=""><strong>为租户授予管理员同意</strong>。</li>
+<li class="">提高 Teams 应用 <strong>清单版本</strong>，重新上传，<strong>在 Teams 中重新安装应用</strong>。</li>
+<li class=""><strong>完全退出并重新启动 Teams</strong> 以清除缓存的应用元数据。</li>
+</ol>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="已知限制">已知限制<a href="#已知限制" class="hash-link" aria-label="已知限制的直接链接" title="已知限制的直接链接" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="webhook-超时">Webhook 超时<a href="#webhook-超时" class="hash-link" aria-label="Webhook 超时的直接链接" title="Webhook 超时的直接链接" translate="no">​</a></h3>
+<p>Teams 通过 HTTP webhook 传递消息。如果处理时间太长（例如，缓慢的 LLM 响应），您可能会看到：</p>
+<ul>
+<li class="">网关超时</li>
+<li class="">Teams 重试消息（导致重复）</li>
+<li class="">丢失的回复</li>
+</ul>
+<p>Moltbot 通过快速返回并主动发送回复来处理这个问题，但非常慢的响应仍可能导致问题。</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="格式化">格式化<a href="#格式化" class="hash-link" aria-label="格式化的直接链接" title="格式化的直接链接" translate="no">​</a></h3>
+<p>Teams markdown 比 Slack 或 Discord 更有限：</p>
+<ul>
+<li class="">基本格式化工作：<strong>粗体</strong>、<em>斜体</em>、<code>代码</code>、链接</li>
+<li class="">复杂 markdown（表格、嵌套列表）可能无法正确渲染</li>
+<li class="">自适应卡片支持投票和任意卡片发送（参见下文）</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="配置">配置<a href="#配置" class="hash-link" aria-label="配置的直接链接" title="配置的直接链接" translate="no">​</a></h2>
+<p>关键设置（参见 <code>/gateway/configuration</code> 了解共享通道模式）：</p>
+<ul>
+<li class=""><code>channels.msteams.enabled</code>：启用/禁用通道。</li>
+<li class=""><code>channels.msteams.appId</code>、<code>channels.msteams.appPassword</code>、<code>channels.msteams.tenantId</code>：机器人凭证。</li>
+<li class=""><code>channels.msteams.webhook.port</code>（默认 <code>3978</code>）</li>
+<li class=""><code>channels.msteams.webhook.path</code>（默认 <code>/api/messages</code>）</li>
+<li class=""><code>channels.msteams.dmPolicy</code>：<code>pairing | allowlist | open | disabled</code>（默认：配对）</li>
+<li class=""><code>channels.msteams.allowFrom</code>：私信允许列表（AAD 对象 ID、UPN 或显示名称）。当 Graph 访问可用时，向导在设置过程中将名称解析为 ID。</li>
+<li class=""><code>channels.msteams.textChunkLimit</code>：出站文本分块大小。</li>
+<li class=""><code>channels.msteams.chunkMode</code>：<code>length</code>（默认）或 <code>newline</code> 以在长度分块之前按空行（段落边界）分割。</li>
+<li class=""><code>channels.msteams.mediaAllowHosts</code>：入站附件主机允许列表（默认为 Microsoft/Teams 域）。</li>
+<li class=""><code>channels.msteams.requireMention</code>：在频道/群组中需要 @提及（默认 true）。</li>
+<li class=""><code>channels.msteams.replyStyle</code>：<code>thread | top-level</code>（参见 <a href="#%E5%9B%9E%E5%A4%8D%E6%A0%B7%E5%BC%8F-%E7%BA%BF%E7%A8%8B-vs-%E5%B8%96%E5%AD%90" class="">回复样式</a>）。</li>
+<li class=""><code>channels.msteams.teams.&lt;teamId&gt;.replyStyle</code>：按团队覆盖。</li>
+<li class=""><code>channels.msteams.teams.&lt;teamId&gt;.requireMention</code>：按团队覆盖。</li>
+<li class=""><code>channels.msteams.teams.&lt;teamId&gt;.tools</code>：缺失频道覆盖时使用的默认按团队工具策略覆盖（<code>allow</code>/<code>deny</code>/<code>alsoAllow</code>）。</li>
+<li class=""><code>channels.msteams.teams.&lt;teamId&gt;.toolsBySender</code>：默认按团队按发送者工具策略覆盖（支持 <code>&quot;*&quot;</code> 通配符）。</li>
+<li class=""><code>channels.msteams.teams.&lt;teamId&gt;.channels.&lt;conversationId&gt;.replyStyle</code>：按频道覆盖。</li>
+<li class=""><code>channels.msteams.teams.&lt;teamId&gt;.channels.&lt;conversationId&gt;.requireMention</code>：按频道覆盖。</li>
+<li class=""><code>channels.msteams.teams.&lt;teamId&gt;.channels.&lt;conversationId&gt;.tools</code>：按频道工具策略覆盖（<code>allow</code>/<code>deny</code>/<code>alsoAllow</code>）。</li>
+<li class=""><code>channels.msteams.teams.&lt;teamId&gt;.channels.&lt;conversationId&gt;.toolsBySender</code>：按频道按发送者工具策略覆盖（支持 <code>&quot;*&quot;</code> 通配符）。</li>
+<li class=""><code>channels.msteams.sharePointSiteId</code>：群组聊天/频道中文件上传的 SharePoint 站点 ID（参见 <a href="#%E5%9C%A8%E7%BE%A4%E7%BB%84%E8%81%8A%E5%A4%A9%E4%B8%AD%E5%8F%91%E9%80%81%E6%96%87%E4%BB%B6" class="">在群组聊天中发送文件</a>）。</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="路由和会话">路由和会话<a href="#路由和会话" class="hash-link" aria-label="路由和会话的直接链接" title="路由和会话的直接链接" translate="no">​</a></h2>
+<ul>
+<li class="">会话键遵循标准代理格式（参见 <a class="" href="/moltbot-doc/concepts/session">/concepts/session</a>）：
+<ul>
+<li class="">直接消息共享主会话（<code>agent:&lt;agentId&gt;:&lt;mainKey&gt;</code>）。</li>
+<li class="">频道/群组消息使用对话 ID：
+<ul>
+<li class=""><code>agent:&lt;agentId&gt;:msteams:channel:&lt;conversationId&gt;</code></li>
+<li class=""><code>agent:&lt;agentId&gt;:msteams:group:&lt;conversationId&gt;</code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="回复样式线程-vs-帖子">回复样式：线程 vs 帖子<a href="#回复样式线程-vs-帖子" class="hash-link" aria-label="回复样式：线程 vs 帖子的直接链接" title="回复样式：线程 vs 帖子的直接链接" translate="no">​</a></h2>
+<p>Teams 最近在相同底层数据模型上引入了两种频道 UI 样式：</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>样式</th><th>描述</th><th>推荐 <code>replyStyle</code></th></tr></thead><tbody><tr><td><strong>帖子</strong>（经典）</td><td>消息显示为卡片，线程回复在下方</td><td><code>thread</code>（默认）</td></tr><tr><td><strong>线程</strong>（类似 Slack）</td><td>消息线性流动，更像 Slack</td><td><code>top-level</code></td></tr></tbody></table>
+<p><strong>问题：</strong> Teams API 不公开频道使用的 UI 样式。如果您使用错误的 <code>replyStyle</code>：</p>
+<ul>
+<li class=""><code>thread</code> 在线程样式频道中 → 回复尴尬地嵌套</li>
+<li class=""><code>top-level</code> 在帖子样式频道中 → 回复显示为单独的顶级帖子而不是线程内</li>
+</ul>
+<p><strong>解决方案：</strong> 根据频道设置配置 <code>replyStyle</code>：</p>
+<div class="language-json codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#D6DEEB;--prism-background-color:#001122"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-json codeBlock_bY9V thin-scrollbar" style="color:#D6DEEB;background-color:#001122"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#D6DEEB"><span class="token punctuation" style="color:#C792EA">{</span><span class="token plain"></span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">  </span><span class="token property" style="color:#F78C6C">&quot;msteams&quot;</span><span class="token operator" style="color:#7FDBCA">:</span><span class="token plain"> </span><span class="token punctuation" style="color:#C792EA">{</span><span class="token plain"></span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">    </span><span class="token property" style="color:#F78C6C">&quot;replyStyle&quot;</span><span class="token operator" style="color:#7FDBCA">:</span><span class="token plain"> </span><span class="token string" style="color:#ECC48D">&quot;thread&quot;</span><span class="token punctuation" style="color:#C792EA">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">    </span><span class="token property" style="color:#F78C6C">&quot;teams&quot;</span><span class="token operator" style="color:#7FDBCA">:</span><span class="token plain"> </span><span class="token punctuation" style="color:#C792EA">{</span><span class="token plain"></span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">      </span><span class="token property" style="color:#F78C6C">&quot;19:abc...@thread.tacv2&quot;</span><span class="token operator" style="color:#7FDBCA">:</span><span class="token plain"> </span><span class="token punctuation" style="color:#C792EA">{</span><span class="token plain"></span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">        </span><span class="token property" style="color:#F78C6C">&quot;channels&quot;</span><span class="token operator" style="color:#7FDBCA">:</span><span class="token plain"> </span><span class="token punctuation" style="color:#C792EA">{</span><span class="token plain"></span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">          </span><span class="token property" style="color:#F78C6C">&quot;19:xyz...@thread.tacv2&quot;</span><span class="token operator" style="color:#7FDBCA">:</span><span class="token plain"> </span><span class="token punctuation" style="color:#C792EA">{</span><span class="token plain"></span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">            </span><span class="token property" style="color:#F78C6C">&quot;replyStyle&quot;</span><span class="token operator" style="color:#7FDBCA">:</span><span class="token plain"> </span><span class="token string" style="color:#ECC48D">&quot;top-level&quot;</span><span class="token plain"></span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">          </span><span class="token punctuation" style="color:#C792EA">}</span><span class="token plain"></span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">        </span><span class="token punctuation" style="color:#C792EA">}</span><span class="token plain"></span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">      </span><span class="token punctuation" style="color:#C792EA">}</span><span class="token plain"></span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">    </span><span class="token punctuation" style="color:#C792EA">}</span><span class="token plain"></span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">  </span><span class="token punctuation" style="color:#C792EA">}</span><span class="token plain"></span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain"></span><span class="token punctuation" style="color:#C792EA">}</span><br></span></code></pre></div></div>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="附件和图像">附件和图像<a href="#附件和图像" class="hash-link" aria-label="附件和图像的直接链接" title="附件和图像的直接链接" translate="no">​</a></h2>
+<p><strong>当前限制：</strong></p>
+<ul>
+<li class=""><strong>私信：</strong> 通过 Teams 机器人文件 API 工作的图像和文件附件。</li>
+<li class=""><strong>频道/群组：</strong> 附件存储在 M365 存储（SharePoint/OneDrive）中。webhook 负载仅包含 HTML 存根，而非实际文件字节。<strong>需要 Graph API 权限</strong> 下载频道附件。</li>
+</ul>
+<p>没有 Graph 权限，带有图像的频道消息将以纯文本形式接收（图像内容对机器人不可访问）。
+默认情况下，Moltbot 仅从 Microsoft/Teams 主机名下载媒体。使用 <code>channels.msteams.mediaAllowHosts</code> 覆盖（使用 <code>[&quot;*&quot;]</code> 允许任何主机）。</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="在群组聊天中发送文件">在群组聊天中发送文件<a href="#在群组聊天中发送文件" class="hash-link" aria-label="在群组聊天中发送文件的直接链接" title="在群组聊天中发送文件的直接链接" translate="no">​</a></h2>
+<p>机器人可以通过 FileConsentCard 流程在私信中发送文件（内置）。但是，<strong>在群组聊天/频道中发送文件</strong> 需要额外设置：</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>上下文</th><th>文件发送方式</th><th>需要设置</th></tr></thead><tbody><tr><td><strong>私信</strong></td><td>FileConsentCard → 用户接受 → 机器人上传</td><td>立即可用</td></tr><tr><td><strong>群组聊天/频道</strong></td><td>上传到 SharePoint → 分享链接</td><td>需要 <code>sharePointSiteId</code> + Graph 权限</td></tr><tr><td><strong>图像（任何上下文）</strong></td><td>Base64 编码内联</td><td>立即可用</td></tr></tbody></table>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="为什么群组聊天需要-sharepoint">为什么群组聊天需要 SharePoint<a href="#为什么群组聊天需要-sharepoint" class="hash-link" aria-label="为什么群组聊天需要 SharePoint的直接链接" title="为什么群组聊天需要 SharePoint的直接链接" translate="no">​</a></h3>
+<p>机器人没有个人 OneDrive 驱动器（<code>/me/drive</code> Graph API 端点对应用身份无效）。要在群组聊天/频道中发送文件，机器人上传到 <strong>SharePoint 站点</strong> 并创建共享链接。</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="设置">设置<a href="#设置" class="hash-link" aria-label="设置的直接链接" title="设置的直接链接" translate="no">​</a></h3>
+<ol>
+<li class="">
+<p><strong>在 Entra ID（Azure AD）→ 应用注册中添加 Graph API 权限</strong>：</p>
+<ul>
+<li class=""><code>Sites.ReadWrite.All</code>（应用）- 上传文件到 SharePoint</li>
+<li class=""><code>Chat.Read.All</code>（应用）- 可选，启用按用户共享链接</li>
+</ul>
+</li>
+<li class="">
+<p><strong>为租户授予管理员同意</strong>。</p>
+</li>
+<li class="">
+<p><strong>获取您的 SharePoint 站点 ID：</strong></p>
+<div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#D6DEEB;--prism-background-color:#001122"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#D6DEEB;background-color:#001122"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#D6DEEB"><span class="token plain"># 通过 Graph Explorer 或使用有效令牌的 curl：</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">curl -H &quot;Authorization: Bearer $TOKEN&quot; \</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">  &quot;https://graph.microsoft.com/v1.0/sites/{hostname}:/{site-path}&quot;</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain"># 示例：对于位于 &quot;contoso.sharepoint.com/sites/BotFiles&quot; 的站点</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">curl -H &quot;Authorization: Bearer $TOKEN&quot; \</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">  &quot;https://graph.microsoft.com/v1.0/sites/contoso.sharepoint.com:/sites/BotFiles&quot;</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain"># 响应包含：&quot;id&quot;: &quot;contoso.sharepoint.com,guid1,guid2&quot;</span><br></span></code></pre></div></div>
+</li>
+<li class="">
+<p><strong>配置 Moltbot：</strong></p>
+<div class="language-json5 codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#D6DEEB;--prism-background-color:#001122"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-json5 codeBlock_bY9V thin-scrollbar" style="color:#D6DEEB;background-color:#001122"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#D6DEEB"><span class="token plain">{</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">  channels: {</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">    msteams: {</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">      // ... 其他配置 ...</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">      sharePointSiteId: &quot;contoso.sharepoint.com,guid1,guid2&quot;</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">    }</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">  }</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">}</span><br></span></code></pre></div></div>
+</li>
+</ol>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="共享行为">共享行为<a href="#共享行为" class="hash-link" aria-label="共享行为的直接链接" title="共享行为的直接链接" translate="no">​</a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>权限</th><th>共享行为</th></tr></thead><tbody><tr><td>仅 <code>Sites.ReadWrite.All</code></td><td>组织范围共享链接（组织内任何人都可以访问）</td></tr><tr><td><code>Sites.ReadWrite.All</code> + <code>Chat.Read.All</code></td><td>按用户共享链接（仅聊天成员可以访问）</td></tr></tbody></table>
+<p>按用户共享更安全，因为只有聊天参与者可以访问文件。如果缺少 <code>Chat.Read.All</code> 权限，机器人回退到组织范围共享。</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="回退行为">回退行为<a href="#回退行为" class="hash-link" aria-label="回退行为的直接链接" title="回退行为的直接链接" translate="no">​</a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>场景</th><th>结果</th></tr></thead><tbody><tr><td>群组聊天 + 文件 + 配置了 <code>sharePointSiteId</code></td><td>上传到 SharePoint，发送共享链接</td></tr><tr><td>群组聊天 + 文件 + 无 <code>sharePointSiteId</code></td><td>尝试 OneDrive 上传（可能失败），仅发送文本</td></tr><tr><td>个人聊天 + 文件</td><td>FileConsentCard 流程（无需 SharePoint）</td></tr><tr><td>任何上下文 + 图像</td><td>Base64 编码内联（无需 SharePoint）</td></tr></tbody></table>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="文件存储位置">文件存储位置<a href="#文件存储位置" class="hash-link" aria-label="文件存储位置的直接链接" title="文件存储位置的直接链接" translate="no">​</a></h3>
+<p>上传的文件存储在配置的 SharePoint 站点的默认文档库中的 <code>/MoltbotShared/</code> 文件夹中。</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="投票自适应卡片">投票（自适应卡片）<a href="#投票自适应卡片" class="hash-link" aria-label="投票（自适应卡片）的直接链接" title="投票（自适应卡片）的直接链接" translate="no">​</a></h2>
+<p>Moltbot 将 Teams 投票作为自适应卡片发送（没有原生 Teams 投票 API）。</p>
+<ul>
+<li class="">CLI：<code>moltbot message poll --channel msteams --target conversation:&lt;id&gt; ...</code></li>
+<li class="">投票由网关在 <code>~/.clawdbot/msteams-polls.json</code> 中记录。</li>
+<li class="">网关必须保持在线以记录投票。</li>
+<li class="">投票尚未自动发布结果摘要（如有需要，请检查存储文件）。</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="自适应卡片任意">自适应卡片（任意）<a href="#自适应卡片任意" class="hash-link" aria-label="自适应卡片（任意）的直接链接" title="自适应卡片（任意）的直接链接" translate="no">​</a></h2>
+<p>使用 <code>message</code> 工具或 CLI 向 Teams 用户或对话发送任何自适应卡片 JSON。</p>
+<p><code>card</code> 参数接受自适应卡片 JSON 对象。当提供 <code>card</code> 时，消息文本是可选的。</p>
+<p><strong>代理工具：</strong></p>
+<div class="language-json codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#D6DEEB;--prism-background-color:#001122"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-json codeBlock_bY9V thin-scrollbar" style="color:#D6DEEB;background-color:#001122"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#D6DEEB"><span class="token punctuation" style="color:#C792EA">{</span><span class="token plain"></span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">  </span><span class="token property" style="color:#F78C6C">&quot;action&quot;</span><span class="token operator" style="color:#7FDBCA">:</span><span class="token plain"> </span><span class="token string" style="color:#ECC48D">&quot;send&quot;</span><span class="token punctuation" style="color:#C792EA">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">  </span><span class="token property" style="color:#F78C6C">&quot;channel&quot;</span><span class="token operator" style="color:#7FDBCA">:</span><span class="token plain"> </span><span class="token string" style="color:#ECC48D">&quot;msteams&quot;</span><span class="token punctuation" style="color:#C792EA">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">  </span><span class="token property" style="color:#F78C6C">&quot;target&quot;</span><span class="token operator" style="color:#7FDBCA">:</span><span class="token plain"> </span><span class="token string" style="color:#ECC48D">&quot;user:&lt;id&gt;&quot;</span><span class="token punctuation" style="color:#C792EA">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">  </span><span class="token property" style="color:#F78C6C">&quot;card&quot;</span><span class="token operator" style="color:#7FDBCA">:</span><span class="token plain"> </span><span class="token punctuation" style="color:#C792EA">{</span><span class="token plain"></span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">    </span><span class="token property" style="color:#F78C6C">&quot;type&quot;</span><span class="token operator" style="color:#7FDBCA">:</span><span class="token plain"> </span><span class="token string" style="color:#ECC48D">&quot;AdaptiveCard&quot;</span><span class="token punctuation" style="color:#C792EA">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">    </span><span class="token property" style="color:#F78C6C">&quot;version&quot;</span><span class="token operator" style="color:#7FDBCA">:</span><span class="token plain"> </span><span class="token string" style="color:#ECC48D">&quot;1.5&quot;</span><span class="token punctuation" style="color:#C792EA">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">    </span><span class="token property" style="color:#F78C6C">&quot;body&quot;</span><span class="token operator" style="color:#7FDBCA">:</span><span class="token plain"> </span><span class="token punctuation" style="color:#C792EA">[</span><span class="token punctuation" style="color:#C792EA">{</span><span class="token property" style="color:#F78C6C">&quot;type&quot;</span><span class="token operator" style="color:#7FDBCA">:</span><span class="token plain"> </span><span class="token string" style="color:#ECC48D">&quot;TextBlock&quot;</span><span class="token punctuation" style="color:#C792EA">,</span><span class="token plain"> </span><span class="token property" style="color:#F78C6C">&quot;text&quot;</span><span class="token operator" style="color:#7FDBCA">:</span><span class="token plain"> </span><span class="token string" style="color:#ECC48D">&quot;Hello!&quot;</span><span class="token punctuation" style="color:#C792EA">}</span><span class="token punctuation" style="color:#C792EA">]</span><span class="token plain"></span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">  </span><span class="token punctuation" style="color:#C792EA">}</span><span class="token plain"></span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain"></span><span class="token punctuation" style="color:#C792EA">}</span><br></span></code></pre></div></div>
+<p><strong>CLI：</strong></p>
+<div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#D6DEEB;--prism-background-color:#001122"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#D6DEEB;background-color:#001122"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#D6DEEB"><span class="token plain">moltbot message send --channel msteams \</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">  --target &quot;conversation:19:abc...@thread.tacv2&quot; \</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">  --card &#x27;{&quot;type&quot;:&quot;AdaptiveCard&quot;,&quot;version&quot;:&quot;1.5&quot;,&quot;body&quot;:[{&quot;type&quot;:&quot;TextBlock&quot;,&quot;text&quot;:&quot;Hello!&quot;}]}&#x27;</span><br></span></code></pre></div></div>
+<p>参见 <a href="https://adaptivecards.io/" target="_blank" rel="noopener noreferrer" class="">自适应卡片文档</a> 获取卡片模式和示例。有关目标格式的详细信息，请参见下面的 <a href="#%E7%9B%AE%E6%A0%87%E6%A0%BC%E5%BC%8F" class="">目标格式</a>。</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="目标格式">目标格式<a href="#目标格式" class="hash-link" aria-label="目标格式的直接链接" title="目标格式的直接链接" translate="no">​</a></h2>
+<p>MSTeams 目标使用前缀区分用户和对话：</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>目标类型</th><th>格式</th><th>示例</th></tr></thead><tbody><tr><td>用户（按 ID）</td><td><code>user:&lt;aad-object-id&gt;</code></td><td><code>user:40a1a0ed-4ff2-4164-a219-55518990c197</code></td></tr><tr><td>用户（按名称）</td><td><code>user:&lt;display-name&gt;</code></td><td><code>user:John Smith</code>（需要 Graph API）</td></tr><tr><td>群组/频道</td><td><code>conversation:&lt;conversation-id&gt;</code></td><td><code>conversation:19:abc123...@thread.tacv2</code></td></tr><tr><td>群组/频道（原始）</td><td><code>&lt;conversation-id&gt;</code></td><td><code>19:abc123...@thread.tacv2</code>（如果包含 <code>@thread</code>）</td></tr></tbody></table>
+<p><strong>CLI 示例：</strong></p>
+<div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#D6DEEB;--prism-background-color:#001122"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#D6DEEB;background-color:#001122"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#D6DEEB"><span class="token plain"># 按 ID 发送给用户</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">moltbot message send --channel msteams --target &quot;user:40a1a0ed-...&quot; --message &quot;Hello&quot;</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain"># 按显示名称发送给用户（触发 Graph API 查找）</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">moltbot message send --channel msteams --target &quot;user:John Smith&quot; --message &quot;Hello&quot;</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain"># 发送到群组聊天或频道</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">moltbot message send --channel msteams --target &quot;conversation:19:abc...@thread.tacv2&quot; --message &quot;Hello&quot;</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain"># 发送自适应卡片到对话</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">moltbot message send --channel msteams --target &quot;conversation:19:abc...@thread.tacv2&quot; \</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">  --card &#x27;{&quot;type&quot;:&quot;AdaptiveCard&quot;,&quot;version&quot;:&quot;1.5&quot;,&quot;body&quot;:[{&quot;type&quot;:&quot;TextBlock&quot;,&quot;text&quot;:&quot;Hello&quot;}]}&#x27;</span><br></span></code></pre></div></div>
+<p><strong>代理工具示例：</strong></p>
+<div class="language-json codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#D6DEEB;--prism-background-color:#001122"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-json codeBlock_bY9V thin-scrollbar" style="color:#D6DEEB;background-color:#001122"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#D6DEEB"><span class="token punctuation" style="color:#C792EA">{</span><span class="token plain"></span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">  </span><span class="token property" style="color:#F78C6C">&quot;action&quot;</span><span class="token operator" style="color:#7FDBCA">:</span><span class="token plain"> </span><span class="token string" style="color:#ECC48D">&quot;send&quot;</span><span class="token punctuation" style="color:#C792EA">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">  </span><span class="token property" style="color:#F78C6C">&quot;channel&quot;</span><span class="token operator" style="color:#7FDBCA">:</span><span class="token plain"> </span><span class="token string" style="color:#ECC48D">&quot;msteams&quot;</span><span class="token punctuation" style="color:#C792EA">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">  </span><span class="token property" style="color:#F78C6C">&quot;target&quot;</span><span class="token operator" style="color:#7FDBCA">:</span><span class="token plain"> </span><span class="token string" style="color:#ECC48D">&quot;user:John Smith&quot;</span><span class="token punctuation" style="color:#C792EA">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">  </span><span class="token property" style="color:#F78C6C">&quot;message&quot;</span><span class="token operator" style="color:#7FDBCA">:</span><span class="token plain"> </span><span class="token string" style="color:#ECC48D">&quot;Hello!&quot;</span><span class="token plain"></span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain"></span><span class="token punctuation" style="color:#C792EA">}</span><br></span></code></pre></div></div>
+<div class="language-json codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#D6DEEB;--prism-background-color:#001122"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-json codeBlock_bY9V thin-scrollbar" style="color:#D6DEEB;background-color:#001122"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#D6DEEB"><span class="token punctuation" style="color:#C792EA">{</span><span class="token plain"></span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">  </span><span class="token property" style="color:#F78C6C">&quot;action&quot;</span><span class="token operator" style="color:#7FDBCA">:</span><span class="token plain"> </span><span class="token string" style="color:#ECC48D">&quot;send&quot;</span><span class="token punctuation" style="color:#C792EA">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">  </span><span class="token property" style="color:#F78C6C">&quot;channel&quot;</span><span class="token operator" style="color:#7FDBCA">:</span><span class="token plain"> </span><span class="token string" style="color:#ECC48D">&quot;msteams&quot;</span><span class="token punctuation" style="color:#C792EA">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">  </span><span class="token property" style="color:#F78C6C">&quot;target&quot;</span><span class="token operator" style="color:#7FDBCA">:</span><span class="token plain"> </span><span class="token string" style="color:#ECC48D">&quot;conversation:19:abc...@thread.tacv2&quot;</span><span class="token punctuation" style="color:#C792EA">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">  </span><span class="token property" style="color:#F78C6C">&quot;card&quot;</span><span class="token operator" style="color:#7FDBCA">:</span><span class="token plain"> </span><span class="token punctuation" style="color:#C792EA">{</span><span class="token property" style="color:#F78C6C">&quot;type&quot;</span><span class="token operator" style="color:#7FDBCA">:</span><span class="token plain"> </span><span class="token string" style="color:#ECC48D">&quot;AdaptiveCard&quot;</span><span class="token punctuation" style="color:#C792EA">,</span><span class="token plain"> </span><span class="token property" style="color:#F78C6C">&quot;version&quot;</span><span class="token operator" style="color:#7FDBCA">:</span><span class="token plain"> </span><span class="token string" style="color:#ECC48D">&quot;1.5&quot;</span><span class="token punctuation" style="color:#C792EA">,</span><span class="token plain"> </span><span class="token property" style="color:#F78C6C">&quot;body&quot;</span><span class="token operator" style="color:#7FDBCA">:</span><span class="token plain"> </span><span class="token punctuation" style="color:#C792EA">[</span><span class="token punctuation" style="color:#C792EA">{</span><span class="token property" style="color:#F78C6C">&quot;type&quot;</span><span class="token operator" style="color:#7FDBCA">:</span><span class="token plain"> </span><span class="token string" style="color:#ECC48D">&quot;TextBlock&quot;</span><span class="token punctuation" style="color:#C792EA">,</span><span class="token plain"> </span><span class="token property" style="color:#F78C6C">&quot;text&quot;</span><span class="token operator" style="color:#7FDBCA">:</span><span class="token plain"> </span><span class="token string" style="color:#ECC48D">&quot;Hello&quot;</span><span class="token punctuation" style="color:#C792EA">}</span><span class="token punctuation" style="color:#C792EA">]</span><span class="token punctuation" style="color:#C792EA">}</span><span class="token plain"></span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain"></span><span class="token punctuation" style="color:#C792EA">}</span><br></span></code></pre></div></div>
+<p>注意：没有 <code>user:</code> 前缀，名称默认解析为群组/团队。在按显示名称定位人员时始终使用 <code>user:</code>。</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="主动消息">主动消息<a href="#主动消息" class="hash-link" aria-label="主动消息的直接链接" title="主动消息的直接链接" translate="no">​</a></h2>
+<ul>
+<li class="">主动消息仅在用户交互<strong>之后</strong>可能，因为我们在此时存储对话引用。</li>
+<li class="">参见 <code>/gateway/configuration</code> 了解 <code>dmPolicy</code> 和允许列表门控。</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="团队和频道-id常见错误">团队和频道 ID（常见错误）<a href="#团队和频道-id常见错误" class="hash-link" aria-label="团队和频道 ID（常见错误）的直接链接" title="团队和频道 ID（常见错误）的直接链接" translate="no">​</a></h2>
+<p>Teams URL 中的 <code>groupId</code> 查询参数<strong>不是</strong>用于配置的团队 ID。从 URL 路径提取 ID：</p>
+<p><strong>团队 URL：</strong></p>
+<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#D6DEEB;--prism-background-color:#001122"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#D6DEEB;background-color:#001122"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#D6DEEB"><span class="token plain">https://teams.microsoft.com/l/team/19%3ABk4j...%40thread.tacv2/conversations?groupId=...</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">                                    └────────────────────────────┘</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">                                    团队 ID（URL 解码这个）</span><br></span></code></pre></div></div>
+<p><strong>频道 URL：</strong></p>
+<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#D6DEEB;--prism-background-color:#001122"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#D6DEEB;background-color:#001122"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#D6DEEB"><span class="token plain">https://teams.microsoft.com/l/channel/19%3A15bc...%40thread.tacv2/ChannelName?groupId=...</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">                                      └─────────────────────────┘</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">                                      频道 ID（URL 解码这个）</span><br></span></code></pre></div></div>
+<p><strong>对于配置：</strong></p>
+<ul>
+<li class="">团队 ID = <code>/team/</code> 后的路径段（URL 解码，例如 <code>19:Bk4j...@thread.tacv2</code>）</li>
+<li class="">频道 ID = <code>/channel/</code> 后的路径段（URL 解码）</li>
+<li class=""><strong>忽略</strong> <code>groupId</code> 查询参数</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="私有频道">私有频道<a href="#私有频道" class="hash-link" aria-label="私有频道的直接链接" title="私有频道的直接链接" translate="no">​</a></h2>
+<p>机器人在私有频道中支持有限：</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>功能</th><th>标准频道</th><th>私有频道</th></tr></thead><tbody><tr><td>机器人安装</td><td>是</td><td>有限</td></tr><tr><td>实时消息（webhook）</td><td>是</td><td>可能不工作</td></tr><tr><td>RSC 权限</td><td>是</td><td>可能行为不同</td></tr><tr><td>@提及</td><td>是</td><td>如果机器人可访问</td></tr><tr><td>Graph API 历史</td><td>是</td><td>是（有权限）</td></tr></tbody></table>
+<p><strong>如果私有频道不工作的工作区：</strong></p>
+<ol>
+<li class="">使用标准频道进行机器人交互</li>
+<li class="">使用私信 - 用户总是可以直接给机器人发消息</li>
+<li class="">使用 Graph API 进行历史访问（需要 <code>ChannelMessage.Read.All</code>）</li>
+</ol>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="故障排除">故障排除<a href="#故障排除" class="hash-link" aria-label="故障排除的直接链接" title="故障排除的直接链接" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="常见问题">常见问题<a href="#常见问题" class="hash-link" aria-label="常见问题的直接链接" title="常见问题的直接链接" translate="no">​</a></h3>
+<ul>
+<li class=""><strong>频道中图像不显示：</strong> Graph 权限或管理员同意缺失。重新安装 Teams 应用并完全退出/重新打开 Teams。</li>
+<li class=""><strong>频道中无响应：</strong> 默认需要提及；设置 <code>channels.msteams.requireMention=false</code> 或按团队/频道配置。</li>
+<li class=""><strong>版本不匹配（Teams 仍显示旧清单）：</strong> 删除 + 重新添加应用并完全退出 Teams 以刷新。</li>
+<li class=""><strong>来自 webhook 的 401 未授权：</strong> 手动测试时出现（没有 Azure JWT）- 表示端点可达但身份验证失败。使用 Azure Web Chat 适当测试。</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="清单上传错误">清单上传错误<a href="#清单上传错误" class="hash-link" aria-label="清单上传错误的直接链接" title="清单上传错误的直接链接" translate="no">​</a></h3>
+<ul>
+<li class=""><strong>&quot;图标文件不能为空&quot;：</strong> 清单引用的图标文件为 0 字节。创建有效的 PNG 图标（32x32 用于 <code>outline.png</code>，192x192 用于 <code>color.png</code>）。</li>
+<li class=""><strong>&quot;webApplicationInfo.Id 已在使用中&quot;：</strong> 应用仍在另一个团队/聊天中安装。查找并卸载它，或等待 5-10 分钟传播。</li>
+<li class=""><strong>上传时&quot;出现问题&quot;：</strong> 通过 <a href="https://admin.teams.microsoft.com" target="_blank" rel="noopener noreferrer" class="">https://admin.teams.microsoft.com</a> 上传，打开浏览器开发工具（F12）→ 网络选项卡，检查响应体的实际错误。</li>
+<li class=""><strong>侧载失败：</strong> 尝试&quot;上传应用到您的组织应用目录&quot;而不是&quot;上传自定义应用&quot; - 这通常绕过侧载限制。</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="rsc-权限不工作">RSC 权限不工作<a href="#rsc-权限不工作" class="hash-link" aria-label="RSC 权限不工作的直接链接" title="RSC 权限不工作的直接链接" translate="no">​</a></h3>
+<ol>
+<li class="">验证 <code>webApplicationInfo.id</code> 与您的机器人应用 ID 完全匹配</li>
+<li class="">重新上传应用并在团队/聊天中重新安装</li>
+<li class="">检查您的组织管理员是否阻止了 RSC 权限</li>
+<li class="">确认您使用正确的范围：团队的 <code>ChannelMessage.Read.Group</code>，群组聊天的 <code>ChatMessage.Read.Chat</code></li>
+</ol>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="参考资料">参考资料<a href="#参考资料" class="hash-link" aria-label="参考资料的直接链接" title="参考资料的直接链接" translate="no">​</a></h2>
+<ul>
+<li class=""><a href="https://learn.microsoft.com/en-us/azure/bot-service/bot-service-quickstart-registration" target="_blank" rel="noopener noreferrer" class="">创建 Azure 机器人</a> - Azure 机器人设置指南</li>
+<li class=""><a href="https://dev.teams.microsoft.com/apps" target="_blank" rel="noopener noreferrer" class="">Teams 开发者门户</a> - 创建/管理 Teams 应用</li>
+<li class=""><a href="https://learn.microsoft.com/en-us/microsoftteams/platform/resources/schema/manifest-schema" target="_blank" rel="noopener noreferrer" class="">Teams 应用清单架构</a></li>
+<li class=""><a href="https://learn.microsoft.com/en-us/microsoftteams/platform/bots/how-to/conversations/channel-messages-with-rsc" target="_blank" rel="noopener noreferrer" class="">使用 RSC 接收频道消息</a></li>
+<li class=""><a href="https://learn.microsoft.com/en-us/microsoftteams/platform/graph-api/rsc/resource-specific-consent" target="_blank" rel="noopener noreferrer" class="">RSC 权限参考</a></li>
+<li class=""><a href="https://learn.microsoft.com/en-us/microsoftteams/platform/bots/how-to/bots-filesv4" target="_blank" rel="noopener noreferrer" class="">Teams 机器人文件处理</a>（频道/群组需要 Graph）</li>
+<li class=""><a href="https://learn.microsoft.com/en-us/microsoftteams/platform/bots/how-to/conversations/send-proactive-messages" target="_blank" rel="noopener noreferrer" class="">主动消息</a></li>
+</ul></div></article><nav class="docusaurus-mt-lg pagination-nav" aria-label="文件选项卡"></nav></div></div><div class="col col--3"><div class="tocWrapper_xKoj"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#需要插件" class="table-of-contents__link toc-highlight">需要插件</a></li><li><a href="#快速设置初学者" class="table-of-contents__link toc-highlight">快速设置（初学者）</a></li><li><a href="#目标" class="table-of-contents__link toc-highlight">目标</a></li><li><a href="#配置写入" class="table-of-contents__link toc-highlight">配置写入</a></li><li><a href="#访问控制私信--群组" class="table-of-contents__link toc-highlight">访问控制（私信 + 群组）</a></li><li><a href="#工作原理" class="table-of-contents__link toc-highlight">工作原理</a></li><li><a href="#azure-机器人设置先决条件" class="table-of-contents__link toc-highlight">Azure 机器人设置（先决条件）</a><ul><li><a href="#步骤-1创建-azure-机器人" class="table-of-contents__link toc-highlight">步骤 1：创建 Azure 机器人</a></li><li><a href="#步骤-2获取凭证" class="table-of-contents__link toc-highlight">步骤 2：获取凭证</a></li><li><a href="#步骤-3配置消息端点" class="table-of-contents__link toc-highlight">步骤 3：配置消息端点</a></li><li><a href="#步骤-4启用-teams-频道" class="table-of-contents__link toc-highlight">步骤 4：启用 Teams 频道</a></li></ul></li><li><a href="#本地开发隧道" class="table-of-contents__link toc-highlight">本地开发（隧道）</a></li><li><a href="#teams-开发者门户替代方案" class="table-of-contents__link toc-highlight">Teams 开发者门户（替代方案）</a></li><li><a href="#测试机器人" class="table-of-contents__link toc-highlight">测试机器人</a></li><li><a href="#设置最小文本版" class="table-of-contents__link toc-highlight">设置（最小文本版）</a></li><li><a href="#历史上下文" class="table-of-contents__link toc-highlight">历史上下文</a></li><li><a href="#当前-teams-rsc-权限清单" class="table-of-contents__link toc-highlight">当前 Teams RSC 权限（清单）</a></li><li><a href="#示例-teams-清单删节版" class="table-of-contents__link toc-highlight">示例 Teams 清单（删节版）</a><ul><li><a href="#清单注意事项必填字段" class="table-of-contents__link toc-highlight">清单注意事项（必填字段）</a></li><li><a href="#更新现有应用" class="table-of-contents__link toc-highlight">更新现有应用</a></li></ul></li><li><a href="#功能仅-rsc-vs-graph" class="table-of-contents__link toc-highlight">功能：仅 RSC vs Graph</a><ul><li><a href="#仅-teams-rsc应用已安装无-graph-api-权限" class="table-of-contents__link toc-highlight">仅 <strong>Teams RSC</strong>（应用已安装，无 Graph API 权限）</a></li><li><a href="#teams-rsc--microsoft-graph-应用权限" class="table-of-contents__link toc-highlight"><strong>Teams RSC + Microsoft Graph 应用权限</strong></a></li><li><a href="#rsc-vs-graph-api" class="table-of-contents__link toc-highlight">RSC vs Graph API</a></li></ul></li><li><a href="#启用-graph-的媒体--历史频道必需" class="table-of-contents__link toc-highlight">启用 Graph 的媒体 + 历史（频道必需）</a></li><li><a href="#已知限制" class="table-of-contents__link toc-highlight">已知限制</a><ul><li><a href="#webhook-超时" class="table-of-contents__link toc-highlight">Webhook 超时</a></li><li><a href="#格式化" class="table-of-contents__link toc-highlight">格式化</a></li></ul></li><li><a href="#配置" class="table-of-contents__link toc-highlight">配置</a></li><li><a href="#路由和会话" class="table-of-contents__link toc-highlight">路由和会话</a></li><li><a href="#回复样式线程-vs-帖子" class="table-of-contents__link toc-highlight">回复样式：线程 vs 帖子</a></li><li><a href="#附件和图像" class="table-of-contents__link toc-highlight">附件和图像</a></li><li><a href="#在群组聊天中发送文件" class="table-of-contents__link toc-highlight">在群组聊天中发送文件</a><ul><li><a href="#为什么群组聊天需要-sharepoint" class="table-of-contents__link toc-highlight">为什么群组聊天需要 SharePoint</a></li><li><a href="#设置" class="table-of-contents__link toc-highlight">设置</a></li><li><a href="#共享行为" class="table-of-contents__link toc-highlight">共享行为</a></li><li><a href="#回退行为" class="table-of-contents__link toc-highlight">回退行为</a></li><li><a href="#文件存储位置" class="table-of-contents__link toc-highlight">文件存储位置</a></li></ul></li><li><a href="#投票自适应卡片" class="table-of-contents__link toc-highlight">投票（自适应卡片）</a></li><li><a href="#自适应卡片任意" class="table-of-contents__link toc-highlight">自适应卡片（任意）</a></li><li><a href="#目标格式" class="table-of-contents__link toc-highlight">目标格式</a></li><li><a href="#主动消息" class="table-of-contents__link toc-highlight">主动消息</a></li><li><a href="#团队和频道-id常见错误" class="table-of-contents__link toc-highlight">团队和频道 ID（常见错误）</a></li><li><a href="#私有频道" class="table-of-contents__link toc-highlight">私有频道</a></li><li><a href="#故障排除" class="table-of-contents__link toc-highlight">故障排除</a><ul><li><a href="#常见问题" class="table-of-contents__link toc-highlight">常见问题</a></li><li><a href="#清单上传错误" class="table-of-contents__link toc-highlight">清单上传错误</a></li><li><a href="#rsc-权限不工作" class="table-of-contents__link toc-highlight">RSC 权限不工作</a></li></ul></li><li><a href="#参考资料" class="table-of-contents__link toc-highlight">参考资料</a></li></ul></div><div class="tocFooter_Fu2z"><div class="themeGroup_RzWV" role="group" aria-label="Theme"><button class="themeBtn_tGr6" aria-label="Light theme" title="Light"><svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor" aria-hidden="true"><path d="M12 18a6 6 0 1 1 0-12 6 6 0 0 1 0 12zm0-2a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM11 1h2v3h-2V1zm0 19h2v3h-2v-3zM3.515 4.929l1.414-1.414L7.05 5.636 5.636 7.05 3.515 4.93zM16.95 18.364l1.414-1.414 2.121 2.121-1.414 1.414-2.121-2.121zm2.121-14.85l1.414 1.415-2.121 2.121-1.414-1.414 2.121-2.121zM5.636 16.95l1.414 1.414-2.121 2.121-1.414-1.414 2.121-2.121zM23 11v2h-3v-2h3zM4 11v2H1v-2h3z"></path></svg></button><button class="themeBtn_tGr6 themeBtnActive_A6tm" aria-label="Dark theme" title="Dark"><svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor" aria-hidden="true"><path d="M11.38 2.019a7.5 7.5 0 1 0 10.6 10.6C21.83 17.963 17.315 22 12.002 22 6.477 22 2 17.523 2 12c0-5.314 4.038-9.827 9.38-10.28z"></path></svg></button></div></div></div></div></div></div></main></div></div></div><footer class="theme-layout-footer footer footer--dark"><div class="container container-fluid"><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2026 Moltbot Docs.</div></div></div></footer></div>
+</body>
+</html>

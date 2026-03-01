@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="zh" dir="ltr" class="docs-wrapper plugin-docs plugin-id-default docs-version-current docs-doc-page docs-doc-id-gateway/logging" data-has-hydrated="false">
+<head>
+<meta charset="UTF-8">
+<meta name="generator" content="Docusaurus v3.9.2">
+<title data-rh="true">Logging | Moltbot Docs</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:url" content="https://luuman.github.io/moltbot-doc/docs/gateway/logging"><meta data-rh="true" property="og:locale" content="zh"><meta data-rh="true" name="docusaurus_locale" content="zh"><meta data-rh="true" name="docsearch:language" content="zh"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="Logging | Moltbot Docs"><meta data-rh="true" name="description" content="For a user-facing overview (CLI + Control UI + config), see /logging."><meta data-rh="true" property="og:description" content="For a user-facing overview (CLI + Control UI + config), see /logging."><link data-rh="true" rel="icon" href="/moltbot-doc/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://luuman.github.io/moltbot-doc/docs/gateway/logging"><link data-rh="true" rel="alternate" href="https://luuman.github.io/moltbot-doc/docs/gateway/logging" hreflang="zh"><link data-rh="true" rel="alternate" href="https://luuman.github.io/moltbot-doc/docs/gateway/logging" hreflang="x-default"><link rel="alternate" type="application/rss+xml" href="/moltbot-doc/blog/rss.xml" title="Moltbot Docs RSS Feed">
+<link rel="alternate" type="application/atom+xml" href="/moltbot-doc/blog/atom.xml" title="Moltbot Docs Atom Feed"><link rel="stylesheet" href="/moltbot-doc/assets/css/styles.484b4c98.css">
+<script src="/moltbot-doc/assets/js/runtime~main.6cf495cf.js" defer="defer"></script>
+<script src="/moltbot-doc/assets/js/main.f9205183.js" defer="defer"></script>
+</head>
+<body class="navigation-with-keyboard">
+<svg style="display: none;"><defs>
+<symbol id="theme-svg-external-link" viewBox="0 0 24 24"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"/></symbol>
+</defs></svg>
+<script>!function(){var t=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme")}catch(t){}}();document.documentElement.setAttribute("data-theme",t||"dark"),document.documentElement.setAttribute("data-theme-choice",t||"dark")}(),function(){try{const c=new URLSearchParams(window.location.search).entries();for(var[t,e]of c)if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id="__docusaurus"><div role="region" aria-label="跳到主要内容"><a class="skipToContent_fXgn" href="#__docusaurus_skipToContent_fallback">跳到主要内容</a></div><nav class="navbar navbar--fixed-top navbar_MONK" role="navigation" aria-label="Main"><div class="navbarInner_ASTH"><div class="navbarLeft_pUmY"><button aria-label="切换导航栏" aria-expanded="false" class="navbar__toggle clean-btn" type="button"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg></button><a class="brand_SXL9" href="/moltbot-doc/"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="24" height="24" rx="6" fill="var(--ifm-color-primary)"></rect><path d="M7 8.5h10M7 12h7M7 15.5h10" stroke="white" stroke-width="1.8" stroke-linecap="round"></path></svg><span class="brandTitle_XbyU">Moltbot</span></a><div class="dropdown_GrgZ"><button class="dropdownToggle_Nf_z">全部站点<svg class="dropdownArrow_Eka8" viewBox="0 0 12 12" fill="none"><path d="M2 4l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg></button><ul class="dropdownMenu_zsxH"><li><a href="https://luuman.github.io/docs-workspace/docs" class="dropdownMenuItem_VBaP">Workspace</a></li><li><a href="https://luuman.github.io/claude-doc/docs" class="dropdownMenuItem_VBaP">Claude</a></li><li><a href="https://luuman.github.io/electron-doc/docs" class="dropdownMenuItem_VBaP">Electron</a></li><li><a href="https://luuman.github.io/tauri-doc/docs" class="dropdownMenuItem_VBaP">Tauri</a></li><li><a href="https://luuman.github.io/matrx-doc/docs" class="dropdownMenuItem_VBaP">Matrx</a></li><li><a href="https://luuman.github.io/brainboard-doc/docs" class="dropdownMenuItem_VBaP">Brainboard</a></li><li><a href="https://luuman.github.io/synology-doc/docs" class="dropdownMenuItem_VBaP">Synology</a></li><li><a href="https://luuman.github.io/codex-doc/docs" class="dropdownMenuItem_VBaP">Codex</a></li><li><a href="https://luuman.github.io/ai-doc/docs" class="dropdownMenuItem_VBaP">AI</a></li></ul></div></div><div class="navbarCenter_Zdr3"><div class="root_OF3s"><span class="icon_UcOK" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor" width="15" height="15"><path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"></path></svg></span><div class="slot__FGx"><div class="navbar__search searchBarContainer_NW3z" dir="ltr"><input placeholder="搜索" aria-label="Search" class="navbar__search-input searchInput_YFbd" value=""><div class="loadingRing_RJI3 searchBarLoadingRing_YnHq"><div></div><div></div><div></div><div></div></div></div></div></div></div><div class="navbarRight_q16u"><a class="navLink_RnnM" href="/moltbot-doc/docs">Docs</a><a class="navLink_RnnM" href="/moltbot-doc/blog">Blog</a><button class="themeToggle_zD_x" aria-label="Switch to light theme" title="Light"><svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M12 18a6 6 0 1 1 0-12 6 6 0 0 1 0 12zm0-2a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM11 1h2v3h-2V1zm0 19h2v3h-2v-3zM3.515 4.929l1.414-1.414L7.05 5.636 5.636 7.05 3.515 4.93zM16.95 18.364l1.414-1.414 2.121 2.121-1.414 1.414-2.121-2.121zm2.121-14.85l1.414 1.415-2.121 2.121-1.414-1.414 2.121-2.121zM5.636 16.95l1.414 1.414-2.121 2.121-1.414-1.414 2.121-2.121zM23 11v2h-3v-2h3zM4 11v2H1v-2h3z"></path></svg></button></div></div></nav><div id="__docusaurus_skipToContent_fallback" class="theme-layout-main main-wrapper mainWrapper_z2l0"><div class="docsWrapper_hBAB"><button aria-label="回到顶部" class="clean-btn theme-back-to-top-button backToTopButton_sjWU" type="button"></button><div class="docRoot_UBD9"><main class="docMainContainer_TBSr docMainContainerEnhanced_lQrH"><div class="container padding-top--md padding-bottom--lg"><div class="row"><div class="col docItemCol_VOVn"><div class="docItemContainer_Djhp"><article><div class="tocCollapsible_ETCw theme-doc-toc-mobile tocMobile_ITEo"><button type="button" class="clean-btn tocCollapsibleButton_TO0P">本页总览</button></div><div class="theme-doc-markdown markdown"><header><h1>Logging</h1></header>
+<p>For a user-facing overview (CLI + Control UI + config), see <a class="" href="/moltbot-doc/logging">/logging</a>.</p>
+<p>Moltbot has two log “surfaces”:</p>
+<ul>
+<li class=""><strong>Console output</strong> (what you see in the terminal / Debug UI).</li>
+<li class=""><strong>File logs</strong> (JSON lines) written by the gateway logger.</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="file-based-logger">File-based logger<a href="#file-based-logger" class="hash-link" aria-label="File-based logger的直接链接" title="File-based logger的直接链接" translate="no">​</a></h2>
+<ul>
+<li class="">Default rolling log file is under <code>/tmp/moltbot/</code> (one file per day): <code>moltbot-YYYY-MM-DD.log</code>
+<ul>
+<li class="">Date uses the gateway host&#x27;s local timezone.</li>
+</ul>
+</li>
+<li class="">The log file path and level can be configured via <code>~/.clawdbot/moltbot.json</code>:
+<ul>
+<li class=""><code>logging.file</code></li>
+<li class=""><code>logging.level</code></li>
+</ul>
+</li>
+</ul>
+<p>The file format is one JSON object per line.</p>
+<p>The Control UI Logs tab tails this file via the gateway (<code>logs.tail</code>).
+CLI can do the same:</p>
+<div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#D6DEEB;--prism-background-color:#001122"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#D6DEEB;background-color:#001122"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#D6DEEB"><span class="token plain">moltbot logs --follow</span><br></span></code></pre></div></div>
+<p><strong>Verbose vs. log levels</strong></p>
+<ul>
+<li class=""><strong>File logs</strong> are controlled exclusively by <code>logging.level</code>.</li>
+<li class=""><code>--verbose</code> only affects <strong>console verbosity</strong> (and WS log style); it does <strong>not</strong>
+raise the file log level.</li>
+<li class="">To capture verbose-only details in file logs, set <code>logging.level</code> to <code>debug</code> or
+<code>trace</code>.</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="console-capture">Console capture<a href="#console-capture" class="hash-link" aria-label="Console capture的直接链接" title="Console capture的直接链接" translate="no">​</a></h2>
+<p>The CLI captures <code>console.log/info/warn/error/debug/trace</code> and writes them to file logs,
+while still printing to stdout/stderr.</p>
+<p>You can tune console verbosity independently via:</p>
+<ul>
+<li class=""><code>logging.consoleLevel</code> (default <code>info</code>)</li>
+<li class=""><code>logging.consoleStyle</code> (<code>pretty</code> | <code>compact</code> | <code>json</code>)</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="tool-summary-redaction">Tool summary redaction<a href="#tool-summary-redaction" class="hash-link" aria-label="Tool summary redaction的直接链接" title="Tool summary redaction的直接链接" translate="no">​</a></h2>
+<p>Verbose tool summaries (e.g. <code>🛠️ Exec: ...</code>) can mask sensitive tokens before they hit the
+console stream. This is <strong>tools-only</strong> and does not alter file logs.</p>
+<ul>
+<li class=""><code>logging.redactSensitive</code>: <code>off</code> | <code>tools</code> (default: <code>tools</code>)</li>
+<li class=""><code>logging.redactPatterns</code>: array of regex strings (overrides defaults)
+<ul>
+<li class="">Use raw regex strings (auto <code>gi</code>), or <code>/pattern/flags</code> if you need custom flags.</li>
+<li class="">Matches are masked by keeping the first 6 + last 4 chars (length &gt;= 18), otherwise <code>***</code>.</li>
+<li class="">Defaults cover common key assignments, CLI flags, JSON fields, bearer headers, PEM blocks, and popular token prefixes.</li>
+</ul>
+</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="gateway-websocket-logs">Gateway WebSocket logs<a href="#gateway-websocket-logs" class="hash-link" aria-label="Gateway WebSocket logs的直接链接" title="Gateway WebSocket logs的直接链接" translate="no">​</a></h2>
+<p>The gateway prints WebSocket protocol logs in two modes:</p>
+<ul>
+<li class=""><strong>Normal mode (no <code>--verbose</code>)</strong>: only “interesting” RPC results are printed:
+<ul>
+<li class="">errors (<code>ok=false</code>)</li>
+<li class="">slow calls (default threshold: <code>&gt;= 50ms</code>)</li>
+<li class="">parse errors</li>
+</ul>
+</li>
+<li class=""><strong>Verbose mode (<code>--verbose</code>)</strong>: prints all WS request/response traffic.</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="ws-log-style">WS log style<a href="#ws-log-style" class="hash-link" aria-label="WS log style的直接链接" title="WS log style的直接链接" translate="no">​</a></h3>
+<p><code>moltbot gateway</code> supports a per-gateway style switch:</p>
+<ul>
+<li class=""><code>--ws-log auto</code> (default): normal mode is optimized; verbose mode uses compact output</li>
+<li class=""><code>--ws-log compact</code>: compact output (paired request/response) when verbose</li>
+<li class=""><code>--ws-log full</code>: full per-frame output when verbose</li>
+<li class=""><code>--compact</code>: alias for <code>--ws-log compact</code></li>
+</ul>
+<p>Examples:</p>
+<div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#D6DEEB;--prism-background-color:#001122"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#D6DEEB;background-color:#001122"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#D6DEEB"><span class="token plain"># optimized (only errors/slow)</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">moltbot gateway</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain"># show all WS traffic (paired)</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">moltbot gateway --verbose --ws-log compact</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain"># show all WS traffic (full meta)</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">moltbot gateway --verbose --ws-log full</span><br></span></code></pre></div></div>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="console-formatting-subsystem-logging">Console formatting (subsystem logging)<a href="#console-formatting-subsystem-logging" class="hash-link" aria-label="Console formatting (subsystem logging)的直接链接" title="Console formatting (subsystem logging)的直接链接" translate="no">​</a></h2>
+<p>The console formatter is <strong>TTY-aware</strong> and prints consistent, prefixed lines.
+Subsystem loggers keep output grouped and scannable.</p>
+<p>Behavior:</p>
+<ul>
+<li class=""><strong>Subsystem prefixes</strong> on every line (e.g. <code>[gateway]</code>, <code>[canvas]</code>, <code>[tailscale]</code>)</li>
+<li class=""><strong>Subsystem colors</strong> (stable per subsystem) plus level coloring</li>
+<li class=""><strong>Color when output is a TTY or the environment looks like a rich terminal</strong> (<code>TERM</code>/<code>COLORTERM</code>/<code>TERM_PROGRAM</code>), respects <code>NO_COLOR</code></li>
+<li class=""><strong>Shortened subsystem prefixes</strong>: drops leading <code>gateway/</code> + <code>channels/</code>, keeps last 2 segments (e.g. <code>whatsapp/outbound</code>)</li>
+<li class=""><strong>Sub-loggers by subsystem</strong> (auto prefix + structured field <code>{ subsystem }</code>)</li>
+<li class=""><strong><code>logRaw()</code></strong> for QR/UX output (no prefix, no formatting)</li>
+<li class=""><strong>Console styles</strong> (e.g. <code>pretty | compact | json</code>)</li>
+<li class=""><strong>Console log level</strong> separate from file log level (file keeps full detail when <code>logging.level</code> is set to <code>debug</code>/<code>trace</code>)</li>
+<li class=""><strong>WhatsApp message bodies</strong> are logged at <code>debug</code> (use <code>--verbose</code> to see them)</li>
+</ul>
+<p>This keeps existing file logs stable while making interactive output scannable.</p></div></article><nav class="docusaurus-mt-lg pagination-nav" aria-label="文件选项卡"></nav></div></div><div class="col col--3"><div class="tocWrapper_xKoj"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#file-based-logger" class="table-of-contents__link toc-highlight">File-based logger</a></li><li><a href="#console-capture" class="table-of-contents__link toc-highlight">Console capture</a></li><li><a href="#tool-summary-redaction" class="table-of-contents__link toc-highlight">Tool summary redaction</a></li><li><a href="#gateway-websocket-logs" class="table-of-contents__link toc-highlight">Gateway WebSocket logs</a><ul><li><a href="#ws-log-style" class="table-of-contents__link toc-highlight">WS log style</a></li></ul></li><li><a href="#console-formatting-subsystem-logging" class="table-of-contents__link toc-highlight">Console formatting (subsystem logging)</a></li></ul></div><div class="tocFooter_Fu2z"><div class="themeGroup_RzWV" role="group" aria-label="Theme"><button class="themeBtn_tGr6" aria-label="Light theme" title="Light"><svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor" aria-hidden="true"><path d="M12 18a6 6 0 1 1 0-12 6 6 0 0 1 0 12zm0-2a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM11 1h2v3h-2V1zm0 19h2v3h-2v-3zM3.515 4.929l1.414-1.414L7.05 5.636 5.636 7.05 3.515 4.93zM16.95 18.364l1.414-1.414 2.121 2.121-1.414 1.414-2.121-2.121zm2.121-14.85l1.414 1.415-2.121 2.121-1.414-1.414 2.121-2.121zM5.636 16.95l1.414 1.414-2.121 2.121-1.414-1.414 2.121-2.121zM23 11v2h-3v-2h3zM4 11v2H1v-2h3z"></path></svg></button><button class="themeBtn_tGr6 themeBtnActive_A6tm" aria-label="Dark theme" title="Dark"><svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor" aria-hidden="true"><path d="M11.38 2.019a7.5 7.5 0 1 0 10.6 10.6C21.83 17.963 17.315 22 12.002 22 6.477 22 2 17.523 2 12c0-5.314 4.038-9.827 9.38-10.28z"></path></svg></button></div></div></div></div></div></div></main></div></div></div><footer class="theme-layout-footer footer footer--dark"><div class="container container-fluid"><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2026 Moltbot Docs.</div></div></div></footer></div>
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="zh" dir="ltr" class="docs-wrapper plugin-docs plugin-id-default docs-version-current docs-doc-page docs-doc-id-concepts/presence" data-has-hydrated="false">
+<head>
+<meta charset="UTF-8">
+<meta name="generator" content="Docusaurus v3.9.2">
+<title data-rh="true">Presence | Moltbot Docs</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:url" content="https://luuman.github.io/moltbot-doc/docs/concepts/presence"><meta data-rh="true" property="og:locale" content="zh"><meta data-rh="true" name="docusaurus_locale" content="zh"><meta data-rh="true" name="docsearch:language" content="zh"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="Presence | Moltbot Docs"><meta data-rh="true" name="description" content="Moltbot “presence” is a lightweight, best‑effort view of:"><meta data-rh="true" property="og:description" content="Moltbot “presence” is a lightweight, best‑effort view of:"><link data-rh="true" rel="icon" href="/moltbot-doc/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://luuman.github.io/moltbot-doc/docs/concepts/presence"><link data-rh="true" rel="alternate" href="https://luuman.github.io/moltbot-doc/docs/concepts/presence" hreflang="zh"><link data-rh="true" rel="alternate" href="https://luuman.github.io/moltbot-doc/docs/concepts/presence" hreflang="x-default"><link rel="alternate" type="application/rss+xml" href="/moltbot-doc/blog/rss.xml" title="Moltbot Docs RSS Feed">
+<link rel="alternate" type="application/atom+xml" href="/moltbot-doc/blog/atom.xml" title="Moltbot Docs Atom Feed"><link rel="stylesheet" href="/moltbot-doc/assets/css/styles.484b4c98.css">
+<script src="/moltbot-doc/assets/js/runtime~main.6cf495cf.js" defer="defer"></script>
+<script src="/moltbot-doc/assets/js/main.f9205183.js" defer="defer"></script>
+</head>
+<body class="navigation-with-keyboard">
+<svg style="display: none;"><defs>
+<symbol id="theme-svg-external-link" viewBox="0 0 24 24"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"/></symbol>
+</defs></svg>
+<script>!function(){var t=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme")}catch(t){}}();document.documentElement.setAttribute("data-theme",t||"dark"),document.documentElement.setAttribute("data-theme-choice",t||"dark")}(),function(){try{const c=new URLSearchParams(window.location.search).entries();for(var[t,e]of c)if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id="__docusaurus"><div role="region" aria-label="跳到主要内容"><a class="skipToContent_fXgn" href="#__docusaurus_skipToContent_fallback">跳到主要内容</a></div><nav class="navbar navbar--fixed-top navbar_MONK" role="navigation" aria-label="Main"><div class="navbarInner_ASTH"><div class="navbarLeft_pUmY"><button aria-label="切换导航栏" aria-expanded="false" class="navbar__toggle clean-btn" type="button"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg></button><a class="brand_SXL9" href="/moltbot-doc/"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="24" height="24" rx="6" fill="var(--ifm-color-primary)"></rect><path d="M7 8.5h10M7 12h7M7 15.5h10" stroke="white" stroke-width="1.8" stroke-linecap="round"></path></svg><span class="brandTitle_XbyU">Moltbot</span></a><div class="dropdown_GrgZ"><button class="dropdownToggle_Nf_z">全部站点<svg class="dropdownArrow_Eka8" viewBox="0 0 12 12" fill="none"><path d="M2 4l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg></button><ul class="dropdownMenu_zsxH"><li><a href="https://luuman.github.io/docs-workspace/docs" class="dropdownMenuItem_VBaP">Workspace</a></li><li><a href="https://luuman.github.io/claude-doc/docs" class="dropdownMenuItem_VBaP">Claude</a></li><li><a href="https://luuman.github.io/electron-doc/docs" class="dropdownMenuItem_VBaP">Electron</a></li><li><a href="https://luuman.github.io/tauri-doc/docs" class="dropdownMenuItem_VBaP">Tauri</a></li><li><a href="https://luuman.github.io/matrx-doc/docs" class="dropdownMenuItem_VBaP">Matrx</a></li><li><a href="https://luuman.github.io/brainboard-doc/docs" class="dropdownMenuItem_VBaP">Brainboard</a></li><li><a href="https://luuman.github.io/synology-doc/docs" class="dropdownMenuItem_VBaP">Synology</a></li><li><a href="https://luuman.github.io/codex-doc/docs" class="dropdownMenuItem_VBaP">Codex</a></li><li><a href="https://luuman.github.io/ai-doc/docs" class="dropdownMenuItem_VBaP">AI</a></li></ul></div></div><div class="navbarCenter_Zdr3"><div class="root_OF3s"><span class="icon_UcOK" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor" width="15" height="15"><path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"></path></svg></span><div class="slot__FGx"><div class="navbar__search searchBarContainer_NW3z" dir="ltr"><input placeholder="搜索" aria-label="Search" class="navbar__search-input searchInput_YFbd" value=""><div class="loadingRing_RJI3 searchBarLoadingRing_YnHq"><div></div><div></div><div></div><div></div></div></div></div></div></div><div class="navbarRight_q16u"><a class="navLink_RnnM" href="/moltbot-doc/docs">Docs</a><a class="navLink_RnnM" href="/moltbot-doc/blog">Blog</a><button class="themeToggle_zD_x" aria-label="Switch to light theme" title="Light"><svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M12 18a6 6 0 1 1 0-12 6 6 0 0 1 0 12zm0-2a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM11 1h2v3h-2V1zm0 19h2v3h-2v-3zM3.515 4.929l1.414-1.414L7.05 5.636 5.636 7.05 3.515 4.93zM16.95 18.364l1.414-1.414 2.121 2.121-1.414 1.414-2.121-2.121zm2.121-14.85l1.414 1.415-2.121 2.121-1.414-1.414 2.121-2.121zM5.636 16.95l1.414 1.414-2.121 2.121-1.414-1.414 2.121-2.121zM23 11v2h-3v-2h3zM4 11v2H1v-2h3z"></path></svg></button></div></div></nav><div id="__docusaurus_skipToContent_fallback" class="theme-layout-main main-wrapper mainWrapper_z2l0"><div class="docsWrapper_hBAB"><button aria-label="回到顶部" class="clean-btn theme-back-to-top-button backToTopButton_sjWU" type="button"></button><div class="docRoot_UBD9"><main class="docMainContainer_TBSr docMainContainerEnhanced_lQrH"><div class="container padding-top--md padding-bottom--lg"><div class="row"><div class="col docItemCol_VOVn"><div class="docItemContainer_Djhp"><article><div class="tocCollapsible_ETCw theme-doc-toc-mobile tocMobile_ITEo"><button type="button" class="clean-btn tocCollapsibleButton_TO0P">本页总览</button></div><div class="theme-doc-markdown markdown"><header><h1>Presence</h1></header>
+<p>Moltbot “presence” is a lightweight, best‑effort view of:</p>
+<ul>
+<li class="">the <strong>Gateway</strong> itself, and</li>
+<li class=""><strong>clients connected to the Gateway</strong> (mac app, WebChat, CLI, etc.)</li>
+</ul>
+<p>Presence is used primarily to render the macOS app’s <strong>Instances</strong> tab and to
+provide quick operator visibility.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="presence-fields-what-shows-up">Presence fields (what shows up)<a href="#presence-fields-what-shows-up" class="hash-link" aria-label="Presence fields (what shows up)的直接链接" title="Presence fields (what shows up)的直接链接" translate="no">​</a></h2>
+<p>Presence entries are structured objects with fields like:</p>
+<ul>
+<li class=""><code>instanceId</code> (optional but strongly recommended): stable client identity (usually <code>connect.client.instanceId</code>)</li>
+<li class=""><code>host</code>: human‑friendly host name</li>
+<li class=""><code>ip</code>: best‑effort IP address</li>
+<li class=""><code>version</code>: client version string</li>
+<li class=""><code>deviceFamily</code> / <code>modelIdentifier</code>: hardware hints</li>
+<li class=""><code>mode</code>: <code>ui</code>, <code>webchat</code>, <code>cli</code>, <code>backend</code>, <code>probe</code>, <code>test</code>, <code>node</code>, ...</li>
+<li class=""><code>lastInputSeconds</code>: “seconds since last user input” (if known)</li>
+<li class=""><code>reason</code>: <code>self</code>, <code>connect</code>, <code>node-connected</code>, <code>periodic</code>, ...</li>
+<li class=""><code>ts</code>: last update timestamp (ms since epoch)</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="producers-where-presence-comes-from">Producers (where presence comes from)<a href="#producers-where-presence-comes-from" class="hash-link" aria-label="Producers (where presence comes from)的直接链接" title="Producers (where presence comes from)的直接链接" translate="no">​</a></h2>
+<p>Presence entries are produced by multiple sources and <strong>merged</strong>.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="1-gateway-self-entry">1) Gateway self entry<a href="#1-gateway-self-entry" class="hash-link" aria-label="1) Gateway self entry的直接链接" title="1) Gateway self entry的直接链接" translate="no">​</a></h3>
+<p>The Gateway always seeds a “self” entry at startup so UIs show the gateway host
+even before any clients connect.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="2-websocket-connect">2) WebSocket connect<a href="#2-websocket-connect" class="hash-link" aria-label="2) WebSocket connect的直接链接" title="2) WebSocket connect的直接链接" translate="no">​</a></h3>
+<p>Every WS client begins with a <code>connect</code> request. On successful handshake the
+Gateway upserts a presence entry for that connection.</p>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="why-oneoff-cli-commands-dont-show-up">Why one‑off CLI commands don’t show up<a href="#why-oneoff-cli-commands-dont-show-up" class="hash-link" aria-label="Why one‑off CLI commands don’t show up的直接链接" title="Why one‑off CLI commands don’t show up的直接链接" translate="no">​</a></h4>
+<p>The CLI often connects for short, one‑off commands. To avoid spamming the
+Instances list, <code>client.mode === &quot;cli&quot;</code> is <strong>not</strong> turned into a presence entry.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="3-system-event-beacons">3) <code>system-event</code> beacons<a href="#3-system-event-beacons" class="hash-link" aria-label="3-system-event-beacons的直接链接" title="3-system-event-beacons的直接链接" translate="no">​</a></h3>
+<p>Clients can send richer periodic beacons via the <code>system-event</code> method. The mac
+app uses this to report host name, IP, and <code>lastInputSeconds</code>.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="4-node-connects-role-node">4) Node connects (role: node)<a href="#4-node-connects-role-node" class="hash-link" aria-label="4) Node connects (role: node)的直接链接" title="4) Node connects (role: node)的直接链接" translate="no">​</a></h3>
+<p>When a node connects over the Gateway WebSocket with <code>role: node</code>, the Gateway
+upserts a presence entry for that node (same flow as other WS clients).</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="merge--dedupe-rules-why-instanceid-matters">Merge + dedupe rules (why <code>instanceId</code> matters)<a href="#merge--dedupe-rules-why-instanceid-matters" class="hash-link" aria-label="merge--dedupe-rules-why-instanceid-matters的直接链接" title="merge--dedupe-rules-why-instanceid-matters的直接链接" translate="no">​</a></h2>
+<p>Presence entries are stored in a single in‑memory map:</p>
+<ul>
+<li class="">Entries are keyed by a <strong>presence key</strong>.</li>
+<li class="">The best key is a stable <code>instanceId</code> (from <code>connect.client.instanceId</code>) that survives restarts.</li>
+<li class="">Keys are case‑insensitive.</li>
+</ul>
+<p>If a client reconnects without a stable <code>instanceId</code>, it may show up as a
+<strong>duplicate</strong> row.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="ttl-and-bounded-size">TTL and bounded size<a href="#ttl-and-bounded-size" class="hash-link" aria-label="TTL and bounded size的直接链接" title="TTL and bounded size的直接链接" translate="no">​</a></h2>
+<p>Presence is intentionally ephemeral:</p>
+<ul>
+<li class=""><strong>TTL:</strong> entries older than 5 minutes are pruned</li>
+<li class=""><strong>Max entries:</strong> 200 (oldest dropped first)</li>
+</ul>
+<p>This keeps the list fresh and avoids unbounded memory growth.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="remotetunnel-caveat-loopback-ips">Remote/tunnel caveat (loopback IPs)<a href="#remotetunnel-caveat-loopback-ips" class="hash-link" aria-label="Remote/tunnel caveat (loopback IPs)的直接链接" title="Remote/tunnel caveat (loopback IPs)的直接链接" translate="no">​</a></h2>
+<p>When a client connects over an SSH tunnel / local port forward, the Gateway may
+see the remote address as <code>127.0.0.1</code>. To avoid overwriting a good client‑reported
+IP, loopback remote addresses are ignored.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="consumers">Consumers<a href="#consumers" class="hash-link" aria-label="Consumers的直接链接" title="Consumers的直接链接" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="macos-instances-tab">macOS Instances tab<a href="#macos-instances-tab" class="hash-link" aria-label="macOS Instances tab的直接链接" title="macOS Instances tab的直接链接" translate="no">​</a></h3>
+<p>The macOS app renders the output of <code>system-presence</code> and applies a small status
+indicator (Active/Idle/Stale) based on the age of the last update.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="debugging-tips">Debugging tips<a href="#debugging-tips" class="hash-link" aria-label="Debugging tips的直接链接" title="Debugging tips的直接链接" translate="no">​</a></h2>
+<ul>
+<li class="">To see the raw list, call <code>system-presence</code> against the Gateway.</li>
+<li class="">If you see duplicates:
+<ul>
+<li class="">confirm clients send a stable <code>client.instanceId</code> in the handshake</li>
+<li class="">confirm periodic beacons use the same <code>instanceId</code></li>
+<li class="">check whether the connection‑derived entry is missing <code>instanceId</code> (duplicates are expected)</li>
+</ul>
+</li>
+</ul></div></article><nav class="docusaurus-mt-lg pagination-nav" aria-label="文件选项卡"></nav></div></div><div class="col col--3"><div class="tocWrapper_xKoj"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#presence-fields-what-shows-up" class="table-of-contents__link toc-highlight">Presence fields (what shows up)</a></li><li><a href="#producers-where-presence-comes-from" class="table-of-contents__link toc-highlight">Producers (where presence comes from)</a><ul><li><a href="#1-gateway-self-entry" class="table-of-contents__link toc-highlight">1) Gateway self entry</a></li><li><a href="#2-websocket-connect" class="table-of-contents__link toc-highlight">2) WebSocket connect</a></li><li><a href="#3-system-event-beacons" class="table-of-contents__link toc-highlight">3) <code>system-event</code> beacons</a></li><li><a href="#4-node-connects-role-node" class="table-of-contents__link toc-highlight">4) Node connects (role: node)</a></li></ul></li><li><a href="#merge--dedupe-rules-why-instanceid-matters" class="table-of-contents__link toc-highlight">Merge + dedupe rules (why <code>instanceId</code> matters)</a></li><li><a href="#ttl-and-bounded-size" class="table-of-contents__link toc-highlight">TTL and bounded size</a></li><li><a href="#remotetunnel-caveat-loopback-ips" class="table-of-contents__link toc-highlight">Remote/tunnel caveat (loopback IPs)</a></li><li><a href="#consumers" class="table-of-contents__link toc-highlight">Consumers</a><ul><li><a href="#macos-instances-tab" class="table-of-contents__link toc-highlight">macOS Instances tab</a></li></ul></li><li><a href="#debugging-tips" class="table-of-contents__link toc-highlight">Debugging tips</a></li></ul></div><div class="tocFooter_Fu2z"><div class="themeGroup_RzWV" role="group" aria-label="Theme"><button class="themeBtn_tGr6" aria-label="Light theme" title="Light"><svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor" aria-hidden="true"><path d="M12 18a6 6 0 1 1 0-12 6 6 0 0 1 0 12zm0-2a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM11 1h2v3h-2V1zm0 19h2v3h-2v-3zM3.515 4.929l1.414-1.414L7.05 5.636 5.636 7.05 3.515 4.93zM16.95 18.364l1.414-1.414 2.121 2.121-1.414 1.414-2.121-2.121zm2.121-14.85l1.414 1.415-2.121 2.121-1.414-1.414 2.121-2.121zM5.636 16.95l1.414 1.414-2.121 2.121-1.414-1.414 2.121-2.121zM23 11v2h-3v-2h3zM4 11v2H1v-2h3z"></path></svg></button><button class="themeBtn_tGr6 themeBtnActive_A6tm" aria-label="Dark theme" title="Dark"><svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor" aria-hidden="true"><path d="M11.38 2.019a7.5 7.5 0 1 0 10.6 10.6C21.83 17.963 17.315 22 12.002 22 6.477 22 2 17.523 2 12c0-5.314 4.038-9.827 9.38-10.28z"></path></svg></button></div></div></div></div></div></div></main></div></div></div><footer class="theme-layout-footer footer footer--dark"><div class="container container-fluid"><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2026 Moltbot Docs.</div></div></div></footer></div>
+</body>
+</html>

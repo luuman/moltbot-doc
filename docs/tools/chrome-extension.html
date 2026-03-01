@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="zh" dir="ltr" class="docs-wrapper plugin-docs plugin-id-default docs-version-current docs-doc-page docs-doc-id-tools/chrome-extension" data-has-hydrated="false">
+<head>
+<meta charset="UTF-8">
+<meta name="generator" content="Docusaurus v3.9.2">
+<title data-rh="true">Chrome扩展（浏览器中继） | Moltbot Docs</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:url" content="https://luuman.github.io/moltbot-doc/docs/tools/chrome-extension"><meta data-rh="true" property="og:locale" content="zh"><meta data-rh="true" name="docusaurus_locale" content="zh"><meta data-rh="true" name="docsearch:language" content="zh"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="Chrome扩展（浏览器中继） | Moltbot Docs"><meta data-rh="true" name="description" content="Moltbot Chrome扩展允许代理控制您的现有Chrome标签页（您的普通Chrome窗口），而不是启动一个单独的clawd管理的Chrome配置文件。"><meta data-rh="true" property="og:description" content="Moltbot Chrome扩展允许代理控制您的现有Chrome标签页（您的普通Chrome窗口），而不是启动一个单独的clawd管理的Chrome配置文件。"><link data-rh="true" rel="icon" href="/moltbot-doc/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://luuman.github.io/moltbot-doc/docs/tools/chrome-extension"><link data-rh="true" rel="alternate" href="https://luuman.github.io/moltbot-doc/docs/tools/chrome-extension" hreflang="zh"><link data-rh="true" rel="alternate" href="https://luuman.github.io/moltbot-doc/docs/tools/chrome-extension" hreflang="x-default"><link rel="alternate" type="application/rss+xml" href="/moltbot-doc/blog/rss.xml" title="Moltbot Docs RSS Feed">
+<link rel="alternate" type="application/atom+xml" href="/moltbot-doc/blog/atom.xml" title="Moltbot Docs Atom Feed"><link rel="stylesheet" href="/moltbot-doc/assets/css/styles.484b4c98.css">
+<script src="/moltbot-doc/assets/js/runtime~main.6cf495cf.js" defer="defer"></script>
+<script src="/moltbot-doc/assets/js/main.f9205183.js" defer="defer"></script>
+</head>
+<body class="navigation-with-keyboard">
+<svg style="display: none;"><defs>
+<symbol id="theme-svg-external-link" viewBox="0 0 24 24"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"/></symbol>
+</defs></svg>
+<script>!function(){var t=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme")}catch(t){}}();document.documentElement.setAttribute("data-theme",t||"dark"),document.documentElement.setAttribute("data-theme-choice",t||"dark")}(),function(){try{const c=new URLSearchParams(window.location.search).entries();for(var[t,e]of c)if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id="__docusaurus"><div role="region" aria-label="跳到主要内容"><a class="skipToContent_fXgn" href="#__docusaurus_skipToContent_fallback">跳到主要内容</a></div><nav class="navbar navbar--fixed-top navbar_MONK" role="navigation" aria-label="Main"><div class="navbarInner_ASTH"><div class="navbarLeft_pUmY"><button aria-label="切换导航栏" aria-expanded="false" class="navbar__toggle clean-btn" type="button"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg></button><a class="brand_SXL9" href="/moltbot-doc/"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="24" height="24" rx="6" fill="var(--ifm-color-primary)"></rect><path d="M7 8.5h10M7 12h7M7 15.5h10" stroke="white" stroke-width="1.8" stroke-linecap="round"></path></svg><span class="brandTitle_XbyU">Moltbot</span></a><div class="dropdown_GrgZ"><button class="dropdownToggle_Nf_z">全部站点<svg class="dropdownArrow_Eka8" viewBox="0 0 12 12" fill="none"><path d="M2 4l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg></button><ul class="dropdownMenu_zsxH"><li><a href="https://luuman.github.io/docs-workspace/docs" class="dropdownMenuItem_VBaP">Workspace</a></li><li><a href="https://luuman.github.io/claude-doc/docs" class="dropdownMenuItem_VBaP">Claude</a></li><li><a href="https://luuman.github.io/electron-doc/docs" class="dropdownMenuItem_VBaP">Electron</a></li><li><a href="https://luuman.github.io/tauri-doc/docs" class="dropdownMenuItem_VBaP">Tauri</a></li><li><a href="https://luuman.github.io/matrx-doc/docs" class="dropdownMenuItem_VBaP">Matrx</a></li><li><a href="https://luuman.github.io/brainboard-doc/docs" class="dropdownMenuItem_VBaP">Brainboard</a></li><li><a href="https://luuman.github.io/synology-doc/docs" class="dropdownMenuItem_VBaP">Synology</a></li><li><a href="https://luuman.github.io/codex-doc/docs" class="dropdownMenuItem_VBaP">Codex</a></li><li><a href="https://luuman.github.io/ai-doc/docs" class="dropdownMenuItem_VBaP">AI</a></li></ul></div></div><div class="navbarCenter_Zdr3"><div class="root_OF3s"><span class="icon_UcOK" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor" width="15" height="15"><path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"></path></svg></span><div class="slot__FGx"><div class="navbar__search searchBarContainer_NW3z" dir="ltr"><input placeholder="搜索" aria-label="Search" class="navbar__search-input searchInput_YFbd" value=""><div class="loadingRing_RJI3 searchBarLoadingRing_YnHq"><div></div><div></div><div></div><div></div></div></div></div></div></div><div class="navbarRight_q16u"><a class="navLink_RnnM" href="/moltbot-doc/docs">Docs</a><a class="navLink_RnnM" href="/moltbot-doc/blog">Blog</a><button class="themeToggle_zD_x" aria-label="Switch to light theme" title="Light"><svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M12 18a6 6 0 1 1 0-12 6 6 0 0 1 0 12zm0-2a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM11 1h2v3h-2V1zm0 19h2v3h-2v-3zM3.515 4.929l1.414-1.414L7.05 5.636 5.636 7.05 3.515 4.93zM16.95 18.364l1.414-1.414 2.121 2.121-1.414 1.414-2.121-2.121zm2.121-14.85l1.414 1.415-2.121 2.121-1.414-1.414 2.121-2.121zM5.636 16.95l1.414 1.414-2.121 2.121-1.414-1.414 2.121-2.121zM23 11v2h-3v-2h3zM4 11v2H1v-2h3z"></path></svg></button></div></div></nav><div id="__docusaurus_skipToContent_fallback" class="theme-layout-main main-wrapper mainWrapper_z2l0"><div class="docsWrapper_hBAB"><button aria-label="回到顶部" class="clean-btn theme-back-to-top-button backToTopButton_sjWU" type="button"></button><div class="docRoot_UBD9"><main class="docMainContainer_TBSr docMainContainerEnhanced_lQrH"><div class="container padding-top--md padding-bottom--lg"><div class="row"><div class="col docItemCol_VOVn"><div class="docItemContainer_Djhp"><article><div class="tocCollapsible_ETCw theme-doc-toc-mobile tocMobile_ITEo"><button type="button" class="clean-btn tocCollapsibleButton_TO0P">本页总览</button></div><div class="theme-doc-markdown markdown"><header><h1>Chrome扩展（浏览器中继）</h1></header>
+<p>Moltbot Chrome扩展允许代理控制您的<strong>现有Chrome标签页</strong>（您的普通Chrome窗口），而不是启动一个单独的clawd管理的Chrome配置文件。</p>
+<p>附加/分离通过<strong>单个Chrome工具栏按钮</strong>完成。</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="它是什么概念">它是什么（概念）<a href="#它是什么概念" class="hash-link" aria-label="它是什么（概念）的直接链接" title="它是什么（概念）的直接链接" translate="no">​</a></h2>
+<p>有三个部分：</p>
+<ul>
+<li class=""><strong>浏览器控制服务</strong>（网关或节点）：代理/工具调用的API（通过网关）</li>
+<li class=""><strong>本地中继服务器</strong>（环回CDP）：在控制服务器和扩展之间建立桥梁（默认为<code>http://127.0.0.1:18792</code>）</li>
+<li class=""><strong>Chrome MV3扩展</strong>：使用<code>chrome.debugger</code>附加到活动标签页并将CDP消息传输到中继</li>
+</ul>
+<p>然后Moltbot通过正常的<code>browser</code>工具界面控制附加的标签页（选择正确的配置文件）。</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="安装加载未打包">安装/加载（未打包）<a href="#安装加载未打包" class="hash-link" aria-label="安装/加载（未打包）的直接链接" title="安装/加载（未打包）的直接链接" translate="no">​</a></h2>
+<ol>
+<li class="">将扩展安装到稳定的本地路径：</li>
+</ol>
+<div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#D6DEEB;--prism-background-color:#001122"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#D6DEEB;background-color:#001122"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#D6DEEB"><span class="token plain">moltbot browser extension install</span><br></span></code></pre></div></div>
+<ol start="2">
+<li class="">打印已安装的扩展目录路径：</li>
+</ol>
+<div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#D6DEEB;--prism-background-color:#001122"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#D6DEEB;background-color:#001122"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#D6DEEB"><span class="token plain">moltbot browser extension path</span><br></span></code></pre></div></div>
+<ol start="3">
+<li class="">Chrome → <code>chrome://extensions</code></li>
+</ol>
+<ul>
+<li class="">启用“开发者模式”</li>
+<li class="">“加载已解压的扩展程序” → 选择上面打印的目录</li>
+</ul>
+<ol start="4">
+<li class="">固定扩展。</li>
+</ol>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="更新无需构建步骤">更新（无需构建步骤）<a href="#更新无需构建步骤" class="hash-link" aria-label="更新（无需构建步骤）的直接链接" title="更新（无需构建步骤）的直接链接" translate="no">​</a></h2>
+<p>扩展作为静态文件随Moltbot发行版（npm包）一起提供。没有单独的“构建”步骤。</p>
+<p>升级Moltbot后：</p>
+<ul>
+<li class="">重新运行<code>moltbot browser extension install</code>以刷新Moltbot状态目录下的已安装文件。</li>
+<li class="">Chrome → <code>chrome://extensions</code> → 点击扩展上的“重新加载”。</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="使用无需额外配置">使用（无需额外配置）<a href="#使用无需额外配置" class="hash-link" aria-label="使用（无需额外配置）的直接链接" title="使用（无需额外配置）的直接链接" translate="no">​</a></h2>
+<p>Moltbot内置了一个名为<code>chrome</code>的浏览器配置文件，它针对默认端口上的扩展中继。</p>
+<p>使用方法：</p>
+<ul>
+<li class="">CLI：<code>moltbot browser --browser-profile chrome tabs</code></li>
+<li class="">代理工具：带<code>profile=&quot;chrome&quot;</code>的<code>browser</code></li>
+</ul>
+<p>如果您想要不同的名称或不同的中继端口，创建您自己的配置文件：</p>
+<div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#D6DEEB;--prism-background-color:#001122"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#D6DEEB;background-color:#001122"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#D6DEEB"><span class="token plain">moltbot browser create-profile \</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">  --name my-chrome \</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">  --driver extension \</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">  --cdp-url http://127.0.0.1:18792 \</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">  --color &quot;#00AA00&quot;</span><br></span></code></pre></div></div>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="附加分离工具栏按钮">附加/分离（工具栏按钮）<a href="#附加分离工具栏按钮" class="hash-link" aria-label="附加/分离（工具栏按钮）的直接链接" title="附加/分离（工具栏按钮）的直接链接" translate="no">​</a></h2>
+<ul>
+<li class="">打开您希望Moltbot控制的标签页。</li>
+<li class="">点击扩展图标。
+<ul>
+<li class="">附加时徽章显示<code>ON</code>。</li>
+</ul>
+</li>
+<li class="">再次点击以分离。</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="它控制哪个标签页">它控制哪个标签页？<a href="#它控制哪个标签页" class="hash-link" aria-label="它控制哪个标签页？的直接链接" title="它控制哪个标签页？的直接链接" translate="no">​</a></h2>
+<ul>
+<li class="">它<strong>不</strong>自动控制“您正在查看的任何标签页”。</li>
+<li class="">它<strong>仅控制您通过点击工具栏按钮显式附加的标签页</strong>。</li>
+<li class="">要切换：打开另一个标签页并在那里点击扩展图标。</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="徽章常见错误">徽章+常见错误<a href="#徽章常见错误" class="hash-link" aria-label="徽章+常见错误的直接链接" title="徽章+常见错误的直接链接" translate="no">​</a></h2>
+<ul>
+<li class=""><code>ON</code>：已附加；Moltbot可以驱动该标签页。</li>
+<li class=""><code>…</code>：正在连接到本地中继。</li>
+<li class=""><code>!</code>：中继不可达（最常见：浏览器中继服务器在此机器上未运行）。</li>
+</ul>
+<p>如果看到<code>!</code>：</p>
+<ul>
+<li class="">确保网关在本地运行（默认设置），或者如果网关在其他地方运行，请在此机器上运行节点主机。</li>
+<li class="">打开扩展选项页面；它显示中继是否可达。</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="远程网关使用节点主机">远程网关（使用节点主机）<a href="#远程网关使用节点主机" class="hash-link" aria-label="远程网关（使用节点主机）的直接链接" title="远程网关（使用节点主机）的直接链接" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="本地网关与chrome在同一台机器上通常无需额外步骤">本地网关（与Chrome在同一台机器上）—通常<strong>无需额外步骤</strong><a href="#本地网关与chrome在同一台机器上通常无需额外步骤" class="hash-link" aria-label="本地网关与chrome在同一台机器上通常无需额外步骤的直接链接" title="本地网关与chrome在同一台机器上通常无需额外步骤的直接链接" translate="no">​</a></h3>
+<p>如果网关与Chrome在同一台机器上运行，它会在环回上启动浏览器控制服务
+并自动启动中继服务器。扩展与本地中继通信；CLI/工具调用转到网关。</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="远程网关网关在其他地方运行运行节点主机">远程网关（网关在其他地方运行）—<strong>运行节点主机</strong><a href="#远程网关网关在其他地方运行运行节点主机" class="hash-link" aria-label="远程网关网关在其他地方运行运行节点主机的直接链接" title="远程网关网关在其他地方运行运行节点主机的直接链接" translate="no">​</a></h3>
+<p>如果您的网关在另一台机器上运行，请在运行Chrome的机器上启动节点主机。
+网关将把浏览器操作代理到该节点；扩展+中继保持在浏览器机器本地。</p>
+<p>如果连接了多个节点，请使用<code>gateway.nodes.browser.node</code>固定一个或设置<code>gateway.nodes.browser.mode</code>。</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="沙盒工具容器">沙盒（工具容器）<a href="#沙盒工具容器" class="hash-link" aria-label="沙盒（工具容器）的直接链接" title="沙盒（工具容器）的直接链接" translate="no">​</a></h2>
+<p>如果您的代理会话是沙盒化的（<code>agents.defaults.sandbox.mode != &quot;off&quot;</code>），<code>browser</code>工具可能会受到限制：</p>
+<ul>
+<li class="">默认情况下，沙盒会话通常针对<strong>沙盒浏览器</strong>（<code>target=&quot;sandbox&quot;</code>），而不是您的主机Chrome。</li>
+<li class="">Chrome扩展中继接管需要控制<strong>主机</strong>浏览器控制服务器。</li>
+</ul>
+<p>选项：</p>
+<ul>
+<li class="">最简单：从<strong>非沙盒</strong>会话/代理使用扩展。</li>
+<li class="">或者允许沙盒会话的主机浏览器控制：</li>
+</ul>
+<div class="language-json5 codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#D6DEEB;--prism-background-color:#001122"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-json5 codeBlock_bY9V thin-scrollbar" style="color:#D6DEEB;background-color:#001122"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#D6DEEB"><span class="token plain">{</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">  agents: {</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">    defaults: {</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">      sandbox: {</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">        browser: {</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">          allowHostControl: true</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">        }</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">      }</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">    }</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">  }</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">}</span><br></span></code></pre></div></div>
+<p>然后确保工具未被工具策略拒绝，并且（如有需要）使用<code>target=&quot;host&quot;</code>调用<code>browser</code>。</p>
+<p>调试：<code>moltbot sandbox explain</code></p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="远程访问提示">远程访问提示<a href="#远程访问提示" class="hash-link" aria-label="远程访问提示的直接链接" title="远程访问提示的直接链接" translate="no">​</a></h2>
+<ul>
+<li class="">将网关和节点主机保持在同一个tailnet上；避免将中继端口暴露给LAN或公共互联网。</li>
+<li class="">有意配对节点；如果您不想要远程控制，请禁用浏览器代理路由（<code>gateway.nodes.browser.mode=&quot;off&quot;</code>）。</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="扩展路径的工作原理">&quot;扩展路径&quot;的工作原理<a href="#扩展路径的工作原理" class="hash-link" aria-label="&quot;扩展路径&quot;的工作原理的直接链接" title="&quot;扩展路径&quot;的工作原理的直接链接" translate="no">​</a></h2>
+<p><code>moltbot browser extension path</code>打印包含扩展文件的<strong>已安装</strong>磁盘目录。</p>
+<p>CLI有意<strong>不</strong>打印<code>node_modules</code>路径。始终先运行<code>moltbot browser extension install</code>将扩展复制到Moltbot状态目录下的稳定位置。</p>
+<p>如果您移动或删除该安装目录，Chrome将标记扩展为损坏，直到您从有效路径重新加载它。</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="安全影响请阅读">安全影响（请阅读）<a href="#安全影响请阅读" class="hash-link" aria-label="安全影响（请阅读）的直接链接" title="安全影响（请阅读）的直接链接" translate="no">​</a></h2>
+<p>这很强大但也很危险。将其视为给模型&quot;控制您的浏览器的手&quot;。</p>
+<ul>
+<li class="">扩展使用Chrome的调试器API（<code>chrome.debugger</code>）。附加时，模型可以：
+<ul>
+<li class="">在该标签页中点击/输入/导航</li>
+<li class="">读取页面内容</li>
+<li class="">访问标签页登录会话可以访问的任何内容</li>
+</ul>
+</li>
+<li class=""><strong>这不像专用的clawd管理配置文件那样隔离</strong>。
+<ul>
+<li class="">如果您附加到您的日常驱动配置文件/标签页，您就授予了对该账户状态的访问权限。</li>
+</ul>
+</li>
+</ul>
+<p>建议：</p>
+<ul>
+<li class="">为扩展中继使用首选专用的Chrome配置文件（与您的个人浏览分开）。</li>
+<li class="">将网关和任何节点主机保持仅限tailnet；依赖网关身份验证+节点配对。</li>
+<li class="">避免通过LAN（<code>0.0.0.0</code>）暴露中继端口，避免使用Funnel（公共）。</li>
+</ul>
+<p>相关：</p>
+<ul>
+<li class="">浏览器工具概述：<a class="" href="/moltbot-doc/tools/browser">浏览器</a></li>
+<li class="">安全审计：<a class="" href="/moltbot-doc/gateway/security">安全</a></li>
+<li class="">Tailscale设置：<a class="" href="/moltbot-doc/gateway/tailscale">Tailscale</a></li>
+</ul></div></article><nav class="docusaurus-mt-lg pagination-nav" aria-label="文件选项卡"></nav></div></div><div class="col col--3"><div class="tocWrapper_xKoj"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#它是什么概念" class="table-of-contents__link toc-highlight">它是什么（概念）</a></li><li><a href="#安装加载未打包" class="table-of-contents__link toc-highlight">安装/加载（未打包）</a></li><li><a href="#更新无需构建步骤" class="table-of-contents__link toc-highlight">更新（无需构建步骤）</a></li><li><a href="#使用无需额外配置" class="table-of-contents__link toc-highlight">使用（无需额外配置）</a></li><li><a href="#附加分离工具栏按钮" class="table-of-contents__link toc-highlight">附加/分离（工具栏按钮）</a></li><li><a href="#它控制哪个标签页" class="table-of-contents__link toc-highlight">它控制哪个标签页？</a></li><li><a href="#徽章常见错误" class="table-of-contents__link toc-highlight">徽章+常见错误</a></li><li><a href="#远程网关使用节点主机" class="table-of-contents__link toc-highlight">远程网关（使用节点主机）</a><ul><li><a href="#本地网关与chrome在同一台机器上通常无需额外步骤" class="table-of-contents__link toc-highlight">本地网关（与Chrome在同一台机器上）—通常<strong>无需额外步骤</strong></a></li><li><a href="#远程网关网关在其他地方运行运行节点主机" class="table-of-contents__link toc-highlight">远程网关（网关在其他地方运行）—<strong>运行节点主机</strong></a></li></ul></li><li><a href="#沙盒工具容器" class="table-of-contents__link toc-highlight">沙盒（工具容器）</a></li><li><a href="#远程访问提示" class="table-of-contents__link toc-highlight">远程访问提示</a></li><li><a href="#扩展路径的工作原理" class="table-of-contents__link toc-highlight">&quot;扩展路径&quot;的工作原理</a></li><li><a href="#安全影响请阅读" class="table-of-contents__link toc-highlight">安全影响（请阅读）</a></li></ul></div><div class="tocFooter_Fu2z"><div class="themeGroup_RzWV" role="group" aria-label="Theme"><button class="themeBtn_tGr6" aria-label="Light theme" title="Light"><svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor" aria-hidden="true"><path d="M12 18a6 6 0 1 1 0-12 6 6 0 0 1 0 12zm0-2a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM11 1h2v3h-2V1zm0 19h2v3h-2v-3zM3.515 4.929l1.414-1.414L7.05 5.636 5.636 7.05 3.515 4.93zM16.95 18.364l1.414-1.414 2.121 2.121-1.414 1.414-2.121-2.121zm2.121-14.85l1.414 1.415-2.121 2.121-1.414-1.414 2.121-2.121zM5.636 16.95l1.414 1.414-2.121 2.121-1.414-1.414 2.121-2.121zM23 11v2h-3v-2h3zM4 11v2H1v-2h3z"></path></svg></button><button class="themeBtn_tGr6 themeBtnActive_A6tm" aria-label="Dark theme" title="Dark"><svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor" aria-hidden="true"><path d="M11.38 2.019a7.5 7.5 0 1 0 10.6 10.6C21.83 17.963 17.315 22 12.002 22 6.477 22 2 17.523 2 12c0-5.314 4.038-9.827 9.38-10.28z"></path></svg></button></div></div></div></div></div></div></main></div></div></div><footer class="theme-layout-footer footer footer--dark"><div class="container container-fluid"><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2026 Moltbot Docs.</div></div></div></footer></div>
+</body>
+</html>

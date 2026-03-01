@@ -1,0 +1,231 @@
+<!doctype html>
+<html lang="zh" dir="ltr" class="docs-wrapper plugin-docs plugin-id-default docs-version-current docs-doc-page docs-doc-id-channels/matrix" data-has-hydrated="false">
+<head>
+<meta charset="UTF-8">
+<meta name="generator" content="Docusaurus v3.9.2">
+<title data-rh="true">Matrix（插件） | Moltbot Docs</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:url" content="https://luuman.github.io/moltbot-doc/docs/channels/matrix"><meta data-rh="true" property="og:locale" content="zh"><meta data-rh="true" name="docusaurus_locale" content="zh"><meta data-rh="true" name="docsearch:language" content="zh"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="Matrix（插件） | Moltbot Docs"><meta data-rh="true" name="description" content="Matrix 是一个开放的、去中心化的消息协议。Moltbot 作为 Matrix 用户 连接到任何 homeserver，"><meta data-rh="true" property="og:description" content="Matrix 是一个开放的、去中心化的消息协议。Moltbot 作为 Matrix 用户 连接到任何 homeserver，"><link data-rh="true" rel="icon" href="/moltbot-doc/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://luuman.github.io/moltbot-doc/docs/channels/matrix"><link data-rh="true" rel="alternate" href="https://luuman.github.io/moltbot-doc/docs/channels/matrix" hreflang="zh"><link data-rh="true" rel="alternate" href="https://luuman.github.io/moltbot-doc/docs/channels/matrix" hreflang="x-default"><link rel="alternate" type="application/rss+xml" href="/moltbot-doc/blog/rss.xml" title="Moltbot Docs RSS Feed">
+<link rel="alternate" type="application/atom+xml" href="/moltbot-doc/blog/atom.xml" title="Moltbot Docs Atom Feed"><link rel="stylesheet" href="/moltbot-doc/assets/css/styles.484b4c98.css">
+<script src="/moltbot-doc/assets/js/runtime~main.6cf495cf.js" defer="defer"></script>
+<script src="/moltbot-doc/assets/js/main.f9205183.js" defer="defer"></script>
+</head>
+<body class="navigation-with-keyboard">
+<svg style="display: none;"><defs>
+<symbol id="theme-svg-external-link" viewBox="0 0 24 24"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"/></symbol>
+</defs></svg>
+<script>!function(){var t=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme")}catch(t){}}();document.documentElement.setAttribute("data-theme",t||"dark"),document.documentElement.setAttribute("data-theme-choice",t||"dark")}(),function(){try{const c=new URLSearchParams(window.location.search).entries();for(var[t,e]of c)if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id="__docusaurus"><div role="region" aria-label="跳到主要内容"><a class="skipToContent_fXgn" href="#__docusaurus_skipToContent_fallback">跳到主要内容</a></div><nav class="navbar navbar--fixed-top navbar_MONK" role="navigation" aria-label="Main"><div class="navbarInner_ASTH"><div class="navbarLeft_pUmY"><button aria-label="切换导航栏" aria-expanded="false" class="navbar__toggle clean-btn" type="button"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg></button><a class="brand_SXL9" href="/moltbot-doc/"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="24" height="24" rx="6" fill="var(--ifm-color-primary)"></rect><path d="M7 8.5h10M7 12h7M7 15.5h10" stroke="white" stroke-width="1.8" stroke-linecap="round"></path></svg><span class="brandTitle_XbyU">Moltbot</span></a><div class="dropdown_GrgZ"><button class="dropdownToggle_Nf_z">全部站点<svg class="dropdownArrow_Eka8" viewBox="0 0 12 12" fill="none"><path d="M2 4l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg></button><ul class="dropdownMenu_zsxH"><li><a href="https://luuman.github.io/docs-workspace/docs" class="dropdownMenuItem_VBaP">Workspace</a></li><li><a href="https://luuman.github.io/claude-doc/docs" class="dropdownMenuItem_VBaP">Claude</a></li><li><a href="https://luuman.github.io/electron-doc/docs" class="dropdownMenuItem_VBaP">Electron</a></li><li><a href="https://luuman.github.io/tauri-doc/docs" class="dropdownMenuItem_VBaP">Tauri</a></li><li><a href="https://luuman.github.io/matrx-doc/docs" class="dropdownMenuItem_VBaP">Matrx</a></li><li><a href="https://luuman.github.io/brainboard-doc/docs" class="dropdownMenuItem_VBaP">Brainboard</a></li><li><a href="https://luuman.github.io/synology-doc/docs" class="dropdownMenuItem_VBaP">Synology</a></li><li><a href="https://luuman.github.io/codex-doc/docs" class="dropdownMenuItem_VBaP">Codex</a></li><li><a href="https://luuman.github.io/ai-doc/docs" class="dropdownMenuItem_VBaP">AI</a></li></ul></div></div><div class="navbarCenter_Zdr3"><div class="root_OF3s"><span class="icon_UcOK" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor" width="15" height="15"><path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"></path></svg></span><div class="slot__FGx"><div class="navbar__search searchBarContainer_NW3z" dir="ltr"><input placeholder="搜索" aria-label="Search" class="navbar__search-input searchInput_YFbd" value=""><div class="loadingRing_RJI3 searchBarLoadingRing_YnHq"><div></div><div></div><div></div><div></div></div></div></div></div></div><div class="navbarRight_q16u"><a class="navLink_RnnM" href="/moltbot-doc/docs">Docs</a><a class="navLink_RnnM" href="/moltbot-doc/blog">Blog</a><button class="themeToggle_zD_x" aria-label="Switch to light theme" title="Light"><svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M12 18a6 6 0 1 1 0-12 6 6 0 0 1 0 12zm0-2a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM11 1h2v3h-2V1zm0 19h2v3h-2v-3zM3.515 4.929l1.414-1.414L7.05 5.636 5.636 7.05 3.515 4.93zM16.95 18.364l1.414-1.414 2.121 2.121-1.414 1.414-2.121-2.121zm2.121-14.85l1.414 1.415-2.121 2.121-1.414-1.414 2.121-2.121zM5.636 16.95l1.414 1.414-2.121 2.121-1.414-1.414 2.121-2.121zM23 11v2h-3v-2h3zM4 11v2H1v-2h3z"></path></svg></button></div></div></nav><div id="__docusaurus_skipToContent_fallback" class="theme-layout-main main-wrapper mainWrapper_z2l0"><div class="docsWrapper_hBAB"><button aria-label="回到顶部" class="clean-btn theme-back-to-top-button backToTopButton_sjWU" type="button"></button><div class="docRoot_UBD9"><main class="docMainContainer_TBSr docMainContainerEnhanced_lQrH"><div class="container padding-top--md padding-bottom--lg"><div class="row"><div class="col docItemCol_VOVn"><div class="docItemContainer_Djhp"><article><div class="tocCollapsible_ETCw theme-doc-toc-mobile tocMobile_ITEo"><button type="button" class="clean-btn tocCollapsibleButton_TO0P">本页总览</button></div><div class="theme-doc-markdown markdown"><header><h1>Matrix（插件）</h1></header>
+<p>Matrix 是一个开放的、去中心化的消息协议。Moltbot 作为 Matrix <strong>用户</strong> 连接到任何 homeserver，
+所以您需要为机器人创建一个 Matrix 账户。一旦登录，您可以直接私信
+机器人或将其邀请到房间（Matrix &quot;群组&quot;）。Beeper 也是一个有效的客户端选项，
+但它需要启用 E2EE。</p>
+<p>状态：通过插件支持（@vector-im/matrix-bot-sdk）。直接消息、房间、线程、媒体、反应，
+投票（发送 + 投票开始作为文本）、位置和 E2EE（支持加密）。</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="需要插件">需要插件<a href="#需要插件" class="hash-link" aria-label="需要插件的直接链接" title="需要插件的直接链接" translate="no">​</a></h2>
+<p>Matrix 作为插件提供，未与核心安装捆绑。</p>
+<p>通过 CLI（npm 注册表）安装：</p>
+<div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#D6DEEB;--prism-background-color:#001122"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#D6DEEB;background-color:#001122"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#D6DEEB"><span class="token plain">moltbot plugins install @moltbot/matrix</span><br></span></code></pre></div></div>
+<p>本地检出（从 git 仓库运行时）：</p>
+<div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#D6DEEB;--prism-background-color:#001122"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#D6DEEB;background-color:#001122"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#D6DEEB"><span class="token plain">moltbot plugins install ./extensions/matrix</span><br></span></code></pre></div></div>
+<p>如果您在配置/入门过程中选择 Matrix 并检测到 git 检出，
+Moltbot 将自动提供本地安装路径。</p>
+<p>详情：<a class="" href="/moltbot-doc/plugin">插件</a></p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="设置">设置<a href="#设置" class="hash-link" aria-label="设置的直接链接" title="设置的直接链接" translate="no">​</a></h2>
+<ol>
+<li class="">
+<p>安装 Matrix 插件：</p>
+<ul>
+<li class="">从 npm：<code>moltbot plugins install @moltbot/matrix</code></li>
+<li class="">从本地检出：<code>moltbot plugins install ./extensions/matrix</code></li>
+</ul>
+</li>
+<li class="">
+<p>在 homeserver 上创建 Matrix 账户：</p>
+<ul>
+<li class="">在 <a href="https://matrix.org/ecosystem/hosting/" target="_blank" rel="noopener noreferrer" class="">https://matrix.org/ecosystem/hosting/</a> 浏览托管选项</li>
+<li class="">或自己托管。</li>
+</ul>
+</li>
+<li class="">
+<p>获取机器人账户的访问令牌：</p>
+<ul>
+<li class="">在您的 home 服务器上使用 Matrix 登录 API 和 <code>curl</code>：</li>
+</ul>
+<div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#D6DEEB;--prism-background-color:#001122"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#D6DEEB;background-color:#001122"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#D6DEEB"><span class="token plain">curl --request POST \</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">  --url https://matrix.example.org/_matrix/client/v3/login \</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">  --header &#x27;Content-Type: application/json&#x27; \</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">  --data &#x27;{</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">  &quot;type&quot;: &quot;m.login.password&quot;,</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">  &quot;identifier&quot;: {</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">    &quot;type&quot;: &quot;m.id.user&quot;,</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">    &quot;user&quot;: &quot;your-user-name&quot;</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">  },</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">  &quot;password&quot;: &quot;your-password&quot;</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">}&#x27;</span><br></span></code></pre></div></div>
+<ul>
+<li class="">将 <code>matrix.example.org</code> 替换为您的 homeserver URL。</li>
+<li class="">或设置 <code>channels.matrix.userId</code> + <code>channels.matrix.password</code>：Moltbot 调用相同的
+登录端点，将访问令牌存储在 <code>~/.clawdbot/credentials/matrix/credentials.json</code> 中，
+并在下次启动时重用它。</li>
+</ul>
+</li>
+<li class="">
+<p>配置凭证：</p>
+<ul>
+<li class="">环境变量：<code>MATRIX_HOMESERVER</code>、<code>MATRIX_ACCESS_TOKEN</code>（或 <code>MATRIX_USER_ID</code> + <code>MATRIX_PASSWORD</code>）</li>
+<li class="">或配置：<code>channels.matrix.*</code></li>
+<li class="">如果两者都设置，配置优先。</li>
+<li class="">使用访问令牌：通过 <code>/whoami</code> 自动获取用户 ID。</li>
+<li class="">设置时，<code>channels.matrix.userId</code> 应该是完整的 Matrix ID（示例：<code>@bot:example.org</code>）。</li>
+</ul>
+</li>
+<li class="">
+<p>重启网关（或完成入门）。</p>
+</li>
+<li class="">
+<p>从任何 Matrix 客户端（Element、Beeper 等；参见 <a href="https://matrix.org/ecosystem/clients/%EF%BC%89" target="_blank" rel="noopener noreferrer" class="">https://matrix.org/ecosystem/clients/）</a>
+开始与机器人的私信或将其邀请到房间。Beeper 需要 E2EE，
+所以设置 <code>channels.matrix.encryption: true</code> 并验证设备。</p>
+</li>
+</ol>
+<p>最小配置（访问令牌，用户 ID 自动获取）：</p>
+<div class="language-json5 codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#D6DEEB;--prism-background-color:#001122"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-json5 codeBlock_bY9V thin-scrollbar" style="color:#D6DEEB;background-color:#001122"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#D6DEEB"><span class="token plain">{</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">  channels: {</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">    matrix: {</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">      enabled: true,</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">      homeserver: &quot;https://matrix.example.org&quot;,</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">      accessToken: &quot;syt_***&quot;,</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">      dm: { policy: &quot;pairing&quot; }</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">    }</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">  }</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">}</span><br></span></code></pre></div></div>
+<p>E2EE 配置（启用端到端加密）：</p>
+<div class="language-json5 codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#D6DEEB;--prism-background-color:#001122"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-json5 codeBlock_bY9V thin-scrollbar" style="color:#D6DEEB;background-color:#001122"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#D6DEEB"><span class="token plain">{</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">  channels: {</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">    matrix: {</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">      enabled: true,</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">      homeserver: &quot;https://matrix.example.org&quot;,</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">      accessToken: &quot;syt_***&quot;,</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">      encryption: true,</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">      dm: { policy: &quot;pairing&quot; }</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">    }</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">  }</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">}</span><br></span></code></pre></div></div>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="加密e2ee">加密（E2EE）<a href="#加密e2ee" class="hash-link" aria-label="加密（E2EE）的直接链接" title="加密（E2EE）的直接链接" translate="no">​</a></h2>
+<p>端到端加密通过 Rust 加密 SDK <strong>支持</strong>。</p>
+<p>使用 <code>channels.matrix.encryption: true</code> 启用：</p>
+<ul>
+<li class="">如果加密模块加载，加密房间会自动解密。</li>
+<li class="">发送到加密房间的出站媒体会被加密。</li>
+<li class="">首次连接时，Moltbot 会从您的其他会话请求设备验证。</li>
+<li class="">在另一个 Matrix 客户端（Element 等）中验证设备以启用密钥共享。</li>
+<li class="">如果无法加载加密模块，E2EE 被禁用，加密房间将不会解密；
+Moltbot 记录警告。</li>
+<li class="">如果您看到缺少加密模块错误（例如，<code>@matrix-org/matrix-sdk-crypto-nodejs-*</code>），
+允许 <code>@matrix-org/matrix-sdk-crypto-nodejs</code> 的构建脚本并运行
+<code>pnpm rebuild @matrix-org/matrix-sdk-crypto-nodejs</code> 或使用
+<code>node node_modules/@matrix-org/matrix-sdk-crypto-nodejs/download-lib.js</code> 获取二进制文件。</li>
+</ul>
+<p>加密状态按账户 + 访问令牌存储在
+<code>~/.clawdbot/matrix/accounts/&lt;account&gt;/&lt;homeserver&gt;__&lt;user&gt;/&lt;token-hash&gt;/crypto/</code>
+（SQLite 数据库）。同步状态与它并存于 <code>bot-storage.json</code>。
+如果访问令牌（设备）更改，将创建新存储，机器人必须
+为加密房间重新验证。</p>
+<p><strong>设备验证：</strong>
+启用 E2EE 时，机器人将在启动时从您的其他会话请求验证。
+打开 Element（或其他客户端）并批准验证请求以建立信任。
+验证后，机器人可以解密加密房间中的消息。</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="路由模型">路由模型<a href="#路由模型" class="hash-link" aria-label="路由模型的直接链接" title="路由模型的直接链接" translate="no">​</a></h2>
+<ul>
+<li class="">回复始终返回到 Matrix。</li>
+<li class="">私信共享代理的主会话；房间映射到群组会话。</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="访问控制私信">访问控制（私信）<a href="#访问控制私信" class="hash-link" aria-label="访问控制（私信）的直接链接" title="访问控制（私信）的直接链接" translate="no">​</a></h2>
+<ul>
+<li class="">默认：<code>channels.matrix.dm.policy = &quot;pairing&quot;</code>。未知发送者获得配对码。</li>
+<li class="">批准方式：
+<ul>
+<li class=""><code>moltbot pairing list matrix</code></li>
+<li class=""><code>moltbot pairing approve matrix &lt;CODE&gt;</code></li>
+</ul>
+</li>
+<li class="">公开私信：<code>channels.matrix.dm.policy=&quot;open&quot;</code> 加 <code>channels.matrix.dm.allowFrom=[&quot;*&quot;]</code>。</li>
+<li class=""><code>channels.matrix.dm.allowFrom</code> 接受用户 ID 或显示名称。当目录搜索可用时，向导将显示名称解析为用户 ID。</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="房间群组">房间（群组）<a href="#房间群组" class="hash-link" aria-label="房间（群组）的直接链接" title="房间（群组）的直接链接" translate="no">​</a></h2>
+<ul>
+<li class="">默认：<code>channels.matrix.groupPolicy = &quot;allowlist&quot;</code>（提及门控）。使用 <code>channels.defaults.groupPolicy</code> 在未设置时覆盖默认值。</li>
+<li class="">使用 <code>channels.matrix.groups</code> 允许列表房间（房间 ID、别名或名称）：</li>
+</ul>
+<div class="language-json5 codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#D6DEEB;--prism-background-color:#001122"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-json5 codeBlock_bY9V thin-scrollbar" style="color:#D6DEEB;background-color:#001122"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#D6DEEB"><span class="token plain">{</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">  channels: {</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">    matrix: {</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">      groupPolicy: &quot;allowlist&quot;,</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">      groups: {</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">        &quot;!roomId:example.org&quot;: { allow: true },</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">        &quot;#alias:example.org&quot;: { allow: true }</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">      },</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">      groupAllowFrom: [&quot;@owner:example.org&quot;]</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">    }</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">  }</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">}</span><br></span></code></pre></div></div>
+<ul>
+<li class=""><code>requireMention: false</code> 在该房间中启用自动回复。</li>
+<li class=""><code>groups.&quot;*&quot;</code> 可以设置跨房间的提及门控默认值。</li>
+<li class=""><code>groupAllowFrom</code> 限制哪些发送者可以在房间中触发机器人（可选）。</li>
+<li class="">按房间的 <code>users</code> 允许列表可以进一步限制特定房间内的发送者。</li>
+<li class="">配置向导提示房间允许列表（房间 ID、别名或名称），并在可能时解析名称。</li>
+<li class="">启动时，Moltbot 将允许列表中的房间/用户名称解析为 ID 并记录映射；未解析的条目保持键入的格式。</li>
+<li class="">邀请默认自动加入；使用 <code>channels.matrix.autoJoin</code> 和 <code>channels.matrix.autoJoinAllowlist</code> 控制。</li>
+<li class="">要允许 <strong>没有房间</strong>，设置 <code>channels.matrix.groupPolicy: &quot;disabled&quot;</code>（或保持空的允许列表）。</li>
+<li class="">遗留键：<code>channels.matrix.rooms</code>（与 <code>groups</code> 形状相同）。</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="线程">线程<a href="#线程" class="hash-link" aria-label="线程的直接链接" title="线程的直接链接" translate="no">​</a></h2>
+<ul>
+<li class="">支持回复线程。</li>
+<li class=""><code>channels.matrix.threadReplies</code> 控制回复是否留在线程中：
+<ul>
+<li class=""><code>off</code>、<code>inbound</code>（默认）、<code>always</code></li>
+</ul>
+</li>
+<li class=""><code>channels.matrix.replyToMode</code> 控制不在线程中回复时的回复到元数据：
+<ul>
+<li class=""><code>off</code>（默认）、<code>first</code>、<code>all</code></li>
+</ul>
+</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="功能">功能<a href="#功能" class="hash-link" aria-label="功能的直接链接" title="功能的直接链接" translate="no">​</a></h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>功能</th><th>状态</th></tr></thead><tbody><tr><td>直接消息</td><td>✅ 支持</td></tr><tr><td>房间</td><td>✅ 支持</td></tr><tr><td>线程</td><td>✅ 支持</td></tr><tr><td>媒体</td><td>✅ 支持</td></tr><tr><td>E2EE</td><td>✅ 支持（需要加密模块）</td></tr><tr><td>反应</td><td>✅ 支持（通过工具发送/读取）</td></tr><tr><td>投票</td><td>✅ 支持发送；入站投票开始转换为文本（响应/结束被忽略）</td></tr><tr><td>位置</td><td>✅ 支持（地理 URI；海拔被忽略）</td></tr><tr><td>原生命令</td><td>✅ 支持</td></tr></tbody></table>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="配置参考matrix">配置参考（Matrix）<a href="#配置参考matrix" class="hash-link" aria-label="配置参考（Matrix）的直接链接" title="配置参考（Matrix）的直接链接" translate="no">​</a></h2>
+<p>完整配置：<a class="" href="/moltbot-doc/gateway/configuration">配置</a></p>
+<p>提供者选项：</p>
+<ul>
+<li class=""><code>channels.matrix.enabled</code>：启用/禁用通道启动。</li>
+<li class=""><code>channels.matrix.homeserver</code>：homeserver URL。</li>
+<li class=""><code>channels.matrix.userId</code>：Matrix 用户 ID（使用访问令牌时可选）。</li>
+<li class=""><code>channels.matrix.accessToken</code>：访问令牌。</li>
+<li class=""><code>channels.matrix.password</code>：登录密码（令牌存储）。</li>
+<li class=""><code>channels.matrix.deviceName</code>：设备显示名称。</li>
+<li class=""><code>channels.matrix.encryption</code>：启用 E2EE（默认：false）。</li>
+<li class=""><code>channels.matrix.initialSyncLimit</code>：初始同步限制。</li>
+<li class=""><code>channels.matrix.threadReplies</code>：<code>off | inbound | always</code>（默认：inbound）。</li>
+<li class=""><code>channels.matrix.textChunkLimit</code>：出站文本分块大小（字符）。</li>
+<li class=""><code>channels.matrix.chunkMode</code>：<code>length</code>（默认）或 <code>newline</code> 以在长度分块之前按空行（段落边界）分割。</li>
+<li class=""><code>channels.matrix.dm.policy</code>：<code>pairing | allowlist | open | disabled</code>（默认：配对）。</li>
+<li class=""><code>channels.matrix.dm.allowFrom</code>：私信允许列表（用户 ID 或显示名称）。<code>open</code> 需要 <code>&quot;*&quot;</code>。向导在可能时将名称解析为 ID。</li>
+<li class=""><code>channels.matrix.groupPolicy</code>：<code>allowlist | open | disabled</code>（默认：允许列表）。</li>
+<li class=""><code>channels.matrix.groupAllowFrom</code>：群组消息的允许列表发送者。</li>
+<li class=""><code>channels.matrix.allowlistOnly</code>：强制对私信 + 房间使用允许列表规则。</li>
+<li class=""><code>channels.matrix.groups</code>：群组允许列表 + 按房间设置映射。</li>
+<li class=""><code>channels.matrix.rooms</code>：遗留群组允许列表/配置。</li>
+<li class=""><code>channels.matrix.replyToMode</code>：线程/标签的回复到模式。</li>
+<li class=""><code>channels.matrix.mediaMaxMb</code>：入站/出站媒体限制（MB）。</li>
+<li class=""><code>channels.matrix.autoJoin</code>：邀请处理（<code>always | allowlist | off</code>，默认：always）。</li>
+<li class=""><code>channels.matrix.autoJoinAllowlist</code>：自动加入的允许房间 ID/别名。</li>
+<li class=""><code>channels.matrix.actions</code>：按操作工具门控（反应/消息/置顶/成员信息/频道信息）。</li>
+</ul></div></article><nav class="docusaurus-mt-lg pagination-nav" aria-label="文件选项卡"></nav></div></div><div class="col col--3"><div class="tocWrapper_xKoj"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#需要插件" class="table-of-contents__link toc-highlight">需要插件</a></li><li><a href="#设置" class="table-of-contents__link toc-highlight">设置</a></li><li><a href="#加密e2ee" class="table-of-contents__link toc-highlight">加密（E2EE）</a></li><li><a href="#路由模型" class="table-of-contents__link toc-highlight">路由模型</a></li><li><a href="#访问控制私信" class="table-of-contents__link toc-highlight">访问控制（私信）</a></li><li><a href="#房间群组" class="table-of-contents__link toc-highlight">房间（群组）</a></li><li><a href="#线程" class="table-of-contents__link toc-highlight">线程</a></li><li><a href="#功能" class="table-of-contents__link toc-highlight">功能</a></li><li><a href="#配置参考matrix" class="table-of-contents__link toc-highlight">配置参考（Matrix）</a></li></ul></div><div class="tocFooter_Fu2z"><div class="themeGroup_RzWV" role="group" aria-label="Theme"><button class="themeBtn_tGr6" aria-label="Light theme" title="Light"><svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor" aria-hidden="true"><path d="M12 18a6 6 0 1 1 0-12 6 6 0 0 1 0 12zm0-2a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM11 1h2v3h-2V1zm0 19h2v3h-2v-3zM3.515 4.929l1.414-1.414L7.05 5.636 5.636 7.05 3.515 4.93zM16.95 18.364l1.414-1.414 2.121 2.121-1.414 1.414-2.121-2.121zm2.121-14.85l1.414 1.415-2.121 2.121-1.414-1.414 2.121-2.121zM5.636 16.95l1.414 1.414-2.121 2.121-1.414-1.414 2.121-2.121zM23 11v2h-3v-2h3zM4 11v2H1v-2h3z"></path></svg></button><button class="themeBtn_tGr6 themeBtnActive_A6tm" aria-label="Dark theme" title="Dark"><svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor" aria-hidden="true"><path d="M11.38 2.019a7.5 7.5 0 1 0 10.6 10.6C21.83 17.963 17.315 22 12.002 22 6.477 22 2 17.523 2 12c0-5.314 4.038-9.827 9.38-10.28z"></path></svg></button></div></div></div></div></div></div></main></div></div></div><footer class="theme-layout-footer footer footer--dark"><div class="container container-fluid"><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2026 Moltbot Docs.</div></div></div></footer></div>
+</body>
+</html>

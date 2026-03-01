@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="zh" dir="ltr" class="docs-wrapper plugin-docs plugin-id-default docs-version-current docs-doc-page docs-doc-id-gateway/cli-backends" data-has-hydrated="false">
+<head>
+<meta charset="UTF-8">
+<meta name="generator" content="Docusaurus v3.9.2">
+<title data-rh="true">CLI 后端（备用运行时） | Moltbot Docs</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:url" content="https://luuman.github.io/moltbot-doc/docs/gateway/cli-backends"><meta data-rh="true" property="og:locale" content="zh"><meta data-rh="true" name="docusaurus_locale" content="zh"><meta data-rh="true" name="docsearch:language" content="zh"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="CLI 后端（备用运行时） | Moltbot Docs"><meta data-rh="true" name="description" content="当 API 提供商宕机、限速或暂时行为异常时，Moltbot 可以将 本地 AI CLIs 作为 纯文本备用 运行。这是有意保守的设计："><meta data-rh="true" property="og:description" content="当 API 提供商宕机、限速或暂时行为异常时，Moltbot 可以将 本地 AI CLIs 作为 纯文本备用 运行。这是有意保守的设计："><link data-rh="true" rel="icon" href="/moltbot-doc/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://luuman.github.io/moltbot-doc/docs/gateway/cli-backends"><link data-rh="true" rel="alternate" href="https://luuman.github.io/moltbot-doc/docs/gateway/cli-backends" hreflang="zh"><link data-rh="true" rel="alternate" href="https://luuman.github.io/moltbot-doc/docs/gateway/cli-backends" hreflang="x-default"><link rel="alternate" type="application/rss+xml" href="/moltbot-doc/blog/rss.xml" title="Moltbot Docs RSS Feed">
+<link rel="alternate" type="application/atom+xml" href="/moltbot-doc/blog/atom.xml" title="Moltbot Docs Atom Feed"><link rel="stylesheet" href="/moltbot-doc/assets/css/styles.484b4c98.css">
+<script src="/moltbot-doc/assets/js/runtime~main.6cf495cf.js" defer="defer"></script>
+<script src="/moltbot-doc/assets/js/main.f9205183.js" defer="defer"></script>
+</head>
+<body class="navigation-with-keyboard">
+<svg style="display: none;"><defs>
+<symbol id="theme-svg-external-link" viewBox="0 0 24 24"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"/></symbol>
+</defs></svg>
+<script>!function(){var t=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme")}catch(t){}}();document.documentElement.setAttribute("data-theme",t||"dark"),document.documentElement.setAttribute("data-theme-choice",t||"dark")}(),function(){try{const c=new URLSearchParams(window.location.search).entries();for(var[t,e]of c)if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id="__docusaurus"><div role="region" aria-label="跳到主要内容"><a class="skipToContent_fXgn" href="#__docusaurus_skipToContent_fallback">跳到主要内容</a></div><nav class="navbar navbar--fixed-top navbar_MONK" role="navigation" aria-label="Main"><div class="navbarInner_ASTH"><div class="navbarLeft_pUmY"><button aria-label="切换导航栏" aria-expanded="false" class="navbar__toggle clean-btn" type="button"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg></button><a class="brand_SXL9" href="/moltbot-doc/"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="24" height="24" rx="6" fill="var(--ifm-color-primary)"></rect><path d="M7 8.5h10M7 12h7M7 15.5h10" stroke="white" stroke-width="1.8" stroke-linecap="round"></path></svg><span class="brandTitle_XbyU">Moltbot</span></a><div class="dropdown_GrgZ"><button class="dropdownToggle_Nf_z">全部站点<svg class="dropdownArrow_Eka8" viewBox="0 0 12 12" fill="none"><path d="M2 4l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg></button><ul class="dropdownMenu_zsxH"><li><a href="https://luuman.github.io/docs-workspace/docs" class="dropdownMenuItem_VBaP">Workspace</a></li><li><a href="https://luuman.github.io/claude-doc/docs" class="dropdownMenuItem_VBaP">Claude</a></li><li><a href="https://luuman.github.io/electron-doc/docs" class="dropdownMenuItem_VBaP">Electron</a></li><li><a href="https://luuman.github.io/tauri-doc/docs" class="dropdownMenuItem_VBaP">Tauri</a></li><li><a href="https://luuman.github.io/matrx-doc/docs" class="dropdownMenuItem_VBaP">Matrx</a></li><li><a href="https://luuman.github.io/brainboard-doc/docs" class="dropdownMenuItem_VBaP">Brainboard</a></li><li><a href="https://luuman.github.io/synology-doc/docs" class="dropdownMenuItem_VBaP">Synology</a></li><li><a href="https://luuman.github.io/codex-doc/docs" class="dropdownMenuItem_VBaP">Codex</a></li><li><a href="https://luuman.github.io/ai-doc/docs" class="dropdownMenuItem_VBaP">AI</a></li></ul></div></div><div class="navbarCenter_Zdr3"><div class="root_OF3s"><span class="icon_UcOK" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor" width="15" height="15"><path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"></path></svg></span><div class="slot__FGx"><div class="navbar__search searchBarContainer_NW3z" dir="ltr"><input placeholder="搜索" aria-label="Search" class="navbar__search-input searchInput_YFbd" value=""><div class="loadingRing_RJI3 searchBarLoadingRing_YnHq"><div></div><div></div><div></div><div></div></div></div></div></div></div><div class="navbarRight_q16u"><a class="navLink_RnnM" href="/moltbot-doc/docs">Docs</a><a class="navLink_RnnM" href="/moltbot-doc/blog">Blog</a><button class="themeToggle_zD_x" aria-label="Switch to light theme" title="Light"><svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M12 18a6 6 0 1 1 0-12 6 6 0 0 1 0 12zm0-2a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM11 1h2v3h-2V1zm0 19h2v3h-2v-3zM3.515 4.929l1.414-1.414L7.05 5.636 5.636 7.05 3.515 4.93zM16.95 18.364l1.414-1.414 2.121 2.121-1.414 1.414-2.121-2.121zm2.121-14.85l1.414 1.415-2.121 2.121-1.414-1.414 2.121-2.121zM5.636 16.95l1.414 1.414-2.121 2.121-1.414-1.414 2.121-2.121zM23 11v2h-3v-2h3zM4 11v2H1v-2h3z"></path></svg></button></div></div></nav><div id="__docusaurus_skipToContent_fallback" class="theme-layout-main main-wrapper mainWrapper_z2l0"><div class="docsWrapper_hBAB"><button aria-label="回到顶部" class="clean-btn theme-back-to-top-button backToTopButton_sjWU" type="button"></button><div class="docRoot_UBD9"><main class="docMainContainer_TBSr docMainContainerEnhanced_lQrH"><div class="container padding-top--md padding-bottom--lg"><div class="row"><div class="col docItemCol_VOVn"><div class="docItemContainer_Djhp"><article><div class="tocCollapsible_ETCw theme-doc-toc-mobile tocMobile_ITEo"><button type="button" class="clean-btn tocCollapsibleButton_TO0P">本页总览</button></div><div class="theme-doc-markdown markdown"><header><h1>CLI 后端（备用运行时）</h1></header>
+<p>当 API 提供商宕机、限速或暂时行为异常时，Moltbot 可以将 <strong>本地 AI CLIs</strong> 作为 <strong>纯文本备用</strong> 运行。这是有意保守的设计：</p>
+<ul>
+<li class=""><strong>工具被禁用</strong>（无工具调用）。</li>
+<li class=""><strong>文本输入 → 文本输出</strong>（可靠）。</li>
+<li class=""><strong>支持会话</strong>（因此后续对话保持连贯）。</li>
+<li class=""><strong>图像可以传递</strong>（如果 CLI 接受图像路径）。</li>
+</ul>
+<p>这是设计为 <strong>安全网</strong> 而非主要路径。当您想要&quot;始终工作&quot;的文本响应而不依赖外部 API 时使用它。</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="初学者友好快速入门">初学者友好快速入门<a href="#初学者友好快速入门" class="hash-link" aria-label="初学者友好快速入门的直接链接" title="初学者友好快速入门的直接链接" translate="no">​</a></h2>
+<p>您可以 <strong>无需任何配置</strong> 使用 Claude Code CLI（Moltbot 内置了默认设置）：</p>
+<div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#D6DEEB;--prism-background-color:#001122"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#D6DEEB;background-color:#001122"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#D6DEEB"><span class="token plain">moltbot agent --message &quot;hi&quot; --model claude-cli/opus-4.5</span><br></span></code></pre></div></div>
+<p>Codex CLI 也可以开箱即用：</p>
+<div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#D6DEEB;--prism-background-color:#001122"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#D6DEEB;background-color:#001122"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#D6DEEB"><span class="token plain">moltbot agent --message &quot;hi&quot; --model codex-cli/gpt-5.2-codex</span><br></span></code></pre></div></div>
+<p>如果您的网关在 launchd/systemd 下运行且 PATH 最小，请仅添加
+命令路径：</p>
+<div class="language-json5 codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#D6DEEB;--prism-background-color:#001122"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-json5 codeBlock_bY9V thin-scrollbar" style="color:#D6DEEB;background-color:#001122"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#D6DEEB"><span class="token plain">{</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">  agents: {</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">    defaults: {</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">      cliBackends: {</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">        &quot;claude-cli&quot;: {</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">          command: &quot;/opt/homebrew/bin/claude&quot;</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">        }</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">      }</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">    }</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">  }</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">}</span><br></span></code></pre></div></div>
+<p>就是这样。除了 CLI 本身外，无需密钥，无需额外的认证配置。</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="作为备用方案使用">作为备用方案使用<a href="#作为备用方案使用" class="hash-link" aria-label="作为备用方案使用的直接链接" title="作为备用方案使用的直接链接" translate="no">​</a></h2>
+<p>将 CLI 后端添加到您的备用列表中，以便仅在主模型失败时运行：</p>
+<div class="language-json5 codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#D6DEEB;--prism-background-color:#001122"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-json5 codeBlock_bY9V thin-scrollbar" style="color:#D6DEEB;background-color:#001122"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#D6DEEB"><span class="token plain">{</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">  agents: {</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">    defaults: {</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">      model: {</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">        primary: &quot;anthropic/claude-opus-4-5&quot;,</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">        fallbacks: [</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">          &quot;claude-cli/opus-4.5&quot;</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">        ]</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">      },</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">      models: {</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">        &quot;anthropic/claude-opus-4-5&quot;: { alias: &quot;Opus&quot; },</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">        &quot;claude-cli/opus-4.5&quot;: {}</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">      }</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">    }</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">  }</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">}</span><br></span></code></pre></div></div>
+<p>注意事项：</p>
+<ul>
+<li class="">如果您使用 <code>agents.defaults.models</code>（允许列表），必须包含 <code>claude-cli/...</code>。</li>
+<li class="">如果主提供商失败（认证、速率限制、超时），Moltbot 将
+尝试下一个 CLI 后端。</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="配置概述">配置概述<a href="#配置概述" class="hash-link" aria-label="配置概述的直接链接" title="配置概述的直接链接" translate="no">​</a></h2>
+<p>所有 CLI 后端位于：</p>
+<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#D6DEEB;--prism-background-color:#001122"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#D6DEEB;background-color:#001122"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#D6DEEB"><span class="token plain">agents.defaults.cliBackends</span><br></span></code></pre></div></div>
+<p>每个条目由 <strong>提供商 ID</strong>（例如 <code>claude-cli</code>、<code>my-cli</code>）键控。
+提供商 ID 成为您模型引用的左侧：</p>
+<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#D6DEEB;--prism-background-color:#001122"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#D6DEEB;background-color:#001122"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#D6DEEB"><span class="token plain">&lt;provider&gt;/&lt;model&gt;</span><br></span></code></pre></div></div>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="示例配置">示例配置<a href="#示例配置" class="hash-link" aria-label="示例配置的直接链接" title="示例配置的直接链接" translate="no">​</a></h3>
+<div class="language-json5 codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#D6DEEB;--prism-background-color:#001122"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-json5 codeBlock_bY9V thin-scrollbar" style="color:#D6DEEB;background-color:#001122"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#D6DEEB"><span class="token plain">{</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">  agents: {</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">    defaults: {</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">      cliBackends: {</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">        &quot;claude-cli&quot;: {</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">          command: &quot;/opt/homebrew/bin/claude&quot;</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">        },</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">        &quot;my-cli&quot;: {</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">          command: &quot;my-cli&quot;,</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">          args: [&quot;--json&quot;],</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">          output: &quot;json&quot;,</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">          input: &quot;arg&quot;,</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">          modelArg: &quot;--model&quot;,</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">          modelAliases: {</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">            &quot;claude-opus-4-5&quot;: &quot;opus&quot;,</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">            &quot;claude-sonnet-4-5&quot;: &quot;sonnet&quot;</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">          },</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">          sessionArg: &quot;--session&quot;,</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">          sessionMode: &quot;existing&quot;,</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">          sessionIdFields: [&quot;session_id&quot;, &quot;conversation_id&quot;],</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">          systemPromptArg: &quot;--system&quot;,</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">          systemPromptWhen: &quot;first&quot;,</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">          imageArg: &quot;--image&quot;,</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">          imageMode: &quot;repeat&quot;,</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">          serialize: true</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">        }</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">      }</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">    }</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">  }</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">}</span><br></span></code></pre></div></div>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="工作原理">工作原理<a href="#工作原理" class="hash-link" aria-label="工作原理的直接链接" title="工作原理的直接链接" translate="no">​</a></h2>
+<ol>
+<li class=""><strong>根据提供商前缀</strong>（<code>claude-cli/...</code>）选择后端。</li>
+<li class=""><strong>构建系统提示</strong> 使用相同的 Moltbot 提示 + 工作区上下文。</li>
+<li class=""><strong>执行 CLI</strong> 使用会话 ID（如果支持）以便历史记录保持一致。</li>
+<li class=""><strong>解析输出</strong>（JSON 或纯文本）并返回最终文本。</li>
+<li class=""><strong>持久化会话 ID</strong> 按后端，因此后续对话重用相同的 CLI 会话。</li>
+</ol>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="会话">会话<a href="#会话" class="hash-link" aria-label="会话的直接链接" title="会话的直接链接" translate="no">​</a></h2>
+<ul>
+<li class="">如果 CLI 支持会话，设置 <code>sessionArg</code>（例如 <code>--session-id</code>）或
+<code>sessionArgs</code>（占位符 <code>{sessionId}</code>）当 ID 需要插入
+多个标志时。</li>
+<li class="">如果 CLI 使用具有不同标志的 <strong>恢复子命令</strong>，设置
+<code>resumeArgs</code>（恢复时替换 <code>args</code>）并可选地设置 <code>resumeOutput</code>
+（用于非 JSON 恢复）。</li>
+<li class=""><code>sessionMode</code>：
+<ul>
+<li class=""><code>always</code>：总是发送会话 ID（如果没有存储则为新 UUID）。</li>
+<li class=""><code>existing</code>：仅在之前存储过会话 ID 时发送。</li>
+<li class=""><code>none</code>：从不发送会话 ID。</li>
+</ul>
+</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="图像传递">图像（传递）<a href="#图像传递" class="hash-link" aria-label="图像（传递）的直接链接" title="图像（传递）的直接链接" translate="no">​</a></h2>
+<p>如果您的 CLI 接受图像路径，设置 <code>imageArg</code>：</p>
+<div class="language-json5 codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#D6DEEB;--prism-background-color:#001122"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-json5 codeBlock_bY9V thin-scrollbar" style="color:#D6DEEB;background-color:#001122"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#D6DEEB"><span class="token plain">imageArg: &quot;--image&quot;,</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">imageMode: &quot;repeat&quot;</span><br></span></code></pre></div></div>
+<p>Moltbot 将把 base64 图像写入临时文件。如果设置了 <code>imageArg</code>，那些
+路径将作为 CLI 参数传递。如果缺少 <code>imageArg</code>，Moltbot 会附加
+文件路径到提示中（路径注入），这对于从普通路径自动
+加载本地文件的 CLIs 来说已经足够（Claude Code CLI 行为）。</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="输入--输出">输入 / 输出<a href="#输入--输出" class="hash-link" aria-label="输入 / 输出的直接链接" title="输入 / 输出的直接链接" translate="no">​</a></h2>
+<ul>
+<li class=""><code>output: &quot;json&quot;</code>（默认）尝试解析 JSON 并提取文本 + 会话 ID。</li>
+<li class=""><code>output: &quot;jsonl&quot;</code> 解析 JSONL 流（Codex CLI <code>--json</code>）并提取
+最后的代理消息以及存在时的 <code>thread_id</code>。</li>
+<li class=""><code>output: &quot;text&quot;</code> 将标准输出视为最终响应。</li>
+</ul>
+<p>输入模式：</p>
+<ul>
+<li class=""><code>input: &quot;arg&quot;</code>（默认）将提示作为最后一个 CLI 参数传递。</li>
+<li class=""><code>input: &quot;stdin&quot;</code> 通过 stdin 发送提示。</li>
+<li class="">如果提示很长且设置了 <code>maxPromptArgChars</code>，则使用 stdin。</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="默认值内置">默认值（内置）<a href="#默认值内置" class="hash-link" aria-label="默认值（内置）的直接链接" title="默认值（内置）的直接链接" translate="no">​</a></h2>
+<p>Moltbot 为 <code>claude-cli</code> 提供了默认设置：</p>
+<ul>
+<li class=""><code>command: &quot;claude&quot;</code></li>
+<li class=""><code>args: [&quot;-p&quot;, &quot;--output-format&quot;, &quot;json&quot;, &quot;--dangerously-skip-permissions&quot;]</code></li>
+<li class=""><code>resumeArgs: [&quot;-p&quot;, &quot;--output-format&quot;, &quot;json&quot;, &quot;--dangerously-skip-permissions&quot;, &quot;--resume&quot;, &quot;{sessionId}&quot;]</code></li>
+<li class=""><code>modelArg: &quot;--model&quot;</code></li>
+<li class=""><code>systemPromptArg: &quot;--append-system-prompt&quot;</code></li>
+<li class=""><code>sessionArg: &quot;--session-id&quot;</code></li>
+<li class=""><code>systemPromptWhen: &quot;first&quot;</code></li>
+<li class=""><code>sessionMode: &quot;always&quot;</code></li>
+</ul>
+<p>Moltbot 还为 <code>codex-cli</code> 提供了默认设置：</p>
+<ul>
+<li class=""><code>command: &quot;codex&quot;</code></li>
+<li class=""><code>args: [&quot;exec&quot;,&quot;--json&quot;,&quot;--color&quot;,&quot;never&quot;,&quot;--sandbox&quot;,&quot;read-only&quot;,&quot;--skip-git-repo-check&quot;]</code></li>
+<li class=""><code>resumeArgs: [&quot;exec&quot;,&quot;resume&quot;,&quot;{sessionId}&quot;,&quot;--color&quot;,&quot;never&quot;,&quot;--sandbox&quot;,&quot;read-only&quot;,&quot;--skip-git-repo-check&quot;]</code></li>
+<li class=""><code>output: &quot;jsonl&quot;</code></li>
+<li class=""><code>resumeOutput: &quot;text&quot;</code></li>
+<li class=""><code>modelArg: &quot;--model&quot;</code></li>
+<li class=""><code>imageArg: &quot;--image&quot;</code></li>
+<li class=""><code>sessionMode: &quot;existing&quot;</code></li>
+</ul>
+<p>仅在需要时覆盖（常见：绝对 <code>command</code> 路径）。</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="限制">限制<a href="#限制" class="hash-link" aria-label="限制的直接链接" title="限制的直接链接" translate="no">​</a></h2>
+<ul>
+<li class=""><strong>无 Moltbot 工具</strong>（CLI 后端永远不会接收工具调用）。一些 CLIs
+可能仍会运行自己的代理工具。</li>
+<li class=""><strong>无流式传输</strong>（CLI 输出被收集然后返回）。</li>
+<li class=""><strong>结构化输出</strong> 取决于 CLI 的 JSON 格式。</li>
+<li class=""><strong>Codex CLI 会话</strong> 通过文本输出恢复（无 JSONL），这比
+初始 <code>--json</code> 运行的结构化程度更低。Moltbot 会话仍然正常
+工作。</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="故障排除">故障排除<a href="#故障排除" class="hash-link" aria-label="故障排除的直接链接" title="故障排除的直接链接" translate="no">​</a></h2>
+<ul>
+<li class=""><strong>找不到 CLI</strong>：将 <code>command</code> 设置为完整路径。</li>
+<li class=""><strong>错误的模型名称</strong>：使用 <code>modelAliases</code> 映射 <code>provider/model</code> → CLI 模型。</li>
+<li class=""><strong>无会话连续性</strong>：确保设置了 <code>sessionArg</code> 且 <code>sessionMode</code> 不是
+<code>none</code>（Codex CLI 目前无法使用 JSON 输出恢复）。</li>
+<li class=""><strong>忽略图像</strong>：设置 <code>imageArg</code>（并验证 CLI 支持文件路径）。</li>
+</ul></div></article><nav class="docusaurus-mt-lg pagination-nav" aria-label="文件选项卡"></nav></div></div><div class="col col--3"><div class="tocWrapper_xKoj"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#初学者友好快速入门" class="table-of-contents__link toc-highlight">初学者友好快速入门</a></li><li><a href="#作为备用方案使用" class="table-of-contents__link toc-highlight">作为备用方案使用</a></li><li><a href="#配置概述" class="table-of-contents__link toc-highlight">配置概述</a><ul><li><a href="#示例配置" class="table-of-contents__link toc-highlight">示例配置</a></li></ul></li><li><a href="#工作原理" class="table-of-contents__link toc-highlight">工作原理</a></li><li><a href="#会话" class="table-of-contents__link toc-highlight">会话</a></li><li><a href="#图像传递" class="table-of-contents__link toc-highlight">图像（传递）</a></li><li><a href="#输入--输出" class="table-of-contents__link toc-highlight">输入 / 输出</a></li><li><a href="#默认值内置" class="table-of-contents__link toc-highlight">默认值（内置）</a></li><li><a href="#限制" class="table-of-contents__link toc-highlight">限制</a></li><li><a href="#故障排除" class="table-of-contents__link toc-highlight">故障排除</a></li></ul></div><div class="tocFooter_Fu2z"><div class="themeGroup_RzWV" role="group" aria-label="Theme"><button class="themeBtn_tGr6" aria-label="Light theme" title="Light"><svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor" aria-hidden="true"><path d="M12 18a6 6 0 1 1 0-12 6 6 0 0 1 0 12zm0-2a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM11 1h2v3h-2V1zm0 19h2v3h-2v-3zM3.515 4.929l1.414-1.414L7.05 5.636 5.636 7.05 3.515 4.93zM16.95 18.364l1.414-1.414 2.121 2.121-1.414 1.414-2.121-2.121zm2.121-14.85l1.414 1.415-2.121 2.121-1.414-1.414 2.121-2.121zM5.636 16.95l1.414 1.414-2.121 2.121-1.414-1.414 2.121-2.121zM23 11v2h-3v-2h3zM4 11v2H1v-2h3z"></path></svg></button><button class="themeBtn_tGr6 themeBtnActive_A6tm" aria-label="Dark theme" title="Dark"><svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor" aria-hidden="true"><path d="M11.38 2.019a7.5 7.5 0 1 0 10.6 10.6C21.83 17.963 17.315 22 12.002 22 6.477 22 2 17.523 2 12c0-5.314 4.038-9.827 9.38-10.28z"></path></svg></button></div></div></div></div></div></div></main></div></div></div><footer class="theme-layout-footer footer footer--dark"><div class="container container-fluid"><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2026 Moltbot Docs.</div></div></div></footer></div>
+</body>
+</html>

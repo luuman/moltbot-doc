@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="zh" dir="ltr" class="docs-wrapper plugin-docs plugin-id-default docs-version-current docs-doc-page docs-doc-id-tools/slash-commands" data-has-hydrated="false">
+<head>
+<meta charset="UTF-8">
+<meta name="generator" content="Docusaurus v3.9.2">
+<title data-rh="true">斜杠命令 | Moltbot Docs</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:url" content="https://luuman.github.io/moltbot-doc/docs/tools/slash-commands"><meta data-rh="true" property="og:locale" content="zh"><meta data-rh="true" name="docusaurus_locale" content="zh"><meta data-rh="true" name="docsearch:language" content="zh"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="斜杠命令 | Moltbot Docs"><meta data-rh="true" name="description" content="命令由网关处理。大多数命令必须作为以 / 开头的独立消息发送。"><meta data-rh="true" property="og:description" content="命令由网关处理。大多数命令必须作为以 / 开头的独立消息发送。"><link data-rh="true" rel="icon" href="/moltbot-doc/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://luuman.github.io/moltbot-doc/docs/tools/slash-commands"><link data-rh="true" rel="alternate" href="https://luuman.github.io/moltbot-doc/docs/tools/slash-commands" hreflang="zh"><link data-rh="true" rel="alternate" href="https://luuman.github.io/moltbot-doc/docs/tools/slash-commands" hreflang="x-default"><link rel="alternate" type="application/rss+xml" href="/moltbot-doc/blog/rss.xml" title="Moltbot Docs RSS Feed">
+<link rel="alternate" type="application/atom+xml" href="/moltbot-doc/blog/atom.xml" title="Moltbot Docs Atom Feed"><link rel="stylesheet" href="/moltbot-doc/assets/css/styles.484b4c98.css">
+<script src="/moltbot-doc/assets/js/runtime~main.6cf495cf.js" defer="defer"></script>
+<script src="/moltbot-doc/assets/js/main.f9205183.js" defer="defer"></script>
+</head>
+<body class="navigation-with-keyboard">
+<svg style="display: none;"><defs>
+<symbol id="theme-svg-external-link" viewBox="0 0 24 24"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"/></symbol>
+</defs></svg>
+<script>!function(){var t=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme")}catch(t){}}();document.documentElement.setAttribute("data-theme",t||"dark"),document.documentElement.setAttribute("data-theme-choice",t||"dark")}(),function(){try{const c=new URLSearchParams(window.location.search).entries();for(var[t,e]of c)if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id="__docusaurus"><div role="region" aria-label="跳到主要内容"><a class="skipToContent_fXgn" href="#__docusaurus_skipToContent_fallback">跳到主要内容</a></div><nav class="navbar navbar--fixed-top navbar_MONK" role="navigation" aria-label="Main"><div class="navbarInner_ASTH"><div class="navbarLeft_pUmY"><button aria-label="切换导航栏" aria-expanded="false" class="navbar__toggle clean-btn" type="button"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg></button><a class="brand_SXL9" href="/moltbot-doc/"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="24" height="24" rx="6" fill="var(--ifm-color-primary)"></rect><path d="M7 8.5h10M7 12h7M7 15.5h10" stroke="white" stroke-width="1.8" stroke-linecap="round"></path></svg><span class="brandTitle_XbyU">Moltbot</span></a><div class="dropdown_GrgZ"><button class="dropdownToggle_Nf_z">全部站点<svg class="dropdownArrow_Eka8" viewBox="0 0 12 12" fill="none"><path d="M2 4l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg></button><ul class="dropdownMenu_zsxH"><li><a href="https://luuman.github.io/docs-workspace/docs" class="dropdownMenuItem_VBaP">Workspace</a></li><li><a href="https://luuman.github.io/claude-doc/docs" class="dropdownMenuItem_VBaP">Claude</a></li><li><a href="https://luuman.github.io/electron-doc/docs" class="dropdownMenuItem_VBaP">Electron</a></li><li><a href="https://luuman.github.io/tauri-doc/docs" class="dropdownMenuItem_VBaP">Tauri</a></li><li><a href="https://luuman.github.io/matrx-doc/docs" class="dropdownMenuItem_VBaP">Matrx</a></li><li><a href="https://luuman.github.io/brainboard-doc/docs" class="dropdownMenuItem_VBaP">Brainboard</a></li><li><a href="https://luuman.github.io/synology-doc/docs" class="dropdownMenuItem_VBaP">Synology</a></li><li><a href="https://luuman.github.io/codex-doc/docs" class="dropdownMenuItem_VBaP">Codex</a></li><li><a href="https://luuman.github.io/ai-doc/docs" class="dropdownMenuItem_VBaP">AI</a></li></ul></div></div><div class="navbarCenter_Zdr3"><div class="root_OF3s"><span class="icon_UcOK" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor" width="15" height="15"><path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"></path></svg></span><div class="slot__FGx"><div class="navbar__search searchBarContainer_NW3z" dir="ltr"><input placeholder="搜索" aria-label="Search" class="navbar__search-input searchInput_YFbd" value=""><div class="loadingRing_RJI3 searchBarLoadingRing_YnHq"><div></div><div></div><div></div><div></div></div></div></div></div></div><div class="navbarRight_q16u"><a class="navLink_RnnM" href="/moltbot-doc/docs">Docs</a><a class="navLink_RnnM" href="/moltbot-doc/blog">Blog</a><button class="themeToggle_zD_x" aria-label="Switch to light theme" title="Light"><svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M12 18a6 6 0 1 1 0-12 6 6 0 0 1 0 12zm0-2a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM11 1h2v3h-2V1zm0 19h2v3h-2v-3zM3.515 4.929l1.414-1.414L7.05 5.636 5.636 7.05 3.515 4.93zM16.95 18.364l1.414-1.414 2.121 2.121-1.414 1.414-2.121-2.121zm2.121-14.85l1.414 1.415-2.121 2.121-1.414-1.414 2.121-2.121zM5.636 16.95l1.414 1.414-2.121 2.121-1.414-1.414 2.121-2.121zM23 11v2h-3v-2h3zM4 11v2H1v-2h3z"></path></svg></button></div></div></nav><div id="__docusaurus_skipToContent_fallback" class="theme-layout-main main-wrapper mainWrapper_z2l0"><div class="docsWrapper_hBAB"><button aria-label="回到顶部" class="clean-btn theme-back-to-top-button backToTopButton_sjWU" type="button"></button><div class="docRoot_UBD9"><main class="docMainContainer_TBSr docMainContainerEnhanced_lQrH"><div class="container padding-top--md padding-bottom--lg"><div class="row"><div class="col docItemCol_VOVn"><div class="docItemContainer_Djhp"><article><div class="tocCollapsible_ETCw theme-doc-toc-mobile tocMobile_ITEo"><button type="button" class="clean-btn tocCollapsibleButton_TO0P">本页总览</button></div><div class="theme-doc-markdown markdown"><header><h1>斜杠命令</h1></header>
+<p>命令由网关处理。大多数命令必须作为以 <code>/</code> 开头的<strong>独立</strong>消息发送。
+仅限主机的 bash 聊天命令使用 <code>! &lt;cmd&gt;</code> (别名为 <code>/bash &lt;cmd&gt;</code>)。</p>
+<p>有两个相关的系统:</p>
+<ul>
+<li class=""><strong>命令</strong>: 独立的 <code>/...</code> 消息。</li>
+<li class=""><strong>指令</strong>: <code>/think</code>, <code>/verbose</code>, <code>/reasoning</code>, <code>/elevated</code>, <code>/exec</code>, <code>/model</code>, <code>/queue</code>。
+<ul>
+<li class="">指令在模型看到消息之前从消息中剥离。</li>
+<li class="">在正常聊天消息中（不仅仅是指令），它们被视为&quot;内联提示&quot;，<strong>不会</strong>持久化会话设置。</li>
+<li class="">在仅指令的消息中（消息只包含指令），它们会持久化到会话并回复确认。</li>
+<li class="">指令仅适用于<strong>授权发送者</strong>（频道白名单/配对加上 <code>commands.useAccessGroups</code>）。
+未授权的发送者看到的指令被视为纯文本。</li>
+</ul>
+</li>
+</ul>
+<p>还有一些<strong>内联快捷方式</strong>（仅限白名单/授权发送者）: <code>/help</code>, <code>/commands</code>, <code>/status</code>, <code>/whoami</code> (<code>/id</code>)。
+它们立即运行，在模型看到消息之前被剥离，剩余文本继续通过正常流程。</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="配置">配置<a href="#配置" class="hash-link" aria-label="配置的直接链接" title="配置的直接链接" translate="no">​</a></h2>
+<div class="language-json5 codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#D6DEEB;--prism-background-color:#001122"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-json5 codeBlock_bY9V thin-scrollbar" style="color:#D6DEEB;background-color:#001122"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#D6DEEB"><span class="token plain">{</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">  commands: {</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">    native: &quot;auto&quot;,</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">    nativeSkills: &quot;auto&quot;,</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">    text: true,</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">    bash: false,</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">    bashForegroundMs: 2000,</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">    config: false,</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">    debug: false,</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">    restart: false,</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">    useAccessGroups: true</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">  }</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">}</span><br></span></code></pre></div></div>
+<ul>
+<li class=""><code>commands.text</code> (默认 <code>true</code>) 启用在聊天消息中解析 <code>/...</code>。
+<ul>
+<li class="">在没有原生命令的表面上（WhatsApp/WebChat/Signal/iMessage/Google Chat/MS Teams），即使您将其设置为 <code>false</code>，文本命令仍然有效。</li>
+</ul>
+</li>
+<li class=""><code>commands.native</code> (默认 <code>&quot;auto&quot;</code>) 注册原生命令。
+<ul>
+<li class="">自动: 对于 Discord/Telegram 启用；对于 Slack 禁用（直到您添加斜杠命令）；对于没有原生支持的提供商忽略。</li>
+<li class="">设置 <code>channels.discord.commands.native</code>, <code>channels.telegram.commands.native</code> 或 <code>channels.slack.commands.native</code> 来覆盖每个提供商（布尔值或 <code>&quot;auto&quot;</code>）。</li>
+<li class=""><code>false</code> 在启动时清除以前在 Discord/Telegram 上注册的命令。Slack 命令在 Slack 应用中管理，不会自动删除。</li>
+</ul>
+</li>
+<li class=""><code>commands.nativeSkills</code> (默认 <code>&quot;auto&quot;</code>) 在支持时原生注册<strong>技能</strong>命令。
+<ul>
+<li class="">自动: 对于 Discord/Telegram 启用；对于 Slack 禁用（Slack 需要为每个技能创建一个斜杠命令）。</li>
+<li class="">设置 <code>channels.discord.commands.nativeSkills</code>, <code>channels.telegram.commands.nativeSkills</code> 或 <code>channels.slack.commands.nativeSkills</code> 来覆盖每个提供商（布尔值或 <code>&quot;auto&quot;</code>）。</li>
+</ul>
+</li>
+<li class=""><code>commands.bash</code> (默认 <code>false</code>) 启用 <code>! &lt;cmd&gt;</code> 来运行主机 shell 命令（<code>/bash &lt;cmd&gt;</code> 是别名；需要 <code>tools.elevated</code> 白名单）。</li>
+<li class=""><code>commands.bashForegroundMs</code> (默认 <code>2000</code>) 控制 bash 在切换到后台模式之前等待多长时间（<code>0</code> 立即后台运行）。</li>
+<li class=""><code>commands.config</code> (默认 <code>false</code>) 启用 <code>/config</code> (读取/写入 <code>moltbot.json</code>)。</li>
+<li class=""><code>commands.debug</code> (默认 <code>false</code>) 启用 <code>/debug</code> (仅运行时覆盖)。</li>
+<li class=""><code>commands.useAccessGroups</code> (默认 <code>true</code>) 强制执行命令的白名单/策略。</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="命令列表">命令列表<a href="#命令列表" class="hash-link" aria-label="命令列表的直接链接" title="命令列表的直接链接" translate="no">​</a></h2>
+<p>文本 + 原生（启用时）:</p>
+<ul>
+<li class=""><code>/help</code></li>
+<li class=""><code>/commands</code></li>
+<li class=""><code>/skill &lt;name&gt; [input]</code> (按名称运行技能)</li>
+<li class=""><code>/status</code> (显示当前状态；包括当前模型提供商的使用情况/配额（可用时）)</li>
+<li class=""><code>/allowlist</code> (列出/添加/删除白名单条目)</li>
+<li class=""><code>/approve &lt;id&gt; allow-once|allow-always|deny</code> (解决 exec 审批提示)</li>
+<li class=""><code>/context [list|detail|json]</code> (解释&quot;上下文&quot;；<code>detail</code> 显示每个文件 + 每个工具 + 每个技能 + 系统提示大小)</li>
+<li class=""><code>/whoami</code> (显示您的发送者 ID；别名: <code>/id</code>)</li>
+<li class=""><code>/subagents list|stop|log|info|send</code> (检查、停止、记录或向当前会话的子代理运行发送消息)</li>
+<li class=""><code>/config show|get|set|unset</code> (将配置持久化到磁盘，仅所有者；需要 <code>commands.config: true</code>)</li>
+<li class=""><code>/debug show|set|unset|reset</code> (运行时覆盖，仅所有者；需要 <code>commands.debug: true</code>)</li>
+<li class=""><code>/usage off|tokens|full|cost</code> (每个响应的使用情况页脚或本地成本摘要)</li>
+<li class=""><code>/tts off|always|inbound|tagged|status|provider|limit|summary|audio</code> (控制 TTS；参见 <a class="" href="/moltbot-doc/tts">/tts</a>)
+<ul>
+<li class="">Discord: 原生命令是 <code>/voice</code> (Discord 保留 <code>/tts</code>)；文本 <code>/tts</code> 仍然有效。</li>
+</ul>
+</li>
+<li class=""><code>/stop</code></li>
+<li class=""><code>/restart</code></li>
+<li class=""><code>/dock-telegram</code> (别名: <code>/dock_telegram</code>) (切换回复到 Telegram)</li>
+<li class=""><code>/dock-discord</code> (别名: <code>/dock_discord</code>) (切换回复到 Discord)</li>
+<li class=""><code>/dock-slack</code> (别名: <code>/dock_slack</code>) (切换回复到 Slack)</li>
+<li class=""><code>/activation mention|always</code> (仅限群组)</li>
+<li class=""><code>/send on|off|inherit</code> (仅所有者)</li>
+<li class=""><code>/reset</code> 或 <code>/new [model]</code> (可选的模型提示；其余内容传递通过)</li>
+<li class=""><code>/think &lt;off|minimal|low|medium|high|xhigh&gt;</code> (动态选择由模型/提供商决定；别名: <code>/thinking</code>, <code>/t</code>)</li>
+<li class=""><code>/verbose on|full|off</code> (别名: <code>/v</code>)</li>
+<li class=""><code>/reasoning on|off|stream</code> (别名: <code>/reason</code>；开启时，发送一个前缀为 <code>Reasoning:</code> 的单独消息；<code>stream</code> = Telegram 草稿仅)</li>
+<li class=""><code>/elevated on|off|ask|full</code> (别名: <code>/elev</code>；<code>full</code> 跳过 exec 审批)</li>
+<li class=""><code>/exec host=&lt;sandbox|gateway|node&gt; security=&lt;deny|allowlist|full&gt; ask=&lt;off|on-miss|always&gt; node=&lt;id&gt;</code> (发送 <code>/exec</code> 显示当前)</li>
+<li class=""><code>/model &lt;name&gt;</code> (别名: <code>/models</code>；或来自 <code>agents.defaults.models.*.alias</code> 的 <code>/&lt;alias&gt;</code>)</li>
+<li class=""><code>/queue &lt;mode&gt;</code> (加选项如 <code>debounce:2s cap:25 drop:summarize</code>；发送 <code>/queue</code> 查看当前设置)</li>
+<li class=""><code>/bash &lt;command&gt;</code> (仅限主机；<code>! &lt;command&gt;</code> 的别名；需要 <code>commands.bash: true</code> + <code>tools.elevated</code> 白名单)</li>
+</ul>
+<p>仅文本:</p>
+<ul>
+<li class=""><code>/compact [instructions]</code> (参见 <a class="" href="/moltbot-doc/concepts/compaction">/concepts/compaction</a>)</li>
+<li class=""><code>! &lt;command&gt;</code> (仅限主机；一次一个；对长时间运行的任务使用 <code>!poll</code> + <code>!stop</code>)</li>
+<li class=""><code>!poll</code> (检查输出/状态；接受可选的 <code>sessionId</code>；<code>/bash poll</code> 也有效)</li>
+<li class=""><code>!stop</code> (停止正在运行的 bash 任务；接受可选的 <code>sessionId</code>；<code>/bash stop</code> 也有效)</li>
+</ul>
+<p>注意事项:</p>
+<ul>
+<li class="">命令在命令和参数之间接受可选的 <code>:</code> (例如 <code>/think: high</code>, <code>/send: on</code>, <code>/help:</code>)。</li>
+<li class=""><code>/new &lt;model&gt;</code> 接受模型别名、<code>provider/model</code> 或提供商名称（模糊匹配）；如果没有匹配，文本被视为消息正文。</li>
+<li class="">要获得完整的提供商使用情况细分，请使用 <code>moltbot status --usage</code>。</li>
+<li class=""><code>/allowlist add|remove</code> 需要 <code>commands.config=true</code> 并遵守频道 <code>configWrites</code>。</li>
+<li class=""><code>/usage</code> 控制每个响应的使用情况页脚；<code>/usage cost</code> 从 Moltbot 会话日志打印本地成本摘要。</li>
+<li class=""><code>/restart</code> 默认禁用；设置 <code>commands.restart: true</code> 启用它。</li>
+<li class=""><code>/verbose</code> 用于调试和额外可见性；在正常使用中保持<strong>关闭</strong>。</li>
+<li class=""><code>/reasoning</code> (和 <code>/verbose</code>) 在群组设置中存在风险：它们可能会暴露您不打算暴露的内部推理或工具输出。最好保持关闭，特别是在群聊中。</li>
+<li class=""><strong>快速路径:</strong> 来自白名单发送者的仅命令消息立即处理（绕过队列 + 模型）。</li>
+<li class=""><strong>群组提及门控:</strong> 来自白名单发送者的仅命令消息绕过提及要求。</li>
+<li class=""><strong>内联快捷方式（仅限白名单发送者）:</strong> 某些命令也可以嵌入到普通消息中，当模型看到剩余文本之前被剥离。
+<ul>
+<li class="">示例: <code>hey /status</code> 触发状态回复，剩余文本继续通过正常流程。</li>
+</ul>
+</li>
+<li class="">当前: <code>/help</code>, <code>/commands</code>, <code>/status</code>, <code>/whoami</code> (<code>/id</code>)。</li>
+<li class="">未授权的仅命令消息被静默忽略，内联 <code>/...</code> 令牌被视为纯文本。</li>
+<li class=""><strong>技能命令:</strong> <code>user-invocable</code> 技能作为斜杠命令公开。名称被清理为 <code>a-z0-9_</code>（最多 32 个字符）；冲突会获得数字后缀（例如 <code>_2</code>）。
+<ul>
+<li class=""><code>/skill &lt;name&gt; [input]</code> 按名称运行技能（当原生命令限制阻止每个技能命令时有用）。</li>
+<li class="">默认情况下，技能命令被转发到模型作为正常请求。</li>
+<li class="">技能可以选择性声明 <code>command-dispatch: tool</code> 将命令直接路由到工具（确定性，无模型）。</li>
+<li class="">示例: <code>/prose</code> (OpenProse 插件) — 参见 <a class="" href="/moltbot-doc/prose">OpenProse</a>。</li>
+</ul>
+</li>
+<li class=""><strong>原生命令参数:</strong> Discord 对动态选项使用自动完成（当省略必需参数时使用按钮菜单）。Telegram 和 Slack 在命令支持选择且省略参数时显示按钮菜单。</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="使用情况表面显示位置">使用情况表面（显示位置）<a href="#使用情况表面显示位置" class="hash-link" aria-label="使用情况表面（显示位置）的直接链接" title="使用情况表面（显示位置）的直接链接" translate="no">​</a></h2>
+<ul>
+<li class=""><strong>提供商使用情况/配额</strong>（示例：&quot;Claude 80% left&quot;）在启用使用情况跟踪时在 <code>/status</code> 中显示当前模型提供商。</li>
+<li class=""><strong>每个响应的令牌/成本</strong> 由 <code>/usage off|tokens|full</code> 控制（附加到正常回复）。</li>
+<li class=""><code>/model status</code> 关于<strong>模型/认证/端点</strong>，而不是使用情况。</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="模型选择-model">模型选择 (<code>/model</code>)<a href="#模型选择-model" class="hash-link" aria-label="模型选择-model的直接链接" title="模型选择-model的直接链接" translate="no">​</a></h2>
+<p><code>/model</code> 作为指令实现。</p>
+<p>示例:</p>
+<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#D6DEEB;--prism-background-color:#001122"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#D6DEEB;background-color:#001122"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#D6DEEB"><span class="token plain">/model</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">/model list</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">/model 3</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">/model openai/gpt-5.2</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">/model opus@anthropic:default</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">/model status</span><br></span></code></pre></div></div>
+<p>注意事项:</p>
+<ul>
+<li class=""><code>/model</code> 和 <code>/model list</code> 显示紧凑的编号选择器（模型系列 + 可用提供商）。</li>
+<li class=""><code>/model &lt;#&gt;</code> 从该选择器中选择（尽可能优先选择当前提供商）。</li>
+<li class=""><code>/model status</code> 显示详细视图，包括配置的提供商端点 (<code>baseUrl</code>) 和 API 模式 (<code>api</code>)（可用时）。</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="调试覆盖">调试覆盖<a href="#调试覆盖" class="hash-link" aria-label="调试覆盖的直接链接" title="调试覆盖的直接链接" translate="no">​</a></h2>
+<p><code>/debug</code> 让您设置<strong>仅运行时</strong>配置覆盖（内存，而非磁盘）。仅所有者。默认禁用；使用 <code>commands.debug: true</code> 启用。</p>
+<p>示例:</p>
+<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#D6DEEB;--prism-background-color:#001122"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#D6DEEB;background-color:#001122"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#D6DEEB"><span class="token plain">/debug show</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">/debug set messages.responsePrefix=&quot;[moltbot]&quot;</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">/debug set channels.whatsapp.allowFrom=[&quot;+1555&quot;,&quot;+4477&quot;]</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">/debug unset messages.responsePrefix</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">/debug reset</span><br></span></code></pre></div></div>
+<p>注意事项:</p>
+<ul>
+<li class="">覆盖立即应用于新的配置读取，但<strong>不</strong>写入 <code>moltbot.json</code>。</li>
+<li class="">使用 <code>/debug reset</code> 清除所有覆盖并返回到磁盘配置。</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="配置更新">配置更新<a href="#配置更新" class="hash-link" aria-label="配置更新的直接链接" title="配置更新的直接链接" translate="no">​</a></h2>
+<p><code>/config</code> 写入您的磁盘配置 (<code>moltbot.json</code>)。仅所有者。默认禁用；使用 <code>commands.config: true</code> 启用。</p>
+<p>示例:</p>
+<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#D6DEEB;--prism-background-color:#001122"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#D6DEEB;background-color:#001122"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#D6DEEB"><span class="token plain">/config show</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">/config show messages.responsePrefix</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">/config get messages.responsePrefix</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">/config set messages.responsePrefix=&quot;[moltbot]&quot;</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">/config unset messages.responsePrefix</span><br></span></code></pre></div></div>
+<p>注意事项:</p>
+<ul>
+<li class="">配置在写入前进行验证；无效更改被拒绝。</li>
+<li class=""><code>/config</code> 更新在重启后持续。</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="表面注意事项">表面注意事项<a href="#表面注意事项" class="hash-link" aria-label="表面注意事项的直接链接" title="表面注意事项的直接链接" translate="no">​</a></h2>
+<ul>
+<li class=""><strong>文本命令</strong> 在正常聊天会话中运行（DM 共享 <code>main</code>，群组有自己的会话）。</li>
+<li class=""><strong>原生命令</strong> 使用隔离会话:
+<ul>
+<li class="">Discord: <code>agent:&lt;agentId&gt;:discord:slash:&lt;userId&gt;</code></li>
+<li class="">Slack: <code>agent:&lt;agentId&gt;:slack:slash:&lt;userId&gt;</code> (前缀可通过 <code>channels.slack.slashCommand.sessionPrefix</code> 配置)</li>
+<li class="">Telegram: <code>telegram:slash:&lt;userId&gt;</code> (通过 <code>CommandTargetSessionKey</code> 定位聊天会话)</li>
+</ul>
+</li>
+<li class=""><strong><code>/stop</code></strong> 定位活动聊天会话，以便它可以中止当前运行。</li>
+<li class=""><strong>Slack:</strong> <code>channels.slack.slashCommand</code> 仍然支持单个 <code>/clawd</code> 风格的命令。如果您启用 <code>commands.native</code>，您必须为每个内置命令创建一个 Slack 斜杠命令（与 <code>/help</code> 相同的名称）。Slack 的命令参数菜单作为临时 Block Kit 按钮交付。</li>
+</ul></div></article><nav class="docusaurus-mt-lg pagination-nav" aria-label="文件选项卡"></nav></div></div><div class="col col--3"><div class="tocWrapper_xKoj"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#配置" class="table-of-contents__link toc-highlight">配置</a></li><li><a href="#命令列表" class="table-of-contents__link toc-highlight">命令列表</a></li><li><a href="#使用情况表面显示位置" class="table-of-contents__link toc-highlight">使用情况表面（显示位置）</a></li><li><a href="#模型选择-model" class="table-of-contents__link toc-highlight">模型选择 (<code>/model</code>)</a></li><li><a href="#调试覆盖" class="table-of-contents__link toc-highlight">调试覆盖</a></li><li><a href="#配置更新" class="table-of-contents__link toc-highlight">配置更新</a></li><li><a href="#表面注意事项" class="table-of-contents__link toc-highlight">表面注意事项</a></li></ul></div><div class="tocFooter_Fu2z"><div class="themeGroup_RzWV" role="group" aria-label="Theme"><button class="themeBtn_tGr6" aria-label="Light theme" title="Light"><svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor" aria-hidden="true"><path d="M12 18a6 6 0 1 1 0-12 6 6 0 0 1 0 12zm0-2a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM11 1h2v3h-2V1zm0 19h2v3h-2v-3zM3.515 4.929l1.414-1.414L7.05 5.636 5.636 7.05 3.515 4.93zM16.95 18.364l1.414-1.414 2.121 2.121-1.414 1.414-2.121-2.121zm2.121-14.85l1.414 1.415-2.121 2.121-1.414-1.414 2.121-2.121zM5.636 16.95l1.414 1.414-2.121 2.121-1.414-1.414 2.121-2.121zM23 11v2h-3v-2h3zM4 11v2H1v-2h3z"></path></svg></button><button class="themeBtn_tGr6 themeBtnActive_A6tm" aria-label="Dark theme" title="Dark"><svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor" aria-hidden="true"><path d="M11.38 2.019a7.5 7.5 0 1 0 10.6 10.6C21.83 17.963 17.315 22 12.002 22 6.477 22 2 17.523 2 12c0-5.314 4.038-9.827 9.38-10.28z"></path></svg></button></div></div></div></div></div></div></main></div></div></div><footer class="theme-layout-footer footer footer--dark"><div class="container container-fluid"><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2026 Moltbot Docs.</div></div></div></footer></div>
+</body>
+</html>

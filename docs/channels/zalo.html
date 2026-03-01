@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="zh" dir="ltr" class="docs-wrapper plugin-docs plugin-id-default docs-version-current docs-doc-page docs-doc-id-channels/zalo" data-has-hydrated="false">
+<head>
+<meta charset="UTF-8">
+<meta name="generator" content="Docusaurus v3.9.2">
+<title data-rh="true">Zalo（机器人 API） | Moltbot Docs</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:url" content="https://luuman.github.io/moltbot-doc/docs/channels/zalo"><meta data-rh="true" property="og:locale" content="zh"><meta data-rh="true" name="docusaurus_locale" content="zh"><meta data-rh="true" name="docsearch:language" content="zh"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="Zalo（机器人 API） | Moltbot Docs"><meta data-rh="true" name="description" content="状态：实验性。仅支持直接消息；根据 Zalo 文档，群组功能即将推出。"><meta data-rh="true" property="og:description" content="状态：实验性。仅支持直接消息；根据 Zalo 文档，群组功能即将推出。"><link data-rh="true" rel="icon" href="/moltbot-doc/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://luuman.github.io/moltbot-doc/docs/channels/zalo"><link data-rh="true" rel="alternate" href="https://luuman.github.io/moltbot-doc/docs/channels/zalo" hreflang="zh"><link data-rh="true" rel="alternate" href="https://luuman.github.io/moltbot-doc/docs/channels/zalo" hreflang="x-default"><link rel="alternate" type="application/rss+xml" href="/moltbot-doc/blog/rss.xml" title="Moltbot Docs RSS Feed">
+<link rel="alternate" type="application/atom+xml" href="/moltbot-doc/blog/atom.xml" title="Moltbot Docs Atom Feed"><link rel="stylesheet" href="/moltbot-doc/assets/css/styles.484b4c98.css">
+<script src="/moltbot-doc/assets/js/runtime~main.6cf495cf.js" defer="defer"></script>
+<script src="/moltbot-doc/assets/js/main.f9205183.js" defer="defer"></script>
+</head>
+<body class="navigation-with-keyboard">
+<svg style="display: none;"><defs>
+<symbol id="theme-svg-external-link" viewBox="0 0 24 24"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"/></symbol>
+</defs></svg>
+<script>!function(){var t=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme")}catch(t){}}();document.documentElement.setAttribute("data-theme",t||"dark"),document.documentElement.setAttribute("data-theme-choice",t||"dark")}(),function(){try{const c=new URLSearchParams(window.location.search).entries();for(var[t,e]of c)if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id="__docusaurus"><div role="region" aria-label="跳到主要内容"><a class="skipToContent_fXgn" href="#__docusaurus_skipToContent_fallback">跳到主要内容</a></div><nav class="navbar navbar--fixed-top navbar_MONK" role="navigation" aria-label="Main"><div class="navbarInner_ASTH"><div class="navbarLeft_pUmY"><button aria-label="切换导航栏" aria-expanded="false" class="navbar__toggle clean-btn" type="button"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg></button><a class="brand_SXL9" href="/moltbot-doc/"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="24" height="24" rx="6" fill="var(--ifm-color-primary)"></rect><path d="M7 8.5h10M7 12h7M7 15.5h10" stroke="white" stroke-width="1.8" stroke-linecap="round"></path></svg><span class="brandTitle_XbyU">Moltbot</span></a><div class="dropdown_GrgZ"><button class="dropdownToggle_Nf_z">全部站点<svg class="dropdownArrow_Eka8" viewBox="0 0 12 12" fill="none"><path d="M2 4l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg></button><ul class="dropdownMenu_zsxH"><li><a href="https://luuman.github.io/docs-workspace/docs" class="dropdownMenuItem_VBaP">Workspace</a></li><li><a href="https://luuman.github.io/claude-doc/docs" class="dropdownMenuItem_VBaP">Claude</a></li><li><a href="https://luuman.github.io/electron-doc/docs" class="dropdownMenuItem_VBaP">Electron</a></li><li><a href="https://luuman.github.io/tauri-doc/docs" class="dropdownMenuItem_VBaP">Tauri</a></li><li><a href="https://luuman.github.io/matrx-doc/docs" class="dropdownMenuItem_VBaP">Matrx</a></li><li><a href="https://luuman.github.io/brainboard-doc/docs" class="dropdownMenuItem_VBaP">Brainboard</a></li><li><a href="https://luuman.github.io/synology-doc/docs" class="dropdownMenuItem_VBaP">Synology</a></li><li><a href="https://luuman.github.io/codex-doc/docs" class="dropdownMenuItem_VBaP">Codex</a></li><li><a href="https://luuman.github.io/ai-doc/docs" class="dropdownMenuItem_VBaP">AI</a></li></ul></div></div><div class="navbarCenter_Zdr3"><div class="root_OF3s"><span class="icon_UcOK" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor" width="15" height="15"><path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"></path></svg></span><div class="slot__FGx"><div class="navbar__search searchBarContainer_NW3z" dir="ltr"><input placeholder="搜索" aria-label="Search" class="navbar__search-input searchInput_YFbd" value=""><div class="loadingRing_RJI3 searchBarLoadingRing_YnHq"><div></div><div></div><div></div><div></div></div></div></div></div></div><div class="navbarRight_q16u"><a class="navLink_RnnM" href="/moltbot-doc/docs">Docs</a><a class="navLink_RnnM" href="/moltbot-doc/blog">Blog</a><button class="themeToggle_zD_x" aria-label="Switch to light theme" title="Light"><svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M12 18a6 6 0 1 1 0-12 6 6 0 0 1 0 12zm0-2a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM11 1h2v3h-2V1zm0 19h2v3h-2v-3zM3.515 4.929l1.414-1.414L7.05 5.636 5.636 7.05 3.515 4.93zM16.95 18.364l1.414-1.414 2.121 2.121-1.414 1.414-2.121-2.121zm2.121-14.85l1.414 1.415-2.121 2.121-1.414-1.414 2.121-2.121zM5.636 16.95l1.414 1.414-2.121 2.121-1.414-1.414 2.121-2.121zM23 11v2h-3v-2h3zM4 11v2H1v-2h3z"></path></svg></button></div></div></nav><div id="__docusaurus_skipToContent_fallback" class="theme-layout-main main-wrapper mainWrapper_z2l0"><div class="docsWrapper_hBAB"><button aria-label="回到顶部" class="clean-btn theme-back-to-top-button backToTopButton_sjWU" type="button"></button><div class="docRoot_UBD9"><main class="docMainContainer_TBSr docMainContainerEnhanced_lQrH"><div class="container padding-top--md padding-bottom--lg"><div class="row"><div class="col docItemCol_VOVn"><div class="docItemContainer_Djhp"><article><div class="tocCollapsible_ETCw theme-doc-toc-mobile tocMobile_ITEo"><button type="button" class="clean-btn tocCollapsibleButton_TO0P">本页总览</button></div><div class="theme-doc-markdown markdown"><header><h1>Zalo（机器人 API）</h1></header>
+<p>状态：实验性。仅支持直接消息；根据 Zalo 文档，群组功能即将推出。</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="需要插件">需要插件<a href="#需要插件" class="hash-link" aria-label="需要插件的直接链接" title="需要插件的直接链接" translate="no">​</a></h2>
+<p>Zalo 作为插件提供，未与核心安装捆绑。</p>
+<ul>
+<li class="">通过 CLI 安装：<code>moltbot plugins install @moltbot/zalo</code></li>
+<li class="">或在入门过程中选择 <strong>Zalo</strong> 并确认安装提示</li>
+<li class="">详情：<a class="" href="/moltbot-doc/plugin">插件</a></li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="快速设置初学者">快速设置（初学者）<a href="#快速设置初学者" class="hash-link" aria-label="快速设置（初学者）的直接链接" title="快速设置（初学者）的直接链接" translate="no">​</a></h2>
+<ol>
+<li class="">安装 Zalo 插件：
+<ul>
+<li class="">从源代码检出：<code>moltbot plugins install ./extensions/zalo</code></li>
+<li class="">从 npm（如果已发布）：<code>moltbot plugins install @moltbot/zalo</code></li>
+<li class="">或在入门过程中选择 <strong>Zalo</strong> 并确认安装提示</li>
+</ul>
+</li>
+<li class="">设置令牌：
+<ul>
+<li class="">环境变量：<code>ZALO_BOT_TOKEN=...</code></li>
+<li class="">或配置：<code>channels.zalo.botToken: &quot;...&quot;</code>。</li>
+</ul>
+</li>
+<li class="">重启网关（或完成入门）。</li>
+<li class="">私信访问默认为配对；在首次联系时批准配对码。</li>
+</ol>
+<p>最小配置：</p>
+<div class="language-json5 codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#D6DEEB;--prism-background-color:#001122"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-json5 codeBlock_bY9V thin-scrollbar" style="color:#D6DEEB;background-color:#001122"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#D6DEEB"><span class="token plain">{</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">  channels: {</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">    zalo: {</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">      enabled: true,</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">      botToken: &quot;12345689:abc-xyz&quot;,</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">      dmPolicy: &quot;pairing&quot;</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">    }</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">  }</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">}</span><br></span></code></pre></div></div>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="它是什么">它是什么<a href="#它是什么" class="hash-link" aria-label="它是什么的直接链接" title="它是什么的直接链接" translate="no">​</a></h2>
+<p>Zalo 是一款专注于越南的消息应用；其机器人 API 允许网关运行用于 1:1 对话的机器人。
+如果您希望将路由确定性地返回到 Zalo，它非常适合支持或通知场景。</p>
+<ul>
+<li class="">由网关拥有的 Zalo 机器人 API 通道。</li>
+<li class="">确定性路由：回复返回到 Zalo；模型永远不会选择通道。</li>
+<li class="">私信共享代理的主会话。</li>
+<li class="">群组尚未支持（Zalo 文档说明&quot;即将推出&quot;）。</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="设置快速路径">设置（快速路径）<a href="#设置快速路径" class="hash-link" aria-label="设置（快速路径）的直接链接" title="设置（快速路径）的直接链接" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="1-创建机器人令牌zalo-机器人平台">1) 创建机器人令牌（Zalo 机器人平台）<a href="#1-创建机器人令牌zalo-机器人平台" class="hash-link" aria-label="1) 创建机器人令牌（Zalo 机器人平台）的直接链接" title="1) 创建机器人令牌（Zalo 机器人平台）的直接链接" translate="no">​</a></h3>
+<ol>
+<li class="">前往 <strong><a href="https://bot.zaloplatforms.com" target="_blank" rel="noopener noreferrer" class="">https://bot.zaloplatforms.com</a></strong> 并登录。</li>
+<li class="">创建一个新机器人并配置其设置。</li>
+<li class="">复制机器人令牌（格式：<code>12345689:abc-xyz</code>）。</li>
+</ol>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="2-配置令牌环境变量或配置">2) 配置令牌（环境变量或配置）<a href="#2-配置令牌环境变量或配置" class="hash-link" aria-label="2) 配置令牌（环境变量或配置）的直接链接" title="2) 配置令牌（环境变量或配置）的直接链接" translate="no">​</a></h3>
+<p>示例：</p>
+<div class="language-json5 codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#D6DEEB;--prism-background-color:#001122"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-json5 codeBlock_bY9V thin-scrollbar" style="color:#D6DEEB;background-color:#001122"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#D6DEEB"><span class="token plain">{</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">  channels: {</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">    zalo: {</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">      enabled: true,</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">      botToken: &quot;12345689:abc-xyz&quot;,</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">      dmPolicy: &quot;pairing&quot;</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">    }</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">  }</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">}</span><br></span></code></pre></div></div>
+<p>环境变量选项：<code>ZALO_BOT_TOKEN=...</code>（仅适用于默认账户）。</p>
+<p>多账户支持：使用 <code>channels.zalo.accounts</code> 配置每个账户的令牌和可选的 <code>name</code>。</p>
+<ol start="3">
+<li class="">重启网关。当令牌解析（环境变量或配置）时，Zalo 启动。</li>
+<li class="">私信访问默认为配对。当机器人首次被联系时批准代码。</li>
+</ol>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="工作原理行为">工作原理（行为）<a href="#工作原理行为" class="hash-link" aria-label="工作原理（行为）的直接链接" title="工作原理（行为）的直接链接" translate="no">​</a></h2>
+<ul>
+<li class="">入站消息被规范化为带有媒体占位符的共享通道信封。</li>
+<li class="">回复始终路由回相同的 Zalo 聊天。</li>
+<li class="">默认为长轮询；通过 <code>channels.zalo.webhookUrl</code> 可用 webhook 模式。</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="限制">限制<a href="#限制" class="hash-link" aria-label="限制的直接链接" title="限制的直接链接" translate="no">​</a></h2>
+<ul>
+<li class="">出站文本分割为 2000 个字符（Zalo API 限制）。</li>
+<li class="">媒体下载/上传受 <code>channels.zalo.mediaMaxMb</code>（默认 5）限制。</li>
+<li class="">由于 2000 字符限制使流式传输不太有用，默认阻止流式传输。</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="访问控制私信">访问控制（私信）<a href="#访问控制私信" class="hash-link" aria-label="访问控制（私信）的直接链接" title="访问控制（私信）的直接链接" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="私信访问">私信访问<a href="#私信访问" class="hash-link" aria-label="私信访问的直接链接" title="私信访问的直接链接" translate="no">​</a></h3>
+<ul>
+<li class="">默认：<code>channels.zalo.dmPolicy = &quot;pairing&quot;</code>。未知发送者收到配对码；在批准之前忽略消息（代码在 1 小时后过期）。</li>
+<li class="">批准方式：
+<ul>
+<li class=""><code>moltbot pairing list zalo</code></li>
+<li class=""><code>moltbot pairing approve zalo &lt;CODE&gt;</code></li>
+</ul>
+</li>
+<li class="">配对是默认的令牌交换。详情：<a class="" href="/moltbot-doc/start/pairing">配对</a></li>
+<li class=""><code>channels.zalo.allowFrom</code> 接受数字用户 ID（无用户名查找可用）。</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="长轮询-vs-webhook">长轮询 vs webhook<a href="#长轮询-vs-webhook" class="hash-link" aria-label="长轮询 vs webhook的直接链接" title="长轮询 vs webhook的直接链接" translate="no">​</a></h2>
+<ul>
+<li class="">默认：长轮询（不需要公共 URL）。</li>
+<li class="">Webhook 模式：设置 <code>channels.zalo.webhookUrl</code> 和 <code>channels.zalo.webhookSecret</code>。
+<ul>
+<li class="">Webhook 密钥必须为 8-256 个字符。</li>
+<li class="">Webhook URL 必须使用 HTTPS。</li>
+<li class="">Zalo 发送带有 <code>X-Bot-Api-Secret-Token</code> 标头的事件以供验证。</li>
+<li class="">网关 HTTP 在 <code>channels.zalo.webhookPath</code>（默认为 webhook URL 路径）处理 webhook 请求。</li>
+</ul>
+</li>
+</ul>
+<p><strong>注意：</strong> 根据 Zalo API 文档，getUpdates（轮询）和 webhook 是互斥的。</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="支持的消息类型">支持的消息类型<a href="#支持的消息类型" class="hash-link" aria-label="支持的消息类型的直接链接" title="支持的消息类型的直接链接" translate="no">​</a></h2>
+<ul>
+<li class=""><strong>文本消息</strong>：完全支持，支持 2000 字符分割。</li>
+<li class=""><strong>图像消息</strong>：下载和处理入站图像；通过 <code>sendPhoto</code> 发送图像。</li>
+<li class=""><strong>贴纸</strong>：记录但未完全处理（无代理响应）。</li>
+<li class=""><strong>不支持的类型</strong>：记录（例如，来自受保护用户的邮件）。</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="功能">功能<a href="#功能" class="hash-link" aria-label="功能的直接链接" title="功能的直接链接" translate="no">​</a></h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>功能</th><th>状态</th></tr></thead><tbody><tr><td>直接消息</td><td>✅ 支持</td></tr><tr><td>群组</td><td>❌ 即将推出（根据 Zalo 文档）</td></tr><tr><td>媒体（图像）</td><td>✅ 支持</td></tr><tr><td>反应</td><td>❌ 不支持</td></tr><tr><td>线程</td><td>❌ 不支持</td></tr><tr><td>投票</td><td>❌ 不支持</td></tr><tr><td>原生命令</td><td>❌ 不支持</td></tr><tr><td>流式传输</td><td>⚠️ 已阻止（2000 字符限制）</td></tr></tbody></table>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="交付目标clicron">交付目标（CLI/cron）<a href="#交付目标clicron" class="hash-link" aria-label="交付目标（CLI/cron）的直接链接" title="交付目标（CLI/cron）的直接链接" translate="no">​</a></h2>
+<ul>
+<li class="">使用聊天 ID 作为目标。</li>
+<li class="">示例：<code>moltbot message send --channel zalo --target 123456789 --message &quot;hi&quot;</code>。</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="故障排除">故障排除<a href="#故障排除" class="hash-link" aria-label="故障排除的直接链接" title="故障排除的直接链接" translate="no">​</a></h2>
+<p><strong>机器人不响应：</strong></p>
+<ul>
+<li class="">检查令牌是否有效：<code>moltbot channels status --probe</code></li>
+<li class="">验证发送者是否已批准（配对或 allowFrom）</li>
+<li class="">检查网关日志：<code>moltbot logs --follow</code></li>
+</ul>
+<p><strong>Webhook 未接收事件：</strong></p>
+<ul>
+<li class="">确保 webhook URL 使用 HTTPS</li>
+<li class="">验证密钥为 8-256 个字符</li>
+<li class="">确认网关 HTTP 端点在配置的路径上可访问</li>
+<li class="">检查 getUpdates 轮询是否未运行（它们是互斥的）</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="配置参考zalo">配置参考（Zalo）<a href="#配置参考zalo" class="hash-link" aria-label="配置参考（Zalo）的直接链接" title="配置参考（Zalo）的直接链接" translate="no">​</a></h2>
+<p>完整配置：<a class="" href="/moltbot-doc/gateway/configuration">配置</a></p>
+<p>提供者选项：</p>
+<ul>
+<li class=""><code>channels.zalo.enabled</code>：启用/禁用通道启动。</li>
+<li class=""><code>channels.zalo.botToken</code>：来自 Zalo 机器人平台的机器人令牌。</li>
+<li class=""><code>channels.zalo.tokenFile</code>：从文件路径读取令牌。</li>
+<li class=""><code>channels.zalo.dmPolicy</code>：<code>pairing | allowlist | open | disabled</code>（默认：配对）。</li>
+<li class=""><code>channels.zalo.allowFrom</code>：私信允许列表（用户 ID）。<code>open</code> 需要 <code>&quot;*&quot;</code>。向导将询问数字 ID。</li>
+<li class=""><code>channels.zalo.mediaMaxMb</code>：入站/出站媒体上限（MB，默认 5）。</li>
+<li class=""><code>channels.zalo.webhookUrl</code>：启用 webhook 模式（需要 HTTPS）。</li>
+<li class=""><code>channels.zalo.webhookSecret</code>：webhook 密钥（8-256 个字符）。</li>
+<li class=""><code>channels.zalo.webhookPath</code>：网关 HTTP 服务器上的 webhook 路径。</li>
+<li class=""><code>channels.zalo.proxy</code>：API 请求的代理 URL。</li>
+</ul>
+<p>多账户选项：</p>
+<ul>
+<li class=""><code>channels.zalo.accounts.&lt;id&gt;.botToken</code>：按账户令牌。</li>
+<li class=""><code>channels.zalo.accounts.&lt;id&gt;.tokenFile</code>：按账户令牌文件。</li>
+<li class=""><code>channels.zalo.accounts.&lt;id&gt;.name</code>：显示名称。</li>
+<li class=""><code>channels.zalo.accounts.&lt;id&gt;.enabled</code>：启用/禁用账户。</li>
+<li class=""><code>channels.zalo.accounts.&lt;id&gt;.dmPolicy</code>：按账户私信策略。</li>
+<li class=""><code>channels.zalo.accounts.&lt;id&gt;.allowFrom</code>：按账户允许列表。</li>
+<li class=""><code>channels.zalo.accounts.&lt;id&gt;.webhookUrl</code>：按账户 webhook URL。</li>
+<li class=""><code>channels.zalo.accounts.&lt;id&gt;.webhookSecret</code>：按账户 webhook 密钥。</li>
+<li class=""><code>channels.zalo.accounts.&lt;id&gt;.webhookPath</code>：按账户 webhook 路径。</li>
+<li class=""><code>channels.zalo.accounts.&lt;id&gt;.proxy</code>：按账户代理 URL。</li>
+</ul></div></article><nav class="docusaurus-mt-lg pagination-nav" aria-label="文件选项卡"></nav></div></div><div class="col col--3"><div class="tocWrapper_xKoj"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#需要插件" class="table-of-contents__link toc-highlight">需要插件</a></li><li><a href="#快速设置初学者" class="table-of-contents__link toc-highlight">快速设置（初学者）</a></li><li><a href="#它是什么" class="table-of-contents__link toc-highlight">它是什么</a></li><li><a href="#设置快速路径" class="table-of-contents__link toc-highlight">设置（快速路径）</a><ul><li><a href="#1-创建机器人令牌zalo-机器人平台" class="table-of-contents__link toc-highlight">1) 创建机器人令牌（Zalo 机器人平台）</a></li><li><a href="#2-配置令牌环境变量或配置" class="table-of-contents__link toc-highlight">2) 配置令牌（环境变量或配置）</a></li></ul></li><li><a href="#工作原理行为" class="table-of-contents__link toc-highlight">工作原理（行为）</a></li><li><a href="#限制" class="table-of-contents__link toc-highlight">限制</a></li><li><a href="#访问控制私信" class="table-of-contents__link toc-highlight">访问控制（私信）</a><ul><li><a href="#私信访问" class="table-of-contents__link toc-highlight">私信访问</a></li></ul></li><li><a href="#长轮询-vs-webhook" class="table-of-contents__link toc-highlight">长轮询 vs webhook</a></li><li><a href="#支持的消息类型" class="table-of-contents__link toc-highlight">支持的消息类型</a></li><li><a href="#功能" class="table-of-contents__link toc-highlight">功能</a></li><li><a href="#交付目标clicron" class="table-of-contents__link toc-highlight">交付目标（CLI/cron）</a></li><li><a href="#故障排除" class="table-of-contents__link toc-highlight">故障排除</a></li><li><a href="#配置参考zalo" class="table-of-contents__link toc-highlight">配置参考（Zalo）</a></li></ul></div><div class="tocFooter_Fu2z"><div class="themeGroup_RzWV" role="group" aria-label="Theme"><button class="themeBtn_tGr6" aria-label="Light theme" title="Light"><svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor" aria-hidden="true"><path d="M12 18a6 6 0 1 1 0-12 6 6 0 0 1 0 12zm0-2a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM11 1h2v3h-2V1zm0 19h2v3h-2v-3zM3.515 4.929l1.414-1.414L7.05 5.636 5.636 7.05 3.515 4.93zM16.95 18.364l1.414-1.414 2.121 2.121-1.414 1.414-2.121-2.121zm2.121-14.85l1.414 1.415-2.121 2.121-1.414-1.414 2.121-2.121zM5.636 16.95l1.414 1.414-2.121 2.121-1.414-1.414 2.121-2.121zM23 11v2h-3v-2h3zM4 11v2H1v-2h3z"></path></svg></button><button class="themeBtn_tGr6 themeBtnActive_A6tm" aria-label="Dark theme" title="Dark"><svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor" aria-hidden="true"><path d="M11.38 2.019a7.5 7.5 0 1 0 10.6 10.6C21.83 17.963 17.315 22 12.002 22 6.477 22 2 17.523 2 12c0-5.314 4.038-9.827 9.38-10.28z"></path></svg></button></div></div></div></div></div></div></main></div></div></div><footer class="theme-layout-footer footer footer--dark"><div class="container container-fluid"><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2026 Moltbot Docs.</div></div></div></footer></div>
+</body>
+</html>

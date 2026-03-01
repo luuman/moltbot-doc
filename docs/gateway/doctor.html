@@ -1,0 +1,221 @@
+<!doctype html>
+<html lang="zh" dir="ltr" class="docs-wrapper plugin-docs plugin-id-default docs-version-current docs-doc-page docs-doc-id-gateway/doctor" data-has-hydrated="false">
+<head>
+<meta charset="UTF-8">
+<meta name="generator" content="Docusaurus v3.9.2">
+<title data-rh="true">Doctor | Moltbot Docs</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:url" content="https://luuman.github.io/moltbot-doc/docs/gateway/doctor"><meta data-rh="true" property="og:locale" content="zh"><meta data-rh="true" name="docusaurus_locale" content="zh"><meta data-rh="true" name="docsearch:language" content="zh"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="Doctor | Moltbot Docs"><meta data-rh="true" name="description" content="moltbot doctor 是 Moltbot 的修复 + 迁移工具。它修复陈旧的"><meta data-rh="true" property="og:description" content="moltbot doctor 是 Moltbot 的修复 + 迁移工具。它修复陈旧的"><link data-rh="true" rel="icon" href="/moltbot-doc/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://luuman.github.io/moltbot-doc/docs/gateway/doctor"><link data-rh="true" rel="alternate" href="https://luuman.github.io/moltbot-doc/docs/gateway/doctor" hreflang="zh"><link data-rh="true" rel="alternate" href="https://luuman.github.io/moltbot-doc/docs/gateway/doctor" hreflang="x-default"><link rel="alternate" type="application/rss+xml" href="/moltbot-doc/blog/rss.xml" title="Moltbot Docs RSS Feed">
+<link rel="alternate" type="application/atom+xml" href="/moltbot-doc/blog/atom.xml" title="Moltbot Docs Atom Feed"><link rel="stylesheet" href="/moltbot-doc/assets/css/styles.484b4c98.css">
+<script src="/moltbot-doc/assets/js/runtime~main.6cf495cf.js" defer="defer"></script>
+<script src="/moltbot-doc/assets/js/main.f9205183.js" defer="defer"></script>
+</head>
+<body class="navigation-with-keyboard">
+<svg style="display: none;"><defs>
+<symbol id="theme-svg-external-link" viewBox="0 0 24 24"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"/></symbol>
+</defs></svg>
+<script>!function(){var t=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme")}catch(t){}}();document.documentElement.setAttribute("data-theme",t||"dark"),document.documentElement.setAttribute("data-theme-choice",t||"dark")}(),function(){try{const c=new URLSearchParams(window.location.search).entries();for(var[t,e]of c)if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id="__docusaurus"><div role="region" aria-label="跳到主要内容"><a class="skipToContent_fXgn" href="#__docusaurus_skipToContent_fallback">跳到主要内容</a></div><nav class="navbar navbar--fixed-top navbar_MONK" role="navigation" aria-label="Main"><div class="navbarInner_ASTH"><div class="navbarLeft_pUmY"><button aria-label="切换导航栏" aria-expanded="false" class="navbar__toggle clean-btn" type="button"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg></button><a class="brand_SXL9" href="/moltbot-doc/"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="24" height="24" rx="6" fill="var(--ifm-color-primary)"></rect><path d="M7 8.5h10M7 12h7M7 15.5h10" stroke="white" stroke-width="1.8" stroke-linecap="round"></path></svg><span class="brandTitle_XbyU">Moltbot</span></a><div class="dropdown_GrgZ"><button class="dropdownToggle_Nf_z">全部站点<svg class="dropdownArrow_Eka8" viewBox="0 0 12 12" fill="none"><path d="M2 4l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg></button><ul class="dropdownMenu_zsxH"><li><a href="https://luuman.github.io/docs-workspace/docs" class="dropdownMenuItem_VBaP">Workspace</a></li><li><a href="https://luuman.github.io/claude-doc/docs" class="dropdownMenuItem_VBaP">Claude</a></li><li><a href="https://luuman.github.io/electron-doc/docs" class="dropdownMenuItem_VBaP">Electron</a></li><li><a href="https://luuman.github.io/tauri-doc/docs" class="dropdownMenuItem_VBaP">Tauri</a></li><li><a href="https://luuman.github.io/matrx-doc/docs" class="dropdownMenuItem_VBaP">Matrx</a></li><li><a href="https://luuman.github.io/brainboard-doc/docs" class="dropdownMenuItem_VBaP">Brainboard</a></li><li><a href="https://luuman.github.io/synology-doc/docs" class="dropdownMenuItem_VBaP">Synology</a></li><li><a href="https://luuman.github.io/codex-doc/docs" class="dropdownMenuItem_VBaP">Codex</a></li><li><a href="https://luuman.github.io/ai-doc/docs" class="dropdownMenuItem_VBaP">AI</a></li></ul></div></div><div class="navbarCenter_Zdr3"><div class="root_OF3s"><span class="icon_UcOK" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor" width="15" height="15"><path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"></path></svg></span><div class="slot__FGx"><div class="navbar__search searchBarContainer_NW3z" dir="ltr"><input placeholder="搜索" aria-label="Search" class="navbar__search-input searchInput_YFbd" value=""><div class="loadingRing_RJI3 searchBarLoadingRing_YnHq"><div></div><div></div><div></div><div></div></div></div></div></div></div><div class="navbarRight_q16u"><a class="navLink_RnnM" href="/moltbot-doc/docs">Docs</a><a class="navLink_RnnM" href="/moltbot-doc/blog">Blog</a><button class="themeToggle_zD_x" aria-label="Switch to light theme" title="Light"><svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M12 18a6 6 0 1 1 0-12 6 6 0 0 1 0 12zm0-2a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM11 1h2v3h-2V1zm0 19h2v3h-2v-3zM3.515 4.929l1.414-1.414L7.05 5.636 5.636 7.05 3.515 4.93zM16.95 18.364l1.414-1.414 2.121 2.121-1.414 1.414-2.121-2.121zm2.121-14.85l1.414 1.415-2.121 2.121-1.414-1.414 2.121-2.121zM5.636 16.95l1.414 1.414-2.121 2.121-1.414-1.414 2.121-2.121zM23 11v2h-3v-2h3zM4 11v2H1v-2h3z"></path></svg></button></div></div></nav><div id="__docusaurus_skipToContent_fallback" class="theme-layout-main main-wrapper mainWrapper_z2l0"><div class="docsWrapper_hBAB"><button aria-label="回到顶部" class="clean-btn theme-back-to-top-button backToTopButton_sjWU" type="button"></button><div class="docRoot_UBD9"><main class="docMainContainer_TBSr docMainContainerEnhanced_lQrH"><div class="container padding-top--md padding-bottom--lg"><div class="row"><div class="col docItemCol_VOVn"><div class="docItemContainer_Djhp"><article><div class="tocCollapsible_ETCw theme-doc-toc-mobile tocMobile_ITEo"><button type="button" class="clean-btn tocCollapsibleButton_TO0P">本页总览</button></div><div class="theme-doc-markdown markdown"><header><h1>Doctor</h1></header>
+<p><code>moltbot doctor</code> 是 Moltbot 的修复 + 迁移工具。它修复陈旧的
+配置/状态，检查健康状况，并提供可操作的修复步骤。</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="快速开始">快速开始<a href="#快速开始" class="hash-link" aria-label="快速开始的直接链接" title="快速开始的直接链接" translate="no">​</a></h2>
+<div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#D6DEEB;--prism-background-color:#001122"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#D6DEEB;background-color:#001122"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#D6DEEB"><span class="token plain">moltbot doctor</span><br></span></code></pre></div></div>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="无头自动化">无头/自动化<a href="#无头自动化" class="hash-link" aria-label="无头/自动化的直接链接" title="无头/自动化的直接链接" translate="no">​</a></h3>
+<div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#D6DEEB;--prism-background-color:#001122"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#D6DEEB;background-color:#001122"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#D6DEEB"><span class="token plain">moltbot doctor --yes</span><br></span></code></pre></div></div>
+<p>无需提示即可接受默认值（包括重启/服务/沙盒修复步骤，适当时）。</p>
+<div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#D6DEEB;--prism-background-color:#001122"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#D6DEEB;background-color:#001122"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#D6DEEB"><span class="token plain">moltbot doctor --repair</span><br></span></code></pre></div></div>
+<p>无需提示即可应用推荐的修复（在安全的地方进行修复 + 重启）。</p>
+<div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#D6DEEB;--prism-background-color:#001122"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#D6DEEB;background-color:#001122"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#D6DEEB"><span class="token plain">moltbot doctor --repair --force</span><br></span></code></pre></div></div>
+<p>也应用激进修复（覆盖自定义监督程序配置）。</p>
+<div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#D6DEEB;--prism-background-color:#001122"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#D6DEEB;background-color:#001122"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#D6DEEB"><span class="token plain">moltbot doctor --non-interactive</span><br></span></code></pre></div></div>
+<p>无提示运行，仅应用安全迁移（配置规范化 + 磁盘上状态移动）。跳过需要人工确认的重启/服务/沙盒操作。
+检测到时，遗留状态迁移会自动运行。</p>
+<div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#D6DEEB;--prism-background-color:#001122"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#D6DEEB;background-color:#001122"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#D6DEEB"><span class="token plain">moltbot doctor --deep</span><br></span></code></pre></div></div>
+<p>扫描系统服务以查找额外的网关安装（launchd/systemd/schtasks）。</p>
+<p>如果你想在写入之前查看更改，请先打开配置文件：</p>
+<div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#D6DEEB;--prism-background-color:#001122"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#D6DEEB;background-color:#001122"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#D6DEEB"><span class="token plain">cat ~/.clawdbot/moltbot.json</span><br></span></code></pre></div></div>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="功能摘要">功能（摘要）<a href="#功能摘要" class="hash-link" aria-label="功能（摘要）的直接链接" title="功能（摘要）的直接链接" translate="no">​</a></h2>
+<ul>
+<li class="">可选的预飞行更新（git 安装，仅交互式）。</li>
+<li class="">UI 协议新鲜度检查（当协议架构较新时重新构建控制 UI）。</li>
+<li class="">健康检查 + 重启提示。</li>
+<li class="">技能状态摘要（符合条件/缺失/被阻止）。</li>
+<li class="">遗留值的配置规范化。</li>
+<li class="">OpenCode Zen 提供商覆盖警告（<code>models.providers.opencode</code>）。</li>
+<li class="">遗留磁盘状态迁移（会话/代理目录/WhatsApp 认证）。</li>
+<li class="">状态完整性和权限检查（会话、转录、状态目录）。</li>
+<li class="">配置文件权限检查（chmod 600）在本地运行时。</li>
+<li class="">模型认证健康：检查 OAuth 过期，可以刷新即将过期的令牌，并报告认证配置冷却/禁用状态。</li>
+<li class="">额外工作空间目录检测（<code>~/moltbot</code>）。</li>
+<li class="">启用沙盒时的沙盒镜像修复。</li>
+<li class="">遗留服务迁移和额外网关检测。</li>
+<li class="">网关运行时检查（服务已安装但未运行；缓存的 launchd 标签）。</li>
+<li class="">通道状态警告（从运行中的网关探测）。</li>
+<li class="">监督程序配置审核（launchd/systemd/schtasks）可选修复。</li>
+<li class="">网关运行时最佳实践检查（Node 与 Bun，版本管理器路径）。</li>
+<li class="">网关端口冲突诊断（默认 <code>18789</code>）。</li>
+<li class="">对开放 DM 策略的安全警告。</li>
+<li class="">未设置 <code>gateway.auth.token</code> 时的网关认证警告（本地模式；提供令牌生成）。</li>
+<li class="">Linux 上的 systemd linger 检查。</li>
+<li class="">源码安装检查（pnpm 工作区不匹配，缺少 UI 资产，缺少 tsx 二进制文件）。</li>
+<li class="">写入更新的配置 + 向导元数据。</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="详细行为和理由">详细行为和理由<a href="#详细行为和理由" class="hash-link" aria-label="详细行为和理由的直接链接" title="详细行为和理由的直接链接" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="0-可选更新git-安装">0) 可选更新（git 安装）<a href="#0-可选更新git-安装" class="hash-link" aria-label="0) 可选更新（git 安装）的直接链接" title="0) 可选更新（git 安装）的直接链接" translate="no">​</a></h3>
+<p>如果这是 git 检出并且 doctor 正在交互式运行，它会在运行 doctor 之前
+提供更新（fetch/rebase/build）。</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="1-配置规范化">1) 配置规范化<a href="#1-配置规范化" class="hash-link" aria-label="1) 配置规范化的直接链接" title="1) 配置规范化的直接链接" translate="no">​</a></h3>
+<p>如果配置包含遗留值形状（例如 <code>messages.ackReaction</code>
+没有频道特定的覆盖），doctor 会将它们规范化为当前
+架构。</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="2-遗留配置键迁移">2) 遗留配置键迁移<a href="#2-遗留配置键迁移" class="hash-link" aria-label="2) 遗留配置键迁移的直接链接" title="2) 遗留配置键迁移的直接链接" translate="no">​</a></h3>
+<p>当配置包含已弃用的键时，其他命令拒绝运行并要求
+你运行 <code>moltbot doctor</code>。</p>
+<p>Doctor 将：</p>
+<ul>
+<li class="">解释找到的遗留键。</li>
+<li class="">显示它应用的迁移。</li>
+<li class="">用更新的架构重写 <code>~/.clawdbot/moltbot.json</code>。</li>
+</ul>
+<p>网关还会在检测到遗留配置格式时在启动时自动运行 doctor 迁移，
+因此陈旧配置在无需手动干预的情况下得到修复。</p>
+<p>当前迁移：</p>
+<ul>
+<li class=""><code>routing.allowFrom</code> → <code>channels.whatsapp.allowFrom</code></li>
+<li class=""><code>routing.groupChat.requireMention</code> → <code>channels.whatsapp/telegram/imessage.groups.&quot;*&quot;.requireMention</code></li>
+<li class=""><code>routing.groupChat.historyLimit</code> → <code>messages.groupChat.historyLimit</code></li>
+<li class=""><code>routing.groupChat.mentionPatterns</code> → <code>messages.groupChat.mentionPatterns</code></li>
+<li class=""><code>routing.queue</code> → <code>messages.queue</code></li>
+<li class=""><code>routing.bindings</code> → 顶级 <code>bindings</code></li>
+<li class=""><code>routing.agents</code>/<code>routing.defaultAgentId</code> → <code>agents.list</code> + <code>agents.list[].default</code></li>
+<li class=""><code>routing.agentToAgent</code> → <code>tools.agentToAgent</code></li>
+<li class=""><code>routing.transcribeAudio</code> → <code>tools.media.audio.models</code></li>
+<li class=""><code>bindings[].match.accountID</code> → <code>bindings[].match.accountId</code></li>
+<li class=""><code>identity</code> → <code>agents.list[].identity</code></li>
+<li class=""><code>agent.*</code> → <code>agents.defaults</code> + <code>tools.*</code>（工具/提升/执行/沙盒/子代理）</li>
+<li class=""><code>agent.model</code>/<code>allowedModels</code>/<code>modelAliases</code>/<code>modelFallbacks</code>/<code>imageModelFallbacks</code>
+→ <code>agents.defaults.models</code> + <code>agents.defaults.model.primary/fallbacks</code> + <code>agents.defaults.imageModel.primary/fallbacks</code></li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="2b-opencode-zen-提供商覆盖">2b) OpenCode Zen 提供商覆盖<a href="#2b-opencode-zen-提供商覆盖" class="hash-link" aria-label="2b) OpenCode Zen 提供商覆盖的直接链接" title="2b) OpenCode Zen 提供商覆盖的直接链接" translate="no">​</a></h3>
+<p>如果你手动添加了 <code>models.providers.opencode</code>（或 <code>opencode-zen</code>），它
+会覆盖来自 <code>@mariozechner/pi-ai</code> 的内置 OpenCode Zen 目录。这可以
+强制每个模型使用单个 API 或将成本归零。Doctor 发出警告，以便你可以
+移除覆盖并恢复每模型 API 路由 + 成本。</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="3-遗留状态迁移磁盘布局">3) 遗留状态迁移（磁盘布局）<a href="#3-遗留状态迁移磁盘布局" class="hash-link" aria-label="3) 遗留状态迁移（磁盘布局）的直接链接" title="3) 遗留状态迁移（磁盘布局）的直接链接" translate="no">​</a></h3>
+<p>Doctor 可以将较旧的磁盘上布局迁移到当前结构：</p>
+<ul>
+<li class="">会话存储 + 转录：
+<ul>
+<li class="">从 <code>~/.clawdbot/sessions/</code> 到 <code>~/.clawdbot/agents/&lt;agentId&gt;/sessions/</code></li>
+</ul>
+</li>
+<li class="">代理目录：
+<ul>
+<li class="">从 <code>~/.clawdbot/agent/</code> 到 <code>~/.clawdbot/agents/&lt;agentId&gt;/agent/</code></li>
+</ul>
+</li>
+<li class="">WhatsApp 认证状态（Baileys）：
+<ul>
+<li class="">从遗留 <code>~/.clawdbot/credentials/*.json</code>（除了 <code>oauth.json</code>）</li>
+<li class="">到 <code>~/.clawdbot/credentials/whatsapp/&lt;accountId&gt;/...</code>（默认账户 ID：<code>default</code>）</li>
+</ul>
+</li>
+</ul>
+<p>这些迁移是尽力而为且幂等的；doctor 会在备份遗留文件夹时发出警告。
+网关/CLI 还会在启动时自动迁移遗留会话 + 代理目录，因此历史/认证/模型会
+进入每代理路径，无需手动运行 doctor。WhatsApp 认证特意仅通过 <code>moltbot doctor</code> 迁移。</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="4-状态完整性检查会话持久性路由和安全">4) 状态完整性检查（会话持久性、路由和安全）<a href="#4-状态完整性检查会话持久性路由和安全" class="hash-link" aria-label="4) 状态完整性检查（会话持久性、路由和安全）的直接链接" title="4) 状态完整性检查（会话持久性、路由和安全）的直接链接" translate="no">​</a></h3>
+<p>状态目录是操作的核心。如果它消失，你会丢失
+会话、凭据、日志和配置（除非你在其他地方有备份）。</p>
+<p>Doctor 检查：</p>
+<ul>
+<li class=""><strong>状态目录缺失</strong>：警告灾难性状态丢失，提示重新创建
+目录，并提醒你它无法恢复丢失的数据。</li>
+<li class=""><strong>状态目录权限</strong>：验证可写性；提供修复权限的选项
+（当检测到所有者/组不匹配时发出 <code>chown</code> 提示）。</li>
+<li class=""><strong>会话目录缺失</strong>：<code>sessions/</code> 和会话存储目录是
+持久化历史和避免 <code>ENOENT</code> 崩溃所必需的。</li>
+<li class=""><strong>转录不匹配</strong>：当最近的会话条目缺少
+转录文件时发出警告。</li>
+<li class=""><strong>主会话&quot;1 行 JSONL&quot;</strong>：当主转录只有一行时标记
+（历史没有累积）。</li>
+<li class=""><strong>多个状态目录</strong>：当多个 <code>~/.clawdbot</code> 文件夹存在于
+家目录中或 <code>CLAWDBOT_STATE_DIR</code> 指向其他位置时发出警告（历史可以在
+安装之间分割）。</li>
+<li class=""><strong>远程模式提醒</strong>：如果 <code>gateway.mode=remote</code>，doctor 提醒你在
+远程主机上运行（状态在那里）。</li>
+<li class=""><strong>配置文件权限</strong>：当 <code>~/.clawdbot/moltbot.json</code> 可被
+组/世界读取时发出警告并提供收紧到 <code>600</code> 的选项。</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="5-模型认证健康oauth-过期">5) 模型认证健康（OAuth 过期）<a href="#5-模型认证健康oauth-过期" class="hash-link" aria-label="5) 模型认证健康（OAuth 过期）的直接链接" title="5) 模型认证健康（OAuth 过期）的直接链接" translate="no">​</a></h3>
+<p>Doctor 检查认证存储中的 OAuth 配置文件，当令牌
+即将过期/已过期时发出警告，并在安全时可以刷新它们。如果 Anthropic Claude Code
+配置文件已过时，它建议运行 <code>claude setup-token</code>（或粘贴 setup-token）。
+刷新提示仅在交互式运行时（TTY）出现；<code>--non-interactive</code>
+跳过刷新尝试。</p>
+<p>Doctor 还报告由于以下原因暂时不可用的认证配置文件：</p>
+<ul>
+<li class="">短期冷却时间（速率限制/超时/认证失败）</li>
+<li class="">较长的禁用时间（计费/信用失败）</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="6-钩子模型验证">6) 钩子模型验证<a href="#6-钩子模型验证" class="hash-link" aria-label="6) 钩子模型验证的直接链接" title="6) 钩子模型验证的直接链接" translate="no">​</a></h3>
+<p>如果设置了 <code>hooks.gmail.model</code>，doctor 会根据
+目录和白名单验证模型引用，当它无法解析或不允许时发出警告。</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="7-沙盒镜像修复">7) 沙盒镜像修复<a href="#7-沙盒镜像修复" class="hash-link" aria-label="7) 沙盒镜像修复的直接链接" title="7) 沙盒镜像修复的直接链接" translate="no">​</a></h3>
+<p>启用沙盒时，doctor 检查 Docker 镜像，如果当前镜像缺失，提供构建或
+切换到遗留名称的选项。</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="8-网关服务迁移和清理提示">8) 网关服务迁移和清理提示<a href="#8-网关服务迁移和清理提示" class="hash-link" aria-label="8) 网关服务迁移和清理提示的直接链接" title="8) 网关服务迁移和清理提示的直接链接" translate="no">​</a></h3>
+<p>Doctor 检测遗留网关服务（launchd/systemd/schtasks）并
+提供删除它们并使用当前网关端口安装 Moltbot 服务的选项。
+它还可以扫描额外的类似网关服务并打印清理提示。
+配置文件命名的 Moltbot 网关服务被视为一级公民，不会
+标记为&quot;额外&quot;。</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="9-安全警告">9) 安全警告<a href="#9-安全警告" class="hash-link" aria-label="9) 安全警告的直接链接" title="9) 安全警告的直接链接" translate="no">​</a></h3>
+<p>Doctor 在提供商对 DM 开放而没有白名单时发出警告，或
+当策略以危险方式配置时。</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="10-systemd-lingerlinux">10) systemd linger（Linux）<a href="#10-systemd-lingerlinux" class="hash-link" aria-label="10) systemd linger（Linux）的直接链接" title="10) systemd linger（Linux）的直接链接" translate="no">​</a></h3>
+<p>如果作为 systemd 用户服务运行，doctor 确保启用 lingering，以便
+网关在注销后保持活动。</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="11-技能状态">11) 技能状态<a href="#11-技能状态" class="hash-link" aria-label="11) 技能状态的直接链接" title="11) 技能状态的直接链接" translate="no">​</a></h3>
+<p>Doctor 为当前工作空间打印合格/缺失/被阻止技能的快速摘要。</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="12-网关认证检查本地令牌">12) 网关认证检查（本地令牌）<a href="#12-网关认证检查本地令牌" class="hash-link" aria-label="12) 网关认证检查（本地令牌）的直接链接" title="12) 网关认证检查（本地令牌）的直接链接" translate="no">​</a></h3>
+<p>Doctor 在本地网关上缺少 <code>gateway.auth</code> 时发出警告并提供
+生成令牌的选项。使用 <code>moltbot doctor --generate-gateway-token</code> 在自动化中强制
+创建令牌。</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="13-网关健康检查--重启">13) 网关健康检查 + 重启<a href="#13-网关健康检查--重启" class="hash-link" aria-label="13) 网关健康检查 + 重启的直接链接" title="13) 网关健康检查 + 重启的直接链接" translate="no">​</a></h3>
+<p>Doctor 运行健康检查，当看起来
+不健康时提供重启网关的选项。</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="14-通道状态警告">14) 通道状态警告<a href="#14-通道状态警告" class="hash-link" aria-label="14) 通道状态警告的直接链接" title="14) 通道状态警告的直接链接" translate="no">​</a></h3>
+<p>如果网关健康，doctor 运行通道状态探测并报告
+带有建议修复的警告。</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="15-监督程序配置审核--修复">15) 监督程序配置审核 + 修复<a href="#15-监督程序配置审核--修复" class="hash-link" aria-label="15) 监督程序配置审核 + 修复的直接链接" title="15) 监督程序配置审核 + 修复的直接链接" translate="no">​</a></h3>
+<p>Doctor 检查安装的监督程序配置（launchd/systemd/schtasks）以查找
+缺失或过时的默认值（例如，systemd 网络在线依赖关系和
+重启延迟）。当它发现不匹配时，它建议更新并可以
+将服务文件/任务重写为当前默认值。</p>
+<p>注意事项：</p>
+<ul>
+<li class=""><code>moltbot doctor</code> 在重写监督程序配置之前提示。</li>
+<li class=""><code>moltbot doctor --yes</code> 接受默认修复提示。</li>
+<li class=""><code>moltbot doctor --repair</code> 无需提示即可应用推荐的修复。</li>
+<li class=""><code>moltbot doctor --repair --force</code> 覆盖自定义监督程序配置。</li>
+<li class="">你总是可以通过 <code>moltbot gateway install --force</code> 强制完全重写。</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="16-网关运行时--端口诊断">16) 网关运行时 + 端口诊断<a href="#16-网关运行时--端口诊断" class="hash-link" aria-label="16) 网关运行时 + 端口诊断的直接链接" title="16) 网关运行时 + 端口诊断的直接链接" translate="no">​</a></h3>
+<p>Doctor 检查服务运行时（PID，上次退出状态）并发出警告，当
+服务已安装但实际未运行时。它还检查网关端口上的端口冲突
+（默认 <code>18789</code>）并报告可能的原因（网关已运行，
+SSH 隧道）。</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="17-网关运行时最佳实践">17) 网关运行时最佳实践<a href="#17-网关运行时最佳实践" class="hash-link" aria-label="17) 网关运行时最佳实践的直接链接" title="17) 网关运行时最佳实践的直接链接" translate="no">​</a></h3>
+<p>Doctor 在网关服务在 Bun 或版本管理的 Node 路径上运行时发出警告
+（<code>nvm</code>、<code>fnm</code>、<code>volta</code>、<code>asdf</code> 等）。WhatsApp + Telegram 通道需要 Node，
+版本管理器路径在升级后可能会中断，因为服务不会
+加载你的 shell 初始化。Doctor 在可用时提供迁移到系统 Node 安装的选项
+（Homebrew/apt/choco）。</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="18-配置写入--向导元数据">18) 配置写入 + 向导元数据<a href="#18-配置写入--向导元数据" class="hash-link" aria-label="18) 配置写入 + 向导元数据的直接链接" title="18) 配置写入 + 向导元数据的直接链接" translate="no">​</a></h3>
+<p>Doctor 持久化任何配置更改并加盖向导元数据以记录
+doctor 运行。</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="19-工作空间提示备份--记忆系统">19) 工作空间提示（备份 + 记忆系统）<a href="#19-工作空间提示备份--记忆系统" class="hash-link" aria-label="19) 工作空间提示（备份 + 记忆系统）的直接链接" title="19) 工作空间提示（备份 + 记忆系统）的直接链接" translate="no">​</a></h3>
+<p>Doctor 在缺失时建议工作空间记忆系统，如果工作空间
+尚未在 git 下，打印备份提示。</p>
+<p>参见 <a class="" href="/moltbot-doc/concepts/agent-workspace">/concepts/agent-workspace</a> 获取关于
+工作空间结构和 git 备份的完整指南（推荐私有 GitHub 或 GitLab）。</p></div></article><nav class="docusaurus-mt-lg pagination-nav" aria-label="文件选项卡"></nav></div></div><div class="col col--3"><div class="tocWrapper_xKoj"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#快速开始" class="table-of-contents__link toc-highlight">快速开始</a><ul><li><a href="#无头自动化" class="table-of-contents__link toc-highlight">无头/自动化</a></li></ul></li><li><a href="#功能摘要" class="table-of-contents__link toc-highlight">功能（摘要）</a></li><li><a href="#详细行为和理由" class="table-of-contents__link toc-highlight">详细行为和理由</a><ul><li><a href="#0-可选更新git-安装" class="table-of-contents__link toc-highlight">0) 可选更新（git 安装）</a></li><li><a href="#1-配置规范化" class="table-of-contents__link toc-highlight">1) 配置规范化</a></li><li><a href="#2-遗留配置键迁移" class="table-of-contents__link toc-highlight">2) 遗留配置键迁移</a></li><li><a href="#2b-opencode-zen-提供商覆盖" class="table-of-contents__link toc-highlight">2b) OpenCode Zen 提供商覆盖</a></li><li><a href="#3-遗留状态迁移磁盘布局" class="table-of-contents__link toc-highlight">3) 遗留状态迁移（磁盘布局）</a></li><li><a href="#4-状态完整性检查会话持久性路由和安全" class="table-of-contents__link toc-highlight">4) 状态完整性检查（会话持久性、路由和安全）</a></li><li><a href="#5-模型认证健康oauth-过期" class="table-of-contents__link toc-highlight">5) 模型认证健康（OAuth 过期）</a></li><li><a href="#6-钩子模型验证" class="table-of-contents__link toc-highlight">6) 钩子模型验证</a></li><li><a href="#7-沙盒镜像修复" class="table-of-contents__link toc-highlight">7) 沙盒镜像修复</a></li><li><a href="#8-网关服务迁移和清理提示" class="table-of-contents__link toc-highlight">8) 网关服务迁移和清理提示</a></li><li><a href="#9-安全警告" class="table-of-contents__link toc-highlight">9) 安全警告</a></li><li><a href="#10-systemd-lingerlinux" class="table-of-contents__link toc-highlight">10) systemd linger（Linux）</a></li><li><a href="#11-技能状态" class="table-of-contents__link toc-highlight">11) 技能状态</a></li><li><a href="#12-网关认证检查本地令牌" class="table-of-contents__link toc-highlight">12) 网关认证检查（本地令牌）</a></li><li><a href="#13-网关健康检查--重启" class="table-of-contents__link toc-highlight">13) 网关健康检查 + 重启</a></li><li><a href="#14-通道状态警告" class="table-of-contents__link toc-highlight">14) 通道状态警告</a></li><li><a href="#15-监督程序配置审核--修复" class="table-of-contents__link toc-highlight">15) 监督程序配置审核 + 修复</a></li><li><a href="#16-网关运行时--端口诊断" class="table-of-contents__link toc-highlight">16) 网关运行时 + 端口诊断</a></li><li><a href="#17-网关运行时最佳实践" class="table-of-contents__link toc-highlight">17) 网关运行时最佳实践</a></li><li><a href="#18-配置写入--向导元数据" class="table-of-contents__link toc-highlight">18) 配置写入 + 向导元数据</a></li><li><a href="#19-工作空间提示备份--记忆系统" class="table-of-contents__link toc-highlight">19) 工作空间提示（备份 + 记忆系统）</a></li></ul></li></ul></div><div class="tocFooter_Fu2z"><div class="themeGroup_RzWV" role="group" aria-label="Theme"><button class="themeBtn_tGr6" aria-label="Light theme" title="Light"><svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor" aria-hidden="true"><path d="M12 18a6 6 0 1 1 0-12 6 6 0 0 1 0 12zm0-2a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM11 1h2v3h-2V1zm0 19h2v3h-2v-3zM3.515 4.929l1.414-1.414L7.05 5.636 5.636 7.05 3.515 4.93zM16.95 18.364l1.414-1.414 2.121 2.121-1.414 1.414-2.121-2.121zm2.121-14.85l1.414 1.415-2.121 2.121-1.414-1.414 2.121-2.121zM5.636 16.95l1.414 1.414-2.121 2.121-1.414-1.414 2.121-2.121zM23 11v2h-3v-2h3zM4 11v2H1v-2h3z"></path></svg></button><button class="themeBtn_tGr6 themeBtnActive_A6tm" aria-label="Dark theme" title="Dark"><svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor" aria-hidden="true"><path d="M11.38 2.019a7.5 7.5 0 1 0 10.6 10.6C21.83 17.963 17.315 22 12.002 22 6.477 22 2 17.523 2 12c0-5.314 4.038-9.827 9.38-10.28z"></path></svg></button></div></div></div></div></div></div></main></div></div></div><footer class="theme-layout-footer footer footer--dark"><div class="container container-fluid"><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2026 Moltbot Docs.</div></div></div></footer></div>
+</body>
+</html>

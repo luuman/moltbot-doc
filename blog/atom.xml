@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://luuman.github.io/moltbot-doc/blog</id>
+    <title>Moltbot Docs Blog</title>
+    <updated>2026-05-28T00:00:00.000Z</updated>
+    <generator>https://github.com/jpmonette/feed</generator>
+    <link rel="alternate" href="https://luuman.github.io/moltbot-doc/blog"/>
+    <subtitle>Moltbot Docs Blog</subtitle>
+    <icon>https://luuman.github.io/moltbot-doc/img/favicon.ico</icon>
+    <entry>
+        <title type="html"><![CDATA[Clawdbot保姆级教程]]></title>
+        <id>https://luuman.github.io/moltbot-doc/blog/first-blog-post</id>
+        <link href="https://luuman.github.io/moltbot-doc/blog/first-blog-post"/>
+        <updated>2026-05-28T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[一、安全警告⚠️]]></summary>
+        <content type="html"><![CDATA[<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="一安全警告️">一、安全警告⚠️<a href="https://luuman.github.io/moltbot-doc/blog/first-blog-post#%E4%B8%80%E5%AE%89%E5%85%A8%E8%AD%A6%E5%91%8A%EF%B8%8F" class="hash-link" aria-label="一、安全警告⚠️的直接链接" title="一、安全警告⚠️的直接链接" translate="no">​</a></h2>
+<p><strong>强烈建议使用备用机或虚拟机部署！</strong></p>
+<ul>
+<li class="">该工具拥有极高系统权限</li>
+<li class="">可能误删重要文件或执行危险操作</li>
+<li class="">不要在主电脑上直接部署</li>
+<li class="">建议使用：新电脑、虚拟机或云服务器</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="二基础环境准备">二、基础环境准备<a href="https://luuman.github.io/moltbot-doc/blog/first-blog-post#%E4%BA%8C%E5%9F%BA%E7%A1%80%E7%8E%AF%E5%A2%83%E5%87%86%E5%A4%87" class="hash-link" aria-label="二、基础环境准备的直接链接" title="二、基础环境准备的直接链接" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="1-安装nodejs">1. 安装Node.js<a href="https://luuman.github.io/moltbot-doc/blog/first-blog-post#1-%E5%AE%89%E8%A3%85nodejs" class="hash-link" aria-label="1. 安装Node.js的直接链接" title="1. 安装Node.js的直接链接" translate="no">​</a></h3>
+<ul>
+<li class="">版本要求：v22.0.0 或更高</li>
+<li class="">下载地址：<a href="https://nodejs.org/" target="_blank" rel="noopener noreferrer" class="">https://nodejs.org/</a></li>
+<li class="">安装后验证：<code>node --version</code></li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="2-系统要求">2. 系统要求<a href="https://luuman.github.io/moltbot-doc/blog/first-blog-post#2-%E7%B3%BB%E7%BB%9F%E8%A6%81%E6%B1%82" class="hash-link" aria-label="2. 系统要求的直接链接" title="2. 系统要求的直接链接" translate="no">​</a></h3>
+<ul>
+<li class="">Windows 10/11</li>
+<li class="">macOS 10.15+</li>
+<li class="">Linux (Ubuntu/Debian等)</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="三安装clawdbot">三、安装Clawdbot<a href="https://luuman.github.io/moltbot-doc/blog/first-blog-post#%E4%B8%89%E5%AE%89%E8%A3%85clawdbot" class="hash-link" aria-label="三、安装Clawdbot的直接链接" title="三、安装Clawdbot的直接链接" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="windows系统安装">Windows系统安装：<a href="https://luuman.github.io/moltbot-doc/blog/first-blog-post#windows%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85" class="hash-link" aria-label="Windows系统安装：的直接链接" title="Windows系统安装：的直接链接" translate="no">​</a></h3>
+<div class="language-powershell codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#D6DEEB;--prism-background-color:#001122"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-powershell codeBlock_bY9V thin-scrollbar" style="color:#D6DEEB;background-color:#001122"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#D6DEEB"><span class="token plain">iwr -useb https://molt.bot/install.ps1 | iex</span><br></span></code></pre></div></div>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="macoslinux系统安装">macOS/Linux系统安装：<a href="https://luuman.github.io/moltbot-doc/blog/first-blog-post#macoslinux%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85" class="hash-link" aria-label="macOS/Linux系统安装：的直接链接" title="macOS/Linux系统安装：的直接链接" translate="no">​</a></h3>
+<div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#D6DEEB;--prism-background-color:#001122"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#D6DEEB;background-color:#001122"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#D6DEEB"><span class="token plain">curl -fsSL https://molt.bot/install.sh | bash -s -- --install-method git</span><br></span></code></pre></div></div>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="四初始配置流程">四、初始配置流程<a href="https://luuman.github.io/moltbot-doc/blog/first-blog-post#%E5%9B%9B%E5%88%9D%E5%A7%8B%E9%85%8D%E7%BD%AE%E6%B5%81%E7%A8%8B" class="hash-link" aria-label="四、初始配置流程的直接链接" title="四、初始配置流程的直接链接" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="1-启动配置">1. 启动配置<a href="https://luuman.github.io/moltbot-doc/blog/first-blog-post#1-%E5%90%AF%E5%8A%A8%E9%85%8D%E7%BD%AE" class="hash-link" aria-label="1. 启动配置的直接链接" title="1. 启动配置的直接链接" translate="no">​</a></h3>
+<p>安装完成后按提示操作：</p>
+<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#D6DEEB;--prism-background-color:#001122"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#D6DEEB;background-color:#001122"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#D6DEEB"><span class="token plain">Do you want to continue? [yes/no] → 输入 yes</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">选择配置方式：</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">1. Quick start (recommended) → 选择此项</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">2. Manual configuration</span><br></span></code></pre></div></div>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="2-api配置">2. API配置<a href="https://luuman.github.io/moltbot-doc/blog/first-blog-post#2-api%E9%85%8D%E7%BD%AE" class="hash-link" aria-label="2. API配置的直接链接" title="2. API配置的直接链接" translate="no">​</a></h3>
+<p>选择AI模型服务商：</p>
+<ul>
+<li class=""><strong>OpenAI GPT/Codex</strong>（推荐，但需要API额度）</li>
+<li class=""><strong>Claude</strong>（注意：可能被封号）</li>
+<li class=""><strong>国产模型</strong>：MiniMax、智谱GLM、通义千问等</li>
+</ul>
+<p><strong>重要提醒</strong>：</p>
+<ul>
+<li class="">避免使用Claude Max额度，可能导致封号</li>
+<li class="">该工具消耗Token极快，注意监控使用量</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="3-通信渠道配置">3. 通信渠道配置<a href="https://luuman.github.io/moltbot-doc/blog/first-blog-post#3-%E9%80%9A%E4%BF%A1%E6%B8%A0%E9%81%93%E9%85%8D%E7%BD%AE" class="hash-link" aria-label="3. 通信渠道配置的直接链接" title="3. 通信渠道配置的直接链接" translate="no">​</a></h3>
+<p>跳过海外聊天软件，选择：</p>
+<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#D6DEEB;--prism-background-color:#001122"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#D6DEEB;background-color:#001122"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#D6DEEB"><span class="token plain">Skip channel setup for now</span><br></span></code></pre></div></div>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="4-技能安装">4. 技能安装<a href="https://luuman.github.io/moltbot-doc/blog/first-blog-post#4-%E6%8A%80%E8%83%BD%E5%AE%89%E8%A3%85" class="hash-link" aria-label="4. 技能安装的直接链接" title="4. 技能安装的直接链接" translate="no">​</a></h3>
+<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#D6DEEB;--prism-background-color:#001122"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#D6DEEB;background-color:#001122"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#D6DEEB"><span class="token plain">Install skills? [yes/no] → 输入 yes</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">选择包管理器：npm (推荐)</span><br></span></code></pre></div></div>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="5-插件配置">5. 插件配置<a href="https://luuman.github.io/moltbot-doc/blog/first-blog-post#5-%E6%8F%92%E4%BB%B6%E9%85%8D%E7%BD%AE" class="hash-link" aria-label="5. 插件配置的直接链接" title="5. 插件配置的直接链接" translate="no">​</a></h3>
+<p>建议开启以下三个hooks：</p>
+<ul>
+<li class=""><code>boot-md</code>：启动时加载自定义引导内容</li>
+<li class=""><code>command-logger</code>：记录操作日志</li>
+<li class=""><code>session-memory</code>：保存会话记忆</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="五启动clawdbot">五、启动Clawdbot<a href="https://luuman.github.io/moltbot-doc/blog/first-blog-post#%E4%BA%94%E5%90%AF%E5%8A%A8clawdbot" class="hash-link" aria-label="五、启动Clawdbot的直接链接" title="五、启动Clawdbot的直接链接" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="1-启动命令">1. 启动命令<a href="https://luuman.github.io/moltbot-doc/blog/first-blog-post#1-%E5%90%AF%E5%8A%A8%E5%91%BD%E4%BB%A4" class="hash-link" aria-label="1. 启动命令的直接链接" title="1. 启动命令的直接链接" translate="no">​</a></h3>
+<div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#D6DEEB;--prism-background-color:#001122"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#D6DEEB;background-color:#001122"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#D6DEEB"><span class="token plain">clawdbot gateway --verbose</span><br></span></code></pre></div></div>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="2-访问web界面">2. 访问Web界面<a href="https://luuman.github.io/moltbot-doc/blog/first-blog-post#2-%E8%AE%BF%E9%97%AEweb%E7%95%8C%E9%9D%A2" class="hash-link" aria-label="2. 访问Web界面的直接链接" title="2. 访问Web界面的直接链接" translate="no">​</a></h3>
+<ul>
+<li class="">默认地址：<a href="http://127.0.0.1:18789/chat" target="_blank" rel="noopener noreferrer" class="">http://127.0.0.1:18789/chat</a></li>
+<li class="">端口可能不同，按终端显示为准</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="六飞书集成配置国内用户推荐">六、飞书集成配置（国内用户推荐）<a href="https://luuman.github.io/moltbot-doc/blog/first-blog-post#%E5%85%AD%E9%A3%9E%E4%B9%A6%E9%9B%86%E6%88%90%E9%85%8D%E7%BD%AE%E5%9B%BD%E5%86%85%E7%94%A8%E6%88%B7%E6%8E%A8%E8%8D%90" class="hash-link" aria-label="六、飞书集成配置（国内用户推荐）的直接链接" title="六、飞书集成配置（国内用户推荐）的直接链接" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="1-安装飞书插件">1. 安装飞书插件<a href="https://luuman.github.io/moltbot-doc/blog/first-blog-post#1-%E5%AE%89%E8%A3%85%E9%A3%9E%E4%B9%A6%E6%8F%92%E4%BB%B6" class="hash-link" aria-label="1. 安装飞书插件的直接链接" title="1. 安装飞书插件的直接链接" translate="no">​</a></h3>
+<p>在Clawdbot Web界面中输入：</p>
+<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#D6DEEB;--prism-background-color:#001122"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#D6DEEB;background-color:#001122"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#D6DEEB"><span class="token plain">给我安装Clawdbot plugins install @m1heng-clawd/feishu</span><br></span></code></pre></div></div>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="2-创建飞书应用">2. 创建飞书应用<a href="https://luuman.github.io/moltbot-doc/blog/first-blog-post#2-%E5%88%9B%E5%BB%BA%E9%A3%9E%E4%B9%A6%E5%BA%94%E7%94%A8" class="hash-link" aria-label="2. 创建飞书应用的直接链接" title="2. 创建飞书应用的直接链接" translate="no">​</a></h3>
+<ol>
+<li class="">访问飞书开放平台：<a href="https://open.feishu.cn/" target="_blank" rel="noopener noreferrer" class="">https://open.feishu.cn</a></li>
+<li class="">创建企业自建应用</li>
+<li class="">获取并保存：
+<ul>
+<li class="">App ID</li>
+<li class="">App Secret</li>
+</ul>
+</li>
+</ol>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="3-配置飞书插件">3. 配置飞书插件<a href="https://luuman.github.io/moltbot-doc/blog/first-blog-post#3-%E9%85%8D%E7%BD%AE%E9%A3%9E%E4%B9%A6%E6%8F%92%E4%BB%B6" class="hash-link" aria-label="3. 配置飞书插件的直接链接" title="3. 配置飞书插件的直接链接" translate="no">​</a></h3>
+<p>在Clawdbot对话框中输入：</p>
+<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#D6DEEB;--prism-background-color:#001122"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#D6DEEB;background-color:#001122"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#D6DEEB"><span class="token plain">我的App ID是：[你的App ID]，App Secret是：[你的App Secret]</span><br></span></code></pre></div></div>
+<p>Clawdbot会自动完成剩余配置</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="4-飞书应用设置">4. 飞书应用设置<a href="https://luuman.github.io/moltbot-doc/blog/first-blog-post#4-%E9%A3%9E%E4%B9%A6%E5%BA%94%E7%94%A8%E8%AE%BE%E7%BD%AE" class="hash-link" aria-label="4. 飞书应用设置的直接链接" title="4. 飞书应用设置的直接链接" translate="no">​</a></h3>
+<p>在开放平台配置：</p>
+<ol>
+<li class="">
+<p><strong>权限管理</strong>开启：</p>
+<ul>
+<li class="">获取用户userID</li>
+<li class="">以应用身份读取通讯录</li>
+<li class="">获取用户邮箱信息</li>
+<li class="">获取用户手机号</li>
+<li class="">获取用户基本信息</li>
+<li class="">获取用户头像</li>
+<li class="">用户发送消息</li>
+</ul>
+</li>
+<li class="">
+<p><strong>事件订阅</strong>添加：</p>
+<ul>
+<li class="">im.message.receive_v1</li>
+</ul>
+</li>
+<li class="">
+<p><strong>安全设置</strong>添加：</p>
+<ul>
+<li class="">IP白名单（如果需要）</li>
+</ul>
+</li>
+<li class="">
+<p><strong>版本管理与发布</strong>：</p>
+<ul>
+<li class="">创建版本</li>
+<li class="">申请发布</li>
+</ul>
+</li>
+</ol>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="七使用技巧与注意事项">七、使用技巧与注意事项<a href="https://luuman.github.io/moltbot-doc/blog/first-blog-post#%E4%B8%83%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7%E4%B8%8E%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9" class="hash-link" aria-label="七、使用技巧与注意事项的直接链接" title="七、使用技巧与注意事项的直接链接" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="1-成本控制">1. 成本控制<a href="https://luuman.github.io/moltbot-doc/blog/first-blog-post#1-%E6%88%90%E6%9C%AC%E6%8E%A7%E5%88%B6" class="hash-link" aria-label="1. 成本控制的直接链接" title="1. 成本控制的直接链接" translate="no">​</a></h3>
+<ul>
+<li class="">监控API使用量（消耗极快）</li>
+<li class="">考虑使用国产模型降低成本</li>
+<li class="">设置使用额度限制</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="2-安全建议">2. 安全建议<a href="https://luuman.github.io/moltbot-doc/blog/first-blog-post#2-%E5%AE%89%E5%85%A8%E5%BB%BA%E8%AE%AE" class="hash-link" aria-label="2. 安全建议的直接链接" title="2. 安全建议的直接链接" translate="no">​</a></h3>
+<ul>
+<li class="">限制文件访问范围</li>
+<li class="">定期备份重要数据</li>
+<li class="">监控操作日志</li>
+<li class="">避免赋予过高权限</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="3-实用技能">3. 实用技能<a href="https://luuman.github.io/moltbot-doc/blog/first-blog-post#3-%E5%AE%9E%E7%94%A8%E6%8A%80%E8%83%BD" class="hash-link" aria-label="3. 实用技能的直接链接" title="3. 实用技能的直接链接" translate="no">​</a></h3>
+<ul>
+<li class="">文件处理：自动整理、转换格式</li>
+<li class="">数据录入：Excel自动填充</li>
+<li class="">邮件处理：自动分类、回复</li>
+<li class="">日常任务：定时提醒、信息整理</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="八故障排除">八、故障排除<a href="https://luuman.github.io/moltbot-doc/blog/first-blog-post#%E5%85%AB%E6%95%85%E9%9A%9C%E6%8E%92%E9%99%A4" class="hash-link" aria-label="八、故障排除的直接链接" title="八、故障排除的直接链接" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="常见问题">常见问题：<a href="https://luuman.github.io/moltbot-doc/blog/first-blog-post#%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98" class="hash-link" aria-label="常见问题：的直接链接" title="常见问题：的直接链接" translate="no">​</a></h3>
+<ol>
+<li class=""><strong>安装失败</strong>：检查Node.js版本和网络</li>
+<li class=""><strong>API错误</strong>：检查API密钥和额度</li>
+<li class=""><strong>飞书连接失败</strong>：检查权限配置和网络</li>
+</ol>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="获取帮助">获取帮助：<a href="https://luuman.github.io/moltbot-doc/blog/first-blog-post#%E8%8E%B7%E5%8F%96%E5%B8%AE%E5%8A%A9" class="hash-link" aria-label="获取帮助：的直接链接" title="获取帮助：的直接链接" translate="no">​</a></h3>
+<ul>
+<li class="">官方文档：<a href="https://github.com/clawdbot/clawdbot" target="_blank" rel="noopener noreferrer" class="">https://github.com/clawdbot/clawdbot</a></li>
+<li class="">飞书插件：<a href="https://github.com/m1heng/Clawdbot-feishu" target="_blank" rel="noopener noreferrer" class="">https://github.com/m1heng/Clawdbot-feishu</a></li>
+<li class="">社区讨论：GitHub Issues</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="九总结">九、总结<a href="https://luuman.github.io/moltbot-doc/blog/first-blog-post#%E4%B9%9D%E6%80%BB%E7%BB%93" class="hash-link" aria-label="九、总结的直接链接" title="九、总结的直接链接" translate="no">​</a></h2>
+<p>Clawdbot代表了AI Agent发展的一个重要方向，但<strong>安全永远是第一位的</strong>。在享受自动化便利的同时，务必：</p>
+<ol>
+<li class=""><strong>隔离环境</strong>：使用专用设备或虚拟机</li>
+<li class=""><strong>权限最小化</strong>：只开放必要的访问权限</li>
+<li class=""><strong>持续监控</strong>：定期检查操作日志</li>
+<li class=""><strong>备份重要数据</strong>：防止意外损失</li>
+</ol>
+<p>记住：你交给AI的不仅是任务，还有系统的控制权。在追求效率的同时，保持必要的警惕和理性。</p>]]></content>
+        <author>
+            <name>Goose Soaring</name>
+            <uri>https://luuman.github.io/</uri>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[moltbot记忆卡]]></title>
+        <id>https://luuman.github.io/moltbot-doc/blog/moltbot-clawd</id>
+        <link href="https://luuman.github.io/moltbot-doc/blog/moltbot-clawd"/>
+        <updated>2026-05-28T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[moltbot-clawd AI智能体配置文件总览]]></summary>
+        <content type="html"><![CDATA[<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="moltbot-clawd-ai智能体配置文件总览"><strong><code>moltbot-clawd</code> AI智能体配置文件总览</strong><a href="https://luuman.github.io/moltbot-doc/blog/moltbot-clawd#moltbot-clawd-ai%E6%99%BA%E8%83%BD%E4%BD%93%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6%E6%80%BB%E8%A7%88" class="hash-link" aria-label="moltbot-clawd-ai智能体配置文件总览的直接链接" title="moltbot-clawd-ai智能体配置文件总览的直接链接" translate="no">​</a></h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th style="text-align:left">文件名</th><th style="text-align:left">核心作用</th><th style="text-align:left">类比</th><th style="text-align:left">关键内容示例</th></tr></thead><tbody><tr><td style="text-align:left"><strong><code>IDENTITY.md</code></strong></td><td style="text-align:left"><strong>核心身份定义</strong></td><td style="text-align:left">“身份证”</td><td style="text-align:left">姓名 (<code>moltbot</code>)、核心职责（如“全栈开发助手”）、性格特质（严谨/幽默）、沟通风格、目标。</td></tr><tr><td style="text-align:left"><strong><code>SOUL.md</code></strong></td><td style="text-align:left"><strong>内在原则与价值观</strong></td><td style="text-align:left">“道德宪法”</td><td style="text-align:left">道德准则（无害、诚实）、决策框架、核心信念、行为边界与禁忌。</td></tr><tr><td style="text-align:left"><strong><code>USER.md</code></strong></td><td style="text-align:left"><strong>用户模型</strong></td><td style="text-align:left">“用户画像”</td><td style="text-align:left">目标用户身份（如“开发者”）、用户目标、偏好、工作流背景、期望的交互模式。</td></tr><tr><td style="text-align:left"><strong><code>TOOLS.md</code></strong></td><td style="text-align:left"><strong>能力与工具箱</strong></td><td style="text-align:left">“技能手册”</td><td style="text-align:left">可调用的工具列表（代码解释器、搜索API、文件读写）、使用规范、权限说明。</td></tr><tr><td style="text-align:left"><strong><code>AGENTS.md</code></strong></td><td style="text-align:left"><strong>多智能体协作</strong></td><td style="text-align:left">“协作网络”</td><td style="text-align:left">可协作的其他智能体、角色分工、任务传递协议、通信规则（如用于复杂任务分解）。</td></tr><tr><td style="text-align:left"><strong><code>BOOTSTRAP.md</code></strong></td><td style="text-align:left"><strong>初始化与启动流程</strong></td><td style="text-align:left">“启动脚本”</td><td style="text-align:left">启动步骤、环境检查、依赖加载、初始状态设置、配置文件加载顺序。</td></tr><tr><td style="text-align:left"><strong><code>HEARTBEAT.md</code></strong></td><td style="text-align:left"><strong>状态维持与活跃机制</strong></td><td style="text-align:left">“生命体征”</td><td style="text-align:left">定期自检任务、状态更新/同步机制、记忆维护策略、存活确认信号。</td></tr><tr><td style="text-align:left"><strong><code>README</code></strong></td><td style="text-align:left"><strong>项目总览与指南</strong></td><td style="text-align:left">“使用说明书”</td><td style="text-align:left">项目简介、快速入门、核心功能、配置与运行方法、贡献指南。</td></tr></tbody></table>
+<hr>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="文件关系与信息流"><strong>文件关系与信息流</strong><a href="https://luuman.github.io/moltbot-doc/blog/moltbot-clawd#%E6%96%87%E4%BB%B6%E5%85%B3%E7%B3%BB%E4%B8%8E%E4%BF%A1%E6%81%AF%E6%B5%81" class="hash-link" aria-label="文件关系与信息流的直接链接" title="文件关系与信息流的直接链接" translate="no">​</a></h2>
+<!-- -->
+<p><strong>核心逻辑</strong>：</p>
+<ol>
+<li class="">智能体（<code>moltbot</code>）基于 <strong>身份</strong>（<code>IDENTITY</code>）和 <strong>原则</strong>（<code>SOUL</code>）形成核心人格。</li>
+<li class="">根据 <strong>用户画像</strong>（<code>USER</code>）调整其行为和服务方式。</li>
+<li class="">通过 <strong>启动流程</strong>（<code>BOOTSTRAP</code>）初始化，并依靠 <strong>心跳机制</strong>（<code>HEARTBEAT</code>）保持状态。</li>
+<li class="">在执行任务时，调用 <strong>工具</strong>（<code>TOOLS</code>）或与其他 <strong>智能体</strong>（<code>AGENTS</code>）协作。</li>
+<li class="">所有文件通过 <code>README</code> 提供总入口和指引。</li>
+</ol>
+<hr>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="项目本质总结"><strong>项目本质总结</strong><a href="https://luuman.github.io/moltbot-doc/blog/moltbot-clawd#%E9%A1%B9%E7%9B%AE%E6%9C%AC%E8%B4%A8%E6%80%BB%E7%BB%93" class="hash-link" aria-label="项目本质总结的直接链接" title="项目本质总结的直接链接" translate="no">​</a></h2>
+<p><code>moltbot-clawd</code> 是一个<strong>模块化、人格化AI智能体的“源代码”</strong>。它不记录硬件数据或运行日志，而是<strong>定义了一个AI代理（<code>moltbot</code>）是谁、如何思考、为谁服务以及能做什么</strong>。这是一个用于<strong>构建和配置高级别AI助手</strong>的框架性项目。</p>]]></content>
+        <author>
+            <name>Goose Soaring</name>
+            <uri>https://luuman.github.io/</uri>
+        </author>
+    </entry>
+</feed>

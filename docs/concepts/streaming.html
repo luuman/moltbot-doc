@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="zh" dir="ltr" class="docs-wrapper plugin-docs plugin-id-default docs-version-current docs-doc-page docs-doc-id-concepts/streaming" data-has-hydrated="false">
+<head>
+<meta charset="UTF-8">
+<meta name="generator" content="Docusaurus v3.9.2">
+<title data-rh="true">流式传输 + 分块 | Moltbot Docs</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:url" content="https://luuman.github.io/moltbot-doc/docs/concepts/streaming"><meta data-rh="true" property="og:locale" content="zh"><meta data-rh="true" name="docusaurus_locale" content="zh"><meta data-rh="true" name="docsearch:language" content="zh"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="流式传输 + 分块 | Moltbot Docs"><meta data-rh="true" name="description" content="Moltbot 有两个独立的&quot;流式传输&quot;层："><meta data-rh="true" property="og:description" content="Moltbot 有两个独立的&quot;流式传输&quot;层："><link data-rh="true" rel="icon" href="/moltbot-doc/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://luuman.github.io/moltbot-doc/docs/concepts/streaming"><link data-rh="true" rel="alternate" href="https://luuman.github.io/moltbot-doc/docs/concepts/streaming" hreflang="zh"><link data-rh="true" rel="alternate" href="https://luuman.github.io/moltbot-doc/docs/concepts/streaming" hreflang="x-default"><link rel="alternate" type="application/rss+xml" href="/moltbot-doc/blog/rss.xml" title="Moltbot Docs RSS Feed">
+<link rel="alternate" type="application/atom+xml" href="/moltbot-doc/blog/atom.xml" title="Moltbot Docs Atom Feed"><link rel="stylesheet" href="/moltbot-doc/assets/css/styles.484b4c98.css">
+<script src="/moltbot-doc/assets/js/runtime~main.6cf495cf.js" defer="defer"></script>
+<script src="/moltbot-doc/assets/js/main.f9205183.js" defer="defer"></script>
+</head>
+<body class="navigation-with-keyboard">
+<svg style="display: none;"><defs>
+<symbol id="theme-svg-external-link" viewBox="0 0 24 24"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"/></symbol>
+</defs></svg>
+<script>!function(){var t=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme")}catch(t){}}();document.documentElement.setAttribute("data-theme",t||"dark"),document.documentElement.setAttribute("data-theme-choice",t||"dark")}(),function(){try{const c=new URLSearchParams(window.location.search).entries();for(var[t,e]of c)if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id="__docusaurus"><div role="region" aria-label="跳到主要内容"><a class="skipToContent_fXgn" href="#__docusaurus_skipToContent_fallback">跳到主要内容</a></div><nav class="navbar navbar--fixed-top navbar_MONK" role="navigation" aria-label="Main"><div class="navbarInner_ASTH"><div class="navbarLeft_pUmY"><button aria-label="切换导航栏" aria-expanded="false" class="navbar__toggle clean-btn" type="button"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg></button><a class="brand_SXL9" href="/moltbot-doc/"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="24" height="24" rx="6" fill="var(--ifm-color-primary)"></rect><path d="M7 8.5h10M7 12h7M7 15.5h10" stroke="white" stroke-width="1.8" stroke-linecap="round"></path></svg><span class="brandTitle_XbyU">Moltbot</span></a><div class="dropdown_GrgZ"><button class="dropdownToggle_Nf_z">全部站点<svg class="dropdownArrow_Eka8" viewBox="0 0 12 12" fill="none"><path d="M2 4l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg></button><ul class="dropdownMenu_zsxH"><li><a href="https://luuman.github.io/docs-workspace/docs" class="dropdownMenuItem_VBaP">Workspace</a></li><li><a href="https://luuman.github.io/claude-doc/docs" class="dropdownMenuItem_VBaP">Claude</a></li><li><a href="https://luuman.github.io/electron-doc/docs" class="dropdownMenuItem_VBaP">Electron</a></li><li><a href="https://luuman.github.io/tauri-doc/docs" class="dropdownMenuItem_VBaP">Tauri</a></li><li><a href="https://luuman.github.io/matrx-doc/docs" class="dropdownMenuItem_VBaP">Matrx</a></li><li><a href="https://luuman.github.io/brainboard-doc/docs" class="dropdownMenuItem_VBaP">Brainboard</a></li><li><a href="https://luuman.github.io/synology-doc/docs" class="dropdownMenuItem_VBaP">Synology</a></li><li><a href="https://luuman.github.io/codex-doc/docs" class="dropdownMenuItem_VBaP">Codex</a></li><li><a href="https://luuman.github.io/ai-doc/docs" class="dropdownMenuItem_VBaP">AI</a></li></ul></div></div><div class="navbarCenter_Zdr3"><div class="root_OF3s"><span class="icon_UcOK" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor" width="15" height="15"><path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"></path></svg></span><div class="slot__FGx"><div class="navbar__search searchBarContainer_NW3z" dir="ltr"><input placeholder="搜索" aria-label="Search" class="navbar__search-input searchInput_YFbd" value=""><div class="loadingRing_RJI3 searchBarLoadingRing_YnHq"><div></div><div></div><div></div><div></div></div></div></div></div></div><div class="navbarRight_q16u"><a class="navLink_RnnM" href="/moltbot-doc/docs">Docs</a><a class="navLink_RnnM" href="/moltbot-doc/blog">Blog</a><button class="themeToggle_zD_x" aria-label="Switch to light theme" title="Light"><svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M12 18a6 6 0 1 1 0-12 6 6 0 0 1 0 12zm0-2a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM11 1h2v3h-2V1zm0 19h2v3h-2v-3zM3.515 4.929l1.414-1.414L7.05 5.636 5.636 7.05 3.515 4.93zM16.95 18.364l1.414-1.414 2.121 2.121-1.414 1.414-2.121-2.121zm2.121-14.85l1.414 1.415-2.121 2.121-1.414-1.414 2.121-2.121zM5.636 16.95l1.414 1.414-2.121 2.121-1.414-1.414 2.121-2.121zM23 11v2h-3v-2h3zM4 11v2H1v-2h3z"></path></svg></button></div></div></nav><div id="__docusaurus_skipToContent_fallback" class="theme-layout-main main-wrapper mainWrapper_z2l0"><div class="docsWrapper_hBAB"><button aria-label="回到顶部" class="clean-btn theme-back-to-top-button backToTopButton_sjWU" type="button"></button><div class="docRoot_UBD9"><main class="docMainContainer_TBSr docMainContainerEnhanced_lQrH"><div class="container padding-top--md padding-bottom--lg"><div class="row"><div class="col docItemCol_VOVn"><div class="docItemContainer_Djhp"><article><div class="tocCollapsible_ETCw theme-doc-toc-mobile tocMobile_ITEo"><button type="button" class="clean-btn tocCollapsibleButton_TO0P">本页总览</button></div><div class="theme-doc-markdown markdown"><header><h1>流式传输 + 分块</h1></header>
+<p>Moltbot 有两个独立的&quot;流式传输&quot;层：</p>
+<ul>
+<li class=""><strong>块流式传输（通道）：</strong> 在助手编写时发出已完成的 <strong>块</strong>。这些是正常的通道消息（不是 token 增量）。</li>
+<li class=""><strong>类似 token 的流式传输（仅 Telegram）：</strong> 在生成时用部分文本更新 <strong>草稿气泡</strong>；最终消息在末尾发送。</li>
+</ul>
+<p>目前没有真正的 token 流式传输到外部通道消息。Telegram 草稿流式传输是唯一的部分流式传输表面。</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="块流式传输通道消息">块流式传输（通道消息）<a href="#块流式传输通道消息" class="hash-link" aria-label="块流式传输（通道消息）的直接链接" title="块流式传输（通道消息）的直接链接" translate="no">​</a></h2>
+<p>块流式传输在助手输出可用时以粗块发送。</p>
+<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#D6DEEB;--prism-background-color:#001122"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#D6DEEB;background-color:#001122"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#D6DEEB"><span class="token plain">模型输出</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">  └─ text_delta/events</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">       ├─ (blockStreamingBreak=text_end)</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">       │    └─ 分块器在缓冲区增长时发出块</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">       └─ (blockStreamingBreak=message_end)</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">            └─ 分块器在消息结束时刷新</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">                   └─ 通道发送（块回复）</span><br></span></code></pre></div></div>
+<p>图例：</p>
+<ul>
+<li class=""><code>text_delta/events</code>：模型流式传输事件（对于非流式传输模型可能是稀疏的）。</li>
+<li class=""><code>chunker</code>：应用最小/最大界限 + 断点偏好的 <code>EmbeddedBlockChunker</code>。</li>
+<li class=""><code>channel send</code>：实际出站消息（块回复）。</li>
+</ul>
+<p><strong>控制：</strong></p>
+<ul>
+<li class=""><code>agents.defaults.blockStreamingDefault</code>：<code>&quot;on&quot;</code>/<code>&quot;off&quot;</code>（默认关闭）。</li>
+<li class="">通道覆盖：<code>*.blockStreaming</code>（和每个账户变体）强制每个通道为 <code>&quot;on&quot;</code>/<code>&quot;off&quot;</code>。</li>
+<li class=""><code>agents.defaults.blockStreamingBreak</code>：<code>&quot;text_end&quot;</code> 或 <code>&quot;message_end&quot;</code>。</li>
+<li class=""><code>agents.defaults.blockStreamingChunk</code>：<code>{ minChars, maxChars, breakPreference? }</code>。</li>
+<li class=""><code>agents.defaults.blockStreamingCoalesce</code>：<code>{ minChars?, maxChars?, idleMs? }</code>（发送前合并流式传输块）。</li>
+<li class="">通道硬限制：<code>*.textChunkLimit</code>（例如，<code>channels.whatsapp.textChunkLimit</code>）。</li>
+<li class="">通道分块模式：<code>*.chunkMode</code>（<code>length</code> 默认，<code>newline</code> 在长度分块之前按空行（段落边界）分割）。</li>
+<li class="">Discord 软限制：<code>channels.discord.maxLinesPerMessage</code>（默认 17）分割高回复以避免 UI 裁剪。</li>
+</ul>
+<p><strong>边界语义：</strong></p>
+<ul>
+<li class=""><code>text_end</code>：分块器发出时立即流式传输块；在每个 <code>text_end</code> 时刷新。</li>
+<li class=""><code>message_end</code>：等待助手消息完成，然后刷新缓冲输出。</li>
+</ul>
+<p><code>message_end</code> 仍在缓冲文本超过 <code>maxChars</code> 时使用分块器，因此它可以在末尾发出多个块。</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="分块算法高低界限">分块算法（高低界限）<a href="#分块算法高低界限" class="hash-link" aria-label="分块算法（高低界限）的直接链接" title="分块算法（高低界限）的直接链接" translate="no">​</a></h2>
+<p>块分块由 <code>EmbeddedBlockChunker</code> 实现：</p>
+<ul>
+<li class=""><strong>低界限：</strong> 直到缓冲区 &gt;= <code>minChars</code>（除非强制）才发出。</li>
+<li class=""><strong>高界限：</strong> 在 <code>maxChars</code> 之前优选分割；如果强制，在 <code>maxChars</code> 处分割。</li>
+<li class=""><strong>断点偏好：</strong> <code>paragraph</code> → <code>newline</code> → <code>sentence</code> → <code>whitespace</code> → 硬断点。</li>
+<li class=""><strong>代码围栏：</strong> 永远不在围栏内分割；在 <code>maxChars</code> 强制时，关闭 + 重新打开围栏以保持 Markdown 有效性。</li>
+</ul>
+<p><code>maxChars</code> 被限制为通道 <code>textChunkLimit</code>，因此您不能超过每个通道的限制。</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="合并合并流式传输块">合并（合并流式传输块）<a href="#合并合并流式传输块" class="hash-link" aria-label="合并（合并流式传输块）的直接链接" title="合并（合并流式传输块）的直接链接" translate="no">​</a></h2>
+<p>启用块流式传输时，Moltbot 可以在发送前 <strong>合并连续的块片段</strong>
+。这减少了&quot;单行垃圾邮件&quot;，同时仍提供
+渐进输出。</p>
+<ul>
+<li class="">合并在刷新前等待 <strong>空闲间隙</strong>（<code>idleMs</code>）。</li>
+<li class="">缓冲区受 <code>maxChars</code> 限制，如果超过它将刷新。</li>
+<li class=""><code>minChars</code> 防止微小片段在足够文本累积之前发送
+（最终刷新总是发送剩余文本）。</li>
+<li class="">连接器来自 <code>blockStreamingChunk.breakPreference</code>
+（<code>paragraph</code> → <code>\n\n</code>，<code>newline</code> → <code>\n</code>，<code>sentence</code> → 空格）。</li>
+<li class="">通过 <code>*.blockStreamingCoalesce</code> 可用通道覆盖（包括每个账户配置）。</li>
+<li class="">除非覆盖，Signal/Slack/Discord 的默认合并 <code>minChars</code> 提升到 1500。</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="块之间的类似人类的节奏">块之间的类似人类的节奏<a href="#块之间的类似人类的节奏" class="hash-link" aria-label="块之间的类似人类的节奏的直接链接" title="块之间的类似人类的节奏的直接链接" translate="no">​</a></h2>
+<p>启用块流式传输时，您可以在
+块回复之间添加 <strong>随机暂停</strong>（在第一个块之后）。这使多气泡回复感觉
+更自然。</p>
+<ul>
+<li class="">配置：<code>agents.defaults.humanDelay</code>（通过 <code>agents.list[].humanDelay</code> 每个代理覆盖）。</li>
+<li class="">模式：<code>off</code>（默认），<code>natural</code>（800–2500ms），<code>custom</code>（<code>minMs</code>/<code>maxMs</code>）。</li>
+<li class="">仅适用于 <strong>块回复</strong>，不适用于最终回复或工具摘要。</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="流式传输块或所有内容">&quot;流式传输块或所有内容&quot;<a href="#流式传输块或所有内容" class="hash-link" aria-label="&quot;流式传输块或所有内容&quot;的直接链接" title="&quot;流式传输块或所有内容&quot;的直接链接" translate="no">​</a></h2>
+<p>这映射到：</p>
+<ul>
+<li class=""><strong>流式传输块：</strong> <code>blockStreamingDefault: &quot;on&quot;</code> + <code>blockStreamingBreak: &quot;text_end&quot;</code>（边走边发）。非 Telegram 通道还需要 <code>*.blockStreaming: true</code>。</li>
+<li class=""><strong>在末尾流式传输所有内容：</strong> <code>blockStreamingBreak: &quot;message_end&quot;</code>（刷新一次，如果非常长可能发出多个块）。</li>
+<li class=""><strong>无块流式传输：</strong> <code>blockStreamingDefault: &quot;off&quot;</code>（仅最终回复）。</li>
+</ul>
+<p><strong>通道说明：</strong> 对于非 Telegram 通道，块流式传输 <strong>关闭除非</strong>
+<code>*.blockStreaming</code> 明确设置为 <code>true</code>。Telegram 可以流式传输草稿
+（<code>channels.telegram.streamMode</code>）而无需块回复。</p>
+<p>配置位置提醒：<code>blockStreaming*</code> 默认位于
+<code>agents.defaults</code> 下，而不是根配置。</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="telegram-草稿流式传输类似-token">Telegram 草稿流式传输（类似 token）<a href="#telegram-草稿流式传输类似-token" class="hash-link" aria-label="Telegram 草稿流式传输（类似 token）的直接链接" title="Telegram 草稿流式传输（类似 token）的直接链接" translate="no">​</a></h2>
+<p>Telegram 是唯一具有草稿流式传输的通道：</p>
+<ul>
+<li class="">在 <strong>带话题的私人聊天</strong> 中使用 Bot API <code>sendMessageDraft</code>。</li>
+<li class=""><code>channels.telegram.streamMode: &quot;partial&quot; | &quot;block&quot; | &quot;off&quot;</code>。
+<ul>
+<li class=""><code>partial</code>：用最新流式传输文本更新草稿。</li>
+<li class=""><code>block</code>：用块化块更新草稿（相同块规则）。</li>
+<li class=""><code>off</code>：无草稿流式传输。</li>
+</ul>
+</li>
+<li class="">草稿块配置（仅用于 <code>streamMode: &quot;block&quot;</code>）：<code>channels.telegram.draftChunk</code>（默认：<code>minChars: 200</code>，<code>maxChars: 800</code>）。</li>
+<li class="">草稿流式传输与块流式传输分开；块回复默认关闭，仅在非 Telegram 通道上启用 <code>*.blockStreaming: true</code> 时启用。</li>
+<li class="">最终回复仍然是正常消息。</li>
+<li class=""><code>/reasoning stream</code> 将推理写入草稿气泡（仅 Telegram）。</li>
+</ul>
+<p>当草稿流式传输活跃时，Moltbot 为该回复禁用块流式传输以避免双重流式传输。</p>
+<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#D6DEEB;--prism-background-color:#001122"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#D6DEEB;background-color:#001122"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#D6DEEB"><span class="token plain">Telegram（私人 + 话题）</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">  └─ sendMessageDraft（草稿气泡）</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">       ├─ streamMode=partial → 更新最新文本</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">       └─ streamMode=block   → 分块器更新草稿</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">  └─ 最终回复 → 正常消息</span><br></span></code></pre></div></div>
+<p>图例：</p>
+<ul>
+<li class=""><code>sendMessageDraft</code>：Telegram 草稿气泡（不是真实消息）。</li>
+<li class=""><code>final reply</code>：正常 Telegram 消息发送。</li>
+</ul></div></article><nav class="docusaurus-mt-lg pagination-nav" aria-label="文件选项卡"></nav></div></div><div class="col col--3"><div class="tocWrapper_xKoj"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#块流式传输通道消息" class="table-of-contents__link toc-highlight">块流式传输（通道消息）</a></li><li><a href="#分块算法高低界限" class="table-of-contents__link toc-highlight">分块算法（高低界限）</a></li><li><a href="#合并合并流式传输块" class="table-of-contents__link toc-highlight">合并（合并流式传输块）</a></li><li><a href="#块之间的类似人类的节奏" class="table-of-contents__link toc-highlight">块之间的类似人类的节奏</a></li><li><a href="#流式传输块或所有内容" class="table-of-contents__link toc-highlight">&quot;流式传输块或所有内容&quot;</a></li><li><a href="#telegram-草稿流式传输类似-token" class="table-of-contents__link toc-highlight">Telegram 草稿流式传输（类似 token）</a></li></ul></div><div class="tocFooter_Fu2z"><div class="themeGroup_RzWV" role="group" aria-label="Theme"><button class="themeBtn_tGr6" aria-label="Light theme" title="Light"><svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor" aria-hidden="true"><path d="M12 18a6 6 0 1 1 0-12 6 6 0 0 1 0 12zm0-2a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM11 1h2v3h-2V1zm0 19h2v3h-2v-3zM3.515 4.929l1.414-1.414L7.05 5.636 5.636 7.05 3.515 4.93zM16.95 18.364l1.414-1.414 2.121 2.121-1.414 1.414-2.121-2.121zm2.121-14.85l1.414 1.415-2.121 2.121-1.414-1.414 2.121-2.121zM5.636 16.95l1.414 1.414-2.121 2.121-1.414-1.414 2.121-2.121zM23 11v2h-3v-2h3zM4 11v2H1v-2h3z"></path></svg></button><button class="themeBtn_tGr6 themeBtnActive_A6tm" aria-label="Dark theme" title="Dark"><svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor" aria-hidden="true"><path d="M11.38 2.019a7.5 7.5 0 1 0 10.6 10.6C21.83 17.963 17.315 22 12.002 22 6.477 22 2 17.523 2 12c0-5.314 4.038-9.827 9.38-10.28z"></path></svg></button></div></div></div></div></div></div></main></div></div></div><footer class="theme-layout-footer footer footer--dark"><div class="container container-fluid"><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2026 Moltbot Docs.</div></div></div></footer></div>
+</body>
+</html>

@@ -1,0 +1,318 @@
+<!doctype html>
+<html lang="zh" dir="ltr" class="docs-wrapper plugin-docs plugin-id-default docs-version-current docs-doc-page docs-doc-id-platforms/gcp" data-has-hydrated="false">
+<head>
+<meta charset="UTF-8">
+<meta name="generator" content="Docusaurus v3.9.2">
+<title data-rh="true">在 GCP Compute Engine 上运行 Moltbot (Docker, 生产 VPS 指南) | Moltbot Docs</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:url" content="https://luuman.github.io/moltbot-doc/docs/platforms/gcp"><meta data-rh="true" property="og:locale" content="zh"><meta data-rh="true" name="docusaurus_locale" content="zh"><meta data-rh="true" name="docsearch:language" content="zh"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="在 GCP Compute Engine 上运行 Moltbot (Docker, 生产 VPS 指南) | Moltbot Docs"><meta data-rh="true" name="description" content="目标"><meta data-rh="true" property="og:description" content="目标"><link data-rh="true" rel="icon" href="/moltbot-doc/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://luuman.github.io/moltbot-doc/docs/platforms/gcp"><link data-rh="true" rel="alternate" href="https://luuman.github.io/moltbot-doc/docs/platforms/gcp" hreflang="zh"><link data-rh="true" rel="alternate" href="https://luuman.github.io/moltbot-doc/docs/platforms/gcp" hreflang="x-default"><link rel="alternate" type="application/rss+xml" href="/moltbot-doc/blog/rss.xml" title="Moltbot Docs RSS Feed">
+<link rel="alternate" type="application/atom+xml" href="/moltbot-doc/blog/atom.xml" title="Moltbot Docs Atom Feed"><link rel="stylesheet" href="/moltbot-doc/assets/css/styles.484b4c98.css">
+<script src="/moltbot-doc/assets/js/runtime~main.6cf495cf.js" defer="defer"></script>
+<script src="/moltbot-doc/assets/js/main.f9205183.js" defer="defer"></script>
+</head>
+<body class="navigation-with-keyboard">
+<svg style="display: none;"><defs>
+<symbol id="theme-svg-external-link" viewBox="0 0 24 24"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"/></symbol>
+</defs></svg>
+<script>!function(){var t=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme")}catch(t){}}();document.documentElement.setAttribute("data-theme",t||"dark"),document.documentElement.setAttribute("data-theme-choice",t||"dark")}(),function(){try{const c=new URLSearchParams(window.location.search).entries();for(var[t,e]of c)if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id="__docusaurus"><div role="region" aria-label="跳到主要内容"><a class="skipToContent_fXgn" href="#__docusaurus_skipToContent_fallback">跳到主要内容</a></div><nav class="navbar navbar--fixed-top navbar_MONK" role="navigation" aria-label="Main"><div class="navbarInner_ASTH"><div class="navbarLeft_pUmY"><button aria-label="切换导航栏" aria-expanded="false" class="navbar__toggle clean-btn" type="button"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg></button><a class="brand_SXL9" href="/moltbot-doc/"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="24" height="24" rx="6" fill="var(--ifm-color-primary)"></rect><path d="M7 8.5h10M7 12h7M7 15.5h10" stroke="white" stroke-width="1.8" stroke-linecap="round"></path></svg><span class="brandTitle_XbyU">Moltbot</span></a><div class="dropdown_GrgZ"><button class="dropdownToggle_Nf_z">全部站点<svg class="dropdownArrow_Eka8" viewBox="0 0 12 12" fill="none"><path d="M2 4l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg></button><ul class="dropdownMenu_zsxH"><li><a href="https://luuman.github.io/docs-workspace/docs" class="dropdownMenuItem_VBaP">Workspace</a></li><li><a href="https://luuman.github.io/claude-doc/docs" class="dropdownMenuItem_VBaP">Claude</a></li><li><a href="https://luuman.github.io/electron-doc/docs" class="dropdownMenuItem_VBaP">Electron</a></li><li><a href="https://luuman.github.io/tauri-doc/docs" class="dropdownMenuItem_VBaP">Tauri</a></li><li><a href="https://luuman.github.io/matrx-doc/docs" class="dropdownMenuItem_VBaP">Matrx</a></li><li><a href="https://luuman.github.io/brainboard-doc/docs" class="dropdownMenuItem_VBaP">Brainboard</a></li><li><a href="https://luuman.github.io/synology-doc/docs" class="dropdownMenuItem_VBaP">Synology</a></li><li><a href="https://luuman.github.io/codex-doc/docs" class="dropdownMenuItem_VBaP">Codex</a></li><li><a href="https://luuman.github.io/ai-doc/docs" class="dropdownMenuItem_VBaP">AI</a></li></ul></div></div><div class="navbarCenter_Zdr3"><div class="root_OF3s"><span class="icon_UcOK" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor" width="15" height="15"><path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"></path></svg></span><div class="slot__FGx"><div class="navbar__search searchBarContainer_NW3z" dir="ltr"><input placeholder="搜索" aria-label="Search" class="navbar__search-input searchInput_YFbd" value=""><div class="loadingRing_RJI3 searchBarLoadingRing_YnHq"><div></div><div></div><div></div><div></div></div></div></div></div></div><div class="navbarRight_q16u"><a class="navLink_RnnM" href="/moltbot-doc/docs">Docs</a><a class="navLink_RnnM" href="/moltbot-doc/blog">Blog</a><button class="themeToggle_zD_x" aria-label="Switch to light theme" title="Light"><svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M12 18a6 6 0 1 1 0-12 6 6 0 0 1 0 12zm0-2a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM11 1h2v3h-2V1zm0 19h2v3h-2v-3zM3.515 4.929l1.414-1.414L7.05 5.636 5.636 7.05 3.515 4.93zM16.95 18.364l1.414-1.414 2.121 2.121-1.414 1.414-2.121-2.121zm2.121-14.85l1.414 1.415-2.121 2.121-1.414-1.414 2.121-2.121zM5.636 16.95l1.414 1.414-2.121 2.121-1.414-1.414 2.121-2.121zM23 11v2h-3v-2h3zM4 11v2H1v-2h3z"></path></svg></button></div></div></nav><div id="__docusaurus_skipToContent_fallback" class="theme-layout-main main-wrapper mainWrapper_z2l0"><div class="docsWrapper_hBAB"><button aria-label="回到顶部" class="clean-btn theme-back-to-top-button backToTopButton_sjWU" type="button"></button><div class="docRoot_UBD9"><main class="docMainContainer_TBSr docMainContainerEnhanced_lQrH"><div class="container padding-top--md padding-bottom--lg"><div class="row"><div class="col docItemCol_VOVn"><div class="docItemContainer_Djhp"><article><div class="tocCollapsible_ETCw theme-doc-toc-mobile tocMobile_ITEo"><button type="button" class="clean-btn tocCollapsibleButton_TO0P">本页总览</button></div><div class="theme-doc-markdown markdown"><header><h1>在 GCP Compute Engine 上运行 Moltbot (Docker, 生产 VPS 指南)</h1></header>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="目标">目标<a href="#目标" class="hash-link" aria-label="目标的直接链接" title="目标的直接链接" translate="no">​</a></h2>
+<p>在使用 Docker 的 GCP Compute Engine VM 上运行持久的 Moltbot 网关，具有持久状态、内置二进制文件和安全的重启行为。</p>
+<p>如果您想要&quot;每月 ~$5-12 的 24/7 Moltbot&quot;，这是在 Google Cloud 上的可靠设置。
+定价因机器类型和地区而异；选择适合您工作负载的最小 VM，如果遇到 OOM（内存不足）则升级。</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="我们在做什么简单术语">我们在做什么（简单术语）？<a href="#我们在做什么简单术语" class="hash-link" aria-label="我们在做什么（简单术语）？的直接链接" title="我们在做什么（简单术语）？的直接链接" translate="no">​</a></h2>
+<ul>
+<li class="">创建 GCP 项目并启用计费</li>
+<li class="">创建 Compute Engine VM</li>
+<li class="">安装 Docker（隔离的应用运行时）</li>
+<li class="">在 Docker 中启动 Moltbot 网关</li>
+<li class="">在主机上持久化 <code>~/.clawdbot</code> + <code>~/clawd</code>（在重启/重建后保留）</li>
+<li class="">通过 SSH 隧道从您的笔记本电脑访问控制界面</li>
+</ul>
+<p>网关可以通过以下方式访问：</p>
+<ul>
+<li class="">从您的笔记本电脑进行 SSH 端口转发</li>
+<li class="">直接端口暴露（如果您自己管理防火墙和令牌）</li>
+</ul>
+<p>本指南在 GCP Compute Engine 上使用 Debian。
+Ubuntu 也可以工作；相应映射包。
+有关通用 Docker 流程，请参见 <a class="" href="/moltbot-doc/install/docker">Docker</a>。</p>
+<hr>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="快速路径经验丰富的运维人员">快速路径（经验丰富的运维人员）<a href="#快速路径经验丰富的运维人员" class="hash-link" aria-label="快速路径（经验丰富的运维人员）的直接链接" title="快速路径（经验丰富的运维人员）的直接链接" translate="no">​</a></h2>
+<ol>
+<li class="">创建 GCP 项目 + 启用 Compute Engine API</li>
+<li class="">创建 Compute Engine VM (e2-small, Debian 12, 20GB)</li>
+<li class="">SSH 进入 VM</li>
+<li class="">安装 Docker</li>
+<li class="">克隆 Moltbot 仓库</li>
+<li class="">创建持久主机目录</li>
+<li class="">配置 <code>.env</code> 和 <code>docker-compose.yml</code></li>
+<li class="">内置所需二进制文件，构建并启动</li>
+</ol>
+<hr>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="您需要什么">您需要什么<a href="#您需要什么" class="hash-link" aria-label="您需要什么的直接链接" title="您需要什么的直接链接" translate="no">​</a></h2>
+<ul>
+<li class="">GCP 账户（e2-micro 有免费套餐资格）</li>
+<li class="">已安装 gcloud CLI（或使用 Cloud Console）</li>
+<li class="">从您的笔记本电脑 SSH 访问</li>
+<li class="">对 SSH + 复制/粘贴 的基本熟悉</li>
+<li class="">~20-30 分钟</li>
+<li class="">Docker 和 Docker Compose</li>
+<li class="">模型认证凭据</li>
+<li class="">可选的提供商凭据
+<ul>
+<li class="">WhatsApp QR</li>
+<li class="">Telegram 机器人令牌</li>
+<li class="">Gmail OAuth</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="1-安装-gcloud-cli或使用控制台">1) 安装 gcloud CLI（或使用控制台）<a href="#1-安装-gcloud-cli或使用控制台" class="hash-link" aria-label="1) 安装 gcloud CLI（或使用控制台）的直接链接" title="1) 安装 gcloud CLI（或使用控制台）的直接链接" translate="no">​</a></h2>
+<p><strong>选项 A: gcloud CLI</strong>（推荐用于自动化）</p>
+<p>从 <a href="https://cloud.google.com/sdk/docs/install" target="_blank" rel="noopener noreferrer" class="">https://cloud.google.com/sdk/docs/install</a> 安装</p>
+<p>初始化并认证：</p>
+<div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#D6DEEB;--prism-background-color:#001122"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#D6DEEB;background-color:#001122"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#D6DEEB"><span class="token plain">gcloud init</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">gcloud auth login</span><br></span></code></pre></div></div>
+<p><strong>选项 B: Cloud Console</strong></p>
+<p>所有步骤都可以通过网络 UI 在 <a href="https://console.cloud.google.com" target="_blank" rel="noopener noreferrer" class="">https://console.cloud.google.com</a> 完成</p>
+<hr>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="2-创建-gcp-项目">2) 创建 GCP 项目<a href="#2-创建-gcp-项目" class="hash-link" aria-label="2) 创建 GCP 项目的直接链接" title="2) 创建 GCP 项目的直接链接" translate="no">​</a></h2>
+<p><strong>CLI:</strong></p>
+<div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#D6DEEB;--prism-background-color:#001122"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#D6DEEB;background-color:#001122"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#D6DEEB"><span class="token plain">gcloud projects create my-moltbot-project --name=&quot;Moltbot Gateway&quot;</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">gcloud config set project my-moltbot-project</span><br></span></code></pre></div></div>
+<p>在 <a href="https://console.cloud.google.com/billing" target="_blank" rel="noopener noreferrer" class="">https://console.cloud.google.com/billing</a> 启用计费（Compute Engine 所需）。</p>
+<p>启用 Compute Engine API：</p>
+<div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#D6DEEB;--prism-background-color:#001122"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#D6DEEB;background-color:#001122"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#D6DEEB"><span class="token plain">gcloud services enable compute.googleapis.com</span><br></span></code></pre></div></div>
+<p><strong>控制台:</strong></p>
+<ol>
+<li class="">进入 IAM &amp; Admin &gt; Create Project</li>
+<li class="">命名并创建</li>
+<li class="">为项目启用计费</li>
+<li class="">导航到 APIs &amp; Services &gt; Enable APIs &gt; 搜索 &quot;Compute Engine API&quot; &gt; Enable</li>
+</ol>
+<hr>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="3-创建-vm">3) 创建 VM<a href="#3-创建-vm" class="hash-link" aria-label="3) 创建 VM的直接链接" title="3) 创建 VM的直接链接" translate="no">​</a></h2>
+<p><strong>机器类型:</strong></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>类型</th><th>规格</th><th>成本</th><th>注释</th></tr></thead><tbody><tr><td>e2-small</td><td>2 vCPU, 2GB RAM</td><td>~$12/月</td><td>推荐</td></tr><tr><td>e2-micro</td><td>2 vCPU (共享), 1GB RAM</td><td>免费套餐资格</td><td>负载下可能出现 OOM</td></tr></tbody></table>
+<p><strong>CLI:</strong></p>
+<div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#D6DEEB;--prism-background-color:#001122"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#D6DEEB;background-color:#001122"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#D6DEEB"><span class="token plain">gcloud compute instances create moltbot-gateway \</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">  --zone=us-central1-a \</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">  --machine-type=e2-small \</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">  --boot-disk-size=20GB \</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">  --image-family=debian-12 \</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">  --image-project=debian-cloud</span><br></span></code></pre></div></div>
+<p><strong>控制台:</strong></p>
+<ol>
+<li class="">进入 Compute Engine &gt; VM instances &gt; Create instance</li>
+<li class="">名称: <code>moltbot-gateway</code></li>
+<li class="">区域: <code>us-central1</code>, 区域: <code>us-central1-a</code></li>
+<li class="">机器类型: <code>e2-small</code></li>
+<li class="">启动磁盘: Debian 12, 20GB</li>
+<li class="">创建</li>
+</ol>
+<hr>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="4-ssh-进入-vm">4) SSH 进入 VM<a href="#4-ssh-进入-vm" class="hash-link" aria-label="4) SSH 进入 VM的直接链接" title="4) SSH 进入 VM的直接链接" translate="no">​</a></h2>
+<p><strong>CLI:</strong></p>
+<div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#D6DEEB;--prism-background-color:#001122"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#D6DEEB;background-color:#001122"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#D6DEEB"><span class="token plain">gcloud compute ssh moltbot-gateway --zone=us-central1-a</span><br></span></code></pre></div></div>
+<p><strong>控制台:</strong></p>
+<p>在 Compute Engine 仪表板中点击 VM 旁边的 &quot;SSH&quot; 按钮。</p>
+<p>注意：SSH 密钥传播可能在 VM 创建后需要 1-2 分钟。如果连接被拒绝，请等待并重试。</p>
+<hr>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="5-安装-docker在-vm-上">5) 安装 Docker（在 VM 上）<a href="#5-安装-docker在-vm-上" class="hash-link" aria-label="5) 安装 Docker（在 VM 上）的直接链接" title="5) 安装 Docker（在 VM 上）的直接链接" translate="no">​</a></h2>
+<div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#D6DEEB;--prism-background-color:#001122"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#D6DEEB;background-color:#001122"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#D6DEEB"><span class="token plain">sudo apt-get update</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">sudo apt-get install -y git curl ca-certificates</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">curl -fsSL https://get.docker.com | sudo sh</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">sudo usermod -aG docker $USER</span><br></span></code></pre></div></div>
+<p>注销并重新登录以使组更改生效：</p>
+<div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#D6DEEB;--prism-background-color:#001122"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#D6DEEB;background-color:#001122"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#D6DEEB"><span class="token plain">exit</span><br></span></code></pre></div></div>
+<p>然后重新 SSH：</p>
+<div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#D6DEEB;--prism-background-color:#001122"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#D6DEEB;background-color:#001122"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#D6DEEB"><span class="token plain">gcloud compute ssh moltbot-gateway --zone=us-central1-a</span><br></span></code></pre></div></div>
+<p>验证：</p>
+<div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#D6DEEB;--prism-background-color:#001122"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#D6DEEB;background-color:#001122"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#D6DEEB"><span class="token plain">docker --version</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">docker compose version</span><br></span></code></pre></div></div>
+<hr>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="6-克隆-moltbot-仓库">6) 克隆 Moltbot 仓库<a href="#6-克隆-moltbot-仓库" class="hash-link" aria-label="6) 克隆 Moltbot 仓库的直接链接" title="6) 克隆 Moltbot 仓库的直接链接" translate="no">​</a></h2>
+<div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#D6DEEB;--prism-background-color:#001122"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#D6DEEB;background-color:#001122"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#D6DEEB"><span class="token plain">git clone https://github.com/moltbot/moltbot.git</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">cd moltbot</span><br></span></code></pre></div></div>
+<p>本指南假设您将构建自定义镜像以保证二进制文件持久性。</p>
+<hr>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="7-创建持久主机目录">7) 创建持久主机目录<a href="#7-创建持久主机目录" class="hash-link" aria-label="7) 创建持久主机目录的直接链接" title="7) 创建持久主机目录的直接链接" translate="no">​</a></h2>
+<p>Docker 容器是临时的。
+所有长期状态必须存在于主机上。</p>
+<div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#D6DEEB;--prism-background-color:#001122"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#D6DEEB;background-color:#001122"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#D6DEEB"><span class="token plain">mkdir -p ~/.clawdbot</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">mkdir -p ~/clawd</span><br></span></code></pre></div></div>
+<hr>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="8-配置环境变量">8) 配置环境变量<a href="#8-配置环境变量" class="hash-link" aria-label="8) 配置环境变量的直接链接" title="8) 配置环境变量的直接链接" translate="no">​</a></h2>
+<p>在仓库根目录创建 <code>.env</code>。</p>
+<div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#D6DEEB;--prism-background-color:#001122"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#D6DEEB;background-color:#001122"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#D6DEEB"><span class="token plain">CLAWDBOT_IMAGE=moltbot:latest</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">CLAWDBOT_GATEWAY_TOKEN=change-me-now</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">CLAWDBOT_GATEWAY_BIND=lan</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">CLAWDBOT_GATEWAY_PORT=18789</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">CLAWDBOT_CONFIG_DIR=/home/$USER/.clawdbot</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">CLAWDBOT_WORKSPACE_DIR=/home/$USER/clawd</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">GOG_KEYRING_PASSWORD=change-me-now</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">XDG_CONFIG_HOME=/home/node/.clawdbot</span><br></span></code></pre></div></div>
+<p>生成强密钥：</p>
+<div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#D6DEEB;--prism-background-color:#001122"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#D6DEEB;background-color:#001122"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#D6DEEB"><span class="token plain">openssl rand -hex 32</span><br></span></code></pre></div></div>
+<p><strong>不要提交此文件。</strong></p>
+<hr>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="9-docker-compose-配置">9) Docker Compose 配置<a href="#9-docker-compose-配置" class="hash-link" aria-label="9) Docker Compose 配置的直接链接" title="9) Docker Compose 配置的直接链接" translate="no">​</a></h2>
+<p>创建或更新 <code>docker-compose.yml</code>。</p>
+<div class="language-yaml codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#D6DEEB;--prism-background-color:#001122"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-yaml codeBlock_bY9V thin-scrollbar" style="color:#D6DEEB;background-color:#001122"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#D6DEEB"><span class="token key atrule" style="color:#C792EA">services</span><span class="token punctuation" style="color:#C792EA">:</span><span class="token plain"></span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">  </span><span class="token key atrule" style="color:#C792EA">moltbot-gateway</span><span class="token punctuation" style="color:#C792EA">:</span><span class="token plain"></span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">    </span><span class="token key atrule" style="color:#C792EA">image</span><span class="token punctuation" style="color:#C792EA">:</span><span class="token plain"> $</span><span class="token punctuation" style="color:#C792EA">{</span><span class="token plain">CLAWDBOT_IMAGE</span><span class="token punctuation" style="color:#C792EA">}</span><span class="token plain"></span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">    </span><span class="token key atrule" style="color:#C792EA">build</span><span class="token punctuation" style="color:#C792EA">:</span><span class="token plain"> .</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">    </span><span class="token key atrule" style="color:#C792EA">restart</span><span class="token punctuation" style="color:#C792EA">:</span><span class="token plain"> unless</span><span class="token punctuation" style="color:#C792EA">-</span><span class="token plain">stopped</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">    </span><span class="token key atrule" style="color:#C792EA">env_file</span><span class="token punctuation" style="color:#C792EA">:</span><span class="token plain"></span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">      </span><span class="token punctuation" style="color:#C792EA">-</span><span class="token plain"> .env</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">    </span><span class="token key atrule" style="color:#C792EA">environment</span><span class="token punctuation" style="color:#C792EA">:</span><span class="token plain"></span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">      </span><span class="token punctuation" style="color:#C792EA">-</span><span class="token plain"> HOME=/home/node</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">      </span><span class="token punctuation" style="color:#C792EA">-</span><span class="token plain"> NODE_ENV=production</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">      </span><span class="token punctuation" style="color:#C792EA">-</span><span class="token plain"> TERM=xterm</span><span class="token punctuation" style="color:#C792EA">-</span><span class="token plain">256color</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">      </span><span class="token punctuation" style="color:#C792EA">-</span><span class="token plain"> CLAWDBOT_GATEWAY_BIND=$</span><span class="token punctuation" style="color:#C792EA">{</span><span class="token plain">CLAWDBOT_GATEWAY_BIND</span><span class="token punctuation" style="color:#C792EA">}</span><span class="token plain"></span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">      </span><span class="token punctuation" style="color:#C792EA">-</span><span class="token plain"> CLAWDBOT_GATEWAY_PORT=$</span><span class="token punctuation" style="color:#C792EA">{</span><span class="token plain">CLAWDBOT_GATEWAY_PORT</span><span class="token punctuation" style="color:#C792EA">}</span><span class="token plain"></span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">      </span><span class="token punctuation" style="color:#C792EA">-</span><span class="token plain"> CLAWDBOT_GATEWAY_TOKEN=$</span><span class="token punctuation" style="color:#C792EA">{</span><span class="token plain">CLAWDBOT_GATEWAY_TOKEN</span><span class="token punctuation" style="color:#C792EA">}</span><span class="token plain"></span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">      </span><span class="token punctuation" style="color:#C792EA">-</span><span class="token plain"> GOG_KEYRING_PASSWORD=$</span><span class="token punctuation" style="color:#C792EA">{</span><span class="token plain">GOG_KEYRING_PASSWORD</span><span class="token punctuation" style="color:#C792EA">}</span><span class="token plain"></span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">      </span><span class="token punctuation" style="color:#C792EA">-</span><span class="token plain"> XDG_CONFIG_HOME=$</span><span class="token punctuation" style="color:#C792EA">{</span><span class="token plain">XDG_CONFIG_HOME</span><span class="token punctuation" style="color:#C792EA">}</span><span class="token plain"></span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">      </span><span class="token punctuation" style="color:#C792EA">-</span><span class="token plain"> PATH=/home/linuxbrew/.linuxbrew/bin</span><span class="token punctuation" style="color:#C792EA">:</span><span class="token plain">/usr/local/sbin</span><span class="token punctuation" style="color:#C792EA">:</span><span class="token plain">/usr/local/bin</span><span class="token punctuation" style="color:#C792EA">:</span><span class="token plain">/usr/sbin</span><span class="token punctuation" style="color:#C792EA">:</span><span class="token plain">/usr/bin</span><span class="token punctuation" style="color:#C792EA">:</span><span class="token plain">/sbin</span><span class="token punctuation" style="color:#C792EA">:</span><span class="token plain">/bin</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">    </span><span class="token key atrule" style="color:#C792EA">volumes</span><span class="token punctuation" style="color:#C792EA">:</span><span class="token plain"></span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">      </span><span class="token punctuation" style="color:#C792EA">-</span><span class="token plain"> $</span><span class="token punctuation" style="color:#C792EA">{</span><span class="token plain">CLAWDBOT_CONFIG_DIR</span><span class="token punctuation" style="color:#C792EA">}</span><span class="token punctuation" style="color:#C792EA">:</span><span class="token plain">/home/node/.clawdbot</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">      </span><span class="token punctuation" style="color:#C792EA">-</span><span class="token plain"> $</span><span class="token punctuation" style="color:#C792EA">{</span><span class="token plain">CLAWDBOT_WORKSPACE_DIR</span><span class="token punctuation" style="color:#C792EA">}</span><span class="token punctuation" style="color:#C792EA">:</span><span class="token plain">/home/node/clawd</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">    </span><span class="token key atrule" style="color:#C792EA">ports</span><span class="token punctuation" style="color:#C792EA">:</span><span class="token plain"></span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">      </span><span class="token comment" style="color:#637777;font-style:italic"># 推荐：在 VM 上保持网关仅回环；通过 SSH 隧道访问。</span><span class="token plain"></span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">      </span><span class="token comment" style="color:#637777;font-style:italic"># 要公开暴露它，请删除 `127.0.0.1:` 前缀并相应配置防火墙。</span><span class="token plain"></span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">      </span><span class="token punctuation" style="color:#C792EA">-</span><span class="token plain"> </span><span class="token string" style="color:#ECC48D">&quot;127.0.0.1:${CLAWDBOT_GATEWAY_PORT}:18789&quot;</span><span class="token plain"></span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">      </span><span class="token comment" style="color:#637777;font-style:italic"># 可选：仅当您针对此 VM 运行 iOS/Android 节点并需要 Canvas 主机时。</span><span class="token plain"></span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">      </span><span class="token comment" style="color:#637777;font-style:italic"># 如果您公开暴露此端口，请阅读 /gateway/security 并相应配置防火墙。</span><span class="token plain"></span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">      </span><span class="token comment" style="color:#637777;font-style:italic"># - &quot;18793:18793&quot;</span><span class="token plain"></span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">    </span><span class="token key atrule" style="color:#C792EA">command</span><span class="token punctuation" style="color:#C792EA">:</span><span class="token plain"></span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">      </span><span class="token punctuation" style="color:#C792EA">[</span><span class="token plain"></span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">        </span><span class="token string" style="color:#ECC48D">&quot;node&quot;</span><span class="token punctuation" style="color:#C792EA">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">        </span><span class="token string" style="color:#ECC48D">&quot;dist/index.js&quot;</span><span class="token punctuation" style="color:#C792EA">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">        </span><span class="token string" style="color:#ECC48D">&quot;gateway&quot;</span><span class="token punctuation" style="color:#C792EA">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">        </span><span class="token string" style="color:#ECC48D">&quot;--bind&quot;</span><span class="token punctuation" style="color:#C792EA">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">        </span><span class="token string" style="color:#ECC48D">&quot;${CLAWDBOT_GATEWAY_BIND}&quot;</span><span class="token punctuation" style="color:#C792EA">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">        </span><span class="token string" style="color:#ECC48D">&quot;--port&quot;</span><span class="token punctuation" style="color:#C792EA">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">        </span><span class="token string" style="color:#ECC48D">&quot;${CLAWDBOT_GATEWAY_PORT}&quot;</span><span class="token plain"></span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">      </span><span class="token punctuation" style="color:#C792EA">]</span><br></span></code></pre></div></div>
+<hr>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="10-将所需二进制文件内置到镜像中关键">10) 将所需二进制文件内置到镜像中（关键）<a href="#10-将所需二进制文件内置到镜像中关键" class="hash-link" aria-label="10) 将所需二进制文件内置到镜像中（关键）的直接链接" title="10) 将所需二进制文件内置到镜像中（关键）的直接链接" translate="no">​</a></h2>
+<p>在运行的容器内安装二进制文件是一个陷阱.
+在运行时安装的任何内容都会在重启时丢失.</p>
+<p>技能所需的所有外部二进制文件必须在镜像构建时安装.</p>
+<p>下面的示例仅显示三个常见二进制文件:</p>
+<ul>
+<li class=""><code>gog</code> 用于 Gmail 访问</li>
+<li class=""><code>goplaces</code> 用于 Google Places</li>
+<li class=""><code>wacli</code> 用于 WhatsApp</li>
+</ul>
+<p>这些只是示例，不是完整列表.
+您可以使用相同模式安装任意数量的二进制文件.</p>
+<p>如果您以后添加依赖额外二进制文件的新技能，则必须:</p>
+<ol>
+<li class="">更新 Dockerfile</li>
+<li class="">重新构建镜像</li>
+<li class="">重启容器</li>
+</ol>
+<p><strong>示例 Dockerfile</strong></p>
+<div class="language-dockerfile codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#D6DEEB;--prism-background-color:#001122"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-dockerfile codeBlock_bY9V thin-scrollbar" style="color:#D6DEEB;background-color:#001122"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#D6DEEB"><span class="token plain">FROM node:22-bookworm</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">RUN apt-get update &amp;&amp; apt-get install -y socat &amp;&amp; rm -rf /var/lib/apt/lists/*</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain"># 示例二进制文件 1: Gmail CLI</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">RUN curl -L https://github.com/steipete/gog/releases/latest/download/gog_Linux_x86_64.tar.gz \</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">  | tar -xz -C /usr/local/bin &amp;&amp; chmod +x /usr/local/bin/gog</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain"># 示例二进制文件 2: Google Places CLI</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">RUN curl -L https://github.com/steipete/goplaces/releases/latest/download/goplaces_Linux_x86_64.tar.gz \</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">  | tar -xz -C /usr/local/bin &amp;&amp; chmod +x /usr/local/bin/goplaces</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain"># 示例二进制文件 3: WhatsApp CLI</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">RUN curl -L https://github.com/steipete/wacli/releases/latest/download/wacli_Linux_x86_64.tar.gz \</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">  | tar -xz -C /usr/local/bin &amp;&amp; chmod +x /usr/local/bin/wacli</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain"># 使用相同模式在下方添加更多二进制文件</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">WORKDIR /app</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">COPY package.json pnpm-lock.yaml pnpm-workspace.yaml .npmrc ./</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">COPY ui/package.json ./ui/package.json</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">COPY scripts ./scripts</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">RUN corepack enable</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">RUN pnpm install --frozen-lockfile</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">COPY . .</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">RUN pnpm build</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">RUN pnpm ui:install</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">RUN pnpm ui:build</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">ENV NODE_ENV=production</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">CMD [&quot;node&quot;,&quot;dist/index.js&quot;]</span><br></span></code></pre></div></div>
+<hr>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="11-构建和启动">11) 构建和启动<a href="#11-构建和启动" class="hash-link" aria-label="11) 构建和启动的直接链接" title="11) 构建和启动的直接链接" translate="no">​</a></h2>
+<div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#D6DEEB;--prism-background-color:#001122"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#D6DEEB;background-color:#001122"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#D6DEEB"><span class="token plain">docker compose build</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">docker compose up -d moltbot-gateway</span><br></span></code></pre></div></div>
+<p>验证二进制文件：</p>
+<div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#D6DEEB;--prism-background-color:#001122"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#D6DEEB;background-color:#001122"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#D6DEEB"><span class="token plain">docker compose exec moltbot-gateway which gog</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">docker compose exec moltbot-gateway which goplaces</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">docker compose exec moltbot-gateway which wacli</span><br></span></code></pre></div></div>
+<p>预期输出：</p>
+<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#D6DEEB;--prism-background-color:#001122"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#D6DEEB;background-color:#001122"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#D6DEEB"><span class="token plain">/usr/local/bin/gog</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">/usr/local/bin/goplaces</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">/usr/local/bin/wacli</span><br></span></code></pre></div></div>
+<hr>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="12-验证网关">12) 验证网关<a href="#12-验证网关" class="hash-link" aria-label="12) 验证网关的直接链接" title="12) 验证网关的直接链接" translate="no">​</a></h2>
+<div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#D6DEEB;--prism-background-color:#001122"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#D6DEEB;background-color:#001122"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#D6DEEB"><span class="token plain">docker compose logs -f moltbot-gateway</span><br></span></code></pre></div></div>
+<p>成功：</p>
+<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#D6DEEB;--prism-background-color:#001122"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#D6DEEB;background-color:#001122"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#D6DEEB"><span class="token plain">[gateway] listening on ws://0.0.0.0:18789</span><br></span></code></pre></div></div>
+<hr>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="13-从您的笔记本电脑访问">13) 从您的笔记本电脑访问<a href="#13-从您的笔记本电脑访问" class="hash-link" aria-label="13) 从您的笔记本电脑访问的直接链接" title="13) 从您的笔记本电脑访问的直接链接" translate="no">​</a></h2>
+<p>创建 SSH 隧道以转发网关端口：</p>
+<div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#D6DEEB;--prism-background-color:#001122"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#D6DEEB;background-color:#001122"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#D6DEEB"><span class="token plain">gcloud compute ssh moltbot-gateway --zone=us-central1-a -- -L 18789:127.0.0.1:18789</span><br></span></code></pre></div></div>
+<p>在您的浏览器中打开：</p>
+<p><code>http://127.0.0.1:18789/</code></p>
+<p>粘贴您的网关令牌。</p>
+<hr>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="什么是持久化的真相来源">什么是持久化的（真相来源）<a href="#什么是持久化的真相来源" class="hash-link" aria-label="什么是持久化的（真相来源）的直接链接" title="什么是持久化的（真相来源）的直接链接" translate="no">​</a></h2>
+<p>Moltbot 在 Docker 中运行，但 Docker 不是真相来源.
+所有长期状态必须在重启、重建和重新启动后保留.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>组件</th><th>位置</th><th>持久化机制</th><th>注释</th></tr></thead><tbody><tr><td>网关配置</td><td><code>/home/node/.clawdbot/</code></td><td>主机卷挂载</td><td>包括 <code>moltbot.json</code>，令牌</td></tr><tr><td>模型认证配置</td><td><code>/home/node/.clawdbot/</code></td><td>主机卷挂载</td><td>OAuth 令牌，API 密钥</td></tr><tr><td>技能配置</td><td><code>/home/node/.clawdbot/skills/</code></td><td>主机卷挂载</td><td>技能级别的状态</td></tr><tr><td>代理工作区</td><td><code>/home/node/clawd/</code></td><td>主机卷挂载</td><td>代码和代理工件</td></tr><tr><td>WhatsApp 会话</td><td><code>/home/node/.clawdbot/</code></td><td>主机卷挂载</td><td>保留 QR 登录</td></tr><tr><td>Gmail 密钥环</td><td><code>/home/node/.clawdbot/</code></td><td>主机卷 + 密码</td><td>需要 <code>GOG_KEYRING_PASSWORD</code></td></tr><tr><td>外部二进制文件</td><td><code>/usr/local/bin/</code></td><td>Docker 镜像</td><td>必须在构建时内置</td></tr><tr><td>Node 运行时</td><td>容器文件系统</td><td>Docker 镜像</td><td>每次镜像构建时重新构建</td></tr><tr><td>OS 包</td><td>容器文件系统</td><td>Docker 镜像</td><td>不要在运行时安装</td></tr><tr><td>Docker 容器</td><td>临时</td><td>可重启</td><td>安全销毁</td></tr></tbody></table>
+<hr>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="更新">更新<a href="#更新" class="hash-link" aria-label="更新的直接链接" title="更新的直接链接" translate="no">​</a></h2>
+<p>在 VM 上更新 Moltbot：</p>
+<div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#D6DEEB;--prism-background-color:#001122"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#D6DEEB;background-color:#001122"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#D6DEEB"><span class="token plain">cd ~/moltbot</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">git pull</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">docker compose build</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">docker compose up -d</span><br></span></code></pre></div></div>
+<hr>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="故障排除">故障排除<a href="#故障排除" class="hash-link" aria-label="故障排除的直接链接" title="故障排除的直接链接" translate="no">​</a></h2>
+<p><strong>SSH 连接被拒绝</strong></p>
+<p>SSH 密钥传播可能在 VM 创建后需要 1-2 分钟。等待并重试。</p>
+<p><strong>OS Login 问题</strong></p>
+<p>检查您的 OS Login 配置文件：</p>
+<div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#D6DEEB;--prism-background-color:#001122"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#D6DEEB;background-color:#001122"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#D6DEEB"><span class="token plain">gcloud compute os-login describe-profile</span><br></span></code></pre></div></div>
+<p>确保您的账户具有所需的 IAM 权限（Compute OS Login 或 Compute OS Admin Login）。</p>
+<p><strong>内存不足 (OOM)</strong></p>
+<p>如果使用 e2-micro 并遇到 OOM，请升级到 e2-small 或 e2-medium：</p>
+<div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#D6DEEB;--prism-background-color:#001122"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#D6DEEB;background-color:#001122"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#D6DEEB"><span class="token plain"># 首先停止 VM</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">gcloud compute instances stop moltbot-gateway --zone=us-central1-a</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain"># 更改机器类型</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">gcloud compute instances set-machine-type moltbot-gateway \</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">  --zone=us-central1-a \</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">  --machine-type=e2-small</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain"># 启动 VM</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">gcloud compute instances start moltbot-gateway --zone=us-central1-a</span><br></span></code></pre></div></div>
+<hr>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="服务账户安全最佳实践">服务账户（安全最佳实践）<a href="#服务账户安全最佳实践" class="hash-link" aria-label="服务账户（安全最佳实践）的直接链接" title="服务账户（安全最佳实践）的直接链接" translate="no">​</a></h2>
+<p>对于个人使用，您的默认用户账户工作良好。</p>
+<p>对于自动化或 CI/CD 流水线，请创建具有最少权限的专用服务账户：</p>
+<ol>
+<li class="">
+<p>创建服务账户：</p>
+<div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#D6DEEB;--prism-background-color:#001122"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#D6DEEB;background-color:#001122"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#D6DEEB"><span class="token plain">gcloud iam service-accounts create moltbot-deploy \</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">  --display-name=&quot;Moltbot 部署&quot;</span><br></span></code></pre></div></div>
+</li>
+<li class="">
+<p>授予 Compute Instance Admin 角色（或更窄的自定义角色）：</p>
+<div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#D6DEEB;--prism-background-color:#001122"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#D6DEEB;background-color:#001122"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#D6DEEB"><span class="token plain">gcloud projects add-iam-policy-binding my-moltbot-project \</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">  --member=&quot;serviceAccount:moltbot-deploy@my-moltbot-project.iam.gserviceaccount.com&quot; \</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">  --role=&quot;roles/compute.instanceAdmin.v1&quot;</span><br></span></code></pre></div></div>
+</li>
+</ol>
+<p>避免为自动化使用 Owner 角色。使用最小权限原则。</p>
+<p>请参见 <a href="https://cloud.google.com/iam/docs/understanding-roles" target="_blank" rel="noopener noreferrer" class="">https://cloud.google.com/iam/docs/understanding-roles</a> 了解 IAM 角色详细信息。</p>
+<hr>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="下一步">下一步<a href="#下一步" class="hash-link" aria-label="下一步的直接链接" title="下一步的直接链接" translate="no">​</a></h2>
+<ul>
+<li class="">设置消息通道：<a class="" href="/moltbot-doc/channels">Channels</a></li>
+<li class="">将本地设备配对为节点：<a class="" href="/moltbot-doc/nodes">Nodes</a></li>
+<li class="">配置网关：<a class="" href="/moltbot-doc/gateway/configuration">网关配置</a></li>
+</ul></div></article><nav class="docusaurus-mt-lg pagination-nav" aria-label="文件选项卡"></nav></div></div><div class="col col--3"><div class="tocWrapper_xKoj"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#目标" class="table-of-contents__link toc-highlight">目标</a></li><li><a href="#我们在做什么简单术语" class="table-of-contents__link toc-highlight">我们在做什么（简单术语）？</a></li><li><a href="#快速路径经验丰富的运维人员" class="table-of-contents__link toc-highlight">快速路径（经验丰富的运维人员）</a></li><li><a href="#您需要什么" class="table-of-contents__link toc-highlight">您需要什么</a></li><li><a href="#1-安装-gcloud-cli或使用控制台" class="table-of-contents__link toc-highlight">1) 安装 gcloud CLI（或使用控制台）</a></li><li><a href="#2-创建-gcp-项目" class="table-of-contents__link toc-highlight">2) 创建 GCP 项目</a></li><li><a href="#3-创建-vm" class="table-of-contents__link toc-highlight">3) 创建 VM</a></li><li><a href="#4-ssh-进入-vm" class="table-of-contents__link toc-highlight">4) SSH 进入 VM</a></li><li><a href="#5-安装-docker在-vm-上" class="table-of-contents__link toc-highlight">5) 安装 Docker（在 VM 上）</a></li><li><a href="#6-克隆-moltbot-仓库" class="table-of-contents__link toc-highlight">6) 克隆 Moltbot 仓库</a></li><li><a href="#7-创建持久主机目录" class="table-of-contents__link toc-highlight">7) 创建持久主机目录</a></li><li><a href="#8-配置环境变量" class="table-of-contents__link toc-highlight">8) 配置环境变量</a></li><li><a href="#9-docker-compose-配置" class="table-of-contents__link toc-highlight">9) Docker Compose 配置</a></li><li><a href="#10-将所需二进制文件内置到镜像中关键" class="table-of-contents__link toc-highlight">10) 将所需二进制文件内置到镜像中（关键）</a></li><li><a href="#11-构建和启动" class="table-of-contents__link toc-highlight">11) 构建和启动</a></li><li><a href="#12-验证网关" class="table-of-contents__link toc-highlight">12) 验证网关</a></li><li><a href="#13-从您的笔记本电脑访问" class="table-of-contents__link toc-highlight">13) 从您的笔记本电脑访问</a></li><li><a href="#什么是持久化的真相来源" class="table-of-contents__link toc-highlight">什么是持久化的（真相来源）</a></li><li><a href="#更新" class="table-of-contents__link toc-highlight">更新</a></li><li><a href="#故障排除" class="table-of-contents__link toc-highlight">故障排除</a></li><li><a href="#服务账户安全最佳实践" class="table-of-contents__link toc-highlight">服务账户（安全最佳实践）</a></li><li><a href="#下一步" class="table-of-contents__link toc-highlight">下一步</a></li></ul></div><div class="tocFooter_Fu2z"><div class="themeGroup_RzWV" role="group" aria-label="Theme"><button class="themeBtn_tGr6" aria-label="Light theme" title="Light"><svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor" aria-hidden="true"><path d="M12 18a6 6 0 1 1 0-12 6 6 0 0 1 0 12zm0-2a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM11 1h2v3h-2V1zm0 19h2v3h-2v-3zM3.515 4.929l1.414-1.414L7.05 5.636 5.636 7.05 3.515 4.93zM16.95 18.364l1.414-1.414 2.121 2.121-1.414 1.414-2.121-2.121zm2.121-14.85l1.414 1.415-2.121 2.121-1.414-1.414 2.121-2.121zM5.636 16.95l1.414 1.414-2.121 2.121-1.414-1.414 2.121-2.121zM23 11v2h-3v-2h3zM4 11v2H1v-2h3z"></path></svg></button><button class="themeBtn_tGr6 themeBtnActive_A6tm" aria-label="Dark theme" title="Dark"><svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor" aria-hidden="true"><path d="M11.38 2.019a7.5 7.5 0 1 0 10.6 10.6C21.83 17.963 17.315 22 12.002 22 6.477 22 2 17.523 2 12c0-5.314 4.038-9.827 9.38-10.28z"></path></svg></button></div></div></div></div></div></div></main></div></div></div><footer class="theme-layout-footer footer footer--dark"><div class="container container-fluid"><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2026 Moltbot Docs.</div></div></div></footer></div>
+</body>
+</html>

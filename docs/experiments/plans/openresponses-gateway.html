@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="zh" dir="ltr" class="docs-wrapper plugin-docs plugin-id-default docs-version-current docs-doc-page docs-doc-id-experiments/plans/openresponses-gateway" data-has-hydrated="false">
+<head>
+<meta charset="UTF-8">
+<meta name="generator" content="Docusaurus v3.9.2">
+<title data-rh="true">OpenResponses Gateway Integration Plan | Moltbot Docs</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:url" content="https://luuman.github.io/moltbot-doc/docs/experiments/plans/openresponses-gateway"><meta data-rh="true" property="og:locale" content="zh"><meta data-rh="true" name="docusaurus_locale" content="zh"><meta data-rh="true" name="docsearch:language" content="zh"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="OpenResponses Gateway Integration Plan | Moltbot Docs"><meta data-rh="true" name="description" content="Context"><meta data-rh="true" property="og:description" content="Context"><link data-rh="true" rel="icon" href="/moltbot-doc/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://luuman.github.io/moltbot-doc/docs/experiments/plans/openresponses-gateway"><link data-rh="true" rel="alternate" href="https://luuman.github.io/moltbot-doc/docs/experiments/plans/openresponses-gateway" hreflang="zh"><link data-rh="true" rel="alternate" href="https://luuman.github.io/moltbot-doc/docs/experiments/plans/openresponses-gateway" hreflang="x-default"><link rel="alternate" type="application/rss+xml" href="/moltbot-doc/blog/rss.xml" title="Moltbot Docs RSS Feed">
+<link rel="alternate" type="application/atom+xml" href="/moltbot-doc/blog/atom.xml" title="Moltbot Docs Atom Feed"><link rel="stylesheet" href="/moltbot-doc/assets/css/styles.484b4c98.css">
+<script src="/moltbot-doc/assets/js/runtime~main.6cf495cf.js" defer="defer"></script>
+<script src="/moltbot-doc/assets/js/main.f9205183.js" defer="defer"></script>
+</head>
+<body class="navigation-with-keyboard">
+<svg style="display: none;"><defs>
+<symbol id="theme-svg-external-link" viewBox="0 0 24 24"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"/></symbol>
+</defs></svg>
+<script>!function(){var t=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme")}catch(t){}}();document.documentElement.setAttribute("data-theme",t||"dark"),document.documentElement.setAttribute("data-theme-choice",t||"dark")}(),function(){try{const c=new URLSearchParams(window.location.search).entries();for(var[t,e]of c)if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id="__docusaurus"><div role="region" aria-label="跳到主要内容"><a class="skipToContent_fXgn" href="#__docusaurus_skipToContent_fallback">跳到主要内容</a></div><nav class="navbar navbar--fixed-top navbar_MONK" role="navigation" aria-label="Main"><div class="navbarInner_ASTH"><div class="navbarLeft_pUmY"><button aria-label="切换导航栏" aria-expanded="false" class="navbar__toggle clean-btn" type="button"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg></button><a class="brand_SXL9" href="/moltbot-doc/"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="24" height="24" rx="6" fill="var(--ifm-color-primary)"></rect><path d="M7 8.5h10M7 12h7M7 15.5h10" stroke="white" stroke-width="1.8" stroke-linecap="round"></path></svg><span class="brandTitle_XbyU">Moltbot</span></a><div class="dropdown_GrgZ"><button class="dropdownToggle_Nf_z">全部站点<svg class="dropdownArrow_Eka8" viewBox="0 0 12 12" fill="none"><path d="M2 4l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg></button><ul class="dropdownMenu_zsxH"><li><a href="https://luuman.github.io/docs-workspace/docs" class="dropdownMenuItem_VBaP">Workspace</a></li><li><a href="https://luuman.github.io/claude-doc/docs" class="dropdownMenuItem_VBaP">Claude</a></li><li><a href="https://luuman.github.io/electron-doc/docs" class="dropdownMenuItem_VBaP">Electron</a></li><li><a href="https://luuman.github.io/tauri-doc/docs" class="dropdownMenuItem_VBaP">Tauri</a></li><li><a href="https://luuman.github.io/matrx-doc/docs" class="dropdownMenuItem_VBaP">Matrx</a></li><li><a href="https://luuman.github.io/brainboard-doc/docs" class="dropdownMenuItem_VBaP">Brainboard</a></li><li><a href="https://luuman.github.io/synology-doc/docs" class="dropdownMenuItem_VBaP">Synology</a></li><li><a href="https://luuman.github.io/codex-doc/docs" class="dropdownMenuItem_VBaP">Codex</a></li><li><a href="https://luuman.github.io/ai-doc/docs" class="dropdownMenuItem_VBaP">AI</a></li></ul></div></div><div class="navbarCenter_Zdr3"><div class="root_OF3s"><span class="icon_UcOK" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor" width="15" height="15"><path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"></path></svg></span><div class="slot__FGx"><div class="navbar__search searchBarContainer_NW3z" dir="ltr"><input placeholder="搜索" aria-label="Search" class="navbar__search-input searchInput_YFbd" value=""><div class="loadingRing_RJI3 searchBarLoadingRing_YnHq"><div></div><div></div><div></div><div></div></div></div></div></div></div><div class="navbarRight_q16u"><a class="navLink_RnnM" href="/moltbot-doc/docs">Docs</a><a class="navLink_RnnM" href="/moltbot-doc/blog">Blog</a><button class="themeToggle_zD_x" aria-label="Switch to light theme" title="Light"><svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M12 18a6 6 0 1 1 0-12 6 6 0 0 1 0 12zm0-2a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM11 1h2v3h-2V1zm0 19h2v3h-2v-3zM3.515 4.929l1.414-1.414L7.05 5.636 5.636 7.05 3.515 4.93zM16.95 18.364l1.414-1.414 2.121 2.121-1.414 1.414-2.121-2.121zm2.121-14.85l1.414 1.415-2.121 2.121-1.414-1.414 2.121-2.121zM5.636 16.95l1.414 1.414-2.121 2.121-1.414-1.414 2.121-2.121zM23 11v2h-3v-2h3zM4 11v2H1v-2h3z"></path></svg></button></div></div></nav><div id="__docusaurus_skipToContent_fallback" class="theme-layout-main main-wrapper mainWrapper_z2l0"><div class="docsWrapper_hBAB"><button aria-label="回到顶部" class="clean-btn theme-back-to-top-button backToTopButton_sjWU" type="button"></button><div class="docRoot_UBD9"><main class="docMainContainer_TBSr docMainContainerEnhanced_lQrH"><div class="container padding-top--md padding-bottom--lg"><div class="row"><div class="col docItemCol_VOVn"><div class="docItemContainer_Djhp"><article><div class="tocCollapsible_ETCw theme-doc-toc-mobile tocMobile_ITEo"><button type="button" class="clean-btn tocCollapsibleButton_TO0P">本页总览</button></div><div class="theme-doc-markdown markdown"><header><h1>OpenResponses Gateway Integration Plan</h1></header>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="context">Context<a href="#context" class="hash-link" aria-label="Context的直接链接" title="Context的直接链接" translate="no">​</a></h2>
+<p>Moltbot Gateway currently exposes a minimal OpenAI-compatible Chat Completions endpoint at
+<code>/v1/chat/completions</code> (see <a class="" href="/moltbot-doc/gateway/openai-http-api">OpenAI Chat Completions</a>).</p>
+<p>Open Responses is an open inference standard based on the OpenAI Responses API. It is designed
+for agentic workflows and uses item-based inputs plus semantic streaming events. The OpenResponses
+spec defines <code>/v1/responses</code>, not <code>/v1/chat/completions</code>.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="goals">Goals<a href="#goals" class="hash-link" aria-label="Goals的直接链接" title="Goals的直接链接" translate="no">​</a></h2>
+<ul>
+<li class="">Add a <code>/v1/responses</code> endpoint that adheres to OpenResponses semantics.</li>
+<li class="">Keep Chat Completions as a compatibility layer that is easy to disable and eventually remove.</li>
+<li class="">Standardize validation and parsing with isolated, reusable schemas.</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="non-goals">Non-goals<a href="#non-goals" class="hash-link" aria-label="Non-goals的直接链接" title="Non-goals的直接链接" translate="no">​</a></h2>
+<ul>
+<li class="">Full OpenResponses feature parity in the first pass (images, files, hosted tools).</li>
+<li class="">Replacing internal agent execution logic or tool orchestration.</li>
+<li class="">Changing the existing <code>/v1/chat/completions</code> behavior during the first phase.</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="research-summary">Research Summary<a href="#research-summary" class="hash-link" aria-label="Research Summary的直接链接" title="Research Summary的直接链接" translate="no">​</a></h2>
+<p>Sources: OpenResponses OpenAPI, OpenResponses specification site, and the Hugging Face blog post.</p>
+<p>Key points extracted:</p>
+<ul>
+<li class=""><code>POST /v1/responses</code> accepts <code>CreateResponseBody</code> fields like <code>model</code>, <code>input</code> (string or
+<code>ItemParam[]</code>), <code>instructions</code>, <code>tools</code>, <code>tool_choice</code>, <code>stream</code>, <code>max_output_tokens</code>, and
+<code>max_tool_calls</code>.</li>
+<li class=""><code>ItemParam</code> is a discriminated union of:
+<ul>
+<li class=""><code>message</code> items with roles <code>system</code>, <code>developer</code>, <code>user</code>, <code>assistant</code></li>
+<li class=""><code>function_call</code> and <code>function_call_output</code></li>
+<li class=""><code>reasoning</code></li>
+<li class=""><code>item_reference</code></li>
+</ul>
+</li>
+<li class="">Successful responses return a <code>ResponseResource</code> with <code>object: &quot;response&quot;</code>, <code>status</code>, and
+<code>output</code> items.</li>
+<li class="">Streaming uses semantic events such as:
+<ul>
+<li class=""><code>response.created</code>, <code>response.in_progress</code>, <code>response.completed</code>, <code>response.failed</code></li>
+<li class=""><code>response.output_item.added</code>, <code>response.output_item.done</code></li>
+<li class=""><code>response.content_part.added</code>, <code>response.content_part.done</code></li>
+<li class=""><code>response.output_text.delta</code>, <code>response.output_text.done</code></li>
+</ul>
+</li>
+<li class="">The spec requires:
+<ul>
+<li class=""><code>Content-Type: text/event-stream</code></li>
+<li class=""><code>event:</code> must match the JSON <code>type</code> field</li>
+<li class="">terminal event must be literal <code>[DONE]</code></li>
+</ul>
+</li>
+<li class="">Reasoning items may expose <code>content</code>, <code>encrypted_content</code>, and <code>summary</code>.</li>
+<li class="">HF examples include <code>OpenResponses-Version: latest</code> in requests (optional header).</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="proposed-architecture">Proposed Architecture<a href="#proposed-architecture" class="hash-link" aria-label="Proposed Architecture的直接链接" title="Proposed Architecture的直接链接" translate="no">​</a></h2>
+<ul>
+<li class="">Add <code>src/gateway/open-responses.schema.ts</code> containing Zod schemas only (no gateway imports).</li>
+<li class="">Add <code>src/gateway/openresponses-http.ts</code> (or <code>open-responses-http.ts</code>) for <code>/v1/responses</code>.</li>
+<li class="">Keep <code>src/gateway/openai-http.ts</code> intact as a legacy compatibility adapter.</li>
+<li class="">Add config <code>gateway.http.endpoints.responses.enabled</code> (default <code>false</code>).</li>
+<li class="">Keep <code>gateway.http.endpoints.chatCompletions.enabled</code> independent; allow both endpoints to be
+toggled separately.</li>
+<li class="">Emit a startup warning when Chat Completions is enabled to signal legacy status.</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="deprecation-path-for-chat-completions">Deprecation Path for Chat Completions<a href="#deprecation-path-for-chat-completions" class="hash-link" aria-label="Deprecation Path for Chat Completions的直接链接" title="Deprecation Path for Chat Completions的直接链接" translate="no">​</a></h2>
+<ul>
+<li class="">Maintain strict module boundaries: no shared schema types between responses and chat completions.</li>
+<li class="">Make Chat Completions opt-in by config so it can be disabled without code changes.</li>
+<li class="">Update docs to label Chat Completions as legacy once <code>/v1/responses</code> is stable.</li>
+<li class="">Optional future step: map Chat Completions requests to the Responses handler for a simpler
+removal path.</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="phase-1-support-subset">Phase 1 Support Subset<a href="#phase-1-support-subset" class="hash-link" aria-label="Phase 1 Support Subset的直接链接" title="Phase 1 Support Subset的直接链接" translate="no">​</a></h2>
+<ul>
+<li class="">Accept <code>input</code> as string or <code>ItemParam[]</code> with message roles and <code>function_call_output</code>.</li>
+<li class="">Extract system and developer messages into <code>extraSystemPrompt</code>.</li>
+<li class="">Use the most recent <code>user</code> or <code>function_call_output</code> as the current message for agent runs.</li>
+<li class="">Reject unsupported content parts (image/file) with <code>invalid_request_error</code>.</li>
+<li class="">Return a single assistant message with <code>output_text</code> content.</li>
+<li class="">Return <code>usage</code> with zeroed values until token accounting is wired.</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="validation-strategy-no-sdk">Validation Strategy (No SDK)<a href="#validation-strategy-no-sdk" class="hash-link" aria-label="Validation Strategy (No SDK)的直接链接" title="Validation Strategy (No SDK)的直接链接" translate="no">​</a></h2>
+<ul>
+<li class="">Implement Zod schemas for the supported subset of:
+<ul>
+<li class=""><code>CreateResponseBody</code></li>
+<li class=""><code>ItemParam</code> + message content part unions</li>
+<li class=""><code>ResponseResource</code></li>
+<li class="">Streaming event shapes used by the gateway</li>
+</ul>
+</li>
+<li class="">Keep schemas in a single, isolated module to avoid drift and allow future codegen.</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="streaming-implementation-phase-1">Streaming Implementation (Phase 1)<a href="#streaming-implementation-phase-1" class="hash-link" aria-label="Streaming Implementation (Phase 1)的直接链接" title="Streaming Implementation (Phase 1)的直接链接" translate="no">​</a></h2>
+<ul>
+<li class="">SSE lines with both <code>event:</code> and <code>data:</code>.</li>
+<li class="">Required sequence (minimum viable):
+<ul>
+<li class=""><code>response.created</code></li>
+<li class=""><code>response.output_item.added</code></li>
+<li class=""><code>response.content_part.added</code></li>
+<li class=""><code>response.output_text.delta</code> (repeat as needed)</li>
+<li class=""><code>response.output_text.done</code></li>
+<li class=""><code>response.content_part.done</code></li>
+<li class=""><code>response.completed</code></li>
+<li class=""><code>[DONE]</code></li>
+</ul>
+</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="tests-and-verification-plan">Tests and Verification Plan<a href="#tests-and-verification-plan" class="hash-link" aria-label="Tests and Verification Plan的直接链接" title="Tests and Verification Plan的直接链接" translate="no">​</a></h2>
+<ul>
+<li class="">Add e2e coverage for <code>/v1/responses</code>:
+<ul>
+<li class="">Auth required</li>
+<li class="">Non-stream response shape</li>
+<li class="">Stream event ordering and <code>[DONE]</code></li>
+<li class="">Session routing with headers and <code>user</code></li>
+</ul>
+</li>
+<li class="">Keep <code>src/gateway/openai-http.e2e.test.ts</code> unchanged.</li>
+<li class="">Manual: curl to <code>/v1/responses</code> with <code>stream: true</code> and verify event ordering and terminal
+<code>[DONE]</code>.</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="doc-updates-follow-up">Doc Updates (Follow-up)<a href="#doc-updates-follow-up" class="hash-link" aria-label="Doc Updates (Follow-up)的直接链接" title="Doc Updates (Follow-up)的直接链接" translate="no">​</a></h2>
+<ul>
+<li class="">Add a new docs page for <code>/v1/responses</code> usage and examples.</li>
+<li class="">Update <code>/gateway/openai-http-api</code> with a legacy note and pointer to <code>/v1/responses</code>.</li>
+</ul></div></article><nav class="docusaurus-mt-lg pagination-nav" aria-label="文件选项卡"></nav></div></div><div class="col col--3"><div class="tocWrapper_xKoj"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#context" class="table-of-contents__link toc-highlight">Context</a></li><li><a href="#goals" class="table-of-contents__link toc-highlight">Goals</a></li><li><a href="#non-goals" class="table-of-contents__link toc-highlight">Non-goals</a></li><li><a href="#research-summary" class="table-of-contents__link toc-highlight">Research Summary</a></li><li><a href="#proposed-architecture" class="table-of-contents__link toc-highlight">Proposed Architecture</a></li><li><a href="#deprecation-path-for-chat-completions" class="table-of-contents__link toc-highlight">Deprecation Path for Chat Completions</a></li><li><a href="#phase-1-support-subset" class="table-of-contents__link toc-highlight">Phase 1 Support Subset</a></li><li><a href="#validation-strategy-no-sdk" class="table-of-contents__link toc-highlight">Validation Strategy (No SDK)</a></li><li><a href="#streaming-implementation-phase-1" class="table-of-contents__link toc-highlight">Streaming Implementation (Phase 1)</a></li><li><a href="#tests-and-verification-plan" class="table-of-contents__link toc-highlight">Tests and Verification Plan</a></li><li><a href="#doc-updates-follow-up" class="table-of-contents__link toc-highlight">Doc Updates (Follow-up)</a></li></ul></div><div class="tocFooter_Fu2z"><div class="themeGroup_RzWV" role="group" aria-label="Theme"><button class="themeBtn_tGr6" aria-label="Light theme" title="Light"><svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor" aria-hidden="true"><path d="M12 18a6 6 0 1 1 0-12 6 6 0 0 1 0 12zm0-2a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM11 1h2v3h-2V1zm0 19h2v3h-2v-3zM3.515 4.929l1.414-1.414L7.05 5.636 5.636 7.05 3.515 4.93zM16.95 18.364l1.414-1.414 2.121 2.121-1.414 1.414-2.121-2.121zm2.121-14.85l1.414 1.415-2.121 2.121-1.414-1.414 2.121-2.121zM5.636 16.95l1.414 1.414-2.121 2.121-1.414-1.414 2.121-2.121zM23 11v2h-3v-2h3zM4 11v2H1v-2h3z"></path></svg></button><button class="themeBtn_tGr6 themeBtnActive_A6tm" aria-label="Dark theme" title="Dark"><svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor" aria-hidden="true"><path d="M11.38 2.019a7.5 7.5 0 1 0 10.6 10.6C21.83 17.963 17.315 22 12.002 22 6.477 22 2 17.523 2 12c0-5.314 4.038-9.827 9.38-10.28z"></path></svg></button></div></div></div></div></div></div></main></div></div></div><footer class="theme-layout-footer footer footer--dark"><div class="container container-fluid"><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2026 Moltbot Docs.</div></div></div></footer></div>
+</body>
+</html>

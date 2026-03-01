@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="zh" dir="ltr" class="docs-wrapper plugin-docs plugin-id-default docs-version-current docs-doc-page docs-doc-id-install/migrating" data-has-hydrated="false">
+<head>
+<meta charset="UTF-8">
+<meta name="generator" content="Docusaurus v3.9.2">
+<title data-rh="true">将 Moltbot 迁移到新机器 | Moltbot Docs</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:url" content="https://luuman.github.io/moltbot-doc/docs/install/migrating"><meta data-rh="true" property="og:locale" content="zh"><meta data-rh="true" name="docusaurus_locale" content="zh"><meta data-rh="true" name="docsearch:language" content="zh"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="将 Moltbot 迁移到新机器 | Moltbot Docs"><meta data-rh="true" name="description" content="本指南将 Moltbot 网关从一台机器迁移到另一台而无需重新进行入门。"><meta data-rh="true" property="og:description" content="本指南将 Moltbot 网关从一台机器迁移到另一台而无需重新进行入门。"><link data-rh="true" rel="icon" href="/moltbot-doc/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://luuman.github.io/moltbot-doc/docs/install/migrating"><link data-rh="true" rel="alternate" href="https://luuman.github.io/moltbot-doc/docs/install/migrating" hreflang="zh"><link data-rh="true" rel="alternate" href="https://luuman.github.io/moltbot-doc/docs/install/migrating" hreflang="x-default"><link rel="alternate" type="application/rss+xml" href="/moltbot-doc/blog/rss.xml" title="Moltbot Docs RSS Feed">
+<link rel="alternate" type="application/atom+xml" href="/moltbot-doc/blog/atom.xml" title="Moltbot Docs Atom Feed"><link rel="stylesheet" href="/moltbot-doc/assets/css/styles.484b4c98.css">
+<script src="/moltbot-doc/assets/js/runtime~main.6cf495cf.js" defer="defer"></script>
+<script src="/moltbot-doc/assets/js/main.f9205183.js" defer="defer"></script>
+</head>
+<body class="navigation-with-keyboard">
+<svg style="display: none;"><defs>
+<symbol id="theme-svg-external-link" viewBox="0 0 24 24"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"/></symbol>
+</defs></svg>
+<script>!function(){var t=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme")}catch(t){}}();document.documentElement.setAttribute("data-theme",t||"dark"),document.documentElement.setAttribute("data-theme-choice",t||"dark")}(),function(){try{const c=new URLSearchParams(window.location.search).entries();for(var[t,e]of c)if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id="__docusaurus"><div role="region" aria-label="跳到主要内容"><a class="skipToContent_fXgn" href="#__docusaurus_skipToContent_fallback">跳到主要内容</a></div><nav class="navbar navbar--fixed-top navbar_MONK" role="navigation" aria-label="Main"><div class="navbarInner_ASTH"><div class="navbarLeft_pUmY"><button aria-label="切换导航栏" aria-expanded="false" class="navbar__toggle clean-btn" type="button"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg></button><a class="brand_SXL9" href="/moltbot-doc/"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="24" height="24" rx="6" fill="var(--ifm-color-primary)"></rect><path d="M7 8.5h10M7 12h7M7 15.5h10" stroke="white" stroke-width="1.8" stroke-linecap="round"></path></svg><span class="brandTitle_XbyU">Moltbot</span></a><div class="dropdown_GrgZ"><button class="dropdownToggle_Nf_z">全部站点<svg class="dropdownArrow_Eka8" viewBox="0 0 12 12" fill="none"><path d="M2 4l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg></button><ul class="dropdownMenu_zsxH"><li><a href="https://luuman.github.io/docs-workspace/docs" class="dropdownMenuItem_VBaP">Workspace</a></li><li><a href="https://luuman.github.io/claude-doc/docs" class="dropdownMenuItem_VBaP">Claude</a></li><li><a href="https://luuman.github.io/electron-doc/docs" class="dropdownMenuItem_VBaP">Electron</a></li><li><a href="https://luuman.github.io/tauri-doc/docs" class="dropdownMenuItem_VBaP">Tauri</a></li><li><a href="https://luuman.github.io/matrx-doc/docs" class="dropdownMenuItem_VBaP">Matrx</a></li><li><a href="https://luuman.github.io/brainboard-doc/docs" class="dropdownMenuItem_VBaP">Brainboard</a></li><li><a href="https://luuman.github.io/synology-doc/docs" class="dropdownMenuItem_VBaP">Synology</a></li><li><a href="https://luuman.github.io/codex-doc/docs" class="dropdownMenuItem_VBaP">Codex</a></li><li><a href="https://luuman.github.io/ai-doc/docs" class="dropdownMenuItem_VBaP">AI</a></li></ul></div></div><div class="navbarCenter_Zdr3"><div class="root_OF3s"><span class="icon_UcOK" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor" width="15" height="15"><path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"></path></svg></span><div class="slot__FGx"><div class="navbar__search searchBarContainer_NW3z" dir="ltr"><input placeholder="搜索" aria-label="Search" class="navbar__search-input searchInput_YFbd" value=""><div class="loadingRing_RJI3 searchBarLoadingRing_YnHq"><div></div><div></div><div></div><div></div></div></div></div></div></div><div class="navbarRight_q16u"><a class="navLink_RnnM" href="/moltbot-doc/docs">Docs</a><a class="navLink_RnnM" href="/moltbot-doc/blog">Blog</a><button class="themeToggle_zD_x" aria-label="Switch to light theme" title="Light"><svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M12 18a6 6 0 1 1 0-12 6 6 0 0 1 0 12zm0-2a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM11 1h2v3h-2V1zm0 19h2v3h-2v-3zM3.515 4.929l1.414-1.414L7.05 5.636 5.636 7.05 3.515 4.93zM16.95 18.364l1.414-1.414 2.121 2.121-1.414 1.414-2.121-2.121zm2.121-14.85l1.414 1.415-2.121 2.121-1.414-1.414 2.121-2.121zM5.636 16.95l1.414 1.414-2.121 2.121-1.414-1.414 2.121-2.121zM23 11v2h-3v-2h3zM4 11v2H1v-2h3z"></path></svg></button></div></div></nav><div id="__docusaurus_skipToContent_fallback" class="theme-layout-main main-wrapper mainWrapper_z2l0"><div class="docsWrapper_hBAB"><button aria-label="回到顶部" class="clean-btn theme-back-to-top-button backToTopButton_sjWU" type="button"></button><div class="docRoot_UBD9"><main class="docMainContainer_TBSr docMainContainerEnhanced_lQrH"><div class="container padding-top--md padding-bottom--lg"><div class="row"><div class="col docItemCol_VOVn"><div class="docItemContainer_Djhp"><article><div class="tocCollapsible_ETCw theme-doc-toc-mobile tocMobile_ITEo"><button type="button" class="clean-btn tocCollapsibleButton_TO0P">本页总览</button></div><div class="theme-doc-markdown markdown"><header><h1>将 Moltbot 迁移到新机器</h1></header>
+<p>本指南将 Moltbot 网关从一台机器迁移到另一台<strong>而无需重新进行入门</strong>。</p>
+<p>概念上迁移很简单：</p>
+<ul>
+<li class="">复制<strong>状态目录</strong>（<code>$CLAWDBOT_STATE_DIR</code>，默认：<code>~/.clawdbot/</code>）— 这包括配置、认证、会话和频道状态。</li>
+<li class="">复制您的<strong>工作区</strong>（默认为 <code>~/clawd/</code>）— 这包括您的代理文件（记忆、提示等）。</li>
+</ul>
+<p>但围绕<strong>配置文件</strong>、<strong>权限</strong>和<strong>部分复制</strong>有一些常见的陷阱。</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="开始前您正在迁移的内容">开始前（您正在迁移的内容）<a href="#开始前您正在迁移的内容" class="hash-link" aria-label="开始前（您正在迁移的内容）的直接链接" title="开始前（您正在迁移的内容）的直接链接" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="1-确定您的状态目录">1) 确定您的状态目录<a href="#1-确定您的状态目录" class="hash-link" aria-label="1) 确定您的状态目录的直接链接" title="1) 确定您的状态目录的直接链接" translate="no">​</a></h3>
+<p>大多数安装使用默认值：</p>
+<ul>
+<li class=""><strong>状态目录：</strong> <code>~/.clawdbot/</code></li>
+</ul>
+<p>但如果使用以下方式可能会不同：</p>
+<ul>
+<li class=""><code>--profile &lt;name&gt;</code>（通常变为 <code>~/.clawdbot-&lt;profile&gt;/</code>）</li>
+<li class=""><code>CLAWDBOT_STATE_DIR=/some/path</code></li>
+</ul>
+<p>如果您不确定，在<strong>旧</strong>机器上运行：</p>
+<div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#D6DEEB;--prism-background-color:#001122"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#D6DEEB;background-color:#001122"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#D6DEEB"><span class="token plain">moltbot status</span><br></span></code></pre></div></div>
+<p>在输出中查找 <code>CLAWDBOT_STATE_DIR</code> / 配置文件的提及。如果您运行多个网关，请对每个配置文件重复。</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="2-确定您的工作区">2) 确定您的工作区<a href="#2-确定您的工作区" class="hash-link" aria-label="2) 确定您的工作区的直接链接" title="2) 确定您的工作区的直接链接" translate="no">​</a></h3>
+<p>常见默认值：</p>
+<ul>
+<li class=""><code>~/clawd/</code>（推荐工作区）</li>
+<li class="">您创建的自定义文件夹</li>
+</ul>
+<p>您的工作区是 <code>MEMORY.md</code>、<code>USER.md</code> 和 <code>memory/*.md</code> 等文件所在的位置。</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="3-了解您将保留什么">3) 了解您将保留什么<a href="#3-了解您将保留什么" class="hash-link" aria-label="3) 了解您将保留什么的直接链接" title="3) 了解您将保留什么的直接链接" translate="no">​</a></h3>
+<p>如果您复制<strong>两者</strong>状态目录和工作区，您将保留：</p>
+<ul>
+<li class="">网关配置（<code>moltbot.json</code>）</li>
+<li class="">认证配置文件 / API 密钥 / OAuth 令牌</li>
+<li class="">会话历史 + 代理状态</li>
+<li class="">频道状态（例如 WhatsApp 登录/会话）</li>
+<li class="">您的工作区文件（记忆、技能笔记等）</li>
+</ul>
+<p>如果您<strong>仅</strong>复制工作区（例如，通过 Git），您<strong>不会</strong>保留：</p>
+<ul>
+<li class="">会话</li>
+<li class="">凭据</li>
+<li class="">频道登录</li>
+</ul>
+<p>这些存储在 <code>$CLAWDBOT_STATE_DIR</code> 下。</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="迁移步骤推荐">迁移步骤（推荐）<a href="#迁移步骤推荐" class="hash-link" aria-label="迁移步骤（推荐）的直接链接" title="迁移步骤（推荐）的直接链接" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="步骤-0--创建备份旧机器">步骤 0 — 创建备份（旧机器）<a href="#步骤-0--创建备份旧机器" class="hash-link" aria-label="步骤 0 — 创建备份（旧机器）的直接链接" title="步骤 0 — 创建备份（旧机器）的直接链接" translate="no">​</a></h3>
+<p>在<strong>旧</strong>机器上，首先停止网关，以便文件不会在复制过程中更改：</p>
+<div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#D6DEEB;--prism-background-color:#001122"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#D6DEEB;background-color:#001122"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#D6DEEB"><span class="token plain">moltbot gateway stop</span><br></span></code></pre></div></div>
+<p>（可选但推荐）归档状态目录和工作区：</p>
+<div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#D6DEEB;--prism-background-color:#001122"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#D6DEEB;background-color:#001122"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#D6DEEB"><span class="token plain"># 如果您使用配置文件或自定义位置，请调整路径</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">cd ~</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">tar -czf moltbot-state.tgz .clawdbot</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">tar -czf clawd-workspace.tgz clawd</span><br></span></code></pre></div></div>
+<p>如果您有多个配置文件/状态目录（例如 <code>~/.clawdbot-main</code>、<code>~/.clawdbot-work</code>），请归档每一个。</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="步骤-1--在新机器上安装-moltbot">步骤 1 — 在新机器上安装 Moltbot<a href="#步骤-1--在新机器上安装-moltbot" class="hash-link" aria-label="步骤 1 — 在新机器上安装 Moltbot的直接链接" title="步骤 1 — 在新机器上安装 Moltbot的直接链接" translate="no">​</a></h3>
+<p>在<strong>新</strong>机器上，安装 CLI（以及需要的 Node）：</p>
+<ul>
+<li class="">参见：<a class="" href="/moltbot-doc/install">安装</a></li>
+</ul>
+<p>在此阶段，如果入门创建了新的 <code>~/.clawdbot/</code> 是可以的 — 您将在下一步中覆盖它。</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="步骤-2--将状态目录--工作区复制到新机器">步骤 2 — 将状态目录 + 工作区复制到新机器<a href="#步骤-2--将状态目录--工作区复制到新机器" class="hash-link" aria-label="步骤 2 — 将状态目录 + 工作区复制到新机器的直接链接" title="步骤 2 — 将状态目录 + 工作区复制到新机器的直接链接" translate="no">​</a></h3>
+<p>复制<strong>两者</strong>：</p>
+<ul>
+<li class=""><code>$CLAWDBOT_STATE_DIR</code>（默认 <code>~/.clawdbot/</code>）</li>
+<li class="">您的工作区（默认 <code>~/clawd/</code>）</li>
+</ul>
+<p>常见方法：</p>
+<ul>
+<li class=""><code>scp</code> 传输压缩包并解压</li>
+<li class="">通过 SSH <code>rsync -a</code></li>
+<li class="">外部驱动器</li>
+</ul>
+<p>复制后，确保：</p>
+<ul>
+<li class="">包含了隐藏目录（例如 <code>.clawdbot/</code>）</li>
+<li class="">文件所有权对运行网关的用户是正确的</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="步骤-3--运行-doctor迁移--服务修复">步骤 3 — 运行 Doctor（迁移 + 服务修复）<a href="#步骤-3--运行-doctor迁移--服务修复" class="hash-link" aria-label="步骤 3 — 运行 Doctor（迁移 + 服务修复）的直接链接" title="步骤 3 — 运行 Doctor（迁移 + 服务修复）的直接链接" translate="no">​</a></h3>
+<p>在<strong>新</strong>机器上：</p>
+<div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#D6DEEB;--prism-background-color:#001122"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#D6DEEB;background-color:#001122"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#D6DEEB"><span class="token plain">moltbot doctor</span><br></span></code></pre></div></div>
+<p>Doctor 是&quot;安全无聊&quot;的命令。它修复服务，应用配置迁移，并警告不匹配。</p>
+<p>然后：</p>
+<div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#D6DEEB;--prism-background-color:#001122"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#D6DEEB;background-color:#001122"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#D6DEEB"><span class="token plain">moltbot gateway restart</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">moltbot status</span><br></span></code></pre></div></div>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="常见陷阱及如何避免">常见陷阱（及如何避免）<a href="#常见陷阱及如何避免" class="hash-link" aria-label="常见陷阱（及如何避免）的直接链接" title="常见陷阱（及如何避免）的直接链接" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="陷阱配置文件--状态目录不匹配">陷阱：配置文件 / 状态目录不匹配<a href="#陷阱配置文件--状态目录不匹配" class="hash-link" aria-label="陷阱：配置文件 / 状态目录不匹配的直接链接" title="陷阱：配置文件 / 状态目录不匹配的直接链接" translate="no">​</a></h3>
+<p>如果您使用配置文件（或 <code>CLAWDBOT_STATE_DIR</code>）运行旧网关，而新网关使用不同的配置文件，您将看到如下症状：</p>
+<ul>
+<li class="">配置更改不起作用</li>
+<li class="">频道丢失 / 登出</li>
+<li class="">会话历史为空</li>
+</ul>
+<p>修复：使用您迁移的<strong>相同</strong>配置文件/状态目录运行网关/服务，然后重新运行：</p>
+<div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#D6DEEB;--prism-background-color:#001122"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#D6DEEB;background-color:#001122"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#D6DEEB"><span class="token plain">moltbot doctor</span><br></span></code></pre></div></div>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="陷阱仅复制-moltbotjson">陷阱：仅复制 <code>moltbot.json</code><a href="#陷阱仅复制-moltbotjson" class="hash-link" aria-label="陷阱仅复制-moltbotjson的直接链接" title="陷阱仅复制-moltbotjson的直接链接" translate="no">​</a></h3>
+<p><code>moltbot.json</code> 是不够的。许多提供商在以下位置存储状态：</p>
+<ul>
+<li class=""><code>$CLAWDBOT_STATE_DIR/credentials/</code></li>
+<li class=""><code>$CLAWDBOT_STATE_DIR/agents/&lt;agentId&gt;/...</code></li>
+</ul>
+<p>始终迁移整个 <code>$CLAWDBOT_STATE_DIR</code> 文件夹。</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="陷阱权限--所有权">陷阱：权限 / 所有权<a href="#陷阱权限--所有权" class="hash-link" aria-label="陷阱：权限 / 所有权的直接链接" title="陷阱：权限 / 所有权的直接链接" translate="no">​</a></h3>
+<p>如果您以 root 身份复制或更改了用户，网关可能无法读取凭据/会话。</p>
+<p>修复：确保状态目录 + 工作区归运行网关的用户所有。</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="陷阱在远程本地模式之间迁移">陷阱：在远程/本地模式之间迁移<a href="#陷阱在远程本地模式之间迁移" class="hash-link" aria-label="陷阱：在远程/本地模式之间迁移的直接链接" title="陷阱：在远程/本地模式之间迁移的直接链接" translate="no">​</a></h3>
+<ul>
+<li class="">如果您的 UI（WebUI/TUI）指向<strong>远程</strong>网关，远程主机拥有会话存储 + 工作区。</li>
+<li class="">迁移您的笔记本电脑不会移动远程网关的状态。</li>
+</ul>
+<p>如果您处于远程模式，请迁移<strong>网关主机</strong>。</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="陷阱备份中的密钥">陷阱：备份中的密钥<a href="#陷阱备份中的密钥" class="hash-link" aria-label="陷阱：备份中的密钥的直接链接" title="陷阱：备份中的密钥的直接链接" translate="no">​</a></h3>
+<p><code>$CLAWDBOT_STATE_DIR</code> 包含密钥（API 密钥、OAuth 令牌、WhatsApp 凭据）。将备份视为生产密钥：</p>
+<ul>
+<li class="">加密存储</li>
+<li class="">避免通过不安全渠道共享</li>
+<li class="">如果怀疑泄露，请轮换密钥</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="验证清单">验证清单<a href="#验证清单" class="hash-link" aria-label="验证清单的直接链接" title="验证清单的直接链接" translate="no">​</a></h2>
+<p>在新机器上确认：</p>
+<ul>
+<li class=""><code>moltbot status</code> 显示网关正在运行</li>
+<li class="">您的频道仍已连接（例如 WhatsApp 不需要重新配对）</li>
+<li class="">仪表板打开并显示现有会话</li>
+<li class="">您的工作区文件（记忆、配置）存在</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="相关">相关<a href="#相关" class="hash-link" aria-label="相关的直接链接" title="相关的直接链接" translate="no">​</a></h2>
+<ul>
+<li class=""><a class="" href="/moltbot-doc/gateway/doctor">Doctor</a></li>
+<li class=""><a class="" href="/moltbot-doc/gateway/troubleshooting">网关故障排除</a></li>
+<li class=""><a class="" href="/moltbot-doc/help/faq#where-does-moltbot-store-its-data">Moltbot 将其数据存储在哪里？</a></li>
+</ul></div></article><nav class="docusaurus-mt-lg pagination-nav" aria-label="文件选项卡"></nav></div></div><div class="col col--3"><div class="tocWrapper_xKoj"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#开始前您正在迁移的内容" class="table-of-contents__link toc-highlight">开始前（您正在迁移的内容）</a><ul><li><a href="#1-确定您的状态目录" class="table-of-contents__link toc-highlight">1) 确定您的状态目录</a></li><li><a href="#2-确定您的工作区" class="table-of-contents__link toc-highlight">2) 确定您的工作区</a></li><li><a href="#3-了解您将保留什么" class="table-of-contents__link toc-highlight">3) 了解您将保留什么</a></li></ul></li><li><a href="#迁移步骤推荐" class="table-of-contents__link toc-highlight">迁移步骤（推荐）</a><ul><li><a href="#步骤-0--创建备份旧机器" class="table-of-contents__link toc-highlight">步骤 0 — 创建备份（旧机器）</a></li><li><a href="#步骤-1--在新机器上安装-moltbot" class="table-of-contents__link toc-highlight">步骤 1 — 在新机器上安装 Moltbot</a></li><li><a href="#步骤-2--将状态目录--工作区复制到新机器" class="table-of-contents__link toc-highlight">步骤 2 — 将状态目录 + 工作区复制到新机器</a></li><li><a href="#步骤-3--运行-doctor迁移--服务修复" class="table-of-contents__link toc-highlight">步骤 3 — 运行 Doctor（迁移 + 服务修复）</a></li></ul></li><li><a href="#常见陷阱及如何避免" class="table-of-contents__link toc-highlight">常见陷阱（及如何避免）</a><ul><li><a href="#陷阱配置文件--状态目录不匹配" class="table-of-contents__link toc-highlight">陷阱：配置文件 / 状态目录不匹配</a></li><li><a href="#陷阱仅复制-moltbotjson" class="table-of-contents__link toc-highlight">陷阱：仅复制 <code>moltbot.json</code></a></li><li><a href="#陷阱权限--所有权" class="table-of-contents__link toc-highlight">陷阱：权限 / 所有权</a></li><li><a href="#陷阱在远程本地模式之间迁移" class="table-of-contents__link toc-highlight">陷阱：在远程/本地模式之间迁移</a></li><li><a href="#陷阱备份中的密钥" class="table-of-contents__link toc-highlight">陷阱：备份中的密钥</a></li></ul></li><li><a href="#验证清单" class="table-of-contents__link toc-highlight">验证清单</a></li><li><a href="#相关" class="table-of-contents__link toc-highlight">相关</a></li></ul></div><div class="tocFooter_Fu2z"><div class="themeGroup_RzWV" role="group" aria-label="Theme"><button class="themeBtn_tGr6" aria-label="Light theme" title="Light"><svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor" aria-hidden="true"><path d="M12 18a6 6 0 1 1 0-12 6 6 0 0 1 0 12zm0-2a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM11 1h2v3h-2V1zm0 19h2v3h-2v-3zM3.515 4.929l1.414-1.414L7.05 5.636 5.636 7.05 3.515 4.93zM16.95 18.364l1.414-1.414 2.121 2.121-1.414 1.414-2.121-2.121zm2.121-14.85l1.414 1.415-2.121 2.121-1.414-1.414 2.121-2.121zM5.636 16.95l1.414 1.414-2.121 2.121-1.414-1.414 2.121-2.121zM23 11v2h-3v-2h3zM4 11v2H1v-2h3z"></path></svg></button><button class="themeBtn_tGr6 themeBtnActive_A6tm" aria-label="Dark theme" title="Dark"><svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor" aria-hidden="true"><path d="M11.38 2.019a7.5 7.5 0 1 0 10.6 10.6C21.83 17.963 17.315 22 12.002 22 6.477 22 2 17.523 2 12c0-5.314 4.038-9.827 9.38-10.28z"></path></svg></button></div></div></div></div></div></div></main></div></div></div><footer class="theme-layout-footer footer footer--dark"><div class="container container-fluid"><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2026 Moltbot Docs.</div></div></div></footer></div>
+</body>
+</html>

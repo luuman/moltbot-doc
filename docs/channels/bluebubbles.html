@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="zh" dir="ltr" class="docs-wrapper plugin-docs plugin-id-default docs-version-current docs-doc-page docs-doc-id-channels/bluebubbles" data-has-hydrated="false">
+<head>
+<meta charset="UTF-8">
+<meta name="generator" content="Docusaurus v3.9.2">
+<title data-rh="true">BlueBubbles (macOS REST) | Moltbot Docs</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:url" content="https://luuman.github.io/moltbot-doc/docs/channels/bluebubbles"><meta data-rh="true" property="og:locale" content="zh"><meta data-rh="true" name="docusaurus_locale" content="zh"><meta data-rh="true" name="docsearch:language" content="zh"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="BlueBubbles (macOS REST) | Moltbot Docs"><meta data-rh="true" name="description" content="状态：捆绑插件，通过 HTTP 与 BlueBubbles macOS 服务器通信。推荐用于 iMessage 集成，因为它相比传统的 imsg 通道具有更丰富的 API 和更简单的设置。"><meta data-rh="true" property="og:description" content="状态：捆绑插件，通过 HTTP 与 BlueBubbles macOS 服务器通信。推荐用于 iMessage 集成，因为它相比传统的 imsg 通道具有更丰富的 API 和更简单的设置。"><link data-rh="true" rel="icon" href="/moltbot-doc/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://luuman.github.io/moltbot-doc/docs/channels/bluebubbles"><link data-rh="true" rel="alternate" href="https://luuman.github.io/moltbot-doc/docs/channels/bluebubbles" hreflang="zh"><link data-rh="true" rel="alternate" href="https://luuman.github.io/moltbot-doc/docs/channels/bluebubbles" hreflang="x-default"><link rel="alternate" type="application/rss+xml" href="/moltbot-doc/blog/rss.xml" title="Moltbot Docs RSS Feed">
+<link rel="alternate" type="application/atom+xml" href="/moltbot-doc/blog/atom.xml" title="Moltbot Docs Atom Feed"><link rel="stylesheet" href="/moltbot-doc/assets/css/styles.484b4c98.css">
+<script src="/moltbot-doc/assets/js/runtime~main.6cf495cf.js" defer="defer"></script>
+<script src="/moltbot-doc/assets/js/main.f9205183.js" defer="defer"></script>
+</head>
+<body class="navigation-with-keyboard">
+<svg style="display: none;"><defs>
+<symbol id="theme-svg-external-link" viewBox="0 0 24 24"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"/></symbol>
+</defs></svg>
+<script>!function(){var t=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme")}catch(t){}}();document.documentElement.setAttribute("data-theme",t||"dark"),document.documentElement.setAttribute("data-theme-choice",t||"dark")}(),function(){try{const c=new URLSearchParams(window.location.search).entries();for(var[t,e]of c)if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id="__docusaurus"><div role="region" aria-label="跳到主要内容"><a class="skipToContent_fXgn" href="#__docusaurus_skipToContent_fallback">跳到主要内容</a></div><nav class="navbar navbar--fixed-top navbar_MONK" role="navigation" aria-label="Main"><div class="navbarInner_ASTH"><div class="navbarLeft_pUmY"><button aria-label="切换导航栏" aria-expanded="false" class="navbar__toggle clean-btn" type="button"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg></button><a class="brand_SXL9" href="/moltbot-doc/"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="24" height="24" rx="6" fill="var(--ifm-color-primary)"></rect><path d="M7 8.5h10M7 12h7M7 15.5h10" stroke="white" stroke-width="1.8" stroke-linecap="round"></path></svg><span class="brandTitle_XbyU">Moltbot</span></a><div class="dropdown_GrgZ"><button class="dropdownToggle_Nf_z">全部站点<svg class="dropdownArrow_Eka8" viewBox="0 0 12 12" fill="none"><path d="M2 4l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg></button><ul class="dropdownMenu_zsxH"><li><a href="https://luuman.github.io/docs-workspace/docs" class="dropdownMenuItem_VBaP">Workspace</a></li><li><a href="https://luuman.github.io/claude-doc/docs" class="dropdownMenuItem_VBaP">Claude</a></li><li><a href="https://luuman.github.io/electron-doc/docs" class="dropdownMenuItem_VBaP">Electron</a></li><li><a href="https://luuman.github.io/tauri-doc/docs" class="dropdownMenuItem_VBaP">Tauri</a></li><li><a href="https://luuman.github.io/matrx-doc/docs" class="dropdownMenuItem_VBaP">Matrx</a></li><li><a href="https://luuman.github.io/brainboard-doc/docs" class="dropdownMenuItem_VBaP">Brainboard</a></li><li><a href="https://luuman.github.io/synology-doc/docs" class="dropdownMenuItem_VBaP">Synology</a></li><li><a href="https://luuman.github.io/codex-doc/docs" class="dropdownMenuItem_VBaP">Codex</a></li><li><a href="https://luuman.github.io/ai-doc/docs" class="dropdownMenuItem_VBaP">AI</a></li></ul></div></div><div class="navbarCenter_Zdr3"><div class="root_OF3s"><span class="icon_UcOK" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor" width="15" height="15"><path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"></path></svg></span><div class="slot__FGx"><div class="navbar__search searchBarContainer_NW3z" dir="ltr"><input placeholder="搜索" aria-label="Search" class="navbar__search-input searchInput_YFbd" value=""><div class="loadingRing_RJI3 searchBarLoadingRing_YnHq"><div></div><div></div><div></div><div></div></div></div></div></div></div><div class="navbarRight_q16u"><a class="navLink_RnnM" href="/moltbot-doc/docs">Docs</a><a class="navLink_RnnM" href="/moltbot-doc/blog">Blog</a><button class="themeToggle_zD_x" aria-label="Switch to light theme" title="Light"><svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M12 18a6 6 0 1 1 0-12 6 6 0 0 1 0 12zm0-2a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM11 1h2v3h-2V1zm0 19h2v3h-2v-3zM3.515 4.929l1.414-1.414L7.05 5.636 5.636 7.05 3.515 4.93zM16.95 18.364l1.414-1.414 2.121 2.121-1.414 1.414-2.121-2.121zm2.121-14.85l1.414 1.415-2.121 2.121-1.414-1.414 2.121-2.121zM5.636 16.95l1.414 1.414-2.121 2.121-1.414-1.414 2.121-2.121zM23 11v2h-3v-2h3zM4 11v2H1v-2h3z"></path></svg></button></div></div></nav><div id="__docusaurus_skipToContent_fallback" class="theme-layout-main main-wrapper mainWrapper_z2l0"><div class="docsWrapper_hBAB"><button aria-label="回到顶部" class="clean-btn theme-back-to-top-button backToTopButton_sjWU" type="button"></button><div class="docRoot_UBD9"><main class="docMainContainer_TBSr docMainContainerEnhanced_lQrH"><div class="container padding-top--md padding-bottom--lg"><div class="row"><div class="col docItemCol_VOVn"><div class="docItemContainer_Djhp"><article><div class="tocCollapsible_ETCw theme-doc-toc-mobile tocMobile_ITEo"><button type="button" class="clean-btn tocCollapsibleButton_TO0P">本页总览</button></div><div class="theme-doc-markdown markdown"><header><h1>BlueBubbles (macOS REST)</h1></header>
+<p>状态：捆绑插件，通过 HTTP 与 BlueBubbles macOS 服务器通信。<strong>推荐用于 iMessage 集成</strong>，因为它相比传统的 imsg 通道具有更丰富的 API 和更简单的设置。</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="概述">概述<a href="#概述" class="hash-link" aria-label="概述的直接链接" title="概述的直接链接" translate="no">​</a></h2>
+<ul>
+<li class="">通过 BlueBubbles 辅助应用程序在 macOS 上运行 (<a href="https://bluebubbles.app" target="_blank" rel="noopener noreferrer" class="">bluebubbles.app</a>)。</li>
+<li class="">推荐/测试版本：macOS Sequoia (15)。macOS Tahoe (26) 可用；但 Tahoe 上的编辑功能当前已损坏，群组图标更新可能报告成功但不同步。</li>
+<li class="">Moltbot 通过其 REST API 与其通信（<code>GET /api/v1/ping</code>、<code>POST /message/text</code>、<code>POST /chat/:id/*</code>）。</li>
+<li class="">传入消息通过 webhook 到达；外发回复、输入指示器、已读回执和点击反馈都是 REST 调用。</li>
+<li class="">附件和贴纸作为入站媒体被接收（并在可能时呈现给代理）。</li>
+<li class="">配对/允许列表与其他通道的工作方式相同（<code>/start/pairing</code> 等）配合 <code>channels.bluebubbles.allowFrom</code> + 配对码。</li>
+<li class="">反应显示为系统事件，就像 Slack/Telegram 一样，因此代理可以在回复前&quot;提及&quot;它们。</li>
+<li class="">高级功能：编辑、撤回、回复线程、消息效果、群组管理。</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="快速开始">快速开始<a href="#快速开始" class="hash-link" aria-label="快速开始的直接链接" title="快速开始的直接链接" translate="no">​</a></h2>
+<ol>
+<li class="">在您的 Mac 上安装 BlueBubbles 服务器（按照 <a href="https://bluebubbles.app/install" target="_blank" rel="noopener noreferrer" class="">bluebubbles.app/install</a> 的说明进行操作）。</li>
+<li class="">在 BlueBubbles 配置中，启用 Web API 并设置密码。</li>
+<li class="">运行 <code>moltbot onboard</code> 并选择 BlueBubbles，或手动配置：
+<div class="language-json5 codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#D6DEEB;--prism-background-color:#001122"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-json5 codeBlock_bY9V thin-scrollbar" style="color:#D6DEEB;background-color:#001122"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#D6DEEB"><span class="token plain">{</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">  channels: {</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">    bluebubbles: {</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">      enabled: true,</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">      serverUrl: &quot;http://192.168.1.100:1234&quot;,</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">      password: &quot;example-password&quot;,</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">      webhookPath: &quot;/bluebubbles-webhook&quot;</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">    }</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">  }</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">}</span><br></span></code></pre></div></div>
+</li>
+<li class="">将 BlueBubbles webhook 指向您的网关（示例：<code>https://your-gateway-host:3000/bluebubbles-webhook?password=&lt;password&gt;</code>）。</li>
+<li class="">启动网关；它将注册 webhook 处理程序并开始配对。</li>
+</ol>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="入门引导">入门引导<a href="#入门引导" class="hash-link" aria-label="入门引导的直接链接" title="入门引导的直接链接" translate="no">​</a></h2>
+<p>BlueBubbles 在交互式设置向导中可用：</p>
+<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#D6DEEB;--prism-background-color:#001122"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#D6DEEB;background-color:#001122"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#D6DEEB"><span class="token plain">moltbot onboard</span><br></span></code></pre></div></div>
+<p>向导提示输入：</p>
+<ul>
+<li class=""><strong>服务器 URL</strong>（必需）：BlueBubbles 服务器地址（例如 <code>http://192.168.1.100:1234</code>）</li>
+<li class=""><strong>密码</strong>（必需）：来自 BlueBubbles 服务器设置的 API 密码</li>
+<li class=""><strong>Webhook 路径</strong>（可选）：默认为 <code>/bluebubbles-webhook</code></li>
+<li class=""><strong>私信策略</strong>：配对、允许列表、开放或禁用</li>
+<li class=""><strong>允许列表</strong>：电话号码、电子邮件或聊天目标</li>
+</ul>
+<p>您也可以通过 CLI 添加 BlueBubbles：</p>
+<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#D6DEEB;--prism-background-color:#001122"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#D6DEEB;background-color:#001122"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#D6DEEB"><span class="token plain">moltbot channels add bluebubbles --http-url http://192.168.1.100:1234 --password &lt;password&gt;</span><br></span></code></pre></div></div>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="访问控制私信--群组">访问控制（私信 + 群组）<a href="#访问控制私信--群组" class="hash-link" aria-label="访问控制（私信 + 群组）的直接链接" title="访问控制（私信 + 群组）的直接链接" translate="no">​</a></h2>
+<p>私信：</p>
+<ul>
+<li class="">默认：<code>channels.bluebubbles.dmPolicy = &quot;pairing&quot;</code>。</li>
+<li class="">未知发送者会收到配对码；在批准之前忽略消息（代码在 1 小时后过期）。</li>
+<li class="">通过以下方式批准：
+<ul>
+<li class=""><code>moltbot pairing list bluebubbles</code></li>
+<li class=""><code>moltbot pairing approve bluebubbles &lt;CODE&gt;</code></li>
+</ul>
+</li>
+<li class="">配对是默认的令牌交换。详情：<a class="" href="/moltbot-doc/start/pairing">配对</a></li>
+</ul>
+<p>群组：</p>
+<ul>
+<li class=""><code>channels.bluebubbles.groupPolicy = open | allowlist | disabled</code>（默认：<code>allowlist</code>）。</li>
+<li class=""><code>channels.bluebubbles.groupAllowFrom</code> 控制在设置为 <code>allowlist</code> 时谁可以在群组中触发。</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="提及门控群组">提及门控（群组）<a href="#提及门控群组" class="hash-link" aria-label="提及门控（群组）的直接链接" title="提及门控（群组）的直接链接" translate="no">​</a></h3>
+<p>BlueBubbles 支持群聊的提及门控，匹配 iMessage/WhatsApp 行为：</p>
+<ul>
+<li class="">使用 <code>agents.list[].groupChat.mentionPatterns</code>（或 <code>messages.groupChat.mentionPatterns</code>）检测提及。</li>
+<li class="">当为群组启用了 <code>requireMention</code> 时，代理仅在被提及时代回应。</li>
+<li class="">来自授权发送者的控制命令绕过提及门控。</li>
+</ul>
+<p>按群组配置：</p>
+<div class="language-json5 codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#D6DEEB;--prism-background-color:#001122"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-json5 codeBlock_bY9V thin-scrollbar" style="color:#D6DEEB;background-color:#001122"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#D6DEEB"><span class="token plain">{</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">  channels: {</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">    bluebubbles: {</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">      groupPolicy: &quot;allowlist&quot;,</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">      groupAllowFrom: [&quot;+15555550123&quot;],</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">      groups: {</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">        &quot;*&quot;: { requireMention: true },  // 所有群组的默认值</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">        &quot;iMessage;-;chat123&quot;: { requireMention: false }  // 特定群组的覆盖</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">      }</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">    }</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">  }</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">}</span><br></span></code></pre></div></div>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="命令门控">命令门控<a href="#命令门控" class="hash-link" aria-label="命令门控的直接链接" title="命令门控的直接链接" translate="no">​</a></h3>
+<ul>
+<li class="">控制命令（例如 <code>/config</code>、<code>/model</code>）需要授权。</li>
+<li class="">使用 <code>allowFrom</code> 和 <code>groupAllowFrom</code> 确定命令授权。</li>
+<li class="">授权发送者可以运行控制命令，即使在群组中没有提及。</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="输入状态--已读回执">输入状态 + 已读回执<a href="#输入状态--已读回执" class="hash-link" aria-label="输入状态 + 已读回执的直接链接" title="输入状态 + 已读回执的直接链接" translate="no">​</a></h2>
+<ul>
+<li class=""><strong>输入指示器</strong>：在响应生成之前和期间自动发送。</li>
+<li class=""><strong>已读回执</strong>：由 <code>channels.bluebubbles.sendReadReceipts</code> 控制（默认：<code>true</code>）。</li>
+<li class=""><strong>输入指示器</strong>：Moltbot 发送输入开始事件；BlueBubbles 在发送或超时时自动清除输入状态（通过 DELETE 手动停止不可靠）。</li>
+</ul>
+<div class="language-json5 codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#D6DEEB;--prism-background-color:#001122"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-json5 codeBlock_bY9V thin-scrollbar" style="color:#D6DEEB;background-color:#001122"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#D6DEEB"><span class="token plain">{</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">  channels: {</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">    bluebubbles: {</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">      sendReadReceipts: false  // 禁用已读回执</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">    }</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">  }</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">}</span><br></span></code></pre></div></div>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="高级操作">高级操作<a href="#高级操作" class="hash-link" aria-label="高级操作的直接链接" title="高级操作的直接链接" translate="no">​</a></h2>
+<p>当在配置中启用时，BlueBubbles 支持高级消息操作：</p>
+<div class="language-json5 codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#D6DEEB;--prism-background-color:#001122"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-json5 codeBlock_bY9V thin-scrollbar" style="color:#D6DEEB;background-color:#001122"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#D6DEEB"><span class="token plain">{</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">  channels: {</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">    bluebubbles: {</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">      actions: {</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">        reactions: true,       // 点击反馈（默认：true）</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">        edit: true,            // 编辑发送的消息（macOS 13+，在 macOS 26 Tahoe 上已损坏）</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">        unsend: true,          // 撤回消息（macOS 13+）</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">        reply: true,           // 通过消息 GUID 实现回复线程</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">        sendWithEffect: true,  // 消息效果（震动、大声等）</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">        renameGroup: true,     // 重命名群聊</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">        setGroupIcon: true,    // 设置群聊图标/照片（在 macOS 26 Tahoe 上不稳定）</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">        addParticipant: true,  // 向群组添加参与者</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">        removeParticipant: true, // 从群组中移除参与者</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">        leaveGroup: true,      // 离开群聊</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">        sendAttachment: true   // 发送附件/媒体</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">      }</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">    }</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">  }</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">}</span><br></span></code></pre></div></div>
+<p>可用操作：</p>
+<ul>
+<li class=""><strong>react</strong>：添加/删除点击反馈反应（<code>messageId</code>、<code>emoji</code>、<code>remove</code>）</li>
+<li class=""><strong>edit</strong>：编辑已发送的消息（<code>messageId</code>、<code>text</code>）</li>
+<li class=""><strong>unsend</strong>：撤回消息（<code>messageId</code>）</li>
+<li class=""><strong>reply</strong>：回复特定消息（<code>messageId</code>、<code>text</code>、<code>to</code>）</li>
+<li class=""><strong>sendWithEffect</strong>：发送带 iMessage 效果的消息（<code>text</code>、<code>to</code>、<code>effectId</code>）</li>
+<li class=""><strong>renameGroup</strong>：重命名群聊（<code>chatGuid</code>、<code>displayName</code>）</li>
+<li class=""><strong>setGroupIcon</strong>：设置群聊的图标/照片（<code>chatGuid</code>、<code>media</code>）— 在 macOS 26 Tahoe 上不稳定（API 可能返回成功但图标不会同步）。</li>
+<li class=""><strong>addParticipant</strong>：向群组添加某人（<code>chatGuid</code>、<code>address</code>）</li>
+<li class=""><strong>removeParticipant</strong>：从群组中移除某人（<code>chatGuid</code>、<code>address</code>）</li>
+<li class=""><strong>leaveGroup</strong>：离开群聊（<code>chatGuid</code>）</li>
+<li class=""><strong>sendAttachment</strong>：发送媒体/文件（<code>to</code>、<code>buffer</code>、<code>filename</code>、<code>asVoice</code>）
+<ul>
+<li class="">语音备忘录：设置 <code>asVoice: true</code> 并使用 <strong>MP3</strong> 或 <strong>CAF</strong> 音频以作为 iMessage 语音消息发送。BlueBubbles 在发送语音备忘录时将 MP3 转换为 CAF。</li>
+</ul>
+</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="消息-id短-id-与完整-id">消息 ID（短 ID 与完整 ID）<a href="#消息-id短-id-与完整-id" class="hash-link" aria-label="消息 ID（短 ID 与完整 ID）的直接链接" title="消息 ID（短 ID 与完整 ID）的直接链接" translate="no">​</a></h3>
+<p>Moltbot 可能会显示<em>短</em>消息 ID（例如 <code>1</code>、<code>2</code>）以节省令牌。</p>
+<ul>
+<li class=""><code>MessageSid</code> / <code>ReplyToId</code> 可以是短 ID。</li>
+<li class=""><code>MessageSidFull</code> / <code>ReplyToIdFull</code> 包含提供者的完整 ID。</li>
+<li class="">短 ID 是内存中的；它们可能在重启或缓存驱逐时过期。</li>
+<li class="">操作接受短或完整的 <code>messageId</code>，但如果短 ID 不再可用将会出错。</li>
+</ul>
+<p>对持久自动化和存储使用完整 ID：</p>
+<ul>
+<li class="">模板：<code>{{MessageSidFull}}</code>、<code>{{ReplyToIdFull}}</code></li>
+<li class="">上下文：入站有效载荷中的 <code>MessageSidFull</code> / <code>ReplyToIdFull</code></li>
+</ul>
+<p>参见 <a class="" href="/moltbot-doc/gateway/configuration">配置</a> 了解模板变量。</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="块流">块流<a href="#块流" class="hash-link" aria-label="块流的直接链接" title="块流的直接链接" translate="no">​</a></h2>
+<p>控制响应是作为单条消息发送还是分块流式传输：</p>
+<div class="language-json5 codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#D6DEEB;--prism-background-color:#001122"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-json5 codeBlock_bY9V thin-scrollbar" style="color:#D6DEEB;background-color:#001122"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#D6DEEB"><span class="token plain">{</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">  channels: {</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">    bluebubbles: {</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">      blockStreaming: true  // 启用块流（默认行为）</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">    }</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">  }</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">}</span><br></span></code></pre></div></div>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="媒体--限制">媒体 + 限制<a href="#媒体--限制" class="hash-link" aria-label="媒体 + 限制的直接链接" title="媒体 + 限制的直接链接" translate="no">​</a></h2>
+<ul>
+<li class="">入站附件被下载并存储在媒体缓存中。</li>
+<li class="">媒体上限通过 <code>channels.bluebubbles.mediaMaxMb</code>（默认：8 MB）。</li>
+<li class="">出站文本被分割到 <code>channels.bluebubbles.textChunkLimit</code>（默认：4000 字符）。</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="配置参考">配置参考<a href="#配置参考" class="hash-link" aria-label="配置参考的直接链接" title="配置参考的直接链接" translate="no">​</a></h2>
+<p>完整配置：<a class="" href="/moltbot-doc/gateway/configuration">配置</a></p>
+<p>提供者选项：</p>
+<ul>
+<li class=""><code>channels.bluebubbles.enabled</code>：启用/禁用通道。</li>
+<li class=""><code>channels.bluebubbles.serverUrl</code>：BlueBubbles REST API 基础 URL。</li>
+<li class=""><code>channels.bluebubbles.password</code>：API 密码。</li>
+<li class=""><code>channels.bluebubbles.webhookPath</code>：Webhook 端点路径（默认：<code>/bluebubbles-webhook</code>）。</li>
+<li class=""><code>channels.bluebubbles.dmPolicy</code>：<code>pairing | allowlist | open | disabled</code>（默认：<code>pairing</code>）。</li>
+<li class=""><code>channels.bluebubbles.allowFrom</code>：私信允许列表（句柄、电子邮件、E.164 号码、<code>chat_id:*</code>、<code>chat_guid:*</code>）。</li>
+<li class=""><code>channels.bluebubbles.groupPolicy</code>：<code>open | allowlist | disabled</code>（默认：<code>allowlist</code>）。</li>
+<li class=""><code>channels.bluebubbles.groupAllowFrom</code>：群组发送者允许列表。</li>
+<li class=""><code>channels.bluebubbles.groups</code>：按群组配置（<code>requireMention</code> 等）。</li>
+<li class=""><code>channels.bluebubbles.sendReadReceipts</code>：发送已读回执（默认：<code>true</code>）。</li>
+<li class=""><code>channels.bluebubbles.blockStreaming</code>：启用块流（默认：<code>true</code>）。</li>
+<li class=""><code>channels.bluebubbles.textChunkLimit</code>：出站分块大小（字符数）（默认：4000）。</li>
+<li class=""><code>channels.bluebubbles.chunkMode</code>：<code>length</code>（默认）仅在超过 <code>textChunkLimit</code> 时分割；<code>newline</code> 在长度分割之前按空行（段落边界）分割。</li>
+<li class=""><code>channels.bluebubbles.mediaMaxMb</code>：入站媒体上限（MB）（默认：8）。</li>
+<li class=""><code>channels.bluebubbles.historyLimit</code>：上下文的最大群消息数（0 禁用）。</li>
+<li class=""><code>channels.bluebubbles.dmHistoryLimit</code>：私信历史限制。</li>
+<li class=""><code>channels.bluebubbles.actions</code>：启用/禁用特定操作。</li>
+<li class=""><code>channels.bluebubbles.accounts</code>：多账户配置。</li>
+</ul>
+<p>相关全局选项：</p>
+<ul>
+<li class=""><code>agents.list[].groupChat.mentionPatterns</code>（或 <code>messages.groupChat.mentionPatterns</code>）。</li>
+<li class=""><code>messages.responsePrefix</code>。</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="寻址传递目标">寻址/传递目标<a href="#寻址传递目标" class="hash-link" aria-label="寻址/传递目标的直接链接" title="寻址/传递目标的直接链接" translate="no">​</a></h2>
+<p>优先使用 <code>chat_guid</code> 进行稳定路由：</p>
+<ul>
+<li class=""><code>chat_guid:iMessage;-;+15555550123</code>（群组首选）</li>
+<li class=""><code>chat_id:123</code></li>
+<li class=""><code>chat_identifier:...</code></li>
+<li class="">直接句柄：<code>+15555550123</code>、<code>user@example.com</code>
+<ul>
+<li class="">如果直接句柄没有现有的私信聊天，Moltbot 将通过 <code>POST /api/v1/chat/new</code> 创建一个。这需要启用 BlueBubbles 私有 API。</li>
+</ul>
+</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="安全性">安全性<a href="#安全性" class="hash-link" aria-label="安全性的直接链接" title="安全性的直接链接" translate="no">​</a></h2>
+<ul>
+<li class="">Webhook 请求通过比较 <code>guid</code>/<code>password</code> 查询参数或标头与 <code>channels.bluebubbles.password</code> 进行身份验证。也接受来自 <code>localhost</code> 的请求。</li>
+<li class="">保持 API 密码和 webhook 端点保密（将其视为凭据）。</li>
+<li class="">本地主机信任意味着同一主机的反向代理可能无意中绕过密码。如果您代理网关，请在代理处要求身份验证并配置 <code>gateway.trustedProxies</code>。参见 <a class="" href="/moltbot-doc/gateway/security#reverse-proxy-configuration">网关安全性</a>。</li>
+<li class="">如果将 BlueBubbles 服务器暴露在局域网外，请在其上启用 HTTPS + 防火墙规则。</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="故障排除">故障排除<a href="#故障排除" class="hash-link" aria-label="故障排除的直接链接" title="故障排除的直接链接" translate="no">​</a></h2>
+<ul>
+<li class="">如果输入/已读事件停止工作，请检查 BlueBubbles webhook 日志并验证网关路径是否匹配 <code>channels.bluebubbles.webhookPath</code>。</li>
+<li class="">配对码在一小时后过期；使用 <code>moltbot pairing list bluebubbles</code> 和 <code>moltbot pairing approve bluebubbles &lt;code&gt;</code>。</li>
+<li class="">反应需要 BlueBubbles 私有 API（<code>POST /api/v1/message/react</code>）；确保服务器版本公开了它。</li>
+<li class="">编辑/撤回需要 macOS 13+ 和兼容的 BlueBubbles 服务器版本。在 macOS 26 (Tahoe) 上，由于私有 API 更改，编辑当前已损坏。</li>
+<li class="">群组图标更新在 macOS 26 (Tahoe) 上可能不稳定：API 可能返回成功但新图标不会同步。</li>
+<li class="">Moltbot 根据 BlueBubbles 服务器的 macOS 版本自动隐藏已知损坏的操作。如果编辑仍出现在 macOS 26 (Tahoe) 上，请使用 <code>channels.bluebubbles.actions.edit=false</code> 手动禁用。</li>
+<li class="">获取状态/健康信息：<code>moltbot status --all</code> 或 <code>moltbot status --deep</code>。</li>
+</ul>
+<p>有关通用通道工作流程参考，请参见 <a class="" href="/moltbot-doc/channels">通道</a> 和 <a class="" href="/moltbot-doc/plugins">插件</a> 指南。</p></div></article><nav class="docusaurus-mt-lg pagination-nav" aria-label="文件选项卡"></nav></div></div><div class="col col--3"><div class="tocWrapper_xKoj"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#概述" class="table-of-contents__link toc-highlight">概述</a></li><li><a href="#快速开始" class="table-of-contents__link toc-highlight">快速开始</a></li><li><a href="#入门引导" class="table-of-contents__link toc-highlight">入门引导</a></li><li><a href="#访问控制私信--群组" class="table-of-contents__link toc-highlight">访问控制（私信 + 群组）</a><ul><li><a href="#提及门控群组" class="table-of-contents__link toc-highlight">提及门控（群组）</a></li><li><a href="#命令门控" class="table-of-contents__link toc-highlight">命令门控</a></li></ul></li><li><a href="#输入状态--已读回执" class="table-of-contents__link toc-highlight">输入状态 + 已读回执</a></li><li><a href="#高级操作" class="table-of-contents__link toc-highlight">高级操作</a><ul><li><a href="#消息-id短-id-与完整-id" class="table-of-contents__link toc-highlight">消息 ID（短 ID 与完整 ID）</a></li></ul></li><li><a href="#块流" class="table-of-contents__link toc-highlight">块流</a></li><li><a href="#媒体--限制" class="table-of-contents__link toc-highlight">媒体 + 限制</a></li><li><a href="#配置参考" class="table-of-contents__link toc-highlight">配置参考</a></li><li><a href="#寻址传递目标" class="table-of-contents__link toc-highlight">寻址/传递目标</a></li><li><a href="#安全性" class="table-of-contents__link toc-highlight">安全性</a></li><li><a href="#故障排除" class="table-of-contents__link toc-highlight">故障排除</a></li></ul></div><div class="tocFooter_Fu2z"><div class="themeGroup_RzWV" role="group" aria-label="Theme"><button class="themeBtn_tGr6" aria-label="Light theme" title="Light"><svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor" aria-hidden="true"><path d="M12 18a6 6 0 1 1 0-12 6 6 0 0 1 0 12zm0-2a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM11 1h2v3h-2V1zm0 19h2v3h-2v-3zM3.515 4.929l1.414-1.414L7.05 5.636 5.636 7.05 3.515 4.93zM16.95 18.364l1.414-1.414 2.121 2.121-1.414 1.414-2.121-2.121zm2.121-14.85l1.414 1.415-2.121 2.121-1.414-1.414 2.121-2.121zM5.636 16.95l1.414 1.414-2.121 2.121-1.414-1.414 2.121-2.121zM23 11v2h-3v-2h3zM4 11v2H1v-2h3z"></path></svg></button><button class="themeBtn_tGr6 themeBtnActive_A6tm" aria-label="Dark theme" title="Dark"><svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor" aria-hidden="true"><path d="M11.38 2.019a7.5 7.5 0 1 0 10.6 10.6C21.83 17.963 17.315 22 12.002 22 6.477 22 2 17.523 2 12c0-5.314 4.038-9.827 9.38-10.28z"></path></svg></button></div></div></div></div></div></div></main></div></div></div><footer class="theme-layout-footer footer footer--dark"><div class="container container-fluid"><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2026 Moltbot Docs.</div></div></div></footer></div>
+</body>
+</html>

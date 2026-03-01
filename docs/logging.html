@@ -1,0 +1,263 @@
+<!doctype html>
+<html lang="zh" dir="ltr" class="docs-wrapper plugin-docs plugin-id-default docs-version-current docs-doc-page docs-doc-id-logging" data-has-hydrated="false">
+<head>
+<meta charset="UTF-8">
+<meta name="generator" content="Docusaurus v3.9.2">
+<title data-rh="true">日志记录 | Moltbot Docs</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:url" content="https://luuman.github.io/moltbot-doc/docs/logging"><meta data-rh="true" property="og:locale" content="zh"><meta data-rh="true" name="docusaurus_locale" content="zh"><meta data-rh="true" name="docsearch:language" content="zh"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="日志记录 | Moltbot Docs"><meta data-rh="true" name="description" content="Moltbot 在两个地方记录日志："><meta data-rh="true" property="og:description" content="Moltbot 在两个地方记录日志："><link data-rh="true" rel="icon" href="/moltbot-doc/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://luuman.github.io/moltbot-doc/docs/logging"><link data-rh="true" rel="alternate" href="https://luuman.github.io/moltbot-doc/docs/logging" hreflang="zh"><link data-rh="true" rel="alternate" href="https://luuman.github.io/moltbot-doc/docs/logging" hreflang="x-default"><link rel="alternate" type="application/rss+xml" href="/moltbot-doc/blog/rss.xml" title="Moltbot Docs RSS Feed">
+<link rel="alternate" type="application/atom+xml" href="/moltbot-doc/blog/atom.xml" title="Moltbot Docs Atom Feed"><link rel="stylesheet" href="/moltbot-doc/assets/css/styles.484b4c98.css">
+<script src="/moltbot-doc/assets/js/runtime~main.6cf495cf.js" defer="defer"></script>
+<script src="/moltbot-doc/assets/js/main.f9205183.js" defer="defer"></script>
+</head>
+<body class="navigation-with-keyboard">
+<svg style="display: none;"><defs>
+<symbol id="theme-svg-external-link" viewBox="0 0 24 24"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"/></symbol>
+</defs></svg>
+<script>!function(){var t=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme")}catch(t){}}();document.documentElement.setAttribute("data-theme",t||"dark"),document.documentElement.setAttribute("data-theme-choice",t||"dark")}(),function(){try{const c=new URLSearchParams(window.location.search).entries();for(var[t,e]of c)if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id="__docusaurus"><div role="region" aria-label="跳到主要内容"><a class="skipToContent_fXgn" href="#__docusaurus_skipToContent_fallback">跳到主要内容</a></div><nav class="navbar navbar--fixed-top navbar_MONK" role="navigation" aria-label="Main"><div class="navbarInner_ASTH"><div class="navbarLeft_pUmY"><button aria-label="切换导航栏" aria-expanded="false" class="navbar__toggle clean-btn" type="button"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg></button><a class="brand_SXL9" href="/moltbot-doc/"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="24" height="24" rx="6" fill="var(--ifm-color-primary)"></rect><path d="M7 8.5h10M7 12h7M7 15.5h10" stroke="white" stroke-width="1.8" stroke-linecap="round"></path></svg><span class="brandTitle_XbyU">Moltbot</span></a><div class="dropdown_GrgZ"><button class="dropdownToggle_Nf_z">全部站点<svg class="dropdownArrow_Eka8" viewBox="0 0 12 12" fill="none"><path d="M2 4l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg></button><ul class="dropdownMenu_zsxH"><li><a href="https://luuman.github.io/docs-workspace/docs" class="dropdownMenuItem_VBaP">Workspace</a></li><li><a href="https://luuman.github.io/claude-doc/docs" class="dropdownMenuItem_VBaP">Claude</a></li><li><a href="https://luuman.github.io/electron-doc/docs" class="dropdownMenuItem_VBaP">Electron</a></li><li><a href="https://luuman.github.io/tauri-doc/docs" class="dropdownMenuItem_VBaP">Tauri</a></li><li><a href="https://luuman.github.io/matrx-doc/docs" class="dropdownMenuItem_VBaP">Matrx</a></li><li><a href="https://luuman.github.io/brainboard-doc/docs" class="dropdownMenuItem_VBaP">Brainboard</a></li><li><a href="https://luuman.github.io/synology-doc/docs" class="dropdownMenuItem_VBaP">Synology</a></li><li><a href="https://luuman.github.io/codex-doc/docs" class="dropdownMenuItem_VBaP">Codex</a></li><li><a href="https://luuman.github.io/ai-doc/docs" class="dropdownMenuItem_VBaP">AI</a></li></ul></div></div><div class="navbarCenter_Zdr3"><div class="root_OF3s"><span class="icon_UcOK" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor" width="15" height="15"><path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"></path></svg></span><div class="slot__FGx"><div class="navbar__search searchBarContainer_NW3z" dir="ltr"><input placeholder="搜索" aria-label="Search" class="navbar__search-input searchInput_YFbd" value=""><div class="loadingRing_RJI3 searchBarLoadingRing_YnHq"><div></div><div></div><div></div><div></div></div></div></div></div></div><div class="navbarRight_q16u"><a class="navLink_RnnM" href="/moltbot-doc/docs">Docs</a><a class="navLink_RnnM" href="/moltbot-doc/blog">Blog</a><button class="themeToggle_zD_x" aria-label="Switch to light theme" title="Light"><svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M12 18a6 6 0 1 1 0-12 6 6 0 0 1 0 12zm0-2a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM11 1h2v3h-2V1zm0 19h2v3h-2v-3zM3.515 4.929l1.414-1.414L7.05 5.636 5.636 7.05 3.515 4.93zM16.95 18.364l1.414-1.414 2.121 2.121-1.414 1.414-2.121-2.121zm2.121-14.85l1.414 1.415-2.121 2.121-1.414-1.414 2.121-2.121zM5.636 16.95l1.414 1.414-2.121 2.121-1.414-1.414 2.121-2.121zM23 11v2h-3v-2h3zM4 11v2H1v-2h3z"></path></svg></button></div></div></nav><div id="__docusaurus_skipToContent_fallback" class="theme-layout-main main-wrapper mainWrapper_z2l0"><div class="docsWrapper_hBAB"><button aria-label="回到顶部" class="clean-btn theme-back-to-top-button backToTopButton_sjWU" type="button"></button><div class="docRoot_UBD9"><main class="docMainContainer_TBSr docMainContainerEnhanced_lQrH"><div class="container padding-top--md padding-bottom--lg"><div class="row"><div class="col docItemCol_VOVn"><div class="docItemContainer_Djhp"><article><div class="tocCollapsible_ETCw theme-doc-toc-mobile tocMobile_ITEo"><button type="button" class="clean-btn tocCollapsibleButton_TO0P">本页总览</button></div><div class="theme-doc-markdown markdown"><header><h1>日志记录</h1></header>
+<p>Moltbot 在两个地方记录日志：</p>
+<ul>
+<li class=""><strong>文件日志</strong>（JSON 行）由网关写入。</li>
+<li class=""><strong>控制台输出</strong> 显示在终端和控制界面中。</li>
+</ul>
+<p>本页面解释日志的位置、如何阅读它们，以及如何配置日志级别和格式。</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="日志位置">日志位置<a href="#日志位置" class="hash-link" aria-label="日志位置的直接链接" title="日志位置的直接链接" translate="no">​</a></h2>
+<p>默认情况下，网关会在以下位置写入滚动日志文件：</p>
+<p><code>/tmp/moltbot/moltbot-YYYY-MM-DD.log</code></p>
+<p>日期使用网关主机的本地时区。</p>
+<p>您可以在 <code>~/.clawdbot/moltbot.json</code> 中覆盖此设置：</p>
+<div class="language-json codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#D6DEEB;--prism-background-color:#001122"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-json codeBlock_bY9V thin-scrollbar" style="color:#D6DEEB;background-color:#001122"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#D6DEEB"><span class="token punctuation" style="color:#C792EA">{</span><span class="token plain"></span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">  </span><span class="token property" style="color:#F78C6C">&quot;logging&quot;</span><span class="token operator" style="color:#7FDBCA">:</span><span class="token plain"> </span><span class="token punctuation" style="color:#C792EA">{</span><span class="token plain"></span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">    </span><span class="token property" style="color:#F78C6C">&quot;file&quot;</span><span class="token operator" style="color:#7FDBCA">:</span><span class="token plain"> </span><span class="token string" style="color:#ECC48D">&quot;/path/to/moltbot.log&quot;</span><span class="token plain"></span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">  </span><span class="token punctuation" style="color:#C792EA">}</span><span class="token plain"></span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain"></span><span class="token punctuation" style="color:#C792EA">}</span><br></span></code></pre></div></div>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="如何阅读日志">如何阅读日志<a href="#如何阅读日志" class="hash-link" aria-label="如何阅读日志的直接链接" title="如何阅读日志的直接链接" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="cli实时跟踪推荐">CLI：实时跟踪（推荐）<a href="#cli实时跟踪推荐" class="hash-link" aria-label="CLI：实时跟踪（推荐）的直接链接" title="CLI：实时跟踪（推荐）的直接链接" translate="no">​</a></h3>
+<p>使用 CLI 通过 RPC 跟踪网关日志文件：</p>
+<div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#D6DEEB;--prism-background-color:#001122"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#D6DEEB;background-color:#001122"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#D6DEEB"><span class="token plain">moltbot logs --follow</span><br></span></code></pre></div></div>
+<p>输出模式：</p>
+<ul>
+<li class=""><strong>TTY 会话</strong>：美观、彩色、结构化的日志行。</li>
+<li class=""><strong>非 TTY 会话</strong>：纯文本。</li>
+<li class=""><code>--json</code>：行分隔的 JSON（每行一个日志事件）。</li>
+<li class=""><code>--plain</code>：在 TTY 会话中强制纯文本。</li>
+<li class=""><code>--no-color</code>：禁用 ANSI 颜色。</li>
+</ul>
+<p>在 JSON 模式下，CLI 发出 <code>type</code> 标记的对象：</p>
+<ul>
+<li class=""><code>meta</code>：流元数据（文件、光标、大小）</li>
+<li class=""><code>log</code>：解析的日志条目</li>
+<li class=""><code>notice</code>：截断/轮换提示</li>
+<li class=""><code>raw</code>：未解析的日志行</li>
+</ul>
+<p>如果无法访问网关，CLI 会打印简短提示运行：</p>
+<div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#D6DEEB;--prism-background-color:#001122"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#D6DEEB;background-color:#001122"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#D6DEEB"><span class="token plain">moltbot doctor</span><br></span></code></pre></div></div>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="控制界面web">控制界面（web）<a href="#控制界面web" class="hash-link" aria-label="控制界面（web）的直接链接" title="控制界面（web）的直接链接" translate="no">​</a></h3>
+<p>控制界面的 <strong>日志</strong> 选项卡使用 <code>logs.tail</code> 跟踪同一文件。
+请参见 <a class="" href="/moltbot-doc/web/control-ui">/web/control-ui</a> 了解如何打开它。</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="仅通道日志">仅通道日志<a href="#仅通道日志" class="hash-link" aria-label="仅通道日志的直接链接" title="仅通道日志的直接链接" translate="no">​</a></h3>
+<p>要过滤通道活动（WhatsApp/Telegram/等），请使用：</p>
+<div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#D6DEEB;--prism-background-color:#001122"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#D6DEEB;background-color:#001122"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#D6DEEB"><span class="token plain">moltbot channels logs --channel whatsapp</span><br></span></code></pre></div></div>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="日志格式">日志格式<a href="#日志格式" class="hash-link" aria-label="日志格式的直接链接" title="日志格式的直接链接" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="文件日志jsonl">文件日志（JSONL）<a href="#文件日志jsonl" class="hash-link" aria-label="文件日志（JSONL）的直接链接" title="文件日志（JSONL）的直接链接" translate="no">​</a></h3>
+<p>日志文件中的每一行都是一个 JSON 对象。CLI 和控制界面解析这些
+条目以渲染结构化输出（时间、级别、子系统、消息）。</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="控制台输出">控制台输出<a href="#控制台输出" class="hash-link" aria-label="控制台输出的直接链接" title="控制台输出的直接链接" translate="no">​</a></h3>
+<p>控制台日志是 <strong>TTY 感知</strong> 的，并为可读性格式化：</p>
+<ul>
+<li class="">子系统前缀（例如 <code>gateway/channels/whatsapp</code>）</li>
+<li class="">级别着色（info/warn/error）</li>
+<li class="">可选的紧凑或 JSON 模式</li>
+</ul>
+<p>控制台格式由 <code>logging.consoleStyle</code> 控制。</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="配置日志记录">配置日志记录<a href="#配置日志记录" class="hash-link" aria-label="配置日志记录的直接链接" title="配置日志记录的直接链接" translate="no">​</a></h2>
+<p>所有日志配置都位于 <code>~/.clawdbot/moltbot.json</code> 中的 <code>logging</code> 下。</p>
+<div class="language-json codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#D6DEEB;--prism-background-color:#001122"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-json codeBlock_bY9V thin-scrollbar" style="color:#D6DEEB;background-color:#001122"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#D6DEEB"><span class="token punctuation" style="color:#C792EA">{</span><span class="token plain"></span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">  </span><span class="token property" style="color:#F78C6C">&quot;logging&quot;</span><span class="token operator" style="color:#7FDBCA">:</span><span class="token plain"> </span><span class="token punctuation" style="color:#C792EA">{</span><span class="token plain"></span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">    </span><span class="token property" style="color:#F78C6C">&quot;level&quot;</span><span class="token operator" style="color:#7FDBCA">:</span><span class="token plain"> </span><span class="token string" style="color:#ECC48D">&quot;info&quot;</span><span class="token punctuation" style="color:#C792EA">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">    </span><span class="token property" style="color:#F78C6C">&quot;file&quot;</span><span class="token operator" style="color:#7FDBCA">:</span><span class="token plain"> </span><span class="token string" style="color:#ECC48D">&quot;/tmp/moltbot/moltbot-YYYY-MM-DD.log&quot;</span><span class="token punctuation" style="color:#C792EA">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">    </span><span class="token property" style="color:#F78C6C">&quot;consoleLevel&quot;</span><span class="token operator" style="color:#7FDBCA">:</span><span class="token plain"> </span><span class="token string" style="color:#ECC48D">&quot;info&quot;</span><span class="token punctuation" style="color:#C792EA">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">    </span><span class="token property" style="color:#F78C6C">&quot;consoleStyle&quot;</span><span class="token operator" style="color:#7FDBCA">:</span><span class="token plain"> </span><span class="token string" style="color:#ECC48D">&quot;pretty&quot;</span><span class="token punctuation" style="color:#C792EA">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">    </span><span class="token property" style="color:#F78C6C">&quot;redactSensitive&quot;</span><span class="token operator" style="color:#7FDBCA">:</span><span class="token plain"> </span><span class="token string" style="color:#ECC48D">&quot;tools&quot;</span><span class="token punctuation" style="color:#C792EA">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">    </span><span class="token property" style="color:#F78C6C">&quot;redactPatterns&quot;</span><span class="token operator" style="color:#7FDBCA">:</span><span class="token plain"> </span><span class="token punctuation" style="color:#C792EA">[</span><span class="token plain"></span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">      </span><span class="token string" style="color:#ECC48D">&quot;sk-.*&quot;</span><span class="token plain"></span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">    </span><span class="token punctuation" style="color:#C792EA">]</span><span class="token plain"></span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">  </span><span class="token punctuation" style="color:#C792EA">}</span><span class="token plain"></span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain"></span><span class="token punctuation" style="color:#C792EA">}</span><br></span></code></pre></div></div>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="日志级别">日志级别<a href="#日志级别" class="hash-link" aria-label="日志级别的直接链接" title="日志级别的直接链接" translate="no">​</a></h3>
+<ul>
+<li class=""><code>logging.level</code>：<strong>文件日志</strong>（JSONL）级别。</li>
+<li class=""><code>logging.consoleLevel</code>：<strong>控制台</strong> 详细程度级别。</li>
+</ul>
+<p><code>--verbose</code> 只影响控制台输出；它不会改变文件日志级别。</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="控制台样式">控制台样式<a href="#控制台样式" class="hash-link" aria-label="控制台样式的直接链接" title="控制台样式的直接链接" translate="no">​</a></h3>
+<p><code>logging.consoleStyle</code>：</p>
+<ul>
+<li class=""><code>pretty</code>：人性化、彩色、带时间戳。</li>
+<li class=""><code>compact</code>：更紧凑的输出（最适合长时间会话）。</li>
+<li class=""><code>json</code>：每行 JSON（用于日志处理器）。</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="红action">红action<a href="#红action" class="hash-link" aria-label="红action的直接链接" title="红action的直接链接" translate="no">​</a></h3>
+<p>工具摘要可以在进入控制台之前红action敏感令牌：</p>
+<ul>
+<li class=""><code>logging.redactSensitive</code>：<code>off</code> | <code>tools</code>（默认：<code>tools</code>）</li>
+<li class=""><code>logging.redactPatterns</code>：覆盖默认集的正则表达式字符串列表</li>
+</ul>
+<p>红action仅影响 <strong>控制台输出</strong>，不会更改文件日志。</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="诊断--opentelemetry">诊断 + OpenTelemetry<a href="#诊断--opentelemetry" class="hash-link" aria-label="诊断 + OpenTelemetry的直接链接" title="诊断 + OpenTelemetry的直接链接" translate="no">​</a></h2>
+<p>诊断是结构化、机器可读的事件，用于模型运行 <strong>和</strong>
+消息流遥测（webhooks、队列、会话状态）。它们 <strong>不</strong>
+替代日志；它们的存在是为了馈送指标、追踪和其他导出器。</p>
+<p>诊断事件在进程中发出，但导出器只有在
+启用诊断 + 导出器插件时才会附加。</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="opentelemetry-与-otlp">OpenTelemetry 与 OTLP<a href="#opentelemetry-与-otlp" class="hash-link" aria-label="OpenTelemetry 与 OTLP的直接链接" title="OpenTelemetry 与 OTLP的直接链接" translate="no">​</a></h3>
+<ul>
+<li class=""><strong>OpenTelemetry (OTel)</strong>：数据模型 + 用于追踪、指标和日志的 SDK。</li>
+<li class=""><strong>OTLP</strong>：用于将 OTel 数据导出到收集器/后端的线协议。</li>
+<li class="">Moltbot 今天通过 <strong>OTLP/HTTP (protobuf)</strong> 导出。</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="导出信号">导出信号<a href="#导出信号" class="hash-link" aria-label="导出信号的直接链接" title="导出信号的直接链接" translate="no">​</a></h3>
+<ul>
+<li class=""><strong>指标</strong>：计数器 + 直方图（令牌使用情况、消息流、队列）。</li>
+<li class=""><strong>追踪</strong>：模型使用 + webhook/消息处理的跨度。</li>
+<li class=""><strong>日志</strong>：当启用 <code>diagnostics.otel.logs</code> 时通过 OTLP 导出。日志
+量可能很高；请记住 <code>logging.level</code> 和导出器过滤器。</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="诊断事件目录">诊断事件目录<a href="#诊断事件目录" class="hash-link" aria-label="诊断事件目录的直接链接" title="诊断事件目录的直接链接" translate="no">​</a></h3>
+<p>模型使用：</p>
+<ul>
+<li class=""><code>model.usage</code>：令牌、成本、持续时间、上下文、提供者/模型/通道、会话 ID。</li>
+</ul>
+<p>消息流：</p>
+<ul>
+<li class=""><code>webhook.received</code>：每个通道的 webhook 入站。</li>
+<li class=""><code>webhook.processed</code>：webhook 处理 + 持续时间。</li>
+<li class=""><code>webhook.error</code>：webhook 处理器错误。</li>
+<li class=""><code>message.queued</code>：消息排队等待处理。</li>
+<li class=""><code>message.processed</code>：结果 + 持续时间 + 可选错误。</li>
+</ul>
+<p>队列 + 会话：</p>
+<ul>
+<li class=""><code>queue.lane.enqueue</code>：命令队列通道排队 + 深度。</li>
+<li class=""><code>queue.lane.dequeue</code>：命令队列通道出队 + 等待时间。</li>
+<li class=""><code>session.state</code>：会话状态转换 + 原因。</li>
+<li class=""><code>session.stuck</code>：会话卡住警告 + 年龄。</li>
+<li class=""><code>run.attempt</code>：运行重试/尝试元数据。</li>
+<li class=""><code>diagnostic.heartbeat</code>：聚合计数器（webhooks/queue/session）。</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="启用诊断无导出器">启用诊断（无导出器）<a href="#启用诊断无导出器" class="hash-link" aria-label="启用诊断（无导出器）的直接链接" title="启用诊断（无导出器）的直接链接" translate="no">​</a></h3>
+<p>如果您希望诊断事件可供插件或自定义接收器使用，请使用此方法：</p>
+<div class="language-json codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#D6DEEB;--prism-background-color:#001122"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-json codeBlock_bY9V thin-scrollbar" style="color:#D6DEEB;background-color:#001122"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#D6DEEB"><span class="token punctuation" style="color:#C792EA">{</span><span class="token plain"></span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">  </span><span class="token property" style="color:#F78C6C">&quot;diagnostics&quot;</span><span class="token operator" style="color:#7FDBCA">:</span><span class="token plain"> </span><span class="token punctuation" style="color:#C792EA">{</span><span class="token plain"></span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">    </span><span class="token property" style="color:#F78C6C">&quot;enabled&quot;</span><span class="token operator" style="color:#7FDBCA">:</span><span class="token plain"> </span><span class="token boolean" style="color:#F78C6C">true</span><span class="token plain"></span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">  </span><span class="token punctuation" style="color:#C792EA">}</span><span class="token plain"></span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain"></span><span class="token punctuation" style="color:#C792EA">}</span><br></span></code></pre></div></div>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="诊断标志目标日志">诊断标志（目标日志）<a href="#诊断标志目标日志" class="hash-link" aria-label="诊断标志（目标日志）的直接链接" title="诊断标志（目标日志）的直接链接" translate="no">​</a></h3>
+<p>使用标志在不提高 <code>logging.level</code> 的情况下开启额外的目标调试日志。
+标志不区分大小写并支持通配符（例如 <code>telegram.*</code> 或 <code>*</code>）。</p>
+<div class="language-json codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#D6DEEB;--prism-background-color:#001122"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-json codeBlock_bY9V thin-scrollbar" style="color:#D6DEEB;background-color:#001122"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#D6DEEB"><span class="token punctuation" style="color:#C792EA">{</span><span class="token plain"></span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">  </span><span class="token property" style="color:#F78C6C">&quot;diagnostics&quot;</span><span class="token operator" style="color:#7FDBCA">:</span><span class="token plain"> </span><span class="token punctuation" style="color:#C792EA">{</span><span class="token plain"></span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">    </span><span class="token property" style="color:#F78C6C">&quot;flags&quot;</span><span class="token operator" style="color:#7FDBCA">:</span><span class="token plain"> </span><span class="token punctuation" style="color:#C792EA">[</span><span class="token string" style="color:#ECC48D">&quot;telegram.http&quot;</span><span class="token punctuation" style="color:#C792EA">]</span><span class="token plain"></span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">  </span><span class="token punctuation" style="color:#C792EA">}</span><span class="token plain"></span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain"></span><span class="token punctuation" style="color:#C792EA">}</span><br></span></code></pre></div></div>
+<p>环境覆盖（一次性）：</p>
+<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#D6DEEB;--prism-background-color:#001122"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#D6DEEB;background-color:#001122"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#D6DEEB"><span class="token plain">CLAWDBOT_DIAGNOSTICS=telegram.http,telegram.payload</span><br></span></code></pre></div></div>
+<p>注意事项：</p>
+<ul>
+<li class="">标志日志转到标准日志文件（与 <code>logging.file</code> 相同）。</li>
+<li class="">输出仍根据 <code>logging.redactSensitive</code> 进行红action。</li>
+<li class="">完整指南：<a class="" href="/moltbot-doc/diagnostics/flags">/diagnostics/flags</a>。</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="导出到-opentelemetry">导出到 OpenTelemetry<a href="#导出到-opentelemetry" class="hash-link" aria-label="导出到 OpenTelemetry的直接链接" title="导出到 OpenTelemetry的直接链接" translate="no">​</a></h3>
+<p>诊断可以通过 <code>diagnostics-otel</code> 插件（OTLP/HTTP）导出。这
+适用于接受 OTLP/HTTP 的任何 OpenTelemetry 收集器/后端。</p>
+<div class="language-json codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#D6DEEB;--prism-background-color:#001122"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-json codeBlock_bY9V thin-scrollbar" style="color:#D6DEEB;background-color:#001122"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#D6DEEB"><span class="token punctuation" style="color:#C792EA">{</span><span class="token plain"></span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">  </span><span class="token property" style="color:#F78C6C">&quot;plugins&quot;</span><span class="token operator" style="color:#7FDBCA">:</span><span class="token plain"> </span><span class="token punctuation" style="color:#C792EA">{</span><span class="token plain"></span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">    </span><span class="token property" style="color:#F78C6C">&quot;allow&quot;</span><span class="token operator" style="color:#7FDBCA">:</span><span class="token plain"> </span><span class="token punctuation" style="color:#C792EA">[</span><span class="token string" style="color:#ECC48D">&quot;diagnostics-otel&quot;</span><span class="token punctuation" style="color:#C792EA">]</span><span class="token punctuation" style="color:#C792EA">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">    </span><span class="token property" style="color:#F78C6C">&quot;entries&quot;</span><span class="token operator" style="color:#7FDBCA">:</span><span class="token plain"> </span><span class="token punctuation" style="color:#C792EA">{</span><span class="token plain"></span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">      </span><span class="token property" style="color:#F78C6C">&quot;diagnostics-otel&quot;</span><span class="token operator" style="color:#7FDBCA">:</span><span class="token plain"> </span><span class="token punctuation" style="color:#C792EA">{</span><span class="token plain"></span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">        </span><span class="token property" style="color:#F78C6C">&quot;enabled&quot;</span><span class="token operator" style="color:#7FDBCA">:</span><span class="token plain"> </span><span class="token boolean" style="color:#F78C6C">true</span><span class="token plain"></span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">      </span><span class="token punctuation" style="color:#C792EA">}</span><span class="token plain"></span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">    </span><span class="token punctuation" style="color:#C792EA">}</span><span class="token plain"></span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">  </span><span class="token punctuation" style="color:#C792EA">}</span><span class="token punctuation" style="color:#C792EA">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">  </span><span class="token property" style="color:#F78C6C">&quot;diagnostics&quot;</span><span class="token operator" style="color:#7FDBCA">:</span><span class="token plain"> </span><span class="token punctuation" style="color:#C792EA">{</span><span class="token plain"></span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">    </span><span class="token property" style="color:#F78C6C">&quot;enabled&quot;</span><span class="token operator" style="color:#7FDBCA">:</span><span class="token plain"> </span><span class="token boolean" style="color:#F78C6C">true</span><span class="token punctuation" style="color:#C792EA">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">    </span><span class="token property" style="color:#F78C6C">&quot;otel&quot;</span><span class="token operator" style="color:#7FDBCA">:</span><span class="token plain"> </span><span class="token punctuation" style="color:#C792EA">{</span><span class="token plain"></span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">      </span><span class="token property" style="color:#F78C6C">&quot;enabled&quot;</span><span class="token operator" style="color:#7FDBCA">:</span><span class="token plain"> </span><span class="token boolean" style="color:#F78C6C">true</span><span class="token punctuation" style="color:#C792EA">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">      </span><span class="token property" style="color:#F78C6C">&quot;endpoint&quot;</span><span class="token operator" style="color:#7FDBCA">:</span><span class="token plain"> </span><span class="token string" style="color:#ECC48D">&quot;http://otel-collector:4318&quot;</span><span class="token punctuation" style="color:#C792EA">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">      </span><span class="token property" style="color:#F78C6C">&quot;protocol&quot;</span><span class="token operator" style="color:#7FDBCA">:</span><span class="token plain"> </span><span class="token string" style="color:#ECC48D">&quot;http/protobuf&quot;</span><span class="token punctuation" style="color:#C792EA">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">      </span><span class="token property" style="color:#F78C6C">&quot;serviceName&quot;</span><span class="token operator" style="color:#7FDBCA">:</span><span class="token plain"> </span><span class="token string" style="color:#ECC48D">&quot;moltbot-gateway&quot;</span><span class="token punctuation" style="color:#C792EA">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">      </span><span class="token property" style="color:#F78C6C">&quot;traces&quot;</span><span class="token operator" style="color:#7FDBCA">:</span><span class="token plain"> </span><span class="token boolean" style="color:#F78C6C">true</span><span class="token punctuation" style="color:#C792EA">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">      </span><span class="token property" style="color:#F78C6C">&quot;metrics&quot;</span><span class="token operator" style="color:#7FDBCA">:</span><span class="token plain"> </span><span class="token boolean" style="color:#F78C6C">true</span><span class="token punctuation" style="color:#C792EA">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">      </span><span class="token property" style="color:#F78C6C">&quot;logs&quot;</span><span class="token operator" style="color:#7FDBCA">:</span><span class="token plain"> </span><span class="token boolean" style="color:#F78C6C">true</span><span class="token punctuation" style="color:#C792EA">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">      </span><span class="token property" style="color:#F78C6C">&quot;sampleRate&quot;</span><span class="token operator" style="color:#7FDBCA">:</span><span class="token plain"> </span><span class="token number" style="color:#F78C6C">0.2</span><span class="token punctuation" style="color:#C792EA">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">      </span><span class="token property" style="color:#F78C6C">&quot;flushIntervalMs&quot;</span><span class="token operator" style="color:#7FDBCA">:</span><span class="token plain"> </span><span class="token number" style="color:#F78C6C">60000</span><span class="token plain"></span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">    </span><span class="token punctuation" style="color:#C792EA">}</span><span class="token plain"></span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">  </span><span class="token punctuation" style="color:#C792EA">}</span><span class="token plain"></span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain"></span><span class="token punctuation" style="color:#C792EA">}</span><br></span></code></pre></div></div>
+<p>注意事项：</p>
+<ul>
+<li class="">您也可以使用 <code>moltbot plugins enable diagnostics-otel</code> 启用插件。</li>
+<li class=""><code>protocol</code> 当前仅支持 <code>http/protobuf</code>。<code>grpc</code> 被忽略。</li>
+<li class="">指标包括令牌使用情况、成本、上下文大小、运行持续时间和消息流
+计数器/直方图（webhooks、队列、会话状态、队列深度/等待）。</li>
+<li class="">追踪/指标可以用 <code>traces</code> / <code>metrics</code> 切换（默认：开启）。追踪
+包括模型使用跨度加上启用时的 webhook/消息处理跨度。</li>
+<li class="">当您的收集器需要认证时设置 <code>headers</code>。</li>
+<li class="">支持的环境变量：<code>OTEL_EXPORTER_OTLP_ENDPOINT</code>、
+<code>OTEL_SERVICE_NAME</code>、<code>OTEL_EXPORTER_OTLP_PROTOCOL</code>。</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="导出指标名称--类型">导出指标（名称 + 类型）<a href="#导出指标名称--类型" class="hash-link" aria-label="导出指标（名称 + 类型）的直接链接" title="导出指标（名称 + 类型）的直接链接" translate="no">​</a></h3>
+<p>模型使用：</p>
+<ul>
+<li class=""><code>moltbot.tokens</code>（计数器，属性：<code>moltbot.token</code>、<code>moltbot.channel</code>、
+<code>moltbot.provider</code>、<code>moltbot.model</code>）</li>
+<li class=""><code>moltbot.cost.usd</code>（计数器，属性：<code>moltbot.channel</code>、<code>moltbot.provider</code>、
+<code>moltbot.model</code>）</li>
+<li class=""><code>moltbot.run.duration_ms</code>（直方图，属性：<code>moltbot.channel</code>、
+<code>moltbot.provider</code>、<code>moltbot.model</code>）</li>
+<li class=""><code>moltbot.context.tokens</code>（直方图，属性：<code>moltbot.context</code>、
+<code>moltbot.channel</code>、<code>moltbot.provider</code>、<code>moltbot.model</code>）</li>
+</ul>
+<p>消息流：</p>
+<ul>
+<li class=""><code>moltbot.webhook.received</code>（计数器，属性：<code>moltbot.channel</code>、
+<code>moltbot.webhook</code>）</li>
+<li class=""><code>moltbot.webhook.error</code>（计数器，属性：<code>moltbot.channel</code>、
+<code>moltbot.webhook</code>）</li>
+<li class=""><code>moltbot.webhook.duration_ms</code>（直方图，属性：<code>moltbot.channel</code>、
+<code>moltbot.webhook</code>）</li>
+<li class=""><code>moltbot.message.queued</code>（计数器，属性：<code>moltbot.channel</code>、
+<code>moltbot.source</code>）</li>
+<li class=""><code>moltbot.message.processed</code>（计数器，属性：<code>moltbot.channel</code>、
+<code>moltbot.outcome</code>）</li>
+<li class=""><code>moltbot.message.duration_ms</code>（直方图，属性：<code>moltbot.channel</code>、
+<code>moltbot.outcome</code>）</li>
+</ul>
+<p>队列 + 会话：</p>
+<ul>
+<li class=""><code>moltbot.queue.lane.enqueue</code>（计数器，属性：<code>moltbot.lane</code>）</li>
+<li class=""><code>moltbot.queue.lane.dequeue</code>（计数器，属性：<code>moltbot.lane</code>）</li>
+<li class=""><code>moltbot.queue.depth</code>（直方图，属性：<code>moltbot.lane</code> 或
+<code>moltbot.channel=heartbeat</code>）</li>
+<li class=""><code>moltbot.queue.wait_ms</code>（直方图，属性：<code>moltbot.lane</code>）</li>
+<li class=""><code>moltbot.session.state</code>（计数器，属性：<code>moltbot.state</code>、<code>moltbot.reason</code>）</li>
+<li class=""><code>moltbot.session.stuck</code>（计数器，属性：<code>moltbot.state</code>）</li>
+<li class=""><code>moltbot.session.stuck_age_ms</code>（直方图，属性：<code>moltbot.state</code>）</li>
+<li class=""><code>moltbot.run.attempt</code>（计数器，属性：<code>moltbot.attempt</code>）</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="导出跨度名称--关键属性">导出跨度（名称 + 关键属性）<a href="#导出跨度名称--关键属性" class="hash-link" aria-label="导出跨度（名称 + 关键属性）的直接链接" title="导出跨度（名称 + 关键属性）的直接链接" translate="no">​</a></h3>
+<ul>
+<li class=""><code>moltbot.model.usage</code>
+<ul>
+<li class=""><code>moltbot.channel</code>、<code>moltbot.provider</code>、<code>moltbot.model</code></li>
+<li class=""><code>moltbot.sessionKey</code>、<code>moltbot.sessionId</code></li>
+<li class=""><code>moltbot.tokens.*</code>（输入/输出/cache_read/cache_write/总计）</li>
+</ul>
+</li>
+<li class=""><code>moltbot.webhook.processed</code>
+<ul>
+<li class=""><code>moltbot.channel</code>、<code>moltbot.webhook</code>、<code>moltbot.chatId</code></li>
+</ul>
+</li>
+<li class=""><code>moltbot.webhook.error</code>
+<ul>
+<li class=""><code>moltbot.channel</code>、<code>moltbot.webhook</code>、<code>moltbot.chatId</code>、
+<code>moltbot.error</code></li>
+</ul>
+</li>
+<li class=""><code>moltbot.message.processed</code>
+<ul>
+<li class=""><code>moltbot.channel</code>、<code>moltbot.outcome</code>、<code>moltbot.chatId</code>、
+<code>moltbot.messageId</code>、<code>moltbot.sessionKey</code>、<code>moltbot.sessionId</code>、
+<code>moltbot.reason</code></li>
+</ul>
+</li>
+<li class=""><code>moltbot.session.stuck</code>
+<ul>
+<li class=""><code>moltbot.state</code>、<code>moltbot.ageMs</code>、<code>moltbot.queueDepth</code>、
+<code>moltbot.sessionKey</code>、<code>moltbot.sessionId</code></li>
+</ul>
+</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="采样--刷新">采样 + 刷新<a href="#采样--刷新" class="hash-link" aria-label="采样 + 刷新的直接链接" title="采样 + 刷新的直接链接" translate="no">​</a></h3>
+<ul>
+<li class="">追踪采样：<code>diagnostics.otel.sampleRate</code>（0.0–1.0，仅根跨度）。</li>
+<li class="">指标导出间隔：<code>diagnostics.otel.flushIntervalMs</code>（最小 1000ms）。</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="协议说明">协议说明<a href="#协议说明" class="hash-link" aria-label="协议说明的直接链接" title="协议说明的直接链接" translate="no">​</a></h3>
+<ul>
+<li class="">OTLP/HTTP 端点可以通过 <code>diagnostics.otel.endpoint</code> 或
+<code>OTEL_EXPORTER_OTLP_ENDPOINT</code> 设置。</li>
+<li class="">如果端点已包含 <code>/v1/traces</code> 或 <code>/v1/metrics</code>，则按原样使用。</li>
+<li class="">如果端点已包含 <code>/v1/logs</code>，则按原样用于日志。</li>
+<li class=""><code>diagnostics.otel.logs</code> 为主要记录器输出启用 OTLP 日志导出。</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="日志导出行为">日志导出行为<a href="#日志导出行为" class="hash-link" aria-label="日志导出行为的直接链接" title="日志导出行为的直接链接" translate="no">​</a></h3>
+<ul>
+<li class="">OTLP 日志使用写入 <code>logging.file</code> 的相同结构化记录。</li>
+<li class="">遵守 <code>logging.level</code>（文件日志级别）。控制台红action <strong>不</strong> 适用于
+OTLP 日志。</li>
+<li class="">高容量安装应首选 OTLP 收集器采样/过滤。</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="故障排除技巧">故障排除技巧<a href="#故障排除技巧" class="hash-link" aria-label="故障排除技巧的直接链接" title="故障排除技巧的直接链接" translate="no">​</a></h2>
+<ul>
+<li class=""><strong>无法访问网关？</strong> 首先运行 <code>moltbot doctor</code>。</li>
+<li class=""><strong>日志为空？</strong> 检查网关是否正在运行并向 <code>logging.file</code> 中的文件路径
+写入。</li>
+<li class=""><strong>需要更多细节？</strong> 将 <code>logging.level</code> 设置为 <code>debug</code> 或 <code>trace</code> 并重试。</li>
+</ul></div></article><nav class="docusaurus-mt-lg pagination-nav" aria-label="文件选项卡"></nav></div></div><div class="col col--3"><div class="tocWrapper_xKoj"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#日志位置" class="table-of-contents__link toc-highlight">日志位置</a></li><li><a href="#如何阅读日志" class="table-of-contents__link toc-highlight">如何阅读日志</a><ul><li><a href="#cli实时跟踪推荐" class="table-of-contents__link toc-highlight">CLI：实时跟踪（推荐）</a></li><li><a href="#控制界面web" class="table-of-contents__link toc-highlight">控制界面（web）</a></li><li><a href="#仅通道日志" class="table-of-contents__link toc-highlight">仅通道日志</a></li></ul></li><li><a href="#日志格式" class="table-of-contents__link toc-highlight">日志格式</a><ul><li><a href="#文件日志jsonl" class="table-of-contents__link toc-highlight">文件日志（JSONL）</a></li><li><a href="#控制台输出" class="table-of-contents__link toc-highlight">控制台输出</a></li></ul></li><li><a href="#配置日志记录" class="table-of-contents__link toc-highlight">配置日志记录</a><ul><li><a href="#日志级别" class="table-of-contents__link toc-highlight">日志级别</a></li><li><a href="#控制台样式" class="table-of-contents__link toc-highlight">控制台样式</a></li><li><a href="#红action" class="table-of-contents__link toc-highlight">红action</a></li></ul></li><li><a href="#诊断--opentelemetry" class="table-of-contents__link toc-highlight">诊断 + OpenTelemetry</a><ul><li><a href="#opentelemetry-与-otlp" class="table-of-contents__link toc-highlight">OpenTelemetry 与 OTLP</a></li><li><a href="#导出信号" class="table-of-contents__link toc-highlight">导出信号</a></li><li><a href="#诊断事件目录" class="table-of-contents__link toc-highlight">诊断事件目录</a></li><li><a href="#启用诊断无导出器" class="table-of-contents__link toc-highlight">启用诊断（无导出器）</a></li><li><a href="#诊断标志目标日志" class="table-of-contents__link toc-highlight">诊断标志（目标日志）</a></li><li><a href="#导出到-opentelemetry" class="table-of-contents__link toc-highlight">导出到 OpenTelemetry</a></li><li><a href="#导出指标名称--类型" class="table-of-contents__link toc-highlight">导出指标（名称 + 类型）</a></li><li><a href="#导出跨度名称--关键属性" class="table-of-contents__link toc-highlight">导出跨度（名称 + 关键属性）</a></li><li><a href="#采样--刷新" class="table-of-contents__link toc-highlight">采样 + 刷新</a></li><li><a href="#协议说明" class="table-of-contents__link toc-highlight">协议说明</a></li><li><a href="#日志导出行为" class="table-of-contents__link toc-highlight">日志导出行为</a></li></ul></li><li><a href="#故障排除技巧" class="table-of-contents__link toc-highlight">故障排除技巧</a></li></ul></div><div class="tocFooter_Fu2z"><div class="themeGroup_RzWV" role="group" aria-label="Theme"><button class="themeBtn_tGr6" aria-label="Light theme" title="Light"><svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor" aria-hidden="true"><path d="M12 18a6 6 0 1 1 0-12 6 6 0 0 1 0 12zm0-2a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM11 1h2v3h-2V1zm0 19h2v3h-2v-3zM3.515 4.929l1.414-1.414L7.05 5.636 5.636 7.05 3.515 4.93zM16.95 18.364l1.414-1.414 2.121 2.121-1.414 1.414-2.121-2.121zm2.121-14.85l1.414 1.415-2.121 2.121-1.414-1.414 2.121-2.121zM5.636 16.95l1.414 1.414-2.121 2.121-1.414-1.414 2.121-2.121zM23 11v2h-3v-2h3zM4 11v2H1v-2h3z"></path></svg></button><button class="themeBtn_tGr6 themeBtnActive_A6tm" aria-label="Dark theme" title="Dark"><svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor" aria-hidden="true"><path d="M11.38 2.019a7.5 7.5 0 1 0 10.6 10.6C21.83 17.963 17.315 22 12.002 22 6.477 22 2 17.523 2 12c0-5.314 4.038-9.827 9.38-10.28z"></path></svg></button></div></div></div></div></div></div></main></div></div></div><footer class="theme-layout-footer footer footer--dark"><div class="container container-fluid"><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2026 Moltbot Docs.</div></div></div></footer></div>
+</body>
+</html>

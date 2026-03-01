@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="zh" dir="ltr" class="docs-wrapper plugin-docs plugin-id-default docs-version-current docs-doc-page docs-doc-id-gateway/bonjour" data-has-hydrated="false">
+<head>
+<meta charset="UTF-8">
+<meta name="generator" content="Docusaurus v3.9.2">
+<title data-rh="true">Bonjour / mDNS 发现 | Moltbot Docs</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:url" content="https://luuman.github.io/moltbot-doc/docs/gateway/bonjour"><meta data-rh="true" property="og:locale" content="zh"><meta data-rh="true" name="docusaurus_locale" content="zh"><meta data-rh="true" name="docsearch:language" content="zh"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="Bonjour / mDNS 发现 | Moltbot Docs"><meta data-rh="true" name="description" content="Moltbot 使用 Bonjour (mDNS / DNS‑SD) 作为 仅局域网的便利方式 来发现"><meta data-rh="true" property="og:description" content="Moltbot 使用 Bonjour (mDNS / DNS‑SD) 作为 仅局域网的便利方式 来发现"><link data-rh="true" rel="icon" href="/moltbot-doc/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://luuman.github.io/moltbot-doc/docs/gateway/bonjour"><link data-rh="true" rel="alternate" href="https://luuman.github.io/moltbot-doc/docs/gateway/bonjour" hreflang="zh"><link data-rh="true" rel="alternate" href="https://luuman.github.io/moltbot-doc/docs/gateway/bonjour" hreflang="x-default"><link rel="alternate" type="application/rss+xml" href="/moltbot-doc/blog/rss.xml" title="Moltbot Docs RSS Feed">
+<link rel="alternate" type="application/atom+xml" href="/moltbot-doc/blog/atom.xml" title="Moltbot Docs Atom Feed"><link rel="stylesheet" href="/moltbot-doc/assets/css/styles.484b4c98.css">
+<script src="/moltbot-doc/assets/js/runtime~main.6cf495cf.js" defer="defer"></script>
+<script src="/moltbot-doc/assets/js/main.f9205183.js" defer="defer"></script>
+</head>
+<body class="navigation-with-keyboard">
+<svg style="display: none;"><defs>
+<symbol id="theme-svg-external-link" viewBox="0 0 24 24"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"/></symbol>
+</defs></svg>
+<script>!function(){var t=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme")}catch(t){}}();document.documentElement.setAttribute("data-theme",t||"dark"),document.documentElement.setAttribute("data-theme-choice",t||"dark")}(),function(){try{const c=new URLSearchParams(window.location.search).entries();for(var[t,e]of c)if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id="__docusaurus"><div role="region" aria-label="跳到主要内容"><a class="skipToContent_fXgn" href="#__docusaurus_skipToContent_fallback">跳到主要内容</a></div><nav class="navbar navbar--fixed-top navbar_MONK" role="navigation" aria-label="Main"><div class="navbarInner_ASTH"><div class="navbarLeft_pUmY"><button aria-label="切换导航栏" aria-expanded="false" class="navbar__toggle clean-btn" type="button"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg></button><a class="brand_SXL9" href="/moltbot-doc/"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="24" height="24" rx="6" fill="var(--ifm-color-primary)"></rect><path d="M7 8.5h10M7 12h7M7 15.5h10" stroke="white" stroke-width="1.8" stroke-linecap="round"></path></svg><span class="brandTitle_XbyU">Moltbot</span></a><div class="dropdown_GrgZ"><button class="dropdownToggle_Nf_z">全部站点<svg class="dropdownArrow_Eka8" viewBox="0 0 12 12" fill="none"><path d="M2 4l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg></button><ul class="dropdownMenu_zsxH"><li><a href="https://luuman.github.io/docs-workspace/docs" class="dropdownMenuItem_VBaP">Workspace</a></li><li><a href="https://luuman.github.io/claude-doc/docs" class="dropdownMenuItem_VBaP">Claude</a></li><li><a href="https://luuman.github.io/electron-doc/docs" class="dropdownMenuItem_VBaP">Electron</a></li><li><a href="https://luuman.github.io/tauri-doc/docs" class="dropdownMenuItem_VBaP">Tauri</a></li><li><a href="https://luuman.github.io/matrx-doc/docs" class="dropdownMenuItem_VBaP">Matrx</a></li><li><a href="https://luuman.github.io/brainboard-doc/docs" class="dropdownMenuItem_VBaP">Brainboard</a></li><li><a href="https://luuman.github.io/synology-doc/docs" class="dropdownMenuItem_VBaP">Synology</a></li><li><a href="https://luuman.github.io/codex-doc/docs" class="dropdownMenuItem_VBaP">Codex</a></li><li><a href="https://luuman.github.io/ai-doc/docs" class="dropdownMenuItem_VBaP">AI</a></li></ul></div></div><div class="navbarCenter_Zdr3"><div class="root_OF3s"><span class="icon_UcOK" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor" width="15" height="15"><path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"></path></svg></span><div class="slot__FGx"><div class="navbar__search searchBarContainer_NW3z" dir="ltr"><input placeholder="搜索" aria-label="Search" class="navbar__search-input searchInput_YFbd" value=""><div class="loadingRing_RJI3 searchBarLoadingRing_YnHq"><div></div><div></div><div></div><div></div></div></div></div></div></div><div class="navbarRight_q16u"><a class="navLink_RnnM" href="/moltbot-doc/docs">Docs</a><a class="navLink_RnnM" href="/moltbot-doc/blog">Blog</a><button class="themeToggle_zD_x" aria-label="Switch to light theme" title="Light"><svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M12 18a6 6 0 1 1 0-12 6 6 0 0 1 0 12zm0-2a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM11 1h2v3h-2V1zm0 19h2v3h-2v-3zM3.515 4.929l1.414-1.414L7.05 5.636 5.636 7.05 3.515 4.93zM16.95 18.364l1.414-1.414 2.121 2.121-1.414 1.414-2.121-2.121zm2.121-14.85l1.414 1.415-2.121 2.121-1.414-1.414 2.121-2.121zM5.636 16.95l1.414 1.414-2.121 2.121-1.414-1.414 2.121-2.121zM23 11v2h-3v-2h3zM4 11v2H1v-2h3z"></path></svg></button></div></div></nav><div id="__docusaurus_skipToContent_fallback" class="theme-layout-main main-wrapper mainWrapper_z2l0"><div class="docsWrapper_hBAB"><button aria-label="回到顶部" class="clean-btn theme-back-to-top-button backToTopButton_sjWU" type="button"></button><div class="docRoot_UBD9"><main class="docMainContainer_TBSr docMainContainerEnhanced_lQrH"><div class="container padding-top--md padding-bottom--lg"><div class="row"><div class="col docItemCol_VOVn"><div class="docItemContainer_Djhp"><article><div class="tocCollapsible_ETCw theme-doc-toc-mobile tocMobile_ITEo"><button type="button" class="clean-btn tocCollapsibleButton_TO0P">本页总览</button></div><div class="theme-doc-markdown markdown"><header><h1>Bonjour / mDNS 发现</h1></header>
+<p>Moltbot 使用 Bonjour (mDNS / DNS‑SD) 作为 <strong>仅局域网的便利方式</strong> 来发现
+活动网关（WebSocket 端点）。这是尽力而为的，<strong>不会</strong> 替代基于 SSH 或
+Tailnet 的连接。</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="通过-tailscale-的广域-bonjour单播-dnssd">通过 Tailscale 的广域 Bonjour（单播 DNS‑SD）<a href="#通过-tailscale-的广域-bonjour单播-dnssd" class="hash-link" aria-label="通过 Tailscale 的广域 Bonjour（单播 DNS‑SD）的直接链接" title="通过 Tailscale 的广域 Bonjour（单播 DNS‑SD）的直接链接" translate="no">​</a></h2>
+<p>如果节点和网关在不同的网络上，多播 mDNS 不会跨越
+边界。您可以通过切换到通过 Tailscale 的 <strong>单播 DNS‑SD</strong>
+（&quot;广域 Bonjour&quot;）来保持相同的发现用户体验。</p>
+<p>高级步骤：</p>
+<ol>
+<li class="">在网关主机上运行 DNS 服务器（可通过 Tailnet 访问）。</li>
+<li class="">在专用区域下发布 <code>_moltbot-gw._tcp</code> 的 DNS‑SD 记录
+（示例：<code>moltbot.internal.</code>）。</li>
+<li class="">配置 Tailscale <strong>分段 DNS</strong>，使 <code>moltbot.internal</code> 通过该
+DNS 服务器为客户端（包括 iOS）解析。</li>
+</ol>
+<p>Moltbot 在这种模式下标准化使用 <code>moltbot.internal.</code>。iOS/Android 节点
+自动浏览 <code>local.</code> 和 <code>moltbot.internal.</code>。</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="网关配置推荐">网关配置（推荐）<a href="#网关配置推荐" class="hash-link" aria-label="网关配置（推荐）的直接链接" title="网关配置（推荐）的直接链接" translate="no">​</a></h3>
+<div class="language-json5 codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#D6DEEB;--prism-background-color:#001122"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-json5 codeBlock_bY9V thin-scrollbar" style="color:#D6DEEB;background-color:#001122"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#D6DEEB"><span class="token plain">{</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">  gateway: { bind: &quot;tailnet&quot; }, // 仅 tailnet（推荐）</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">  discovery: { wideArea: { enabled: true } } // 启用 moltbot.internal DNS-SD 发布</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">}</span><br></span></code></pre></div></div>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="一次性-dns-服务器设置网关主机">一次性 DNS 服务器设置（网关主机）<a href="#一次性-dns-服务器设置网关主机" class="hash-link" aria-label="一次性 DNS 服务器设置（网关主机）的直接链接" title="一次性 DNS 服务器设置（网关主机）的直接链接" translate="no">​</a></h3>
+<div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#D6DEEB;--prism-background-color:#001122"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#D6DEEB;background-color:#001122"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#D6DEEB"><span class="token plain">moltbot dns setup --apply</span><br></span></code></pre></div></div>
+<p>这将安装 CoreDNS 并配置它：</p>
+<ul>
+<li class="">仅在网关的 Tailscale 接口上监听端口 53</li>
+<li class="">从 <code>~/.clawdbot/dns/moltbot.internal.db</code> 服务 <code>moltbot.internal.</code></li>
+</ul>
+<p>从连接到 tailnet 的机器上验证：</p>
+<div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#D6DEEB;--prism-background-color:#001122"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#D6DEEB;background-color:#001122"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#D6DEEB"><span class="token plain">dns-sd -B _moltbot-gw._tcp moltbot.internal.</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">dig @&lt;TAILNET_IPV4&gt; -p 53 _moltbot-gw._tcp.clawdbot.internal PTR +short</span><br></span></code></pre></div></div>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="tailscale-dns-设置">Tailscale DNS 设置<a href="#tailscale-dns-设置" class="hash-link" aria-label="Tailscale DNS 设置的直接链接" title="Tailscale DNS 设置的直接链接" translate="no">​</a></h3>
+<p>在 Tailscale 管理控制台中：</p>
+<ul>
+<li class="">添加指向网关 tailnet IP 的域名服务器（UDP/TCP 53）。</li>
+<li class="">添加分段 DNS，使域名 <code>moltbot.internal</code> 使用该域名服务器。</li>
+</ul>
+<p>一旦客户端接受 tailnet DNS，iOS 节点就可以在 <code>moltbot.internal.</code> 中浏览
+<code>_moltbot-gw._tcp</code> 而无需多播。</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="网关监听器安全性推荐">网关监听器安全性（推荐）<a href="#网关监听器安全性推荐" class="hash-link" aria-label="网关监听器安全性（推荐）的直接链接" title="网关监听器安全性（推荐）的直接链接" translate="no">​</a></h3>
+<p>网关 WS 端口（默认 <code>18789</code>）默认绑定到环回地址。对于 LAN/tailnet
+访问，明确绑定并保持认证启用。</p>
+<p>对于仅 tailnet 设置：</p>
+<ul>
+<li class="">在 <code>~/.clawdbot/moltbot.json</code> 中设置 <code>gateway.bind: &quot;tailnet&quot;</code>。</li>
+<li class="">重启网关（或重启 macOS 菜单栏应用）。</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="什么进行广播">什么进行广播<a href="#什么进行广播" class="hash-link" aria-label="什么进行广播的直接链接" title="什么进行广播的直接链接" translate="no">​</a></h2>
+<p>只有网关广播 <code>_moltbot-gw._tcp</code>。</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="服务类型">服务类型<a href="#服务类型" class="hash-link" aria-label="服务类型的直接链接" title="服务类型的直接链接" translate="no">​</a></h2>
+<ul>
+<li class=""><code>_moltbot-gw._tcp</code> — 网关传输信标（由 macOS/iOS/Android 节点使用）。</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="txt-键非秘密提示">TXT 键（非秘密提示）<a href="#txt-键非秘密提示" class="hash-link" aria-label="TXT 键（非秘密提示）的直接链接" title="TXT 键（非秘密提示）的直接链接" translate="no">​</a></h2>
+<p>网关广播小型非秘密提示以使 UI 流程更方便：</p>
+<ul>
+<li class=""><code>role=gateway</code></li>
+<li class=""><code>displayName=&lt;友好名称&gt;</code></li>
+<li class=""><code>lanHost=&lt;主机名&gt;.local</code></li>
+<li class=""><code>gatewayPort=&lt;端口&gt;</code>（网关 WS + HTTP）</li>
+<li class=""><code>gatewayTls=1</code>（仅在启用 TLS 时）</li>
+<li class=""><code>gatewayTlsSha256=&lt;sha256&gt;</code>（仅在启用 TLS 且指纹可用时）</li>
+<li class=""><code>canvasPort=&lt;端口&gt;</code>（仅在启用画布主机时；默认 <code>18793</code>）</li>
+<li class=""><code>sshPort=&lt;端口&gt;</code>（未覆盖时默认为 22）</li>
+<li class=""><code>transport=gateway</code></li>
+<li class=""><code>cliPath=&lt;路径&gt;</code>（可选；可运行 <code>moltbot</code> 入口点的绝对路径）</li>
+<li class=""><code>tailnetDns=&lt;magicdns&gt;</code>（可用时的可选提示）</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="在-macos-上调试">在 macOS 上调试<a href="#在-macos-上调试" class="hash-link" aria-label="在 macOS 上调试的直接链接" title="在 macOS 上调试的直接链接" translate="no">​</a></h2>
+<p>有用的内置工具：</p>
+<ul>
+<li class="">浏览实例：
+<div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#D6DEEB;--prism-background-color:#001122"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#D6DEEB;background-color:#001122"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#D6DEEB"><span class="token plain">dns-sd -B _moltbot-gw._tcp local.</span><br></span></code></pre></div></div>
+</li>
+<li class="">解析一个实例（替换 <code>&lt;instance&gt;</code>）：
+<div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#D6DEEB;--prism-background-color:#001122"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#D6DEEB;background-color:#001122"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#D6DEEB"><span class="token plain">dns-sd -L &quot;&lt;instance&gt;&quot; _moltbot-gw._tcp local.</span><br></span></code></pre></div></div>
+</li>
+</ul>
+<p>如果浏览工作但解析失败，通常会遇到 LAN 策略或
+mDNS 解析器问题。</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="在网关日志中调试">在网关日志中调试<a href="#在网关日志中调试" class="hash-link" aria-label="在网关日志中调试的直接链接" title="在网关日志中调试的直接链接" translate="no">​</a></h2>
+<p>网关写入滚动日志文件（在启动时打印为
+<code>gateway log file: ...</code>）。查找 <code>bonjour:</code> 行，特别是：</p>
+<ul>
+<li class=""><code>bonjour: advertise failed ...</code></li>
+<li class=""><code>bonjour: ... name conflict resolved</code> / <code>hostname conflict resolved</code></li>
+<li class=""><code>bonjour: watchdog detected non-announced service ...</code></li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="在-ios-节点上调试">在 iOS 节点上调试<a href="#在-ios-节点上调试" class="hash-link" aria-label="在 iOS 节点上调试的直接链接" title="在 iOS 节点上调试的直接链接" translate="no">​</a></h2>
+<p>iOS 节点使用 <code>NWBrowser</code> 来发现 <code>_moltbot-gw._tcp</code>。</p>
+<p>要捕获日志：</p>
+<ul>
+<li class="">设置 → 网关 → 高级 → <strong>发现调试日志</strong></li>
+<li class="">设置 → 网关 → 高级 → <strong>发现日志</strong> → 复现 → <strong>复制</strong></li>
+</ul>
+<p>日志包括浏览器状态转换和结果集更改。</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="常见故障模式">常见故障模式<a href="#常见故障模式" class="hash-link" aria-label="常见故障模式的直接链接" title="常见故障模式的直接链接" translate="no">​</a></h2>
+<ul>
+<li class=""><strong>Bonjour 不跨网络</strong>：使用 Tailnet 或 SSH。</li>
+<li class=""><strong>多播被阻止</strong>：某些 Wi‑Fi 网络禁用 mDNS。</li>
+<li class=""><strong>睡眠 / 接口波动</strong>：macOS 可能暂时丢弃 mDNS 结果；重试。</li>
+<li class=""><strong>浏览工作但解析失败</strong>：保持机器名称简单（避免表情符号或
+标点符号），然后重启网关。服务实例名称来自
+主机名，因此过于复杂的名称可能会混淆某些解析器。</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="转义的实例名称-032">转义的实例名称 (<code>\032</code>)<a href="#转义的实例名称-032" class="hash-link" aria-label="转义的实例名称-032的直接链接" title="转义的实例名称-032的直接链接" translate="no">​</a></h2>
+<p>Bonjour/DNS‑SD 经常将服务实例名称中的字节转义为十进制 <code>\DDD</code>
+序列（例如空格变成 <code>\032</code>）。</p>
+<ul>
+<li class="">这在协议级别是正常的。</li>
+<li class="">UI 应解码以显示（iOS 使用 <code>BonjourEscapes.decode</code>）。</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="禁用--配置">禁用 / 配置<a href="#禁用--配置" class="hash-link" aria-label="禁用 / 配置的直接链接" title="禁用 / 配置的直接链接" translate="no">​</a></h2>
+<ul>
+<li class=""><code>CLAWDBOT_DISABLE_BONJOUR=1</code> 禁用广播。</li>
+<li class=""><code>~/.clawdbot/moltbot.json</code> 中的 <code>gateway.bind</code> 控制网关绑定模式。</li>
+<li class=""><code>CLAWDBOT_SSH_PORT</code> 覆盖在 TXT 中广播的 SSH 端口。</li>
+<li class=""><code>CLAWDBOT_TAILNET_DNS</code> 在 TXT 中发布 MagicDNS 提示。</li>
+<li class=""><code>CLAWDBOT_CLI_PATH</code> 覆盖广播的 CLI 路径。</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="相关文档">相关文档<a href="#相关文档" class="hash-link" aria-label="相关文档的直接链接" title="相关文档的直接链接" translate="no">​</a></h2>
+<ul>
+<li class="">发现策略和传输选择：<a class="" href="/moltbot-doc/gateway/discovery">发现</a></li>
+<li class="">节点配对 + 批准：<a class="" href="/moltbot-doc/gateway/pairing">网关配对</a></li>
+</ul></div></article><nav class="docusaurus-mt-lg pagination-nav" aria-label="文件选项卡"></nav></div></div><div class="col col--3"><div class="tocWrapper_xKoj"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#通过-tailscale-的广域-bonjour单播-dnssd" class="table-of-contents__link toc-highlight">通过 Tailscale 的广域 Bonjour（单播 DNS‑SD）</a><ul><li><a href="#网关配置推荐" class="table-of-contents__link toc-highlight">网关配置（推荐）</a></li><li><a href="#一次性-dns-服务器设置网关主机" class="table-of-contents__link toc-highlight">一次性 DNS 服务器设置（网关主机）</a></li><li><a href="#tailscale-dns-设置" class="table-of-contents__link toc-highlight">Tailscale DNS 设置</a></li><li><a href="#网关监听器安全性推荐" class="table-of-contents__link toc-highlight">网关监听器安全性（推荐）</a></li></ul></li><li><a href="#什么进行广播" class="table-of-contents__link toc-highlight">什么进行广播</a></li><li><a href="#服务类型" class="table-of-contents__link toc-highlight">服务类型</a></li><li><a href="#txt-键非秘密提示" class="table-of-contents__link toc-highlight">TXT 键（非秘密提示）</a></li><li><a href="#在-macos-上调试" class="table-of-contents__link toc-highlight">在 macOS 上调试</a></li><li><a href="#在网关日志中调试" class="table-of-contents__link toc-highlight">在网关日志中调试</a></li><li><a href="#在-ios-节点上调试" class="table-of-contents__link toc-highlight">在 iOS 节点上调试</a></li><li><a href="#常见故障模式" class="table-of-contents__link toc-highlight">常见故障模式</a></li><li><a href="#转义的实例名称-032" class="table-of-contents__link toc-highlight">转义的实例名称 (<code>\032</code>)</a></li><li><a href="#禁用--配置" class="table-of-contents__link toc-highlight">禁用 / 配置</a></li><li><a href="#相关文档" class="table-of-contents__link toc-highlight">相关文档</a></li></ul></div><div class="tocFooter_Fu2z"><div class="themeGroup_RzWV" role="group" aria-label="Theme"><button class="themeBtn_tGr6" aria-label="Light theme" title="Light"><svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor" aria-hidden="true"><path d="M12 18a6 6 0 1 1 0-12 6 6 0 0 1 0 12zm0-2a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM11 1h2v3h-2V1zm0 19h2v3h-2v-3zM3.515 4.929l1.414-1.414L7.05 5.636 5.636 7.05 3.515 4.93zM16.95 18.364l1.414-1.414 2.121 2.121-1.414 1.414-2.121-2.121zm2.121-14.85l1.414 1.415-2.121 2.121-1.414-1.414 2.121-2.121zM5.636 16.95l1.414 1.414-2.121 2.121-1.414-1.414 2.121-2.121zM23 11v2h-3v-2h3zM4 11v2H1v-2h3z"></path></svg></button><button class="themeBtn_tGr6 themeBtnActive_A6tm" aria-label="Dark theme" title="Dark"><svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor" aria-hidden="true"><path d="M11.38 2.019a7.5 7.5 0 1 0 10.6 10.6C21.83 17.963 17.315 22 12.002 22 6.477 22 2 17.523 2 12c0-5.314 4.038-9.827 9.38-10.28z"></path></svg></button></div></div></div></div></div></div></main></div></div></div><footer class="theme-layout-footer footer footer--dark"><div class="container container-fluid"><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2026 Moltbot Docs.</div></div></div></footer></div>
+</body>
+</html>

@@ -1,0 +1,242 @@
+<!doctype html>
+<html lang="zh" dir="ltr" class="docs-wrapper plugin-docs plugin-id-default docs-version-current docs-doc-page docs-doc-id-platforms/oracle" data-has-hydrated="false">
+<head>
+<meta charset="UTF-8">
+<meta name="generator" content="Docusaurus v3.9.2">
+<title data-rh="true">在 Oracle Cloud 上运行 Moltbot (OCI) | Moltbot Docs</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:url" content="https://luuman.github.io/moltbot-doc/docs/platforms/oracle"><meta data-rh="true" property="og:locale" content="zh"><meta data-rh="true" name="docusaurus_locale" content="zh"><meta data-rh="true" name="docsearch:language" content="zh"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="在 Oracle Cloud 上运行 Moltbot (OCI) | Moltbot Docs"><meta data-rh="true" name="description" content="目标"><meta data-rh="true" property="og:description" content="目标"><link data-rh="true" rel="icon" href="/moltbot-doc/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://luuman.github.io/moltbot-doc/docs/platforms/oracle"><link data-rh="true" rel="alternate" href="https://luuman.github.io/moltbot-doc/docs/platforms/oracle" hreflang="zh"><link data-rh="true" rel="alternate" href="https://luuman.github.io/moltbot-doc/docs/platforms/oracle" hreflang="x-default"><link rel="alternate" type="application/rss+xml" href="/moltbot-doc/blog/rss.xml" title="Moltbot Docs RSS Feed">
+<link rel="alternate" type="application/atom+xml" href="/moltbot-doc/blog/atom.xml" title="Moltbot Docs Atom Feed"><link rel="stylesheet" href="/moltbot-doc/assets/css/styles.484b4c98.css">
+<script src="/moltbot-doc/assets/js/runtime~main.6cf495cf.js" defer="defer"></script>
+<script src="/moltbot-doc/assets/js/main.f9205183.js" defer="defer"></script>
+</head>
+<body class="navigation-with-keyboard">
+<svg style="display: none;"><defs>
+<symbol id="theme-svg-external-link" viewBox="0 0 24 24"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"/></symbol>
+</defs></svg>
+<script>!function(){var t=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme")}catch(t){}}();document.documentElement.setAttribute("data-theme",t||"dark"),document.documentElement.setAttribute("data-theme-choice",t||"dark")}(),function(){try{const c=new URLSearchParams(window.location.search).entries();for(var[t,e]of c)if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id="__docusaurus"><div role="region" aria-label="跳到主要内容"><a class="skipToContent_fXgn" href="#__docusaurus_skipToContent_fallback">跳到主要内容</a></div><nav class="navbar navbar--fixed-top navbar_MONK" role="navigation" aria-label="Main"><div class="navbarInner_ASTH"><div class="navbarLeft_pUmY"><button aria-label="切换导航栏" aria-expanded="false" class="navbar__toggle clean-btn" type="button"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg></button><a class="brand_SXL9" href="/moltbot-doc/"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="24" height="24" rx="6" fill="var(--ifm-color-primary)"></rect><path d="M7 8.5h10M7 12h7M7 15.5h10" stroke="white" stroke-width="1.8" stroke-linecap="round"></path></svg><span class="brandTitle_XbyU">Moltbot</span></a><div class="dropdown_GrgZ"><button class="dropdownToggle_Nf_z">全部站点<svg class="dropdownArrow_Eka8" viewBox="0 0 12 12" fill="none"><path d="M2 4l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg></button><ul class="dropdownMenu_zsxH"><li><a href="https://luuman.github.io/docs-workspace/docs" class="dropdownMenuItem_VBaP">Workspace</a></li><li><a href="https://luuman.github.io/claude-doc/docs" class="dropdownMenuItem_VBaP">Claude</a></li><li><a href="https://luuman.github.io/electron-doc/docs" class="dropdownMenuItem_VBaP">Electron</a></li><li><a href="https://luuman.github.io/tauri-doc/docs" class="dropdownMenuItem_VBaP">Tauri</a></li><li><a href="https://luuman.github.io/matrx-doc/docs" class="dropdownMenuItem_VBaP">Matrx</a></li><li><a href="https://luuman.github.io/brainboard-doc/docs" class="dropdownMenuItem_VBaP">Brainboard</a></li><li><a href="https://luuman.github.io/synology-doc/docs" class="dropdownMenuItem_VBaP">Synology</a></li><li><a href="https://luuman.github.io/codex-doc/docs" class="dropdownMenuItem_VBaP">Codex</a></li><li><a href="https://luuman.github.io/ai-doc/docs" class="dropdownMenuItem_VBaP">AI</a></li></ul></div></div><div class="navbarCenter_Zdr3"><div class="root_OF3s"><span class="icon_UcOK" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor" width="15" height="15"><path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"></path></svg></span><div class="slot__FGx"><div class="navbar__search searchBarContainer_NW3z" dir="ltr"><input placeholder="搜索" aria-label="Search" class="navbar__search-input searchInput_YFbd" value=""><div class="loadingRing_RJI3 searchBarLoadingRing_YnHq"><div></div><div></div><div></div><div></div></div></div></div></div></div><div class="navbarRight_q16u"><a class="navLink_RnnM" href="/moltbot-doc/docs">Docs</a><a class="navLink_RnnM" href="/moltbot-doc/blog">Blog</a><button class="themeToggle_zD_x" aria-label="Switch to light theme" title="Light"><svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M12 18a6 6 0 1 1 0-12 6 6 0 0 1 0 12zm0-2a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM11 1h2v3h-2V1zm0 19h2v3h-2v-3zM3.515 4.929l1.414-1.414L7.05 5.636 5.636 7.05 3.515 4.93zM16.95 18.364l1.414-1.414 2.121 2.121-1.414 1.414-2.121-2.121zm2.121-14.85l1.414 1.415-2.121 2.121-1.414-1.414 2.121-2.121zM5.636 16.95l1.414 1.414-2.121 2.121-1.414-1.414 2.121-2.121zM23 11v2h-3v-2h3zM4 11v2H1v-2h3z"></path></svg></button></div></div></nav><div id="__docusaurus_skipToContent_fallback" class="theme-layout-main main-wrapper mainWrapper_z2l0"><div class="docsWrapper_hBAB"><button aria-label="回到顶部" class="clean-btn theme-back-to-top-button backToTopButton_sjWU" type="button"></button><div class="docRoot_UBD9"><main class="docMainContainer_TBSr docMainContainerEnhanced_lQrH"><div class="container padding-top--md padding-bottom--lg"><div class="row"><div class="col docItemCol_VOVn"><div class="docItemContainer_Djhp"><article><div class="tocCollapsible_ETCw theme-doc-toc-mobile tocMobile_ITEo"><button type="button" class="clean-btn tocCollapsibleButton_TO0P">本页总览</button></div><div class="theme-doc-markdown markdown"><header><h1>在 Oracle Cloud 上运行 Moltbot (OCI)</h1></header>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="目标">目标<a href="#目标" class="hash-link" aria-label="目标的直接链接" title="目标的直接链接" translate="no">​</a></h2>
+<p>在 Oracle Cloud 的<strong>始终免费</strong>ARM 层上运行持久的 Moltbot 网关。</p>
+<p>Oracle 的免费层非常适合 Moltbot（特别是如果您已经有 OCI 账户），但它有一些权衡：</p>
+<ul>
+<li class="">ARM 架构（大多数东西都能工作，但有些二进制文件可能是仅 x86）</li>
+<li class="">容量和注册可能不稳定</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="成本比较-2026">成本比较 (2026)<a href="#成本比较-2026" class="hash-link" aria-label="成本比较 (2026)的直接链接" title="成本比较 (2026)的直接链接" translate="no">​</a></h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>提供商</th><th>计划</th><th>规格</th><th>价格/月</th><th>注释</th></tr></thead><tbody><tr><td>Oracle Cloud</td><td>始终免费 ARM</td><td>最多 4 个 OCPU，24GB RAM</td><td>$0</td><td>ARM，容量有限</td></tr><tr><td>Hetzner</td><td>CX22</td><td>2 vCPU，4GB RAM</td><td>~ $4</td><td>最便宜的付费选项</td></tr><tr><td>DigitalOcean</td><td>基础版</td><td>1 vCPU，1GB RAM</td><td>$6</td><td>简单 UI，好文档</td></tr><tr><td>Vultr</td><td>云计算</td><td>1 vCPU，1GB RAM</td><td>$6</td><td>许多地点</td></tr><tr><td>Linode</td><td>Nanode</td><td>1 vCPU，1GB RAM</td><td>$5</td><td>现在是 Akamai 的一部分</td></tr></tbody></table>
+<hr>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="先决条件">先决条件<a href="#先决条件" class="hash-link" aria-label="先决条件的直接链接" title="先决条件的直接链接" translate="no">​</a></h2>
+<ul>
+<li class="">Oracle Cloud 账户 (<a href="https://www.oracle.com/cloud/free/" target="_blank" rel="noopener noreferrer" class="">注册</a>) — 如果遇到问题请参见 <a href="https://gist.github.com/rssnyder/51e3cfedd730e7dd5f4a816143b25dbd" target="_blank" rel="noopener noreferrer" class="">社区注册指南</a></li>
+<li class="">Tailscale 账户（免费在 <a href="https://tailscale.com" target="_blank" rel="noopener noreferrer" class="">tailscale.com</a>)</li>
+<li class="">~30 分钟</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="1-创建-oci-实例">1) 创建 OCI 实例<a href="#1-创建-oci-实例" class="hash-link" aria-label="1) 创建 OCI 实例的直接链接" title="1) 创建 OCI 实例的直接链接" translate="no">​</a></h2>
+<ol>
+<li class="">登录 <a href="https://cloud.oracle.com/" target="_blank" rel="noopener noreferrer" class="">Oracle Cloud 控制台</a></li>
+<li class="">导航到 <strong>Compute → Instances → Create Instance</strong></li>
+<li class="">配置：
+<ul>
+<li class=""><strong>名称：</strong> <code>moltbot</code></li>
+<li class=""><strong>镜像：</strong> Ubuntu 24.04 (aarch64)</li>
+<li class=""><strong>形状：</strong> <code>VM.Standard.A1.Flex</code> (Ampere ARM)</li>
+<li class=""><strong>OCPUs：</strong> 2 (或最多 4)</li>
+<li class=""><strong>内存：</strong> 12 GB (或最多 24 GB)</li>
+<li class=""><strong>启动卷：</strong> 50 GB (最多 200 GB 免费)</li>
+<li class=""><strong>SSH 密钥：</strong> 添加您的公钥</li>
+</ul>
+</li>
+<li class="">点击 <strong>创建</strong></li>
+<li class="">记下公共 IP 地址</li>
+</ol>
+<p><strong>提示：</strong> 如果实例创建失败显示&quot;容量不足&quot;，请尝试不同的可用性域或稍后重试。免费层级容量有限。</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="2-连接和更新">2) 连接和更新<a href="#2-连接和更新" class="hash-link" aria-label="2) 连接和更新的直接链接" title="2) 连接和更新的直接链接" translate="no">​</a></h2>
+<div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#D6DEEB;--prism-background-color:#001122"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#D6DEEB;background-color:#001122"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#D6DEEB"><span class="token plain"># 通过公共 IP 连接</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">ssh ubuntu@YOUR_PUBLIC_IP</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain"># 更新系统</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">sudo apt update &amp;&amp; sudo apt upgrade -y</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">sudo apt install -y build-essential</span><br></span></code></pre></div></div>
+<p><strong>注意：</strong> <code>build-essential</code> 对于某些依赖项的 ARM 编译是必需的。</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="3-配置用户和主机名">3) 配置用户和主机名<a href="#3-配置用户和主机名" class="hash-link" aria-label="3) 配置用户和主机名的直接链接" title="3) 配置用户和主机名的直接链接" translate="no">​</a></h2>
+<div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#D6DEEB;--prism-background-color:#001122"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#D6DEEB;background-color:#001122"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#D6DEEB"><span class="token plain"># 设置主机名</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">sudo hostnamectl set-hostname moltbot</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain"># 为 ubuntu 用户设置密码</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">sudo passwd ubuntu</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain"># 启用持久化（在注销后保持用户服务运行）</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">sudo loginctl enable-linger ubuntu</span><br></span></code></pre></div></div>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="4-安装-tailscale">4) 安装 Tailscale<a href="#4-安装-tailscale" class="hash-link" aria-label="4) 安装 Tailscale的直接链接" title="4) 安装 Tailscale的直接链接" translate="no">​</a></h2>
+<div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#D6DEEB;--prism-background-color:#001122"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#D6DEEB;background-color:#001122"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#D6DEEB"><span class="token plain">curl -fsSL https://tailscale.com/install.sh | sh</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">sudo tailscale up --ssh --hostname=moltbot</span><br></span></code></pre></div></div>
+<p>这启用了 Tailscale SSH，因此您可以从您的尾网上的任何设备通过 <code>ssh moltbot</code> 连接——不需要公共 IP。</p>
+<p>验证：</p>
+<div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#D6DEEB;--prism-background-color:#001122"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#D6DEEB;background-color:#001122"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#D6DEEB"><span class="token plain">tailscale status</span><br></span></code></pre></div></div>
+<p><strong>从现在开始，通过 Tailscale 连接：</strong> <code>ssh ubuntu@moltbot</code> (或使用 Tailscale IP)。</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="5-安装-moltbot">5) 安装 Moltbot<a href="#5-安装-moltbot" class="hash-link" aria-label="5) 安装 Moltbot的直接链接" title="5) 安装 Moltbot的直接链接" translate="no">​</a></h2>
+<div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#D6DEEB;--prism-background-color:#001122"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#D6DEEB;background-color:#001122"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#D6DEEB"><span class="token plain">curl -fsSL https://molt.bot/install.sh | bash</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">source ~/.bashrc</span><br></span></code></pre></div></div>
+<p>当提示&quot;How do you want to hatch your bot?&quot;时，选择**&quot;稍后再做&quot;**。</p>
+<blockquote>
+<p>注意：如果您遇到 ARM 原生构建问题，请在使用 Homebrew 之前先从系统包开始（例如 <code>sudo apt install -y build-essential</code>)。</p>
+</blockquote>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="6-配置网关回环--令牌认证并启用-tailscale-serve">6) 配置网关（回环 + 令牌认证）并启用 Tailscale Serve<a href="#6-配置网关回环--令牌认证并启用-tailscale-serve" class="hash-link" aria-label="6) 配置网关（回环 + 令牌认证）并启用 Tailscale Serve的直接链接" title="6) 配置网关（回环 + 令牌认证）并启用 Tailscale Serve的直接链接" translate="no">​</a></h2>
+<p>默认使用令牌认证。它很可靠，避免了需要任何&quot;不安全认证&quot;控制界面标志。</p>
+<div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#D6DEEB;--prism-background-color:#001122"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#D6DEEB;background-color:#001122"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#D6DEEB"><span class="token plain"># 在 VM 上保持网关私有</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">moltbot config set gateway.bind loopback</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain"># 为网关 + 控制界面要求认证</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">moltbot config set gateway.auth.mode token</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">moltbot doctor --generate-gateway-token</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain"># 通过 Tailscale Serve 暴露（HTTPS + 尾网访问）</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">moltbot config set gateway.tailscale.mode serve</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">moltbot config set gateway.trustedProxies &#x27;[&quot;127.0.0.1&quot;]&#x27;</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">systemctl --user restart moltbot-gateway</span><br></span></code></pre></div></div>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="7-验证">7) 验证<a href="#7-验证" class="hash-link" aria-label="7) 验证的直接链接" title="7) 验证的直接链接" translate="no">​</a></h2>
+<div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#D6DEEB;--prism-background-color:#001122"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#D6DEEB;background-color:#001122"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#D6DEEB"><span class="token plain"># 检查版本</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">moltbot --version</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain"># 检查守护进程状态</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">systemctl --user status moltbot-gateway</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain"># 检查 Tailscale Serve</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">tailscale serve status</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain"># 测试本地响应</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">curl http://localhost:18789</span><br></span></code></pre></div></div>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="8-锁定-vcn-安全">8) 锁定 VCN 安全<a href="#8-锁定-vcn-安全" class="hash-link" aria-label="8) 锁定 VCN 安全的直接链接" title="8) 锁定 VCN 安全的直接链接" translate="no">​</a></h2>
+<p>现在一切正常工作，锁定 VCN 以阻止除 Tailscale 以外的所有流量。OCI 的虚拟云网络在网络边缘充当防火墙——流量在到达您的实例之前被阻止。</p>
+<ol>
+<li class="">在 OCI 控制台中转到 <strong>Networking → Virtual Cloud Networks</strong></li>
+<li class="">点击您的 VCN → <strong>Security Lists</strong> → 默认安全列表</li>
+<li class=""><strong>删除</strong> 除以下之外的所有入口规则：
+<ul>
+<li class=""><code>0.0.0.0/0 UDP 41641</code> (Tailscale)</li>
+</ul>
+</li>
+<li class="">保持默认出口规则（允许所有出站）</li>
+</ol>
+<p>这在网络边缘阻止端口 22 上的 SSH、HTTP、HTTPS 和所有其他内容。从现在开始，您只能通过 Tailscale 连接。</p>
+<hr>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="访问控制界面">访问控制界面<a href="#访问控制界面" class="hash-link" aria-label="访问控制界面的直接链接" title="访问控制界面的直接链接" translate="no">​</a></h2>
+<p>从您的 Tailscale 网络上的任何设备：</p>
+<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#D6DEEB;--prism-background-color:#001122"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#D6DEEB;background-color:#001122"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#D6DEEB"><span class="token plain">https://moltbot.&lt;tailnet-name&gt;.ts.net/</span><br></span></code></pre></div></div>
+<p>将 <code>&lt;tailnet-name&gt;</code> 替换为您的尾网名称（在 <code>tailscale status</code> 中可见）。</p>
+<p>不需要 SSH 隧道。Tailscale 提供：</p>
+<ul>
+<li class="">HTTPS 加密（自动证书）</li>
+<li class="">通过 Tailscale 身份进行身份验证</li>
+<li class="">从您的尾网上的任何设备访问（笔记本电脑、手机等）</li>
+</ul>
+<hr>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="安全vcn--tailscale推荐基线">安全：VCN + Tailscale（推荐基线）<a href="#安全vcn--tailscale推荐基线" class="hash-link" aria-label="安全：VCN + Tailscale（推荐基线）的直接链接" title="安全：VCN + Tailscale（推荐基线）的直接链接" translate="no">​</a></h2>
+<p>在 VCN 锁定（仅开放 UDP 41641）且网关绑定到回环的情况下，您获得了强大的深度防御：公共流量在网络边缘被阻止，管理员访问通过您的尾网发生。</p>
+<p>这种设置通常消除了<em>需要</em>额外的基于主机的防火墙规则来纯粹阻止互联网范围的 SSH 暴力破解的需求——但您仍应保持操作系统更新，运行 <code>moltbot security audit</code>，并验证您没有意外地在公共接口上监听。</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="已经受到保护的内容">已经受到保护的内容<a href="#已经受到保护的内容" class="hash-link" aria-label="已经受到保护的内容的直接链接" title="已经受到保护的内容的直接链接" translate="no">​</a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>传统步骤</th><th>是否需要?</th><th>原因</th></tr></thead><tbody><tr><td>UFW 防火墙</td><td>否</td><td>VCN 在流量到达实例之前阻止</td></tr><tr><td>fail2ban</td><td>否</td><td>如果端口 22 在 VCN 被阻止，则没有暴力破解</td></tr><tr><td>sshd 硬化</td><td>否</td><td>Tailscale SSH 不使用 sshd</td></tr><tr><td>禁用 root 登录</td><td>否</td><td>Tailscale 使用 Tailscale 身份，而非系统用户</td></tr><tr><td>仅 SSH 密钥认证</td><td>否</td><td>Tailscale 通过您的尾网进行身份验证</td></tr><tr><td>IPv6 硬化</td><td>通常不需要</td><td>取决于您的 VCN/子网设置；验证实际分配/暴露的内容</td></tr></tbody></table>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="仍推荐">仍推荐<a href="#仍推荐" class="hash-link" aria-label="仍推荐的直接链接" title="仍推荐的直接链接" translate="no">​</a></h3>
+<ul>
+<li class=""><strong>凭证权限：</strong> <code>chmod 700 ~/.clawdbot</code></li>
+<li class=""><strong>安全审计：</strong> <code>moltbot security audit</code></li>
+<li class=""><strong>系统更新：</strong> 定期 <code>sudo apt update &amp;&amp; sudo apt upgrade</code></li>
+<li class=""><strong>监控 Tailscale：</strong> 在 <a href="https://login.tailscale.com/admin" target="_blank" rel="noopener noreferrer" class="">Tailscale 管理控制台</a> 中审查设备</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="验证安全态势">验证安全态势<a href="#验证安全态势" class="hash-link" aria-label="验证安全态势的直接链接" title="验证安全态势的直接链接" translate="no">​</a></h3>
+<div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#D6DEEB;--prism-background-color:#001122"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#D6DEEB;background-color:#001122"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#D6DEEB"><span class="token plain"># 确认没有公共端口监听</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">sudo ss -tlnp | grep -v &#x27;127.0.0.1\|::1&#x27;</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain"># 验证 Tailscale SSH 激活</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">tailscale status | grep -q &#x27;offers: ssh&#x27; &amp;&amp; echo &quot;Tailscale SSH active&quot;</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain"># 可选：完全禁用 sshd</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">sudo systemctl disable --now ssh</span><br></span></code></pre></div></div>
+<hr>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="后备ssh-隧道">后备：SSH 隧道<a href="#后备ssh-隧道" class="hash-link" aria-label="后备：SSH 隧道的直接链接" title="后备：SSH 隧道的直接链接" translate="no">​</a></h2>
+<p>如果 Tailscale Serve 不工作，请使用 SSH 隧道：</p>
+<div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#D6DEEB;--prism-background-color:#001122"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#D6DEEB;background-color:#001122"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#D6DEEB"><span class="token plain"># 从您的本地机器（通过 Tailscale）</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">ssh -L 18789:127.0.0.1:18789 ubuntu@moltbot</span><br></span></code></pre></div></div>
+<p>然后打开 <code>http://localhost:18789</code>。</p>
+<hr>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="故障排除">故障排除<a href="#故障排除" class="hash-link" aria-label="故障排除的直接链接" title="故障排除的直接链接" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="实例创建失败容量不足">实例创建失败（&quot;容量不足&quot;）<a href="#实例创建失败容量不足" class="hash-link" aria-label="实例创建失败（&quot;容量不足&quot;）的直接链接" title="实例创建失败（&quot;容量不足&quot;）的直接链接" translate="no">​</a></h3>
+<p>免费层级 ARM 实例很受欢迎。尝试：</p>
+<ul>
+<li class="">不同的可用性域</li>
+<li class="">在非高峰时段重试（清晨）</li>
+<li class="">选择形状时使用&quot;始终免费&quot;过滤器</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="tailscale-无法连接">Tailscale 无法连接<a href="#tailscale-无法连接" class="hash-link" aria-label="Tailscale 无法连接的直接链接" title="Tailscale 无法连接的直接链接" translate="no">​</a></h3>
+<div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#D6DEEB;--prism-background-color:#001122"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#D6DEEB;background-color:#001122"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#D6DEEB"><span class="token plain"># 检查状态</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">sudo tailscale status</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain"># 重新认证</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">sudo tailscale up --ssh --hostname=moltbot --reset</span><br></span></code></pre></div></div>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="网关无法启动">网关无法启动<a href="#网关无法启动" class="hash-link" aria-label="网关无法启动的直接链接" title="网关无法启动的直接链接" translate="no">​</a></h3>
+<div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#D6DEEB;--prism-background-color:#001122"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#D6DEEB;background-color:#001122"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#D6DEEB"><span class="token plain">moltbot gateway status</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">moltbot doctor --non-interactive</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">journalctl --user -u moltbot-gateway -n 50</span><br></span></code></pre></div></div>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="无法访问控制界面">无法访问控制界面<a href="#无法访问控制界面" class="hash-link" aria-label="无法访问控制界面的直接链接" title="无法访问控制界面的直接链接" translate="no">​</a></h3>
+<div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#D6DEEB;--prism-background-color:#001122"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#D6DEEB;background-color:#001122"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#D6DEEB"><span class="token plain"># 验证 Tailscale Serve 正在运行</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">tailscale serve status</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain"># 检查网关正在监听</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">curl http://localhost:127.0.0.1:18789</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain"># 如需要重启</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">systemctl --user restart moltbot-gateway</span><br></span></code></pre></div></div>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="arm-二进制问题">ARM 二进制问题<a href="#arm-二进制问题" class="hash-link" aria-label="ARM 二进制问题的直接链接" title="ARM 二进制问题的直接链接" translate="no">​</a></h3>
+<p>某些工具可能没有 ARM 版本。检查：</p>
+<div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#D6DEEB;--prism-background-color:#001122"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#D6DEEB;background-color:#001122"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#D6DEEB"><span class="token plain">uname -m  # 应显示 aarch64</span><br></span></code></pre></div></div>
+<p>大多数 npm 包都可以正常工作。对于二进制文件，请查找 <code>linux-arm64</code> 或 <code>aarch64</code> 版本。</p>
+<hr>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="持久性">持久性<a href="#持久性" class="hash-link" aria-label="持久性的直接链接" title="持久性的直接链接" translate="no">​</a></h2>
+<p>所有状态存储在：</p>
+<ul>
+<li class=""><code>~/.clawdbot/</code> — 配置、凭据、会话数据</li>
+<li class=""><code>~/clawd/</code> — 工作区 (SOUL.md, memory, artifacts)</li>
+</ul>
+<p>定期备份：</p>
+<div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#D6DEEB;--prism-background-color:#001122"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#D6DEEB;background-color:#001122"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#D6DEEB"><span class="token plain">tar -czvf moltbot-backup.tar.gz ~/.clawdbot ~/clawd</span><br></span></code></pre></div></div>
+<hr>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="参见">参见<a href="#参见" class="hash-link" aria-label="参见的直接链接" title="参见的直接链接" translate="no">​</a></h2>
+<ul>
+<li class=""><a class="" href="/moltbot-doc/gateway/remote">网关远程访问</a> — 其他远程访问模式</li>
+<li class=""><a class="" href="/moltbot-doc/gateway/tailscale">Tailscale 集成</a> — 完整 Tailscale 文档</li>
+<li class=""><a class="" href="/moltbot-doc/gateway/configuration">网关配置</a> — 所有配置选项</li>
+<li class=""><a class="" href="/moltbot-doc/platforms/digitalocean">DigitalOcean 指南</a> — 如果您想要付费 + 更容易注册</li>
+<li class=""><a class="" href="/moltbot-doc/platforms/hetzner">Hetzner 指南</a> — 基于 Docker 的替代方案</li>
+</ul></div></article><nav class="docusaurus-mt-lg pagination-nav" aria-label="文件选项卡"></nav></div></div><div class="col col--3"><div class="tocWrapper_xKoj"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#目标" class="table-of-contents__link toc-highlight">目标</a></li><li><a href="#成本比较-2026" class="table-of-contents__link toc-highlight">成本比较 (2026)</a></li><li><a href="#先决条件" class="table-of-contents__link toc-highlight">先决条件</a></li><li><a href="#1-创建-oci-实例" class="table-of-contents__link toc-highlight">1) 创建 OCI 实例</a></li><li><a href="#2-连接和更新" class="table-of-contents__link toc-highlight">2) 连接和更新</a></li><li><a href="#3-配置用户和主机名" class="table-of-contents__link toc-highlight">3) 配置用户和主机名</a></li><li><a href="#4-安装-tailscale" class="table-of-contents__link toc-highlight">4) 安装 Tailscale</a></li><li><a href="#5-安装-moltbot" class="table-of-contents__link toc-highlight">5) 安装 Moltbot</a></li><li><a href="#6-配置网关回环--令牌认证并启用-tailscale-serve" class="table-of-contents__link toc-highlight">6) 配置网关（回环 + 令牌认证）并启用 Tailscale Serve</a></li><li><a href="#7-验证" class="table-of-contents__link toc-highlight">7) 验证</a></li><li><a href="#8-锁定-vcn-安全" class="table-of-contents__link toc-highlight">8) 锁定 VCN 安全</a></li><li><a href="#访问控制界面" class="table-of-contents__link toc-highlight">访问控制界面</a></li><li><a href="#安全vcn--tailscale推荐基线" class="table-of-contents__link toc-highlight">安全：VCN + Tailscale（推荐基线）</a><ul><li><a href="#已经受到保护的内容" class="table-of-contents__link toc-highlight">已经受到保护的内容</a></li><li><a href="#仍推荐" class="table-of-contents__link toc-highlight">仍推荐</a></li><li><a href="#验证安全态势" class="table-of-contents__link toc-highlight">验证安全态势</a></li></ul></li><li><a href="#后备ssh-隧道" class="table-of-contents__link toc-highlight">后备：SSH 隧道</a></li><li><a href="#故障排除" class="table-of-contents__link toc-highlight">故障排除</a><ul><li><a href="#实例创建失败容量不足" class="table-of-contents__link toc-highlight">实例创建失败（&quot;容量不足&quot;）</a></li><li><a href="#tailscale-无法连接" class="table-of-contents__link toc-highlight">Tailscale 无法连接</a></li><li><a href="#网关无法启动" class="table-of-contents__link toc-highlight">网关无法启动</a></li><li><a href="#无法访问控制界面" class="table-of-contents__link toc-highlight">无法访问控制界面</a></li><li><a href="#arm-二进制问题" class="table-of-contents__link toc-highlight">ARM 二进制问题</a></li></ul></li><li><a href="#持久性" class="table-of-contents__link toc-highlight">持久性</a></li><li><a href="#参见" class="table-of-contents__link toc-highlight">参见</a></li></ul></div><div class="tocFooter_Fu2z"><div class="themeGroup_RzWV" role="group" aria-label="Theme"><button class="themeBtn_tGr6" aria-label="Light theme" title="Light"><svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor" aria-hidden="true"><path d="M12 18a6 6 0 1 1 0-12 6 6 0 0 1 0 12zm0-2a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM11 1h2v3h-2V1zm0 19h2v3h-2v-3zM3.515 4.929l1.414-1.414L7.05 5.636 5.636 7.05 3.515 4.93zM16.95 18.364l1.414-1.414 2.121 2.121-1.414 1.414-2.121-2.121zm2.121-14.85l1.414 1.415-2.121 2.121-1.414-1.414 2.121-2.121zM5.636 16.95l1.414 1.414-2.121 2.121-1.414-1.414 2.121-2.121zM23 11v2h-3v-2h3zM4 11v2H1v-2h3z"></path></svg></button><button class="themeBtn_tGr6 themeBtnActive_A6tm" aria-label="Dark theme" title="Dark"><svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor" aria-hidden="true"><path d="M11.38 2.019a7.5 7.5 0 1 0 10.6 10.6C21.83 17.963 17.315 22 12.002 22 6.477 22 2 17.523 2 12c0-5.314 4.038-9.827 9.38-10.28z"></path></svg></button></div></div></div></div></div></div></main></div></div></div><footer class="theme-layout-footer footer footer--dark"><div class="container container-fluid"><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2026 Moltbot Docs.</div></div></div></footer></div>
+</body>
+</html>

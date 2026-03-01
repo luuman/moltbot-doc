@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="zh" dir="ltr" class="docs-wrapper plugin-docs plugin-id-default docs-version-current docs-doc-page docs-doc-id-nodes/camera" data-has-hydrated="false">
+<head>
+<meta charset="UTF-8">
+<meta name="generator" content="Docusaurus v3.9.2">
+<title data-rh="true">Camera capture (agent) | Moltbot Docs</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:url" content="https://luuman.github.io/moltbot-doc/docs/nodes/camera"><meta data-rh="true" property="og:locale" content="zh"><meta data-rh="true" name="docusaurus_locale" content="zh"><meta data-rh="true" name="docsearch:language" content="zh"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="Camera capture (agent) | Moltbot Docs"><meta data-rh="true" name="description" content="Moltbot supports camera capture for agent workflows:"><meta data-rh="true" property="og:description" content="Moltbot supports camera capture for agent workflows:"><link data-rh="true" rel="icon" href="/moltbot-doc/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://luuman.github.io/moltbot-doc/docs/nodes/camera"><link data-rh="true" rel="alternate" href="https://luuman.github.io/moltbot-doc/docs/nodes/camera" hreflang="zh"><link data-rh="true" rel="alternate" href="https://luuman.github.io/moltbot-doc/docs/nodes/camera" hreflang="x-default"><link rel="alternate" type="application/rss+xml" href="/moltbot-doc/blog/rss.xml" title="Moltbot Docs RSS Feed">
+<link rel="alternate" type="application/atom+xml" href="/moltbot-doc/blog/atom.xml" title="Moltbot Docs Atom Feed"><link rel="stylesheet" href="/moltbot-doc/assets/css/styles.484b4c98.css">
+<script src="/moltbot-doc/assets/js/runtime~main.6cf495cf.js" defer="defer"></script>
+<script src="/moltbot-doc/assets/js/main.f9205183.js" defer="defer"></script>
+</head>
+<body class="navigation-with-keyboard">
+<svg style="display: none;"><defs>
+<symbol id="theme-svg-external-link" viewBox="0 0 24 24"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"/></symbol>
+</defs></svg>
+<script>!function(){var t=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme")}catch(t){}}();document.documentElement.setAttribute("data-theme",t||"dark"),document.documentElement.setAttribute("data-theme-choice",t||"dark")}(),function(){try{const c=new URLSearchParams(window.location.search).entries();for(var[t,e]of c)if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id="__docusaurus"><div role="region" aria-label="跳到主要内容"><a class="skipToContent_fXgn" href="#__docusaurus_skipToContent_fallback">跳到主要内容</a></div><nav class="navbar navbar--fixed-top navbar_MONK" role="navigation" aria-label="Main"><div class="navbarInner_ASTH"><div class="navbarLeft_pUmY"><button aria-label="切换导航栏" aria-expanded="false" class="navbar__toggle clean-btn" type="button"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg></button><a class="brand_SXL9" href="/moltbot-doc/"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="24" height="24" rx="6" fill="var(--ifm-color-primary)"></rect><path d="M7 8.5h10M7 12h7M7 15.5h10" stroke="white" stroke-width="1.8" stroke-linecap="round"></path></svg><span class="brandTitle_XbyU">Moltbot</span></a><div class="dropdown_GrgZ"><button class="dropdownToggle_Nf_z">全部站点<svg class="dropdownArrow_Eka8" viewBox="0 0 12 12" fill="none"><path d="M2 4l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg></button><ul class="dropdownMenu_zsxH"><li><a href="https://luuman.github.io/docs-workspace/docs" class="dropdownMenuItem_VBaP">Workspace</a></li><li><a href="https://luuman.github.io/claude-doc/docs" class="dropdownMenuItem_VBaP">Claude</a></li><li><a href="https://luuman.github.io/electron-doc/docs" class="dropdownMenuItem_VBaP">Electron</a></li><li><a href="https://luuman.github.io/tauri-doc/docs" class="dropdownMenuItem_VBaP">Tauri</a></li><li><a href="https://luuman.github.io/matrx-doc/docs" class="dropdownMenuItem_VBaP">Matrx</a></li><li><a href="https://luuman.github.io/brainboard-doc/docs" class="dropdownMenuItem_VBaP">Brainboard</a></li><li><a href="https://luuman.github.io/synology-doc/docs" class="dropdownMenuItem_VBaP">Synology</a></li><li><a href="https://luuman.github.io/codex-doc/docs" class="dropdownMenuItem_VBaP">Codex</a></li><li><a href="https://luuman.github.io/ai-doc/docs" class="dropdownMenuItem_VBaP">AI</a></li></ul></div></div><div class="navbarCenter_Zdr3"><div class="root_OF3s"><span class="icon_UcOK" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor" width="15" height="15"><path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"></path></svg></span><div class="slot__FGx"><div class="navbar__search searchBarContainer_NW3z" dir="ltr"><input placeholder="搜索" aria-label="Search" class="navbar__search-input searchInput_YFbd" value=""><div class="loadingRing_RJI3 searchBarLoadingRing_YnHq"><div></div><div></div><div></div><div></div></div></div></div></div></div><div class="navbarRight_q16u"><a class="navLink_RnnM" href="/moltbot-doc/docs">Docs</a><a class="navLink_RnnM" href="/moltbot-doc/blog">Blog</a><button class="themeToggle_zD_x" aria-label="Switch to light theme" title="Light"><svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M12 18a6 6 0 1 1 0-12 6 6 0 0 1 0 12zm0-2a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM11 1h2v3h-2V1zm0 19h2v3h-2v-3zM3.515 4.929l1.414-1.414L7.05 5.636 5.636 7.05 3.515 4.93zM16.95 18.364l1.414-1.414 2.121 2.121-1.414 1.414-2.121-2.121zm2.121-14.85l1.414 1.415-2.121 2.121-1.414-1.414 2.121-2.121zM5.636 16.95l1.414 1.414-2.121 2.121-1.414-1.414 2.121-2.121zM23 11v2h-3v-2h3zM4 11v2H1v-2h3z"></path></svg></button></div></div></nav><div id="__docusaurus_skipToContent_fallback" class="theme-layout-main main-wrapper mainWrapper_z2l0"><div class="docsWrapper_hBAB"><button aria-label="回到顶部" class="clean-btn theme-back-to-top-button backToTopButton_sjWU" type="button"></button><div class="docRoot_UBD9"><main class="docMainContainer_TBSr docMainContainerEnhanced_lQrH"><div class="container padding-top--md padding-bottom--lg"><div class="row"><div class="col docItemCol_VOVn"><div class="docItemContainer_Djhp"><article><div class="tocCollapsible_ETCw theme-doc-toc-mobile tocMobile_ITEo"><button type="button" class="clean-btn tocCollapsibleButton_TO0P">本页总览</button></div><div class="theme-doc-markdown markdown"><header><h1>Camera capture (agent)</h1></header>
+<p>Moltbot supports <strong>camera capture</strong> for agent workflows:</p>
+<ul>
+<li class=""><strong>iOS node</strong> (paired via Gateway): capture a <strong>photo</strong> (<code>jpg</code>) or <strong>short video clip</strong> (<code>mp4</code>, with optional audio) via <code>node.invoke</code>.</li>
+<li class=""><strong>Android node</strong> (paired via Gateway): capture a <strong>photo</strong> (<code>jpg</code>) or <strong>short video clip</strong> (<code>mp4</code>, with optional audio) via <code>node.invoke</code>.</li>
+<li class=""><strong>macOS app</strong> (node via Gateway): capture a <strong>photo</strong> (<code>jpg</code>) or <strong>short video clip</strong> (<code>mp4</code>, with optional audio) via <code>node.invoke</code>.</li>
+</ul>
+<p>All camera access is gated behind <strong>user-controlled settings</strong>.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="ios-node">iOS node<a href="#ios-node" class="hash-link" aria-label="iOS node的直接链接" title="iOS node的直接链接" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="user-setting-default-on">User setting (default on)<a href="#user-setting-default-on" class="hash-link" aria-label="User setting (default on)的直接链接" title="User setting (default on)的直接链接" translate="no">​</a></h3>
+<ul>
+<li class="">iOS Settings tab → <strong>Camera</strong> → <strong>Allow Camera</strong> (<code>camera.enabled</code>)
+<ul>
+<li class="">Default: <strong>on</strong> (missing key is treated as enabled).</li>
+<li class="">When off: <code>camera.*</code> commands return <code>CAMERA_DISABLED</code>.</li>
+</ul>
+</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="commands-via-gateway-nodeinvoke">Commands (via Gateway <code>node.invoke</code>)<a href="#commands-via-gateway-nodeinvoke" class="hash-link" aria-label="commands-via-gateway-nodeinvoke的直接链接" title="commands-via-gateway-nodeinvoke的直接链接" translate="no">​</a></h3>
+<ul>
+<li class="">
+<p><code>camera.list</code></p>
+<ul>
+<li class="">Response payload:
+<ul>
+<li class=""><code>devices</code>: array of <code>{ id, name, position, deviceType }</code></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="">
+<p><code>camera.snap</code></p>
+<ul>
+<li class="">Params:
+<ul>
+<li class=""><code>facing</code>: <code>front|back</code> (default: <code>front</code>)</li>
+<li class=""><code>maxWidth</code>: number (optional; default <code>1600</code> on the iOS node)</li>
+<li class=""><code>quality</code>: <code>0..1</code> (optional; default <code>0.9</code>)</li>
+<li class=""><code>format</code>: currently <code>jpg</code></li>
+<li class=""><code>delayMs</code>: number (optional; default <code>0</code>)</li>
+<li class=""><code>deviceId</code>: string (optional; from <code>camera.list</code>)</li>
+</ul>
+</li>
+<li class="">Response payload:
+<ul>
+<li class=""><code>format: &quot;jpg&quot;</code></li>
+<li class=""><code>base64: &quot;&lt;...&gt;&quot;</code></li>
+<li class=""><code>width</code>, <code>height</code></li>
+</ul>
+</li>
+<li class="">Payload guard: photos are recompressed to keep the base64 payload under 5 MB.</li>
+</ul>
+</li>
+<li class="">
+<p><code>camera.clip</code></p>
+<ul>
+<li class="">Params:
+<ul>
+<li class=""><code>facing</code>: <code>front|back</code> (default: <code>front</code>)</li>
+<li class=""><code>durationMs</code>: number (default <code>3000</code>, clamped to a max of <code>60000</code>)</li>
+<li class=""><code>includeAudio</code>: boolean (default <code>true</code>)</li>
+<li class=""><code>format</code>: currently <code>mp4</code></li>
+<li class=""><code>deviceId</code>: string (optional; from <code>camera.list</code>)</li>
+</ul>
+</li>
+<li class="">Response payload:
+<ul>
+<li class=""><code>format: &quot;mp4&quot;</code></li>
+<li class=""><code>base64: &quot;&lt;...&gt;&quot;</code></li>
+<li class=""><code>durationMs</code></li>
+<li class=""><code>hasAudio</code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="foreground-requirement">Foreground requirement<a href="#foreground-requirement" class="hash-link" aria-label="Foreground requirement的直接链接" title="Foreground requirement的直接链接" translate="no">​</a></h3>
+<p>Like <code>canvas.*</code>, the iOS node only allows <code>camera.*</code> commands in the <strong>foreground</strong>. Background invocations return <code>NODE_BACKGROUND_UNAVAILABLE</code>.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="cli-helper-temp-files--media">CLI helper (temp files + MEDIA)<a href="#cli-helper-temp-files--media" class="hash-link" aria-label="CLI helper (temp files + MEDIA)的直接链接" title="CLI helper (temp files + MEDIA)的直接链接" translate="no">​</a></h3>
+<p>The easiest way to get attachments is via the CLI helper, which writes decoded media to a temp file and prints <code>MEDIA:&lt;path&gt;</code>.</p>
+<p>Examples:</p>
+<div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#D6DEEB;--prism-background-color:#001122"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#D6DEEB;background-color:#001122"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#D6DEEB"><span class="token plain">moltbot nodes camera snap --node &lt;id&gt;               # default: both front + back (2 MEDIA lines)</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">moltbot nodes camera snap --node &lt;id&gt; --facing front</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">moltbot nodes camera clip --node &lt;id&gt; --duration 3000</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">moltbot nodes camera clip --node &lt;id&gt; --no-audio</span><br></span></code></pre></div></div>
+<p>Notes:</p>
+<ul>
+<li class=""><code>nodes camera snap</code> defaults to <strong>both</strong> facings to give the agent both views.</li>
+<li class="">Output files are temporary (in the OS temp directory) unless you build your own wrapper.</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="android-node">Android node<a href="#android-node" class="hash-link" aria-label="Android node的直接链接" title="Android node的直接链接" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="user-setting-default-on-1">User setting (default on)<a href="#user-setting-default-on-1" class="hash-link" aria-label="User setting (default on)的直接链接" title="User setting (default on)的直接链接" translate="no">​</a></h3>
+<ul>
+<li class="">Android Settings sheet → <strong>Camera</strong> → <strong>Allow Camera</strong> (<code>camera.enabled</code>)
+<ul>
+<li class="">Default: <strong>on</strong> (missing key is treated as enabled).</li>
+<li class="">When off: <code>camera.*</code> commands return <code>CAMERA_DISABLED</code>.</li>
+</ul>
+</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="permissions">Permissions<a href="#permissions" class="hash-link" aria-label="Permissions的直接链接" title="Permissions的直接链接" translate="no">​</a></h3>
+<ul>
+<li class="">Android requires runtime permissions:
+<ul>
+<li class=""><code>CAMERA</code> for both <code>camera.snap</code> and <code>camera.clip</code>.</li>
+<li class=""><code>RECORD_AUDIO</code> for <code>camera.clip</code> when <code>includeAudio=true</code>.</li>
+</ul>
+</li>
+</ul>
+<p>If permissions are missing, the app will prompt when possible; if denied, <code>camera.*</code> requests fail with a
+<code>*_PERMISSION_REQUIRED</code> error.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="foreground-requirement-1">Foreground requirement<a href="#foreground-requirement-1" class="hash-link" aria-label="Foreground requirement的直接链接" title="Foreground requirement的直接链接" translate="no">​</a></h3>
+<p>Like <code>canvas.*</code>, the Android node only allows <code>camera.*</code> commands in the <strong>foreground</strong>. Background invocations return <code>NODE_BACKGROUND_UNAVAILABLE</code>.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="payload-guard">Payload guard<a href="#payload-guard" class="hash-link" aria-label="Payload guard的直接链接" title="Payload guard的直接链接" translate="no">​</a></h3>
+<p>Photos are recompressed to keep the base64 payload under 5 MB.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="macos-app">macOS app<a href="#macos-app" class="hash-link" aria-label="macOS app的直接链接" title="macOS app的直接链接" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="user-setting-default-off">User setting (default off)<a href="#user-setting-default-off" class="hash-link" aria-label="User setting (default off)的直接链接" title="User setting (default off)的直接链接" translate="no">​</a></h3>
+<p>The macOS companion app exposes a checkbox:</p>
+<ul>
+<li class=""><strong>Settings → General → Allow Camera</strong> (<code>moltbot.cameraEnabled</code>)
+<ul>
+<li class="">Default: <strong>off</strong></li>
+<li class="">When off: camera requests return “Camera disabled by user”.</li>
+</ul>
+</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="cli-helper-node-invoke">CLI helper (node invoke)<a href="#cli-helper-node-invoke" class="hash-link" aria-label="CLI helper (node invoke)的直接链接" title="CLI helper (node invoke)的直接链接" translate="no">​</a></h3>
+<p>Use the main <code>moltbot</code> CLI to invoke camera commands on the macOS node.</p>
+<p>Examples:</p>
+<div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#D6DEEB;--prism-background-color:#001122"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#D6DEEB;background-color:#001122"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#D6DEEB"><span class="token plain">moltbot nodes camera list --node &lt;id&gt;            # list camera ids</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">moltbot nodes camera snap --node &lt;id&gt;            # prints MEDIA:&lt;path&gt;</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">moltbot nodes camera snap --node &lt;id&gt; --max-width 1280</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">moltbot nodes camera snap --node &lt;id&gt; --delay-ms 2000</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">moltbot nodes camera snap --node &lt;id&gt; --device-id &lt;id&gt;</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">moltbot nodes camera clip --node &lt;id&gt; --duration 10s          # prints MEDIA:&lt;path&gt;</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">moltbot nodes camera clip --node &lt;id&gt; --duration-ms 3000      # prints MEDIA:&lt;path&gt; (legacy flag)</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">moltbot nodes camera clip --node &lt;id&gt; --device-id &lt;id&gt;</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">moltbot nodes camera clip --node &lt;id&gt; --no-audio</span><br></span></code></pre></div></div>
+<p>Notes:</p>
+<ul>
+<li class=""><code>moltbot nodes camera snap</code> defaults to <code>maxWidth=1600</code> unless overridden.</li>
+<li class="">On macOS, <code>camera.snap</code> waits <code>delayMs</code> (default 2000ms) after warm-up/exposure settle before capturing.</li>
+<li class="">Photo payloads are recompressed to keep base64 under 5 MB.</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="safety--practical-limits">Safety + practical limits<a href="#safety--practical-limits" class="hash-link" aria-label="Safety + practical limits的直接链接" title="Safety + practical limits的直接链接" translate="no">​</a></h2>
+<ul>
+<li class="">Camera and microphone access trigger the usual OS permission prompts (and require usage strings in Info.plist).</li>
+<li class="">Video clips are capped (currently <code>&lt;= 60s</code>) to avoid oversized node payloads (base64 overhead + message limits).</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="macos-screen-video-os-level">macOS screen video (OS-level)<a href="#macos-screen-video-os-level" class="hash-link" aria-label="macOS screen video (OS-level)的直接链接" title="macOS screen video (OS-level)的直接链接" translate="no">​</a></h2>
+<p>For <em>screen</em> video (not camera), use the macOS companion:</p>
+<div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#D6DEEB;--prism-background-color:#001122"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#D6DEEB;background-color:#001122"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#D6DEEB"><span class="token plain">moltbot nodes screen record --node &lt;id&gt; --duration 10s --fps 15   # prints MEDIA:&lt;path&gt;</span><br></span></code></pre></div></div>
+<p>Notes:</p>
+<ul>
+<li class="">Requires macOS <strong>Screen Recording</strong> permission (TCC).</li>
+</ul></div></article><nav class="docusaurus-mt-lg pagination-nav" aria-label="文件选项卡"></nav></div></div><div class="col col--3"><div class="tocWrapper_xKoj"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#ios-node" class="table-of-contents__link toc-highlight">iOS node</a><ul><li><a href="#user-setting-default-on" class="table-of-contents__link toc-highlight">User setting (default on)</a></li><li><a href="#commands-via-gateway-nodeinvoke" class="table-of-contents__link toc-highlight">Commands (via Gateway <code>node.invoke</code>)</a></li><li><a href="#foreground-requirement" class="table-of-contents__link toc-highlight">Foreground requirement</a></li><li><a href="#cli-helper-temp-files--media" class="table-of-contents__link toc-highlight">CLI helper (temp files + MEDIA)</a></li></ul></li><li><a href="#android-node" class="table-of-contents__link toc-highlight">Android node</a><ul><li><a href="#user-setting-default-on-1" class="table-of-contents__link toc-highlight">User setting (default on)</a></li><li><a href="#permissions" class="table-of-contents__link toc-highlight">Permissions</a></li><li><a href="#foreground-requirement-1" class="table-of-contents__link toc-highlight">Foreground requirement</a></li><li><a href="#payload-guard" class="table-of-contents__link toc-highlight">Payload guard</a></li></ul></li><li><a href="#macos-app" class="table-of-contents__link toc-highlight">macOS app</a><ul><li><a href="#user-setting-default-off" class="table-of-contents__link toc-highlight">User setting (default off)</a></li><li><a href="#cli-helper-node-invoke" class="table-of-contents__link toc-highlight">CLI helper (node invoke)</a></li></ul></li><li><a href="#safety--practical-limits" class="table-of-contents__link toc-highlight">Safety + practical limits</a></li><li><a href="#macos-screen-video-os-level" class="table-of-contents__link toc-highlight">macOS screen video (OS-level)</a></li></ul></div><div class="tocFooter_Fu2z"><div class="themeGroup_RzWV" role="group" aria-label="Theme"><button class="themeBtn_tGr6" aria-label="Light theme" title="Light"><svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor" aria-hidden="true"><path d="M12 18a6 6 0 1 1 0-12 6 6 0 0 1 0 12zm0-2a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM11 1h2v3h-2V1zm0 19h2v3h-2v-3zM3.515 4.929l1.414-1.414L7.05 5.636 5.636 7.05 3.515 4.93zM16.95 18.364l1.414-1.414 2.121 2.121-1.414 1.414-2.121-2.121zm2.121-14.85l1.414 1.415-2.121 2.121-1.414-1.414 2.121-2.121zM5.636 16.95l1.414 1.414-2.121 2.121-1.414-1.414 2.121-2.121zM23 11v2h-3v-2h3zM4 11v2H1v-2h3z"></path></svg></button><button class="themeBtn_tGr6 themeBtnActive_A6tm" aria-label="Dark theme" title="Dark"><svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor" aria-hidden="true"><path d="M11.38 2.019a7.5 7.5 0 1 0 10.6 10.6C21.83 17.963 17.315 22 12.002 22 6.477 22 2 17.523 2 12c0-5.314 4.038-9.827 9.38-10.28z"></path></svg></button></div></div></div></div></div></div></main></div></div></div><footer class="theme-layout-footer footer footer--dark"><div class="container container-fluid"><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2026 Moltbot Docs.</div></div></div></footer></div>
+</body>
+</html>

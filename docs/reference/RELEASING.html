@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="zh" dir="ltr" class="docs-wrapper plugin-docs plugin-id-default docs-version-current docs-doc-page docs-doc-id-reference/RELEASING" data-has-hydrated="false">
+<head>
+<meta charset="UTF-8">
+<meta name="generator" content="Docusaurus v3.9.2">
+<title data-rh="true">Release Checklist (npm + macOS) | Moltbot Docs</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:url" content="https://luuman.github.io/moltbot-doc/docs/reference/RELEASING"><meta data-rh="true" property="og:locale" content="zh"><meta data-rh="true" name="docusaurus_locale" content="zh"><meta data-rh="true" name="docsearch:language" content="zh"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="Release Checklist (npm + macOS) | Moltbot Docs"><meta data-rh="true" name="description" content="Use pnpm (Node 22+) from the repo root. Keep the working tree clean before tagging/publishing."><meta data-rh="true" property="og:description" content="Use pnpm (Node 22+) from the repo root. Keep the working tree clean before tagging/publishing."><link data-rh="true" rel="icon" href="/moltbot-doc/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://luuman.github.io/moltbot-doc/docs/reference/RELEASING"><link data-rh="true" rel="alternate" href="https://luuman.github.io/moltbot-doc/docs/reference/RELEASING" hreflang="zh"><link data-rh="true" rel="alternate" href="https://luuman.github.io/moltbot-doc/docs/reference/RELEASING" hreflang="x-default"><link rel="alternate" type="application/rss+xml" href="/moltbot-doc/blog/rss.xml" title="Moltbot Docs RSS Feed">
+<link rel="alternate" type="application/atom+xml" href="/moltbot-doc/blog/atom.xml" title="Moltbot Docs Atom Feed"><link rel="stylesheet" href="/moltbot-doc/assets/css/styles.484b4c98.css">
+<script src="/moltbot-doc/assets/js/runtime~main.6cf495cf.js" defer="defer"></script>
+<script src="/moltbot-doc/assets/js/main.f9205183.js" defer="defer"></script>
+</head>
+<body class="navigation-with-keyboard">
+<svg style="display: none;"><defs>
+<symbol id="theme-svg-external-link" viewBox="0 0 24 24"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"/></symbol>
+</defs></svg>
+<script>!function(){var t=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme")}catch(t){}}();document.documentElement.setAttribute("data-theme",t||"dark"),document.documentElement.setAttribute("data-theme-choice",t||"dark")}(),function(){try{const c=new URLSearchParams(window.location.search).entries();for(var[t,e]of c)if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id="__docusaurus"><div role="region" aria-label="跳到主要内容"><a class="skipToContent_fXgn" href="#__docusaurus_skipToContent_fallback">跳到主要内容</a></div><nav class="navbar navbar--fixed-top navbar_MONK" role="navigation" aria-label="Main"><div class="navbarInner_ASTH"><div class="navbarLeft_pUmY"><button aria-label="切换导航栏" aria-expanded="false" class="navbar__toggle clean-btn" type="button"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg></button><a class="brand_SXL9" href="/moltbot-doc/"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="24" height="24" rx="6" fill="var(--ifm-color-primary)"></rect><path d="M7 8.5h10M7 12h7M7 15.5h10" stroke="white" stroke-width="1.8" stroke-linecap="round"></path></svg><span class="brandTitle_XbyU">Moltbot</span></a><div class="dropdown_GrgZ"><button class="dropdownToggle_Nf_z">全部站点<svg class="dropdownArrow_Eka8" viewBox="0 0 12 12" fill="none"><path d="M2 4l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg></button><ul class="dropdownMenu_zsxH"><li><a href="https://luuman.github.io/docs-workspace/docs" class="dropdownMenuItem_VBaP">Workspace</a></li><li><a href="https://luuman.github.io/claude-doc/docs" class="dropdownMenuItem_VBaP">Claude</a></li><li><a href="https://luuman.github.io/electron-doc/docs" class="dropdownMenuItem_VBaP">Electron</a></li><li><a href="https://luuman.github.io/tauri-doc/docs" class="dropdownMenuItem_VBaP">Tauri</a></li><li><a href="https://luuman.github.io/matrx-doc/docs" class="dropdownMenuItem_VBaP">Matrx</a></li><li><a href="https://luuman.github.io/brainboard-doc/docs" class="dropdownMenuItem_VBaP">Brainboard</a></li><li><a href="https://luuman.github.io/synology-doc/docs" class="dropdownMenuItem_VBaP">Synology</a></li><li><a href="https://luuman.github.io/codex-doc/docs" class="dropdownMenuItem_VBaP">Codex</a></li><li><a href="https://luuman.github.io/ai-doc/docs" class="dropdownMenuItem_VBaP">AI</a></li></ul></div></div><div class="navbarCenter_Zdr3"><div class="root_OF3s"><span class="icon_UcOK" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor" width="15" height="15"><path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"></path></svg></span><div class="slot__FGx"><div class="navbar__search searchBarContainer_NW3z" dir="ltr"><input placeholder="搜索" aria-label="Search" class="navbar__search-input searchInput_YFbd" value=""><div class="loadingRing_RJI3 searchBarLoadingRing_YnHq"><div></div><div></div><div></div><div></div></div></div></div></div></div><div class="navbarRight_q16u"><a class="navLink_RnnM" href="/moltbot-doc/docs">Docs</a><a class="navLink_RnnM" href="/moltbot-doc/blog">Blog</a><button class="themeToggle_zD_x" aria-label="Switch to light theme" title="Light"><svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M12 18a6 6 0 1 1 0-12 6 6 0 0 1 0 12zm0-2a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM11 1h2v3h-2V1zm0 19h2v3h-2v-3zM3.515 4.929l1.414-1.414L7.05 5.636 5.636 7.05 3.515 4.93zM16.95 18.364l1.414-1.414 2.121 2.121-1.414 1.414-2.121-2.121zm2.121-14.85l1.414 1.415-2.121 2.121-1.414-1.414 2.121-2.121zM5.636 16.95l1.414 1.414-2.121 2.121-1.414-1.414 2.121-2.121zM23 11v2h-3v-2h3zM4 11v2H1v-2h3z"></path></svg></button></div></div></nav><div id="__docusaurus_skipToContent_fallback" class="theme-layout-main main-wrapper mainWrapper_z2l0"><div class="docsWrapper_hBAB"><button aria-label="回到顶部" class="clean-btn theme-back-to-top-button backToTopButton_sjWU" type="button"></button><div class="docRoot_UBD9"><main class="docMainContainer_TBSr docMainContainerEnhanced_lQrH"><div class="container padding-top--md padding-bottom--lg"><div class="row"><div class="col docItemCol_VOVn"><div class="docItemContainer_Djhp"><article><div class="tocCollapsible_ETCw theme-doc-toc-mobile tocMobile_ITEo"><button type="button" class="clean-btn tocCollapsibleButton_TO0P">本页总览</button></div><div class="theme-doc-markdown markdown"><header><h1>Release Checklist (npm + macOS)</h1></header>
+<p>Use <code>pnpm</code> (Node 22+) from the repo root. Keep the working tree clean before tagging/publishing.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="operator-trigger">Operator trigger<a href="#operator-trigger" class="hash-link" aria-label="Operator trigger的直接链接" title="Operator trigger的直接链接" translate="no">​</a></h2>
+<p>When the operator says “release”, immediately do this preflight (no extra questions unless blocked):</p>
+<ul>
+<li class="">Read this doc and <code>docs/platforms/mac/release.md</code>.</li>
+<li class="">Load env from <code>~/.profile</code> and confirm <code>SPARKLE_PRIVATE_KEY_FILE</code> + App Store Connect vars are set (SPARKLE_PRIVATE_KEY_FILE should live in <code>~/.profile</code>).</li>
+<li class="">Use Sparkle keys from <code>~/Library/CloudStorage/Dropbox/Backup/Sparkle</code> if needed.</li>
+</ul>
+<ol>
+<li class=""><strong>Version &amp; metadata</strong></li>
+</ol>
+<ul class="contains-task-list containsTaskList_mC6p">
+<li class="task-list-item"><input type="checkbox" disabled=""> Bump <code>package.json</code> version (e.g., <code>2026.1.27-beta.1</code>).</li>
+<li class="task-list-item"><input type="checkbox" disabled=""> Run <code>pnpm plugins:sync</code> to align extension package versions + changelogs.</li>
+<li class="task-list-item"><input type="checkbox" disabled=""> Update CLI/version strings: <a href="https://github.com/moltbot/moltbot/blob/main/src/cli/program.ts" target="_blank" rel="noopener noreferrer" class=""><code>src/cli/program.ts</code></a> and the Baileys user agent in <a href="https://github.com/moltbot/moltbot/blob/main/src/provider-web.ts" target="_blank" rel="noopener noreferrer" class=""><code>src/provider-web.ts</code></a>.</li>
+<li class="task-list-item"><input type="checkbox" disabled=""> Confirm package metadata (name, description, repository, keywords, license) and <code>bin</code> map points to <a href="https://github.com/moltbot/moltbot/blob/main/moltbot.mjs" target="_blank" rel="noopener noreferrer" class=""><code>moltbot.mjs</code></a> for <code>moltbot</code>.</li>
+<li class="task-list-item"><input type="checkbox" disabled=""> If dependencies changed, run <code>pnpm install</code> so <code>pnpm-lock.yaml</code> is current.</li>
+</ul>
+<ol start="2">
+<li class=""><strong>Build &amp; artifacts</strong></li>
+</ol>
+<ul class="contains-task-list containsTaskList_mC6p">
+<li class="task-list-item"><input type="checkbox" disabled=""> If A2UI inputs changed, run <code>pnpm canvas:a2ui:bundle</code> and commit any updated <a href="https://github.com/moltbot/moltbot/blob/main/src/canvas-host/a2ui/a2ui.bundle.js" target="_blank" rel="noopener noreferrer" class=""><code>src/canvas-host/a2ui/a2ui.bundle.js</code></a>.</li>
+<li class="task-list-item"><input type="checkbox" disabled=""> <code>pnpm run build</code> (regenerates <code>dist/</code>).</li>
+<li class="task-list-item"><input type="checkbox" disabled=""> Verify npm package <code>files</code> includes all required <code>dist/*</code> folders (notably <code>dist/node-host/**</code> and <code>dist/acp/**</code> for headless node + ACP CLI).</li>
+<li class="task-list-item"><input type="checkbox" disabled=""> Confirm <code>dist/build-info.json</code> exists and includes the expected <code>commit</code> hash (CLI banner uses this for npm installs).</li>
+<li class="task-list-item"><input type="checkbox" disabled=""> Optional: <code>npm pack --pack-destination /tmp</code> after the build; inspect the tarball contents and keep it handy for the GitHub release (do <strong>not</strong> commit it).</li>
+</ul>
+<ol start="3">
+<li class=""><strong>Changelog &amp; docs</strong></li>
+</ol>
+<ul class="contains-task-list containsTaskList_mC6p">
+<li class="task-list-item"><input type="checkbox" disabled=""> Update <code>CHANGELOG.md</code> with user-facing highlights (create the file if missing); keep entries strictly descending by version.</li>
+<li class="task-list-item"><input type="checkbox" disabled=""> Ensure README examples/flags match current CLI behavior (notably new commands or options).</li>
+</ul>
+<ol start="4">
+<li class=""><strong>Validation</strong></li>
+</ol>
+<ul class="contains-task-list containsTaskList_mC6p">
+<li class="task-list-item"><input type="checkbox" disabled=""> <code>pnpm lint</code></li>
+<li class="task-list-item"><input type="checkbox" disabled=""> <code>pnpm test</code> (or <code>pnpm test:coverage</code> if you need coverage output)</li>
+<li class="task-list-item"><input type="checkbox" disabled=""> <code>pnpm run build</code> (last sanity check after tests)</li>
+<li class="task-list-item"><input type="checkbox" disabled=""> <code>pnpm release:check</code> (verifies npm pack contents)</li>
+<li class="task-list-item"><input type="checkbox" disabled=""> <code>CLAWDBOT_INSTALL_SMOKE_SKIP_NONROOT=1 pnpm test:install:smoke</code> (Docker install smoke test, fast path; required before release)
+<ul>
+<li class="">If the immediate previous npm release is known broken, set <code>CLAWDBOT_INSTALL_SMOKE_PREVIOUS=&lt;last-good-version&gt;</code> or <code>CLAWDBOT_INSTALL_SMOKE_SKIP_PREVIOUS=1</code> for the preinstall step.</li>
+</ul>
+</li>
+<li class="task-list-item"><input type="checkbox" disabled=""> (Optional) Full installer smoke (adds non-root + CLI coverage): <code>pnpm test:install:smoke</code></li>
+<li class="task-list-item"><input type="checkbox" disabled=""> (Optional) Installer E2E (Docker, runs <code>curl -fsSL https://molt.bot/install.sh | bash</code>, onboards, then runs real tool calls):
+<ul>
+<li class=""><code>pnpm test:install:e2e:openai</code> (requires <code>OPENAI_API_KEY</code>)</li>
+<li class=""><code>pnpm test:install:e2e:anthropic</code> (requires <code>ANTHROPIC_API_KEY</code>)</li>
+<li class=""><code>pnpm test:install:e2e</code> (requires both keys; runs both providers)</li>
+</ul>
+</li>
+<li class="task-list-item"><input type="checkbox" disabled=""> (Optional) Spot-check the web gateway if your changes affect send/receive paths.</li>
+</ul>
+<ol start="5">
+<li class=""><strong>macOS app (Sparkle)</strong></li>
+</ol>
+<ul class="contains-task-list containsTaskList_mC6p">
+<li class="task-list-item"><input type="checkbox" disabled=""> Build + sign the macOS app, then zip it for distribution.</li>
+<li class="task-list-item"><input type="checkbox" disabled=""> Generate the Sparkle appcast (HTML notes via <a href="https://github.com/moltbot/moltbot/blob/main/scripts/make_appcast.sh" target="_blank" rel="noopener noreferrer" class=""><code>scripts/make_appcast.sh</code></a>) and update <code>appcast.xml</code>.</li>
+<li class="task-list-item"><input type="checkbox" disabled=""> Keep the app zip (and optional dSYM zip) ready to attach to the GitHub release.</li>
+<li class="task-list-item"><input type="checkbox" disabled=""> Follow <a class="" href="/moltbot-doc/platforms/mac/release">macOS release</a> for the exact commands and required env vars.
+<ul>
+<li class=""><code>APP_BUILD</code> must be numeric + monotonic (no <code>-beta</code>) so Sparkle compares versions correctly.</li>
+<li class="">If notarizing, use the <code>moltbot-notary</code> keychain profile created from App Store Connect API env vars (see <a class="" href="/moltbot-doc/platforms/mac/release">macOS release</a>).</li>
+</ul>
+</li>
+</ul>
+<ol start="6">
+<li class=""><strong>Publish (npm)</strong></li>
+</ol>
+<ul class="contains-task-list containsTaskList_mC6p">
+<li class="task-list-item"><input type="checkbox" disabled=""> Confirm git status is clean; commit and push as needed.</li>
+<li class="task-list-item"><input type="checkbox" disabled=""> <code>npm login</code> (verify 2FA) if needed.</li>
+<li class="task-list-item"><input type="checkbox" disabled=""> <code>npm publish --access public</code> (use <code>--tag beta</code> for pre-releases).</li>
+<li class="task-list-item"><input type="checkbox" disabled=""> Verify the registry: <code>npm view moltbot version</code>, <code>npm view moltbot dist-tags</code>, and <code>npx -y moltbot@X.Y.Z --version</code> (or <code>--help</code>).</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="troubleshooting-notes-from-200-beta2-release">Troubleshooting (notes from 2.0.0-beta2 release)<a href="#troubleshooting-notes-from-200-beta2-release" class="hash-link" aria-label="Troubleshooting (notes from 2.0.0-beta2 release)的直接链接" title="Troubleshooting (notes from 2.0.0-beta2 release)的直接链接" translate="no">​</a></h3>
+<ul>
+<li class=""><strong>npm pack/publish hangs or produces huge tarball</strong>: the macOS app bundle in <code>dist/Moltbot.app</code> (and release zips) get swept into the package. Fix by whitelisting publish contents via <code>package.json</code> <code>files</code> (include dist subdirs, docs, skills; exclude app bundles). Confirm with <code>npm pack --dry-run</code> that <code>dist/Moltbot.app</code> is not listed.</li>
+<li class=""><strong>npm auth web loop for dist-tags</strong>: use legacy auth to get an OTP prompt:
+<ul>
+<li class=""><code>NPM_CONFIG_AUTH_TYPE=legacy npm dist-tag add moltbot@X.Y.Z latest</code></li>
+</ul>
+</li>
+<li class=""><strong><code>npx</code> verification fails with <code>ECOMPROMISED: Lock compromised</code></strong>: retry with a fresh cache:
+<ul>
+<li class=""><code>NPM_CONFIG_CACHE=/tmp/npm-cache-$(date +%s) npx -y moltbot@X.Y.Z --version</code></li>
+</ul>
+</li>
+<li class=""><strong>Tag needs repointing after a late fix</strong>: force-update and push the tag, then ensure the GitHub release assets still match:
+<ul>
+<li class=""><code>git tag -f vX.Y.Z &amp;&amp; git push -f origin vX.Y.Z</code></li>
+</ul>
+</li>
+</ul>
+<ol start="7">
+<li class=""><strong>GitHub release + appcast</strong></li>
+</ol>
+<ul class="contains-task-list containsTaskList_mC6p">
+<li class="task-list-item"><input type="checkbox" disabled=""> Tag and push: <code>git tag vX.Y.Z &amp;&amp; git push origin vX.Y.Z</code> (or <code>git push --tags</code>).</li>
+<li class="task-list-item"><input type="checkbox" disabled=""> Create/refresh the GitHub release for <code>vX.Y.Z</code> with <strong>title <code>moltbot X.Y.Z</code></strong> (not just the tag); body should include the <strong>full</strong> changelog section for that version (Highlights + Changes + Fixes), inline (no bare links), and <strong>must not repeat the title inside the body</strong>.</li>
+<li class="task-list-item"><input type="checkbox" disabled=""> Attach artifacts: <code>npm pack</code> tarball (optional), <code>Moltbot-X.Y.Z.zip</code>, and <code>Moltbot-X.Y.Z.dSYM.zip</code> (if generated).</li>
+<li class="task-list-item"><input type="checkbox" disabled=""> Commit the updated <code>appcast.xml</code> and push it (Sparkle feeds from main).</li>
+<li class="task-list-item"><input type="checkbox" disabled=""> From a clean temp directory (no <code>package.json</code>), run <code>npx -y moltbot@X.Y.Z send --help</code> to confirm install/CLI entrypoints work.</li>
+<li class="task-list-item"><input type="checkbox" disabled=""> Announce/share release notes.</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="plugin-publish-scope-npm">Plugin publish scope (npm)<a href="#plugin-publish-scope-npm" class="hash-link" aria-label="Plugin publish scope (npm)的直接链接" title="Plugin publish scope (npm)的直接链接" translate="no">​</a></h2>
+<p>We only publish <strong>existing npm plugins</strong> under the <code>@moltbot/*</code> scope. Bundled
+plugins that are not on npm stay <strong>disk-tree only</strong> (still shipped in
+<code>extensions/**</code>).</p>
+<p>Process to derive the list:</p>
+<ol>
+<li class=""><code>npm search @moltbot --json</code> and capture the package names.</li>
+<li class="">Compare with <code>extensions/*/package.json</code> names.</li>
+<li class="">Publish only the <strong>intersection</strong> (already on npm).</li>
+</ol>
+<p>Current npm plugin list (update as needed):</p>
+<ul>
+<li class="">@moltbot/bluebubbles</li>
+<li class="">@moltbot/diagnostics-otel</li>
+<li class="">@moltbot/discord</li>
+<li class="">@moltbot/lobster</li>
+<li class="">@moltbot/matrix</li>
+<li class="">@moltbot/msteams</li>
+<li class="">@moltbot/nextcloud-talk</li>
+<li class="">@moltbot/nostr</li>
+<li class="">@moltbot/voice-call</li>
+<li class="">@moltbot/zalo</li>
+<li class="">@moltbot/zalouser</li>
+</ul>
+<p>Release notes must also call out <strong>new optional bundled plugins</strong> that are <strong>not
+on by default</strong> (example: <code>tlon</code>).</p></div></article><nav class="docusaurus-mt-lg pagination-nav" aria-label="文件选项卡"></nav></div></div><div class="col col--3"><div class="tocWrapper_xKoj"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#operator-trigger" class="table-of-contents__link toc-highlight">Operator trigger</a><ul><li><a href="#troubleshooting-notes-from-200-beta2-release" class="table-of-contents__link toc-highlight">Troubleshooting (notes from 2.0.0-beta2 release)</a></li></ul></li><li><a href="#plugin-publish-scope-npm" class="table-of-contents__link toc-highlight">Plugin publish scope (npm)</a></li></ul></div><div class="tocFooter_Fu2z"><div class="themeGroup_RzWV" role="group" aria-label="Theme"><button class="themeBtn_tGr6" aria-label="Light theme" title="Light"><svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor" aria-hidden="true"><path d="M12 18a6 6 0 1 1 0-12 6 6 0 0 1 0 12zm0-2a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM11 1h2v3h-2V1zm0 19h2v3h-2v-3zM3.515 4.929l1.414-1.414L7.05 5.636 5.636 7.05 3.515 4.93zM16.95 18.364l1.414-1.414 2.121 2.121-1.414 1.414-2.121-2.121zm2.121-14.85l1.414 1.415-2.121 2.121-1.414-1.414 2.121-2.121zM5.636 16.95l1.414 1.414-2.121 2.121-1.414-1.414 2.121-2.121zM23 11v2h-3v-2h3zM4 11v2H1v-2h3z"></path></svg></button><button class="themeBtn_tGr6 themeBtnActive_A6tm" aria-label="Dark theme" title="Dark"><svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor" aria-hidden="true"><path d="M11.38 2.019a7.5 7.5 0 1 0 10.6 10.6C21.83 17.963 17.315 22 12.002 22 6.477 22 2 17.523 2 12c0-5.314 4.038-9.827 9.38-10.28z"></path></svg></button></div></div></div></div></div></div></main></div></div></div><footer class="theme-layout-footer footer footer--dark"><div class="container container-fluid"><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2026 Moltbot Docs.</div></div></div></footer></div>
+</body>
+</html>

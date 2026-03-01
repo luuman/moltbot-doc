@@ -1,0 +1,333 @@
+<!doctype html>
+<html lang="zh" dir="ltr" class="docs-wrapper plugin-docs plugin-id-default docs-version-current docs-doc-page docs-doc-id-channels/whatsapp" data-has-hydrated="false">
+<head>
+<meta charset="UTF-8">
+<meta name="generator" content="Docusaurus v3.9.2">
+<title data-rh="true">WhatsApp（网络通道） | Moltbot Docs</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:url" content="https://luuman.github.io/moltbot-doc/docs/channels/whatsapp"><meta data-rh="true" property="og:locale" content="zh"><meta data-rh="true" name="docusaurus_locale" content="zh"><meta data-rh="true" name="docsearch:language" content="zh"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="WhatsApp（网络通道） | Moltbot Docs"><meta data-rh="true" name="description" content="状态：仅 WhatsApp Web 通过 Baileys。网关拥有会话。"><meta data-rh="true" property="og:description" content="状态：仅 WhatsApp Web 通过 Baileys。网关拥有会话。"><link data-rh="true" rel="icon" href="/moltbot-doc/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://luuman.github.io/moltbot-doc/docs/channels/whatsapp"><link data-rh="true" rel="alternate" href="https://luuman.github.io/moltbot-doc/docs/channels/whatsapp" hreflang="zh"><link data-rh="true" rel="alternate" href="https://luuman.github.io/moltbot-doc/docs/channels/whatsapp" hreflang="x-default"><link rel="alternate" type="application/rss+xml" href="/moltbot-doc/blog/rss.xml" title="Moltbot Docs RSS Feed">
+<link rel="alternate" type="application/atom+xml" href="/moltbot-doc/blog/atom.xml" title="Moltbot Docs Atom Feed"><link rel="stylesheet" href="/moltbot-doc/assets/css/styles.484b4c98.css">
+<script src="/moltbot-doc/assets/js/runtime~main.6cf495cf.js" defer="defer"></script>
+<script src="/moltbot-doc/assets/js/main.f9205183.js" defer="defer"></script>
+</head>
+<body class="navigation-with-keyboard">
+<svg style="display: none;"><defs>
+<symbol id="theme-svg-external-link" viewBox="0 0 24 24"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"/></symbol>
+</defs></svg>
+<script>!function(){var t=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme")}catch(t){}}();document.documentElement.setAttribute("data-theme",t||"dark"),document.documentElement.setAttribute("data-theme-choice",t||"dark")}(),function(){try{const c=new URLSearchParams(window.location.search).entries();for(var[t,e]of c)if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id="__docusaurus"><div role="region" aria-label="跳到主要内容"><a class="skipToContent_fXgn" href="#__docusaurus_skipToContent_fallback">跳到主要内容</a></div><nav class="navbar navbar--fixed-top navbar_MONK" role="navigation" aria-label="Main"><div class="navbarInner_ASTH"><div class="navbarLeft_pUmY"><button aria-label="切换导航栏" aria-expanded="false" class="navbar__toggle clean-btn" type="button"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg></button><a class="brand_SXL9" href="/moltbot-doc/"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="24" height="24" rx="6" fill="var(--ifm-color-primary)"></rect><path d="M7 8.5h10M7 12h7M7 15.5h10" stroke="white" stroke-width="1.8" stroke-linecap="round"></path></svg><span class="brandTitle_XbyU">Moltbot</span></a><div class="dropdown_GrgZ"><button class="dropdownToggle_Nf_z">全部站点<svg class="dropdownArrow_Eka8" viewBox="0 0 12 12" fill="none"><path d="M2 4l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg></button><ul class="dropdownMenu_zsxH"><li><a href="https://luuman.github.io/docs-workspace/docs" class="dropdownMenuItem_VBaP">Workspace</a></li><li><a href="https://luuman.github.io/claude-doc/docs" class="dropdownMenuItem_VBaP">Claude</a></li><li><a href="https://luuman.github.io/electron-doc/docs" class="dropdownMenuItem_VBaP">Electron</a></li><li><a href="https://luuman.github.io/tauri-doc/docs" class="dropdownMenuItem_VBaP">Tauri</a></li><li><a href="https://luuman.github.io/matrx-doc/docs" class="dropdownMenuItem_VBaP">Matrx</a></li><li><a href="https://luuman.github.io/brainboard-doc/docs" class="dropdownMenuItem_VBaP">Brainboard</a></li><li><a href="https://luuman.github.io/synology-doc/docs" class="dropdownMenuItem_VBaP">Synology</a></li><li><a href="https://luuman.github.io/codex-doc/docs" class="dropdownMenuItem_VBaP">Codex</a></li><li><a href="https://luuman.github.io/ai-doc/docs" class="dropdownMenuItem_VBaP">AI</a></li></ul></div></div><div class="navbarCenter_Zdr3"><div class="root_OF3s"><span class="icon_UcOK" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor" width="15" height="15"><path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"></path></svg></span><div class="slot__FGx"><div class="navbar__search searchBarContainer_NW3z" dir="ltr"><input placeholder="搜索" aria-label="Search" class="navbar__search-input searchInput_YFbd" value=""><div class="loadingRing_RJI3 searchBarLoadingRing_YnHq"><div></div><div></div><div></div><div></div></div></div></div></div></div><div class="navbarRight_q16u"><a class="navLink_RnnM" href="/moltbot-doc/docs">Docs</a><a class="navLink_RnnM" href="/moltbot-doc/blog">Blog</a><button class="themeToggle_zD_x" aria-label="Switch to light theme" title="Light"><svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M12 18a6 6 0 1 1 0-12 6 6 0 0 1 0 12zm0-2a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM11 1h2v3h-2V1zm0 19h2v3h-2v-3zM3.515 4.929l1.414-1.414L7.05 5.636 5.636 7.05 3.515 4.93zM16.95 18.364l1.414-1.414 2.121 2.121-1.414 1.414-2.121-2.121zm2.121-14.85l1.414 1.415-2.121 2.121-1.414-1.414 2.121-2.121zM5.636 16.95l1.414 1.414-2.121 2.121-1.414-1.414 2.121-2.121zM23 11v2h-3v-2h3zM4 11v2H1v-2h3z"></path></svg></button></div></div></nav><div id="__docusaurus_skipToContent_fallback" class="theme-layout-main main-wrapper mainWrapper_z2l0"><div class="docsWrapper_hBAB"><button aria-label="回到顶部" class="clean-btn theme-back-to-top-button backToTopButton_sjWU" type="button"></button><div class="docRoot_UBD9"><main class="docMainContainer_TBSr docMainContainerEnhanced_lQrH"><div class="container padding-top--md padding-bottom--lg"><div class="row"><div class="col docItemCol_VOVn"><div class="docItemContainer_Djhp"><article><div class="tocCollapsible_ETCw theme-doc-toc-mobile tocMobile_ITEo"><button type="button" class="clean-btn tocCollapsibleButton_TO0P">本页总览</button></div><div class="theme-doc-markdown markdown"><header><h1>WhatsApp（网络通道）</h1></header>
+<p>状态：仅 WhatsApp Web 通过 Baileys。网关拥有会话。</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="快速设置初学者">快速设置（初学者）<a href="#快速设置初学者" class="hash-link" aria-label="快速设置（初学者）的直接链接" title="快速设置（初学者）的直接链接" translate="no">​</a></h2>
+<ol>
+<li class="">如可能，使用<strong>单独的电话号码</strong>（推荐）。</li>
+<li class="">在 <code>~/.clawdbot/moltbot.json</code> 中配置 WhatsApp。</li>
+<li class="">运行 <code>moltbot channels login</code> 扫描二维码（已连接的设备）。</li>
+<li class="">启动网关。</li>
+</ol>
+<p>最小配置：</p>
+<div class="language-json5 codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#D6DEEB;--prism-background-color:#001122"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-json5 codeBlock_bY9V thin-scrollbar" style="color:#D6DEEB;background-color:#001122"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#D6DEEB"><span class="token plain">{</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">  channels: {</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">    whatsapp: {</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">      dmPolicy: &quot;allowlist&quot;,</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">      allowFrom: [&quot;+15551234567&quot;]</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">    }</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">  }</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">}</span><br></span></code></pre></div></div>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="目标">目标<a href="#目标" class="hash-link" aria-label="目标的直接链接" title="目标的直接链接" translate="no">​</a></h2>
+<ul>
+<li class="">一个网关进程中多个 WhatsApp 账户（多账户）。</li>
+<li class="">确定性路由：回复返回到 WhatsApp，无模型路由。</li>
+<li class="">模型看到足够的上下文以理解引用的回复。</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="配置写入">配置写入<a href="#配置写入" class="hash-link" aria-label="配置写入的直接链接" title="配置写入的直接链接" translate="no">​</a></h2>
+<p>默认情况下，WhatsApp 允许写入由 <code>/config set|unset</code> 触发的配置更新（需要 <code>commands.config: true</code>）。</p>
+<p>禁用方法：</p>
+<div class="language-json5 codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#D6DEEB;--prism-background-color:#001122"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-json5 codeBlock_bY9V thin-scrollbar" style="color:#D6DEEB;background-color:#001122"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#D6DEEB"><span class="token plain">{</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">  channels: { whatsapp: { configWrites: false } }</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">}</span><br></span></code></pre></div></div>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="架构谁拥有什么">架构（谁拥有什么）<a href="#架构谁拥有什么" class="hash-link" aria-label="架构（谁拥有什么）的直接链接" title="架构（谁拥有什么）的直接链接" translate="no">​</a></h2>
+<ul>
+<li class=""><strong>网关</strong> 拥有 Baileys 套接字和收件箱循环。</li>
+<li class=""><strong>CLI / macOS 应用</strong> 与网关通信；不直接使用 Baileys。</li>
+<li class=""><strong>活跃监听器</strong> 是出站发送所必需的；否则发送快速失败。</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="获取电话号码两种模式">获取电话号码（两种模式）<a href="#获取电话号码两种模式" class="hash-link" aria-label="获取电话号码（两种模式）的直接链接" title="获取电话号码（两种模式）的直接链接" translate="no">​</a></h2>
+<p>WhatsApp 需要真实手机号进行验证。VoIP 和虚拟号码通常被阻止。有两种支持的方式在 WhatsApp 上运行 Moltbot：</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="专用号码推荐">专用号码（推荐）<a href="#专用号码推荐" class="hash-link" aria-label="专用号码（推荐）的直接链接" title="专用号码（推荐）的直接链接" translate="no">​</a></h3>
+<p>为 Moltbot 使用<strong>单独的电话号码</strong>。最佳用户体验，清晰路由，无自聊异常。理想设置：<strong>备用/旧 Android 手机 + eSIM</strong>。保持 Wi-Fi 和电源开启，并通过 QR 链接。</p>
+<p><strong>WhatsApp Business：</strong> 您可以在同一设备上使用 WhatsApp Business，使用不同的号码。非常适合将您的个人 WhatsApp 与之分离 — 安装 WhatsApp Business 并在那里注册 Moltbot 号码。</p>
+<p><strong>示例配置（专用号码，单用户允许列表）：</strong></p>
+<div class="language-json5 codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#D6DEEB;--prism-background-color:#001122"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-json5 codeBlock_bY9V thin-scrollbar" style="color:#D6DEEB;background-color:#001122"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#D6DEEB"><span class="token plain">{</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">  channels: {</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">    whatsapp: {</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">      dmPolicy: &quot;allowlist&quot;,</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">      allowFrom: [&quot;+15551234567&quot;]</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">    }</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">  }</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">}</span><br></span></code></pre></div></div>
+<p><strong>配对模式（可选）：</strong>
+如果您想要配对而不是允许列表，将 <code>channels.whatsapp.dmPolicy</code> 设置为 <code>pairing</code>。未知发送者获得配对码；通过以下方式批准：
+<code>moltbot pairing approve whatsapp &lt;code&gt;</code></p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="个人号码回退">个人号码（回退）<a href="#个人号码回退" class="hash-link" aria-label="个人号码（回退）的直接链接" title="个人号码（回退）的直接链接" translate="no">​</a></h3>
+<p>快速回退：在<strong>您的自己的号码</strong>上运行 Moltbot。给自己发消息（WhatsApp &quot;给自己发消息&quot;）进行测试，以免骚扰联系人。在设置和实验期间预计在主手机上阅读验证码。<strong>必须启用自聊模式。</strong>
+当向导询问您的个人 WhatsApp 号码时，输入您将从中发送消息的电话（所有者/发送者），而不是助手号码。</p>
+<p><strong>示例配置（个人号码，自聊）：</strong></p>
+<div class="language-json codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#D6DEEB;--prism-background-color:#001122"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-json codeBlock_bY9V thin-scrollbar" style="color:#D6DEEB;background-color:#001122"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#D6DEEB"><span class="token punctuation" style="color:#C792EA">{</span><span class="token plain"></span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">  </span><span class="token property" style="color:#F78C6C">&quot;whatsapp&quot;</span><span class="token operator" style="color:#7FDBCA">:</span><span class="token plain"> </span><span class="token punctuation" style="color:#C792EA">{</span><span class="token plain"></span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">    </span><span class="token property" style="color:#F78C6C">&quot;selfChatMode&quot;</span><span class="token operator" style="color:#7FDBCA">:</span><span class="token plain"> </span><span class="token boolean" style="color:#F78C6C">true</span><span class="token punctuation" style="color:#C792EA">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">    </span><span class="token property" style="color:#F78C6C">&quot;dmPolicy&quot;</span><span class="token operator" style="color:#7FDBCA">:</span><span class="token plain"> </span><span class="token string" style="color:#ECC48D">&quot;allowlist&quot;</span><span class="token punctuation" style="color:#C792EA">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">    </span><span class="token property" style="color:#F78C6C">&quot;allowFrom&quot;</span><span class="token operator" style="color:#7FDBCA">:</span><span class="token plain"> </span><span class="token punctuation" style="color:#C792EA">[</span><span class="token string" style="color:#ECC48D">&quot;+15551234567&quot;</span><span class="token punctuation" style="color:#C792EA">]</span><span class="token plain"></span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">  </span><span class="token punctuation" style="color:#C792EA">}</span><span class="token plain"></span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain"></span><span class="token punctuation" style="color:#C792EA">}</span><br></span></code></pre></div></div>
+<p>自聊回复在设置时默认为 <code>[{identity.name}]</code>（否则为 <code>[moltbot]</code>）
+如果未设置 <code>messages.responsePrefix</code>。显式设置它以自定义或禁用
+前缀（使用 <code>&quot;&quot;</code> 删除它）。</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="号码获取技巧">号码获取技巧<a href="#号码获取技巧" class="hash-link" aria-label="号码获取技巧的直接链接" title="号码获取技巧的直接链接" translate="no">​</a></h3>
+<ul>
+<li class=""><strong>本地 eSIM</strong> 来自您国家的移动运营商（最可靠）
+<ul>
+<li class="">奥地利：<a href="https://www.hot.at" target="_blank" rel="noopener noreferrer" class="">hot.at</a></li>
+<li class="">英国：<a href="https://www.giffgaff.com" target="_blank" rel="noopener noreferrer" class="">giffgaff</a> — 免费 SIM，无合同</li>
+</ul>
+</li>
+<li class=""><strong>预付费 SIM</strong> — 便宜，只需接收一条 SMS 进行验证</li>
+</ul>
+<p><strong>避免：</strong> TextNow、Google Voice、大多数&quot;免费 SMS&quot;服务 — WhatsApp 积极阻止这些。</p>
+<p><strong>提示：</strong> 号码只需要接收一条验证 SMS。之后，WhatsApp Web 会话通过 <code>creds.json</code> 持续。</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="为什么不使用-twilio">为什么不使用 Twilio？<a href="#为什么不使用-twilio" class="hash-link" aria-label="为什么不使用 Twilio？的直接链接" title="为什么不使用 Twilio？的直接链接" translate="no">​</a></h2>
+<ul>
+<li class="">早期 Moltbot 版本支持 Twilio 的 WhatsApp Business 集成。</li>
+<li class="">WhatsApp Business 号码不适合个人助手。</li>
+<li class="">Meta 强制执行 24 小时回复窗口；如果您在过去 24 小时内未回复，业务号码无法发起新消息。</li>
+<li class="">高容量或&quot;健谈&quot;使用触发积极阻止，因为业务账户不应用于发送数十条个人助手消息。</li>
+<li class="">结果：不可靠的传递和频繁阻止，因此支持被移除。</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="登录--凭据">登录 + 凭据<a href="#登录--凭据" class="hash-link" aria-label="登录 + 凭据的直接链接" title="登录 + 凭据的直接链接" translate="no">​</a></h2>
+<ul>
+<li class="">登录命令：<code>moltbot channels login</code>（通过已连接设备的 QR）。</li>
+<li class="">多账户登录：<code>moltbot channels login --account &lt;id&gt;</code>（<code>&lt;id&gt;</code> = <code>accountId</code>）。</li>
+<li class="">默认账户（当省略 <code>--account</code> 时）：如果存在为 <code>default</code>，否则为第一个配置的账户 ID（排序）。</li>
+<li class="">凭据存储在 <code>~/.clawdbot/credentials/whatsapp/&lt;accountId&gt;/creds.json</code>。</li>
+<li class="">备份副本在 <code>creds.json.bak</code>（在损坏时恢复）。</li>
+<li class="">旧版兼容性：较旧的安装直接将 Baileys 文件存储在 <code>~/.clawdbot/credentials/</code> 中。</li>
+<li class="">登出：<code>moltbot channels logout</code>（或 <code>--account &lt;id&gt;</code>）删除 WhatsApp 认证状态（但保留共享的 <code>oauth.json</code>）。</li>
+<li class="">登出套接字 =&gt; 错误指示重新链接。</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="入站流程私信--群组">入站流程（私信 + 群组）<a href="#入站流程私信--群组" class="hash-link" aria-label="入站流程（私信 + 群组）的直接链接" title="入站流程（私信 + 群组）的直接链接" translate="no">​</a></h2>
+<ul>
+<li class="">WhatsApp 事件来自 <code>messages.upsert</code>（Baileys）。</li>
+<li class="">关机时分离收件箱监听器，以避免在测试/重启中积累事件处理器。</li>
+<li class="">状态/广播聊天被忽略。</li>
+<li class="">直接聊天使用 E.164；群组使用群组 JID。</li>
+<li class=""><strong>私信策略</strong>：<code>channels.whatsapp.dmPolicy</code> 控制直接聊天访问（默认：<code>pairing</code>）。
+<ul>
+<li class="">配对：未知发送者获得配对码（通过 <code>moltbot pairing approve whatsapp &lt;code&gt;</code> 批准；代码在 1 小时后过期）。</li>
+<li class="">开放：需要 <code>channels.whatsapp.allowFrom</code> 包含 <code>&quot;*</code>。</li>
+<li class="">您的已链接 WhatsApp 号码被隐式信任，因此自消息跳过 <code>channels.whatsapp.dmPolicy</code> 和 <code>channels.whatsapp.allowFrom</code> 检查。</li>
+</ul>
+</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="个人号码模式回退">个人号码模式（回退）<a href="#个人号码模式回退" class="hash-link" aria-label="个人号码模式（回退）的直接链接" title="个人号码模式（回退）的直接链接" translate="no">​</a></h3>
+<p>如果您在<strong>个人 WhatsApp 号码</strong>上运行 Moltbot，启用 <code>channels.whatsapp.selfChatMode</code>（参见上面的示例）。</p>
+<p>行为：</p>
+<ul>
+<li class="">出站私信从不触发配对回复（防止骚扰联系人）。</li>
+<li class="">入站未知发送者仍遵循 <code>channels.whatsapp.dmPolicy</code>。</li>
+<li class="">自聊模式（allowFrom 包含您的号码）避免自动已读回执并忽略提及 JID。</li>
+<li class="">为非自聊私信发送已读回执。</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="已读回执">已读回执<a href="#已读回执" class="hash-link" aria-label="已读回执的直接链接" title="已读回执的直接链接" translate="no">​</a></h2>
+<p>默认情况下，网关在入站 WhatsApp 消息被接受后将其标记为已读（蓝色勾号）。</p>
+<p>全局禁用：</p>
+<div class="language-json5 codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#D6DEEB;--prism-background-color:#001122"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-json5 codeBlock_bY9V thin-scrollbar" style="color:#D6DEEB;background-color:#001122"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#D6DEEB"><span class="token plain">{</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">  channels: { whatsapp: { sendReadReceipts: false } }</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">}</span><br></span></code></pre></div></div>
+<p>按账户禁用：</p>
+<div class="language-json5 codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#D6DEEB;--prism-background-color:#001122"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-json5 codeBlock_bY9V thin-scrollbar" style="color:#D6DEEB;background-color:#001122"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#D6DEEB"><span class="token plain">{</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">  channels: {</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">    whatsapp: {</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">      accounts: {</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">        personal: { sendReadReceipts: false }</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">      }</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">    }</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">  }</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">}</span><br></span></code></pre></div></div>
+<p>注意事项：</p>
+<ul>
+<li class="">自聊模式始终跳过已读回执。</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="whatsapp-faq发送消息--配对">WhatsApp FAQ：发送消息 + 配对<a href="#whatsapp-faq发送消息--配对" class="hash-link" aria-label="WhatsApp FAQ：发送消息 + 配对的直接链接" title="WhatsApp FAQ：发送消息 + 配对的直接链接" translate="no">​</a></h2>
+<p><strong>当我链接 WhatsApp 时，Moltbot 会向随机联系人发送消息吗？</strong><br>
+不会。默认私信策略是<strong>配对</strong>，因此未知发送者只获得配对码，他们的消息<strong>不会被处理</strong>。Moltbot 只回复它收到的聊天，或您明确触发的发送（代理/CLI）。</p>
+<p><strong>WhatsApp 上的配对如何工作？</strong><br>
+配对是针对未知发送者的私信门：</p>
+<ul>
+<li class="">新发送者的首次私信返回短代码（消息未被处理）。</li>
+<li class="">通过以下方式批准：<code>moltbot pairing approve whatsapp &lt;code&gt;</code>（通过 <code>moltbot pairing list whatsapp</code> 列出）。</li>
+<li class="">代码在 1 小时后过期；待处理请求限制为每个通道 3 个。</li>
+</ul>
+<p><strong>多人可以在一个 WhatsApp 号码上使用不同的 Moltbots 吗？</strong><br>
+是的，通过 <code>bindings</code> 将每个发送者路由到不同代理（对等 <code>kind: &quot;dm&quot;</code>，发送者 E.164 如 <code>+15551234567</code>）。回复仍来自<strong>同一 WhatsApp 账户</strong>，直接聊天折叠到每个代理的主会话，因此为每人使用<strong>一个代理</strong>。私信访问控制（<code>dmPolicy</code>/<code>allowFrom</code>）是每个 WhatsApp 账户的全局设置。参见 <a class="" href="/moltbot-doc/concepts/multi-agent">多代理路由</a>。</p>
+<p><strong>为什么向导询问我的电话号码？</strong><br>
+向导使用它设置您的<strong>允许列表/所有者</strong>，以便您的私信被允许。它不用于自动发送。如果您在个人 WhatsApp 号码上运行，请使用相同号码并启用 <code>channels.whatsapp.selfChatMode</code>。</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="消息规范化模型看到的内容">消息规范化（模型看到的内容）<a href="#消息规范化模型看到的内容" class="hash-link" aria-label="消息规范化（模型看到的内容）的直接链接" title="消息规范化（模型看到的内容）的直接链接" translate="no">​</a></h2>
+<ul>
+<li class=""><code>Body</code> 是带有信封的当前消息正文。</li>
+<li class="">引用回复上下文<strong>始终追加</strong>：
+<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#D6DEEB;--prism-background-color:#001122"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#D6DEEB;background-color:#001122"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#D6DEEB"><span class="token plain">[回复给 +1555 id:ABC123]</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">&lt;引用文本或 &lt;media:...&gt;&gt;</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">[/回复]</span><br></span></code></pre></div></div>
+</li>
+<li class="">回复元数据也设置：
+<ul>
+<li class=""><code>ReplyToId</code> = stanzaId</li>
+<li class=""><code>ReplyToBody</code> = 引用正文或媒体占位符</li>
+<li class=""><code>ReplyToSender</code> = 已知时的 E.164</li>
+</ul>
+</li>
+<li class="">仅媒体入站消息使用占位符：
+<ul>
+<li class=""><code>&lt;media:image|video|audio|document|sticker&gt;</code></li>
+</ul>
+</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="群组">群组<a href="#群组" class="hash-link" aria-label="群组的直接链接" title="群组的直接链接" translate="no">​</a></h2>
+<ul>
+<li class="">群组映射到 <code>agent:&lt;agentId&gt;:whatsapp:group:&lt;jid&gt;</code> 会话。</li>
+<li class="">群组策略：<code>channels.whatsapp.groupPolicy = open|disabled|allowlist</code>（默认 <code>allowlist</code>）。</li>
+<li class="">激活模式：
+<ul>
+<li class=""><code>mention</code>（默认）：需要 @提及或正则表达式匹配。</li>
+<li class=""><code>always</code>：始终触发。</li>
+</ul>
+</li>
+<li class=""><code>/activation mention|always</code> 仅所有者，必须作为独立消息发送。</li>
+<li class="">所有者 = <code>channels.whatsapp.allowFrom</code>（或未设置时的自 E.164）。</li>
+<li class=""><strong>历史注入</strong>（仅待处理）：
+<ul>
+<li class="">最近的<em>未处理</em>消息（默认 50）插入在：
+<code>[自您上次回复以来的聊天消息 - 用于上下文]</code>（已在会话中的消息不会重新注入）</li>
+<li class="">当前消息在：
+<code>[当前消息 - 回复此消息]</code></li>
+<li class="">发送者后缀追加：<code>[来自：姓名 (+E164)]</code></li>
+</ul>
+</li>
+<li class="">群组元数据缓存 5 分钟（主题 + 参与者）。</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="回复传递线程">回复传递（线程）<a href="#回复传递线程" class="hash-link" aria-label="回复传递（线程）的直接链接" title="回复传递（线程）的直接链接" translate="no">​</a></h2>
+<ul>
+<li class="">WhatsApp Web 发送标准消息（当前网关中无引用回复线程）。</li>
+<li class="">此通道忽略回复标签。</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="确认反应接收时自动反应">确认反应（接收时自动反应）<a href="#确认反应接收时自动反应" class="hash-link" aria-label="确认反应（接收时自动反应）的直接链接" title="确认反应（接收时自动反应）的直接链接" translate="no">​</a></h2>
+<p>WhatsApp 可以在接收消息后立即自动发送表情符号反应，然后在机器人生成回复之前。这为用户提供即时反馈，表明他们的消息已被接收。</p>
+<p><strong>配置：</strong></p>
+<div class="language-json codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#D6DEEB;--prism-background-color:#001122"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-json codeBlock_bY9V thin-scrollbar" style="color:#D6DEEB;background-color:#001122"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#D6DEEB"><span class="token punctuation" style="color:#C792EA">{</span><span class="token plain"></span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">  </span><span class="token property" style="color:#F78C6C">&quot;whatsapp&quot;</span><span class="token operator" style="color:#7FDBCA">:</span><span class="token plain"> </span><span class="token punctuation" style="color:#C792EA">{</span><span class="token plain"></span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">    </span><span class="token property" style="color:#F78C6C">&quot;ackReaction&quot;</span><span class="token operator" style="color:#7FDBCA">:</span><span class="token plain"> </span><span class="token punctuation" style="color:#C792EA">{</span><span class="token plain"></span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">      </span><span class="token property" style="color:#F78C6C">&quot;emoji&quot;</span><span class="token operator" style="color:#7FDBCA">:</span><span class="token plain"> </span><span class="token string" style="color:#ECC48D">&quot;👀&quot;</span><span class="token punctuation" style="color:#C792EA">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">      </span><span class="token property" style="color:#F78C6C">&quot;direct&quot;</span><span class="token operator" style="color:#7FDBCA">:</span><span class="token plain"> </span><span class="token boolean" style="color:#F78C6C">true</span><span class="token punctuation" style="color:#C792EA">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">      </span><span class="token property" style="color:#F78C6C">&quot;group&quot;</span><span class="token operator" style="color:#7FDBCA">:</span><span class="token plain"> </span><span class="token string" style="color:#ECC48D">&quot;mentions&quot;</span><span class="token plain"></span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">    </span><span class="token punctuation" style="color:#C792EA">}</span><span class="token plain"></span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">  </span><span class="token punctuation" style="color:#C792EA">}</span><span class="token plain"></span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain"></span><span class="token punctuation" style="color:#C792EA">}</span><br></span></code></pre></div></div>
+<p><strong>选项：</strong></p>
+<ul>
+<li class=""><code>emoji</code>（字符串）：用于确认的表情符号（例如，&quot;👀&quot;，&quot;✅&quot;，&quot;📨&quot;）。空或省略 = 功能禁用。</li>
+<li class=""><code>direct</code>（布尔值，默认：<code>true</code>）：在直接/私信聊天中发送反应。</li>
+<li class=""><code>group</code>（字符串，默认：<code>&quot;mentions&quot;</code>）：群组聊天行为：
+<ul>
+<li class=""><code>&quot;always&quot;</code>：对所有群组消息反应（即使没有 @提及）</li>
+<li class=""><code>&quot;mentions&quot;</code>：仅在机器人被 @提及 时反应</li>
+<li class=""><code>&quot;never&quot;</code>：从不在群组中反应</li>
+</ul>
+</li>
+</ul>
+<p><strong>按账户覆盖：</strong></p>
+<div class="language-json codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#D6DEEB;--prism-background-color:#001122"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-json codeBlock_bY9V thin-scrollbar" style="color:#D6DEEB;background-color:#001122"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#D6DEEB"><span class="token punctuation" style="color:#C792EA">{</span><span class="token plain"></span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">  </span><span class="token property" style="color:#F78C6C">&quot;whatsapp&quot;</span><span class="token operator" style="color:#7FDBCA">:</span><span class="token plain"> </span><span class="token punctuation" style="color:#C792EA">{</span><span class="token plain"></span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">    </span><span class="token property" style="color:#F78C6C">&quot;accounts&quot;</span><span class="token operator" style="color:#7FDBCA">:</span><span class="token plain"> </span><span class="token punctuation" style="color:#C792EA">{</span><span class="token plain"></span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">      </span><span class="token property" style="color:#F78C6C">&quot;work&quot;</span><span class="token operator" style="color:#7FDBCA">:</span><span class="token plain"> </span><span class="token punctuation" style="color:#C792EA">{</span><span class="token plain"></span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">        </span><span class="token property" style="color:#F78C6C">&quot;ackReaction&quot;</span><span class="token operator" style="color:#7FDBCA">:</span><span class="token plain"> </span><span class="token punctuation" style="color:#C792EA">{</span><span class="token plain"></span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">          </span><span class="token property" style="color:#F78C6C">&quot;emoji&quot;</span><span class="token operator" style="color:#7FDBCA">:</span><span class="token plain"> </span><span class="token string" style="color:#ECC48D">&quot;✅&quot;</span><span class="token punctuation" style="color:#C792EA">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">          </span><span class="token property" style="color:#F78C6C">&quot;direct&quot;</span><span class="token operator" style="color:#7FDBCA">:</span><span class="token plain"> </span><span class="token boolean" style="color:#F78C6C">false</span><span class="token punctuation" style="color:#C792EA">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">          </span><span class="token property" style="color:#F78C6C">&quot;group&quot;</span><span class="token operator" style="color:#7FDBCA">:</span><span class="token plain"> </span><span class="token string" style="color:#ECC48D">&quot;always&quot;</span><span class="token plain"></span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">        </span><span class="token punctuation" style="color:#C792EA">}</span><span class="token plain"></span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">      </span><span class="token punctuation" style="color:#C792EA">}</span><span class="token plain"></span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">    </span><span class="token punctuation" style="color:#C792EA">}</span><span class="token plain"></span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">  </span><span class="token punctuation" style="color:#C792EA">}</span><span class="token plain"></span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain"></span><span class="token punctuation" style="color:#C792EA">}</span><br></span></code></pre></div></div>
+<p><strong>行为注意事项：</strong></p>
+<ul>
+<li class="">反应在消息接收时<strong>立即</strong>发送，在输入指示器或机器人回复之前。</li>
+<li class="">在 <code>requireMention: false</code>（激活：始终）的群组中，<code>group: &quot;mentions&quot;</code> 将对所有消息反应（不仅 @提及）。</li>
+<li class="">一次性发送：反应失败被记录但不阻止机器人回复。</li>
+<li class="">参与者 JID 自动包含在群组反应中。</li>
+<li class="">WhatsApp 忽略 <code>messages.ackReaction</code>；使用 <code>channels.whatsapp.ackReaction</code>。</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="代理工具反应">代理工具（反应）<a href="#代理工具反应" class="hash-link" aria-label="代理工具（反应）的直接链接" title="代理工具（反应）的直接链接" translate="no">​</a></h2>
+<ul>
+<li class="">工具：<code>whatsapp</code> 与 <code>react</code> 动作（<code>chatJid</code>，<code>messageId</code>，<code>emoji</code>，可选 <code>remove</code>）。</li>
+<li class="">可选：<code>participant</code>（群组发送者），<code>fromMe</code>（对自己消息的反应），<code>accountId</code>（多账户）。</li>
+<li class="">反应移除语义：参见 <a class="" href="/moltbot-doc/tools/reactions">/tools/reactions</a>。</li>
+<li class="">工具门控：<code>channels.whatsapp.actions.reactions</code>（默认：启用）。</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="限制">限制<a href="#限制" class="hash-link" aria-label="限制的直接链接" title="限制的直接链接" translate="no">​</a></h2>
+<ul>
+<li class="">出站文本分割到 <code>channels.whatsapp.textChunkLimit</code>（默认 4000）。</li>
+<li class="">可选的换行分割：设置 <code>channels.whatsapp.chunkMode=&quot;newline&quot;</code> 以在长度分割之前按空行（段落边界）分割。</li>
+<li class="">入站媒体保存限制为 <code>channels.whatsapp.mediaMaxMb</code>（默认 50 MB）。</li>
+<li class="">出站媒体项目限制为 <code>agents.defaults.mediaMaxMb</code>（默认 5 MB）。</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="出站发送文本--媒体">出站发送（文本 + 媒体）<a href="#出站发送文本--媒体" class="hash-link" aria-label="出站发送（文本 + 媒体）的直接链接" title="出站发送（文本 + 媒体）的直接链接" translate="no">​</a></h2>
+<ul>
+<li class="">使用活跃的网络监听器；如果网关未运行则出错。</li>
+<li class="">文本分割：每消息最大 4k（可通过 <code>channels.whatsapp.textChunkLimit</code> 配置，可选 <code>channels.whatsapp.chunkMode</code>）。</li>
+<li class="">媒体：
+<ul>
+<li class="">支持图像/视频/音频/文档。</li>
+<li class="">音频作为 PTT 发送；<code>audio/ogg</code> =&gt; <code>audio/ogg; codecs=opus</code>。</li>
+<li class="">标题仅在第一个媒体项目上。</li>
+<li class="">媒体获取支持 HTTP(S) 和本地路径。</li>
+<li class="">动画 GIF：WhatsApp 期望 MP4 与 <code>gifPlayback: true</code> 用于内联循环播放。
+<ul>
+<li class="">CLI：<code>moltbot message send --media &lt;mp4&gt; --gif-playback</code></li>
+<li class="">网关：<code>send</code> 参数包括 <code>gifPlayback: true</code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="语音笔记ptt-音频">语音笔记（PTT 音频）<a href="#语音笔记ptt-音频" class="hash-link" aria-label="语音笔记（PTT 音频）的直接链接" title="语音笔记（PTT 音频）的直接链接" translate="no">​</a></h2>
+<p>WhatsApp 将音频作为<strong>语音笔记</strong>（PTT 气泡）发送。</p>
+<ul>
+<li class="">最佳结果：OGG/Opus。Moltbot 将 <code>audio/ogg</code> 重写为 <code>audio/ogg; codecs=opus</code>。</li>
+<li class=""><code>[[audio_as_voice]]</code> 对 WhatsApp 被忽略（音频已作为语音笔记发送）。</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="媒体限制--优化">媒体限制 + 优化<a href="#媒体限制--优化" class="hash-link" aria-label="媒体限制 + 优化的直接链接" title="媒体限制 + 优化的直接链接" translate="no">​</a></h2>
+<ul>
+<li class="">默认出站限制：5 MB（每个媒体项目）。</li>
+<li class="">覆盖：<code>agents.defaults.mediaMaxMb</code>。</li>
+<li class="">图像自动优化为低于限制的 JPEG（调整大小 + 质量扫描）。</li>
+<li class="">超大媒体 =&gt; 错误；媒体回复回退到文本警告。</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="心跳">心跳<a href="#心跳" class="hash-link" aria-label="心跳的直接链接" title="心跳的直接链接" translate="no">​</a></h2>
+<ul>
+<li class=""><strong>网关心跳</strong> 记录连接健康状况（<code>web.heartbeatSeconds</code>，默认 60s）。</li>
+<li class=""><strong>代理心跳</strong> 可以按代理配置（<code>agents.list[].heartbeat</code>）或全局
+通过 <code>agents.defaults.heartbeat</code>（当未设置按代理条目时回退）。
+<ul>
+<li class="">使用配置的心跳提示（默认：<code>如果存在 HEARTBEAT.md（工作区上下文）请阅读。严格遵循。不要从之前的聊天中推断或重复旧任务。如果无需关注，回复 HEARTBEAT_OK。</code>）+ <code>HEARTBEAT_OK</code> 跳过行为。</li>
+<li class="">传递默认为最后使用的通道（或配置的目标）。</li>
+</ul>
+</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="重连行为">重连行为<a href="#重连行为" class="hash-link" aria-label="重连行为的直接链接" title="重连行为的直接链接" translate="no">​</a></h2>
+<ul>
+<li class="">退避策略：<code>web.reconnect</code>：
+<ul>
+<li class=""><code>initialMs</code>，<code>maxMs</code>，<code>factor</code>，<code>jitter</code>，<code>maxAttempts</code>。</li>
+</ul>
+</li>
+<li class="">如果达到最大尝试次数，网络监控停止（降级）。</li>
+<li class="">登出 =&gt; 停止并要求重新链接。</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="配置快速映射">配置快速映射<a href="#配置快速映射" class="hash-link" aria-label="配置快速映射的直接链接" title="配置快速映射的直接链接" translate="no">​</a></h2>
+<ul>
+<li class=""><code>channels.whatsapp.dmPolicy</code>（私信策略：配对/允许列表/开放/禁用）。</li>
+<li class=""><code>channels.whatsapp.selfChatMode</code>（同电话设置；机器人使用您的个人 WhatsApp 号码）。</li>
+<li class=""><code>channels.whatsapp.allowFrom</code>（私信允许列表）。WhatsApp 使用 E.164 电话号码（无用户名）。</li>
+<li class=""><code>channels.whatsapp.mediaMaxMb</code>（入站媒体保存限制）。</li>
+<li class=""><code>channels.whatsapp.ackReaction</code>（消息接收时自动反应：<code>{emoji, direct, group}</code>）。</li>
+<li class=""><code>channels.whatsapp.accounts.&lt;accountId&gt;.*</code>（按账户设置 + 可选 <code>authDir</code>）。</li>
+<li class=""><code>channels.whatsapp.accounts.&lt;accountId&gt;.mediaMaxMb</code>（按账户入站媒体限制）。</li>
+<li class=""><code>channels.whatsapp.accounts.&lt;accountId&gt;.ackReaction</code>（按账户确认反应覆盖）。</li>
+<li class=""><code>channels.whatsapp.groupAllowFrom</code>（群组发送者允许列表）。</li>
+<li class=""><code>channels.whatsapp.groupPolicy</code>（群组策略）。</li>
+<li class=""><code>channels.whatsapp.historyLimit</code> / <code>channels.whatsapp.accounts.&lt;accountId&gt;.historyLimit</code>（群组历史上下文；<code>0</code> 禁用）。</li>
+<li class=""><code>channels.whatsapp.dmHistoryLimit</code>（私信历史限制（用户回合））。按用户覆盖：<code>channels.whatsapp.dms[&quot;&lt;phone&gt;&quot;].historyLimit</code>。</li>
+<li class=""><code>channels.whatsapp.groups</code>（群组允许列表 + 提及门控默认值；使用 <code>&quot;*&quot;</code> 允许所有）</li>
+<li class=""><code>channels.whatsapp.actions.reactions</code>（门控 WhatsApp 工具反应）。</li>
+<li class=""><code>agents.list[].groupChat.mentionPatterns</code>（或 <code>messages.groupChat.mentionPatterns</code>）</li>
+<li class=""><code>messages.groupChat.historyLimit</code></li>
+<li class=""><code>channels.whatsapp.messagePrefix</code>（入站前缀；按账户：<code>channels.whatsapp.accounts.&lt;accountId&gt;.messagePrefix</code>；已弃用：<code>messages.messagePrefix</code>）</li>
+<li class=""><code>messages.responsePrefix</code>（出站前缀）</li>
+<li class=""><code>agents.defaults.mediaMaxMb</code></li>
+<li class=""><code>agents.defaults.heartbeat.every</code></li>
+<li class=""><code>agents.defaults.heartbeat.model</code>（可选覆盖）</li>
+<li class=""><code>agents.defaults.heartbeat.target</code></li>
+<li class=""><code>agents.defaults.heartbeat.to</code></li>
+<li class=""><code>agents.defaults.heartbeat.session</code></li>
+<li class=""><code>agents.list[].heartbeat.*</code>（按代理覆盖）</li>
+<li class=""><code>session.*</code>（范围，空闲，存储，主键）</li>
+<li class=""><code>web.enabled</code>（为假时禁用通道启动）</li>
+<li class=""><code>web.heartbeatSeconds</code></li>
+<li class=""><code>web.reconnect.*</code></li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="日志--故障排除">日志 + 故障排除<a href="#日志--故障排除" class="hash-link" aria-label="日志 + 故障排除的直接链接" title="日志 + 故障排除的直接链接" translate="no">​</a></h2>
+<ul>
+<li class="">子系统：<code>whatsapp/inbound</code>，<code>whatsapp/outbound</code>，<code>web-heartbeat</code>，<code>web-reconnect</code>。</li>
+<li class="">日志文件：<code>/tmp/moltbot/moltbot-YYYY-MM-DD.log</code>（可配置）。</li>
+<li class="">故障排除指南：<a class="" href="/moltbot-doc/gateway/troubleshooting">网关故障排除</a>。</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="故障排除快速">故障排除（快速）<a href="#故障排除快速" class="hash-link" aria-label="故障排除（快速）的直接链接" title="故障排除（快速）的直接链接" translate="no">​</a></h2>
+<p><strong>未链接 / 需要 QR 登录</strong></p>
+<ul>
+<li class="">症状：<code>channels status</code> 显示 <code>linked: false</code> 或警告&quot;未链接&quot;。</li>
+<li class="">修复：在网关主机上运行 <code>moltbot channels login</code> 并扫描 QR（WhatsApp → 设置 → 已连接的设备）。</li>
+</ul>
+<p><strong>已链接但断开连接 / 重连循环</strong></p>
+<ul>
+<li class="">症状：<code>channels status</code> 显示 <code>running, disconnected</code> 或警告&quot;已链接但断开连接&quot;。</li>
+<li class="">修复：<code>moltbot doctor</code>（或重启网关）。如果持续，请通过 <code>channels login</code> 重新链接并检查 <code>moltbot logs --follow</code>。</li>
+</ul>
+<p><strong>Bun 运行时</strong></p>
+<ul>
+<li class="">不推荐<strong>Bun</strong>。WhatsApp（Baileys）和 Telegram 在 Bun 上不可靠。
+使用<strong>Node</strong>运行网关。（参见入门运行时说明。）</li>
+</ul></div></article><nav class="docusaurus-mt-lg pagination-nav" aria-label="文件选项卡"></nav></div></div><div class="col col--3"><div class="tocWrapper_xKoj"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#快速设置初学者" class="table-of-contents__link toc-highlight">快速设置（初学者）</a></li><li><a href="#目标" class="table-of-contents__link toc-highlight">目标</a></li><li><a href="#配置写入" class="table-of-contents__link toc-highlight">配置写入</a></li><li><a href="#架构谁拥有什么" class="table-of-contents__link toc-highlight">架构（谁拥有什么）</a></li><li><a href="#获取电话号码两种模式" class="table-of-contents__link toc-highlight">获取电话号码（两种模式）</a><ul><li><a href="#专用号码推荐" class="table-of-contents__link toc-highlight">专用号码（推荐）</a></li><li><a href="#个人号码回退" class="table-of-contents__link toc-highlight">个人号码（回退）</a></li><li><a href="#号码获取技巧" class="table-of-contents__link toc-highlight">号码获取技巧</a></li></ul></li><li><a href="#为什么不使用-twilio" class="table-of-contents__link toc-highlight">为什么不使用 Twilio？</a></li><li><a href="#登录--凭据" class="table-of-contents__link toc-highlight">登录 + 凭据</a></li><li><a href="#入站流程私信--群组" class="table-of-contents__link toc-highlight">入站流程（私信 + 群组）</a><ul><li><a href="#个人号码模式回退" class="table-of-contents__link toc-highlight">个人号码模式（回退）</a></li></ul></li><li><a href="#已读回执" class="table-of-contents__link toc-highlight">已读回执</a></li><li><a href="#whatsapp-faq发送消息--配对" class="table-of-contents__link toc-highlight">WhatsApp FAQ：发送消息 + 配对</a></li><li><a href="#消息规范化模型看到的内容" class="table-of-contents__link toc-highlight">消息规范化（模型看到的内容）</a></li><li><a href="#群组" class="table-of-contents__link toc-highlight">群组</a></li><li><a href="#回复传递线程" class="table-of-contents__link toc-highlight">回复传递（线程）</a></li><li><a href="#确认反应接收时自动反应" class="table-of-contents__link toc-highlight">确认反应（接收时自动反应）</a></li><li><a href="#代理工具反应" class="table-of-contents__link toc-highlight">代理工具（反应）</a></li><li><a href="#限制" class="table-of-contents__link toc-highlight">限制</a></li><li><a href="#出站发送文本--媒体" class="table-of-contents__link toc-highlight">出站发送（文本 + 媒体）</a></li><li><a href="#语音笔记ptt-音频" class="table-of-contents__link toc-highlight">语音笔记（PTT 音频）</a></li><li><a href="#媒体限制--优化" class="table-of-contents__link toc-highlight">媒体限制 + 优化</a></li><li><a href="#心跳" class="table-of-contents__link toc-highlight">心跳</a></li><li><a href="#重连行为" class="table-of-contents__link toc-highlight">重连行为</a></li><li><a href="#配置快速映射" class="table-of-contents__link toc-highlight">配置快速映射</a></li><li><a href="#日志--故障排除" class="table-of-contents__link toc-highlight">日志 + 故障排除</a></li><li><a href="#故障排除快速" class="table-of-contents__link toc-highlight">故障排除（快速）</a></li></ul></div><div class="tocFooter_Fu2z"><div class="themeGroup_RzWV" role="group" aria-label="Theme"><button class="themeBtn_tGr6" aria-label="Light theme" title="Light"><svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor" aria-hidden="true"><path d="M12 18a6 6 0 1 1 0-12 6 6 0 0 1 0 12zm0-2a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM11 1h2v3h-2V1zm0 19h2v3h-2v-3zM3.515 4.929l1.414-1.414L7.05 5.636 5.636 7.05 3.515 4.93zM16.95 18.364l1.414-1.414 2.121 2.121-1.414 1.414-2.121-2.121zm2.121-14.85l1.414 1.415-2.121 2.121-1.414-1.414 2.121-2.121zM5.636 16.95l1.414 1.414-2.121 2.121-1.414-1.414 2.121-2.121zM23 11v2h-3v-2h3zM4 11v2H1v-2h3z"></path></svg></button><button class="themeBtn_tGr6 themeBtnActive_A6tm" aria-label="Dark theme" title="Dark"><svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor" aria-hidden="true"><path d="M11.38 2.019a7.5 7.5 0 1 0 10.6 10.6C21.83 17.963 17.315 22 12.002 22 6.477 22 2 17.523 2 12c0-5.314 4.038-9.827 9.38-10.28z"></path></svg></button></div></div></div></div></div></div></main></div></div></div><footer class="theme-layout-footer footer footer--dark"><div class="container container-fluid"><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2026 Moltbot Docs.</div></div></div></footer></div>
+</body>
+</html>

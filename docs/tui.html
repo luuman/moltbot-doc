@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="zh" dir="ltr" class="docs-wrapper plugin-docs plugin-id-default docs-version-current docs-doc-page docs-doc-id-tui" data-has-hydrated="false">
+<head>
+<meta charset="UTF-8">
+<meta name="generator" content="Docusaurus v3.9.2">
+<title data-rh="true">TUI (终端 UI) | Moltbot Docs</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:url" content="https://luuman.github.io/moltbot-doc/docs/tui"><meta data-rh="true" property="og:locale" content="zh"><meta data-rh="true" name="docusaurus_locale" content="zh"><meta data-rh="true" name="docsearch:language" content="zh"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="TUI (终端 UI) | Moltbot Docs"><meta data-rh="true" name="description" content="快速开始"><meta data-rh="true" property="og:description" content="快速开始"><link data-rh="true" rel="icon" href="/moltbot-doc/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://luuman.github.io/moltbot-doc/docs/tui"><link data-rh="true" rel="alternate" href="https://luuman.github.io/moltbot-doc/docs/tui" hreflang="zh"><link data-rh="true" rel="alternate" href="https://luuman.github.io/moltbot-doc/docs/tui" hreflang="x-default"><link rel="alternate" type="application/rss+xml" href="/moltbot-doc/blog/rss.xml" title="Moltbot Docs RSS Feed">
+<link rel="alternate" type="application/atom+xml" href="/moltbot-doc/blog/atom.xml" title="Moltbot Docs Atom Feed"><link rel="stylesheet" href="/moltbot-doc/assets/css/styles.484b4c98.css">
+<script src="/moltbot-doc/assets/js/runtime~main.6cf495cf.js" defer="defer"></script>
+<script src="/moltbot-doc/assets/js/main.f9205183.js" defer="defer"></script>
+</head>
+<body class="navigation-with-keyboard">
+<svg style="display: none;"><defs>
+<symbol id="theme-svg-external-link" viewBox="0 0 24 24"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"/></symbol>
+</defs></svg>
+<script>!function(){var t=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme")}catch(t){}}();document.documentElement.setAttribute("data-theme",t||"dark"),document.documentElement.setAttribute("data-theme-choice",t||"dark")}(),function(){try{const c=new URLSearchParams(window.location.search).entries();for(var[t,e]of c)if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id="__docusaurus"><div role="region" aria-label="跳到主要内容"><a class="skipToContent_fXgn" href="#__docusaurus_skipToContent_fallback">跳到主要内容</a></div><nav class="navbar navbar--fixed-top navbar_MONK" role="navigation" aria-label="Main"><div class="navbarInner_ASTH"><div class="navbarLeft_pUmY"><button aria-label="切换导航栏" aria-expanded="false" class="navbar__toggle clean-btn" type="button"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg></button><a class="brand_SXL9" href="/moltbot-doc/"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="24" height="24" rx="6" fill="var(--ifm-color-primary)"></rect><path d="M7 8.5h10M7 12h7M7 15.5h10" stroke="white" stroke-width="1.8" stroke-linecap="round"></path></svg><span class="brandTitle_XbyU">Moltbot</span></a><div class="dropdown_GrgZ"><button class="dropdownToggle_Nf_z">全部站点<svg class="dropdownArrow_Eka8" viewBox="0 0 12 12" fill="none"><path d="M2 4l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg></button><ul class="dropdownMenu_zsxH"><li><a href="https://luuman.github.io/docs-workspace/docs" class="dropdownMenuItem_VBaP">Workspace</a></li><li><a href="https://luuman.github.io/claude-doc/docs" class="dropdownMenuItem_VBaP">Claude</a></li><li><a href="https://luuman.github.io/electron-doc/docs" class="dropdownMenuItem_VBaP">Electron</a></li><li><a href="https://luuman.github.io/tauri-doc/docs" class="dropdownMenuItem_VBaP">Tauri</a></li><li><a href="https://luuman.github.io/matrx-doc/docs" class="dropdownMenuItem_VBaP">Matrx</a></li><li><a href="https://luuman.github.io/brainboard-doc/docs" class="dropdownMenuItem_VBaP">Brainboard</a></li><li><a href="https://luuman.github.io/synology-doc/docs" class="dropdownMenuItem_VBaP">Synology</a></li><li><a href="https://luuman.github.io/codex-doc/docs" class="dropdownMenuItem_VBaP">Codex</a></li><li><a href="https://luuman.github.io/ai-doc/docs" class="dropdownMenuItem_VBaP">AI</a></li></ul></div></div><div class="navbarCenter_Zdr3"><div class="root_OF3s"><span class="icon_UcOK" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor" width="15" height="15"><path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"></path></svg></span><div class="slot__FGx"><div class="navbar__search searchBarContainer_NW3z" dir="ltr"><input placeholder="搜索" aria-label="Search" class="navbar__search-input searchInput_YFbd" value=""><div class="loadingRing_RJI3 searchBarLoadingRing_YnHq"><div></div><div></div><div></div><div></div></div></div></div></div></div><div class="navbarRight_q16u"><a class="navLink_RnnM" href="/moltbot-doc/docs">Docs</a><a class="navLink_RnnM" href="/moltbot-doc/blog">Blog</a><button class="themeToggle_zD_x" aria-label="Switch to light theme" title="Light"><svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M12 18a6 6 0 1 1 0-12 6 6 0 0 1 0 12zm0-2a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM11 1h2v3h-2V1zm0 19h2v3h-2v-3zM3.515 4.929l1.414-1.414L7.05 5.636 5.636 7.05 3.515 4.93zM16.95 18.364l1.414-1.414 2.121 2.121-1.414 1.414-2.121-2.121zm2.121-14.85l1.414 1.415-2.121 2.121-1.414-1.414 2.121-2.121zM5.636 16.95l1.414 1.414-2.121 2.121-1.414-1.414 2.121-2.121zM23 11v2h-3v-2h3zM4 11v2H1v-2h3z"></path></svg></button></div></div></nav><div id="__docusaurus_skipToContent_fallback" class="theme-layout-main main-wrapper mainWrapper_z2l0"><div class="docsWrapper_hBAB"><button aria-label="回到顶部" class="clean-btn theme-back-to-top-button backToTopButton_sjWU" type="button"></button><div class="docRoot_UBD9"><main class="docMainContainer_TBSr docMainContainerEnhanced_lQrH"><div class="container padding-top--md padding-bottom--lg"><div class="row"><div class="col docItemCol_VOVn"><div class="docItemContainer_Djhp"><article><div class="tocCollapsible_ETCw theme-doc-toc-mobile tocMobile_ITEo"><button type="button" class="clean-btn tocCollapsibleButton_TO0P">本页总览</button></div><div class="theme-doc-markdown markdown"><header><h1>TUI (终端 UI)</h1></header>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="快速开始">快速开始<a href="#快速开始" class="hash-link" aria-label="快速开始的直接链接" title="快速开始的直接链接" translate="no">​</a></h2>
+<ol>
+<li class="">启动网关。</li>
+</ol>
+<div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#D6DEEB;--prism-background-color:#001122"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#D6DEEB;background-color:#001122"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#D6DEEB"><span class="token plain">moltbot gateway</span><br></span></code></pre></div></div>
+<ol start="2">
+<li class="">打开 TUI。</li>
+</ol>
+<div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#D6DEEB;--prism-background-color:#001122"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#D6DEEB;background-color:#001122"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#D6DEEB"><span class="token plain">moltbot tui</span><br></span></code></pre></div></div>
+<ol start="3">
+<li class="">输入消息并按 Enter。</li>
+</ol>
+<p>远程网关：</p>
+<div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#D6DEEB;--prism-background-color:#001122"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#D6DEEB;background-color:#001122"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#D6DEEB"><span class="token plain">moltbot tui --url ws://&lt;host&gt;:&lt;port&gt; --token &lt;gateway-token&gt;</span><br></span></code></pre></div></div>
+<p>如果您的网关使用密码认证，请使用 <code>--password</code>。</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="您看到的内容">您看到的内容<a href="#您看到的内容" class="hash-link" aria-label="您看到的内容的直接链接" title="您看到的内容的直接链接" translate="no">​</a></h2>
+<ul>
+<li class="">页眉：连接 URL、当前代理、当前会话。</li>
+<li class="">聊天日志：用户消息、助手回复、系统通知、工具卡片。</li>
+<li class="">状态行：连接/运行状态（连接中、运行中、流式传输、空闲、错误）。</li>
+<li class="">页脚：连接状态 + 代理 + 会话 + 模型 + 思考/详细/推理 + token 数量 + 传送。</li>
+<li class="">输入：具有自动补全功能的文本编辑器。</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="心智模型代理--会话">心智模型：代理 + 会话<a href="#心智模型代理--会话" class="hash-link" aria-label="心智模型：代理 + 会话的直接链接" title="心智模型：代理 + 会话的直接链接" translate="no">​</a></h2>
+<ul>
+<li class="">代理是唯一的标识符（例如 <code>main</code>、<code>research</code>）。网关公开此列表。</li>
+<li class="">会话属于当前代理。</li>
+<li class="">会话键存储为 <code>agent:&lt;agentId&gt;:&lt;sessionKey&gt;</code>。
+<ul>
+<li class="">如果您输入 <code>/session main</code>，TUI 将其展开为 <code>agent:&lt;currentAgent&gt;:main</code>。</li>
+<li class="">如果您输入 <code>/session agent:other:main</code>，您显式切换到该代理会话。</li>
+</ul>
+</li>
+<li class="">会话范围：
+<ul>
+<li class=""><code>per-sender</code>（默认）：每个代理有多个会话。</li>
+<li class=""><code>global</code>：TUI 始终使用 <code>global</code> 会话（选择器可能是空的）。</li>
+</ul>
+</li>
+<li class="">当前代理 + 会话始终在页脚中可见。</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="发送--传送">发送 + 传送<a href="#发送--传送" class="hash-link" aria-label="发送 + 传送的直接链接" title="发送 + 传送的直接链接" translate="no">​</a></h2>
+<ul>
+<li class="">消息发送到网关；默认情况下传送至提供者处于关闭状态。</li>
+<li class="">开启传送：
+<ul>
+<li class=""><code>/deliver on</code></li>
+<li class="">或设置面板</li>
+<li class="">或使用 <code>moltbot tui --deliver</code> 启动</li>
+</ul>
+</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="选择器--覆盖层">选择器 + 覆盖层<a href="#选择器--覆盖层" class="hash-link" aria-label="选择器 + 覆盖层的直接链接" title="选择器 + 覆盖层的直接链接" translate="no">​</a></h2>
+<ul>
+<li class="">模型选择器：列出可用模型并设置会话覆盖。</li>
+<li class="">代理选择器：选择不同的代理。</li>
+<li class="">会话选择器：仅显示当前代理的会话。</li>
+<li class="">设置：切换传送、工具输出展开和思考可见性。</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="键盘快捷键">键盘快捷键<a href="#键盘快捷键" class="hash-link" aria-label="键盘快捷键的直接链接" title="键盘快捷键的直接链接" translate="no">​</a></h2>
+<ul>
+<li class="">Enter：发送消息</li>
+<li class="">Esc：中止活动运行</li>
+<li class="">Ctrl+C：清除输入（按两次退出）</li>
+<li class="">Ctrl+D：退出</li>
+<li class="">Ctrl+L：模型选择器</li>
+<li class="">Ctrl+G：代理选择器</li>
+<li class="">Ctrl+P：会话选择器</li>
+<li class="">Ctrl+O：切换工具输出展开</li>
+<li class="">Ctrl+T：切换思考可见性（重新加载历史记录）</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="斜杠命令">斜杠命令<a href="#斜杠命令" class="hash-link" aria-label="斜杠命令的直接链接" title="斜杠命令的直接链接" translate="no">​</a></h2>
+<p>核心：</p>
+<ul>
+<li class=""><code>/help</code></li>
+<li class=""><code>/status</code></li>
+<li class=""><code>/agent &lt;id&gt;</code> (或 <code>/agents</code>)</li>
+<li class=""><code>/session &lt;key&gt;</code> (或 <code>/sessions</code>)</li>
+<li class=""><code>/model &lt;provider/model&gt;</code> (或 <code>/models</code>)</li>
+</ul>
+<p>会话控制：</p>
+<ul>
+<li class=""><code>/think &lt;off|minimal|low|medium|high&gt;</code></li>
+<li class=""><code>/verbose &lt;on|full|off&gt;</code></li>
+<li class=""><code>/reasoning &lt;on|off|stream&gt;</code></li>
+<li class=""><code>/usage &lt;off|tokens|full&gt;</code></li>
+<li class=""><code>/elevated &lt;on|off|ask|full&gt;</code> (别名: <code>/elev</code>)</li>
+<li class=""><code>/activation &lt;mention|always&gt;</code></li>
+<li class=""><code>/deliver &lt;on|off&gt;</code></li>
+</ul>
+<p>会话生命周期：</p>
+<ul>
+<li class=""><code>/new</code> 或 <code>/reset</code>（重置会话）</li>
+<li class=""><code>/abort</code>（中止活动运行）</li>
+<li class=""><code>/settings</code></li>
+<li class=""><code>/exit</code></li>
+</ul>
+<p>其他网关斜杠命令（例如 <code>/context</code>）被转发到网关并显示为系统输出。请参见 <a class="" href="/moltbot-doc/tools/slash-commands">斜杠命令</a>。</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="本地-shell-命令">本地 shell 命令<a href="#本地-shell-命令" class="hash-link" aria-label="本地 shell 命令的直接链接" title="本地 shell 命令的直接链接" translate="no">​</a></h2>
+<ul>
+<li class="">以 <code>!</code> 为前缀的行在 TUI 主机上运行本地 shell 命令。</li>
+<li class="">TUI 每个会话提示一次以允许本地执行；拒绝则在会话期间保持 <code>!</code> 禁用。</li>
+<li class="">命令在 TUI 工作目录中的一个全新的非交互式 shell 中运行（无持久的 <code>cd</code>/env）。</li>
+<li class="">单独的 <code>!</code> 作为普通消息发送；前导空格不会触发本地执行。</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="工具输出">工具输出<a href="#工具输出" class="hash-link" aria-label="工具输出的直接链接" title="工具输出的直接链接" translate="no">​</a></h2>
+<ul>
+<li class="">工具调用显示为带有参数 + 结果的卡片。</li>
+<li class="">Ctrl+O 在折叠/展开视图之间切换。</li>
+<li class="">工具运行时，部分更新流式传输到同一张卡片中。</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="历史记录--流式传输">历史记录 + 流式传输<a href="#历史记录--流式传输" class="hash-link" aria-label="历史记录 + 流式传输的直接链接" title="历史记录 + 流式传输的直接链接" translate="no">​</a></h2>
+<ul>
+<li class="">连接时，TUI 加载最新历史记录（默认 200 条消息）。</li>
+<li class="">流式响应就地更新直到完成。</li>
+<li class="">TUI 还监听代理工具事件以获得更丰富的工具卡片。</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="连接详情">连接详情<a href="#连接详情" class="hash-link" aria-label="连接详情的直接链接" title="连接详情的直接链接" translate="no">​</a></h2>
+<ul>
+<li class="">TUI 以 <code>mode: &quot;tui&quot;</code> 向网关注册。</li>
+<li class="">重新连接显示系统消息；事件间隙在日志中显示。</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="选项">选项<a href="#选项" class="hash-link" aria-label="选项的直接链接" title="选项的直接链接" translate="no">​</a></h2>
+<ul>
+<li class=""><code>--url &lt;url&gt;</code>：网关 WebSocket URL（默认为配置或 <code>ws://127.0.0.1:&lt;port&gt;</code>）</li>
+<li class=""><code>--token &lt;token&gt;</code>：网关令牌（如果需要）</li>
+<li class=""><code>--password &lt;password&gt;</code>：网关密码（如果需要）</li>
+<li class=""><code>--session &lt;key&gt;</code>：会话键（默认：<code>main</code>，或全局范围内为 <code>global</code>）</li>
+<li class=""><code>--deliver</code>：将助手回复传送给提供者（默认关闭）</li>
+<li class=""><code>--thinking &lt;level&gt;</code>：覆盖发送的思考级别</li>
+<li class=""><code>--timeout-ms &lt;ms&gt;</code>：代理超时（毫秒，默认为 <code>agents.defaults.timeoutSeconds</code>）</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="故障排除">故障排除<a href="#故障排除" class="hash-link" aria-label="故障排除的直接链接" title="故障排除的直接链接" translate="no">​</a></h2>
+<p>发送消息后无输出：</p>
+<ul>
+<li class="">在 TUI 中运行 <code>/status</code> 以确认网关已连接且处于空闲/忙碌状态。</li>
+<li class="">检查网关日志：<code>moltbot logs --follow</code>。</li>
+<li class="">确认代理可以运行：<code>moltbot status</code> 和 <code>moltbot models status</code>。</li>
+<li class="">如果您期望在聊天频道中收到消息，请启用传送（<code>/deliver on</code> 或 <code>--deliver</code>）。</li>
+<li class=""><code>--history-limit &lt;n&gt;</code>：要加载的历史记录条目（默认 200）</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="故障排除-1">故障排除<a href="#故障排除-1" class="hash-link" aria-label="故障排除的直接链接" title="故障排除的直接链接" translate="no">​</a></h2>
+<ul>
+<li class=""><code>disconnected</code>：确保网关正在运行且您的 <code>--url/--token/--password</code> 正确。</li>
+<li class="">选择器中无代理：检查 <code>moltbot agents list</code> 和您的路由配置。</li>
+<li class="">会话选择器为空：您可能处于全局范围或尚无会话。</li>
+</ul></div></article><nav class="docusaurus-mt-lg pagination-nav" aria-label="文件选项卡"></nav></div></div><div class="col col--3"><div class="tocWrapper_xKoj"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#快速开始" class="table-of-contents__link toc-highlight">快速开始</a></li><li><a href="#您看到的内容" class="table-of-contents__link toc-highlight">您看到的内容</a></li><li><a href="#心智模型代理--会话" class="table-of-contents__link toc-highlight">心智模型：代理 + 会话</a></li><li><a href="#发送--传送" class="table-of-contents__link toc-highlight">发送 + 传送</a></li><li><a href="#选择器--覆盖层" class="table-of-contents__link toc-highlight">选择器 + 覆盖层</a></li><li><a href="#键盘快捷键" class="table-of-contents__link toc-highlight">键盘快捷键</a></li><li><a href="#斜杠命令" class="table-of-contents__link toc-highlight">斜杠命令</a></li><li><a href="#本地-shell-命令" class="table-of-contents__link toc-highlight">本地 shell 命令</a></li><li><a href="#工具输出" class="table-of-contents__link toc-highlight">工具输出</a></li><li><a href="#历史记录--流式传输" class="table-of-contents__link toc-highlight">历史记录 + 流式传输</a></li><li><a href="#连接详情" class="table-of-contents__link toc-highlight">连接详情</a></li><li><a href="#选项" class="table-of-contents__link toc-highlight">选项</a></li><li><a href="#故障排除" class="table-of-contents__link toc-highlight">故障排除</a></li><li><a href="#故障排除-1" class="table-of-contents__link toc-highlight">故障排除</a></li></ul></div><div class="tocFooter_Fu2z"><div class="themeGroup_RzWV" role="group" aria-label="Theme"><button class="themeBtn_tGr6" aria-label="Light theme" title="Light"><svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor" aria-hidden="true"><path d="M12 18a6 6 0 1 1 0-12 6 6 0 0 1 0 12zm0-2a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM11 1h2v3h-2V1zm0 19h2v3h-2v-3zM3.515 4.929l1.414-1.414L7.05 5.636 5.636 7.05 3.515 4.93zM16.95 18.364l1.414-1.414 2.121 2.121-1.414 1.414-2.121-2.121zm2.121-14.85l1.414 1.415-2.121 2.121-1.414-1.414 2.121-2.121zM5.636 16.95l1.414 1.414-2.121 2.121-1.414-1.414 2.121-2.121zM23 11v2h-3v-2h3zM4 11v2H1v-2h3z"></path></svg></button><button class="themeBtn_tGr6 themeBtnActive_A6tm" aria-label="Dark theme" title="Dark"><svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor" aria-hidden="true"><path d="M11.38 2.019a7.5 7.5 0 1 0 10.6 10.6C21.83 17.963 17.315 22 12.002 22 6.477 22 2 17.523 2 12c0-5.314 4.038-9.827 9.38-10.28z"></path></svg></button></div></div></div></div></div></div></main></div></div></div><footer class="theme-layout-footer footer footer--dark"><div class="container container-fluid"><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2026 Moltbot Docs.</div></div></div></footer></div>
+</body>
+</html>

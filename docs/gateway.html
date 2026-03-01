@@ -1,0 +1,285 @@
+<!doctype html>
+<html lang="zh" dir="ltr" class="docs-wrapper plugin-docs plugin-id-default docs-version-current docs-doc-page docs-doc-id-gateway/index" data-has-hydrated="false">
+<head>
+<meta charset="UTF-8">
+<meta name="generator" content="Docusaurus v3.9.2">
+<title data-rh="true">Gateway service runbook | Moltbot Docs</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:url" content="https://luuman.github.io/moltbot-doc/docs/gateway"><meta data-rh="true" property="og:locale" content="zh"><meta data-rh="true" name="docusaurus_locale" content="zh"><meta data-rh="true" name="docsearch:language" content="zh"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="Gateway service runbook | Moltbot Docs"><meta data-rh="true" name="description" content="Last updated: 2025-12-09"><meta data-rh="true" property="og:description" content="Last updated: 2025-12-09"><link data-rh="true" rel="icon" href="/moltbot-doc/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://luuman.github.io/moltbot-doc/docs/gateway"><link data-rh="true" rel="alternate" href="https://luuman.github.io/moltbot-doc/docs/gateway" hreflang="zh"><link data-rh="true" rel="alternate" href="https://luuman.github.io/moltbot-doc/docs/gateway" hreflang="x-default"><link rel="alternate" type="application/rss+xml" href="/moltbot-doc/blog/rss.xml" title="Moltbot Docs RSS Feed">
+<link rel="alternate" type="application/atom+xml" href="/moltbot-doc/blog/atom.xml" title="Moltbot Docs Atom Feed"><link rel="stylesheet" href="/moltbot-doc/assets/css/styles.484b4c98.css">
+<script src="/moltbot-doc/assets/js/runtime~main.6cf495cf.js" defer="defer"></script>
+<script src="/moltbot-doc/assets/js/main.f9205183.js" defer="defer"></script>
+</head>
+<body class="navigation-with-keyboard">
+<svg style="display: none;"><defs>
+<symbol id="theme-svg-external-link" viewBox="0 0 24 24"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"/></symbol>
+</defs></svg>
+<script>!function(){var t=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme")}catch(t){}}();document.documentElement.setAttribute("data-theme",t||"dark"),document.documentElement.setAttribute("data-theme-choice",t||"dark")}(),function(){try{const c=new URLSearchParams(window.location.search).entries();for(var[t,e]of c)if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id="__docusaurus"><div role="region" aria-label="跳到主要内容"><a class="skipToContent_fXgn" href="#__docusaurus_skipToContent_fallback">跳到主要内容</a></div><nav class="navbar navbar--fixed-top navbar_MONK" role="navigation" aria-label="Main"><div class="navbarInner_ASTH"><div class="navbarLeft_pUmY"><button aria-label="切换导航栏" aria-expanded="false" class="navbar__toggle clean-btn" type="button"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg></button><a class="brand_SXL9" href="/moltbot-doc/"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="24" height="24" rx="6" fill="var(--ifm-color-primary)"></rect><path d="M7 8.5h10M7 12h7M7 15.5h10" stroke="white" stroke-width="1.8" stroke-linecap="round"></path></svg><span class="brandTitle_XbyU">Moltbot</span></a><div class="dropdown_GrgZ"><button class="dropdownToggle_Nf_z">全部站点<svg class="dropdownArrow_Eka8" viewBox="0 0 12 12" fill="none"><path d="M2 4l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg></button><ul class="dropdownMenu_zsxH"><li><a href="https://luuman.github.io/docs-workspace/docs" class="dropdownMenuItem_VBaP">Workspace</a></li><li><a href="https://luuman.github.io/claude-doc/docs" class="dropdownMenuItem_VBaP">Claude</a></li><li><a href="https://luuman.github.io/electron-doc/docs" class="dropdownMenuItem_VBaP">Electron</a></li><li><a href="https://luuman.github.io/tauri-doc/docs" class="dropdownMenuItem_VBaP">Tauri</a></li><li><a href="https://luuman.github.io/matrx-doc/docs" class="dropdownMenuItem_VBaP">Matrx</a></li><li><a href="https://luuman.github.io/brainboard-doc/docs" class="dropdownMenuItem_VBaP">Brainboard</a></li><li><a href="https://luuman.github.io/synology-doc/docs" class="dropdownMenuItem_VBaP">Synology</a></li><li><a href="https://luuman.github.io/codex-doc/docs" class="dropdownMenuItem_VBaP">Codex</a></li><li><a href="https://luuman.github.io/ai-doc/docs" class="dropdownMenuItem_VBaP">AI</a></li></ul></div></div><div class="navbarCenter_Zdr3"><div class="root_OF3s"><span class="icon_UcOK" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor" width="15" height="15"><path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"></path></svg></span><div class="slot__FGx"><div class="navbar__search searchBarContainer_NW3z" dir="ltr"><input placeholder="搜索" aria-label="Search" class="navbar__search-input searchInput_YFbd" value=""><div class="loadingRing_RJI3 searchBarLoadingRing_YnHq"><div></div><div></div><div></div><div></div></div></div></div></div></div><div class="navbarRight_q16u"><a class="navLink_RnnM" href="/moltbot-doc/docs">Docs</a><a class="navLink_RnnM" href="/moltbot-doc/blog">Blog</a><button class="themeToggle_zD_x" aria-label="Switch to light theme" title="Light"><svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M12 18a6 6 0 1 1 0-12 6 6 0 0 1 0 12zm0-2a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM11 1h2v3h-2V1zm0 19h2v3h-2v-3zM3.515 4.929l1.414-1.414L7.05 5.636 5.636 7.05 3.515 4.93zM16.95 18.364l1.414-1.414 2.121 2.121-1.414 1.414-2.121-2.121zm2.121-14.85l1.414 1.415-2.121 2.121-1.414-1.414 2.121-2.121zM5.636 16.95l1.414 1.414-2.121 2.121-1.414-1.414 2.121-2.121zM23 11v2h-3v-2h3zM4 11v2H1v-2h3z"></path></svg></button></div></div></nav><div id="__docusaurus_skipToContent_fallback" class="theme-layout-main main-wrapper mainWrapper_z2l0"><div class="docsWrapper_hBAB"><button aria-label="回到顶部" class="clean-btn theme-back-to-top-button backToTopButton_sjWU" type="button"></button><div class="docRoot_UBD9"><main class="docMainContainer_TBSr docMainContainerEnhanced_lQrH"><div class="container padding-top--md padding-bottom--lg"><div class="row"><div class="col docItemCol_VOVn"><div class="docItemContainer_Djhp"><article><div class="tocCollapsible_ETCw theme-doc-toc-mobile tocMobile_ITEo"><button type="button" class="clean-btn tocCollapsibleButton_TO0P">本页总览</button></div><div class="theme-doc-markdown markdown"><header><h1>Gateway service runbook</h1></header>
+<p>Last updated: 2025-12-09</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="what-it-is">What it is<a href="#what-it-is" class="hash-link" aria-label="What it is的直接链接" title="What it is的直接链接" translate="no">​</a></h2>
+<ul>
+<li class="">The always-on process that owns the single Baileys/Telegram connection and the control/event plane.</li>
+<li class="">Replaces the legacy <code>gateway</code> command. CLI entry point: <code>moltbot gateway</code>.</li>
+<li class="">Runs until stopped; exits non-zero on fatal errors so the supervisor restarts it.</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="how-to-run-local">How to run (local)<a href="#how-to-run-local" class="hash-link" aria-label="How to run (local)的直接链接" title="How to run (local)的直接链接" translate="no">​</a></h2>
+<div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#D6DEEB;--prism-background-color:#001122"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#D6DEEB;background-color:#001122"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#D6DEEB"><span class="token plain">moltbot gateway --port 18789</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain"># for full debug/trace logs in stdio:</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">moltbot gateway --port 18789 --verbose</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain"># if the port is busy, terminate listeners then start:</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">moltbot gateway --force</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain"># dev loop (auto-reload on TS changes):</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">pnpm gateway:watch</span><br></span></code></pre></div></div>
+<ul>
+<li class="">Config hot reload watches <code>~/.clawdbot/moltbot.json</code> (or <code>CLAWDBOT_CONFIG_PATH</code>).
+<ul>
+<li class="">Default mode: <code>gateway.reload.mode=&quot;hybrid&quot;</code> (hot-apply safe changes, restart on critical).</li>
+<li class="">Hot reload uses in-process restart via <strong>SIGUSR1</strong> when needed.</li>
+<li class="">Disable with <code>gateway.reload.mode=&quot;off&quot;</code>.</li>
+</ul>
+</li>
+<li class="">Binds WebSocket control plane to <code>127.0.0.1:&lt;port&gt;</code> (default 18789).</li>
+<li class="">The same port also serves HTTP (control UI, hooks, A2UI). Single-port multiplex.
+<ul>
+<li class="">OpenAI Chat Completions (HTTP): <a class="" href="/moltbot-doc/gateway/openai-http-api"><code>/v1/chat/completions</code></a>.</li>
+<li class="">OpenResponses (HTTP): <a class="" href="/moltbot-doc/gateway/openresponses-http-api"><code>/v1/responses</code></a>.</li>
+<li class="">Tools Invoke (HTTP): <a class="" href="/moltbot-doc/gateway/tools-invoke-http-api"><code>/tools/invoke</code></a>.</li>
+</ul>
+</li>
+<li class="">Starts a Canvas file server by default on <code>canvasHost.port</code> (default <code>18793</code>), serving <code>http://&lt;gateway-host&gt;:18793/__moltbot__/canvas/</code> from <code>~/clawd/canvas</code>. Disable with <code>canvasHost.enabled=false</code> or <code>CLAWDBOT_SKIP_CANVAS_HOST=1</code>.</li>
+<li class="">Logs to stdout; use launchd/systemd to keep it alive and rotate logs.</li>
+<li class="">Pass <code>--verbose</code> to mirror debug logging (handshakes, req/res, events) from the log file into stdio when troubleshooting.</li>
+<li class=""><code>--force</code> uses <code>lsof</code> to find listeners on the chosen port, sends SIGTERM, logs what it killed, then starts the gateway (fails fast if <code>lsof</code> is missing).</li>
+<li class="">If you run under a supervisor (launchd/systemd/mac app child-process mode), a stop/restart typically sends <strong>SIGTERM</strong>; older builds may surface this as <code>pnpm</code> <code>ELIFECYCLE</code> exit code <strong>143</strong> (SIGTERM), which is a normal shutdown, not a crash.</li>
+<li class=""><strong>SIGUSR1</strong> triggers an in-process restart when authorized (gateway tool/config apply/update, or enable <code>commands.restart</code> for manual restarts).</li>
+<li class="">Gateway auth is required by default: set <code>gateway.auth.token</code> (or <code>CLAWDBOT_GATEWAY_TOKEN</code>) or <code>gateway.auth.password</code>. Clients must send <code>connect.params.auth.token/password</code> unless using Tailscale Serve identity.</li>
+<li class="">The wizard now generates a token by default, even on loopback.</li>
+<li class="">Port precedence: <code>--port</code> &gt; <code>CLAWDBOT_GATEWAY_PORT</code> &gt; <code>gateway.port</code> &gt; default <code>18789</code>.</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="remote-access">Remote access<a href="#remote-access" class="hash-link" aria-label="Remote access的直接链接" title="Remote access的直接链接" translate="no">​</a></h2>
+<ul>
+<li class="">Tailscale/VPN preferred; otherwise SSH tunnel:
+<div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#D6DEEB;--prism-background-color:#001122"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#D6DEEB;background-color:#001122"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#D6DEEB"><span class="token plain">ssh -N -L 18789:127.0.0.1:18789 user@host</span><br></span></code></pre></div></div>
+</li>
+<li class="">Clients then connect to <code>ws://127.0.0.1:18789</code> through the tunnel.</li>
+<li class="">If a token is configured, clients must include it in <code>connect.params.auth.token</code> even over the tunnel.</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="multiple-gateways-same-host">Multiple gateways (same host)<a href="#multiple-gateways-same-host" class="hash-link" aria-label="Multiple gateways (same host)的直接链接" title="Multiple gateways (same host)的直接链接" translate="no">​</a></h2>
+<p>Usually unnecessary: one Gateway can serve multiple messaging channels and agents. Use multiple Gateways only for redundancy or strict isolation (ex: rescue bot).</p>
+<p>Supported if you isolate state + config and use unique ports. Full guide: <a class="" href="/moltbot-doc/gateway/multiple-gateways">Multiple gateways</a>.</p>
+<p>Service names are profile-aware:</p>
+<ul>
+<li class="">macOS: <code>bot.molt.&lt;profile&gt;</code> (legacy <code>com.clawdbot.*</code> may still exist)</li>
+<li class="">Linux: <code>moltbot-gateway-&lt;profile&gt;.service</code></li>
+<li class="">Windows: <code>Moltbot Gateway (&lt;profile&gt;)</code></li>
+</ul>
+<p>Install metadata is embedded in the service config:</p>
+<ul>
+<li class=""><code>CLAWDBOT_SERVICE_MARKER=moltbot</code></li>
+<li class=""><code>CLAWDBOT_SERVICE_KIND=gateway</code></li>
+<li class=""><code>CLAWDBOT_SERVICE_VERSION=&lt;version&gt;</code></li>
+</ul>
+<p>Rescue-Bot Pattern: keep a second Gateway isolated with its own profile, state dir, workspace, and base port spacing. Full guide: <a class="" href="/moltbot-doc/gateway/multiple-gateways#rescue-bot-guide">Rescue-bot guide</a>.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="dev-profile---dev">Dev profile (<code>--dev</code>)<a href="#dev-profile---dev" class="hash-link" aria-label="dev-profile---dev的直接链接" title="dev-profile---dev的直接链接" translate="no">​</a></h3>
+<p>Fast path: run a fully-isolated dev instance (config/state/workspace) without touching your primary setup.</p>
+<div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#D6DEEB;--prism-background-color:#001122"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#D6DEEB;background-color:#001122"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#D6DEEB"><span class="token plain">moltbot --dev setup</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">moltbot --dev gateway --allow-unconfigured</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain"># then target the dev instance:</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">moltbot --dev status</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">moltbot --dev health</span><br></span></code></pre></div></div>
+<p>Defaults (can be overridden via env/flags/config):</p>
+<ul>
+<li class=""><code>CLAWDBOT_STATE_DIR=~/.clawdbot-dev</code></li>
+<li class=""><code>CLAWDBOT_CONFIG_PATH=~/.clawdbot-dev/moltbot.json</code></li>
+<li class=""><code>CLAWDBOT_GATEWAY_PORT=19001</code> (Gateway WS + HTTP)</li>
+<li class="">browser control service port = <code>19003</code> (derived: <code>gateway.port+2</code>, loopback only)</li>
+<li class=""><code>canvasHost.port=19005</code> (derived: <code>gateway.port+4</code>)</li>
+<li class=""><code>agents.defaults.workspace</code> default becomes <code>~/clawd-dev</code> when you run <code>setup</code>/<code>onboard</code> under <code>--dev</code>.</li>
+</ul>
+<p>Derived ports (rules of thumb):</p>
+<ul>
+<li class="">Base port = <code>gateway.port</code> (or <code>CLAWDBOT_GATEWAY_PORT</code> / <code>--port</code>)</li>
+<li class="">browser control service port = base + 2 (loopback only)</li>
+<li class=""><code>canvasHost.port = base + 4</code> (or <code>CLAWDBOT_CANVAS_HOST_PORT</code> / config override)</li>
+<li class="">Browser profile CDP ports auto-allocate from <code>browser.controlPort + 9 .. + 108</code> (persisted per profile).</li>
+</ul>
+<p>Checklist per instance:</p>
+<ul>
+<li class="">unique <code>gateway.port</code></li>
+<li class="">unique <code>CLAWDBOT_CONFIG_PATH</code></li>
+<li class="">unique <code>CLAWDBOT_STATE_DIR</code></li>
+<li class="">unique <code>agents.defaults.workspace</code></li>
+<li class="">separate WhatsApp numbers (if using WA)</li>
+</ul>
+<p>Service install per profile:</p>
+<div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#D6DEEB;--prism-background-color:#001122"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#D6DEEB;background-color:#001122"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#D6DEEB"><span class="token plain">moltbot --profile main gateway install</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">moltbot --profile rescue gateway install</span><br></span></code></pre></div></div>
+<p>Example:</p>
+<div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#D6DEEB;--prism-background-color:#001122"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#D6DEEB;background-color:#001122"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#D6DEEB"><span class="token plain">CLAWDBOT_CONFIG_PATH=~/.clawdbot/a.json CLAWDBOT_STATE_DIR=~/.clawdbot-a moltbot gateway --port 19001</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">CLAWDBOT_CONFIG_PATH=~/.clawdbot/b.json CLAWDBOT_STATE_DIR=~/.clawdbot-b moltbot gateway --port 19002</span><br></span></code></pre></div></div>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="protocol-operator-view">Protocol (operator view)<a href="#protocol-operator-view" class="hash-link" aria-label="Protocol (operator view)的直接链接" title="Protocol (operator view)的直接链接" translate="no">​</a></h2>
+<ul>
+<li class="">Full docs: <a class="" href="/moltbot-doc/gateway/protocol">Gateway protocol</a> and <a class="" href="/moltbot-doc/gateway/bridge-protocol">Bridge protocol (legacy)</a>.</li>
+<li class="">Mandatory first frame from client: <code>req {type:&quot;req&quot;, id, method:&quot;connect&quot;, params:{minProtocol,maxProtocol,client:{id,displayName?,version,platform,deviceFamily?,modelIdentifier?,mode,instanceId?}, caps, auth?, locale?, userAgent? } }</code>.</li>
+<li class="">Gateway replies <code>res {type:&quot;res&quot;, id, ok:true, payload:hello-ok }</code> (or <code>ok:false</code> with an error, then closes).</li>
+<li class="">After handshake:
+<ul>
+<li class="">Requests: <code>{type:&quot;req&quot;, id, method, params}</code> → <code>{type:&quot;res&quot;, id, ok, payload|error}</code></li>
+<li class="">Events: <code>{type:&quot;event&quot;, event, payload, seq?, stateVersion?}</code></li>
+</ul>
+</li>
+<li class="">Structured presence entries: <code>{host, ip, version, platform?, deviceFamily?, modelIdentifier?, mode, lastInputSeconds?, ts, reason?, tags?[], instanceId? }</code> (for WS clients, <code>instanceId</code> comes from <code>connect.client.instanceId</code>).</li>
+<li class=""><code>agent</code> responses are two-stage: first <code>res</code> ack <code>{runId,status:&quot;accepted&quot;}</code>, then a final <code>res</code> <code>{runId,status:&quot;ok&quot;|&quot;error&quot;,summary}</code> after the run finishes; streamed output arrives as <code>event:&quot;agent&quot;</code>.</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="methods-initial-set">Methods (initial set)<a href="#methods-initial-set" class="hash-link" aria-label="Methods (initial set)的直接链接" title="Methods (initial set)的直接链接" translate="no">​</a></h2>
+<ul>
+<li class=""><code>health</code> — full health snapshot (same shape as <code>moltbot health --json</code>).</li>
+<li class=""><code>status</code> — short summary.</li>
+<li class=""><code>system-presence</code> — current presence list.</li>
+<li class=""><code>system-event</code> — post a presence/system note (structured).</li>
+<li class=""><code>send</code> — send a message via the active channel(s).</li>
+<li class=""><code>agent</code> — run an agent turn (streams events back on same connection).</li>
+<li class=""><code>node.list</code> — list paired + currently-connected nodes (includes <code>caps</code>, <code>deviceFamily</code>, <code>modelIdentifier</code>, <code>paired</code>, <code>connected</code>, and advertised <code>commands</code>).</li>
+<li class=""><code>node.describe</code> — describe a node (capabilities + supported <code>node.invoke</code> commands; works for paired nodes and for currently-connected unpaired nodes).</li>
+<li class=""><code>node.invoke</code> — invoke a command on a node (e.g. <code>canvas.*</code>, <code>camera.*</code>).</li>
+<li class=""><code>node.pair.*</code> — pairing lifecycle (<code>request</code>, <code>list</code>, <code>approve</code>, <code>reject</code>, <code>verify</code>).</li>
+</ul>
+<p>See also: <a class="" href="/moltbot-doc/concepts/presence">Presence</a> for how presence is produced/deduped and why a stable <code>client.instanceId</code> matters.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="events">Events<a href="#events" class="hash-link" aria-label="Events的直接链接" title="Events的直接链接" translate="no">​</a></h2>
+<ul>
+<li class=""><code>agent</code> — streamed tool/output events from the agent run (seq-tagged).</li>
+<li class=""><code>presence</code> — presence updates (deltas with stateVersion) pushed to all connected clients.</li>
+<li class=""><code>tick</code> — periodic keepalive/no-op to confirm liveness.</li>
+<li class=""><code>shutdown</code> — Gateway is exiting; payload includes <code>reason</code> and optional <code>restartExpectedMs</code>. Clients should reconnect.</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="webchat-integration">WebChat integration<a href="#webchat-integration" class="hash-link" aria-label="WebChat integration的直接链接" title="WebChat integration的直接链接" translate="no">​</a></h2>
+<ul>
+<li class="">WebChat is a native SwiftUI UI that talks directly to the Gateway WebSocket for history, sends, abort, and events.</li>
+<li class="">Remote use goes through the same SSH/Tailscale tunnel; if a gateway token is configured, the client includes it during <code>connect</code>.</li>
+<li class="">macOS app connects via a single WS (shared connection); it hydrates presence from the initial snapshot and listens for <code>presence</code> events to update the UI.</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="typing-and-validation">Typing and validation<a href="#typing-and-validation" class="hash-link" aria-label="Typing and validation的直接链接" title="Typing and validation的直接链接" translate="no">​</a></h2>
+<ul>
+<li class="">Server validates every inbound frame with AJV against JSON Schema emitted from the protocol definitions.</li>
+<li class="">Clients (TS/Swift) consume generated types (TS directly; Swift via the repo’s generator).</li>
+<li class="">Protocol definitions are the source of truth; regenerate schema/models with:
+<ul>
+<li class=""><code>pnpm protocol:gen</code></li>
+<li class=""><code>pnpm protocol:gen:swift</code></li>
+</ul>
+</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="connection-snapshot">Connection snapshot<a href="#connection-snapshot" class="hash-link" aria-label="Connection snapshot的直接链接" title="Connection snapshot的直接链接" translate="no">​</a></h2>
+<ul>
+<li class=""><code>hello-ok</code> includes a <code>snapshot</code> with <code>presence</code>, <code>health</code>, <code>stateVersion</code>, and <code>uptimeMs</code> plus <code>policy {maxPayload,maxBufferedBytes,tickIntervalMs}</code> so clients can render immediately without extra requests.</li>
+<li class=""><code>health</code>/<code>system-presence</code> remain available for manual refresh, but are not required at connect time.</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="error-codes-reserror-shape">Error codes (res.error shape)<a href="#error-codes-reserror-shape" class="hash-link" aria-label="Error codes (res.error shape)的直接链接" title="Error codes (res.error shape)的直接链接" translate="no">​</a></h2>
+<ul>
+<li class="">Errors use <code>{ code, message, details?, retryable?, retryAfterMs? }</code>.</li>
+<li class="">Standard codes:
+<ul>
+<li class=""><code>NOT_LINKED</code> — WhatsApp not authenticated.</li>
+<li class=""><code>AGENT_TIMEOUT</code> — agent did not respond within the configured deadline.</li>
+<li class=""><code>INVALID_REQUEST</code> — schema/param validation failed.</li>
+<li class=""><code>UNAVAILABLE</code> — Gateway is shutting down or a dependency is unavailable.</li>
+</ul>
+</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="keepalive-behavior">Keepalive behavior<a href="#keepalive-behavior" class="hash-link" aria-label="Keepalive behavior的直接链接" title="Keepalive behavior的直接链接" translate="no">​</a></h2>
+<ul>
+<li class=""><code>tick</code> events (or WS ping/pong) are emitted periodically so clients know the Gateway is alive even when no traffic occurs.</li>
+<li class="">Send/agent acknowledgements remain separate responses; do not overload ticks for sends.</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="replay--gaps">Replay / gaps<a href="#replay--gaps" class="hash-link" aria-label="Replay / gaps的直接链接" title="Replay / gaps的直接链接" translate="no">​</a></h2>
+<ul>
+<li class="">Events are not replayed. Clients detect seq gaps and should refresh (<code>health</code> + <code>system-presence</code>) before continuing. WebChat and macOS clients now auto-refresh on gap.</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="supervision-macos-example">Supervision (macOS example)<a href="#supervision-macos-example" class="hash-link" aria-label="Supervision (macOS example)的直接链接" title="Supervision (macOS example)的直接链接" translate="no">​</a></h2>
+<ul>
+<li class="">Use launchd to keep the service alive:
+<ul>
+<li class="">Program: path to <code>moltbot</code></li>
+<li class="">Arguments: <code>gateway</code></li>
+<li class="">KeepAlive: true</li>
+<li class="">StandardOut/Err: file paths or <code>syslog</code></li>
+</ul>
+</li>
+<li class="">On failure, launchd restarts; fatal misconfig should keep exiting so the operator notices.</li>
+<li class="">LaunchAgents are per-user and require a logged-in session; for headless setups use a custom LaunchDaemon (not shipped).
+<ul>
+<li class=""><code>moltbot gateway install</code> writes <code>~/Library/LaunchAgents/bot.molt.gateway.plist</code>
+(or <code>bot.molt.&lt;profile&gt;.plist</code>; legacy <code>com.clawdbot.*</code> is cleaned up).</li>
+<li class=""><code>moltbot doctor</code> audits the LaunchAgent config and can update it to current defaults.</li>
+</ul>
+</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="gateway-service-management-cli">Gateway service management (CLI)<a href="#gateway-service-management-cli" class="hash-link" aria-label="Gateway service management (CLI)的直接链接" title="Gateway service management (CLI)的直接链接" translate="no">​</a></h2>
+<p>Use the Gateway CLI for install/start/stop/restart/status:</p>
+<div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#D6DEEB;--prism-background-color:#001122"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#D6DEEB;background-color:#001122"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#D6DEEB"><span class="token plain">moltbot gateway status</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">moltbot gateway install</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">moltbot gateway stop</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">moltbot gateway restart</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">moltbot logs --follow</span><br></span></code></pre></div></div>
+<p>Notes:</p>
+<ul>
+<li class=""><code>gateway status</code> probes the Gateway RPC by default using the service’s resolved port/config (override with <code>--url</code>).</li>
+<li class=""><code>gateway status --deep</code> adds system-level scans (LaunchDaemons/system units).</li>
+<li class=""><code>gateway status --no-probe</code> skips the RPC probe (useful when networking is down).</li>
+<li class=""><code>gateway status --json</code> is stable for scripts.</li>
+<li class=""><code>gateway status</code> reports <strong>supervisor runtime</strong> (launchd/systemd running) separately from <strong>RPC reachability</strong> (WS connect + status RPC).</li>
+<li class=""><code>gateway status</code> prints config path + probe target to avoid “localhost vs LAN bind” confusion and profile mismatches.</li>
+<li class=""><code>gateway status</code> includes the last gateway error line when the service looks running but the port is closed.</li>
+<li class=""><code>logs</code> tails the Gateway file log via RPC (no manual <code>tail</code>/<code>grep</code> needed).</li>
+<li class="">If other gateway-like services are detected, the CLI warns unless they are Moltbot profile services.
+We still recommend <strong>one gateway per machine</strong> for most setups; use isolated profiles/ports for redundancy or a rescue bot. See <a class="" href="/moltbot-doc/gateway/multiple-gateways">Multiple gateways</a>.
+<ul>
+<li class="">Cleanup: <code>moltbot gateway uninstall</code> (current service) and <code>moltbot doctor</code> (legacy migrations).</li>
+</ul>
+</li>
+<li class=""><code>gateway install</code> is a no-op when already installed; use <code>moltbot gateway install --force</code> to reinstall (profile/env/path changes).</li>
+</ul>
+<p>Bundled mac app:</p>
+<ul>
+<li class="">Moltbot.app can bundle a Node-based gateway relay and install a per-user LaunchAgent labeled
+<code>bot.molt.gateway</code> (or <code>bot.molt.&lt;profile&gt;</code>; legacy <code>com.clawdbot.*</code> labels still unload cleanly).</li>
+<li class="">To stop it cleanly, use <code>moltbot gateway stop</code> (or <code>launchctl bootout gui/$UID/bot.molt.gateway</code>).</li>
+<li class="">To restart, use <code>moltbot gateway restart</code> (or <code>launchctl kickstart -k gui/$UID/bot.molt.gateway</code>).
+<ul>
+<li class=""><code>launchctl</code> only works if the LaunchAgent is installed; otherwise use <code>moltbot gateway install</code> first.</li>
+<li class="">Replace the label with <code>bot.molt.&lt;profile&gt;</code> when running a named profile.</li>
+</ul>
+</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="supervision-systemd-user-unit">Supervision (systemd user unit)<a href="#supervision-systemd-user-unit" class="hash-link" aria-label="Supervision (systemd user unit)的直接链接" title="Supervision (systemd user unit)的直接链接" translate="no">​</a></h2>
+<p>Moltbot installs a <strong>systemd user service</strong> by default on Linux/WSL2. We
+recommend user services for single-user machines (simpler env, per-user config).
+Use a <strong>system service</strong> for multi-user or always-on servers (no lingering
+required, shared supervision).</p>
+<p><code>moltbot gateway install</code> writes the user unit. <code>moltbot doctor</code> audits the
+unit and can update it to match the current recommended defaults.</p>
+<p>Create <code>~/.config/systemd/user/moltbot-gateway[-&lt;profile&gt;].service</code>:</p>
+<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#D6DEEB;--prism-background-color:#001122"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#D6DEEB;background-color:#001122"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#D6DEEB"><span class="token plain">[Unit]</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">Description=Moltbot Gateway (profile: &lt;profile&gt;, v&lt;version&gt;)</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">After=network-online.target</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">Wants=network-online.target</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">[Service]</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">ExecStart=/usr/local/bin/moltbot gateway --port 18789</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">Restart=always</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">RestartSec=5</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">Environment=CLAWDBOT_GATEWAY_TOKEN=</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">WorkingDirectory=/home/youruser</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">[Install]</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">WantedBy=default.target</span><br></span></code></pre></div></div>
+<p>Enable lingering (required so the user service survives logout/idle):</p>
+<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#D6DEEB;--prism-background-color:#001122"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#D6DEEB;background-color:#001122"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#D6DEEB"><span class="token plain">sudo loginctl enable-linger youruser</span><br></span></code></pre></div></div>
+<p>Onboarding runs this on Linux/WSL2 (may prompt for sudo; writes <code>/var/lib/systemd/linger</code>).
+Then enable the service:</p>
+<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#D6DEEB;--prism-background-color:#001122"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#D6DEEB;background-color:#001122"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#D6DEEB"><span class="token plain">systemctl --user enable --now moltbot-gateway[-&lt;profile&gt;].service</span><br></span></code></pre></div></div>
+<p><strong>Alternative (system service)</strong> - for always-on or multi-user servers, you can
+install a systemd <strong>system</strong> unit instead of a user unit (no lingering needed).
+Create <code>/etc/systemd/system/moltbot-gateway[-&lt;profile&gt;].service</code> (copy the unit above,
+switch <code>WantedBy=multi-user.target</code>, set <code>User=</code> + <code>WorkingDirectory=</code>), then:</p>
+<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#D6DEEB;--prism-background-color:#001122"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#D6DEEB;background-color:#001122"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#D6DEEB"><span class="token plain">sudo systemctl daemon-reload</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">sudo systemctl enable --now moltbot-gateway[-&lt;profile&gt;].service</span><br></span></code></pre></div></div>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="windows-wsl2">Windows (WSL2)<a href="#windows-wsl2" class="hash-link" aria-label="Windows (WSL2)的直接链接" title="Windows (WSL2)的直接链接" translate="no">​</a></h2>
+<p>Windows installs should use <strong>WSL2</strong> and follow the Linux systemd section above.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="operational-checks">Operational checks<a href="#operational-checks" class="hash-link" aria-label="Operational checks的直接链接" title="Operational checks的直接链接" translate="no">​</a></h2>
+<ul>
+<li class="">Liveness: open WS and send <code>req:connect</code> → expect <code>res</code> with <code>payload.type=&quot;hello-ok&quot;</code> (with snapshot).</li>
+<li class="">Readiness: call <code>health</code> → expect <code>ok: true</code> and a linked channel in <code>linkChannel</code> (when applicable).</li>
+<li class="">Debug: subscribe to <code>tick</code> and <code>presence</code> events; ensure <code>status</code> shows linked/auth age; presence entries show Gateway host and connected clients.</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="safety-guarantees">Safety guarantees<a href="#safety-guarantees" class="hash-link" aria-label="Safety guarantees的直接链接" title="Safety guarantees的直接链接" translate="no">​</a></h2>
+<ul>
+<li class="">Assume one Gateway per host by default; if you run multiple profiles, isolate ports/state and target the right instance.</li>
+<li class="">No fallback to direct Baileys connections; if the Gateway is down, sends fail fast.</li>
+<li class="">Non-connect first frames or malformed JSON are rejected and the socket is closed.</li>
+<li class="">Graceful shutdown: emit <code>shutdown</code> event before closing; clients must handle close + reconnect.</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="cli-helpers">CLI helpers<a href="#cli-helpers" class="hash-link" aria-label="CLI helpers的直接链接" title="CLI helpers的直接链接" translate="no">​</a></h2>
+<ul>
+<li class=""><code>moltbot gateway health|status</code> — request health/status over the Gateway WS.</li>
+<li class=""><code>moltbot message send --target &lt;num&gt; --message &quot;hi&quot; [--media ...]</code> — send via Gateway (idempotent for WhatsApp).</li>
+<li class=""><code>moltbot agent --message &quot;hi&quot; --to &lt;num&gt;</code> — run an agent turn (waits for final by default).</li>
+<li class=""><code>moltbot gateway call &lt;method&gt; --params &#x27;{&quot;k&quot;:&quot;v&quot;}&#x27;</code> — raw method invoker for debugging.</li>
+<li class=""><code>moltbot gateway stop|restart</code> — stop/restart the supervised gateway service (launchd/systemd).</li>
+<li class="">Gateway helper subcommands assume a running gateway on <code>--url</code>; they no longer auto-spawn one.</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="migration-guidance">Migration guidance<a href="#migration-guidance" class="hash-link" aria-label="Migration guidance的直接链接" title="Migration guidance的直接链接" translate="no">​</a></h2>
+<ul>
+<li class="">Retire uses of <code>moltbot gateway</code> and the legacy TCP control port.</li>
+<li class="">Update clients to speak the WS protocol with mandatory connect and structured presence.</li>
+</ul></div></article><nav class="docusaurus-mt-lg pagination-nav" aria-label="文件选项卡"></nav></div></div><div class="col col--3"><div class="tocWrapper_xKoj"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#what-it-is" class="table-of-contents__link toc-highlight">What it is</a></li><li><a href="#how-to-run-local" class="table-of-contents__link toc-highlight">How to run (local)</a></li><li><a href="#remote-access" class="table-of-contents__link toc-highlight">Remote access</a></li><li><a href="#multiple-gateways-same-host" class="table-of-contents__link toc-highlight">Multiple gateways (same host)</a><ul><li><a href="#dev-profile---dev" class="table-of-contents__link toc-highlight">Dev profile (<code>--dev</code>)</a></li></ul></li><li><a href="#protocol-operator-view" class="table-of-contents__link toc-highlight">Protocol (operator view)</a></li><li><a href="#methods-initial-set" class="table-of-contents__link toc-highlight">Methods (initial set)</a></li><li><a href="#events" class="table-of-contents__link toc-highlight">Events</a></li><li><a href="#webchat-integration" class="table-of-contents__link toc-highlight">WebChat integration</a></li><li><a href="#typing-and-validation" class="table-of-contents__link toc-highlight">Typing and validation</a></li><li><a href="#connection-snapshot" class="table-of-contents__link toc-highlight">Connection snapshot</a></li><li><a href="#error-codes-reserror-shape" class="table-of-contents__link toc-highlight">Error codes (res.error shape)</a></li><li><a href="#keepalive-behavior" class="table-of-contents__link toc-highlight">Keepalive behavior</a></li><li><a href="#replay--gaps" class="table-of-contents__link toc-highlight">Replay / gaps</a></li><li><a href="#supervision-macos-example" class="table-of-contents__link toc-highlight">Supervision (macOS example)</a></li><li><a href="#gateway-service-management-cli" class="table-of-contents__link toc-highlight">Gateway service management (CLI)</a></li><li><a href="#supervision-systemd-user-unit" class="table-of-contents__link toc-highlight">Supervision (systemd user unit)</a></li><li><a href="#windows-wsl2" class="table-of-contents__link toc-highlight">Windows (WSL2)</a></li><li><a href="#operational-checks" class="table-of-contents__link toc-highlight">Operational checks</a></li><li><a href="#safety-guarantees" class="table-of-contents__link toc-highlight">Safety guarantees</a></li><li><a href="#cli-helpers" class="table-of-contents__link toc-highlight">CLI helpers</a></li><li><a href="#migration-guidance" class="table-of-contents__link toc-highlight">Migration guidance</a></li></ul></div><div class="tocFooter_Fu2z"><div class="themeGroup_RzWV" role="group" aria-label="Theme"><button class="themeBtn_tGr6" aria-label="Light theme" title="Light"><svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor" aria-hidden="true"><path d="M12 18a6 6 0 1 1 0-12 6 6 0 0 1 0 12zm0-2a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM11 1h2v3h-2V1zm0 19h2v3h-2v-3zM3.515 4.929l1.414-1.414L7.05 5.636 5.636 7.05 3.515 4.93zM16.95 18.364l1.414-1.414 2.121 2.121-1.414 1.414-2.121-2.121zm2.121-14.85l1.414 1.415-2.121 2.121-1.414-1.414 2.121-2.121zM5.636 16.95l1.414 1.414-2.121 2.121-1.414-1.414 2.121-2.121zM23 11v2h-3v-2h3zM4 11v2H1v-2h3z"></path></svg></button><button class="themeBtn_tGr6 themeBtnActive_A6tm" aria-label="Dark theme" title="Dark"><svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor" aria-hidden="true"><path d="M11.38 2.019a7.5 7.5 0 1 0 10.6 10.6C21.83 17.963 17.315 22 12.002 22 6.477 22 2 17.523 2 12c0-5.314 4.038-9.827 9.38-10.28z"></path></svg></button></div></div></div></div></div></div></main></div></div></div><footer class="theme-layout-footer footer footer--dark"><div class="container container-fluid"><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2026 Moltbot Docs.</div></div></div></footer></div>
+</body>
+</html>

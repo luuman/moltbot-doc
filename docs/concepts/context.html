@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="zh" dir="ltr" class="docs-wrapper plugin-docs plugin-id-default docs-version-current docs-doc-page docs-doc-id-concepts/context" data-has-hydrated="false">
+<head>
+<meta charset="UTF-8">
+<meta name="generator" content="Docusaurus v3.9.2">
+<title data-rh="true">上下文 | Moltbot Docs</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:url" content="https://luuman.github.io/moltbot-doc/docs/concepts/context"><meta data-rh="true" property="og:locale" content="zh"><meta data-rh="true" name="docusaurus_locale" content="zh"><meta data-rh="true" name="docsearch:language" content="zh"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="上下文 | Moltbot Docs"><meta data-rh="true" name="description" content="“上下文”是 Moltbot 发送给模型进行运行的所有内容。它受模型的 上下文窗口（token 限制）限制。"><meta data-rh="true" property="og:description" content="“上下文”是 Moltbot 发送给模型进行运行的所有内容。它受模型的 上下文窗口（token 限制）限制。"><link data-rh="true" rel="icon" href="/moltbot-doc/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://luuman.github.io/moltbot-doc/docs/concepts/context"><link data-rh="true" rel="alternate" href="https://luuman.github.io/moltbot-doc/docs/concepts/context" hreflang="zh"><link data-rh="true" rel="alternate" href="https://luuman.github.io/moltbot-doc/docs/concepts/context" hreflang="x-default"><link rel="alternate" type="application/rss+xml" href="/moltbot-doc/blog/rss.xml" title="Moltbot Docs RSS Feed">
+<link rel="alternate" type="application/atom+xml" href="/moltbot-doc/blog/atom.xml" title="Moltbot Docs Atom Feed"><link rel="stylesheet" href="/moltbot-doc/assets/css/styles.484b4c98.css">
+<script src="/moltbot-doc/assets/js/runtime~main.6cf495cf.js" defer="defer"></script>
+<script src="/moltbot-doc/assets/js/main.f9205183.js" defer="defer"></script>
+</head>
+<body class="navigation-with-keyboard">
+<svg style="display: none;"><defs>
+<symbol id="theme-svg-external-link" viewBox="0 0 24 24"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"/></symbol>
+</defs></svg>
+<script>!function(){var t=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme")}catch(t){}}();document.documentElement.setAttribute("data-theme",t||"dark"),document.documentElement.setAttribute("data-theme-choice",t||"dark")}(),function(){try{const c=new URLSearchParams(window.location.search).entries();for(var[t,e]of c)if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id="__docusaurus"><div role="region" aria-label="跳到主要内容"><a class="skipToContent_fXgn" href="#__docusaurus_skipToContent_fallback">跳到主要内容</a></div><nav class="navbar navbar--fixed-top navbar_MONK" role="navigation" aria-label="Main"><div class="navbarInner_ASTH"><div class="navbarLeft_pUmY"><button aria-label="切换导航栏" aria-expanded="false" class="navbar__toggle clean-btn" type="button"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg></button><a class="brand_SXL9" href="/moltbot-doc/"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="24" height="24" rx="6" fill="var(--ifm-color-primary)"></rect><path d="M7 8.5h10M7 12h7M7 15.5h10" stroke="white" stroke-width="1.8" stroke-linecap="round"></path></svg><span class="brandTitle_XbyU">Moltbot</span></a><div class="dropdown_GrgZ"><button class="dropdownToggle_Nf_z">全部站点<svg class="dropdownArrow_Eka8" viewBox="0 0 12 12" fill="none"><path d="M2 4l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg></button><ul class="dropdownMenu_zsxH"><li><a href="https://luuman.github.io/docs-workspace/docs" class="dropdownMenuItem_VBaP">Workspace</a></li><li><a href="https://luuman.github.io/claude-doc/docs" class="dropdownMenuItem_VBaP">Claude</a></li><li><a href="https://luuman.github.io/electron-doc/docs" class="dropdownMenuItem_VBaP">Electron</a></li><li><a href="https://luuman.github.io/tauri-doc/docs" class="dropdownMenuItem_VBaP">Tauri</a></li><li><a href="https://luuman.github.io/matrx-doc/docs" class="dropdownMenuItem_VBaP">Matrx</a></li><li><a href="https://luuman.github.io/brainboard-doc/docs" class="dropdownMenuItem_VBaP">Brainboard</a></li><li><a href="https://luuman.github.io/synology-doc/docs" class="dropdownMenuItem_VBaP">Synology</a></li><li><a href="https://luuman.github.io/codex-doc/docs" class="dropdownMenuItem_VBaP">Codex</a></li><li><a href="https://luuman.github.io/ai-doc/docs" class="dropdownMenuItem_VBaP">AI</a></li></ul></div></div><div class="navbarCenter_Zdr3"><div class="root_OF3s"><span class="icon_UcOK" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor" width="15" height="15"><path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"></path></svg></span><div class="slot__FGx"><div class="navbar__search searchBarContainer_NW3z" dir="ltr"><input placeholder="搜索" aria-label="Search" class="navbar__search-input searchInput_YFbd" value=""><div class="loadingRing_RJI3 searchBarLoadingRing_YnHq"><div></div><div></div><div></div><div></div></div></div></div></div></div><div class="navbarRight_q16u"><a class="navLink_RnnM" href="/moltbot-doc/docs">Docs</a><a class="navLink_RnnM" href="/moltbot-doc/blog">Blog</a><button class="themeToggle_zD_x" aria-label="Switch to light theme" title="Light"><svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M12 18a6 6 0 1 1 0-12 6 6 0 0 1 0 12zm0-2a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM11 1h2v3h-2V1zm0 19h2v3h-2v-3zM3.515 4.929l1.414-1.414L7.05 5.636 5.636 7.05 3.515 4.93zM16.95 18.364l1.414-1.414 2.121 2.121-1.414 1.414-2.121-2.121zm2.121-14.85l1.414 1.415-2.121 2.121-1.414-1.414 2.121-2.121zM5.636 16.95l1.414 1.414-2.121 2.121-1.414-1.414 2.121-2.121zM23 11v2h-3v-2h3zM4 11v2H1v-2h3z"></path></svg></button></div></div></nav><div id="__docusaurus_skipToContent_fallback" class="theme-layout-main main-wrapper mainWrapper_z2l0"><div class="docsWrapper_hBAB"><button aria-label="回到顶部" class="clean-btn theme-back-to-top-button backToTopButton_sjWU" type="button"></button><div class="docRoot_UBD9"><main class="docMainContainer_TBSr docMainContainerEnhanced_lQrH"><div class="container padding-top--md padding-bottom--lg"><div class="row"><div class="col docItemCol_VOVn"><div class="docItemContainer_Djhp"><article><div class="tocCollapsible_ETCw theme-doc-toc-mobile tocMobile_ITEo"><button type="button" class="clean-btn tocCollapsibleButton_TO0P">本页总览</button></div><div class="theme-doc-markdown markdown"><header><h1>上下文</h1></header>
+<p>“上下文”是 <strong>Moltbot 发送给模型进行运行的所有内容</strong>。它受模型的 <strong>上下文窗口</strong>（token 限制）限制。</p>
+<p>初学者心智模型：</p>
+<ul>
+<li class=""><strong>系统提示</strong>（Moltbot 构建）：规则、工具、技能列表、时间/运行时和注入的工作区文件。</li>
+<li class=""><strong>对话历史</strong>：您的消息 + 此会话的助手消息。</li>
+<li class=""><strong>工具调用/结果 + 附件</strong>：命令输出、文件读取、图像/音频等。</li>
+</ul>
+<p>上下文与“记忆”<em>不是同一回事</em>：记忆可以存储在磁盘上并稍后重新加载；上下文是模型当前窗口内的内容。</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="快速入门检查上下文">快速入门（检查上下文）<a href="#快速入门检查上下文" class="hash-link" aria-label="快速入门（检查上下文）的直接链接" title="快速入门（检查上下文）的直接链接" translate="no">​</a></h2>
+<ul>
+<li class=""><code>/status</code> → 快速“我的窗口有多满？”视图 + 会话设置。</li>
+<li class=""><code>/context list</code> → 注入的内容 + 大致大小（每个文件 + 总计）。</li>
+<li class=""><code>/context detail</code> → 更深入的分解：每个文件、每个工具架构大小、每个技能条目大小和系统提示大小。</li>
+<li class=""><code>/usage tokens</code> → 将每个回复使用情况页脚附加到正常回复。</li>
+<li class=""><code>/compact</code> → 将较旧的历史汇总为紧凑条目以释放窗口空间。</li>
+</ul>
+<p>另见：<a class="" href="/moltbot-doc/tools/slash-commands">斜杠命令</a>，<a class="" href="/moltbot-doc/token-use">Token 使用和成本</a>，<a class="" href="/moltbot-doc/concepts/compaction">压缩</a>。</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="示例输出">示例输出<a href="#示例输出" class="hash-link" aria-label="示例输出的直接链接" title="示例输出的直接链接" translate="no">​</a></h2>
+<p>值因模型、提供商、工具策略和工作区中的内容而异。</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="context-list"><code>/context list</code><a href="#context-list" class="hash-link" aria-label="context-list的直接链接" title="context-list的直接链接" translate="no">​</a></h3>
+<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#D6DEEB;--prism-background-color:#001122"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#D6DEEB;background-color:#001122"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#D6DEEB"><span class="token plain">🧠 上下文分解</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">工作区：&lt;workspaceDir&gt;</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">引导最大/文件：20,000 字符</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">沙盒：模式=非主 沙盒=false</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">系统提示（运行）：38,412 字符（~9,603 tok）（项目上下文 23,901 字符（~5,976 tok））</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">注入的工作区文件：</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">- AGENTS.md：OK | 原始 1,742 字符（~436 tok）| 注入 1,742 字符（~436 tok）</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">- SOUL.md：OK | 原始 912 字符（~228 tok）| 注入 912 字符（~228 tok）</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">- TOOLS.md：截断 | 原始 54,210 字符（~13,553 tok）| 注入 20,962 字符（~5,241 tok）</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">- IDENTITY.md：OK | 原始 211 字符（~53 tok）| 注入 211 字符（~53 tok）</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">- USER.md：OK | 原始 388 字符（~97 tok）| 注入 388 字符（~97 tok）</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">- HEARTBEAT.md：缺失 | 原始 0 | 注入 0</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">- BOOTSTRAP.md：OK | 原始 0 字符（~0 tok）| 注入 0 字符（~0 tok）</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">技能列表（系统提示文本）：2,184 字符（~546 tok）（12 项技能）</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">工具：read, edit, write, exec, process, browser, message, sessions_send, …</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">工具列表（系统提示文本）：1,032 字符（~258 tok）</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">工具架构（JSON）：31,988 字符（~7,997 tok）（计入上下文；不显示为文本）</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">工具：（与上述相同）</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">会话令牌（缓存）：总计 14,250 / ctx=32,000</span><br></span></code></pre></div></div>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="context-detail"><code>/context detail</code><a href="#context-detail" class="hash-link" aria-label="context-detail的直接链接" title="context-detail的直接链接" translate="no">​</a></h3>
+<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#D6DEEB;--prism-background-color:#001122"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#D6DEEB;background-color:#001122"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#D6DEEB"><span class="token plain">🧠 上下文分解（详细）</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">…</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">顶级技能（提示条目大小）：</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">- frontend-design：412 字符（~103 tok）</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">- oracle：401 字符（~101 tok）</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">…（+10 个更多技能）</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">顶级工具（架构大小）：</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">- browser：9,812 字符（~2,453 tok）</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">- exec：6,240 字符（~1,560 tok）</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">…（+N 个更多工具）</span><br></span></code></pre></div></div>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="什么计入上下文窗口">什么计入上下文窗口<a href="#什么计入上下文窗口" class="hash-link" aria-label="什么计入上下文窗口的直接链接" title="什么计入上下文窗口的直接链接" translate="no">​</a></h2>
+<p>模型接收的所有内容都计入，包括：</p>
+<ul>
+<li class="">系统提示（所有部分）。</li>
+<li class="">对话历史。</li>
+<li class="">工具调用 + 工具结果。</li>
+<li class="">附件/记录（图像/音频/文件）。</li>
+<li class="">压缩摘要和修剪工件。</li>
+<li class="">提供商“包装器”或隐藏标头（不可见，仍会计入）。</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="moltbot-如何构建系统提示">Moltbot 如何构建系统提示<a href="#moltbot-如何构建系统提示" class="hash-link" aria-label="Moltbot 如何构建系统提示的直接链接" title="Moltbot 如何构建系统提示的直接链接" translate="no">​</a></h2>
+<p>系统提示是 <strong>Moltbot 拥有的</strong>，并在每次运行时重建。它包括：</p>
+<ul>
+<li class="">工具列表 + 简短描述。</li>
+<li class="">技能列表（仅元数据；见下文）。</li>
+<li class="">工作区位置。</li>
+<li class="">时间（UTC + 配置时转换的用户时间）。</li>
+<li class="">运行时元数据（主机/操作系统/模型/思考）。</li>
+<li class="">在 <strong>项目上下文</strong> 下注入的工作区引导文件。</li>
+</ul>
+<p>完整分解：<a class="" href="/moltbot-doc/concepts/system-prompt">系统提示</a>。</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="注入的工作区文件项目上下文">注入的工作区文件（项目上下文）<a href="#注入的工作区文件项目上下文" class="hash-link" aria-label="注入的工作区文件（项目上下文）的直接链接" title="注入的工作区文件（项目上下文）的直接链接" translate="no">​</a></h2>
+<p>默认情况下，Moltbot 注入一组固定的工区文件（如果存在）：</p>
+<ul>
+<li class=""><code>AGENTS.md</code></li>
+<li class=""><code>SOUL.md</code></li>
+<li class=""><code>TOOLS.md</code></li>
+<li class=""><code>IDENTITY.md</code></li>
+<li class=""><code>USER.md</code></li>
+<li class=""><code>HEARTBEAT.md</code></li>
+<li class=""><code>BOOTSTRAP.md</code>（仅首次运行）</li>
+</ul>
+<p>大型文件按文件截断，使用 <code>agents.defaults.bootstrapMaxChars</code>（默认 <code>20000</code> 字符）。<code>/context</code> 显示 <strong>原始 vs 注入</strong> 大小和是否发生截断。</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="技能注入的内容-vs-按需加载">技能：注入的内容 vs 按需加载<a href="#技能注入的内容-vs-按需加载" class="hash-link" aria-label="技能：注入的内容 vs 按需加载的直接链接" title="技能：注入的内容 vs 按需加载的直接链接" translate="no">​</a></h2>
+<p>系统提示包括一个紧凑的 <strong>技能列表</strong>（名称 + 描述 + 位置）。此列表有实际开销。</p>
+<p>技能说明默认不包含。模型应该只在需要时 <code>read</code> 技能的 <code>SKILL.md</code>。</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="工具有两种成本">工具：有两种成本<a href="#工具有两种成本" class="hash-link" aria-label="工具：有两种成本的直接链接" title="工具：有两种成本的直接链接" translate="no">​</a></h2>
+<p>工具以两种方式影响上下文：</p>
+<ol>
+<li class="">系统提示中的 <strong>工具列表文本</strong>（您看到的“工具”）。</li>
+<li class=""><strong>工具架构</strong>（JSON）。这些被发送给模型，以便它可以调用工具。即使您看不到它们作为纯文本，它们也会计入上下文。</li>
+</ol>
+<p><code>/context detail</code> 分解最大的工具架构，以便您可以看到主导的是什么。</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="命令指令和内联快捷方式">命令、指令和“内联快捷方式”<a href="#命令指令和内联快捷方式" class="hash-link" aria-label="命令、指令和“内联快捷方式”的直接链接" title="命令、指令和“内联快捷方式”的直接链接" translate="no">​</a></h2>
+<p>斜杠命令由网关处理。有几种不同的行为：</p>
+<ul>
+<li class=""><strong>独立命令</strong>：仅 <code>/...</code> 的消息作为命令运行。</li>
+<li class=""><strong>指令</strong>：<code>/think</code>、<code>/verbose</code>、<code>/reasoning</code>、<code>/elevated</code>、<code>/model</code>、<code>/queue</code> 在模型看到消息之前被移除。
+<ul>
+<li class="">仅指令消息保持会话设置。</li>
+<li class="">正常消息中的内联指令作为每消息提示。</li>
+</ul>
+</li>
+<li class=""><strong>内联快捷方式</strong>（仅允许列表发送者）：正常消息中的某些 <code>/...</code> 标记可以立即运行（示例：“嘿 /status”），并在模型看到剩余文本之前被移除。</li>
+</ul>
+<p>详情：<a class="" href="/moltbot-doc/tools/slash-commands">斜杠命令</a>。</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="会话压缩和修剪持久化的内容">会话、压缩和修剪（持久化的内容）<a href="#会话压缩和修剪持久化的内容" class="hash-link" aria-label="会话、压缩和修剪（持久化的内容）的直接链接" title="会话、压缩和修剪（持久化的内容）的直接链接" translate="no">​</a></h2>
+<p>消息间持久化的内容取决于机制：</p>
+<ul>
+<li class=""><strong>普通历史</strong> 在会话记录中持久化，直到按策略压缩/修剪。</li>
+<li class=""><strong>压缩</strong> 将摘要持久化到记录中并保持最近消息不变。</li>
+<li class=""><strong>修剪</strong> 从运行的 <em>内存中</em> 提示中删除旧工具结果，但不会重写记录。</li>
+</ul>
+<p>文档：<a class="" href="/moltbot-doc/concepts/session">会话</a>，<a class="" href="/moltbot-doc/concepts/compaction">压缩</a>，<a class="" href="/moltbot-doc/concepts/session-pruning">会话修剪</a>。</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="context-实际报告的内容"><code>/context</code> 实际报告的内容<a href="#context-实际报告的内容" class="hash-link" aria-label="context-实际报告的内容的直接链接" title="context-实际报告的内容的直接链接" translate="no">​</a></h2>
+<p><code>/context</code> 优先使用最新的 <strong>运行构建</strong> 系统提示报告（如果可用）：</p>
+<ul>
+<li class=""><code>系统提示（运行）</code> = 从最后一个嵌入（具有工具能力）运行捕获并保留在会话存储中。</li>
+<li class=""><code>系统提示（估计）</code> = 在没有运行报告时（或在不生成报告的 CLI 后端运行时）动态计算。</li>
+</ul>
+<p>无论哪种方式，它都报告大小和主要贡献者；它 <strong>不</strong> 转储完整的系统提示或工具架构。</p></div></article><nav class="docusaurus-mt-lg pagination-nav" aria-label="文件选项卡"></nav></div></div><div class="col col--3"><div class="tocWrapper_xKoj"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#快速入门检查上下文" class="table-of-contents__link toc-highlight">快速入门（检查上下文）</a></li><li><a href="#示例输出" class="table-of-contents__link toc-highlight">示例输出</a><ul><li><a href="#context-list" class="table-of-contents__link toc-highlight"><code>/context list</code></a></li><li><a href="#context-detail" class="table-of-contents__link toc-highlight"><code>/context detail</code></a></li></ul></li><li><a href="#什么计入上下文窗口" class="table-of-contents__link toc-highlight">什么计入上下文窗口</a></li><li><a href="#moltbot-如何构建系统提示" class="table-of-contents__link toc-highlight">Moltbot 如何构建系统提示</a></li><li><a href="#注入的工作区文件项目上下文" class="table-of-contents__link toc-highlight">注入的工作区文件（项目上下文）</a></li><li><a href="#技能注入的内容-vs-按需加载" class="table-of-contents__link toc-highlight">技能：注入的内容 vs 按需加载</a></li><li><a href="#工具有两种成本" class="table-of-contents__link toc-highlight">工具：有两种成本</a></li><li><a href="#命令指令和内联快捷方式" class="table-of-contents__link toc-highlight">命令、指令和“内联快捷方式”</a></li><li><a href="#会话压缩和修剪持久化的内容" class="table-of-contents__link toc-highlight">会话、压缩和修剪（持久化的内容）</a></li><li><a href="#context-实际报告的内容" class="table-of-contents__link toc-highlight"><code>/context</code> 实际报告的内容</a></li></ul></div><div class="tocFooter_Fu2z"><div class="themeGroup_RzWV" role="group" aria-label="Theme"><button class="themeBtn_tGr6" aria-label="Light theme" title="Light"><svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor" aria-hidden="true"><path d="M12 18a6 6 0 1 1 0-12 6 6 0 0 1 0 12zm0-2a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM11 1h2v3h-2V1zm0 19h2v3h-2v-3zM3.515 4.929l1.414-1.414L7.05 5.636 5.636 7.05 3.515 4.93zM16.95 18.364l1.414-1.414 2.121 2.121-1.414 1.414-2.121-2.121zm2.121-14.85l1.414 1.415-2.121 2.121-1.414-1.414 2.121-2.121zM5.636 16.95l1.414 1.414-2.121 2.121-1.414-1.414 2.121-2.121zM23 11v2h-3v-2h3zM4 11v2H1v-2h3z"></path></svg></button><button class="themeBtn_tGr6 themeBtnActive_A6tm" aria-label="Dark theme" title="Dark"><svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor" aria-hidden="true"><path d="M11.38 2.019a7.5 7.5 0 1 0 10.6 10.6C21.83 17.963 17.315 22 12.002 22 6.477 22 2 17.523 2 12c0-5.314 4.038-9.827 9.38-10.28z"></path></svg></button></div></div></div></div></div></div></main></div></div></div><footer class="theme-layout-footer footer footer--dark"><div class="container container-fluid"><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2026 Moltbot Docs.</div></div></div></footer></div>
+</body>
+</html>

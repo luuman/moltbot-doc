@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="zh" dir="ltr" class="docs-wrapper plugin-docs plugin-id-default docs-version-current docs-doc-page docs-doc-id-concepts/models" data-has-hydrated="false">
+<head>
+<meta charset="UTF-8">
+<meta name="generator" content="Docusaurus v3.9.2">
+<title data-rh="true">Models CLI | Moltbot Docs</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:url" content="https://luuman.github.io/moltbot-doc/docs/concepts/models"><meta data-rh="true" property="og:locale" content="zh"><meta data-rh="true" name="docusaurus_locale" content="zh"><meta data-rh="true" name="docsearch:language" content="zh"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="Models CLI | Moltbot Docs"><meta data-rh="true" name="description" content="See /concepts/model-failover for auth profile"><meta data-rh="true" property="og:description" content="See /concepts/model-failover for auth profile"><link data-rh="true" rel="icon" href="/moltbot-doc/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://luuman.github.io/moltbot-doc/docs/concepts/models"><link data-rh="true" rel="alternate" href="https://luuman.github.io/moltbot-doc/docs/concepts/models" hreflang="zh"><link data-rh="true" rel="alternate" href="https://luuman.github.io/moltbot-doc/docs/concepts/models" hreflang="x-default"><link rel="alternate" type="application/rss+xml" href="/moltbot-doc/blog/rss.xml" title="Moltbot Docs RSS Feed">
+<link rel="alternate" type="application/atom+xml" href="/moltbot-doc/blog/atom.xml" title="Moltbot Docs Atom Feed"><link rel="stylesheet" href="/moltbot-doc/assets/css/styles.484b4c98.css">
+<script src="/moltbot-doc/assets/js/runtime~main.6cf495cf.js" defer="defer"></script>
+<script src="/moltbot-doc/assets/js/main.f9205183.js" defer="defer"></script>
+</head>
+<body class="navigation-with-keyboard">
+<svg style="display: none;"><defs>
+<symbol id="theme-svg-external-link" viewBox="0 0 24 24"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"/></symbol>
+</defs></svg>
+<script>!function(){var t=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme")}catch(t){}}();document.documentElement.setAttribute("data-theme",t||"dark"),document.documentElement.setAttribute("data-theme-choice",t||"dark")}(),function(){try{const c=new URLSearchParams(window.location.search).entries();for(var[t,e]of c)if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id="__docusaurus"><div role="region" aria-label="跳到主要内容"><a class="skipToContent_fXgn" href="#__docusaurus_skipToContent_fallback">跳到主要内容</a></div><nav class="navbar navbar--fixed-top navbar_MONK" role="navigation" aria-label="Main"><div class="navbarInner_ASTH"><div class="navbarLeft_pUmY"><button aria-label="切换导航栏" aria-expanded="false" class="navbar__toggle clean-btn" type="button"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg></button><a class="brand_SXL9" href="/moltbot-doc/"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="24" height="24" rx="6" fill="var(--ifm-color-primary)"></rect><path d="M7 8.5h10M7 12h7M7 15.5h10" stroke="white" stroke-width="1.8" stroke-linecap="round"></path></svg><span class="brandTitle_XbyU">Moltbot</span></a><div class="dropdown_GrgZ"><button class="dropdownToggle_Nf_z">全部站点<svg class="dropdownArrow_Eka8" viewBox="0 0 12 12" fill="none"><path d="M2 4l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg></button><ul class="dropdownMenu_zsxH"><li><a href="https://luuman.github.io/docs-workspace/docs" class="dropdownMenuItem_VBaP">Workspace</a></li><li><a href="https://luuman.github.io/claude-doc/docs" class="dropdownMenuItem_VBaP">Claude</a></li><li><a href="https://luuman.github.io/electron-doc/docs" class="dropdownMenuItem_VBaP">Electron</a></li><li><a href="https://luuman.github.io/tauri-doc/docs" class="dropdownMenuItem_VBaP">Tauri</a></li><li><a href="https://luuman.github.io/matrx-doc/docs" class="dropdownMenuItem_VBaP">Matrx</a></li><li><a href="https://luuman.github.io/brainboard-doc/docs" class="dropdownMenuItem_VBaP">Brainboard</a></li><li><a href="https://luuman.github.io/synology-doc/docs" class="dropdownMenuItem_VBaP">Synology</a></li><li><a href="https://luuman.github.io/codex-doc/docs" class="dropdownMenuItem_VBaP">Codex</a></li><li><a href="https://luuman.github.io/ai-doc/docs" class="dropdownMenuItem_VBaP">AI</a></li></ul></div></div><div class="navbarCenter_Zdr3"><div class="root_OF3s"><span class="icon_UcOK" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor" width="15" height="15"><path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"></path></svg></span><div class="slot__FGx"><div class="navbar__search searchBarContainer_NW3z" dir="ltr"><input placeholder="搜索" aria-label="Search" class="navbar__search-input searchInput_YFbd" value=""><div class="loadingRing_RJI3 searchBarLoadingRing_YnHq"><div></div><div></div><div></div><div></div></div></div></div></div></div><div class="navbarRight_q16u"><a class="navLink_RnnM" href="/moltbot-doc/docs">Docs</a><a class="navLink_RnnM" href="/moltbot-doc/blog">Blog</a><button class="themeToggle_zD_x" aria-label="Switch to light theme" title="Light"><svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M12 18a6 6 0 1 1 0-12 6 6 0 0 1 0 12zm0-2a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM11 1h2v3h-2V1zm0 19h2v3h-2v-3zM3.515 4.929l1.414-1.414L7.05 5.636 5.636 7.05 3.515 4.93zM16.95 18.364l1.414-1.414 2.121 2.121-1.414 1.414-2.121-2.121zm2.121-14.85l1.414 1.415-2.121 2.121-1.414-1.414 2.121-2.121zM5.636 16.95l1.414 1.414-2.121 2.121-1.414-1.414 2.121-2.121zM23 11v2h-3v-2h3zM4 11v2H1v-2h3z"></path></svg></button></div></div></nav><div id="__docusaurus_skipToContent_fallback" class="theme-layout-main main-wrapper mainWrapper_z2l0"><div class="docsWrapper_hBAB"><button aria-label="回到顶部" class="clean-btn theme-back-to-top-button backToTopButton_sjWU" type="button"></button><div class="docRoot_UBD9"><main class="docMainContainer_TBSr docMainContainerEnhanced_lQrH"><div class="container padding-top--md padding-bottom--lg"><div class="row"><div class="col docItemCol_VOVn"><div class="docItemContainer_Djhp"><article><div class="tocCollapsible_ETCw theme-doc-toc-mobile tocMobile_ITEo"><button type="button" class="clean-btn tocCollapsibleButton_TO0P">本页总览</button></div><div class="theme-doc-markdown markdown"><header><h1>Models CLI</h1></header>
+<p>See <a class="" href="/moltbot-doc/concepts/model-failover">/concepts/model-failover</a> for auth profile
+rotation, cooldowns, and how that interacts with fallbacks.
+Quick provider overview + examples: <a class="" href="/moltbot-doc/concepts/model-providers">/concepts/model-providers</a>.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="how-model-selection-works">How model selection works<a href="#how-model-selection-works" class="hash-link" aria-label="How model selection works的直接链接" title="How model selection works的直接链接" translate="no">​</a></h2>
+<p>Moltbot selects models in this order:</p>
+<ol>
+<li class=""><strong>Primary</strong> model (<code>agents.defaults.model.primary</code> or <code>agents.defaults.model</code>).</li>
+<li class=""><strong>Fallbacks</strong> in <code>agents.defaults.model.fallbacks</code> (in order).</li>
+<li class=""><strong>Provider auth failover</strong> happens inside a provider before moving to the
+next model.</li>
+</ol>
+<p>Related:</p>
+<ul>
+<li class=""><code>agents.defaults.models</code> is the allowlist/catalog of models Moltbot can use (plus aliases).</li>
+<li class=""><code>agents.defaults.imageModel</code> is used <strong>only when</strong> the primary model can’t accept images.</li>
+<li class="">Per-agent defaults can override <code>agents.defaults.model</code> via <code>agents.list[].model</code> plus bindings (see <a class="" href="/moltbot-doc/concepts/multi-agent">/concepts/multi-agent</a>).</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="quick-model-picks-anecdotal">Quick model picks (anecdotal)<a href="#quick-model-picks-anecdotal" class="hash-link" aria-label="Quick model picks (anecdotal)的直接链接" title="Quick model picks (anecdotal)的直接链接" translate="no">​</a></h2>
+<ul>
+<li class=""><strong>GLM</strong>: a bit better for coding/tool calling.</li>
+<li class=""><strong>MiniMax</strong>: better for writing and vibes.</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="setup-wizard-recommended">Setup wizard (recommended)<a href="#setup-wizard-recommended" class="hash-link" aria-label="Setup wizard (recommended)的直接链接" title="Setup wizard (recommended)的直接链接" translate="no">​</a></h2>
+<p>If you don’t want to hand-edit config, run the onboarding wizard:</p>
+<div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#D6DEEB;--prism-background-color:#001122"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#D6DEEB;background-color:#001122"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#D6DEEB"><span class="token plain">moltbot onboard</span><br></span></code></pre></div></div>
+<p>It can set up model + auth for common providers, including <strong>OpenAI Code (Codex)
+subscription</strong> (OAuth) and <strong>Anthropic</strong> (API key recommended; <code>claude setup-token</code> also supported).</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="config-keys-overview">Config keys (overview)<a href="#config-keys-overview" class="hash-link" aria-label="Config keys (overview)的直接链接" title="Config keys (overview)的直接链接" translate="no">​</a></h2>
+<ul>
+<li class=""><code>agents.defaults.model.primary</code> and <code>agents.defaults.model.fallbacks</code></li>
+<li class=""><code>agents.defaults.imageModel.primary</code> and <code>agents.defaults.imageModel.fallbacks</code></li>
+<li class=""><code>agents.defaults.models</code> (allowlist + aliases + provider params)</li>
+<li class=""><code>models.providers</code> (custom providers written into <code>models.json</code>)</li>
+</ul>
+<p>Model refs are normalized to lowercase. Provider aliases like <code>z.ai/*</code> normalize
+to <code>zai/*</code>.</p>
+<p>Provider configuration examples (including OpenCode Zen) live in
+<a class="" href="/moltbot-doc/gateway/configuration#opencode-zen-multi-model-proxy">/gateway/configuration</a>.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="model-is-not-allowed-and-why-replies-stop">“Model is not allowed” (and why replies stop)<a href="#model-is-not-allowed-and-why-replies-stop" class="hash-link" aria-label="“Model is not allowed” (and why replies stop)的直接链接" title="“Model is not allowed” (and why replies stop)的直接链接" translate="no">​</a></h2>
+<p>If <code>agents.defaults.models</code> is set, it becomes the <strong>allowlist</strong> for <code>/model</code> and for
+session overrides. When a user selects a model that isn’t in that allowlist,
+Moltbot returns:</p>
+<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#D6DEEB;--prism-background-color:#001122"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#D6DEEB;background-color:#001122"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#D6DEEB"><span class="token plain">Model &quot;provider/model&quot; is not allowed. Use /model to list available models.</span><br></span></code></pre></div></div>
+<p>This happens <strong>before</strong> a normal reply is generated, so the message can feel
+like it “didn’t respond.” The fix is to either:</p>
+<ul>
+<li class="">Add the model to <code>agents.defaults.models</code>, or</li>
+<li class="">Clear the allowlist (remove <code>agents.defaults.models</code>), or</li>
+<li class="">Pick a model from <code>/model list</code>.</li>
+</ul>
+<p>Example allowlist config:</p>
+<div class="language-json5 codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#D6DEEB;--prism-background-color:#001122"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-json5 codeBlock_bY9V thin-scrollbar" style="color:#D6DEEB;background-color:#001122"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#D6DEEB"><span class="token plain">{</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">  agent: {</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">    model: { primary: &quot;anthropic/claude-sonnet-4-5&quot; },</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">    models: {</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">      &quot;anthropic/claude-sonnet-4-5&quot;: { alias: &quot;Sonnet&quot; },</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">      &quot;anthropic/claude-opus-4-5&quot;: { alias: &quot;Opus&quot; }</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">    }</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">  }</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">}</span><br></span></code></pre></div></div>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="switching-models-in-chat-model">Switching models in chat (<code>/model</code>)<a href="#switching-models-in-chat-model" class="hash-link" aria-label="switching-models-in-chat-model的直接链接" title="switching-models-in-chat-model的直接链接" translate="no">​</a></h2>
+<p>You can switch models for the current session without restarting:</p>
+<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#D6DEEB;--prism-background-color:#001122"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#D6DEEB;background-color:#001122"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#D6DEEB"><span class="token plain">/model</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">/model list</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">/model 3</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">/model openai/gpt-5.2</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">/model status</span><br></span></code></pre></div></div>
+<p>Notes:</p>
+<ul>
+<li class=""><code>/model</code> (and <code>/model list</code>) is a compact, numbered picker (model family + available providers).</li>
+<li class=""><code>/model &lt;#&gt;</code> selects from that picker.</li>
+<li class=""><code>/model status</code> is the detailed view (auth candidates and, when configured, provider endpoint <code>baseUrl</code> + <code>api</code> mode).</li>
+<li class="">Model refs are parsed by splitting on the <strong>first</strong> <code>/</code>. Use <code>provider/model</code> when typing <code>/model &lt;ref&gt;</code>.</li>
+<li class="">If the model ID itself contains <code>/</code> (OpenRouter-style), you must include the provider prefix (example: <code>/model openrouter/moonshotai/kimi-k2</code>).</li>
+<li class="">If you omit the provider, Moltbot treats the input as an alias or a model for the <strong>default provider</strong> (only works when there is no <code>/</code> in the model ID).</li>
+</ul>
+<p>Full command behavior/config: <a class="" href="/moltbot-doc/tools/slash-commands">Slash commands</a>.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="cli-commands">CLI commands<a href="#cli-commands" class="hash-link" aria-label="CLI commands的直接链接" title="CLI commands的直接链接" translate="no">​</a></h2>
+<div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#D6DEEB;--prism-background-color:#001122"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#D6DEEB;background-color:#001122"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#D6DEEB"><span class="token plain">moltbot models list</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">moltbot models status</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">moltbot models set &lt;provider/model&gt;</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">moltbot models set-image &lt;provider/model&gt;</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">moltbot models aliases list</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">moltbot models aliases add &lt;alias&gt; &lt;provider/model&gt;</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">moltbot models aliases remove &lt;alias&gt;</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">moltbot models fallbacks list</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">moltbot models fallbacks add &lt;provider/model&gt;</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">moltbot models fallbacks remove &lt;provider/model&gt;</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">moltbot models fallbacks clear</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">moltbot models image-fallbacks list</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">moltbot models image-fallbacks add &lt;provider/model&gt;</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">moltbot models image-fallbacks remove &lt;provider/model&gt;</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">moltbot models image-fallbacks clear</span><br></span></code></pre></div></div>
+<p><code>moltbot models</code> (no subcommand) is a shortcut for <code>models status</code>.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="models-list"><code>models list</code><a href="#models-list" class="hash-link" aria-label="models-list的直接链接" title="models-list的直接链接" translate="no">​</a></h3>
+<p>Shows configured models by default. Useful flags:</p>
+<ul>
+<li class=""><code>--all</code>: full catalog</li>
+<li class=""><code>--local</code>: local providers only</li>
+<li class=""><code>--provider &lt;name&gt;</code>: filter by provider</li>
+<li class=""><code>--plain</code>: one model per line</li>
+<li class=""><code>--json</code>: machine‑readable output</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="models-status"><code>models status</code><a href="#models-status" class="hash-link" aria-label="models-status的直接链接" title="models-status的直接链接" translate="no">​</a></h3>
+<p>Shows the resolved primary model, fallbacks, image model, and an auth overview
+of configured providers. It also surfaces OAuth expiry status for profiles found
+in the auth store (warns within 24h by default). <code>--plain</code> prints only the
+resolved primary model.
+OAuth status is always shown (and included in <code>--json</code> output). If a configured
+provider has no credentials, <code>models status</code> prints a <strong>Missing auth</strong> section.
+JSON includes <code>auth.oauth</code> (warn window + profiles) and <code>auth.providers</code>
+(effective auth per provider).
+Use <code>--check</code> for automation (exit <code>1</code> when missing/expired, <code>2</code> when expiring).</p>
+<p>Preferred Anthropic auth is the Claude Code CLI setup-token (run anywhere; paste on the gateway host if needed):</p>
+<div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#D6DEEB;--prism-background-color:#001122"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#D6DEEB;background-color:#001122"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#D6DEEB"><span class="token plain">claude setup-token</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">moltbot models status</span><br></span></code></pre></div></div>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="scanning-openrouter-free-models">Scanning (OpenRouter free models)<a href="#scanning-openrouter-free-models" class="hash-link" aria-label="Scanning (OpenRouter free models)的直接链接" title="Scanning (OpenRouter free models)的直接链接" translate="no">​</a></h2>
+<p><code>moltbot models scan</code> inspects OpenRouter’s <strong>free model catalog</strong> and can
+optionally probe models for tool and image support.</p>
+<p>Key flags:</p>
+<ul>
+<li class=""><code>--no-probe</code>: skip live probes (metadata only)</li>
+<li class=""><code>--min-params &lt;b&gt;</code>: minimum parameter size (billions)</li>
+<li class=""><code>--max-age-days &lt;days&gt;</code>: skip older models</li>
+<li class=""><code>--provider &lt;name&gt;</code>: provider prefix filter</li>
+<li class=""><code>--max-candidates &lt;n&gt;</code>: fallback list size</li>
+<li class=""><code>--set-default</code>: set <code>agents.defaults.model.primary</code> to the first selection</li>
+<li class=""><code>--set-image</code>: set <code>agents.defaults.imageModel.primary</code> to the first image selection</li>
+</ul>
+<p>Probing requires an OpenRouter API key (from auth profiles or
+<code>OPENROUTER_API_KEY</code>). Without a key, use <code>--no-probe</code> to list candidates only.</p>
+<p>Scan results are ranked by:</p>
+<ol>
+<li class="">Image support</li>
+<li class="">Tool latency</li>
+<li class="">Context size</li>
+<li class="">Parameter count</li>
+</ol>
+<p>Input</p>
+<ul>
+<li class="">OpenRouter <code>/models</code> list (filter <code>:free</code>)</li>
+<li class="">Requires OpenRouter API key from auth profiles or <code>OPENROUTER_API_KEY</code> (see <a class="" href="/moltbot-doc/environment">/environment</a>)</li>
+<li class="">Optional filters: <code>--max-age-days</code>, <code>--min-params</code>, <code>--provider</code>, <code>--max-candidates</code></li>
+<li class="">Probe controls: <code>--timeout</code>, <code>--concurrency</code></li>
+</ul>
+<p>When run in a TTY, you can select fallbacks interactively. In non‑interactive
+mode, pass <code>--yes</code> to accept defaults.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="models-registry-modelsjson">Models registry (<code>models.json</code>)<a href="#models-registry-modelsjson" class="hash-link" aria-label="models-registry-modelsjson的直接链接" title="models-registry-modelsjson的直接链接" translate="no">​</a></h2>
+<p>Custom providers in <code>models.providers</code> are written into <code>models.json</code> under the
+agent directory (default <code>~/.clawdbot/agents/&lt;agentId&gt;/models.json</code>). This file
+is merged by default unless <code>models.mode</code> is set to <code>replace</code>.</p></div></article><nav class="docusaurus-mt-lg pagination-nav" aria-label="文件选项卡"></nav></div></div><div class="col col--3"><div class="tocWrapper_xKoj"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#how-model-selection-works" class="table-of-contents__link toc-highlight">How model selection works</a></li><li><a href="#quick-model-picks-anecdotal" class="table-of-contents__link toc-highlight">Quick model picks (anecdotal)</a></li><li><a href="#setup-wizard-recommended" class="table-of-contents__link toc-highlight">Setup wizard (recommended)</a></li><li><a href="#config-keys-overview" class="table-of-contents__link toc-highlight">Config keys (overview)</a></li><li><a href="#model-is-not-allowed-and-why-replies-stop" class="table-of-contents__link toc-highlight">“Model is not allowed” (and why replies stop)</a></li><li><a href="#switching-models-in-chat-model" class="table-of-contents__link toc-highlight">Switching models in chat (<code>/model</code>)</a></li><li><a href="#cli-commands" class="table-of-contents__link toc-highlight">CLI commands</a><ul><li><a href="#models-list" class="table-of-contents__link toc-highlight"><code>models list</code></a></li><li><a href="#models-status" class="table-of-contents__link toc-highlight"><code>models status</code></a></li></ul></li><li><a href="#scanning-openrouter-free-models" class="table-of-contents__link toc-highlight">Scanning (OpenRouter free models)</a></li><li><a href="#models-registry-modelsjson" class="table-of-contents__link toc-highlight">Models registry (<code>models.json</code>)</a></li></ul></div><div class="tocFooter_Fu2z"><div class="themeGroup_RzWV" role="group" aria-label="Theme"><button class="themeBtn_tGr6" aria-label="Light theme" title="Light"><svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor" aria-hidden="true"><path d="M12 18a6 6 0 1 1 0-12 6 6 0 0 1 0 12zm0-2a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM11 1h2v3h-2V1zm0 19h2v3h-2v-3zM3.515 4.929l1.414-1.414L7.05 5.636 5.636 7.05 3.515 4.93zM16.95 18.364l1.414-1.414 2.121 2.121-1.414 1.414-2.121-2.121zm2.121-14.85l1.414 1.415-2.121 2.121-1.414-1.414 2.121-2.121zM5.636 16.95l1.414 1.414-2.121 2.121-1.414-1.414 2.121-2.121zM23 11v2h-3v-2h3zM4 11v2H1v-2h3z"></path></svg></button><button class="themeBtn_tGr6 themeBtnActive_A6tm" aria-label="Dark theme" title="Dark"><svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor" aria-hidden="true"><path d="M11.38 2.019a7.5 7.5 0 1 0 10.6 10.6C21.83 17.963 17.315 22 12.002 22 6.477 22 2 17.523 2 12c0-5.314 4.038-9.827 9.38-10.28z"></path></svg></button></div></div></div></div></div></div></main></div></div></div><footer class="theme-layout-footer footer footer--dark"><div class="container container-fluid"><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2026 Moltbot Docs.</div></div></div></footer></div>
+</body>
+</html>

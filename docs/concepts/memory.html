@@ -1,0 +1,255 @@
+<!doctype html>
+<html lang="zh" dir="ltr" class="docs-wrapper plugin-docs plugin-id-default docs-version-current docs-doc-page docs-doc-id-concepts/memory" data-has-hydrated="false">
+<head>
+<meta charset="UTF-8">
+<meta name="generator" content="Docusaurus v3.9.2">
+<title data-rh="true">内存 | Moltbot Docs</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:url" content="https://luuman.github.io/moltbot-doc/docs/concepts/memory"><meta data-rh="true" property="og:locale" content="zh"><meta data-rh="true" name="docusaurus_locale" content="zh"><meta data-rh="true" name="docsearch:language" content="zh"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="内存 | Moltbot Docs"><meta data-rh="true" name="description" content="Moltbot 内存是 代理工作区中的纯 Markdown。文件是"><meta data-rh="true" property="og:description" content="Moltbot 内存是 代理工作区中的纯 Markdown。文件是"><link data-rh="true" rel="icon" href="/moltbot-doc/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://luuman.github.io/moltbot-doc/docs/concepts/memory"><link data-rh="true" rel="alternate" href="https://luuman.github.io/moltbot-doc/docs/concepts/memory" hreflang="zh"><link data-rh="true" rel="alternate" href="https://luuman.github.io/moltbot-doc/docs/concepts/memory" hreflang="x-default"><link rel="alternate" type="application/rss+xml" href="/moltbot-doc/blog/rss.xml" title="Moltbot Docs RSS Feed">
+<link rel="alternate" type="application/atom+xml" href="/moltbot-doc/blog/atom.xml" title="Moltbot Docs Atom Feed"><link rel="stylesheet" href="/moltbot-doc/assets/css/styles.484b4c98.css">
+<script src="/moltbot-doc/assets/js/runtime~main.6cf495cf.js" defer="defer"></script>
+<script src="/moltbot-doc/assets/js/main.f9205183.js" defer="defer"></script>
+</head>
+<body class="navigation-with-keyboard">
+<svg style="display: none;"><defs>
+<symbol id="theme-svg-external-link" viewBox="0 0 24 24"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"/></symbol>
+</defs></svg>
+<script>!function(){var t=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme")}catch(t){}}();document.documentElement.setAttribute("data-theme",t||"dark"),document.documentElement.setAttribute("data-theme-choice",t||"dark")}(),function(){try{const c=new URLSearchParams(window.location.search).entries();for(var[t,e]of c)if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id="__docusaurus"><div role="region" aria-label="跳到主要内容"><a class="skipToContent_fXgn" href="#__docusaurus_skipToContent_fallback">跳到主要内容</a></div><nav class="navbar navbar--fixed-top navbar_MONK" role="navigation" aria-label="Main"><div class="navbarInner_ASTH"><div class="navbarLeft_pUmY"><button aria-label="切换导航栏" aria-expanded="false" class="navbar__toggle clean-btn" type="button"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg></button><a class="brand_SXL9" href="/moltbot-doc/"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="24" height="24" rx="6" fill="var(--ifm-color-primary)"></rect><path d="M7 8.5h10M7 12h7M7 15.5h10" stroke="white" stroke-width="1.8" stroke-linecap="round"></path></svg><span class="brandTitle_XbyU">Moltbot</span></a><div class="dropdown_GrgZ"><button class="dropdownToggle_Nf_z">全部站点<svg class="dropdownArrow_Eka8" viewBox="0 0 12 12" fill="none"><path d="M2 4l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg></button><ul class="dropdownMenu_zsxH"><li><a href="https://luuman.github.io/docs-workspace/docs" class="dropdownMenuItem_VBaP">Workspace</a></li><li><a href="https://luuman.github.io/claude-doc/docs" class="dropdownMenuItem_VBaP">Claude</a></li><li><a href="https://luuman.github.io/electron-doc/docs" class="dropdownMenuItem_VBaP">Electron</a></li><li><a href="https://luuman.github.io/tauri-doc/docs" class="dropdownMenuItem_VBaP">Tauri</a></li><li><a href="https://luuman.github.io/matrx-doc/docs" class="dropdownMenuItem_VBaP">Matrx</a></li><li><a href="https://luuman.github.io/brainboard-doc/docs" class="dropdownMenuItem_VBaP">Brainboard</a></li><li><a href="https://luuman.github.io/synology-doc/docs" class="dropdownMenuItem_VBaP">Synology</a></li><li><a href="https://luuman.github.io/codex-doc/docs" class="dropdownMenuItem_VBaP">Codex</a></li><li><a href="https://luuman.github.io/ai-doc/docs" class="dropdownMenuItem_VBaP">AI</a></li></ul></div></div><div class="navbarCenter_Zdr3"><div class="root_OF3s"><span class="icon_UcOK" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor" width="15" height="15"><path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"></path></svg></span><div class="slot__FGx"><div class="navbar__search searchBarContainer_NW3z" dir="ltr"><input placeholder="搜索" aria-label="Search" class="navbar__search-input searchInput_YFbd" value=""><div class="loadingRing_RJI3 searchBarLoadingRing_YnHq"><div></div><div></div><div></div><div></div></div></div></div></div></div><div class="navbarRight_q16u"><a class="navLink_RnnM" href="/moltbot-doc/docs">Docs</a><a class="navLink_RnnM" href="/moltbot-doc/blog">Blog</a><button class="themeToggle_zD_x" aria-label="Switch to light theme" title="Light"><svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M12 18a6 6 0 1 1 0-12 6 6 0 0 1 0 12zm0-2a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM11 1h2v3h-2V1zm0 19h2v3h-2v-3zM3.515 4.929l1.414-1.414L7.05 5.636 5.636 7.05 3.515 4.93zM16.95 18.364l1.414-1.414 2.121 2.121-1.414 1.414-2.121-2.121zm2.121-14.85l1.414 1.415-2.121 2.121-1.414-1.414 2.121-2.121zM5.636 16.95l1.414 1.414-2.121 2.121-1.414-1.414 2.121-2.121zM23 11v2h-3v-2h3zM4 11v2H1v-2h3z"></path></svg></button></div></div></nav><div id="__docusaurus_skipToContent_fallback" class="theme-layout-main main-wrapper mainWrapper_z2l0"><div class="docsWrapper_hBAB"><button aria-label="回到顶部" class="clean-btn theme-back-to-top-button backToTopButton_sjWU" type="button"></button><div class="docRoot_UBD9"><main class="docMainContainer_TBSr docMainContainerEnhanced_lQrH"><div class="container padding-top--md padding-bottom--lg"><div class="row"><div class="col docItemCol_VOVn"><div class="docItemContainer_Djhp"><article><div class="tocCollapsible_ETCw theme-doc-toc-mobile tocMobile_ITEo"><button type="button" class="clean-btn tocCollapsibleButton_TO0P">本页总览</button></div><div class="theme-doc-markdown markdown"><header><h1>内存</h1></header>
+<p>Moltbot 内存是 <strong>代理工作区中的纯 Markdown</strong>。文件是
+真相来源；模型只&quot;记住&quot;写入磁盘的内容。</p>
+<p>内存搜索工具由活动内存插件提供（默认：
+<code>memory-core</code>）。使用 <code>plugins.slots.memory = &quot;none&quot;</code> 禁用内存插件。</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="内存文件markdown">内存文件（Markdown）<a href="#内存文件markdown" class="hash-link" aria-label="内存文件（Markdown）的直接链接" title="内存文件（Markdown）的直接链接" translate="no">​</a></h2>
+<p>默认工作区布局使用两层内存：</p>
+<ul>
+<li class=""><code>memory/YYYY-MM-DD.md</code>
+<ul>
+<li class="">每日日志（仅追加）。</li>
+<li class="">在会话开始时读取今天 + 昨天。</li>
+</ul>
+</li>
+<li class=""><code>MEMORY.md</code>（可选）
+<ul>
+<li class="">精选的长期内存。</li>
+<li class=""><strong>仅在主、私有会话中加载</strong>（永不加载到群组上下文中）。</li>
+</ul>
+</li>
+</ul>
+<p>这些文件存储在工作区下（<code>agents.defaults.workspace</code>，默认
+<code>~/clawd</code>）。参见 <a class="" href="/moltbot-doc/concepts/agent-workspace">代理工作区</a> 了解完整布局。</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="何时写入内存">何时写入内存<a href="#何时写入内存" class="hash-link" aria-label="何时写入内存的直接链接" title="何时写入内存的直接链接" translate="no">​</a></h2>
+<ul>
+<li class="">决策、偏好和持久事实进入 <code>MEMORY.md</code>。</li>
+<li class="">日常笔记和运行上下文进入 <code>memory/YYYY-MM-DD.md</code>。</li>
+<li class="">如果有人说&quot;记住这个&quot;，写下来（不要保留在 RAM 中）。</li>
+<li class="">这个领域仍在发展。提醒模型存储内存会有所帮助；它会知道该怎么做。</li>
+<li class="">如果您想让某事留下印象，<strong>要求机器人写入</strong> 内存。</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="自动内存刷新预压缩-ping">自动内存刷新（预压缩 ping）<a href="#自动内存刷新预压缩-ping" class="hash-link" aria-label="自动内存刷新（预压缩 ping）的直接链接" title="自动内存刷新（预压缩 ping）的直接链接" translate="no">​</a></h2>
+<p>当会话 <strong>接近自动压缩</strong> 时，Moltbot 触发一个 <strong>静默、
+代理回合</strong>，提醒模型在上下文被压缩 <strong>之前</strong> 写入持久内存。默认提示明确说明模型 <em>可以回复</em>，
+但通常 <code>NO_REPLY</code> 是正确响应，因此用户永远不会看到这个回合。</p>
+<p>这由 <code>agents.defaults.compaction.memoryFlush</code> 控制：</p>
+<div class="language-json5 codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#D6DEEB;--prism-background-color:#001122"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-json5 codeBlock_bY9V thin-scrollbar" style="color:#D6DEEB;background-color:#001122"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#D6DEEB"><span class="token plain">{</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">  agents: {</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">    defaults: {</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">      compaction: {</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">        reserveTokensFloor: 20000,</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">        memoryFlush: {</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">          enabled: true,</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">          softThresholdTokens: 4000,</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">          systemPrompt: &quot;Session nearing compaction. Store durable memories now.&quot;,</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">          prompt: &quot;Write any lasting notes to memory/YYYY-MM-DD.md; reply with NO_REPLY if nothing to store.&quot;</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">        }</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">      }</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">    }</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">  }</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">}</span><br></span></code></pre></div></div>
+<p>详情：</p>
+<ul>
+<li class=""><strong>软阈值</strong>：当会话 token 估计值跨越
+<code>contextWindow - reserveTokensFloor - softThresholdTokens</code> 时触发刷新。</li>
+<li class=""><strong>默认静默</strong>：提示包含 <code>NO_REPLY</code>，因此不发送任何内容。</li>
+<li class=""><strong>两个提示</strong>：用户提示加上系统提示追加提醒。</li>
+<li class=""><strong>每个压缩周期一次刷新</strong>（在 <code>sessions.json</code> 中跟踪）。</li>
+<li class=""><strong>工作区必须可写</strong>：如果会话在沙盒中运行，使用
+<code>workspaceAccess: &quot;ro&quot;</code> 或 <code>&quot;none&quot;</code>，则跳过刷新。</li>
+</ul>
+<p>有关完整压缩生命周期，请参见
+<a class="" href="/moltbot-doc/reference/session-management-compaction">会话管理 + 压缩</a>。</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="向量内存搜索">向量内存搜索<a href="#向量内存搜索" class="hash-link" aria-label="向量内存搜索的直接链接" title="向量内存搜索的直接链接" translate="no">​</a></h2>
+<p>Moltbot 可以在 <code>MEMORY.md</code> 和 <code>memory/*.md</code> 上构建小向量索引，以便
+语义查询可以找到相关笔记，即使措辞不同。</p>
+<p>默认值：</p>
+<ul>
+<li class="">默认启用。</li>
+<li class="">监视内存文件的变化（防抖）。</li>
+<li class="">默认使用远程嵌入。如果未设置 <code>memorySearch.provider</code>，Moltbot 自动选择：
+<ol>
+<li class="">如果配置了 <code>memorySearch.local.modelPath</code> 且文件存在，则为 <code>local</code>。</li>
+<li class="">如果可以解析 OpenAI 密钥，则为 <code>openai</code>。</li>
+<li class="">如果可以解析 Gemini 密钥，则为 <code>gemini</code>。</li>
+<li class="">否则内存搜索保持禁用，直到配置。</li>
+</ol>
+</li>
+<li class="">本地模式使用 node-llama-cpp，可能需要 <code>pnpm approve-builds</code>。</li>
+<li class="">使用 sqlite-vec（当可用时）在 SQLite 内部加速向量搜索。</li>
+</ul>
+<p>远程嵌入 <strong>需要</strong> 嵌入提供商的 API 密钥。Moltbot
+从认证配置文件、<code>models.providers.*.apiKey</code> 或环境
+变量中解析密钥。Codex OAuth 仅涵盖聊天/补全，<strong>不</strong> 满足
+内存搜索的嵌入。对于 Gemini，使用 <code>GEMINI_API_KEY</code> 或
+<code>models.providers.google.apiKey</code>。使用自定义 OpenAI 兼容端点时，
+设置 <code>memorySearch.remote.apiKey</code>（和可选的 <code>memorySearch.remote.headers</code>）。</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="gemini-嵌入原生">Gemini 嵌入（原生）<a href="#gemini-嵌入原生" class="hash-link" aria-label="Gemini 嵌入（原生）的直接链接" title="Gemini 嵌入（原生）的直接链接" translate="no">​</a></h3>
+<p>将提供商设置为 <code>gemini</code> 以直接使用 Gemini 嵌入 API：</p>
+<div class="language-json5 codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#D6DEEB;--prism-background-color:#001122"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-json5 codeBlock_bY9V thin-scrollbar" style="color:#D6DEEB;background-color:#001122"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#D6DEEB"><span class="token plain">agents: {</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">  defaults: {</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">    memorySearch: {</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">      provider: &quot;gemini&quot;,</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">      model: &quot;gemini-embedding-001&quot;,</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">      remote: {</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">        apiKey: &quot;YOUR_GEMINI_API_KEY&quot;</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">      }</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">    }</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">  }</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">}</span><br></span></code></pre></div></div>
+<p>说明：</p>
+<ul>
+<li class=""><code>remote.baseUrl</code> 是可选的（默认为 Gemini API 基础 URL）。</li>
+<li class=""><code>remote.headers</code> 让您在需要时添加额外标头。</li>
+<li class="">默认模型：<code>gemini-embedding-001</code>。</li>
+</ul>
+<p>如果您想使用 <strong>自定义 OpenAI 兼容端点</strong>（OpenRouter、vLLM 或代理），
+您可以使用 OpenAI 提供商的 <code>remote</code> 配置：</p>
+<div class="language-json5 codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#D6DEEB;--prism-background-color:#001122"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-json5 codeBlock_bY9V thin-scrollbar" style="color:#D6DEEB;background-color:#001122"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#D6DEEB"><span class="token plain">agents: {</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">  defaults: {</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">    memorySearch: {</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">      provider: &quot;openai&quot;,</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">      model: &quot;text-embedding-3-small&quot;,</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">      remote: {</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">        baseUrl: &quot;https://api.example.com/v1/&quot;,</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">        apiKey: &quot;YOUR_OPENAI_COMPAT_API_KEY&quot;,</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">        headers: { &quot;X-Custom-Header&quot;: &quot;value&quot; }</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">      }</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">    }</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">  }</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">}</span><br></span></code></pre></div></div>
+<p>如果您不想设置 API 密钥，使用 <code>memorySearch.provider = &quot;local&quot;</code> 或设置
+<code>memorySearch.fallback = &quot;none&quot;</code>。</p>
+<p>回退：</p>
+<ul>
+<li class=""><code>memorySearch.fallback</code> 可以是 <code>openai</code>、<code>gemini</code>、<code>local</code> 或 <code>none</code>。</li>
+<li class="">仅当主嵌入提供商失败时才使用回退提供商。</li>
+</ul>
+<p>批量索引（OpenAI + Gemini）：</p>
+<ul>
+<li class="">OpenAI 和 Gemini 嵌入默认启用。设置 <code>agents.defaults.memorySearch.remote.batch.enabled = false</code> 以禁用。</li>
+<li class="">默认行为等待批量完成；根据需要调整 <code>remote.batch.wait</code>、<code>remote.batch.pollIntervalMs</code> 和 <code>remote.batch.timeoutMinutes</code>。</li>
+<li class="">设置 <code>remote.batch.concurrency</code> 以控制我们并行提交多少批量作业（默认：2）。</li>
+<li class="">批量模式在 <code>memorySearch.provider = &quot;openai&quot;</code> 或 <code>&quot;gemini&quot;</code> 时应用，使用相应的 API 密钥。</li>
+<li class="">Gemini 批量作业使用异步嵌入批量端点，需要 Gemini 批量 API 可用性。</li>
+</ul>
+<p>为什么 OpenAI 批量快速 + 便宜：</p>
+<ul>
+<li class="">对于大型回填，OpenAI 通常是我们支持的最快选项，因为我们可以在单个批量作业中提交许多嵌入请求，让 OpenAI 异步处理它们。</li>
+<li class="">OpenAI 为批量 API 工作负载提供折扣定价，因此大型索引运行通常比同步发送相同请求更便宜。</li>
+<li class="">有关详细信息，请参见 OpenAI 批量 API 文档和定价：
+<ul>
+<li class=""><a href="https://platform.openai.com/docs/api-reference/batch" target="_blank" rel="noopener noreferrer" class="">https://platform.openai.com/docs/api-reference/batch</a></li>
+<li class=""><a href="https://platform.openai.com/pricing" target="_blank" rel="noopener noreferrer" class="">https://platform.openai.com/pricing</a></li>
+</ul>
+</li>
+</ul>
+<p>配置示例：</p>
+<div class="language-json5 codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#D6DEEB;--prism-background-color:#001122"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-json5 codeBlock_bY9V thin-scrollbar" style="color:#D6DEEB;background-color:#001122"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#D6DEEB"><span class="token plain">agents: {</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">  defaults: {</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">    memorySearch: {</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">      provider: &quot;openai&quot;,</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">      model: &quot;text-embedding-3-small&quot;,</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">      fallback: &quot;openai&quot;,</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">      remote: {</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">        batch: { enabled: true, concurrency: 2 }</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">      },</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">      sync: { watch: true }</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">    }</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">  }</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">}</span><br></span></code></pre></div></div>
+<p>工具：</p>
+<ul>
+<li class=""><code>memory_search</code> — 返回带文件 + 行范围的片段。</li>
+<li class=""><code>memory_get</code> — 按路径读取内存文件内容。</li>
+</ul>
+<p>本地模式：</p>
+<ul>
+<li class="">设置 <code>agents.defaults.memorySearch.provider = &quot;local&quot;</code>。</li>
+<li class="">提供 <code>agents.defaults.memorySearch.local.modelPath</code>（GGUF 或 <code>hf:</code> URI）。</li>
+<li class="">可选：设置 <code>agents.defaults.memorySearch.fallback = &quot;none&quot;</code> 以避免远程回退。</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="内存工具如何工作">内存工具如何工作<a href="#内存工具如何工作" class="hash-link" aria-label="内存工具如何工作的直接链接" title="内存工具如何工作的直接链接" translate="no">​</a></h3>
+<ul>
+<li class=""><code>memory_search</code> 从 <code>MEMORY.md</code> + <code>memory/**/*.md</code> 语义搜索 Markdown 块（~400 token 目标，80-token 重叠）。它返回片段文本（上限 ~700 字符）、文件路径、行范围、分数、提供商/模型，以及我们是否从本地 → 远程嵌入回退。不返回完整文件载荷。</li>
+<li class=""><code>memory_get</code> 读取特定内存 Markdown 文件（工作区相对），可选地从起始行开始并读取 N 行。拒绝 <code>MEMORY.md</code> / <code>memory/</code> 之外的路径。</li>
+<li class="">仅当 <code>memorySearch.enabled</code> 对代理解析为真时才启用这两个工具。</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="索引什么以及何时">索引什么（以及何时）<a href="#索引什么以及何时" class="hash-link" aria-label="索引什么（以及何时）的直接链接" title="索引什么（以及何时）的直接链接" translate="no">​</a></h3>
+<ul>
+<li class="">文件类型：仅 Markdown（<code>MEMORY.md</code>，<code>memory/**/*.md</code>）。</li>
+<li class="">索引存储：每个代理 SQLite 位于 <code>~/.clawdbot/memory/&lt;agentId&gt;.sqlite</code>（可通过 <code>agents.defaults.memorySearch.store.path</code> 配置，支持 <code>{agentId}</code> 令牌）。</li>
+<li class="">新鲜度：<code>MEMORY.md</code> + <code>memory/</code> 上的监视器将索引标记为脏（防抖 1.5s）。在会话开始、搜索或间隔时安排同步，并异步运行。会话记录使用增量阈值触发后台同步。</li>
+<li class="">重新索引触发器：索引存储嵌入 <strong>提供商/模型 + 端点指纹 + 分块参数</strong>。如果其中任何一项更改，Moltbot 自动重置并重新索引整个存储。</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="混合搜索bm25--向量">混合搜索（BM25 + 向量）<a href="#混合搜索bm25--向量" class="hash-link" aria-label="混合搜索（BM25 + 向量）的直接链接" title="混合搜索（BM25 + 向量）的直接链接" translate="no">​</a></h3>
+<p>启用时，Moltbot 组合：</p>
+<ul>
+<li class=""><strong>向量相似性</strong>（语义匹配，措辞可能不同）</li>
+<li class=""><strong>BM25 关键词相关性</strong>（确切的令牌，如 ID、环境变量、代码符号）</li>
+</ul>
+<p>如果您的平台上全文搜索不可用，Moltbot 回退到仅向量搜索。</p>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="为什么混合">为什么混合？<a href="#为什么混合" class="hash-link" aria-label="为什么混合？的直接链接" title="为什么混合？的直接链接" translate="no">​</a></h4>
+<p>向量搜索擅长&quot;这意味着同样的事情&quot;：</p>
+<ul>
+<li class="">&quot;Mac Studio 网关主机&quot; vs &quot;运行网关的机器&quot;</li>
+<li class="">&quot;防抖文件更新&quot; vs &quot;避免在每次写入时索引&quot;</li>
+</ul>
+<p>但它在确切的高信号令牌上可能较弱：</p>
+<ul>
+<li class="">ID（<code>a828e60</code>，<code>b3b9895a…</code>）</li>
+<li class="">代码符号（<code>memorySearch.query.hybrid</code>）</li>
+<li class="">错误字符串（&quot;sqlite-vec 不可用&quot;）</li>
+</ul>
+<p>BM25（全文）相反：在确切令牌上强，在转述上弱。
+混合搜索是实用的中间地带：<strong>使用两种检索信号</strong>，这样您就能获得
+&quot;自然语言&quot;查询和&quot;大海捞针&quot;查询的良好结果。</p>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="我们如何合并结果当前设计">我们如何合并结果（当前设计）<a href="#我们如何合并结果当前设计" class="hash-link" aria-label="我们如何合并结果（当前设计）的直接链接" title="我们如何合并结果（当前设计）的直接链接" translate="no">​</a></h4>
+<p>实现草图：</p>
+<ol>
+<li class="">从两侧检索候选池：</li>
+</ol>
+<ul>
+<li class=""><strong>向量</strong>：按余弦相似性排序的前 <code>maxResults * candidateMultiplier</code>。</li>
+<li class=""><strong>BM25</strong>：按 FTS5 BM25 排名（越低越好）排序的前 <code>maxResults * candidateMultiplier</code>。</li>
+</ul>
+<ol start="2">
+<li class="">将 BM25 排名转换为 0..1 左右的分数：</li>
+</ol>
+<ul>
+<li class=""><code>textScore = 1 / (1 + max(0, bm25Rank))</code></li>
+</ul>
+<ol start="3">
+<li class="">按块 ID 联合候选并计算加权分数：</li>
+</ol>
+<ul>
+<li class=""><code>finalScore = vectorWeight * vectorScore + textWeight * textScore</code></li>
+</ul>
+<p>说明：</p>
+<ul>
+<li class=""><code>vectorWeight</code> + <code>textWeight</code> 在配置解析中归一化为 1.0，因此权重表现得像百分比。</li>
+<li class="">如果嵌入不可用（或提供商返回零向量），我们仍运行 BM25 并返回关键词匹配。</li>
+<li class="">如果无法创建 FTS5，我们保持仅向量搜索（无硬故障）。</li>
+</ul>
+<p>这不是&quot;IR 理论完美&quot;，但简单、快速，并倾向于在真实笔记上改进召回率/精度。
+如果我们以后想更花哨，常见的下一步是倒数排名融合（RRF）或混合前的分数标准化
+（最小/最大或 z 得分）。</p>
+<p>配置：</p>
+<div class="language-json5 codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#D6DEEB;--prism-background-color:#001122"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-json5 codeBlock_bY9V thin-scrollbar" style="color:#D6DEEB;background-color:#001122"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#D6DEEB"><span class="token plain">agents: {</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">  defaults: {</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">    memorySearch: {</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">      query: {</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">        hybrid: {</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">          enabled: true,</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">          vectorWeight: 0.7,</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">          textWeight: 0.3,</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">          candidateMultiplier: 4</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">        }</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">      }</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">    }</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">  }</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">}</span><br></span></code></pre></div></div>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="嵌入缓存">嵌入缓存<a href="#嵌入缓存" class="hash-link" aria-label="嵌入缓存的直接链接" title="嵌入缓存的直接链接" translate="no">​</a></h3>
+<p>Moltbot 可以在 SQLite 中缓存 <strong>块嵌入</strong>，这样重新索引和频繁更新（尤其是会话记录）不会重新嵌入未更改的文本。</p>
+<p>配置：</p>
+<div class="language-json5 codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#D6DEEB;--prism-background-color:#001122"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-json5 codeBlock_bY9V thin-scrollbar" style="color:#D6DEEB;background-color:#001122"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#D6DEEB"><span class="token plain">agents: {</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">  defaults: {</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">    memorySearch: {</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">      cache: {</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">        enabled: true,</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">        maxEntries: 50000</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">      }</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">    }</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">  }</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">}</span><br></span></code></pre></div></div>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="会话内存搜索实验性">会话内存搜索（实验性）<a href="#会话内存搜索实验性" class="hash-link" aria-label="会话内存搜索（实验性）的直接链接" title="会话内存搜索（实验性）的直接链接" translate="no">​</a></h3>
+<p>您可以选择索引 <strong>会话记录</strong> 并通过 <code>memory_search</code> 显示它们。
+这由实验标志控制。</p>
+<div class="language-json5 codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#D6DEEB;--prism-background-color:#001122"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-json5 codeBlock_bY9V thin-scrollbar" style="color:#D6DEEB;background-color:#001122"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#D6DEEB"><span class="token plain">agents: {</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">  defaults: {</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">    memorySearch: {</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">      experimental: { sessionMemory: true },</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">      sources: [&quot;memory&quot;, &quot;sessions&quot;]</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">    }</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">  }</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">}</span><br></span></code></pre></div></div>
+<p>说明：</p>
+<ul>
+<li class="">会话索引是 <strong>选择加入</strong>（默认关闭）。</li>
+<li class="">会话更新被防抖，并且 <strong>异步索引</strong> 一旦它们跨越增量阈值（尽力而为）。</li>
+<li class=""><code>memory_search</code> 从不阻塞索引；结果可能稍微过时，直到后台同步完成。</li>
+<li class="">结果仍然只包含片段；<code>memory_get</code> 仍限于内存文件。</li>
+<li class="">会话索引在每个代理中隔离（仅索引该代理的会话日志）。</li>
+<li class="">会话日志存储在磁盘上（<code>~/.clawdbot/agents/&lt;agentId&gt;/sessions/*.jsonl</code>）。任何具有文件系统访问权限的进程/用户都可以读取它们，因此将磁盘访问视为信任边界。要更严格地隔离，请在单独的操作系统用户或主机下运行代理。</li>
+</ul>
+<p>增量阈值（显示默认值）：</p>
+<div class="language-json5 codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#D6DEEB;--prism-background-color:#001122"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-json5 codeBlock_bY9V thin-scrollbar" style="color:#D6DEEB;background-color:#001122"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#D6DEEB"><span class="token plain">agents: {</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">  defaults: {</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">    memorySearch: {</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">      sync: {</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">        sessions: {</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">          deltaBytes: 100000,   // ~100 KB</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">          deltaMessages: 50     // JSONL 行</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">        }</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">      }</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">    }</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">  }</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">}</span><br></span></code></pre></div></div>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="sqlite-向量加速sqlite-vec">SQLite 向量加速（sqlite-vec）<a href="#sqlite-向量加速sqlite-vec" class="hash-link" aria-label="SQLite 向量加速（sqlite-vec）的直接链接" title="SQLite 向量加速（sqlite-vec）的直接链接" translate="no">​</a></h3>
+<p>当 sqlite-vec 扩展可用时，Moltbot 在
+SQLite 虚拟表（<code>vec0</code>）中存储嵌入，并在数据库中执行向量距离查询。
+这保持搜索快速，而无需将每个嵌入加载到 JS 中。</p>
+<p>配置（可选）：</p>
+<div class="language-json5 codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#D6DEEB;--prism-background-color:#001122"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-json5 codeBlock_bY9V thin-scrollbar" style="color:#D6DEEB;background-color:#001122"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#D6DEEB"><span class="token plain">agents: {</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">  defaults: {</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">    memorySearch: {</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">      store: {</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">        vector: {</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">          enabled: true,</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">          extensionPath: &quot;/path/to/sqlite-vec&quot;</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">        }</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">      }</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">    }</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">  }</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">}</span><br></span></code></pre></div></div>
+<p>说明：</p>
+<ul>
+<li class=""><code>enabled</code> 默认为真；禁用时，搜索回退到存储嵌入上的进程内
+余弦相似性。</li>
+<li class="">如果 sqlite-vec 扩展缺失或加载失败，Moltbot 记录
+错误并继续使用 JS 回退（无向量表）。</li>
+<li class=""><code>extensionPath</code> 覆盖捆绑的 sqlite-vec 路径（对自定义构建
+或非标准安装位置有用）。</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="本地嵌入自动下载">本地嵌入自动下载<a href="#本地嵌入自动下载" class="hash-link" aria-label="本地嵌入自动下载的直接链接" title="本地嵌入自动下载的直接链接" translate="no">​</a></h3>
+<ul>
+<li class="">默认本地嵌入模型：<code>hf:ggml-org/embeddinggemma-300M-GGUF/embeddinggemma-300M-Q8_0.gguf</code>（~0.6 GB）。</li>
+<li class="">当 <code>memorySearch.provider = &quot;local&quot;</code> 时，<code>node-llama-cpp</code> 解析 <code>modelPath</code>；如果 GGUF 缺失，它 <strong>自动下载</strong> 到缓存（或如果设置则到 <code>local.modelCacheDir</code>），然后加载它。下载在重试时恢复。</li>
+<li class="">本机构建要求：运行 <code>pnpm approve-builds</code>，选择 <code>node-llama-cpp</code>，然后 <code>pnpm rebuild node-llama-cpp</code>。</li>
+<li class="">回退：如果本地设置失败且 <code>memorySearch.fallback = &quot;openai&quot;</code>，我们自动切换到远程嵌入（除非覆盖否则为 <code>openai/text-embedding-3-small</code>）并记录原因。</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="自定义-openai-兼容端点示例">自定义 OpenAI 兼容端点示例<a href="#自定义-openai-兼容端点示例" class="hash-link" aria-label="自定义 OpenAI 兼容端点示例的直接链接" title="自定义 OpenAI 兼容端点示例的直接链接" translate="no">​</a></h3>
+<div class="language-json5 codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#D6DEEB;--prism-background-color:#001122"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-json5 codeBlock_bY9V thin-scrollbar" style="color:#D6DEEB;background-color:#001122"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#D6DEEB"><span class="token plain">agents: {</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">  defaults: {</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">    memorySearch: {</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">      provider: &quot;openai&quot;,</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">      model: &quot;text-embedding-3-small&quot;,</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">      remote: {</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">        baseUrl: &quot;https://api.example.com/v1/&quot;,</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">        apiKey: &quot;YOUR_REMOTE_API_KEY&quot;,</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">        headers: {</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">          &quot;X-Organization&quot;: &quot;org-id&quot;,</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">          &quot;X-Project&quot;: &quot;project-id&quot;</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">        }</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">      }</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">    }</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">  }</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">}</span><br></span></code></pre></div></div>
+<p>说明：</p>
+<ul>
+<li class=""><code>remote.*</code> 优先于 <code>models.providers.openai.*</code>。</li>
+<li class=""><code>remote.headers</code> 与 OpenAI 标头合并；远程在键冲突时获胜。省略 <code>remote.headers</code> 以使用 OpenAI 默认值。</li>
+</ul></div></article><nav class="docusaurus-mt-lg pagination-nav" aria-label="文件选项卡"></nav></div></div><div class="col col--3"><div class="tocWrapper_xKoj"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#内存文件markdown" class="table-of-contents__link toc-highlight">内存文件（Markdown）</a></li><li><a href="#何时写入内存" class="table-of-contents__link toc-highlight">何时写入内存</a></li><li><a href="#自动内存刷新预压缩-ping" class="table-of-contents__link toc-highlight">自动内存刷新（预压缩 ping）</a></li><li><a href="#向量内存搜索" class="table-of-contents__link toc-highlight">向量内存搜索</a><ul><li><a href="#gemini-嵌入原生" class="table-of-contents__link toc-highlight">Gemini 嵌入（原生）</a></li><li><a href="#内存工具如何工作" class="table-of-contents__link toc-highlight">内存工具如何工作</a></li><li><a href="#索引什么以及何时" class="table-of-contents__link toc-highlight">索引什么（以及何时）</a></li><li><a href="#混合搜索bm25--向量" class="table-of-contents__link toc-highlight">混合搜索（BM25 + 向量）</a></li><li><a href="#嵌入缓存" class="table-of-contents__link toc-highlight">嵌入缓存</a></li><li><a href="#会话内存搜索实验性" class="table-of-contents__link toc-highlight">会话内存搜索（实验性）</a></li><li><a href="#sqlite-向量加速sqlite-vec" class="table-of-contents__link toc-highlight">SQLite 向量加速（sqlite-vec）</a></li><li><a href="#本地嵌入自动下载" class="table-of-contents__link toc-highlight">本地嵌入自动下载</a></li><li><a href="#自定义-openai-兼容端点示例" class="table-of-contents__link toc-highlight">自定义 OpenAI 兼容端点示例</a></li></ul></li></ul></div><div class="tocFooter_Fu2z"><div class="themeGroup_RzWV" role="group" aria-label="Theme"><button class="themeBtn_tGr6" aria-label="Light theme" title="Light"><svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor" aria-hidden="true"><path d="M12 18a6 6 0 1 1 0-12 6 6 0 0 1 0 12zm0-2a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM11 1h2v3h-2V1zm0 19h2v3h-2v-3zM3.515 4.929l1.414-1.414L7.05 5.636 5.636 7.05 3.515 4.93zM16.95 18.364l1.414-1.414 2.121 2.121-1.414 1.414-2.121-2.121zm2.121-14.85l1.414 1.415-2.121 2.121-1.414-1.414 2.121-2.121zM5.636 16.95l1.414 1.414-2.121 2.121-1.414-1.414 2.121-2.121zM23 11v2h-3v-2h3zM4 11v2H1v-2h3z"></path></svg></button><button class="themeBtn_tGr6 themeBtnActive_A6tm" aria-label="Dark theme" title="Dark"><svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor" aria-hidden="true"><path d="M11.38 2.019a7.5 7.5 0 1 0 10.6 10.6C21.83 17.963 17.315 22 12.002 22 6.477 22 2 17.523 2 12c0-5.314 4.038-9.827 9.38-10.28z"></path></svg></button></div></div></div></div></div></div></main></div></div></div><footer class="theme-layout-footer footer footer--dark"><div class="container container-fluid"><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2026 Moltbot Docs.</div></div></div></footer></div>
+</body>
+</html>

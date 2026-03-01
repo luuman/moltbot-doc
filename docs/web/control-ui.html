@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="zh" dir="ltr" class="docs-wrapper plugin-docs plugin-id-default docs-version-current docs-doc-page docs-doc-id-web/control-ui" data-has-hydrated="false">
+<head>
+<meta charset="UTF-8">
+<meta name="generator" content="Docusaurus v3.9.2">
+<title data-rh="true">控制界面（浏览器） | Moltbot Docs</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:url" content="https://luuman.github.io/moltbot-doc/docs/web/control-ui"><meta data-rh="true" property="og:locale" content="zh"><meta data-rh="true" name="docusaurus_locale" content="zh"><meta data-rh="true" name="docsearch:language" content="zh"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="控制界面（浏览器） | Moltbot Docs"><meta data-rh="true" name="description" content="控制界面是由网关提供的小型 Vite + Lit 单页应用程序："><meta data-rh="true" property="og:description" content="控制界面是由网关提供的小型 Vite + Lit 单页应用程序："><link data-rh="true" rel="icon" href="/moltbot-doc/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://luuman.github.io/moltbot-doc/docs/web/control-ui"><link data-rh="true" rel="alternate" href="https://luuman.github.io/moltbot-doc/docs/web/control-ui" hreflang="zh"><link data-rh="true" rel="alternate" href="https://luuman.github.io/moltbot-doc/docs/web/control-ui" hreflang="x-default"><link rel="alternate" type="application/rss+xml" href="/moltbot-doc/blog/rss.xml" title="Moltbot Docs RSS Feed">
+<link rel="alternate" type="application/atom+xml" href="/moltbot-doc/blog/atom.xml" title="Moltbot Docs Atom Feed"><link rel="stylesheet" href="/moltbot-doc/assets/css/styles.484b4c98.css">
+<script src="/moltbot-doc/assets/js/runtime~main.6cf495cf.js" defer="defer"></script>
+<script src="/moltbot-doc/assets/js/main.f9205183.js" defer="defer"></script>
+</head>
+<body class="navigation-with-keyboard">
+<svg style="display: none;"><defs>
+<symbol id="theme-svg-external-link" viewBox="0 0 24 24"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"/></symbol>
+</defs></svg>
+<script>!function(){var t=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme")}catch(t){}}();document.documentElement.setAttribute("data-theme",t||"dark"),document.documentElement.setAttribute("data-theme-choice",t||"dark")}(),function(){try{const c=new URLSearchParams(window.location.search).entries();for(var[t,e]of c)if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id="__docusaurus"><div role="region" aria-label="跳到主要内容"><a class="skipToContent_fXgn" href="#__docusaurus_skipToContent_fallback">跳到主要内容</a></div><nav class="navbar navbar--fixed-top navbar_MONK" role="navigation" aria-label="Main"><div class="navbarInner_ASTH"><div class="navbarLeft_pUmY"><button aria-label="切换导航栏" aria-expanded="false" class="navbar__toggle clean-btn" type="button"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg></button><a class="brand_SXL9" href="/moltbot-doc/"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="24" height="24" rx="6" fill="var(--ifm-color-primary)"></rect><path d="M7 8.5h10M7 12h7M7 15.5h10" stroke="white" stroke-width="1.8" stroke-linecap="round"></path></svg><span class="brandTitle_XbyU">Moltbot</span></a><div class="dropdown_GrgZ"><button class="dropdownToggle_Nf_z">全部站点<svg class="dropdownArrow_Eka8" viewBox="0 0 12 12" fill="none"><path d="M2 4l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg></button><ul class="dropdownMenu_zsxH"><li><a href="https://luuman.github.io/docs-workspace/docs" class="dropdownMenuItem_VBaP">Workspace</a></li><li><a href="https://luuman.github.io/claude-doc/docs" class="dropdownMenuItem_VBaP">Claude</a></li><li><a href="https://luuman.github.io/electron-doc/docs" class="dropdownMenuItem_VBaP">Electron</a></li><li><a href="https://luuman.github.io/tauri-doc/docs" class="dropdownMenuItem_VBaP">Tauri</a></li><li><a href="https://luuman.github.io/matrx-doc/docs" class="dropdownMenuItem_VBaP">Matrx</a></li><li><a href="https://luuman.github.io/brainboard-doc/docs" class="dropdownMenuItem_VBaP">Brainboard</a></li><li><a href="https://luuman.github.io/synology-doc/docs" class="dropdownMenuItem_VBaP">Synology</a></li><li><a href="https://luuman.github.io/codex-doc/docs" class="dropdownMenuItem_VBaP">Codex</a></li><li><a href="https://luuman.github.io/ai-doc/docs" class="dropdownMenuItem_VBaP">AI</a></li></ul></div></div><div class="navbarCenter_Zdr3"><div class="root_OF3s"><span class="icon_UcOK" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor" width="15" height="15"><path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"></path></svg></span><div class="slot__FGx"><div class="navbar__search searchBarContainer_NW3z" dir="ltr"><input placeholder="搜索" aria-label="Search" class="navbar__search-input searchInput_YFbd" value=""><div class="loadingRing_RJI3 searchBarLoadingRing_YnHq"><div></div><div></div><div></div><div></div></div></div></div></div></div><div class="navbarRight_q16u"><a class="navLink_RnnM" href="/moltbot-doc/docs">Docs</a><a class="navLink_RnnM" href="/moltbot-doc/blog">Blog</a><button class="themeToggle_zD_x" aria-label="Switch to light theme" title="Light"><svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M12 18a6 6 0 1 1 0-12 6 6 0 0 1 0 12zm0-2a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM11 1h2v3h-2V1zm0 19h2v3h-2v-3zM3.515 4.929l1.414-1.414L7.05 5.636 5.636 7.05 3.515 4.93zM16.95 18.364l1.414-1.414 2.121 2.121-1.414 1.414-2.121-2.121zm2.121-14.85l1.414 1.415-2.121 2.121-1.414-1.414 2.121-2.121zM5.636 16.95l1.414 1.414-2.121 2.121-1.414-1.414 2.121-2.121zM23 11v2h-3v-2h3zM4 11v2H1v-2h3z"></path></svg></button></div></div></nav><div id="__docusaurus_skipToContent_fallback" class="theme-layout-main main-wrapper mainWrapper_z2l0"><div class="docsWrapper_hBAB"><button aria-label="回到顶部" class="clean-btn theme-back-to-top-button backToTopButton_sjWU" type="button"></button><div class="docRoot_UBD9"><main class="docMainContainer_TBSr docMainContainerEnhanced_lQrH"><div class="container padding-top--md padding-bottom--lg"><div class="row"><div class="col docItemCol_VOVn"><div class="docItemContainer_Djhp"><article><div class="tocCollapsible_ETCw theme-doc-toc-mobile tocMobile_ITEo"><button type="button" class="clean-btn tocCollapsibleButton_TO0P">本页总览</button></div><div class="theme-doc-markdown markdown"><header><h1>控制界面（浏览器）</h1></header>
+<p>控制界面是由网关提供的小型 <strong>Vite + Lit</strong> 单页应用程序：</p>
+<ul>
+<li class="">默认：<code>http://&lt;host&gt;:18789/</code></li>
+<li class="">可选前缀：设置 <code>gateway.controlUi.basePath</code>（例如 <code>/moltbot</code>）</li>
+</ul>
+<p>它在同一端口<strong>直接与网关 WebSocket 对话</strong>。</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="快速打开本地">快速打开（本地）<a href="#快速打开本地" class="hash-link" aria-label="快速打开（本地）的直接链接" title="快速打开（本地）的直接链接" translate="no">​</a></h2>
+<p>如果网关在同台计算机上运行，请打开：</p>
+<ul>
+<li class=""><a href="http://127.0.0.1:18789/%EF%BC%88%E6%88%96" target="_blank" rel="noopener noreferrer" class="">http://127.0.0.1:18789/（或</a> <a href="http://localhost:18789/%EF%BC%89" target="_blank" rel="noopener noreferrer" class="">http://localhost:18789/）</a></li>
+</ul>
+<p>如果页面加载失败，请先启动网关：<code>moltbot gateway</code>。</p>
+<p>认证在 WebSocket 握手期间通过以下方式提供：</p>
+<ul>
+<li class=""><code>connect.params.auth.token</code></li>
+<li class=""><code>connect.params.auth.password</code>
+仪表板设置面板允许您存储令牌；密码不会被持久化。
+入门向导默认生成网关令牌，因此首次连接时请在此处粘贴。</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="它能做什么目前">它能做什么（目前）<a href="#它能做什么目前" class="hash-link" aria-label="它能做什么（目前）的直接链接" title="它能做什么（目前）的直接链接" translate="no">​</a></h2>
+<ul>
+<li class="">通过网关 WS 与模型聊天（<code>chat.history</code>、<code>chat.send</code>、<code>chat.abort</code>、<code>chat.inject</code>）</li>
+<li class="">流式传输工具调用 + 聊天中的实时工具输出卡片（代理事件）</li>
+<li class="">通道：WhatsApp/Telegram/Discord/Slack + 插件通道（Mattermost 等）状态 + QR 登录 + 每通道配置（<code>channels.status</code>、<code>web.login.*</code>、<code>config.patch</code>）</li>
+<li class="">实例：在线列表 + 刷新（<code>system-presence</code>）</li>
+<li class="">会话：列表 + 每会话思考/详细覆盖（<code>sessions.list</code>、<code>sessions.patch</code>）</li>
+<li class="">Cron 作业：列表/添加/运行/启用/禁用 + 运行历史（<code>cron.*</code>）</li>
+<li class="">技能：状态、启用/禁用、安装、API 密钥更新（<code>skills.*</code>）</li>
+<li class="">节点：列表 + 功能（<code>node.list</code>）</li>
+<li class="">Exec 批准：编辑网关或节点白名单 + <code>exec host=gateway/node</code> 的询问策略（<code>exec.approvals.*</code>）</li>
+<li class="">配置：查看/编辑 <code>~/.clawdbot/moltbot.json</code>（<code>config.get</code>、<code>config.set</code>）</li>
+<li class="">配置：应用 + 重启并验证（<code>config.apply</code>）并唤醒最后一个活动会话</li>
+<li class="">配置写入包括基础哈希保护以防止覆盖并发编辑</li>
+<li class="">配置架构 + 表单渲染（<code>config.schema</code>，包括插件 + 通道架构）；原始 JSON 编辑器仍可用</li>
+<li class="">调试：状态/健康/模型快照 + 事件日志 + 手动 RPC 调用（<code>status</code>、<code>health</code>、<code>models.list</code>）</li>
+<li class="">日志：带有过滤/导出的网关文件日志实时跟踪（<code>logs.tail</code>）</li>
+<li class="">更新：运行包/git 更新 + 重启（<code>update.run</code>）并附带重启报告</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="聊天行为">聊天行为<a href="#聊天行为" class="hash-link" aria-label="聊天行为的直接链接" title="聊天行为的直接链接" translate="no">​</a></h2>
+<ul>
+<li class=""><code>chat.send</code> 是<strong>非阻塞的</strong>：它立即确认 <code>{ runId, status: &quot;started&quot; }</code> 并通过 <code>chat</code> 事件流式传输响应。</li>
+<li class="">使用相同的 <code>idempotencyKey</code> 重新发送会在运行时返回 <code>{ status: &quot;in_flight&quot; }</code>，完成后返回 <code>{ status: &quot;ok&quot; }</code>。</li>
+<li class=""><code>chat.inject</code> 将助手注释追加到会话记录并广播 <code>chat</code> 事件以进行仅限 UI 的更新（无代理运行，无通道传递）。</li>
+<li class="">停止：
+<ul>
+<li class="">点击<strong>停止</strong>（调用 <code>chat.abort</code>）</li>
+<li class="">输入 <code>/stop</code>（或 <code>stop|esc|abort|wait|exit|interrupt</code>）以带外中止</li>
+<li class=""><code>chat.abort</code> 支持 <code>{ sessionKey }</code>（无 <code>runId</code>）以中止该会话的所有活跃运行</li>
+</ul>
+</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="内联网访问推荐">内联网访问（推荐）<a href="#内联网访问推荐" class="hash-link" aria-label="内联网访问（推荐）的直接链接" title="内联网访问（推荐）的直接链接" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="集成-tailscale-serve首选">集成 Tailscale Serve（首选）<a href="#集成-tailscale-serve首选" class="hash-link" aria-label="集成 Tailscale Serve（首选）的直接链接" title="集成 Tailscale Serve（首选）的直接链接" translate="no">​</a></h3>
+<p>让网关保持在环回地址，让 Tailscale Serve 使用 HTTPS 代理它：</p>
+<div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#D6DEEB;--prism-background-color:#001122"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#D6DEEB;background-color:#001122"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#D6DEEB"><span class="token plain">moltbot gateway --tailscale serve</span><br></span></code></pre></div></div>
+<p>打开：</p>
+<ul>
+<li class=""><code>https://&lt;magicdns&gt;/</code>（或您配置的 <code>gateway.controlUi.basePath</code>）</li>
+</ul>
+<p>默认情况下，当 <code>gateway.auth.allowTailscale</code> 为 <code>true</code> 时，Serve 请求可以通过 Tailscale 身份头信息
+（<code>tailscale-user-login</code>）进行身份验证。Moltbot
+通过使用 <code>tailscale whois</code> 解析 <code>x-forwarded-for</code> 地址并与头信息匹配来验证身份，
+并且仅在接受具有 Tailscale 的 <code>x-forwarded-*</code> 头信息的环回请求时才接受这些信息。如果
+即使对于 Serve 流量也想要求令牌/密码，请设置
+<code>gateway.auth.allowTailscale: false</code>（或强制 <code>gateway.auth.mode: &quot;password&quot;</code>）。</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="绑定到内联网--令牌">绑定到内联网 + 令牌<a href="#绑定到内联网--令牌" class="hash-link" aria-label="绑定到内联网 + 令牌的直接链接" title="绑定到内联网 + 令牌的直接链接" translate="no">​</a></h3>
+<div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#D6DEEB;--prism-background-color:#001122"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#D6DEEB;background-color:#001122"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#D6DEEB"><span class="token plain">moltbot gateway --bind tailnet --token &quot;$(openssl rand -hex 32)&quot;</span><br></span></code></pre></div></div>
+<p>然后打开：</p>
+<ul>
+<li class=""><code>http://&lt;tailscale-ip&gt;:18789/</code>（或您配置的 <code>gateway.controlUi.basePath</code>）</li>
+</ul>
+<p>将令牌粘贴到 UI 设置中（作为 <code>connect.params.auth.token</code> 发送）。</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="不安全的-http">不安全的 HTTP<a href="#不安全的-http" class="hash-link" aria-label="不安全的 HTTP的直接链接" title="不安全的 HTTP的直接链接" translate="no">​</a></h2>
+<p>如果通过普通 HTTP（<code>http://&lt;lan-ip&gt;</code> 或 <code>http://&lt;tailscale-ip&gt;</code>）打开仪表板，
+浏览器在<strong>非安全上下文</strong>中运行并阻止 WebCrypto。默认情况下，
+Moltbot <strong>阻止</strong>没有设备身份的控制界面连接。</p>
+<p><strong>推荐修复方案：</strong> 使用 HTTPS（Tailscale Serve）或在本地打开 UI：</p>
+<ul>
+<li class=""><code>https://&lt;magicdns&gt;/</code>（Serve）</li>
+<li class=""><code>http://127.0.0.1:18789/</code>（在网关主机上）</li>
+</ul>
+<p><strong>降级示例（仅 HTTP 上的令牌）：</strong></p>
+<div class="language-json5 codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#D6DEEB;--prism-background-color:#001122"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-json5 codeBlock_bY9V thin-scrollbar" style="color:#D6DEEB;background-color:#001122"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#D6DEEB"><span class="token plain">{</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">  gateway: {</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">    controlUi: { allowInsecureAuth: true },</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">    bind: &quot;tailnet&quot;,</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">    auth: { mode: &quot;token&quot;, token: &quot;replace-me&quot; }</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">  }</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">}</span><br></span></code></pre></div></div>
+<p>这会禁用控制界面的设备身份 + 配对（即使在 HTTPS 上）。仅在您信任网络时使用。</p>
+<p>有关 HTTPS 设置指南，请参见 <a class="" href="/moltbot-doc/gateway/tailscale">Tailscale</a>。</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="构建-ui">构建 UI<a href="#构建-ui" class="hash-link" aria-label="构建 UI的直接链接" title="构建 UI的直接链接" translate="no">​</a></h2>
+<p>网关从 <code>dist/control-ui</code> 提供静态文件。使用以下命令构建它们：</p>
+<div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#D6DEEB;--prism-background-color:#001122"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#D6DEEB;background-color:#001122"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#D6DEEB"><span class="token plain">pnpm ui:build # 首次运行时自动安装 UI 依赖项</span><br></span></code></pre></div></div>
+<p>可选的绝对基础（当您想要固定资产 URL 时）：</p>
+<div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#D6DEEB;--prism-background-color:#001122"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#D6DEEB;background-color:#001122"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#D6DEEB"><span class="token plain">CLAWDBOT_CONTROL_UI_BASE_PATH=/moltbot/ pnpm ui:build</span><br></span></code></pre></div></div>
+<p>用于本地开发（独立的开发服务器）：</p>
+<div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#D6DEEB;--prism-background-color:#001122"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#D6DEEB;background-color:#001122"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#D6DEEB"><span class="token plain">pnpm ui:dev # 首次运行时自动安装 UI 依赖项</span><br></span></code></pre></div></div>
+<p>然后将 UI 指向您的网关 WS URL（例如 <code>ws://127.0.0.1:18789</code>）。</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="调试测试开发服务器--远程网关">调试/测试：开发服务器 + 远程网关<a href="#调试测试开发服务器--远程网关" class="hash-link" aria-label="调试/测试：开发服务器 + 远程网关的直接链接" title="调试/测试：开发服务器 + 远程网关的直接链接" translate="no">​</a></h2>
+<p>控制界面是静态文件；WebSocket 目标是可配置的，可以
+与 HTTP 来源不同。当您想要本地 Vite 开发服务器
+但网关在其他地方运行时，这很方便。</p>
+<ol>
+<li class="">启动 UI 开发服务器：<code>pnpm ui:dev</code></li>
+<li class="">打开类似这样的 URL：</li>
+</ol>
+<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#D6DEEB;--prism-background-color:#001122"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#D6DEEB;background-color:#001122"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#D6DEEB"><span class="token plain">http://localhost:5173/?gatewayUrl=ws://&lt;gateway-host&gt;:18789</span><br></span></code></pre></div></div>
+<p>可选的一次性认证（如需要）：</p>
+<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#D6DEEB;--prism-background-color:#001122"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#D6DEEB;background-color:#001122"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#D6DEEB"><span class="token plain">http://localhost:5173/?gatewayUrl=wss://&lt;gateway-host&gt;:18789&amp;token=&lt;gateway-token&gt;</span><br></span></code></pre></div></div>
+<p>注意：</p>
+<ul>
+<li class=""><code>gatewayUrl</code> 在加载后存储在 localStorage 中并从 URL 中移除。</li>
+<li class=""><code>token</code> 存储在 localStorage 中；<code>password</code> 仅保留在内存中。</li>
+<li class="">当网关位于 TLS 后面时（Tailscale Serve、HTTPS 代理等）使用 <code>wss://</code>。</li>
+</ul>
+<p>远程访问设置详情：<a class="" href="/moltbot-doc/gateway/remote">远程访问</a>。</p></div></article><nav class="docusaurus-mt-lg pagination-nav" aria-label="文件选项卡"></nav></div></div><div class="col col--3"><div class="tocWrapper_xKoj"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#快速打开本地" class="table-of-contents__link toc-highlight">快速打开（本地）</a></li><li><a href="#它能做什么目前" class="table-of-contents__link toc-highlight">它能做什么（目前）</a></li><li><a href="#聊天行为" class="table-of-contents__link toc-highlight">聊天行为</a></li><li><a href="#内联网访问推荐" class="table-of-contents__link toc-highlight">内联网访问（推荐）</a><ul><li><a href="#集成-tailscale-serve首选" class="table-of-contents__link toc-highlight">集成 Tailscale Serve（首选）</a></li><li><a href="#绑定到内联网--令牌" class="table-of-contents__link toc-highlight">绑定到内联网 + 令牌</a></li></ul></li><li><a href="#不安全的-http" class="table-of-contents__link toc-highlight">不安全的 HTTP</a></li><li><a href="#构建-ui" class="table-of-contents__link toc-highlight">构建 UI</a></li><li><a href="#调试测试开发服务器--远程网关" class="table-of-contents__link toc-highlight">调试/测试：开发服务器 + 远程网关</a></li></ul></div><div class="tocFooter_Fu2z"><div class="themeGroup_RzWV" role="group" aria-label="Theme"><button class="themeBtn_tGr6" aria-label="Light theme" title="Light"><svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor" aria-hidden="true"><path d="M12 18a6 6 0 1 1 0-12 6 6 0 0 1 0 12zm0-2a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM11 1h2v3h-2V1zm0 19h2v3h-2v-3zM3.515 4.929l1.414-1.414L7.05 5.636 5.636 7.05 3.515 4.93zM16.95 18.364l1.414-1.414 2.121 2.121-1.414 1.414-2.121-2.121zm2.121-14.85l1.414 1.415-2.121 2.121-1.414-1.414 2.121-2.121zM5.636 16.95l1.414 1.414-2.121 2.121-1.414-1.414 2.121-2.121zM23 11v2h-3v-2h3zM4 11v2H1v-2h3z"></path></svg></button><button class="themeBtn_tGr6 themeBtnActive_A6tm" aria-label="Dark theme" title="Dark"><svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor" aria-hidden="true"><path d="M11.38 2.019a7.5 7.5 0 1 0 10.6 10.6C21.83 17.963 17.315 22 12.002 22 6.477 22 2 17.523 2 12c0-5.314 4.038-9.827 9.38-10.28z"></path></svg></button></div></div></div></div></div></div></main></div></div></div><footer class="theme-layout-footer footer footer--dark"><div class="container container-fluid"><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2026 Moltbot Docs.</div></div></div></footer></div>
+</body>
+</html>

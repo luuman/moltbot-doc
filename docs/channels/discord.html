@@ -1,0 +1,411 @@
+<!doctype html>
+<html lang="zh" dir="ltr" class="docs-wrapper plugin-docs plugin-id-default docs-version-current docs-doc-page docs-doc-id-channels/discord" data-has-hydrated="false">
+<head>
+<meta charset="UTF-8">
+<meta name="generator" content="Docusaurus v3.9.2">
+<title data-rh="true">Discord (Bot API) | Moltbot Docs</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:url" content="https://luuman.github.io/moltbot-doc/docs/channels/discord"><meta data-rh="true" property="og:locale" content="zh"><meta data-rh="true" name="docusaurus_locale" content="zh"><meta data-rh="true" name="docsearch:language" content="zh"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="Discord (Bot API) | Moltbot Docs"><meta data-rh="true" name="description" content="Status: ready for DM and guild text channels via the official Discord bot gateway."><meta data-rh="true" property="og:description" content="Status: ready for DM and guild text channels via the official Discord bot gateway."><link data-rh="true" rel="icon" href="/moltbot-doc/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://luuman.github.io/moltbot-doc/docs/channels/discord"><link data-rh="true" rel="alternate" href="https://luuman.github.io/moltbot-doc/docs/channels/discord" hreflang="zh"><link data-rh="true" rel="alternate" href="https://luuman.github.io/moltbot-doc/docs/channels/discord" hreflang="x-default"><link rel="alternate" type="application/rss+xml" href="/moltbot-doc/blog/rss.xml" title="Moltbot Docs RSS Feed">
+<link rel="alternate" type="application/atom+xml" href="/moltbot-doc/blog/atom.xml" title="Moltbot Docs Atom Feed"><link rel="stylesheet" href="/moltbot-doc/assets/css/styles.484b4c98.css">
+<script src="/moltbot-doc/assets/js/runtime~main.6cf495cf.js" defer="defer"></script>
+<script src="/moltbot-doc/assets/js/main.f9205183.js" defer="defer"></script>
+</head>
+<body class="navigation-with-keyboard">
+<svg style="display: none;"><defs>
+<symbol id="theme-svg-external-link" viewBox="0 0 24 24"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"/></symbol>
+</defs></svg>
+<script>!function(){var t=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme")}catch(t){}}();document.documentElement.setAttribute("data-theme",t||"dark"),document.documentElement.setAttribute("data-theme-choice",t||"dark")}(),function(){try{const c=new URLSearchParams(window.location.search).entries();for(var[t,e]of c)if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id="__docusaurus"><div role="region" aria-label="跳到主要内容"><a class="skipToContent_fXgn" href="#__docusaurus_skipToContent_fallback">跳到主要内容</a></div><nav class="navbar navbar--fixed-top navbar_MONK" role="navigation" aria-label="Main"><div class="navbarInner_ASTH"><div class="navbarLeft_pUmY"><button aria-label="切换导航栏" aria-expanded="false" class="navbar__toggle clean-btn" type="button"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg></button><a class="brand_SXL9" href="/moltbot-doc/"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="24" height="24" rx="6" fill="var(--ifm-color-primary)"></rect><path d="M7 8.5h10M7 12h7M7 15.5h10" stroke="white" stroke-width="1.8" stroke-linecap="round"></path></svg><span class="brandTitle_XbyU">Moltbot</span></a><div class="dropdown_GrgZ"><button class="dropdownToggle_Nf_z">全部站点<svg class="dropdownArrow_Eka8" viewBox="0 0 12 12" fill="none"><path d="M2 4l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg></button><ul class="dropdownMenu_zsxH"><li><a href="https://luuman.github.io/docs-workspace/docs" class="dropdownMenuItem_VBaP">Workspace</a></li><li><a href="https://luuman.github.io/claude-doc/docs" class="dropdownMenuItem_VBaP">Claude</a></li><li><a href="https://luuman.github.io/electron-doc/docs" class="dropdownMenuItem_VBaP">Electron</a></li><li><a href="https://luuman.github.io/tauri-doc/docs" class="dropdownMenuItem_VBaP">Tauri</a></li><li><a href="https://luuman.github.io/matrx-doc/docs" class="dropdownMenuItem_VBaP">Matrx</a></li><li><a href="https://luuman.github.io/brainboard-doc/docs" class="dropdownMenuItem_VBaP">Brainboard</a></li><li><a href="https://luuman.github.io/synology-doc/docs" class="dropdownMenuItem_VBaP">Synology</a></li><li><a href="https://luuman.github.io/codex-doc/docs" class="dropdownMenuItem_VBaP">Codex</a></li><li><a href="https://luuman.github.io/ai-doc/docs" class="dropdownMenuItem_VBaP">AI</a></li></ul></div></div><div class="navbarCenter_Zdr3"><div class="root_OF3s"><span class="icon_UcOK" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor" width="15" height="15"><path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"></path></svg></span><div class="slot__FGx"><div class="navbar__search searchBarContainer_NW3z" dir="ltr"><input placeholder="搜索" aria-label="Search" class="navbar__search-input searchInput_YFbd" value=""><div class="loadingRing_RJI3 searchBarLoadingRing_YnHq"><div></div><div></div><div></div><div></div></div></div></div></div></div><div class="navbarRight_q16u"><a class="navLink_RnnM" href="/moltbot-doc/docs">Docs</a><a class="navLink_RnnM" href="/moltbot-doc/blog">Blog</a><button class="themeToggle_zD_x" aria-label="Switch to light theme" title="Light"><svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M12 18a6 6 0 1 1 0-12 6 6 0 0 1 0 12zm0-2a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM11 1h2v3h-2V1zm0 19h2v3h-2v-3zM3.515 4.929l1.414-1.414L7.05 5.636 5.636 7.05 3.515 4.93zM16.95 18.364l1.414-1.414 2.121 2.121-1.414 1.414-2.121-2.121zm2.121-14.85l1.414 1.415-2.121 2.121-1.414-1.414 2.121-2.121zM5.636 16.95l1.414 1.414-2.121 2.121-1.414-1.414 2.121-2.121zM23 11v2h-3v-2h3zM4 11v2H1v-2h3z"></path></svg></button></div></div></nav><div id="__docusaurus_skipToContent_fallback" class="theme-layout-main main-wrapper mainWrapper_z2l0"><div class="docsWrapper_hBAB"><button aria-label="回到顶部" class="clean-btn theme-back-to-top-button backToTopButton_sjWU" type="button"></button><div class="docRoot_UBD9"><main class="docMainContainer_TBSr docMainContainerEnhanced_lQrH"><div class="container padding-top--md padding-bottom--lg"><div class="row"><div class="col docItemCol_VOVn"><div class="docItemContainer_Djhp"><article><div class="tocCollapsible_ETCw theme-doc-toc-mobile tocMobile_ITEo"><button type="button" class="clean-btn tocCollapsibleButton_TO0P">本页总览</button></div><div class="theme-doc-markdown markdown"><header><h1>Discord (Bot API)</h1></header>
+<p>Status: ready for DM and guild text channels via the official Discord bot gateway.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="quick-setup-beginner">Quick setup (beginner)<a href="#quick-setup-beginner" class="hash-link" aria-label="Quick setup (beginner)的直接链接" title="Quick setup (beginner)的直接链接" translate="no">​</a></h2>
+<ol>
+<li class="">Create a Discord bot and copy the bot token.</li>
+<li class="">In the Discord app settings, enable <strong>Message Content Intent</strong> (and <strong>Server Members Intent</strong> if you plan to use allowlists or name lookups).</li>
+<li class="">Set the token for Moltbot:
+<ul>
+<li class="">Env: <code>DISCORD_BOT_TOKEN=...</code></li>
+<li class="">Or config: <code>channels.discord.token: &quot;...&quot;</code>.</li>
+<li class="">If both are set, config takes precedence (env fallback is default-account only).</li>
+</ul>
+</li>
+<li class="">Invite the bot to your server with message permissions (create a private server if you just want DMs).</li>
+<li class="">Start the gateway.</li>
+<li class="">DM access is pairing by default; approve the pairing code on first contact.</li>
+</ol>
+<p>Minimal config:</p>
+<div class="language-json5 codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#D6DEEB;--prism-background-color:#001122"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-json5 codeBlock_bY9V thin-scrollbar" style="color:#D6DEEB;background-color:#001122"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#D6DEEB"><span class="token plain">{</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">  channels: {</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">    discord: {</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">      enabled: true,</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">      token: &quot;YOUR_BOT_TOKEN&quot;</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">    }</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">  }</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">}</span><br></span></code></pre></div></div>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="goals">Goals<a href="#goals" class="hash-link" aria-label="Goals的直接链接" title="Goals的直接链接" translate="no">​</a></h2>
+<ul>
+<li class="">Talk to Moltbot via Discord DMs or guild channels.</li>
+<li class="">Direct chats collapse into the agent&#x27;s main session (default <code>agent:main:main</code>); guild channels stay isolated as <code>agent:&lt;agentId&gt;:discord:channel:&lt;channelId&gt;</code> (display names use <code>discord:&lt;guildSlug&gt;#&lt;channelSlug&gt;</code>).</li>
+<li class="">Group DMs are ignored by default; enable via <code>channels.discord.dm.groupEnabled</code> and optionally restrict by <code>channels.discord.dm.groupChannels</code>.</li>
+<li class="">Keep routing deterministic: replies always go back to the channel they arrived on.</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="how-it-works">How it works<a href="#how-it-works" class="hash-link" aria-label="How it works的直接链接" title="How it works的直接链接" translate="no">​</a></h2>
+<ol>
+<li class="">Create a Discord application → Bot, enable the intents you need (DMs + guild messages + message content), and grab the bot token.</li>
+<li class="">Invite the bot to your server with the permissions required to read/send messages where you want to use it.</li>
+<li class="">Configure Moltbot with <code>channels.discord.token</code> (or <code>DISCORD_BOT_TOKEN</code> as a fallback).</li>
+<li class="">Run the gateway; it auto-starts the Discord channel when a token is available (config first, env fallback) and <code>channels.discord.enabled</code> is not <code>false</code>.
+<ul>
+<li class="">If you prefer env vars, set <code>DISCORD_BOT_TOKEN</code> (a config block is optional).</li>
+</ul>
+</li>
+<li class="">Direct chats: use <code>user:&lt;id&gt;</code> (or a <code>&lt;@id&gt;</code> mention) when delivering; all turns land in the shared <code>main</code> session. Bare numeric IDs are ambiguous and rejected.</li>
+<li class="">Guild channels: use <code>channel:&lt;channelId&gt;</code> for delivery. Mentions are required by default and can be set per guild or per channel.</li>
+<li class="">Direct chats: secure by default via <code>channels.discord.dm.policy</code> (default: <code>&quot;pairing&quot;</code>). Unknown senders get a pairing code (expires after 1 hour); approve via <code>moltbot pairing approve discord &lt;code&gt;</code>.
+<ul>
+<li class="">To keep old “open to anyone” behavior: set <code>channels.discord.dm.policy=&quot;open&quot;</code> and <code>channels.discord.dm.allowFrom=[&quot;*&quot;]</code>.</li>
+<li class="">To hard-allowlist: set <code>channels.discord.dm.policy=&quot;allowlist&quot;</code> and list senders in <code>channels.discord.dm.allowFrom</code>.</li>
+<li class="">To ignore all DMs: set <code>channels.discord.dm.enabled=false</code> or <code>channels.discord.dm.policy=&quot;disabled&quot;</code>.</li>
+</ul>
+</li>
+<li class="">Group DMs are ignored by default; enable via <code>channels.discord.dm.groupEnabled</code> and optionally restrict by <code>channels.discord.dm.groupChannels</code>.</li>
+<li class="">Optional guild rules: set <code>channels.discord.guilds</code> keyed by guild id (preferred) or slug, with per-channel rules.</li>
+<li class="">Optional native commands: <code>commands.native</code> defaults to <code>&quot;auto&quot;</code> (on for Discord/Telegram, off for Slack). Override with <code>channels.discord.commands.native: true|false|&quot;auto&quot;</code>; <code>false</code> clears previously registered commands. Text commands are controlled by <code>commands.text</code> and must be sent as standalone <code>/...</code> messages. Use <code>commands.useAccessGroups: false</code> to bypass access-group checks for commands.
+<ul>
+<li class="">Full command list + config: <a class="" href="/moltbot-doc/tools/slash-commands">Slash commands</a></li>
+</ul>
+</li>
+<li class="">Optional guild context history: set <code>channels.discord.historyLimit</code> (default 20, falls back to <code>messages.groupChat.historyLimit</code>) to include the last N guild messages as context when replying to a mention. Set <code>0</code> to disable.</li>
+<li class="">Reactions: the agent can trigger reactions via the <code>discord</code> tool (gated by <code>channels.discord.actions.*</code>).
+<ul>
+<li class="">Reaction removal semantics: see <a class="" href="/moltbot-doc/tools/reactions">/tools/reactions</a>.</li>
+<li class="">The <code>discord</code> tool is only exposed when the current channel is Discord.</li>
+</ul>
+</li>
+<li class="">Native commands use isolated session keys (<code>agent:&lt;agentId&gt;:discord:slash:&lt;userId&gt;</code>) rather than the shared <code>main</code> session.</li>
+</ol>
+<p>Note: Name → id resolution uses guild member search and requires Server Members Intent; if the bot can’t search members, use ids or <code>&lt;@id&gt;</code> mentions.
+Note: Slugs are lowercase with spaces replaced by <code>-</code>. Channel names are slugged without the leading <code>#</code>.
+Note: Guild context <code>[from:]</code> lines include <code>author.tag</code> + <code>id</code> to make ping-ready replies easy.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="config-writes">Config writes<a href="#config-writes" class="hash-link" aria-label="Config writes的直接链接" title="Config writes的直接链接" translate="no">​</a></h2>
+<p>By default, Discord is allowed to write config updates triggered by <code>/config set|unset</code> (requires <code>commands.config: true</code>).</p>
+<p>Disable with:</p>
+<div class="language-json5 codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#D6DEEB;--prism-background-color:#001122"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-json5 codeBlock_bY9V thin-scrollbar" style="color:#D6DEEB;background-color:#001122"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#D6DEEB"><span class="token plain">{</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">  channels: { discord: { configWrites: false } }</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">}</span><br></span></code></pre></div></div>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="how-to-create-your-own-bot">How to create your own bot<a href="#how-to-create-your-own-bot" class="hash-link" aria-label="How to create your own bot的直接链接" title="How to create your own bot的直接链接" translate="no">​</a></h2>
+<p>This is the “Discord Developer Portal” setup for running Moltbot in a server (guild) channel like <code>#help</code>.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="1-create-the-discord-app--bot-user">1) Create the Discord app + bot user<a href="#1-create-the-discord-app--bot-user" class="hash-link" aria-label="1) Create the Discord app + bot user的直接链接" title="1) Create the Discord app + bot user的直接链接" translate="no">​</a></h3>
+<ol>
+<li class="">Discord Developer Portal → <strong>Applications</strong> → <strong>New Application</strong></li>
+<li class="">In your app:
+<ul>
+<li class=""><strong>Bot</strong> → <strong>Add Bot</strong></li>
+<li class="">Copy the <strong>Bot Token</strong> (this is what you put in <code>DISCORD_BOT_TOKEN</code>)</li>
+</ul>
+</li>
+</ol>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="2-enable-the-gateway-intents-moltbot-needs">2) Enable the gateway intents Moltbot needs<a href="#2-enable-the-gateway-intents-moltbot-needs" class="hash-link" aria-label="2) Enable the gateway intents Moltbot needs的直接链接" title="2) Enable the gateway intents Moltbot needs的直接链接" translate="no">​</a></h3>
+<p>Discord blocks “privileged intents” unless you explicitly enable them.</p>
+<p>In <strong>Bot</strong> → <strong>Privileged Gateway Intents</strong>, enable:</p>
+<ul>
+<li class=""><strong>Message Content Intent</strong> (required to read message text in most guilds; without it you’ll see “Used disallowed intents” or the bot will connect but not react to messages)</li>
+<li class=""><strong>Server Members Intent</strong> (recommended; required for some member/user lookups and allowlist matching in guilds)</li>
+</ul>
+<p>You usually do <strong>not</strong> need <strong>Presence Intent</strong>.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="3-generate-an-invite-url-oauth2-url-generator">3) Generate an invite URL (OAuth2 URL Generator)<a href="#3-generate-an-invite-url-oauth2-url-generator" class="hash-link" aria-label="3) Generate an invite URL (OAuth2 URL Generator)的直接链接" title="3) Generate an invite URL (OAuth2 URL Generator)的直接链接" translate="no">​</a></h3>
+<p>In your app: <strong>OAuth2</strong> → <strong>URL Generator</strong></p>
+<p><strong>Scopes</strong></p>
+<ul>
+<li class="">✅ <code>bot</code></li>
+<li class="">✅ <code>applications.commands</code> (required for native commands)</li>
+</ul>
+<p><strong>Bot Permissions</strong> (minimal baseline)</p>
+<ul>
+<li class="">✅ View Channels</li>
+<li class="">✅ Send Messages</li>
+<li class="">✅ Read Message History</li>
+<li class="">✅ Embed Links</li>
+<li class="">✅ Attach Files</li>
+<li class="">✅ Add Reactions (optional but recommended)</li>
+<li class="">✅ Use External Emojis / Stickers (optional; only if you want them)</li>
+</ul>
+<p>Avoid <strong>Administrator</strong> unless you’re debugging and fully trust the bot.</p>
+<p>Copy the generated URL, open it, pick your server, and install the bot.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="4-get-the-ids-guilduserchannel">4) Get the ids (guild/user/channel)<a href="#4-get-the-ids-guilduserchannel" class="hash-link" aria-label="4) Get the ids (guild/user/channel)的直接链接" title="4) Get the ids (guild/user/channel)的直接链接" translate="no">​</a></h3>
+<p>Discord uses numeric ids everywhere; Moltbot config prefers ids.</p>
+<ol>
+<li class="">Discord (desktop/web) → <strong>User Settings</strong> → <strong>Advanced</strong> → enable <strong>Developer Mode</strong></li>
+<li class="">Right-click:
+<ul>
+<li class="">Server name → <strong>Copy Server ID</strong> (guild id)</li>
+<li class="">Channel (e.g. <code>#help</code>) → <strong>Copy Channel ID</strong></li>
+<li class="">Your user → <strong>Copy User ID</strong></li>
+</ul>
+</li>
+</ol>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="5-configure-moltbot">5) Configure Moltbot<a href="#5-configure-moltbot" class="hash-link" aria-label="5) Configure Moltbot的直接链接" title="5) Configure Moltbot的直接链接" translate="no">​</a></h3>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="token">Token<a href="#token" class="hash-link" aria-label="Token的直接链接" title="Token的直接链接" translate="no">​</a></h4>
+<p>Set the bot token via env var (recommended on servers):</p>
+<ul>
+<li class=""><code>DISCORD_BOT_TOKEN=...</code></li>
+</ul>
+<p>Or via config:</p>
+<div class="language-json5 codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#D6DEEB;--prism-background-color:#001122"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-json5 codeBlock_bY9V thin-scrollbar" style="color:#D6DEEB;background-color:#001122"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#D6DEEB"><span class="token plain">{</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">  channels: {</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">    discord: {</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">      enabled: true,</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">      token: &quot;YOUR_BOT_TOKEN&quot;</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">    }</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">  }</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">}</span><br></span></code></pre></div></div>
+<p>Multi-account support: use <code>channels.discord.accounts</code> with per-account tokens and optional <code>name</code>. See <a class="" href="/moltbot-doc/gateway/configuration#telegramaccounts--discordaccounts--slackaccounts--signalaccounts--imessageaccounts"><code>gateway/configuration</code></a> for the shared pattern.</p>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="allowlist--channel-routing">Allowlist + channel routing<a href="#allowlist--channel-routing" class="hash-link" aria-label="Allowlist + channel routing的直接链接" title="Allowlist + channel routing的直接链接" translate="no">​</a></h4>
+<p>Example “single server, only allow me, only allow #help”:</p>
+<div class="language-json5 codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#D6DEEB;--prism-background-color:#001122"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-json5 codeBlock_bY9V thin-scrollbar" style="color:#D6DEEB;background-color:#001122"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#D6DEEB"><span class="token plain">{</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">  channels: {</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">    discord: {</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">      enabled: true,</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">      dm: { enabled: false },</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">      guilds: {</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">        &quot;YOUR_GUILD_ID&quot;: {</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">          users: [&quot;YOUR_USER_ID&quot;],</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">          requireMention: true,</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">          channels: {</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">            help: { allow: true, requireMention: true }</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">          }</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">        }</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">      },</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">      retry: {</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">        attempts: 3,</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">        minDelayMs: 500,</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">        maxDelayMs: 30000,</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">        jitter: 0.1</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">      }</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">    }</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">  }</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">}</span><br></span></code></pre></div></div>
+<p>Notes:</p>
+<ul>
+<li class=""><code>requireMention: true</code> means the bot only replies when mentioned (recommended for shared channels).</li>
+<li class=""><code>agents.list[].groupChat.mentionPatterns</code> (or <code>messages.groupChat.mentionPatterns</code>) also count as mentions for guild messages.</li>
+<li class="">Multi-agent override: set per-agent patterns on <code>agents.list[].groupChat.mentionPatterns</code>.</li>
+<li class="">If <code>channels</code> is present, any channel not listed is denied by default.</li>
+<li class="">Use a <code>&quot;*&quot;</code> channel entry to apply defaults across all channels; explicit channel entries override the wildcard.</li>
+<li class="">Threads inherit parent channel config (allowlist, <code>requireMention</code>, skills, prompts, etc.) unless you add the thread channel id explicitly.</li>
+<li class="">Bot-authored messages are ignored by default; set <code>channels.discord.allowBots=true</code> to allow them (own messages remain filtered).</li>
+<li class="">Warning: If you allow replies to other bots (<code>channels.discord.allowBots=true</code>), prevent bot-to-bot reply loops with <code>requireMention</code>, <code>channels.discord.guilds.*.channels.&lt;id&gt;.users</code> allowlists, and/or clear guardrails in <code>AGENTS.md</code> and <code>SOUL.md</code>.</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="6-verify-it-works">6) Verify it works<a href="#6-verify-it-works" class="hash-link" aria-label="6) Verify it works的直接链接" title="6) Verify it works的直接链接" translate="no">​</a></h3>
+<ol>
+<li class="">Start the gateway.</li>
+<li class="">In your server channel, send: <code>@Krill hello</code> (or whatever your bot name is).</li>
+<li class="">If nothing happens: check <strong>Troubleshooting</strong> below.</li>
+</ol>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="troubleshooting">Troubleshooting<a href="#troubleshooting" class="hash-link" aria-label="Troubleshooting的直接链接" title="Troubleshooting的直接链接" translate="no">​</a></h3>
+<ul>
+<li class="">First: run <code>moltbot doctor</code> and <code>moltbot channels status --probe</code> (actionable warnings + quick audits).</li>
+<li class=""><strong>“Used disallowed intents”</strong>: enable <strong>Message Content Intent</strong> (and likely <strong>Server Members Intent</strong>) in the Developer Portal, then restart the gateway.</li>
+<li class=""><strong>Bot connects but never replies in a guild channel</strong>:
+<ul>
+<li class="">Missing <strong>Message Content Intent</strong>, or</li>
+<li class="">The bot lacks channel permissions (View/Send/Read History), or</li>
+<li class="">Your config requires mentions and you didn’t mention it, or</li>
+<li class="">Your guild/channel allowlist denies the channel/user.</li>
+</ul>
+</li>
+<li class=""><strong><code>requireMention: false</code> but still no replies</strong>:</li>
+<li class=""><code>channels.discord.groupPolicy</code> defaults to <strong>allowlist</strong>; set it to <code>&quot;open&quot;</code> or add a guild entry under <code>channels.discord.guilds</code> (optionally list channels under <code>channels.discord.guilds.&lt;id&gt;.channels</code> to restrict).
+<ul>
+<li class="">If you only set <code>DISCORD_BOT_TOKEN</code> and never create a <code>channels.discord</code> section, the runtime
+defaults <code>groupPolicy</code> to <code>open</code>. Add <code>channels.discord.groupPolicy</code>,
+<code>channels.defaults.groupPolicy</code>, or a guild/channel allowlist to lock it down.</li>
+</ul>
+</li>
+<li class=""><code>requireMention</code> must live under <code>channels.discord.guilds</code> (or a specific channel). <code>channels.discord.requireMention</code> at the top level is ignored.</li>
+<li class=""><strong>Permission audits</strong> (<code>channels status --probe</code>) only check numeric channel IDs. If you use slugs/names as <code>channels.discord.guilds.*.channels</code> keys, the audit can’t verify permissions.</li>
+<li class=""><strong>DMs don’t work</strong>: <code>channels.discord.dm.enabled=false</code>, <code>channels.discord.dm.policy=&quot;disabled&quot;</code>, or you haven’t been approved yet (<code>channels.discord.dm.policy=&quot;pairing&quot;</code>).</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="capabilities--limits">Capabilities &amp; limits<a href="#capabilities--limits" class="hash-link" aria-label="Capabilities &amp; limits的直接链接" title="Capabilities &amp; limits的直接链接" translate="no">​</a></h2>
+<ul>
+<li class="">DMs and guild text channels (threads are treated as separate channels; voice not supported).</li>
+<li class="">Typing indicators sent best-effort; message chunking uses <code>channels.discord.textChunkLimit</code> (default 2000) and splits tall replies by line count (<code>channels.discord.maxLinesPerMessage</code>, default 17).</li>
+<li class="">Optional newline chunking: set <code>channels.discord.chunkMode=&quot;newline&quot;</code> to split on blank lines (paragraph boundaries) before length chunking.</li>
+<li class="">File uploads supported up to the configured <code>channels.discord.mediaMaxMb</code> (default 8 MB).</li>
+<li class="">Mention-gated guild replies by default to avoid noisy bots.</li>
+<li class="">Reply context is injected when a message references another message (quoted content + ids).</li>
+<li class="">Native reply threading is <strong>off by default</strong>; enable with <code>channels.discord.replyToMode</code> and reply tags.</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="retry-policy">Retry policy<a href="#retry-policy" class="hash-link" aria-label="Retry policy的直接链接" title="Retry policy的直接链接" translate="no">​</a></h2>
+<p>Outbound Discord API calls retry on rate limits (429) using Discord <code>retry_after</code> when available, with exponential backoff and jitter. Configure via <code>channels.discord.retry</code>. See <a class="" href="/moltbot-doc/concepts/retry">Retry policy</a>.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="config">Config<a href="#config" class="hash-link" aria-label="Config的直接链接" title="Config的直接链接" translate="no">​</a></h2>
+<div class="language-json5 codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#D6DEEB;--prism-background-color:#001122"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-json5 codeBlock_bY9V thin-scrollbar" style="color:#D6DEEB;background-color:#001122"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#D6DEEB"><span class="token plain">{</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">  channels: {</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">    discord: {</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">      enabled: true,</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">      token: &quot;abc.123&quot;,</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">      groupPolicy: &quot;allowlist&quot;,</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">      guilds: {</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">        &quot;*&quot;: {</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">          channels: {</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">            general: { allow: true }</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">          }</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">        }</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">      },</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">      mediaMaxMb: 8,</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">      actions: {</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">        reactions: true,</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">        stickers: true,</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">        emojiUploads: true,</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">        stickerUploads: true,</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">        polls: true,</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">        permissions: true,</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">        messages: true,</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">        threads: true,</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">        pins: true,</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">        search: true,</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">        memberInfo: true,</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">        roleInfo: true,</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">        roles: false,</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">        channelInfo: true,</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">        channels: true,</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">        voiceStatus: true,</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">        events: true,</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">        moderation: false</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">      },</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">      replyToMode: &quot;off&quot;,</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">      dm: {</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">        enabled: true,</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">        policy: &quot;pairing&quot;, // pairing | allowlist | open | disabled</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">        allowFrom: [&quot;123456789012345678&quot;, &quot;steipete&quot;],</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">        groupEnabled: false,</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">        groupChannels: [&quot;clawd-dm&quot;]</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">      },</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">      guilds: {</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">        &quot;*&quot;: { requireMention: true },</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">        &quot;123456789012345678&quot;: {</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">          slug: &quot;friends-of-clawd&quot;,</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">          requireMention: false,</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">          reactionNotifications: &quot;own&quot;,</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">          users: [&quot;987654321098765432&quot;, &quot;steipete&quot;],</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">          channels: {</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">            general: { allow: true },</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">            help: {</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">              allow: true,</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">              requireMention: true,</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">              users: [&quot;987654321098765432&quot;],</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">              skills: [&quot;search&quot;, &quot;docs&quot;],</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">              systemPrompt: &quot;Keep answers short.&quot;</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">            }</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">          }</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">        }</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">      }</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">    }</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">  }</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">}</span><br></span></code></pre></div></div>
+<p>Ack reactions are controlled globally via <code>messages.ackReaction</code> +
+<code>messages.ackReactionScope</code>. Use <code>messages.removeAckAfterReply</code> to clear the
+ack reaction after the bot replies.</p>
+<ul>
+<li class=""><code>dm.enabled</code>: set <code>false</code> to ignore all DMs (default <code>true</code>).</li>
+<li class=""><code>dm.policy</code>: DM access control (<code>pairing</code> recommended). <code>&quot;open&quot;</code> requires <code>dm.allowFrom=[&quot;*&quot;]</code>.</li>
+<li class=""><code>dm.allowFrom</code>: DM allowlist (user ids or names). Used by <code>dm.policy=&quot;allowlist&quot;</code> and for <code>dm.policy=&quot;open&quot;</code> validation. The wizard accepts usernames and resolves them to ids when the bot can search members.</li>
+<li class=""><code>dm.groupEnabled</code>: enable group DMs (default <code>false</code>).</li>
+<li class=""><code>dm.groupChannels</code>: optional allowlist for group DM channel ids or slugs.</li>
+<li class=""><code>groupPolicy</code>: controls guild channel handling (<code>open|disabled|allowlist</code>); <code>allowlist</code> requires channel allowlists.</li>
+<li class=""><code>guilds</code>: per-guild rules keyed by guild id (preferred) or slug.</li>
+<li class=""><code>guilds.&quot;*&quot;</code>: default per-guild settings applied when no explicit entry exists.</li>
+<li class=""><code>guilds.&lt;id&gt;.slug</code>: optional friendly slug used for display names.</li>
+<li class=""><code>guilds.&lt;id&gt;.users</code>: optional per-guild user allowlist (ids or names).</li>
+<li class=""><code>guilds.&lt;id&gt;.tools</code>: optional per-guild tool policy overrides (<code>allow</code>/<code>deny</code>/<code>alsoAllow</code>) used when the channel override is missing.</li>
+<li class=""><code>guilds.&lt;id&gt;.toolsBySender</code>: optional per-sender tool policy overrides at the guild level (applies when the channel override is missing; <code>&quot;*&quot;</code> wildcard supported).</li>
+<li class=""><code>guilds.&lt;id&gt;.channels.&lt;channel&gt;.allow</code>: allow/deny the channel when <code>groupPolicy=&quot;allowlist&quot;</code>.</li>
+<li class=""><code>guilds.&lt;id&gt;.channels.&lt;channel&gt;.requireMention</code>: mention gating for the channel.</li>
+<li class=""><code>guilds.&lt;id&gt;.channels.&lt;channel&gt;.tools</code>: optional per-channel tool policy overrides (<code>allow</code>/<code>deny</code>/<code>alsoAllow</code>).</li>
+<li class=""><code>guilds.&lt;id&gt;.channels.&lt;channel&gt;.toolsBySender</code>: optional per-sender tool policy overrides within the channel (<code>&quot;*&quot;</code> wildcard supported).</li>
+<li class=""><code>guilds.&lt;id&gt;.channels.&lt;channel&gt;.users</code>: optional per-channel user allowlist.</li>
+<li class=""><code>guilds.&lt;id&gt;.channels.&lt;channel&gt;.skills</code>: skill filter (omit = all skills, empty = none).</li>
+<li class=""><code>guilds.&lt;id&gt;.channels.&lt;channel&gt;.systemPrompt</code>: extra system prompt for the channel (combined with channel topic).</li>
+<li class=""><code>guilds.&lt;id&gt;.channels.&lt;channel&gt;.enabled</code>: set <code>false</code> to disable the channel.</li>
+<li class=""><code>guilds.&lt;id&gt;.channels</code>: channel rules (keys are channel slugs or ids).</li>
+<li class=""><code>guilds.&lt;id&gt;.requireMention</code>: per-guild mention requirement (overridable per channel).</li>
+<li class=""><code>guilds.&lt;id&gt;.reactionNotifications</code>: reaction system event mode (<code>off</code>, <code>own</code>, <code>all</code>, <code>allowlist</code>).</li>
+<li class=""><code>textChunkLimit</code>: outbound text chunk size (chars). Default: 2000.</li>
+<li class=""><code>chunkMode</code>: <code>length</code> (default) splits only when exceeding <code>textChunkLimit</code>; <code>newline</code> splits on blank lines (paragraph boundaries) before length chunking.</li>
+<li class=""><code>maxLinesPerMessage</code>: soft max line count per message. Default: 17.</li>
+<li class=""><code>mediaMaxMb</code>: clamp inbound media saved to disk.</li>
+<li class=""><code>historyLimit</code>: number of recent guild messages to include as context when replying to a mention (default 20; falls back to <code>messages.groupChat.historyLimit</code>; <code>0</code> disables).</li>
+<li class=""><code>dmHistoryLimit</code>: DM history limit in user turns. Per-user overrides: <code>dms[&quot;&lt;user_id&gt;&quot;].historyLimit</code>.</li>
+<li class=""><code>retry</code>: retry policy for outbound Discord API calls (attempts, minDelayMs, maxDelayMs, jitter).</li>
+<li class=""><code>actions</code>: per-action tool gates; omit to allow all (set <code>false</code> to disable).
+<ul>
+<li class=""><code>reactions</code> (covers react + read reactions)</li>
+<li class=""><code>stickers</code>, <code>emojiUploads</code>, <code>stickerUploads</code>, <code>polls</code>, <code>permissions</code>, <code>messages</code>, <code>threads</code>, <code>pins</code>, <code>search</code></li>
+<li class=""><code>memberInfo</code>, <code>roleInfo</code>, <code>channelInfo</code>, <code>voiceStatus</code>, <code>events</code></li>
+<li class=""><code>channels</code> (create/edit/delete channels + categories + permissions)</li>
+<li class=""><code>roles</code> (role add/remove, default <code>false</code>)</li>
+<li class=""><code>moderation</code> (timeout/kick/ban, default <code>false</code>)</li>
+</ul>
+</li>
+</ul>
+<p>Reaction notifications use <code>guilds.&lt;id&gt;.reactionNotifications</code>:</p>
+<ul>
+<li class=""><code>off</code>: no reaction events.</li>
+<li class=""><code>own</code>: reactions on the bot&#x27;s own messages (default).</li>
+<li class=""><code>all</code>: all reactions on all messages.</li>
+<li class=""><code>allowlist</code>: reactions from <code>guilds.&lt;id&gt;.users</code> on all messages (empty list disables).</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="tool-action-defaults">Tool action defaults<a href="#tool-action-defaults" class="hash-link" aria-label="Tool action defaults的直接链接" title="Tool action defaults的直接链接" translate="no">​</a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Action group</th><th>Default</th><th>Notes</th></tr></thead><tbody><tr><td>reactions</td><td>enabled</td><td>React + list reactions + emojiList</td></tr><tr><td>stickers</td><td>enabled</td><td>Send stickers</td></tr><tr><td>emojiUploads</td><td>enabled</td><td>Upload emojis</td></tr><tr><td>stickerUploads</td><td>enabled</td><td>Upload stickers</td></tr><tr><td>polls</td><td>enabled</td><td>Create polls</td></tr><tr><td>permissions</td><td>enabled</td><td>Channel permission snapshot</td></tr><tr><td>messages</td><td>enabled</td><td>Read/send/edit/delete</td></tr><tr><td>threads</td><td>enabled</td><td>Create/list/reply</td></tr><tr><td>pins</td><td>enabled</td><td>Pin/unpin/list</td></tr><tr><td>search</td><td>enabled</td><td>Message search (preview feature)</td></tr><tr><td>memberInfo</td><td>enabled</td><td>Member info</td></tr><tr><td>roleInfo</td><td>enabled</td><td>Role list</td></tr><tr><td>channelInfo</td><td>enabled</td><td>Channel info + list</td></tr><tr><td>channels</td><td>enabled</td><td>Channel/category management</td></tr><tr><td>voiceStatus</td><td>enabled</td><td>Voice state lookup</td></tr><tr><td>events</td><td>enabled</td><td>List/create scheduled events</td></tr><tr><td>roles</td><td>disabled</td><td>Role add/remove</td></tr><tr><td>moderation</td><td>disabled</td><td>Timeout/kick/ban</td></tr></tbody></table>
+<ul>
+<li class=""><code>replyToMode</code>: <code>off</code> (default), <code>first</code>, or <code>all</code>. Applies only when the model includes a reply tag.</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="reply-tags">Reply tags<a href="#reply-tags" class="hash-link" aria-label="Reply tags的直接链接" title="Reply tags的直接链接" translate="no">​</a></h2>
+<p>To request a threaded reply, the model can include one tag in its output:</p>
+<ul>
+<li class=""><code>[[reply_to_current]]</code> — reply to the triggering Discord message.</li>
+<li class=""><code>[[reply_to:&lt;id&gt;]]</code> — reply to a specific message id from context/history.
+Current message ids are appended to prompts as <code>[message_id: …]</code>; history entries already include ids.</li>
+</ul>
+<p>Behavior is controlled by <code>channels.discord.replyToMode</code>:</p>
+<ul>
+<li class=""><code>off</code>: ignore tags.</li>
+<li class=""><code>first</code>: only the first outbound chunk/attachment is a reply.</li>
+<li class=""><code>all</code>: every outbound chunk/attachment is a reply.</li>
+</ul>
+<p>Allowlist matching notes:</p>
+<ul>
+<li class=""><code>allowFrom</code>/<code>users</code>/<code>groupChannels</code> accept ids, names, tags, or mentions like <code>&lt;@id&gt;</code>.</li>
+<li class="">Prefixes like <code>discord:</code>/<code>user:</code> (users) and <code>channel:</code> (group DMs) are supported.</li>
+<li class="">Use <code>*</code> to allow any sender/channel.</li>
+<li class="">When <code>guilds.&lt;id&gt;.channels</code> is present, channels not listed are denied by default.</li>
+<li class="">When <code>guilds.&lt;id&gt;.channels</code> is omitted, all channels in the allowlisted guild are allowed.</li>
+<li class="">To allow <strong>no channels</strong>, set <code>channels.discord.groupPolicy: &quot;disabled&quot;</code> (or keep an empty allowlist).</li>
+<li class="">The configure wizard accepts <code>Guild/Channel</code> names (public + private) and resolves them to IDs when possible.</li>
+<li class="">On startup, Moltbot resolves channel/user names in allowlists to IDs (when the bot can search members)
+and logs the mapping; unresolved entries are kept as typed.</li>
+</ul>
+<p>Native command notes:</p>
+<ul>
+<li class="">The registered commands mirror Moltbot’s chat commands.</li>
+<li class="">Native commands honor the same allowlists as DMs/guild messages (<code>channels.discord.dm.allowFrom</code>, <code>channels.discord.guilds</code>, per-channel rules).</li>
+<li class="">Slash commands may still be visible in Discord UI to users who aren’t allowlisted; Moltbot enforces allowlists on execution and replies “not authorized”.</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="tool-actions">Tool actions<a href="#tool-actions" class="hash-link" aria-label="Tool actions的直接链接" title="Tool actions的直接链接" translate="no">​</a></h2>
+<p>The agent can call <code>discord</code> with actions like:</p>
+<ul>
+<li class=""><code>react</code> / <code>reactions</code> (add or list reactions)</li>
+<li class=""><code>sticker</code>, <code>poll</code>, <code>permissions</code></li>
+<li class=""><code>readMessages</code>, <code>sendMessage</code>, <code>editMessage</code>, <code>deleteMessage</code></li>
+<li class="">Read/search/pin tool payloads include normalized <code>timestampMs</code> (UTC epoch ms) and <code>timestampUtc</code> alongside raw Discord <code>timestamp</code>.</li>
+<li class=""><code>threadCreate</code>, <code>threadList</code>, <code>threadReply</code></li>
+<li class=""><code>pinMessage</code>, <code>unpinMessage</code>, <code>listPins</code></li>
+<li class=""><code>searchMessages</code>, <code>memberInfo</code>, <code>roleInfo</code>, <code>roleAdd</code>, <code>roleRemove</code>, <code>emojiList</code></li>
+<li class=""><code>channelInfo</code>, <code>channelList</code>, <code>voiceStatus</code>, <code>eventList</code>, <code>eventCreate</code></li>
+<li class=""><code>timeout</code>, <code>kick</code>, <code>ban</code></li>
+</ul>
+<p>Discord message ids are surfaced in the injected context (<code>[discord message id: …]</code> and history lines) so the agent can target them.
+Emoji can be unicode (e.g., <code>✅</code>) or custom emoji syntax like <code>&lt;:party_blob:1234567890&gt;</code>.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="safety--ops">Safety &amp; ops<a href="#safety--ops" class="hash-link" aria-label="Safety &amp; ops的直接链接" title="Safety &amp; ops的直接链接" translate="no">​</a></h2>
+<ul>
+<li class="">Treat the bot token like a password; prefer the <code>DISCORD_BOT_TOKEN</code> env var on supervised hosts or lock down the config file permissions.</li>
+<li class="">Only grant the bot permissions it needs (typically Read/Send Messages).</li>
+<li class="">If the bot is stuck or rate limited, restart the gateway (<code>moltbot gateway --force</code>) after confirming no other processes own the Discord session.</li>
+</ul></div></article><nav class="docusaurus-mt-lg pagination-nav" aria-label="文件选项卡"></nav></div></div><div class="col col--3"><div class="tocWrapper_xKoj"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#quick-setup-beginner" class="table-of-contents__link toc-highlight">Quick setup (beginner)</a></li><li><a href="#goals" class="table-of-contents__link toc-highlight">Goals</a></li><li><a href="#how-it-works" class="table-of-contents__link toc-highlight">How it works</a></li><li><a href="#config-writes" class="table-of-contents__link toc-highlight">Config writes</a></li><li><a href="#how-to-create-your-own-bot" class="table-of-contents__link toc-highlight">How to create your own bot</a><ul><li><a href="#1-create-the-discord-app--bot-user" class="table-of-contents__link toc-highlight">1) Create the Discord app + bot user</a></li><li><a href="#2-enable-the-gateway-intents-moltbot-needs" class="table-of-contents__link toc-highlight">2) Enable the gateway intents Moltbot needs</a></li><li><a href="#3-generate-an-invite-url-oauth2-url-generator" class="table-of-contents__link toc-highlight">3) Generate an invite URL (OAuth2 URL Generator)</a></li><li><a href="#4-get-the-ids-guilduserchannel" class="table-of-contents__link toc-highlight">4) Get the ids (guild/user/channel)</a></li><li><a href="#5-configure-moltbot" class="table-of-contents__link toc-highlight">5) Configure Moltbot</a></li><li><a href="#6-verify-it-works" class="table-of-contents__link toc-highlight">6) Verify it works</a></li><li><a href="#troubleshooting" class="table-of-contents__link toc-highlight">Troubleshooting</a></li></ul></li><li><a href="#capabilities--limits" class="table-of-contents__link toc-highlight">Capabilities &amp; limits</a></li><li><a href="#retry-policy" class="table-of-contents__link toc-highlight">Retry policy</a></li><li><a href="#config" class="table-of-contents__link toc-highlight">Config</a><ul><li><a href="#tool-action-defaults" class="table-of-contents__link toc-highlight">Tool action defaults</a></li></ul></li><li><a href="#reply-tags" class="table-of-contents__link toc-highlight">Reply tags</a></li><li><a href="#tool-actions" class="table-of-contents__link toc-highlight">Tool actions</a></li><li><a href="#safety--ops" class="table-of-contents__link toc-highlight">Safety &amp; ops</a></li></ul></div><div class="tocFooter_Fu2z"><div class="themeGroup_RzWV" role="group" aria-label="Theme"><button class="themeBtn_tGr6" aria-label="Light theme" title="Light"><svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor" aria-hidden="true"><path d="M12 18a6 6 0 1 1 0-12 6 6 0 0 1 0 12zm0-2a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM11 1h2v3h-2V1zm0 19h2v3h-2v-3zM3.515 4.929l1.414-1.414L7.05 5.636 5.636 7.05 3.515 4.93zM16.95 18.364l1.414-1.414 2.121 2.121-1.414 1.414-2.121-2.121zm2.121-14.85l1.414 1.415-2.121 2.121-1.414-1.414 2.121-2.121zM5.636 16.95l1.414 1.414-2.121 2.121-1.414-1.414 2.121-2.121zM23 11v2h-3v-2h3zM4 11v2H1v-2h3z"></path></svg></button><button class="themeBtn_tGr6 themeBtnActive_A6tm" aria-label="Dark theme" title="Dark"><svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor" aria-hidden="true"><path d="M11.38 2.019a7.5 7.5 0 1 0 10.6 10.6C21.83 17.963 17.315 22 12.002 22 6.477 22 2 17.523 2 12c0-5.314 4.038-9.827 9.38-10.28z"></path></svg></button></div></div></div></div></div></div></main></div></div></div><footer class="theme-layout-footer footer footer--dark"><div class="container container-fluid"><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2026 Moltbot Docs.</div></div></div></footer></div>
+</body>
+</html>

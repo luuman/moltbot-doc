@@ -1,0 +1,417 @@
+<!doctype html>
+<html lang="zh" dir="ltr" class="docs-wrapper plugin-docs plugin-id-default docs-version-current docs-doc-page docs-doc-id-refactor/clawnet" data-has-hydrated="false">
+<head>
+<meta charset="UTF-8">
+<meta name="generator" content="Docusaurus v3.9.2">
+<title data-rh="true">Clawnet refactor (protocol + auth unification) | Moltbot Docs</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:url" content="https://luuman.github.io/moltbot-doc/docs/refactor/clawnet"><meta data-rh="true" property="og:locale" content="zh"><meta data-rh="true" name="docusaurus_locale" content="zh"><meta data-rh="true" name="docsearch:language" content="zh"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="Clawnet refactor (protocol + auth unification) | Moltbot Docs"><meta data-rh="true" name="description" content="Hi"><meta data-rh="true" property="og:description" content="Hi"><link data-rh="true" rel="icon" href="/moltbot-doc/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://luuman.github.io/moltbot-doc/docs/refactor/clawnet"><link data-rh="true" rel="alternate" href="https://luuman.github.io/moltbot-doc/docs/refactor/clawnet" hreflang="zh"><link data-rh="true" rel="alternate" href="https://luuman.github.io/moltbot-doc/docs/refactor/clawnet" hreflang="x-default"><link rel="alternate" type="application/rss+xml" href="/moltbot-doc/blog/rss.xml" title="Moltbot Docs RSS Feed">
+<link rel="alternate" type="application/atom+xml" href="/moltbot-doc/blog/atom.xml" title="Moltbot Docs Atom Feed"><link rel="stylesheet" href="/moltbot-doc/assets/css/styles.484b4c98.css">
+<script src="/moltbot-doc/assets/js/runtime~main.6cf495cf.js" defer="defer"></script>
+<script src="/moltbot-doc/assets/js/main.f9205183.js" defer="defer"></script>
+</head>
+<body class="navigation-with-keyboard">
+<svg style="display: none;"><defs>
+<symbol id="theme-svg-external-link" viewBox="0 0 24 24"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"/></symbol>
+</defs></svg>
+<script>!function(){var t=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme")}catch(t){}}();document.documentElement.setAttribute("data-theme",t||"dark"),document.documentElement.setAttribute("data-theme-choice",t||"dark")}(),function(){try{const c=new URLSearchParams(window.location.search).entries();for(var[t,e]of c)if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id="__docusaurus"><div role="region" aria-label="跳到主要内容"><a class="skipToContent_fXgn" href="#__docusaurus_skipToContent_fallback">跳到主要内容</a></div><nav class="navbar navbar--fixed-top navbar_MONK" role="navigation" aria-label="Main"><div class="navbarInner_ASTH"><div class="navbarLeft_pUmY"><button aria-label="切换导航栏" aria-expanded="false" class="navbar__toggle clean-btn" type="button"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg></button><a class="brand_SXL9" href="/moltbot-doc/"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="24" height="24" rx="6" fill="var(--ifm-color-primary)"></rect><path d="M7 8.5h10M7 12h7M7 15.5h10" stroke="white" stroke-width="1.8" stroke-linecap="round"></path></svg><span class="brandTitle_XbyU">Moltbot</span></a><div class="dropdown_GrgZ"><button class="dropdownToggle_Nf_z">全部站点<svg class="dropdownArrow_Eka8" viewBox="0 0 12 12" fill="none"><path d="M2 4l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg></button><ul class="dropdownMenu_zsxH"><li><a href="https://luuman.github.io/docs-workspace/docs" class="dropdownMenuItem_VBaP">Workspace</a></li><li><a href="https://luuman.github.io/claude-doc/docs" class="dropdownMenuItem_VBaP">Claude</a></li><li><a href="https://luuman.github.io/electron-doc/docs" class="dropdownMenuItem_VBaP">Electron</a></li><li><a href="https://luuman.github.io/tauri-doc/docs" class="dropdownMenuItem_VBaP">Tauri</a></li><li><a href="https://luuman.github.io/matrx-doc/docs" class="dropdownMenuItem_VBaP">Matrx</a></li><li><a href="https://luuman.github.io/brainboard-doc/docs" class="dropdownMenuItem_VBaP">Brainboard</a></li><li><a href="https://luuman.github.io/synology-doc/docs" class="dropdownMenuItem_VBaP">Synology</a></li><li><a href="https://luuman.github.io/codex-doc/docs" class="dropdownMenuItem_VBaP">Codex</a></li><li><a href="https://luuman.github.io/ai-doc/docs" class="dropdownMenuItem_VBaP">AI</a></li></ul></div></div><div class="navbarCenter_Zdr3"><div class="root_OF3s"><span class="icon_UcOK" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor" width="15" height="15"><path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"></path></svg></span><div class="slot__FGx"><div class="navbar__search searchBarContainer_NW3z" dir="ltr"><input placeholder="搜索" aria-label="Search" class="navbar__search-input searchInput_YFbd" value=""><div class="loadingRing_RJI3 searchBarLoadingRing_YnHq"><div></div><div></div><div></div><div></div></div></div></div></div></div><div class="navbarRight_q16u"><a class="navLink_RnnM" href="/moltbot-doc/docs">Docs</a><a class="navLink_RnnM" href="/moltbot-doc/blog">Blog</a><button class="themeToggle_zD_x" aria-label="Switch to light theme" title="Light"><svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M12 18a6 6 0 1 1 0-12 6 6 0 0 1 0 12zm0-2a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM11 1h2v3h-2V1zm0 19h2v3h-2v-3zM3.515 4.929l1.414-1.414L7.05 5.636 5.636 7.05 3.515 4.93zM16.95 18.364l1.414-1.414 2.121 2.121-1.414 1.414-2.121-2.121zm2.121-14.85l1.414 1.415-2.121 2.121-1.414-1.414 2.121-2.121zM5.636 16.95l1.414 1.414-2.121 2.121-1.414-1.414 2.121-2.121zM23 11v2h-3v-2h3zM4 11v2H1v-2h3z"></path></svg></button></div></div></nav><div id="__docusaurus_skipToContent_fallback" class="theme-layout-main main-wrapper mainWrapper_z2l0"><div class="docsWrapper_hBAB"><button aria-label="回到顶部" class="clean-btn theme-back-to-top-button backToTopButton_sjWU" type="button"></button><div class="docRoot_UBD9"><main class="docMainContainer_TBSr docMainContainerEnhanced_lQrH"><div class="container padding-top--md padding-bottom--lg"><div class="row"><div class="col docItemCol_VOVn"><div class="docItemContainer_Djhp"><article><div class="tocCollapsible_ETCw theme-doc-toc-mobile tocMobile_ITEo"><button type="button" class="clean-btn tocCollapsibleButton_TO0P">本页总览</button></div><div class="theme-doc-markdown markdown"><header><h1>Clawnet refactor (protocol + auth unification)</h1></header>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="hi">Hi<a href="#hi" class="hash-link" aria-label="Hi的直接链接" title="Hi的直接链接" translate="no">​</a></h2>
+<p>Hi Peter — great direction; this unlocks simpler UX + stronger security.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="purpose">Purpose<a href="#purpose" class="hash-link" aria-label="Purpose的直接链接" title="Purpose的直接链接" translate="no">​</a></h2>
+<p>Single, rigorous document for:</p>
+<ul>
+<li class="">Current state: protocols, flows, trust boundaries.</li>
+<li class="">Pain points: approvals, multi‑hop routing, UI duplication.</li>
+<li class="">Proposed new state: one protocol, scoped roles, unified auth/pairing, TLS pinning.</li>
+<li class="">Identity model: stable IDs + cute slugs.</li>
+<li class="">Migration plan, risks, open questions.</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="goals-from-discussion">Goals (from discussion)<a href="#goals-from-discussion" class="hash-link" aria-label="Goals (from discussion)的直接链接" title="Goals (from discussion)的直接链接" translate="no">​</a></h2>
+<ul>
+<li class="">One protocol for all clients (mac app, CLI, iOS, Android, headless node).</li>
+<li class="">Every network participant authenticated + paired.</li>
+<li class="">Role clarity: nodes vs operators.</li>
+<li class="">Central approvals routed to where the user is.</li>
+<li class="">TLS encryption + optional pinning for all remote traffic.</li>
+<li class="">Minimal code duplication.</li>
+<li class="">Single machine should appear once (no UI/node duplicate entry).</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="nongoals-explicit">Non‑goals (explicit)<a href="#nongoals-explicit" class="hash-link" aria-label="Non‑goals (explicit)的直接链接" title="Non‑goals (explicit)的直接链接" translate="no">​</a></h2>
+<ul>
+<li class="">Remove capability separation (still need least‑privilege).</li>
+<li class="">Expose full gateway control plane without scope checks.</li>
+<li class="">Make auth depend on human labels (slugs remain non‑security).</li>
+</ul>
+<hr>
+<h1>Current state (as‑is)</h1>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="two-protocols">Two protocols<a href="#two-protocols" class="hash-link" aria-label="Two protocols的直接链接" title="Two protocols的直接链接" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="1-gateway-websocket-control-plane">1) Gateway WebSocket (control plane)<a href="#1-gateway-websocket-control-plane" class="hash-link" aria-label="1) Gateway WebSocket (control plane)的直接链接" title="1) Gateway WebSocket (control plane)的直接链接" translate="no">​</a></h3>
+<ul>
+<li class="">Full API surface: config, channels, models, sessions, agent runs, logs, nodes, etc.</li>
+<li class="">Default bind: loopback. Remote access via SSH/Tailscale.</li>
+<li class="">Auth: token/password via <code>connect</code>.</li>
+<li class="">No TLS pinning (relies on loopback/tunnel).</li>
+<li class="">Code:
+<ul>
+<li class=""><code>src/gateway/server/ws-connection/message-handler.ts</code></li>
+<li class=""><code>src/gateway/client.ts</code></li>
+<li class=""><code>docs/gateway/protocol.md</code></li>
+</ul>
+</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="2-bridge-node-transport">2) Bridge (node transport)<a href="#2-bridge-node-transport" class="hash-link" aria-label="2) Bridge (node transport)的直接链接" title="2) Bridge (node transport)的直接链接" translate="no">​</a></h3>
+<ul>
+<li class="">Narrow allowlist surface, node identity + pairing.</li>
+<li class="">JSONL over TCP; optional TLS + cert fingerprint pinning.</li>
+<li class="">TLS advertises fingerprint in discovery TXT.</li>
+<li class="">Code:
+<ul>
+<li class=""><code>src/infra/bridge/server/connection.ts</code></li>
+<li class=""><code>src/gateway/server-bridge.ts</code></li>
+<li class=""><code>src/node-host/bridge-client.ts</code></li>
+<li class=""><code>docs/gateway/bridge-protocol.md</code></li>
+</ul>
+</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="control-plane-clients-today">Control plane clients today<a href="#control-plane-clients-today" class="hash-link" aria-label="Control plane clients today的直接链接" title="Control plane clients today的直接链接" translate="no">​</a></h2>
+<ul>
+<li class="">CLI → Gateway WS via <code>callGateway</code> (<code>src/gateway/call.ts</code>).</li>
+<li class="">macOS app UI → Gateway WS (<code>GatewayConnection</code>).</li>
+<li class="">Web Control UI → Gateway WS.</li>
+<li class="">ACP → Gateway WS.</li>
+<li class="">Browser control uses its own HTTP control server.</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="nodes-today">Nodes today<a href="#nodes-today" class="hash-link" aria-label="Nodes today的直接链接" title="Nodes today的直接链接" translate="no">​</a></h2>
+<ul>
+<li class="">macOS app in node mode connects to Gateway bridge (<code>MacNodeBridgeSession</code>).</li>
+<li class="">iOS/Android apps connect to Gateway bridge.</li>
+<li class="">Pairing + per‑node token stored on gateway.</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="current-approval-flow-exec">Current approval flow (exec)<a href="#current-approval-flow-exec" class="hash-link" aria-label="Current approval flow (exec)的直接链接" title="Current approval flow (exec)的直接链接" translate="no">​</a></h2>
+<ul>
+<li class="">Agent uses <code>system.run</code> via Gateway.</li>
+<li class="">Gateway invokes node over bridge.</li>
+<li class="">Node runtime decides approval.</li>
+<li class="">UI prompt shown by mac app (when node == mac app).</li>
+<li class="">Node returns <code>invoke-res</code> to Gateway.</li>
+<li class="">Multi‑hop, UI tied to node host.</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="presence--identity-today">Presence + identity today<a href="#presence--identity-today" class="hash-link" aria-label="Presence + identity today的直接链接" title="Presence + identity today的直接链接" translate="no">​</a></h2>
+<ul>
+<li class="">Gateway presence entries from WS clients.</li>
+<li class="">Node presence entries from bridge.</li>
+<li class="">mac app can show two entries for same machine (UI + node).</li>
+<li class="">Node identity stored in pairing store; UI identity separate.</li>
+</ul>
+<hr>
+<h1>Problems / pain points</h1>
+<ul>
+<li class="">Two protocol stacks to maintain (WS + Bridge).</li>
+<li class="">Approvals on remote nodes: prompt appears on node host, not where user is.</li>
+<li class="">TLS pinning only exists for bridge; WS depends on SSH/Tailscale.</li>
+<li class="">Identity duplication: same machine shows as multiple instances.</li>
+<li class="">Ambiguous roles: UI + node + CLI capabilities not clearly separated.</li>
+</ul>
+<hr>
+<h1>Proposed new state (Clawnet)</h1>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="one-protocol-two-roles">One protocol, two roles<a href="#one-protocol-two-roles" class="hash-link" aria-label="One protocol, two roles的直接链接" title="One protocol, two roles的直接链接" translate="no">​</a></h2>
+<p>Single WS protocol with role + scope.</p>
+<ul>
+<li class=""><strong>Role: node</strong> (capability host)</li>
+<li class=""><strong>Role: operator</strong> (control plane)</li>
+<li class="">Optional <strong>scope</strong> for operator:
+<ul>
+<li class=""><code>operator.read</code> (status + viewing)</li>
+<li class=""><code>operator.write</code> (agent run, sends)</li>
+<li class=""><code>operator.admin</code> (config, channels, models)</li>
+</ul>
+</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="role-behaviors">Role behaviors<a href="#role-behaviors" class="hash-link" aria-label="Role behaviors的直接链接" title="Role behaviors的直接链接" translate="no">​</a></h3>
+<p><strong>Node</strong></p>
+<ul>
+<li class="">Can register capabilities (<code>caps</code>, <code>commands</code>, permissions).</li>
+<li class="">Can receive <code>invoke</code> commands (<code>system.run</code>, <code>camera.*</code>, <code>canvas.*</code>, <code>screen.record</code>, etc).</li>
+<li class="">Can send events: <code>voice.transcript</code>, <code>agent.request</code>, <code>chat.subscribe</code>.</li>
+<li class="">Cannot call config/models/channels/sessions/agent control plane APIs.</li>
+</ul>
+<p><strong>Operator</strong></p>
+<ul>
+<li class="">Full control plane API, gated by scope.</li>
+<li class="">Receives all approvals.</li>
+<li class="">Does not directly execute OS actions; routes to nodes.</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="key-rule">Key rule<a href="#key-rule" class="hash-link" aria-label="Key rule的直接链接" title="Key rule的直接链接" translate="no">​</a></h3>
+<p>Role is per‑connection, not per device. A device may open both roles, separately.</p>
+<hr>
+<h1>Unified authentication + pairing</h1>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="client-identity">Client identity<a href="#client-identity" class="hash-link" aria-label="Client identity的直接链接" title="Client identity的直接链接" translate="no">​</a></h2>
+<p>Every client provides:</p>
+<ul>
+<li class=""><code>deviceId</code> (stable, derived from device key).</li>
+<li class=""><code>displayName</code> (human name).</li>
+<li class=""><code>role</code> + <code>scope</code> + <code>caps</code> + <code>commands</code>.</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="pairing-flow-unified">Pairing flow (unified)<a href="#pairing-flow-unified" class="hash-link" aria-label="Pairing flow (unified)的直接链接" title="Pairing flow (unified)的直接链接" translate="no">​</a></h2>
+<ul>
+<li class="">Client connects unauthenticated.</li>
+<li class="">Gateway creates a <strong>pairing request</strong> for that <code>deviceId</code>.</li>
+<li class="">Operator receives prompt; approves/denies.</li>
+<li class="">Gateway issues credentials bound to:
+<ul>
+<li class="">device public key</li>
+<li class="">role(s)</li>
+<li class="">scope(s)</li>
+<li class="">capabilities/commands</li>
+</ul>
+</li>
+<li class="">Client persists token, reconnects authenticated.</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="devicebound-auth-avoid-bearer-token-replay">Device‑bound auth (avoid bearer token replay)<a href="#devicebound-auth-avoid-bearer-token-replay" class="hash-link" aria-label="Device‑bound auth (avoid bearer token replay)的直接链接" title="Device‑bound auth (avoid bearer token replay)的直接链接" translate="no">​</a></h2>
+<p>Preferred: device keypairs.</p>
+<ul>
+<li class="">Device generates keypair once.</li>
+<li class=""><code>deviceId = fingerprint(publicKey)</code>.</li>
+<li class="">Gateway sends nonce; device signs; gateway verifies.</li>
+<li class="">Tokens are issued to a public key (proof‑of‑possession), not a string.</li>
+</ul>
+<p>Alternatives:</p>
+<ul>
+<li class="">mTLS (client certs): strongest, more ops complexity.</li>
+<li class="">Short‑lived bearer tokens only as a temporary phase (rotate + revoke early).</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="silent-approval-ssh-heuristic">Silent approval (SSH heuristic)<a href="#silent-approval-ssh-heuristic" class="hash-link" aria-label="Silent approval (SSH heuristic)的直接链接" title="Silent approval (SSH heuristic)的直接链接" translate="no">​</a></h2>
+<p>Define it precisely to avoid a weak link. Prefer one:</p>
+<ul>
+<li class=""><strong>Local‑only</strong>: auto‑pair when client connects via loopback/Unix socket.</li>
+<li class=""><strong>Challenge via SSH</strong>: gateway issues nonce; client proves SSH by fetching it.</li>
+<li class=""><strong>Physical presence window</strong>: after a local approval on gateway host UI, allow auto‑pair for a short window (e.g. 10 minutes).</li>
+</ul>
+<p>Always log + record auto‑approvals.</p>
+<hr>
+<h1>TLS everywhere (dev + prod)</h1>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="reuse-existing-bridge-tls">Reuse existing bridge TLS<a href="#reuse-existing-bridge-tls" class="hash-link" aria-label="Reuse existing bridge TLS的直接链接" title="Reuse existing bridge TLS的直接链接" translate="no">​</a></h2>
+<p>Use current TLS runtime + fingerprint pinning:</p>
+<ul>
+<li class=""><code>src/infra/bridge/server/tls.ts</code></li>
+<li class="">fingerprint verification logic in <code>src/node-host/bridge-client.ts</code></li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="apply-to-ws">Apply to WS<a href="#apply-to-ws" class="hash-link" aria-label="Apply to WS的直接链接" title="Apply to WS的直接链接" translate="no">​</a></h2>
+<ul>
+<li class="">WS server supports TLS with same cert/key + fingerprint.</li>
+<li class="">WS clients can pin fingerprint (optional).</li>
+<li class="">Discovery advertises TLS + fingerprint for all endpoints.
+<ul>
+<li class="">Discovery is locator hints only; never a trust anchor.</li>
+</ul>
+</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="why">Why<a href="#why" class="hash-link" aria-label="Why的直接链接" title="Why的直接链接" translate="no">​</a></h2>
+<ul>
+<li class="">Reduce reliance on SSH/Tailscale for confidentiality.</li>
+<li class="">Make remote mobile connections safe by default.</li>
+</ul>
+<hr>
+<h1>Approvals redesign (centralized)</h1>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="current">Current<a href="#current" class="hash-link" aria-label="Current的直接链接" title="Current的直接链接" translate="no">​</a></h2>
+<p>Approval happens on node host (mac app node runtime). Prompt appears where node runs.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="proposed">Proposed<a href="#proposed" class="hash-link" aria-label="Proposed的直接链接" title="Proposed的直接链接" translate="no">​</a></h2>
+<p>Approval is <strong>gateway‑hosted</strong>, UI delivered to operator clients.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="new-flow">New flow<a href="#new-flow" class="hash-link" aria-label="New flow的直接链接" title="New flow的直接链接" translate="no">​</a></h3>
+<ol>
+<li class="">Gateway receives <code>system.run</code> intent (agent).</li>
+<li class="">Gateway creates approval record: <code>approval.requested</code>.</li>
+<li class="">Operator UI(s) show prompt.</li>
+<li class="">Approval decision sent to gateway: <code>approval.resolve</code>.</li>
+<li class="">Gateway invokes node command if approved.</li>
+<li class="">Node executes, returns <code>invoke-res</code>.</li>
+</ol>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="approval-semantics-hardening">Approval semantics (hardening)<a href="#approval-semantics-hardening" class="hash-link" aria-label="Approval semantics (hardening)的直接链接" title="Approval semantics (hardening)的直接链接" translate="no">​</a></h3>
+<ul>
+<li class="">Broadcast to all operators; only the active UI shows a modal (others get a toast).</li>
+<li class="">First resolution wins; gateway rejects subsequent resolves as already settled.</li>
+<li class="">Default timeout: deny after N seconds (e.g. 60s), log reason.</li>
+<li class="">Resolution requires <code>operator.approvals</code> scope.</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="benefits">Benefits<a href="#benefits" class="hash-link" aria-label="Benefits的直接链接" title="Benefits的直接链接" translate="no">​</a></h2>
+<ul>
+<li class="">Prompt appears where user is (mac/phone).</li>
+<li class="">Consistent approvals for remote nodes.</li>
+<li class="">Node runtime stays headless; no UI dependency.</li>
+</ul>
+<hr>
+<h1>Role clarity examples</h1>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="iphone-app">iPhone app<a href="#iphone-app" class="hash-link" aria-label="iPhone app的直接链接" title="iPhone app的直接链接" translate="no">​</a></h2>
+<ul>
+<li class=""><strong>Node role</strong> for: mic, camera, voice chat, location, push‑to‑talk.</li>
+<li class="">Optional <strong>operator.read</strong> for status and chat view.</li>
+<li class="">Optional <strong>operator.write/admin</strong> only when explicitly enabled.</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="macos-app">macOS app<a href="#macos-app" class="hash-link" aria-label="macOS app的直接链接" title="macOS app的直接链接" translate="no">​</a></h2>
+<ul>
+<li class="">Operator role by default (control UI).</li>
+<li class="">Node role when “Mac node” enabled (system.run, screen, camera).</li>
+<li class="">Same deviceId for both connections → merged UI entry.</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="cli">CLI<a href="#cli" class="hash-link" aria-label="CLI的直接链接" title="CLI的直接链接" translate="no">​</a></h2>
+<ul>
+<li class="">Operator role always.</li>
+<li class="">Scope derived by subcommand:
+<ul>
+<li class=""><code>status</code>, <code>logs</code> → read</li>
+<li class=""><code>agent</code>, <code>message</code> → write</li>
+<li class=""><code>config</code>, <code>channels</code> → admin</li>
+<li class="">approvals + pairing → <code>operator.approvals</code> / <code>operator.pairing</code></li>
+</ul>
+</li>
+</ul>
+<hr>
+<h1>Identity + slugs</h1>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="stable-id">Stable ID<a href="#stable-id" class="hash-link" aria-label="Stable ID的直接链接" title="Stable ID的直接链接" translate="no">​</a></h2>
+<p>Required for auth; never changes.
+Preferred:</p>
+<ul>
+<li class="">Keypair fingerprint (public key hash).</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="cute-slug-lobsterthemed">Cute slug (lobster‑themed)<a href="#cute-slug-lobsterthemed" class="hash-link" aria-label="Cute slug (lobster‑themed)的直接链接" title="Cute slug (lobster‑themed)的直接链接" translate="no">​</a></h2>
+<p>Human label only.</p>
+<ul>
+<li class="">Example: <code>scarlet-claw</code>, <code>saltwave</code>, <code>mantis-pinch</code>.</li>
+<li class="">Stored in gateway registry, editable.</li>
+<li class="">Collision handling: <code>-2</code>, <code>-3</code>.</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="ui-grouping">UI grouping<a href="#ui-grouping" class="hash-link" aria-label="UI grouping的直接链接" title="UI grouping的直接链接" translate="no">​</a></h2>
+<p>Same <code>deviceId</code> across roles → single “Instance” row:</p>
+<ul>
+<li class="">Badge: <code>operator</code>, <code>node</code>.</li>
+<li class="">Shows capabilities + last seen.</li>
+</ul>
+<hr>
+<h1>Migration strategy</h1>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="phase-0-document--align">Phase 0: Document + align<a href="#phase-0-document--align" class="hash-link" aria-label="Phase 0: Document + align的直接链接" title="Phase 0: Document + align的直接链接" translate="no">​</a></h2>
+<ul>
+<li class="">Publish this doc.</li>
+<li class="">Inventory all protocol calls + approval flows.</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="phase-1-add-rolesscopes-to-ws">Phase 1: Add roles/scopes to WS<a href="#phase-1-add-rolesscopes-to-ws" class="hash-link" aria-label="Phase 1: Add roles/scopes to WS的直接链接" title="Phase 1: Add roles/scopes to WS的直接链接" translate="no">​</a></h2>
+<ul>
+<li class="">Extend <code>connect</code> params with <code>role</code>, <code>scope</code>, <code>deviceId</code>.</li>
+<li class="">Add allowlist gating for node role.</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="phase-2-bridge-compatibility">Phase 2: Bridge compatibility<a href="#phase-2-bridge-compatibility" class="hash-link" aria-label="Phase 2: Bridge compatibility的直接链接" title="Phase 2: Bridge compatibility的直接链接" translate="no">​</a></h2>
+<ul>
+<li class="">Keep bridge running.</li>
+<li class="">Add WS node support in parallel.</li>
+<li class="">Gate features behind config flag.</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="phase-3-central-approvals">Phase 3: Central approvals<a href="#phase-3-central-approvals" class="hash-link" aria-label="Phase 3: Central approvals的直接链接" title="Phase 3: Central approvals的直接链接" translate="no">​</a></h2>
+<ul>
+<li class="">Add approval request + resolve events in WS.</li>
+<li class="">Update mac app UI to prompt + respond.</li>
+<li class="">Node runtime stops prompting UI.</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="phase-4-tls-unification">Phase 4: TLS unification<a href="#phase-4-tls-unification" class="hash-link" aria-label="Phase 4: TLS unification的直接链接" title="Phase 4: TLS unification的直接链接" translate="no">​</a></h2>
+<ul>
+<li class="">Add TLS config for WS using bridge TLS runtime.</li>
+<li class="">Add pinning to clients.</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="phase-5-deprecate-bridge">Phase 5: Deprecate bridge<a href="#phase-5-deprecate-bridge" class="hash-link" aria-label="Phase 5: Deprecate bridge的直接链接" title="Phase 5: Deprecate bridge的直接链接" translate="no">​</a></h2>
+<ul>
+<li class="">Migrate iOS/Android/mac node to WS.</li>
+<li class="">Keep bridge as fallback; remove once stable.</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="phase-6-devicebound-auth">Phase 6: Device‑bound auth<a href="#phase-6-devicebound-auth" class="hash-link" aria-label="Phase 6: Device‑bound auth的直接链接" title="Phase 6: Device‑bound auth的直接链接" translate="no">​</a></h2>
+<ul>
+<li class="">Require key‑based identity for all non‑local connections.</li>
+<li class="">Add revocation + rotation UI.</li>
+</ul>
+<hr>
+<h1>Security notes</h1>
+<ul>
+<li class="">Role/allowlist enforced at gateway boundary.</li>
+<li class="">No client gets “full” API without operator scope.</li>
+<li class="">Pairing required for <em>all</em> connections.</li>
+<li class="">TLS + pinning reduces MITM risk for mobile.</li>
+<li class="">SSH silent approval is a convenience; still recorded + revocable.</li>
+<li class="">Discovery is never a trust anchor.</li>
+<li class="">Capability claims are verified against server allowlists by platform/type.</li>
+</ul>
+<h1>Streaming + large payloads (node media)</h1>
+<p>WS control plane is fine for small messages, but nodes also do:</p>
+<ul>
+<li class="">camera clips</li>
+<li class="">screen recordings</li>
+<li class="">audio streams</li>
+</ul>
+<p>Options:</p>
+<ol>
+<li class="">WS binary frames + chunking + backpressure rules.</li>
+<li class="">Separate streaming endpoint (still TLS + auth).</li>
+<li class="">Keep bridge longer for media‑heavy commands, migrate last.</li>
+</ol>
+<p>Pick one before implementation to avoid drift.</p>
+<h1>Capability + command policy</h1>
+<ul>
+<li class="">Node‑reported caps/commands are treated as <strong>claims</strong>.</li>
+<li class="">Gateway enforces per‑platform allowlists.</li>
+<li class="">Any new command requires operator approval or explicit allowlist change.</li>
+<li class="">Audit changes with timestamps.</li>
+</ul>
+<h1>Audit + rate limiting</h1>
+<ul>
+<li class="">Log: pairing requests, approvals/denials, token issuance/rotation/revocation.</li>
+<li class="">Rate‑limit pairing spam and approval prompts.</li>
+</ul>
+<h1>Protocol hygiene</h1>
+<ul>
+<li class="">Explicit protocol version + error codes.</li>
+<li class="">Reconnect rules + heartbeat policy.</li>
+<li class="">Presence TTL and last‑seen semantics.</li>
+</ul>
+<hr>
+<h1>Open questions</h1>
+<ol>
+<li class="">
+<p>Single device running both roles: token model</p>
+<ul>
+<li class="">Recommend separate tokens per role (node vs operator).</li>
+<li class="">Same deviceId; different scopes; clearer revocation.</li>
+</ul>
+</li>
+<li class="">
+<p>Operator scope granularity</p>
+<ul>
+<li class="">read/write/admin + approvals + pairing (minimum viable).</li>
+<li class="">Consider per‑feature scopes later.</li>
+</ul>
+</li>
+<li class="">
+<p>Token rotation + revocation UX</p>
+<ul>
+<li class="">Auto‑rotate on role change.</li>
+<li class="">UI to revoke by deviceId + role.</li>
+</ul>
+</li>
+<li class="">
+<p>Discovery</p>
+<ul>
+<li class="">Extend current Bonjour TXT to include WS TLS fingerprint + role hints.</li>
+<li class="">Treat as locator hints only.</li>
+</ul>
+</li>
+<li class="">
+<p>Cross‑network approval</p>
+<ul>
+<li class="">Broadcast to all operator clients; active UI shows modal.</li>
+<li class="">First response wins; gateway enforces atomicity.</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h1>Summary (TL;DR)</h1>
+<ul>
+<li class="">Today: WS control plane + Bridge node transport.</li>
+<li class="">Pain: approvals + duplication + two stacks.</li>
+<li class="">Proposal: one WS protocol with explicit roles + scopes, unified pairing + TLS pinning, gateway‑hosted approvals, stable device IDs + cute slugs.</li>
+<li class="">Outcome: simpler UX, stronger security, less duplication, better mobile routing.</li>
+</ul></div></article><nav class="docusaurus-mt-lg pagination-nav" aria-label="文件选项卡"></nav></div></div><div class="col col--3"><div class="tocWrapper_xKoj"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#hi" class="table-of-contents__link toc-highlight">Hi</a></li><li><a href="#purpose" class="table-of-contents__link toc-highlight">Purpose</a></li><li><a href="#goals-from-discussion" class="table-of-contents__link toc-highlight">Goals (from discussion)</a></li><li><a href="#nongoals-explicit" class="table-of-contents__link toc-highlight">Non‑goals (explicit)</a></li><li><a href="#two-protocols" class="table-of-contents__link toc-highlight">Two protocols</a><ul><li><a href="#1-gateway-websocket-control-plane" class="table-of-contents__link toc-highlight">1) Gateway WebSocket (control plane)</a></li><li><a href="#2-bridge-node-transport" class="table-of-contents__link toc-highlight">2) Bridge (node transport)</a></li></ul></li><li><a href="#control-plane-clients-today" class="table-of-contents__link toc-highlight">Control plane clients today</a></li><li><a href="#nodes-today" class="table-of-contents__link toc-highlight">Nodes today</a></li><li><a href="#current-approval-flow-exec" class="table-of-contents__link toc-highlight">Current approval flow (exec)</a></li><li><a href="#presence--identity-today" class="table-of-contents__link toc-highlight">Presence + identity today</a></li><li><a href="#one-protocol-two-roles" class="table-of-contents__link toc-highlight">One protocol, two roles</a><ul><li><a href="#role-behaviors" class="table-of-contents__link toc-highlight">Role behaviors</a></li><li><a href="#key-rule" class="table-of-contents__link toc-highlight">Key rule</a></li></ul></li><li><a href="#client-identity" class="table-of-contents__link toc-highlight">Client identity</a></li><li><a href="#pairing-flow-unified" class="table-of-contents__link toc-highlight">Pairing flow (unified)</a></li><li><a href="#devicebound-auth-avoid-bearer-token-replay" class="table-of-contents__link toc-highlight">Device‑bound auth (avoid bearer token replay)</a></li><li><a href="#silent-approval-ssh-heuristic" class="table-of-contents__link toc-highlight">Silent approval (SSH heuristic)</a></li><li><a href="#reuse-existing-bridge-tls" class="table-of-contents__link toc-highlight">Reuse existing bridge TLS</a></li><li><a href="#apply-to-ws" class="table-of-contents__link toc-highlight">Apply to WS</a></li><li><a href="#why" class="table-of-contents__link toc-highlight">Why</a></li><li><a href="#current" class="table-of-contents__link toc-highlight">Current</a></li><li><a href="#proposed" class="table-of-contents__link toc-highlight">Proposed</a><ul><li><a href="#new-flow" class="table-of-contents__link toc-highlight">New flow</a></li><li><a href="#approval-semantics-hardening" class="table-of-contents__link toc-highlight">Approval semantics (hardening)</a></li></ul></li><li><a href="#benefits" class="table-of-contents__link toc-highlight">Benefits</a></li><li><a href="#iphone-app" class="table-of-contents__link toc-highlight">iPhone app</a></li><li><a href="#macos-app" class="table-of-contents__link toc-highlight">macOS app</a></li><li><a href="#cli" class="table-of-contents__link toc-highlight">CLI</a></li><li><a href="#stable-id" class="table-of-contents__link toc-highlight">Stable ID</a></li><li><a href="#cute-slug-lobsterthemed" class="table-of-contents__link toc-highlight">Cute slug (lobster‑themed)</a></li><li><a href="#ui-grouping" class="table-of-contents__link toc-highlight">UI grouping</a></li><li><a href="#phase-0-document--align" class="table-of-contents__link toc-highlight">Phase 0: Document + align</a></li><li><a href="#phase-1-add-rolesscopes-to-ws" class="table-of-contents__link toc-highlight">Phase 1: Add roles/scopes to WS</a></li><li><a href="#phase-2-bridge-compatibility" class="table-of-contents__link toc-highlight">Phase 2: Bridge compatibility</a></li><li><a href="#phase-3-central-approvals" class="table-of-contents__link toc-highlight">Phase 3: Central approvals</a></li><li><a href="#phase-4-tls-unification" class="table-of-contents__link toc-highlight">Phase 4: TLS unification</a></li><li><a href="#phase-5-deprecate-bridge" class="table-of-contents__link toc-highlight">Phase 5: Deprecate bridge</a></li><li><a href="#phase-6-devicebound-auth" class="table-of-contents__link toc-highlight">Phase 6: Device‑bound auth</a></li></ul></div><div class="tocFooter_Fu2z"><div class="themeGroup_RzWV" role="group" aria-label="Theme"><button class="themeBtn_tGr6" aria-label="Light theme" title="Light"><svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor" aria-hidden="true"><path d="M12 18a6 6 0 1 1 0-12 6 6 0 0 1 0 12zm0-2a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM11 1h2v3h-2V1zm0 19h2v3h-2v-3zM3.515 4.929l1.414-1.414L7.05 5.636 5.636 7.05 3.515 4.93zM16.95 18.364l1.414-1.414 2.121 2.121-1.414 1.414-2.121-2.121zm2.121-14.85l1.414 1.415-2.121 2.121-1.414-1.414 2.121-2.121zM5.636 16.95l1.414 1.414-2.121 2.121-1.414-1.414 2.121-2.121zM23 11v2h-3v-2h3zM4 11v2H1v-2h3z"></path></svg></button><button class="themeBtn_tGr6 themeBtnActive_A6tm" aria-label="Dark theme" title="Dark"><svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor" aria-hidden="true"><path d="M11.38 2.019a7.5 7.5 0 1 0 10.6 10.6C21.83 17.963 17.315 22 12.002 22 6.477 22 2 17.523 2 12c0-5.314 4.038-9.827 9.38-10.28z"></path></svg></button></div></div></div></div></div></div></main></div></div></div><footer class="theme-layout-footer footer footer--dark"><div class="container container-fluid"><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2026 Moltbot Docs.</div></div></div></footer></div>
+</body>
+</html>

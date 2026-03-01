@@ -1,0 +1,255 @@
+<!doctype html>
+<html lang="zh" dir="ltr" class="docs-wrapper plugin-docs plugin-id-default docs-version-current docs-doc-page docs-doc-id-reference/session-management-compaction" data-has-hydrated="false">
+<head>
+<meta charset="UTF-8">
+<meta name="generator" content="Docusaurus v3.9.2">
+<title data-rh="true">Session Management &amp; Compaction (Deep Dive) | Moltbot Docs</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:url" content="https://luuman.github.io/moltbot-doc/docs/reference/session-management-compaction"><meta data-rh="true" property="og:locale" content="zh"><meta data-rh="true" name="docusaurus_locale" content="zh"><meta data-rh="true" name="docsearch:language" content="zh"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="Session Management &amp; Compaction (Deep Dive) | Moltbot Docs"><meta data-rh="true" name="description" content="This document explains how Moltbot manages sessions end-to-end:"><meta data-rh="true" property="og:description" content="This document explains how Moltbot manages sessions end-to-end:"><link data-rh="true" rel="icon" href="/moltbot-doc/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://luuman.github.io/moltbot-doc/docs/reference/session-management-compaction"><link data-rh="true" rel="alternate" href="https://luuman.github.io/moltbot-doc/docs/reference/session-management-compaction" hreflang="zh"><link data-rh="true" rel="alternate" href="https://luuman.github.io/moltbot-doc/docs/reference/session-management-compaction" hreflang="x-default"><link rel="alternate" type="application/rss+xml" href="/moltbot-doc/blog/rss.xml" title="Moltbot Docs RSS Feed">
+<link rel="alternate" type="application/atom+xml" href="/moltbot-doc/blog/atom.xml" title="Moltbot Docs Atom Feed"><link rel="stylesheet" href="/moltbot-doc/assets/css/styles.484b4c98.css">
+<script src="/moltbot-doc/assets/js/runtime~main.6cf495cf.js" defer="defer"></script>
+<script src="/moltbot-doc/assets/js/main.f9205183.js" defer="defer"></script>
+</head>
+<body class="navigation-with-keyboard">
+<svg style="display: none;"><defs>
+<symbol id="theme-svg-external-link" viewBox="0 0 24 24"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"/></symbol>
+</defs></svg>
+<script>!function(){var t=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme")}catch(t){}}();document.documentElement.setAttribute("data-theme",t||"dark"),document.documentElement.setAttribute("data-theme-choice",t||"dark")}(),function(){try{const c=new URLSearchParams(window.location.search).entries();for(var[t,e]of c)if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id="__docusaurus"><div role="region" aria-label="跳到主要内容"><a class="skipToContent_fXgn" href="#__docusaurus_skipToContent_fallback">跳到主要内容</a></div><nav class="navbar navbar--fixed-top navbar_MONK" role="navigation" aria-label="Main"><div class="navbarInner_ASTH"><div class="navbarLeft_pUmY"><button aria-label="切换导航栏" aria-expanded="false" class="navbar__toggle clean-btn" type="button"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg></button><a class="brand_SXL9" href="/moltbot-doc/"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="24" height="24" rx="6" fill="var(--ifm-color-primary)"></rect><path d="M7 8.5h10M7 12h7M7 15.5h10" stroke="white" stroke-width="1.8" stroke-linecap="round"></path></svg><span class="brandTitle_XbyU">Moltbot</span></a><div class="dropdown_GrgZ"><button class="dropdownToggle_Nf_z">全部站点<svg class="dropdownArrow_Eka8" viewBox="0 0 12 12" fill="none"><path d="M2 4l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg></button><ul class="dropdownMenu_zsxH"><li><a href="https://luuman.github.io/docs-workspace/docs" class="dropdownMenuItem_VBaP">Workspace</a></li><li><a href="https://luuman.github.io/claude-doc/docs" class="dropdownMenuItem_VBaP">Claude</a></li><li><a href="https://luuman.github.io/electron-doc/docs" class="dropdownMenuItem_VBaP">Electron</a></li><li><a href="https://luuman.github.io/tauri-doc/docs" class="dropdownMenuItem_VBaP">Tauri</a></li><li><a href="https://luuman.github.io/matrx-doc/docs" class="dropdownMenuItem_VBaP">Matrx</a></li><li><a href="https://luuman.github.io/brainboard-doc/docs" class="dropdownMenuItem_VBaP">Brainboard</a></li><li><a href="https://luuman.github.io/synology-doc/docs" class="dropdownMenuItem_VBaP">Synology</a></li><li><a href="https://luuman.github.io/codex-doc/docs" class="dropdownMenuItem_VBaP">Codex</a></li><li><a href="https://luuman.github.io/ai-doc/docs" class="dropdownMenuItem_VBaP">AI</a></li></ul></div></div><div class="navbarCenter_Zdr3"><div class="root_OF3s"><span class="icon_UcOK" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor" width="15" height="15"><path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"></path></svg></span><div class="slot__FGx"><div class="navbar__search searchBarContainer_NW3z" dir="ltr"><input placeholder="搜索" aria-label="Search" class="navbar__search-input searchInput_YFbd" value=""><div class="loadingRing_RJI3 searchBarLoadingRing_YnHq"><div></div><div></div><div></div><div></div></div></div></div></div></div><div class="navbarRight_q16u"><a class="navLink_RnnM" href="/moltbot-doc/docs">Docs</a><a class="navLink_RnnM" href="/moltbot-doc/blog">Blog</a><button class="themeToggle_zD_x" aria-label="Switch to light theme" title="Light"><svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M12 18a6 6 0 1 1 0-12 6 6 0 0 1 0 12zm0-2a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM11 1h2v3h-2V1zm0 19h2v3h-2v-3zM3.515 4.929l1.414-1.414L7.05 5.636 5.636 7.05 3.515 4.93zM16.95 18.364l1.414-1.414 2.121 2.121-1.414 1.414-2.121-2.121zm2.121-14.85l1.414 1.415-2.121 2.121-1.414-1.414 2.121-2.121zM5.636 16.95l1.414 1.414-2.121 2.121-1.414-1.414 2.121-2.121zM23 11v2h-3v-2h3zM4 11v2H1v-2h3z"></path></svg></button></div></div></nav><div id="__docusaurus_skipToContent_fallback" class="theme-layout-main main-wrapper mainWrapper_z2l0"><div class="docsWrapper_hBAB"><button aria-label="回到顶部" class="clean-btn theme-back-to-top-button backToTopButton_sjWU" type="button"></button><div class="docRoot_UBD9"><main class="docMainContainer_TBSr docMainContainerEnhanced_lQrH"><div class="container padding-top--md padding-bottom--lg"><div class="row"><div class="col docItemCol_VOVn"><div class="docItemContainer_Djhp"><article><div class="tocCollapsible_ETCw theme-doc-toc-mobile tocMobile_ITEo"><button type="button" class="clean-btn tocCollapsibleButton_TO0P">本页总览</button></div><div class="theme-doc-markdown markdown"><header><h1>Session Management &amp; Compaction (Deep Dive)</h1></header>
+<p>This document explains how Moltbot manages sessions end-to-end:</p>
+<ul>
+<li class=""><strong>Session routing</strong> (how inbound messages map to a <code>sessionKey</code>)</li>
+<li class=""><strong>Session store</strong> (<code>sessions.json</code>) and what it tracks</li>
+<li class=""><strong>Transcript persistence</strong> (<code>*.jsonl</code>) and its structure</li>
+<li class=""><strong>Transcript hygiene</strong> (provider-specific fixups before runs)</li>
+<li class=""><strong>Context limits</strong> (context window vs tracked tokens)</li>
+<li class=""><strong>Compaction</strong> (manual + auto-compaction) and where to hook pre-compaction work</li>
+<li class=""><strong>Silent housekeeping</strong> (e.g. memory writes that shouldn’t produce user-visible output)</li>
+</ul>
+<p>If you want a higher-level overview first, start with:</p>
+<ul>
+<li class=""><a class="" href="/moltbot-doc/concepts/session">/concepts/session</a></li>
+<li class=""><a class="" href="/moltbot-doc/concepts/compaction">/concepts/compaction</a></li>
+<li class=""><a class="" href="/moltbot-doc/concepts/session-pruning">/concepts/session-pruning</a></li>
+<li class=""><a class="" href="/moltbot-doc/reference/transcript-hygiene">/reference/transcript-hygiene</a></li>
+</ul>
+<hr>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="source-of-truth-the-gateway">Source of truth: the Gateway<a href="#source-of-truth-the-gateway" class="hash-link" aria-label="Source of truth: the Gateway的直接链接" title="Source of truth: the Gateway的直接链接" translate="no">​</a></h2>
+<p>Moltbot is designed around a single <strong>Gateway process</strong> that owns session state.</p>
+<ul>
+<li class="">UIs (macOS app, web Control UI, TUI) should query the Gateway for session lists and token counts.</li>
+<li class="">In remote mode, session files are on the remote host; “checking your local Mac files” won’t reflect what the Gateway is using.</li>
+</ul>
+<hr>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="two-persistence-layers">Two persistence layers<a href="#two-persistence-layers" class="hash-link" aria-label="Two persistence layers的直接链接" title="Two persistence layers的直接链接" translate="no">​</a></h2>
+<p>Moltbot persists sessions in two layers:</p>
+<ol>
+<li class="">
+<p><strong>Session store (<code>sessions.json</code>)</strong></p>
+<ul>
+<li class="">Key/value map: <code>sessionKey -&gt; SessionEntry</code></li>
+<li class="">Small, mutable, safe to edit (or delete entries)</li>
+<li class="">Tracks session metadata (current session id, last activity, toggles, token counters, etc.)</li>
+</ul>
+</li>
+<li class="">
+<p><strong>Transcript (<code>&lt;sessionId&gt;.jsonl</code>)</strong></p>
+<ul>
+<li class="">Append-only transcript with tree structure (entries have <code>id</code> + <code>parentId</code>)</li>
+<li class="">Stores the actual conversation + tool calls + compaction summaries</li>
+<li class="">Used to rebuild the model context for future turns</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="on-disk-locations">On-disk locations<a href="#on-disk-locations" class="hash-link" aria-label="On-disk locations的直接链接" title="On-disk locations的直接链接" translate="no">​</a></h2>
+<p>Per agent, on the Gateway host:</p>
+<ul>
+<li class="">Store: <code>~/.clawdbot/agents/&lt;agentId&gt;/sessions/sessions.json</code></li>
+<li class="">Transcripts: <code>~/.clawdbot/agents/&lt;agentId&gt;/sessions/&lt;sessionId&gt;.jsonl</code>
+<ul>
+<li class="">Telegram topic sessions: <code>.../&lt;sessionId&gt;-topic-&lt;threadId&gt;.jsonl</code></li>
+</ul>
+</li>
+</ul>
+<p>Moltbot resolves these via <code>src/config/sessions.ts</code>.</p>
+<hr>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="session-keys-sessionkey">Session keys (<code>sessionKey</code>)<a href="#session-keys-sessionkey" class="hash-link" aria-label="session-keys-sessionkey的直接链接" title="session-keys-sessionkey的直接链接" translate="no">​</a></h2>
+<p>A <code>sessionKey</code> identifies <em>which conversation bucket</em> you’re in (routing + isolation).</p>
+<p>Common patterns:</p>
+<ul>
+<li class="">Main/direct chat (per agent): <code>agent:&lt;agentId&gt;:&lt;mainKey&gt;</code> (default <code>main</code>)</li>
+<li class="">Group: <code>agent:&lt;agentId&gt;:&lt;channel&gt;:group:&lt;id&gt;</code></li>
+<li class="">Room/channel (Discord/Slack): <code>agent:&lt;agentId&gt;:&lt;channel&gt;:channel:&lt;id&gt;</code> or <code>...:room:&lt;id&gt;</code></li>
+<li class="">Cron: <code>cron:&lt;job.id&gt;</code></li>
+<li class="">Webhook: <code>hook:&lt;uuid&gt;</code> (unless overridden)</li>
+</ul>
+<p>The canonical rules are documented at <a class="" href="/moltbot-doc/concepts/session">/concepts/session</a>.</p>
+<hr>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="session-ids-sessionid">Session ids (<code>sessionId</code>)<a href="#session-ids-sessionid" class="hash-link" aria-label="session-ids-sessionid的直接链接" title="session-ids-sessionid的直接链接" translate="no">​</a></h2>
+<p>Each <code>sessionKey</code> points at a current <code>sessionId</code> (the transcript file that continues the conversation).</p>
+<p>Rules of thumb:</p>
+<ul>
+<li class=""><strong>Reset</strong> (<code>/new</code>, <code>/reset</code>) creates a new <code>sessionId</code> for that <code>sessionKey</code>.</li>
+<li class=""><strong>Daily reset</strong> (default 4:00 AM local time on the gateway host) creates a new <code>sessionId</code> on the next message after the reset boundary.</li>
+<li class=""><strong>Idle expiry</strong> (<code>session.reset.idleMinutes</code> or legacy <code>session.idleMinutes</code>) creates a new <code>sessionId</code> when a message arrives after the idle window. When daily + idle are both configured, whichever expires first wins.</li>
+</ul>
+<p>Implementation detail: the decision happens in <code>initSessionState()</code> in <code>src/auto-reply/reply/session.ts</code>.</p>
+<hr>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="session-store-schema-sessionsjson">Session store schema (<code>sessions.json</code>)<a href="#session-store-schema-sessionsjson" class="hash-link" aria-label="session-store-schema-sessionsjson的直接链接" title="session-store-schema-sessionsjson的直接链接" translate="no">​</a></h2>
+<p>The store’s value type is <code>SessionEntry</code> in <code>src/config/sessions.ts</code>.</p>
+<p>Key fields (not exhaustive):</p>
+<ul>
+<li class=""><code>sessionId</code>: current transcript id (filename is derived from this unless <code>sessionFile</code> is set)</li>
+<li class=""><code>updatedAt</code>: last activity timestamp</li>
+<li class=""><code>sessionFile</code>: optional explicit transcript path override</li>
+<li class=""><code>chatType</code>: <code>direct | group | room</code> (helps UIs and send policy)</li>
+<li class=""><code>provider</code>, <code>subject</code>, <code>room</code>, <code>space</code>, <code>displayName</code>: metadata for group/channel labeling</li>
+<li class="">Toggles:
+<ul>
+<li class=""><code>thinkingLevel</code>, <code>verboseLevel</code>, <code>reasoningLevel</code>, <code>elevatedLevel</code></li>
+<li class=""><code>sendPolicy</code> (per-session override)</li>
+</ul>
+</li>
+<li class="">Model selection:
+<ul>
+<li class=""><code>providerOverride</code>, <code>modelOverride</code>, <code>authProfileOverride</code></li>
+</ul>
+</li>
+<li class="">Token counters (best-effort / provider-dependent):
+<ul>
+<li class=""><code>inputTokens</code>, <code>outputTokens</code>, <code>totalTokens</code>, <code>contextTokens</code></li>
+</ul>
+</li>
+<li class=""><code>compactionCount</code>: how often auto-compaction completed for this session key</li>
+<li class=""><code>memoryFlushAt</code>: timestamp for the last pre-compaction memory flush</li>
+<li class=""><code>memoryFlushCompactionCount</code>: compaction count when the last flush ran</li>
+</ul>
+<p>The store is safe to edit, but the Gateway is the authority: it may rewrite or rehydrate entries as sessions run.</p>
+<hr>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="transcript-structure-jsonl">Transcript structure (<code>*.jsonl</code>)<a href="#transcript-structure-jsonl" class="hash-link" aria-label="transcript-structure-jsonl的直接链接" title="transcript-structure-jsonl的直接链接" translate="no">​</a></h2>
+<p>Transcripts are managed by <code>@mariozechner/pi-coding-agent</code>’s <code>SessionManager</code>.</p>
+<p>The file is JSONL:</p>
+<ul>
+<li class="">First line: session header (<code>type: &quot;session&quot;</code>, includes <code>id</code>, <code>cwd</code>, <code>timestamp</code>, optional <code>parentSession</code>)</li>
+<li class="">Then: session entries with <code>id</code> + <code>parentId</code> (tree)</li>
+</ul>
+<p>Notable entry types:</p>
+<ul>
+<li class=""><code>message</code>: user/assistant/toolResult messages</li>
+<li class=""><code>custom_message</code>: extension-injected messages that <em>do</em> enter model context (can be hidden from UI)</li>
+<li class=""><code>custom</code>: extension state that does <em>not</em> enter model context</li>
+<li class=""><code>compaction</code>: persisted compaction summary with <code>firstKeptEntryId</code> and <code>tokensBefore</code></li>
+<li class=""><code>branch_summary</code>: persisted summary when navigating a tree branch</li>
+</ul>
+<p>Moltbot intentionally does <strong>not</strong> “fix up” transcripts; the Gateway uses <code>SessionManager</code> to read/write them.</p>
+<hr>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="context-windows-vs-tracked-tokens">Context windows vs tracked tokens<a href="#context-windows-vs-tracked-tokens" class="hash-link" aria-label="Context windows vs tracked tokens的直接链接" title="Context windows vs tracked tokens的直接链接" translate="no">​</a></h2>
+<p>Two different concepts matter:</p>
+<ol>
+<li class=""><strong>Model context window</strong>: hard cap per model (tokens visible to the model)</li>
+<li class=""><strong>Session store counters</strong>: rolling stats written into <code>sessions.json</code> (used for /status and dashboards)</li>
+</ol>
+<p>If you’re tuning limits:</p>
+<ul>
+<li class="">The context window comes from the model catalog (and can be overridden via config).</li>
+<li class=""><code>contextTokens</code> in the store is a runtime estimate/reporting value; don’t treat it as a strict guarantee.</li>
+</ul>
+<p>For more, see <a class="" href="/moltbot-doc/token-use">/token-use</a>.</p>
+<hr>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="compaction-what-it-is">Compaction: what it is<a href="#compaction-what-it-is" class="hash-link" aria-label="Compaction: what it is的直接链接" title="Compaction: what it is的直接链接" translate="no">​</a></h2>
+<p>Compaction summarizes older conversation into a persisted <code>compaction</code> entry in the transcript and keeps recent messages intact.</p>
+<p>After compaction, future turns see:</p>
+<ul>
+<li class="">The compaction summary</li>
+<li class="">Messages after <code>firstKeptEntryId</code></li>
+</ul>
+<p>Compaction is <strong>persistent</strong> (unlike session pruning). See <a class="" href="/moltbot-doc/concepts/session-pruning">/concepts/session-pruning</a>.</p>
+<hr>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="when-auto-compaction-happens-pi-runtime">When auto-compaction happens (Pi runtime)<a href="#when-auto-compaction-happens-pi-runtime" class="hash-link" aria-label="When auto-compaction happens (Pi runtime)的直接链接" title="When auto-compaction happens (Pi runtime)的直接链接" translate="no">​</a></h2>
+<p>In the embedded Pi agent, auto-compaction triggers in two cases:</p>
+<ol>
+<li class=""><strong>Overflow recovery</strong>: the model returns a context overflow error → compact → retry.</li>
+<li class=""><strong>Threshold maintenance</strong>: after a successful turn, when:</li>
+</ol>
+<p><code>contextTokens &gt; contextWindow - reserveTokens</code></p>
+<p>Where:</p>
+<ul>
+<li class=""><code>contextWindow</code> is the model’s context window</li>
+<li class=""><code>reserveTokens</code> is headroom reserved for prompts + the next model output</li>
+</ul>
+<p>These are Pi runtime semantics (Moltbot consumes the events, but Pi decides when to compact).</p>
+<hr>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="compaction-settings-reservetokens-keeprecenttokens">Compaction settings (<code>reserveTokens</code>, <code>keepRecentTokens</code>)<a href="#compaction-settings-reservetokens-keeprecenttokens" class="hash-link" aria-label="compaction-settings-reservetokens-keeprecenttokens的直接链接" title="compaction-settings-reservetokens-keeprecenttokens的直接链接" translate="no">​</a></h2>
+<p>Pi’s compaction settings live in Pi settings:</p>
+<div class="language-json5 codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#D6DEEB;--prism-background-color:#001122"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-json5 codeBlock_bY9V thin-scrollbar" style="color:#D6DEEB;background-color:#001122"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#D6DEEB"><span class="token plain">{</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">  compaction: {</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">    enabled: true,</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">    reserveTokens: 16384,</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">    keepRecentTokens: 20000</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">  }</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">}</span><br></span></code></pre></div></div>
+<p>Moltbot also enforces a safety floor for embedded runs:</p>
+<ul>
+<li class="">If <code>compaction.reserveTokens &lt; reserveTokensFloor</code>, Moltbot bumps it.</li>
+<li class="">Default floor is <code>20000</code> tokens.</li>
+<li class="">Set <code>agents.defaults.compaction.reserveTokensFloor: 0</code> to disable the floor.</li>
+<li class="">If it’s already higher, Moltbot leaves it alone.</li>
+</ul>
+<p>Why: leave enough headroom for multi-turn “housekeeping” (like memory writes) before compaction becomes unavoidable.</p>
+<p>Implementation: <code>ensurePiCompactionReserveTokens()</code> in <code>src/agents/pi-settings.ts</code>
+(called from <code>src/agents/pi-embedded-runner.ts</code>).</p>
+<hr>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="user-visible-surfaces">User-visible surfaces<a href="#user-visible-surfaces" class="hash-link" aria-label="User-visible surfaces的直接链接" title="User-visible surfaces的直接链接" translate="no">​</a></h2>
+<p>You can observe compaction and session state via:</p>
+<ul>
+<li class=""><code>/status</code> (in any chat session)</li>
+<li class=""><code>moltbot status</code> (CLI)</li>
+<li class=""><code>moltbot sessions</code> / <code>sessions --json</code></li>
+<li class="">Verbose mode: <code>🧹 Auto-compaction complete</code> + compaction count</li>
+</ul>
+<hr>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="silent-housekeeping-no_reply">Silent housekeeping (<code>NO_REPLY</code>)<a href="#silent-housekeeping-no_reply" class="hash-link" aria-label="silent-housekeeping-no_reply的直接链接" title="silent-housekeeping-no_reply的直接链接" translate="no">​</a></h2>
+<p>Moltbot supports “silent” turns for background tasks where the user should not see intermediate output.</p>
+<p>Convention:</p>
+<ul>
+<li class="">The assistant starts its output with <code>NO_REPLY</code> to indicate “do not deliver a reply to the user”.</li>
+<li class="">Moltbot strips/suppresses this in the delivery layer.</li>
+</ul>
+<p>As of <code>2026.1.10</code>, Moltbot also suppresses <strong>draft/typing streaming</strong> when a partial chunk begins with <code>NO_REPLY</code>, so silent operations don’t leak partial output mid-turn.</p>
+<hr>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="pre-compaction-memory-flush-implemented">Pre-compaction “memory flush” (implemented)<a href="#pre-compaction-memory-flush-implemented" class="hash-link" aria-label="Pre-compaction “memory flush” (implemented)的直接链接" title="Pre-compaction “memory flush” (implemented)的直接链接" translate="no">​</a></h2>
+<p>Goal: before auto-compaction happens, run a silent agentic turn that writes durable
+state to disk (e.g. <code>memory/YYYY-MM-DD.md</code> in the agent workspace) so compaction can’t
+erase critical context.</p>
+<p>Moltbot uses the <strong>pre-threshold flush</strong> approach:</p>
+<ol>
+<li class="">Monitor session context usage.</li>
+<li class="">When it crosses a “soft threshold” (below Pi’s compaction threshold), run a silent
+“write memory now” directive to the agent.</li>
+<li class="">Use <code>NO_REPLY</code> so the user sees nothing.</li>
+</ol>
+<p>Config (<code>agents.defaults.compaction.memoryFlush</code>):</p>
+<ul>
+<li class=""><code>enabled</code> (default: <code>true</code>)</li>
+<li class=""><code>softThresholdTokens</code> (default: <code>4000</code>)</li>
+<li class=""><code>prompt</code> (user message for the flush turn)</li>
+<li class=""><code>systemPrompt</code> (extra system prompt appended for the flush turn)</li>
+</ul>
+<p>Notes:</p>
+<ul>
+<li class="">The default prompt/system prompt include a <code>NO_REPLY</code> hint to suppress delivery.</li>
+<li class="">The flush runs once per compaction cycle (tracked in <code>sessions.json</code>).</li>
+<li class="">The flush runs only for embedded Pi sessions (CLI backends skip it).</li>
+<li class="">The flush is skipped when the session workspace is read-only (<code>workspaceAccess: &quot;ro&quot;</code> or <code>&quot;none&quot;</code>).</li>
+<li class="">See <a class="" href="/moltbot-doc/concepts/memory">Memory</a> for the workspace file layout and write patterns.</li>
+</ul>
+<p>Pi also exposes a <code>session_before_compact</code> hook in the extension API, but Moltbot’s
+flush logic lives on the Gateway side today.</p>
+<hr>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="troubleshooting-checklist">Troubleshooting checklist<a href="#troubleshooting-checklist" class="hash-link" aria-label="Troubleshooting checklist的直接链接" title="Troubleshooting checklist的直接链接" translate="no">​</a></h2>
+<ul>
+<li class="">Session key wrong? Start with <a class="" href="/moltbot-doc/concepts/session">/concepts/session</a> and confirm the <code>sessionKey</code> in <code>/status</code>.</li>
+<li class="">Store vs transcript mismatch? Confirm the Gateway host and the store path from <code>moltbot status</code>.</li>
+<li class="">Compaction spam? Check:
+<ul>
+<li class="">model context window (too small)</li>
+<li class="">compaction settings (<code>reserveTokens</code> too high for the model window can cause earlier compaction)</li>
+<li class="">tool-result bloat: enable/tune session pruning</li>
+</ul>
+</li>
+<li class="">Silent turns leaking? Confirm the reply starts with <code>NO_REPLY</code> (exact token) and you’re on a build that includes the streaming suppression fix.</li>
+</ul></div></article><nav class="docusaurus-mt-lg pagination-nav" aria-label="文件选项卡"></nav></div></div><div class="col col--3"><div class="tocWrapper_xKoj"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#source-of-truth-the-gateway" class="table-of-contents__link toc-highlight">Source of truth: the Gateway</a></li><li><a href="#two-persistence-layers" class="table-of-contents__link toc-highlight">Two persistence layers</a></li><li><a href="#on-disk-locations" class="table-of-contents__link toc-highlight">On-disk locations</a></li><li><a href="#session-keys-sessionkey" class="table-of-contents__link toc-highlight">Session keys (<code>sessionKey</code>)</a></li><li><a href="#session-ids-sessionid" class="table-of-contents__link toc-highlight">Session ids (<code>sessionId</code>)</a></li><li><a href="#session-store-schema-sessionsjson" class="table-of-contents__link toc-highlight">Session store schema (<code>sessions.json</code>)</a></li><li><a href="#transcript-structure-jsonl" class="table-of-contents__link toc-highlight">Transcript structure (<code>*.jsonl</code>)</a></li><li><a href="#context-windows-vs-tracked-tokens" class="table-of-contents__link toc-highlight">Context windows vs tracked tokens</a></li><li><a href="#compaction-what-it-is" class="table-of-contents__link toc-highlight">Compaction: what it is</a></li><li><a href="#when-auto-compaction-happens-pi-runtime" class="table-of-contents__link toc-highlight">When auto-compaction happens (Pi runtime)</a></li><li><a href="#compaction-settings-reservetokens-keeprecenttokens" class="table-of-contents__link toc-highlight">Compaction settings (<code>reserveTokens</code>, <code>keepRecentTokens</code>)</a></li><li><a href="#user-visible-surfaces" class="table-of-contents__link toc-highlight">User-visible surfaces</a></li><li><a href="#silent-housekeeping-no_reply" class="table-of-contents__link toc-highlight">Silent housekeeping (<code>NO_REPLY</code>)</a></li><li><a href="#pre-compaction-memory-flush-implemented" class="table-of-contents__link toc-highlight">Pre-compaction “memory flush” (implemented)</a></li><li><a href="#troubleshooting-checklist" class="table-of-contents__link toc-highlight">Troubleshooting checklist</a></li></ul></div><div class="tocFooter_Fu2z"><div class="themeGroup_RzWV" role="group" aria-label="Theme"><button class="themeBtn_tGr6" aria-label="Light theme" title="Light"><svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor" aria-hidden="true"><path d="M12 18a6 6 0 1 1 0-12 6 6 0 0 1 0 12zm0-2a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM11 1h2v3h-2V1zm0 19h2v3h-2v-3zM3.515 4.929l1.414-1.414L7.05 5.636 5.636 7.05 3.515 4.93zM16.95 18.364l1.414-1.414 2.121 2.121-1.414 1.414-2.121-2.121zm2.121-14.85l1.414 1.415-2.121 2.121-1.414-1.414 2.121-2.121zM5.636 16.95l1.414 1.414-2.121 2.121-1.414-1.414 2.121-2.121zM23 11v2h-3v-2h3zM4 11v2H1v-2h3z"></path></svg></button><button class="themeBtn_tGr6 themeBtnActive_A6tm" aria-label="Dark theme" title="Dark"><svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor" aria-hidden="true"><path d="M11.38 2.019a7.5 7.5 0 1 0 10.6 10.6C21.83 17.963 17.315 22 12.002 22 6.477 22 2 17.523 2 12c0-5.314 4.038-9.827 9.38-10.28z"></path></svg></button></div></div></div></div></div></div></main></div></div></div><footer class="theme-layout-footer footer footer--dark"><div class="container container-fluid"><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2026 Moltbot Docs.</div></div></div></footer></div>
+</body>
+</html>

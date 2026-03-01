@@ -1,0 +1,749 @@
+<!doctype html>
+<html lang="zh" dir="ltr" class="docs-wrapper plugin-docs plugin-id-default docs-version-current docs-doc-page docs-doc-id-cli/index" data-has-hydrated="false">
+<head>
+<meta charset="UTF-8">
+<meta name="generator" content="Docusaurus v3.9.2">
+<title data-rh="true">CLI 参考 | Moltbot Docs</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:url" content="https://luuman.github.io/moltbot-doc/docs/cli"><meta data-rh="true" property="og:locale" content="zh"><meta data-rh="true" name="docusaurus_locale" content="zh"><meta data-rh="true" name="docsearch:language" content="zh"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="CLI 参考 | Moltbot Docs"><meta data-rh="true" name="description" content="本页面描述当前的 CLI 行为。如果命令发生变化，请更新本文档。"><meta data-rh="true" property="og:description" content="本页面描述当前的 CLI 行为。如果命令发生变化，请更新本文档。"><link data-rh="true" rel="icon" href="/moltbot-doc/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://luuman.github.io/moltbot-doc/docs/cli"><link data-rh="true" rel="alternate" href="https://luuman.github.io/moltbot-doc/docs/cli" hreflang="zh"><link data-rh="true" rel="alternate" href="https://luuman.github.io/moltbot-doc/docs/cli" hreflang="x-default"><script data-rh="true" type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"索引","item":"https://luuman.github.io/moltbot-doc/docs/cli/"}]}</script><link rel="alternate" type="application/rss+xml" href="/moltbot-doc/blog/rss.xml" title="Moltbot Docs RSS Feed">
+<link rel="alternate" type="application/atom+xml" href="/moltbot-doc/blog/atom.xml" title="Moltbot Docs Atom Feed"><link rel="stylesheet" href="/moltbot-doc/assets/css/styles.484b4c98.css">
+<script src="/moltbot-doc/assets/js/runtime~main.6cf495cf.js" defer="defer"></script>
+<script src="/moltbot-doc/assets/js/main.f9205183.js" defer="defer"></script>
+</head>
+<body class="navigation-with-keyboard">
+<svg style="display: none;"><defs>
+<symbol id="theme-svg-external-link" viewBox="0 0 24 24"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"/></symbol>
+</defs></svg>
+<script>!function(){var t=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme")}catch(t){}}();document.documentElement.setAttribute("data-theme",t||"dark"),document.documentElement.setAttribute("data-theme-choice",t||"dark")}(),function(){try{const c=new URLSearchParams(window.location.search).entries();for(var[t,e]of c)if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id="__docusaurus"><div role="region" aria-label="跳到主要内容"><a class="skipToContent_fXgn" href="#__docusaurus_skipToContent_fallback">跳到主要内容</a></div><nav class="navbar navbar--fixed-top navbar_MONK" role="navigation" aria-label="Main"><div class="navbarInner_ASTH"><div class="navbarLeft_pUmY"><button aria-label="切换导航栏" aria-expanded="false" class="navbar__toggle clean-btn" type="button"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg></button><a class="brand_SXL9" href="/moltbot-doc/"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="24" height="24" rx="6" fill="var(--ifm-color-primary)"></rect><path d="M7 8.5h10M7 12h7M7 15.5h10" stroke="white" stroke-width="1.8" stroke-linecap="round"></path></svg><span class="brandTitle_XbyU">Moltbot</span></a><div class="dropdown_GrgZ"><button class="dropdownToggle_Nf_z">全部站点<svg class="dropdownArrow_Eka8" viewBox="0 0 12 12" fill="none"><path d="M2 4l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg></button><ul class="dropdownMenu_zsxH"><li><a href="https://luuman.github.io/docs-workspace/docs" class="dropdownMenuItem_VBaP">Workspace</a></li><li><a href="https://luuman.github.io/claude-doc/docs" class="dropdownMenuItem_VBaP">Claude</a></li><li><a href="https://luuman.github.io/electron-doc/docs" class="dropdownMenuItem_VBaP">Electron</a></li><li><a href="https://luuman.github.io/tauri-doc/docs" class="dropdownMenuItem_VBaP">Tauri</a></li><li><a href="https://luuman.github.io/matrx-doc/docs" class="dropdownMenuItem_VBaP">Matrx</a></li><li><a href="https://luuman.github.io/brainboard-doc/docs" class="dropdownMenuItem_VBaP">Brainboard</a></li><li><a href="https://luuman.github.io/synology-doc/docs" class="dropdownMenuItem_VBaP">Synology</a></li><li><a href="https://luuman.github.io/codex-doc/docs" class="dropdownMenuItem_VBaP">Codex</a></li><li><a href="https://luuman.github.io/ai-doc/docs" class="dropdownMenuItem_VBaP">AI</a></li></ul></div></div><div class="navbarCenter_Zdr3"><div class="root_OF3s"><span class="icon_UcOK" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor" width="15" height="15"><path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"></path></svg></span><div class="slot__FGx"><div class="navbar__search searchBarContainer_NW3z" dir="ltr"><input placeholder="搜索" aria-label="Search" class="navbar__search-input searchInput_YFbd" value=""><div class="loadingRing_RJI3 searchBarLoadingRing_YnHq"><div></div><div></div><div></div><div></div></div></div></div></div></div><div class="navbarRight_q16u"><a class="navLink_RnnM" href="/moltbot-doc/docs">Docs</a><a class="navLink_RnnM" href="/moltbot-doc/blog">Blog</a><button class="themeToggle_zD_x" aria-label="Switch to light theme" title="Light"><svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M12 18a6 6 0 1 1 0-12 6 6 0 0 1 0 12zm0-2a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM11 1h2v3h-2V1zm0 19h2v3h-2v-3zM3.515 4.929l1.414-1.414L7.05 5.636 5.636 7.05 3.515 4.93zM16.95 18.364l1.414-1.414 2.121 2.121-1.414 1.414-2.121-2.121zm2.121-14.85l1.414 1.415-2.121 2.121-1.414-1.414 2.121-2.121zM5.636 16.95l1.414 1.414-2.121 2.121-1.414-1.414 2.121-2.121zM23 11v2h-3v-2h3zM4 11v2H1v-2h3z"></path></svg></button></div></div></nav><div id="__docusaurus_skipToContent_fallback" class="theme-layout-main main-wrapper mainWrapper_z2l0"><div class="docsWrapper_hBAB"><button aria-label="回到顶部" class="clean-btn theme-back-to-top-button backToTopButton_sjWU" type="button"></button><div class="docRoot_UBD9"><aside class="theme-doc-sidebar-container docSidebarContainer_YfHR"><div class="sidebarViewport_aRkj"><div class="sidebar_njMd"><nav aria-label="文档侧边栏" class="menu thin-scrollbar menu_SIkG"><ul class="theme-doc-sidebar-menu menu__list"><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="true" href="/moltbot-doc/docs"><span title="从这里开始" class="categoryLinkLabel_W154">从这里开始</span></a></div><ul class="menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/moltbot-doc/docs"><span title="索引" class="linkLabel_WmDU">索引</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/moltbot-doc/docs/start/getting-started"><span title="快速入门" class="linkLabel_WmDU">快速入门</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/moltbot-doc/docs/start/wizard"><span title="向导" class="linkLabel_WmDU">向导</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/moltbot-doc/docs/start/setup"><span title="设置" class="linkLabel_WmDU">设置</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/moltbot-doc/docs/start/pairing"><span title="配对" class="linkLabel_WmDU">配对</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/moltbot-doc/docs/start/clawd"><span title="Clawd" class="linkLabel_WmDU">Clawd</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/moltbot-doc/docs/start/showcase"><span title="功能展示" class="linkLabel_WmDU">功能展示</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/moltbot-doc/docs/start/hubs"><span title="中心节点" class="linkLabel_WmDU">中心节点</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/moltbot-doc/docs/start/onboarding"><span title="初始引导" class="linkLabel_WmDU">初始引导</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/moltbot-doc/docs/start/lore"><span title="背景设定" class="linkLabel_WmDU">背景设定</span></a></li></ul></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="true" href="/moltbot-doc/docs/help"><span title="帮助" class="categoryLinkLabel_W154">帮助</span></a></div><ul class="menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/moltbot-doc/docs/help"><span title="索引" class="linkLabel_WmDU">索引</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/moltbot-doc/docs/help/troubleshooting"><span title="故障排除" class="linkLabel_WmDU">故障排除</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/moltbot-doc/docs/help/faq"><span title="常见问题" class="linkLabel_WmDU">常见问题</span></a></li></ul></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="true" href="/moltbot-doc/docs/install"><span title="安装与更新" class="categoryLinkLabel_W154">安装与更新</span></a></div><ul class="menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/moltbot-doc/docs/install"><span title="索引" class="linkLabel_WmDU">索引</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/moltbot-doc/docs/install/installer"><span title="安装程序" class="linkLabel_WmDU">安装程序</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/moltbot-doc/docs/install/updating"><span title="更新" class="linkLabel_WmDU">更新</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/moltbot-doc/docs/install/development-channels"><span title="开发频道" class="linkLabel_WmDU">开发频道</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/moltbot-doc/docs/install/uninstall"><span title="卸载" class="linkLabel_WmDU">卸载</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/moltbot-doc/docs/install/ansible"><span title="Ansible" class="linkLabel_WmDU">Ansible</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/moltbot-doc/docs/install/nix"><span title="Nix" class="linkLabel_WmDU">Nix</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/moltbot-doc/docs/install/docker"><span title="Docker" class="linkLabel_WmDU">Docker</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/moltbot-doc/docs/railway"><span title="部署到 Railway" class="linkLabel_WmDU">部署到 Railway</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/moltbot-doc/docs/render"><span title="部署到 Render" class="linkLabel_WmDU">部署到 Render</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/moltbot-doc/docs/northflank"><span title="部署到 Northflank" class="linkLabel_WmDU">部署到 Northflank</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/moltbot-doc/docs/install/bun"><span title="Bun" class="linkLabel_WmDU">Bun</span></a></li></ul></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret menu__link--active" role="button" aria-expanded="true" href="/moltbot-doc/docs/cli"><span title="命令行界面 (CLI)" class="categoryLinkLabel_W154">命令行界面 (CLI)</span></a></div><ul class="menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link menu__link--active" aria-current="page" tabindex="0" href="/moltbot-doc/docs/cli"><span title="索引" class="linkLabel_WmDU">索引</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/moltbot-doc/docs/cli/setup"><span title="设置" class="linkLabel_WmDU">设置</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/moltbot-doc/docs/cli/onboard"><span title="初始引导" class="linkLabel_WmDU">初始引导</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/moltbot-doc/docs/cli/configure"><span title="配置" class="linkLabel_WmDU">配置</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/moltbot-doc/docs/cli/doctor"><span title="系统诊断" class="linkLabel_WmDU">系统诊断</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/moltbot-doc/docs/cli/dashboard"><span title="仪表板" class="linkLabel_WmDU">仪表板</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/moltbot-doc/docs/cli/reset"><span title="重置" class="linkLabel_WmDU">重置</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/moltbot-doc/docs/cli/uninstall"><span title="卸载" class="linkLabel_WmDU">卸载</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/moltbot-doc/docs/cli/browser"><span title="浏览器" class="linkLabel_WmDU">浏览器</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/moltbot-doc/docs/cli/message"><span title="消息" class="linkLabel_WmDU">消息</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/moltbot-doc/docs/cli/agent"><span title="代理" class="linkLabel_WmDU">代理</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/moltbot-doc/docs/cli/agents"><span title="代理列表" class="linkLabel_WmDU">代理列表</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/moltbot-doc/docs/cli/status"><span title="状态" class="linkLabel_WmDU">状态</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/moltbot-doc/docs/cli/health"><span title="健康状态" class="linkLabel_WmDU">健康状态</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/moltbot-doc/docs/cli/sessions"><span title="会话" class="linkLabel_WmDU">会话</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/moltbot-doc/docs/cli/channels"><span title="频道" class="linkLabel_WmDU">频道</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/moltbot-doc/docs/cli/directory"><span title="目录" class="linkLabel_WmDU">目录</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/moltbot-doc/docs/cli/skills"><span title="技能" class="linkLabel_WmDU">技能</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/moltbot-doc/docs/cli/plugins"><span title="插件" class="linkLabel_WmDU">插件</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/moltbot-doc/docs/cli/memory"><span title="内存" class="linkLabel_WmDU">内存</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/moltbot-doc/docs/cli/models"><span title="模型" class="linkLabel_WmDU">模型</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/moltbot-doc/docs/cli/logs"><span title="日志" class="linkLabel_WmDU">日志</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/moltbot-doc/docs/cli/system"><span title="系统" class="linkLabel_WmDU">系统</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/moltbot-doc/docs/cli/nodes"><span title="节点" class="linkLabel_WmDU">节点</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/moltbot-doc/docs/cli/approvals"><span title="审批" class="linkLabel_WmDU">审批</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/moltbot-doc/docs/cli/gateway"><span title="网关" class="linkLabel_WmDU">网关</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/moltbot-doc/docs/cli/tui"><span title="文本用户界面" class="linkLabel_WmDU">文本用户界面</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/moltbot-doc/docs/cli/voicecall"><span title="语音通话" class="linkLabel_WmDU">语音通话</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/moltbot-doc/docs/cli/cron"><span title="定时任务" class="linkLabel_WmDU">定时任务</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/moltbot-doc/docs/cli/dns"><span title="域名系统" class="linkLabel_WmDU">域名系统</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/moltbot-doc/docs/cli/docs"><span title="文档" class="linkLabel_WmDU">文档</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/moltbot-doc/docs/cli/hooks"><span title="钩子" class="linkLabel_WmDU">钩子</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/moltbot-doc/docs/cli/pairing"><span title="配对" class="linkLabel_WmDU">配对</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/moltbot-doc/docs/cli/security"><span title="安全" class="linkLabel_WmDU">安全</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/moltbot-doc/docs/cli/update"><span title="更新" class="linkLabel_WmDU">更新</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/moltbot-doc/docs/cli/sandbox"><span title="沙盒命令行界面" class="linkLabel_WmDU">沙盒命令行界面</span></a></li></ul></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="true" href="/moltbot-doc/docs/concepts/architecture"><span title="核心概念" class="categoryLinkLabel_W154">核心概念</span></a></div><ul class="menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/moltbot-doc/docs/concepts/architecture"><span title="架构" class="linkLabel_WmDU">架构</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/moltbot-doc/docs/concepts/agent"><span title="代理" class="linkLabel_WmDU">代理</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/moltbot-doc/docs/concepts/agent-loop"><span title="代理循环" class="linkLabel_WmDU">代理循环</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/moltbot-doc/docs/concepts/agent-workspace"><span title="代理工作空间" class="linkLabel_WmDU">代理工作空间</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/moltbot-doc/docs/concepts/session"><span title="会话" class="linkLabel_WmDU">会话</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/moltbot-doc/docs/concepts/session-pruning"><span title="会话清理" class="linkLabel_WmDU">会话清理</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/moltbot-doc/docs/concepts/session-tool"><span title="会话工具" class="linkLabel_WmDU">会话工具</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/moltbot-doc/docs/concepts/model-providers"><span title="模型提供商" class="linkLabel_WmDU">模型提供商</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/moltbot-doc/docs/concepts/model-failover"><span title="模型故障转移" class="linkLabel_WmDU">模型故障转移</span></a></li></ul></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="true" href="/moltbot-doc/docs/gateway/configuration"><span title="网关运维" class="categoryLinkLabel_W154">网关运维</span></a></div><ul class="menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/moltbot-doc/docs/gateway/configuration"><span title="配置" class="linkLabel_WmDU">配置</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/moltbot-doc/docs/gateway/configuration-examples"><span title="配置示例" class="linkLabel_WmDU">配置示例</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/moltbot-doc/docs/gateway/remote"><span title="远程" class="linkLabel_WmDU">远程</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/moltbot-doc/docs/gateway/remote-gateway-readme"><span title="远程网关说明" class="linkLabel_WmDU">远程网关说明</span></a></li></ul></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="true" href="/moltbot-doc/docs/automation/cron-jobs"><span title="自动化钩子" class="categoryLinkLabel_W154">自动化钩子</span></a></div><ul class="menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/moltbot-doc/docs/automation/cron-jobs"><span title="定时任务" class="linkLabel_WmDU">定时任务</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/moltbot-doc/docs/automation/cron-vs-heartbeat"><span title="定时任务 vs 心跳" class="linkLabel_WmDU">定时任务 vs 心跳</span></a></li></ul></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="true" href="/moltbot-doc/docs/tools/browser"><span title="工具与技能" class="categoryLinkLabel_W154">工具与技能</span></a></div><ul class="menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/moltbot-doc/docs/tools/browser"><span title="浏览器" class="linkLabel_WmDU">浏览器</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/moltbot-doc/docs/tools/browser-login"><span title="浏览器登录" class="linkLabel_WmDU">浏览器登录</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/moltbot-doc/docs/tools/browser-linux-troubleshooting"><span title="浏览器 Linux 故障排除" class="linkLabel_WmDU">浏览器 Linux 故障排除</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/moltbot-doc/docs/tools/skills"><span title="技能" class="linkLabel_WmDU">技能</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/moltbot-doc/docs/tools/skills-config"><span title="技能配置" class="linkLabel_WmDU">技能配置</span></a></li></ul></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="true" href="/moltbot-doc/docs/platforms/macos"><span title="平台" class="categoryLinkLabel_W154">平台</span></a></div><ul class="menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/moltbot-doc/docs/platforms/macos"><span title="macOS" class="linkLabel_WmDU">macOS</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/moltbot-doc/docs/platforms/macos-vm"><span title="macOS 虚拟机" class="linkLabel_WmDU">macOS 虚拟机</span></a></li></ul></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="true" href="/moltbot-doc/docs/platforms/mac/dev-setup"><span title="macOS 伴侣应用" class="categoryLinkLabel_W154">macOS 伴侣应用</span></a></div><ul class="menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/moltbot-doc/docs/platforms/mac/dev-setup"><span title="开发环境设置" class="linkLabel_WmDU">开发环境设置</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/moltbot-doc/docs/platforms/mac/menu-bar"><span title="菜单栏" class="linkLabel_WmDU">菜单栏</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/moltbot-doc/docs/platforms/mac/voicewake"><span title="语音唤醒" class="linkLabel_WmDU">语音唤醒</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/moltbot-doc/docs/platforms/mac/voice-overlay"><span title="语音悬浮窗" class="linkLabel_WmDU">语音悬浮窗</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/moltbot-doc/docs/platforms/mac/webchat"><span title="网页聊天" class="linkLabel_WmDU">网页聊天</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/moltbot-doc/docs/platforms/mac/canvas"><span title="画布" class="linkLabel_WmDU">画布</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/moltbot-doc/docs/platforms/mac/child-process"><span title="子进程" class="linkLabel_WmDU">子进程</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/moltbot-doc/docs/platforms/mac/health"><span title="健康状态" class="linkLabel_WmDU">健康状态</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/moltbot-doc/docs/platforms/mac/icon"><span title="图标" class="linkLabel_WmDU">图标</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/moltbot-doc/docs/platforms/mac/logging"><span title="日志记录" class="linkLabel_WmDU">日志记录</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/moltbot-doc/docs/platforms/mac/permissions"><span title="权限" class="linkLabel_WmDU">权限</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/moltbot-doc/docs/platforms/mac/remote"><span title="远程" class="linkLabel_WmDU">远程</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/moltbot-doc/docs/platforms/mac/signing"><span title="签名" class="linkLabel_WmDU">签名</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/moltbot-doc/docs/platforms/mac/release"><span title="发布" class="linkLabel_WmDU">发布</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/moltbot-doc/docs/platforms/mac/bundled-gateway"><span title="捆绑网关" class="linkLabel_WmDU">捆绑网关</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/moltbot-doc/docs/platforms/mac/xpc"><span title="XPC" class="linkLabel_WmDU">XPC</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/moltbot-doc/docs/platforms/mac/skills"><span title="技能" class="linkLabel_WmDU">技能</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/moltbot-doc/docs/platforms/mac/peekaboo"><span title="Peekaboo" class="linkLabel_WmDU">Peekaboo</span></a></li></ul></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="true" href="/moltbot-doc/docs/reference/templates/AGENTS"><span title="参考模板" class="categoryLinkLabel_W154">参考模板</span></a></div><ul class="menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/moltbot-doc/docs/reference/templates/AGENTS"><span title="代理模板" class="linkLabel_WmDU">代理模板</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/moltbot-doc/docs/reference/templates/BOOT"><span title="启动模板" class="linkLabel_WmDU">启动模板</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/moltbot-doc/docs/reference/templates/BOOTSTRAP"><span title="引导程序模板" class="linkLabel_WmDU">引导程序模板</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/moltbot-doc/docs/reference/templates/HEARTBEAT"><span title="心跳模板" class="linkLabel_WmDU">心跳模板</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/moltbot-doc/docs/reference/templates/IDENTITY"><span title="身份模板" class="linkLabel_WmDU">身份模板</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/moltbot-doc/docs/reference/templates/SOUL"><span title="核心模板" class="linkLabel_WmDU">核心模板</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/moltbot-doc/docs/reference/templates/TOOLS"><span title="工具模板" class="linkLabel_WmDU">工具模板</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/moltbot-doc/docs/reference/templates/USER"><span title="用户模板" class="linkLabel_WmDU">用户模板</span></a></li></ul></li></ul></nav></div></div></aside><main class="docMainContainer_TBSr"><div class="container padding-top--md padding-bottom--lg"><div class="row"><div class="col docItemCol_VOVn"><div class="docItemContainer_Djhp"><article><nav class="theme-doc-breadcrumbs breadcrumbsContainer_Z_bl" aria-label="页面路径"><ul class="breadcrumbs"><li class="breadcrumbs__item"><a aria-label="主页面" class="breadcrumbs__link" href="/moltbot-doc/"><svg viewBox="0 0 24 24" class="breadcrumbHomeIcon_YNFT"><path d="M10 19v-5h4v5c0 .55.45 1 1 1h3c.55 0 1-.45 1-1v-7h1.7c.46 0 .68-.57.33-.87L12.67 3.6c-.38-.34-.96-.34-1.34 0l-8.36 7.53c-.34.3-.13.87.33.87H5v7c0 .55.45 1 1 1h3c.55 0 1-.45 1-1z" fill="currentColor"></path></svg></a></li><li class="breadcrumbs__item"><span class="breadcrumbs__link">命令行界面 (CLI)</span></li><li class="breadcrumbs__item breadcrumbs__item--active"><span class="breadcrumbs__link">索引</span></li></ul></nav><div class="tocCollapsible_ETCw theme-doc-toc-mobile tocMobile_ITEo"><button type="button" class="clean-btn tocCollapsibleButton_TO0P">本页总览</button></div><div class="theme-doc-markdown markdown"><header><h1>CLI 参考</h1></header>
+<p>本页面描述当前的 CLI 行为。如果命令发生变化，请更新本文档。</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="命令页面">命令页面<a href="#命令页面" class="hash-link" aria-label="命令页面的直接链接" title="命令页面的直接链接" translate="no">​</a></h2>
+<ul>
+<li class=""><a class="" href="/moltbot-doc/cli/setup"><code>setup</code></a></li>
+<li class=""><a class="" href="/moltbot-doc/cli/onboard"><code>onboard</code></a></li>
+<li class=""><a class="" href="/moltbot-doc/cli/configure"><code>configure</code></a></li>
+<li class=""><a class="" href="/moltbot-doc/cli/config"><code>config</code></a></li>
+<li class=""><a class="" href="/moltbot-doc/cli/doctor"><code>doctor</code></a></li>
+<li class=""><a class="" href="/moltbot-doc/cli/dashboard"><code>dashboard</code></a></li>
+<li class=""><a class="" href="/moltbot-doc/cli/reset"><code>reset</code></a></li>
+<li class=""><a class="" href="/moltbot-doc/cli/uninstall"><code>uninstall</code></a></li>
+<li class=""><a class="" href="/moltbot-doc/cli/update"><code>update</code></a></li>
+<li class=""><a class="" href="/moltbot-doc/cli/message"><code>message</code></a></li>
+<li class=""><a class="" href="/moltbot-doc/cli/agent"><code>agent</code></a></li>
+<li class=""><a class="" href="/moltbot-doc/cli/agents"><code>agents</code></a></li>
+<li class=""><a class="" href="/moltbot-doc/cli/acp"><code>acp</code></a></li>
+<li class=""><a class="" href="/moltbot-doc/cli/status"><code>status</code></a></li>
+<li class=""><a class="" href="/moltbot-doc/cli/health"><code>health</code></a></li>
+<li class=""><a class="" href="/moltbot-doc/cli/sessions"><code>sessions</code></a></li>
+<li class=""><a class="" href="/moltbot-doc/cli/gateway"><code>gateway</code></a></li>
+<li class=""><a class="" href="/moltbot-doc/cli/logs"><code>logs</code></a></li>
+<li class=""><a class="" href="/moltbot-doc/cli/system"><code>system</code></a></li>
+<li class=""><a class="" href="/moltbot-doc/cli/models"><code>models</code></a></li>
+<li class=""><a class="" href="/moltbot-doc/cli/memory"><code>memory</code></a></li>
+<li class=""><a class="" href="/moltbot-doc/cli/nodes"><code>nodes</code></a></li>
+<li class=""><a class="" href="/moltbot-doc/cli/devices"><code>devices</code></a></li>
+<li class=""><a class="" href="/moltbot-doc/cli/node"><code>node</code></a></li>
+<li class=""><a class="" href="/moltbot-doc/cli/approvals"><code>approvals</code></a></li>
+<li class=""><a class="" href="/moltbot-doc/cli/sandbox"><code>sandbox</code></a></li>
+<li class=""><a class="" href="/moltbot-doc/cli/tui"><code>tui</code></a></li>
+<li class=""><a class="" href="/moltbot-doc/cli/browser"><code>browser</code></a></li>
+<li class=""><a class="" href="/moltbot-doc/cli/cron"><code>cron</code></a></li>
+<li class=""><a class="" href="/moltbot-doc/cli/dns"><code>dns</code></a></li>
+<li class=""><a class="" href="/moltbot-doc/cli/docs"><code>docs</code></a></li>
+<li class=""><a class="" href="/moltbot-doc/cli/hooks"><code>hooks</code></a></li>
+<li class=""><a class="" href="/moltbot-doc/cli/webhooks"><code>webhooks</code></a></li>
+<li class=""><a class="" href="/moltbot-doc/cli/pairing"><code>pairing</code></a></li>
+<li class=""><a class="" href="/moltbot-doc/cli/plugins"><code>plugins</code></a> (插件命令)</li>
+<li class=""><a class="" href="/moltbot-doc/cli/channels"><code>channels</code></a></li>
+<li class=""><a class="" href="/moltbot-doc/cli/security"><code>security</code></a></li>
+<li class=""><a class="" href="/moltbot-doc/cli/skills"><code>skills</code></a></li>
+<li class=""><a class="" href="/moltbot-doc/cli/voicecall"><code>voicecall</code></a> (插件；如果安装)</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="全局标志">全局标志<a href="#全局标志" class="hash-link" aria-label="全局标志的直接链接" title="全局标志的直接链接" translate="no">​</a></h2>
+<ul>
+<li class=""><code>--dev</code>: 将状态隔离在 <code>~/.clawdbot-dev</code> 下并移动默认端口。</li>
+<li class=""><code>--profile &lt;name&gt;</code>: 将状态隔离在 <code>~/.clawdbot-&lt;name&gt;</code> 下。</li>
+<li class=""><code>--no-color</code>: 禁用 ANSI 颜色。</li>
+<li class=""><code>--update</code>: <code>moltbot update</code> 的简写（仅源码安装）。</li>
+<li class=""><code>-V</code>, <code>--version</code>, <code>-v</code>: 打印版本并退出。</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="输出样式">输出样式<a href="#输出样式" class="hash-link" aria-label="输出样式的直接链接" title="输出样式的直接链接" translate="no">​</a></h2>
+<ul>
+<li class="">ANSI 颜色和进度指示器仅在 TTY 会话中渲染。</li>
+<li class="">OSC-8 超链接在支持的终端中渲染为可点击链接；否则我们回退到纯 URL。</li>
+<li class=""><code>--json</code>（和 <code>--plain</code> 在支持的地方）禁用样式以获得干净输出。</li>
+<li class=""><code>--no-color</code> 禁用 ANSI 样式；也尊重 <code>NO_COLOR=1</code>。</li>
+<li class="">长时间运行的命令显示进度指示器（在支持时为 OSC 9;4）。</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="颜色方案">颜色方案<a href="#颜色方案" class="hash-link" aria-label="颜色方案的直接链接" title="颜色方案的直接链接" translate="no">​</a></h2>
+<p>Moltbot 为 CLI 输出使用龙虾配色方案。</p>
+<ul>
+<li class=""><code>accent</code> (#FF5A2D): 标题、标签、主要高亮。</li>
+<li class=""><code>accentBright</code> (#FF7A3D): 命令名称、强调。</li>
+<li class=""><code>accentDim</code> (#D14A22): 次要高亮文本。</li>
+<li class=""><code>info</code> (#FF8A5B): 信息值。</li>
+<li class=""><code>success</code> (#2FBF71): 成功状态。</li>
+<li class=""><code>warn</code> (#FFB020): 警告、回退、注意。</li>
+<li class=""><code>error</code> (#E23D2D): 错误、失败。</li>
+<li class=""><code>muted</code> (#8B7F77): 弱化、元数据。</li>
+</ul>
+<p>配色方案真实来源：<code>src/terminal/palette.ts</code>（又称&quot;龙虾缝&quot;）。</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="命令树">命令树<a href="#命令树" class="hash-link" aria-label="命令树的直接链接" title="命令树的直接链接" translate="no">​</a></h2>
+<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#D6DEEB;--prism-background-color:#001122"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#D6DEEB;background-color:#001122"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#D6DEEB"><span class="token plain">moltbot [--dev] [--profile &lt;name&gt;] &lt;command&gt;</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">  setup</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">  onboard</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">  configure</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">  config</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">    get</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">    set</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">    unset</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">  doctor</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">  security</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">    audit</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">  reset</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">  uninstall</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">  update</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">  channels</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">    list</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">    status</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">    logs</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">    add</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">    remove</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">    login</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">    logout</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">  skills</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">    list</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">    info</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">    check</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">  plugins</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">    list</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">    info</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">    install</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">    enable</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">    disable</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">    doctor</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">  memory</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">    status</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">    index</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">    search</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">  message</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">  agent</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">  agents</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">    list</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">    add</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">    delete</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">  acp</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">  status</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">  health</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">  sessions</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">  gateway</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">    call</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">    health</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">    status</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">    probe</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">    discover</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">    install</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">    uninstall</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">    start</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">    stop</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">    restart</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">    run</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">  logs</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">  system</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">    event</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">    heartbeat last|enable|disable</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">    presence</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">  models</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">    list</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">    status</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">    set</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">    set-image</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">    aliases list|add|remove</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">    fallbacks list|add|remove|clear</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">    image-fallbacks list|add|remove|clear</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">    scan</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">    auth add|setup-token|paste-token</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">    auth order get|set|clear</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">  sandbox</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">    list</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">    recreate</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">    explain</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">  cron</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">    status</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">    list</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">    add</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">    edit</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">    rm</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">    enable</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">    disable</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">    runs</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">    run</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">  nodes</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">  devices</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">  node</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">    run</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">    status</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">    install</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">    uninstall</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">    start</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">    stop</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">    restart</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">  approvals</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">    get</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">    set</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">    allowlist add|remove</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">  browser</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">    status</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">    start</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">    stop</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">    reset-profile</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">    tabs</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">    open</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">    focus</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">    close</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">    profiles</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">    create-profile</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">    delete-profile</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">    screenshot</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">    snapshot</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">    navigate</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">    resize</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">    click</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">    type</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">    press</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">    hover</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">    drag</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">    select</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">    upload</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">    fill</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">    dialog</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">    wait</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">    evaluate</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">    console</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">    pdf</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">  hooks</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">    list</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">    info</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">    check</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">    enable</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">    disable</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">    install</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">    update</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">  webhooks</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">    gmail setup|run</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">  pairing</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">    list</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">    approve</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">  docs</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">  dns</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">    setup</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">  tui</span><br></span></code></pre></div></div>
+<p>注意：插件可以添加额外的顶级命令（例如 <code>moltbot voicecall</code>）。</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="安全性">安全性<a href="#安全性" class="hash-link" aria-label="安全性的直接链接" title="安全性的直接链接" translate="no">​</a></h2>
+<ul>
+<li class=""><code>moltbot security audit</code> — 审计配置 + 本地状态的常见安全漏洞。</li>
+<li class=""><code>moltbot security audit --deep</code> — 尽力而为的实时网关探测。</li>
+<li class=""><code>moltbot security audit --fix</code> — 加强安全默认值并修改状态/配置权限。</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="插件">插件<a href="#插件" class="hash-link" aria-label="插件的直接链接" title="插件的直接链接" translate="no">​</a></h2>
+<p>管理扩展及其配置：</p>
+<ul>
+<li class=""><code>moltbot plugins list</code> — 发现插件（使用 <code>--json</code> 获取机器输出）。</li>
+<li class=""><code>moltbot plugins info &lt;id&gt;</code> — 显示插件详情。</li>
+<li class=""><code>moltbot plugins install &lt;path|.tgz|npm-spec&gt;</code> — 安装插件（或向 <code>plugins.load.paths</code> 添加插件路径）。</li>
+<li class=""><code>moltbot plugins enable &lt;id&gt;</code> / <code>disable &lt;id&gt;</code> — 切换 <code>plugins.entries.&lt;id&gt;.enabled</code>。</li>
+<li class=""><code>moltbot plugins doctor</code> — 报告插件加载错误。</li>
+</ul>
+<p>大多数插件更改需要网关重启。参见 <a class="" href="/moltbot-doc/plugin">/plugin</a>。</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="记忆">记忆<a href="#记忆" class="hash-link" aria-label="记忆的直接链接" title="记忆的直接链接" translate="no">​</a></h2>
+<p>在 <code>MEMORY.md</code> + <code>memory/*.md</code> 上进行向量搜索：</p>
+<ul>
+<li class=""><code>moltbot memory status</code> — 显示索引统计。</li>
+<li class=""><code>moltbot memory index</code> — 重新索引记忆文件。</li>
+<li class=""><code>moltbot memory search &quot;&lt;query&gt;&quot;</code> — 在记忆上进行语义搜索。</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="聊天斜杠命令">聊天斜杠命令<a href="#聊天斜杠命令" class="hash-link" aria-label="聊天斜杠命令的直接链接" title="聊天斜杠命令的直接链接" translate="no">​</a></h2>
+<p>聊天消息支持 <code>/...</code> 命令（文本和原生）。参见 <a class="" href="/moltbot-doc/tools/slash-commands">/tools/slash-commands</a>。</p>
+<p>亮点：</p>
+<ul>
+<li class=""><code>/status</code> 用于快速诊断。</li>
+<li class=""><code>/config</code> 用于持久化配置更改。</li>
+<li class=""><code>/debug</code> 用于运行时配置覆盖（内存，而非磁盘；需要 <code>commands.debug: true</code>）。</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="设置--入门">设置 + 入门<a href="#设置--入门" class="hash-link" aria-label="设置 + 入门的直接链接" title="设置 + 入门的直接链接" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="setup"><code>setup</code><a href="#setup" class="hash-link" aria-label="setup的直接链接" title="setup的直接链接" translate="no">​</a></h3>
+<p>初始化配置 + 工作空间。</p>
+<p>选项：</p>
+<ul>
+<li class=""><code>--workspace &lt;dir&gt;</code>: 代理工作空间路径（默认 <code>~/clawd</code>）。</li>
+<li class=""><code>--wizard</code>: 运行入门向导。</li>
+<li class=""><code>--non-interactive</code>: 无提示运行向导。</li>
+<li class=""><code>--mode &lt;local|remote&gt;</code>: 向导模式。</li>
+<li class=""><code>--remote-url &lt;url&gt;</code>: 远程网关 URL。</li>
+<li class=""><code>--remote-token &lt;token&gt;</code>: 远程网关令牌。</li>
+</ul>
+<p>当任何向导标志存在时自动运行向导（<code>--non-interactive</code>, <code>--mode</code>, <code>--remote-url</code>, <code>--remote-token</code>）。</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="onboard"><code>onboard</code><a href="#onboard" class="hash-link" aria-label="onboard的直接链接" title="onboard的直接链接" translate="no">​</a></h3>
+<p>交互式向导来设置网关、工作空间和技能。</p>
+<p>选项：</p>
+<ul>
+<li class=""><code>--workspace &lt;dir&gt;</code></li>
+<li class=""><code>--reset</code> （在向导之前重置配置 + 凭据 + 会话 + 工作空间）</li>
+<li class=""><code>--non-interactive</code></li>
+<li class=""><code>--mode &lt;local|remote&gt;</code></li>
+<li class=""><code>--flow &lt;quickstart|advanced|manual&gt;</code> （manual 是 advanced 的别名）</li>
+<li class=""><code>--auth-choice &lt;setup-token|token|chutes|openai-codex|openai-api-key|openrouter-api-key|ai-gateway-api-key|moonshot-api-key|kimi-code-api-key|synthetic-api-key|venice-api-key|gemini-api-key|zai-api-key|apiKey|minimax-api|minimax-api-lightning|opencode-zen|skip&gt;</code></li>
+<li class=""><code>--token-provider &lt;id&gt;</code> （非交互式；与 <code>--auth-choice token</code> 一起使用）</li>
+<li class=""><code>--token &lt;token&gt;</code> （非交互式；与 <code>--auth-choice token</code> 一起使用）</li>
+<li class=""><code>--token-profile-id &lt;id&gt;</code> （非交互式；默认：<code>&lt;provider&gt;:manual</code>）</li>
+<li class=""><code>--token-expires-in &lt;duration&gt;</code> （非交互式；例如 <code>365d</code>, <code>12h</code>）</li>
+<li class=""><code>--anthropic-api-key &lt;key&gt;</code></li>
+<li class=""><code>--openai-api-key &lt;key&gt;</code></li>
+<li class=""><code>--openrouter-api-key &lt;key&gt;</code></li>
+<li class=""><code>--ai-gateway-api-key &lt;key&gt;</code></li>
+<li class=""><code>--moonshot-api-key &lt;key&gt;</code></li>
+<li class=""><code>--kimi-code-api-key &lt;key&gt;</code></li>
+<li class=""><code>--gemini-api-key &lt;key&gt;</code></li>
+<li class=""><code>--zai-api-key &lt;key&gt;</code></li>
+<li class=""><code>--minimax-api-key &lt;key&gt;</code></li>
+<li class=""><code>--opencode-zen-api-key &lt;key&gt;</code></li>
+<li class=""><code>--gateway-port &lt;port&gt;</code></li>
+<li class=""><code>--gateway-bind &lt;loopback|lan|tailnet|auto|custom&gt;</code></li>
+<li class=""><code>--gateway-auth &lt;token|password&gt;</code></li>
+<li class=""><code>--gateway-token &lt;token&gt;</code></li>
+<li class=""><code>--gateway-password &lt;password&gt;</code></li>
+<li class=""><code>--remote-url &lt;url&gt;</code></li>
+<li class=""><code>--remote-token &lt;token&gt;</code></li>
+<li class=""><code>--tailscale &lt;off|serve|funnel&gt;</code></li>
+<li class=""><code>--tailscale-reset-on-exit</code></li>
+<li class=""><code>--install-daemon</code></li>
+<li class=""><code>--no-install-daemon</code> （别名：<code>--skip-daemon</code>）</li>
+<li class=""><code>--daemon-runtime &lt;node|bun&gt;</code></li>
+<li class=""><code>--skip-channels</code></li>
+<li class=""><code>--skip-skills</code></li>
+<li class=""><code>--skip-health</code></li>
+<li class=""><code>--skip-ui</code></li>
+<li class=""><code>--node-manager &lt;npm|pnpm|bun&gt;</code> （推荐 pnpm；不推荐 bun 用于网关运行时）</li>
+<li class=""><code>--json</code></li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="configure"><code>configure</code><a href="#configure" class="hash-link" aria-label="configure的直接链接" title="configure的直接链接" translate="no">​</a></h3>
+<p>交互式配置向导（模型、通道、技能、网关）。</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="config"><code>config</code><a href="#config" class="hash-link" aria-label="config的直接链接" title="config的直接链接" translate="no">​</a></h3>
+<p>非交互式配置助手（get/set/unset）。运行不带子命令的 <code>moltbot config</code>
+启动向导。</p>
+<p>子命令：</p>
+<ul>
+<li class=""><code>config get &lt;path&gt;</code>: 打印配置值（点/括号路径）。</li>
+<li class=""><code>config set &lt;path&gt; &lt;value&gt;</code>: 设置值（JSON5 或原始字符串）。</li>
+<li class=""><code>config unset &lt;path&gt;</code>: 移除值。</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="doctor"><code>doctor</code><a href="#doctor" class="hash-link" aria-label="doctor的直接链接" title="doctor的直接链接" translate="no">​</a></h3>
+<p>健康检查 + 快速修复（配置 + 网关 + 旧服务）。</p>
+<p>选项：</p>
+<ul>
+<li class=""><code>--no-workspace-suggestions</code>: 禁用工作区记忆提示。</li>
+<li class=""><code>--yes</code>: 不提示接受默认值（无头模式）。</li>
+<li class=""><code>--non-interactive</code>: 跳过提示；仅应用安全迁移。</li>
+<li class=""><code>--deep</code>: 扫描系统服务以查找额外网关安装。</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="通道助手">通道助手<a href="#通道助手" class="hash-link" aria-label="通道助手的直接链接" title="通道助手的直接链接" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="channels"><code>channels</code><a href="#channels" class="hash-link" aria-label="channels的直接链接" title="channels的直接链接" translate="no">​</a></h3>
+<p>管理聊天通道账户（WhatsApp/Telegram/Discord/Google Chat/Slack/Mattermost（插件）/Signal/iMessage/MS Teams）。</p>
+<p>子命令：</p>
+<ul>
+<li class=""><code>channels list</code>: 显示配置的通道和认证配置文件。</li>
+<li class=""><code>channels status</code>: 检查网关可达性和通道健康状况（<code>--probe</code> 运行额外检查；使用 <code>moltbot health</code> 或 <code>moltbot status --deep</code> 进行网关健康探测）。</li>
+<li class="">提示：<code>channels status</code> 在检测到常见错误配置时打印警告并提供建议修复（然后指向 <code>moltbot doctor</code>）。</li>
+<li class=""><code>channels logs</code>: 显示来自网关日志文件的最近通道日志。</li>
+<li class=""><code>channels add</code>: 不传标志时为向导式设置；标志切换到非交互模式。</li>
+<li class=""><code>channels remove</code>: 默认禁用；传递 <code>--delete</code> 以不提示移除配置条目。</li>
+<li class=""><code>channels login</code>: 交互式通道登录（仅 WhatsApp Web）。</li>
+<li class=""><code>channels logout</code>: 登出通道会话（如果支持）。</li>
+</ul>
+<p>常用选项：</p>
+<ul>
+<li class=""><code>--channel &lt;name&gt;</code>: <code>whatsapp|telegram|discord|googlechat|slack|mattermost|signal|imessage|msteams</code></li>
+<li class=""><code>--account &lt;id&gt;</code>: 通道账户 ID（默认 <code>default</code>）</li>
+<li class=""><code>--name &lt;label&gt;</code>: 账户的显示名称</li>
+</ul>
+<p><code>channels login</code> 选项：</p>
+<ul>
+<li class=""><code>--channel &lt;channel&gt;</code> （默认 <code>whatsapp</code>；支持 <code>whatsapp</code>/<code>web</code>）</li>
+<li class=""><code>--account &lt;id&gt;</code></li>
+<li class=""><code>--verbose</code></li>
+</ul>
+<p><code>channels logout</code> 选项：</p>
+<ul>
+<li class=""><code>--channel &lt;channel&gt;</code> （默认 <code>whatsapp</code>）</li>
+<li class=""><code>--account &lt;id&gt;</code></li>
+</ul>
+<p><code>channels list</code> 选项：</p>
+<ul>
+<li class=""><code>--no-usage</code>: 跳过模型提供商使用量/配额快照（仅 OAuth/API 支持）。</li>
+<li class=""><code>--json</code>: 输出 JSON（包含使用量，除非设置了 <code>--no-usage</code>）。</li>
+</ul>
+<p><code>channels logs</code> 选项：</p>
+<ul>
+<li class=""><code>--channel &lt;name|all&gt;</code> （默认 <code>all</code>）</li>
+<li class=""><code>--lines &lt;n&gt;</code> （默认 <code>200</code>）</li>
+<li class=""><code>--json</code></li>
+</ul>
+<p>更多细节：<a class="" href="/moltbot-doc/concepts/oauth">/concepts/oauth</a></p>
+<p>示例：</p>
+<div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#D6DEEB;--prism-background-color:#001122"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#D6DEEB;background-color:#001122"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#D6DEEB"><span class="token plain">moltbot channels add --channel telegram --account alerts --name &quot;Alerts Bot&quot; --token $TELEGRAM_BOT_TOKEN</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">moltbot channels add --channel discord --account work --name &quot;Work Bot&quot; --token $DISCORD_BOT_TOKEN</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">moltbot channels remove --channel discord --account work --delete</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">moltbot channels status --probe</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">moltbot status --deep</span><br></span></code></pre></div></div>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="skills"><code>skills</code><a href="#skills" class="hash-link" aria-label="skills的直接链接" title="skills的直接链接" translate="no">​</a></h3>
+<p>列出和检查可用技能及就绪信息。</p>
+<p>子命令：</p>
+<ul>
+<li class=""><code>skills list</code>: 列出技能（没有子命令时的默认值）。</li>
+<li class=""><code>skills info &lt;name&gt;</code>: 显示一个技能的详情。</li>
+<li class=""><code>skills check</code>: 就绪与缺失需求的摘要。</li>
+</ul>
+<p>选项：</p>
+<ul>
+<li class=""><code>--eligible</code>: 仅显示就绪技能。</li>
+<li class=""><code>--json</code>: 输出 JSON（无样式）。</li>
+<li class=""><code>-v</code>, <code>--verbose</code>: 包含缺失需求详情。</li>
+</ul>
+<p>提示：使用 <code>npx clawdhub</code> 搜索、安装和同步技能。</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="pairing"><code>pairing</code><a href="#pairing" class="hash-link" aria-label="pairing的直接链接" title="pairing的直接链接" translate="no">​</a></h3>
+<p>跨通道批准私信配对请求。</p>
+<p>子命令：</p>
+<ul>
+<li class=""><code>pairing list &lt;channel&gt; [--json]</code></li>
+<li class=""><code>pairing approve &lt;channel&gt; &lt;code&gt; [--notify]</code></li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="webhooks-gmail"><code>webhooks gmail</code><a href="#webhooks-gmail" class="hash-link" aria-label="webhooks-gmail的直接链接" title="webhooks-gmail的直接链接" translate="no">​</a></h3>
+<p>Gmail Pub/Sub 钩子设置 + 运行器。参见 <a class="" href="/moltbot-doc/automation/gmail-pubsub">/automation/gmail-pubsub</a>。</p>
+<p>子命令：</p>
+<ul>
+<li class=""><code>webhooks gmail setup</code> （需要 <code>--account &lt;email&gt;</code>；支持 <code>--project</code>, <code>--topic</code>, <code>--subscription</code>, <code>--label</code>, <code>--hook-url</code>, <code>--hook-token</code>, <code>--push-token</code>, <code>--bind</code>, <code>--port</code>, <code>--path</code>, <code>--include-body</code>, <code>--max-bytes</code>, <code>--renew-minutes</code>, <code>--tailscale</code>, <code>--tailscale-path</code>, <code>--tailscale-target</code>, <code>--push-endpoint</code>, <code>--json</code>）</li>
+<li class=""><code>webhooks gmail run</code> （相同标志的运行时覆盖）</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="dns-setup"><code>dns setup</code><a href="#dns-setup" class="hash-link" aria-label="dns-setup的直接链接" title="dns-setup的直接链接" translate="no">​</a></h3>
+<p>广域发现 DNS 助手（CoreDNS + Tailscale）。参见 <a class="" href="/moltbot-doc/gateway/discovery">/gateway/discovery</a>。</p>
+<p>选项：</p>
+<ul>
+<li class=""><code>--apply</code>: 安装/更新 CoreDNS 配置（需要 sudo；仅 macOS）。</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="消息传递--代理">消息传递 + 代理<a href="#消息传递--代理" class="hash-link" aria-label="消息传递 + 代理的直接链接" title="消息传递 + 代理的直接链接" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="message"><code>message</code><a href="#message" class="hash-link" aria-label="message的直接链接" title="message的直接链接" translate="no">​</a></h3>
+<p>统一传出消息 + 通道操作。</p>
+<p>参见：<a class="" href="/moltbot-doc/cli/message">/cli/message</a></p>
+<p>子命令：</p>
+<ul>
+<li class=""><code>message send|poll|react|reactions|read|edit|delete|pin|unpin|pins|permissions|search|timeout|kick|ban</code></li>
+<li class=""><code>message thread &lt;create|list|reply&gt;</code></li>
+<li class=""><code>message emoji &lt;list|upload&gt;</code></li>
+<li class=""><code>message sticker &lt;send|upload&gt;</code></li>
+<li class=""><code>message role &lt;info|add|remove&gt;</code></li>
+<li class=""><code>message channel &lt;info|list&gt;</code></li>
+<li class=""><code>message member info</code></li>
+<li class=""><code>message voice status</code></li>
+<li class=""><code>message event &lt;list|create&gt;</code></li>
+</ul>
+<p>示例：</p>
+<ul>
+<li class=""><code>moltbot message send --target +15555550123 --message &quot;Hi&quot;</code></li>
+<li class=""><code>moltbot message poll --channel discord --target channel:123 --poll-question &quot;Snack?&quot; --poll-option Pizza --poll-option Sushi</code></li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="agent"><code>agent</code><a href="#agent" class="hash-link" aria-label="agent的直接链接" title="agent的直接链接" translate="no">​</a></h3>
+<p>通过网关运行一个代理回合（或 <code>--local</code> 嵌入式）。</p>
+<p>必需：</p>
+<ul>
+<li class=""><code>--message &lt;text&gt;</code></li>
+</ul>
+<p>选项：</p>
+<ul>
+<li class=""><code>--to &lt;dest&gt;</code> （用于会话键和可选传递）</li>
+<li class=""><code>--session-id &lt;id&gt;</code></li>
+<li class=""><code>--thinking &lt;off|minimal|low|medium|high|xhigh&gt;</code> （仅 GPT-5.2 + Codex 模型）</li>
+<li class=""><code>--verbose &lt;on|full|off&gt;</code></li>
+<li class=""><code>--channel &lt;whatsapp|telegram|discord|slack|mattermost|signal|imessage|msteams&gt;</code></li>
+<li class=""><code>--local</code></li>
+<li class=""><code>--deliver</code></li>
+<li class=""><code>--json</code></li>
+<li class=""><code>--timeout &lt;seconds&gt;</code></li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="agents"><code>agents</code><a href="#agents" class="hash-link" aria-label="agents的直接链接" title="agents的直接链接" translate="no">​</a></h3>
+<p>管理隔离代理（工作空间 + 认证 + 路由）。</p>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="agents-list"><code>agents list</code><a href="#agents-list" class="hash-link" aria-label="agents-list的直接链接" title="agents-list的直接链接" translate="no">​</a></h4>
+<p>列出配置的代理。</p>
+<p>选项：</p>
+<ul>
+<li class=""><code>--json</code></li>
+<li class=""><code>--bindings</code></li>
+</ul>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="agents-add-name"><code>agents add [name]</code><a href="#agents-add-name" class="hash-link" aria-label="agents-add-name的直接链接" title="agents-add-name的直接链接" translate="no">​</a></h4>
+<p>添加一个新的隔离代理。运行指导向导，除非传递了标志（或 <code>--non-interactive</code>）；非交互模式下需要 <code>--workspace</code>。</p>
+<p>选项：</p>
+<ul>
+<li class=""><code>--workspace &lt;dir&gt;</code></li>
+<li class=""><code>--model &lt;id&gt;</code></li>
+<li class=""><code>--agent-dir &lt;dir&gt;</code></li>
+<li class=""><code>--bind &lt;channel[:accountId]&gt;</code> （可重复）</li>
+<li class=""><code>--non-interactive</code></li>
+<li class=""><code>--json</code></li>
+</ul>
+<p>绑定规范使用 <code>channel[:accountId]</code>。当 WhatsApp 的 <code>accountId</code> 被省略时，使用默认账户 ID。</p>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="agents-delete-id"><code>agents delete &lt;id&gt;</code><a href="#agents-delete-id" class="hash-link" aria-label="agents-delete-id的直接链接" title="agents-delete-id的直接链接" translate="no">​</a></h4>
+<p>删除代理并清理其工作空间 + 状态。</p>
+<p>选项：</p>
+<ul>
+<li class=""><code>--force</code></li>
+<li class=""><code>--json</code></li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="acp"><code>acp</code><a href="#acp" class="hash-link" aria-label="acp的直接链接" title="acp的直接链接" translate="no">​</a></h3>
+<p>运行连接 IDE 到网关的 ACP 桥接器。</p>
+<p>完整选项和示例参见 <a class="" href="/moltbot-doc/cli/acp"><code>acp</code></a>。</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="status"><code>status</code><a href="#status" class="hash-link" aria-label="status的直接链接" title="status的直接链接" translate="no">​</a></h3>
+<p>显示链接会话健康状况和最近接收者。</p>
+<p>选项：</p>
+<ul>
+<li class=""><code>--json</code></li>
+<li class=""><code>--all</code> （完整诊断；只读，可粘贴）</li>
+<li class=""><code>--deep</code> （探测通道）</li>
+<li class=""><code>--usage</code> （显示模型提供商使用量/配额）</li>
+<li class=""><code>--timeout &lt;ms&gt;</code></li>
+<li class=""><code>--verbose</code></li>
+<li class=""><code>--debug</code> （<code>--verbose</code> 的别名）</li>
+</ul>
+<p>注释：</p>
+<ul>
+<li class="">概述包括网关 + 节点主机服务状态（当可用时）。</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="使用量跟踪">使用量跟踪<a href="#使用量跟踪" class="hash-link" aria-label="使用量跟踪的直接链接" title="使用量跟踪的直接链接" translate="no">​</a></h3>
+<p>当 OAuth/API 凭据可用时，Moltbot 可以显示提供商使用量/配额。</p>
+<p>界面：</p>
+<ul>
+<li class=""><code>/status</code> （在可用时添加简短的提供商使用量行）</li>
+<li class=""><code>moltbot status --usage</code> （打印完整的提供商分解）</li>
+<li class="">macOS 菜单栏（上下文下的使用量部分）</li>
+</ul>
+<p>注释：</p>
+<ul>
+<li class="">数据直接来自提供商使用量端点（无估算）。</li>
+<li class="">提供商：Anthropic、GitHub Copilot、OpenAI Codex OAuth，以及启用这些提供商插件时的 Gemini CLI/Antigravity。</li>
+<li class="">如果不存在匹配的凭据，则隐藏使用量。</li>
+<li class="">详情：参见 <a class="" href="/moltbot-doc/concepts/usage-tracking">使用量跟踪</a>。</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="health"><code>health</code><a href="#health" class="hash-link" aria-label="health的直接链接" title="health的直接链接" translate="no">​</a></h3>
+<p>从运行中的网关获取健康状况。</p>
+<p>选项：</p>
+<ul>
+<li class=""><code>--json</code></li>
+<li class=""><code>--timeout &lt;ms&gt;</code></li>
+<li class=""><code>--verbose</code></li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="sessions"><code>sessions</code><a href="#sessions" class="hash-link" aria-label="sessions的直接链接" title="sessions的直接链接" translate="no">​</a></h3>
+<p>列出存储的对话会话。</p>
+<p>选项：</p>
+<ul>
+<li class=""><code>--json</code></li>
+<li class=""><code>--verbose</code></li>
+<li class=""><code>--store &lt;path&gt;</code></li>
+<li class=""><code>--active &lt;minutes&gt;</code></li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="重置--卸载">重置 / 卸载<a href="#重置--卸载" class="hash-link" aria-label="重置 / 卸载的直接链接" title="重置 / 卸载的直接链接" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="reset"><code>reset</code><a href="#reset" class="hash-link" aria-label="reset的直接链接" title="reset的直接链接" translate="no">​</a></h3>
+<p>重置本地配置/状态（保留 CLI 安装）。</p>
+<p>选项：</p>
+<ul>
+<li class=""><code>--scope &lt;config|config+creds+sessions|full&gt;</code></li>
+<li class=""><code>--yes</code></li>
+<li class=""><code>--non-interactive</code></li>
+<li class=""><code>--dry-run</code></li>
+</ul>
+<p>注释：</p>
+<ul>
+<li class=""><code>--non-interactive</code> 需要 <code>--scope</code> 和 <code>--yes</code>。</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="uninstall"><code>uninstall</code><a href="#uninstall" class="hash-link" aria-label="uninstall的直接链接" title="uninstall的直接链接" translate="no">​</a></h3>
+<p>卸载网关服务 + 本地数据（CLI 保留）。</p>
+<p>选项：</p>
+<ul>
+<li class=""><code>--service</code></li>
+<li class=""><code>--state</code></li>
+<li class=""><code>--workspace</code></li>
+<li class=""><code>--app</code></li>
+<li class=""><code>--all</code></li>
+<li class=""><code>--yes</code></li>
+<li class=""><code>--non-interactive</code></li>
+<li class=""><code>--dry-run</code></li>
+</ul>
+<p>注释：</p>
+<ul>
+<li class=""><code>--non-interactive</code> 需要 <code>--yes</code> 和显式范围（或 <code>--all</code>）。</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="网关">网关<a href="#网关" class="hash-link" aria-label="网关的直接链接" title="网关的直接链接" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="gateway"><code>gateway</code><a href="#gateway" class="hash-link" aria-label="gateway的直接链接" title="gateway的直接链接" translate="no">​</a></h3>
+<p>运行 WebSocket 网关。</p>
+<p>选项：</p>
+<ul>
+<li class=""><code>--port &lt;port&gt;</code></li>
+<li class=""><code>--bind &lt;loopback|tailnet|lan|auto|custom&gt;</code></li>
+<li class=""><code>--token &lt;token&gt;</code></li>
+<li class=""><code>--auth &lt;token|password&gt;</code></li>
+<li class=""><code>--password &lt;password&gt;</code></li>
+<li class=""><code>--tailscale &lt;off|serve|funnel&gt;</code></li>
+<li class=""><code>--tailscale-reset-on-exit</code></li>
+<li class=""><code>--allow-unconfigured</code></li>
+<li class=""><code>--dev</code></li>
+<li class=""><code>--reset</code> （重置开发配置 + 凭据 + 会话 + 工作空间）</li>
+<li class=""><code>--force</code> （杀死端口上的现有监听器）</li>
+<li class=""><code>--verbose</code></li>
+<li class=""><code>--claude-cli-logs</code></li>
+<li class=""><code>--ws-log &lt;auto|full|compact&gt;</code></li>
+<li class=""><code>--compact</code> （<code>--ws-log compact</code> 的别名）</li>
+<li class=""><code>--raw-stream</code></li>
+<li class=""><code>--raw-stream-path &lt;path&gt;</code></li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="gateway-service"><code>gateway service</code><a href="#gateway-service" class="hash-link" aria-label="gateway-service的直接链接" title="gateway-service的直接链接" translate="no">​</a></h3>
+<p>管理网关服务（launchd/systemd/schtasks）。</p>
+<p>子命令：</p>
+<ul>
+<li class=""><code>gateway status</code> （默认探测网关 RPC）</li>
+<li class=""><code>gateway install</code> （服务安装）</li>
+<li class=""><code>gateway uninstall</code></li>
+<li class=""><code>gateway start</code></li>
+<li class=""><code>gateway stop</code></li>
+<li class=""><code>gateway restart</code></li>
+</ul>
+<p>注释：</p>
+<ul>
+<li class=""><code>gateway status</code> 默认使用服务解析的端口/配置探测网关 RPC（使用 <code>--url/--token/--password</code> 覆盖）。</li>
+<li class=""><code>gateway status</code> 支持 <code>--no-probe</code>、<code>--deep</code> 和 <code>--json</code> 用于脚本。</li>
+<li class=""><code>gateway status</code> 在检测到时也会显示旧或额外网关服务（<code>--deep</code> 添加系统级扫描）。按配置文件命名的 Moltbot 服务被视为一级公民，不会标记为&quot;额外&quot;。</li>
+<li class=""><code>gateway status</code> 打印 CLI 使用的配置路径与服务可能使用的配置路径（服务环境），加上解析的探测目标 URL。</li>
+<li class=""><code>gateway install|uninstall|start|stop|restart</code> 支持 <code>--json</code> 用于脚本（默认输出保持人性化）。</li>
+<li class=""><code>gateway install</code> 默认为 Node 运行时；<strong>不推荐</strong> bun（WhatsApp/Telegram bug）。</li>
+<li class=""><code>gateway install</code> 选项：<code>--port</code>、<code>--runtime</code>、<code>--token</code>、<code>--force</code>、<code>--json</code>。</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="logs"><code>logs</code><a href="#logs" class="hash-link" aria-label="logs的直接链接" title="logs的直接链接" translate="no">​</a></h3>
+<p>通过 RPC 跟踪网关文件日志。</p>
+<p>注释：</p>
+<ul>
+<li class="">TTY 会话呈现彩色、结构化视图；非 TTY 回退到纯文本。</li>
+<li class=""><code>--json</code> 发出换行符分隔的 JSON（每行一个日志事件）。</li>
+</ul>
+<p>示例：</p>
+<div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#D6DEEB;--prism-background-color:#001122"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#D6DEEB;background-color:#001122"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#D6DEEB"><span class="token plain">moltbot logs --follow</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">moltbot logs --limit 200</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">moltbot logs --plain</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">moltbot logs --json</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">moltbot logs --no-color</span><br></span></code></pre></div></div>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="gateway-subcommand"><code>gateway &lt;subcommand&gt;</code><a href="#gateway-subcommand" class="hash-link" aria-label="gateway-subcommand的直接链接" title="gateway-subcommand的直接链接" translate="no">​</a></h3>
+<p>网关 CLI 助手（RPC 子命令使用 <code>--url</code>、<code>--token</code>、<code>--password</code>、<code>--timeout</code>、<code>--expect-final</code>）。</p>
+<p>子命令：</p>
+<ul>
+<li class=""><code>gateway call &lt;method&gt; [--params &lt;json&gt;]</code></li>
+<li class=""><code>gateway health</code></li>
+<li class=""><code>gateway status</code></li>
+<li class=""><code>gateway probe</code></li>
+<li class=""><code>gateway discover</code></li>
+<li class=""><code>gateway install|uninstall|start|stop|restart</code></li>
+<li class=""><code>gateway run</code></li>
+</ul>
+<p>常用 RPC：</p>
+<ul>
+<li class=""><code>config.apply</code> （验证 + 写入配置 + 重启 + 唤醒）</li>
+<li class=""><code>config.patch</code> （合并部分更新 + 重启 + 唤醒）</li>
+<li class=""><code>update.run</code> （运行更新 + 重启 + 唤醒）</li>
+</ul>
+<p>提示：直接调用 <code>config.set</code>/<code>config.apply</code>/<code>config.patch</code> 时，如果配置已存在，
+从 <code>config.get</code> 传递 <code>baseHash</code>。</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="模型">模型<a href="#模型" class="hash-link" aria-label="模型的直接链接" title="模型的直接链接" translate="no">​</a></h2>
+<p>关于回退行为和扫描策略，参见 <a class="" href="/moltbot-doc/concepts/models">/concepts/models</a>。</p>
+<p>首选 Anthropic 认证（setup-token）：</p>
+<div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#D6DEEB;--prism-background-color:#001122"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#D6DEEB;background-color:#001122"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#D6DEEB"><span class="token plain">claude setup-token</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">moltbot models auth setup-token --provider anthropic</span><br></span><span class="token-line" style="color:#D6DEEB"><span class="token plain">moltbot models status</span><br></span></code></pre></div></div>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="models-根"><code>models</code> （根）<a href="#models-根" class="hash-link" aria-label="models-根的直接链接" title="models-根的直接链接" translate="no">​</a></h3>
+<p><code>moltbot models</code> 是 <code>models status</code> 的别名。</p>
+<p>根选项：</p>
+<ul>
+<li class=""><code>--status-json</code> （<code>models status --json</code> 的别名）</li>
+<li class=""><code>--status-plain</code> （<code>models status --plain</code> 的别名）</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="models-list"><code>models list</code><a href="#models-list" class="hash-link" aria-label="models-list的直接链接" title="models-list的直接链接" translate="no">​</a></h3>
+<p>选项：</p>
+<ul>
+<li class=""><code>--all</code></li>
+<li class=""><code>--local</code></li>
+<li class=""><code>--provider &lt;name&gt;</code></li>
+<li class=""><code>--json</code></li>
+<li class=""><code>--plain</code></li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="models-status"><code>models status</code><a href="#models-status" class="hash-link" aria-label="models-status的直接链接" title="models-status的直接链接" translate="no">​</a></h3>
+<p>选项：</p>
+<ul>
+<li class=""><code>--json</code></li>
+<li class=""><code>--plain</code></li>
+<li class=""><code>--check</code> （退出 1=过期/缺失，2=即将到期）</li>
+<li class=""><code>--probe</code> （配置认证配置文件的实时探测）</li>
+<li class=""><code>--probe-provider &lt;name&gt;</code></li>
+<li class=""><code>--probe-profile &lt;id&gt;</code> （重复或逗号分隔）</li>
+<li class=""><code>--probe-timeout &lt;ms&gt;</code></li>
+<li class=""><code>--probe-concurrency &lt;n&gt;</code></li>
+<li class=""><code>--probe-max-tokens &lt;n&gt;</code></li>
+</ul>
+<p>始终包含认证概述和认证存储中配置文件的 OAuth 过期状态。
+<code>--probe</code> 运行实时请求（可能消耗令牌并触发速率限制）。</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="models-set-model"><code>models set &lt;model&gt;</code><a href="#models-set-model" class="hash-link" aria-label="models-set-model的直接链接" title="models-set-model的直接链接" translate="no">​</a></h3>
+<p>设置 <code>agents.defaults.model.primary</code>。</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="models-set-image-model"><code>models set-image &lt;model&gt;</code><a href="#models-set-image-model" class="hash-link" aria-label="models-set-image-model的直接链接" title="models-set-image-model的直接链接" translate="no">​</a></h3>
+<p>设置 <code>agents.defaults.imageModel.primary</code>。</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="models-aliases-listaddremove"><code>models aliases list|add|remove</code><a href="#models-aliases-listaddremove" class="hash-link" aria-label="models-aliases-listaddremove的直接链接" title="models-aliases-listaddremove的直接链接" translate="no">​</a></h3>
+<p>选项：</p>
+<ul>
+<li class=""><code>list</code>: <code>--json</code>, <code>--plain</code></li>
+<li class=""><code>add &lt;alias&gt; &lt;model&gt;</code></li>
+<li class=""><code>remove &lt;alias&gt;</code></li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="models-fallbacks-listaddremoveclear"><code>models fallbacks list|add|remove|clear</code><a href="#models-fallbacks-listaddremoveclear" class="hash-link" aria-label="models-fallbacks-listaddremoveclear的直接链接" title="models-fallbacks-listaddremoveclear的直接链接" translate="no">​</a></h3>
+<p>选项：</p>
+<ul>
+<li class=""><code>list</code>: <code>--json</code>, <code>--plain</code></li>
+<li class=""><code>add &lt;model&gt;</code></li>
+<li class=""><code>remove &lt;model&gt;</code></li>
+<li class=""><code>clear</code></li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="models-image-fallbacks-listaddremoveclear"><code>models image-fallbacks list|add|remove|clear</code><a href="#models-image-fallbacks-listaddremoveclear" class="hash-link" aria-label="models-image-fallbacks-listaddremoveclear的直接链接" title="models-image-fallbacks-listaddremoveclear的直接链接" translate="no">​</a></h3>
+<p>选项：</p>
+<ul>
+<li class=""><code>list</code>: <code>--json</code>, <code>--plain</code></li>
+<li class=""><code>add &lt;model&gt;</code></li>
+<li class=""><code>remove &lt;model&gt;</code></li>
+<li class=""><code>clear</code></li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="models-scan"><code>models scan</code><a href="#models-scan" class="hash-link" aria-label="models-scan的直接链接" title="models-scan的直接链接" translate="no">​</a></h3>
+<p>选项：</p>
+<ul>
+<li class=""><code>--min-params &lt;b&gt;</code></li>
+<li class=""><code>--max-age-days &lt;days&gt;</code></li>
+<li class=""><code>--provider &lt;name&gt;</code></li>
+<li class=""><code>--max-candidates &lt;n&gt;</code></li>
+<li class=""><code>--timeout &lt;ms&gt;</code></li>
+<li class=""><code>--concurrency &lt;n&gt;</code></li>
+<li class=""><code>--no-probe</code></li>
+<li class=""><code>--yes</code></li>
+<li class=""><code>--no-input</code></li>
+<li class=""><code>--set-default</code></li>
+<li class=""><code>--set-image</code></li>
+<li class=""><code>--json</code></li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="models-auth-addsetup-tokenpaste-token"><code>models auth add|setup-token|paste-token</code><a href="#models-auth-addsetup-tokenpaste-token" class="hash-link" aria-label="models-auth-addsetup-tokenpaste-token的直接链接" title="models-auth-addsetup-tokenpaste-token的直接链接" translate="no">​</a></h3>
+<p>选项：</p>
+<ul>
+<li class=""><code>add</code>: 交互式认证助手</li>
+<li class=""><code>setup-token</code>: <code>--provider &lt;name&gt;</code> （默认 <code>anthropic</code>），<code>--yes</code></li>
+<li class=""><code>paste-token</code>: <code>--provider &lt;name&gt;</code>，<code>--profile-id &lt;id&gt;</code>，<code>--expires-in &lt;duration&gt;</code></li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="models-auth-order-getsetclear"><code>models auth order get|set|clear</code><a href="#models-auth-order-getsetclear" class="hash-link" aria-label="models-auth-order-getsetclear的直接链接" title="models-auth-order-getsetclear的直接链接" translate="no">​</a></h3>
+<p>选项：</p>
+<ul>
+<li class=""><code>get</code>: <code>--provider &lt;name&gt;</code>，<code>--agent &lt;id&gt;</code>，<code>--json</code></li>
+<li class=""><code>set</code>: <code>--provider &lt;name&gt;</code>，<code>--agent &lt;id&gt;</code>，<code>&lt;profileIds...&gt;</code></li>
+<li class=""><code>clear</code>: <code>--provider &lt;name&gt;</code>，<code>--agent &lt;id&gt;</code></li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="系统">系统<a href="#系统" class="hash-link" aria-label="系统的直接链接" title="系统的直接链接" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="system-event"><code>system event</code><a href="#system-event" class="hash-link" aria-label="system-event的直接链接" title="system-event的直接链接" translate="no">​</a></h3>
+<p>排队系统事件并可选触发心跳（网关 RPC）。</p>
+<p>必需：</p>
+<ul>
+<li class=""><code>--text &lt;text&gt;</code></li>
+</ul>
+<p>选项：</p>
+<ul>
+<li class=""><code>--mode &lt;now|next-heartbeat&gt;</code></li>
+<li class=""><code>--json</code></li>
+<li class=""><code>--url</code>, <code>--token</code>, <code>--timeout</code>, <code>--expect-final</code></li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="system-heartbeat-lastenabledisable"><code>system heartbeat last|enable|disable</code><a href="#system-heartbeat-lastenabledisable" class="hash-link" aria-label="system-heartbeat-lastenabledisable的直接链接" title="system-heartbeat-lastenabledisable的直接链接" translate="no">​</a></h3>
+<p>心跳控制（网关 RPC）。</p>
+<p>选项：</p>
+<ul>
+<li class=""><code>--json</code></li>
+<li class=""><code>--url</code>, <code>--token</code>, <code>--timeout</code>, <code>--expect-final</code></li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="system-presence"><code>system presence</code><a href="#system-presence" class="hash-link" aria-label="system-presence的直接链接" title="system-presence的直接链接" translate="no">​</a></h3>
+<p>列出系统存在条目（网关 RPC）。</p>
+<p>选项：</p>
+<ul>
+<li class=""><code>--json</code></li>
+<li class=""><code>--url</code>, <code>--token</code>, <code>--timeout</code>, <code>--expect-final</code></li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="cron">Cron<a href="#cron" class="hash-link" aria-label="Cron的直接链接" title="Cron的直接链接" translate="no">​</a></h2>
+<p>管理计划作业（网关 RPC）。参见 <a class="" href="/moltbot-doc/automation/cron-jobs">/automation/cron-jobs</a>。</p>
+<p>子命令：</p>
+<ul>
+<li class=""><code>cron status [--json]</code></li>
+<li class=""><code>cron list [--all] [--json]</code> （默认表格输出；使用 <code>--json</code> 获取原始数据）</li>
+<li class=""><code>cron add</code> （别名：<code>create</code>；需要 <code>--name</code> 和 <code>--at</code> | <code>--every</code> | <code>--cron</code> 中的恰好一个，以及 <code>--system-event</code> | <code>--message</code> 中的恰好一个负载）</li>
+<li class=""><code>cron edit &lt;id&gt;</code> （修补字段）</li>
+<li class=""><code>cron rm &lt;id&gt;</code> （别名：<code>remove</code>, <code>delete</code>）</li>
+<li class=""><code>cron enable &lt;id&gt;</code></li>
+<li class=""><code>cron disable &lt;id&gt;</code></li>
+<li class=""><code>cron runs --id &lt;id&gt; [--limit &lt;n&gt;]</code></li>
+<li class=""><code>cron run &lt;id&gt; [--force]</code></li>
+</ul>
+<p>所有 <code>cron</code> 命令接受 <code>--url</code>, <code>--token</code>, <code>--timeout</code>, <code>--expect-final</code>。</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="节点主机">节点主机<a href="#节点主机" class="hash-link" aria-label="节点主机的直接链接" title="节点主机的直接链接" translate="no">​</a></h2>
+<p><code>node</code> 运行<strong>无头节点主机</strong>或将之作为后台服务管理。参见
+<a class="" href="/moltbot-doc/cli/node"><code>moltbot node</code></a>。</p>
+<p>子命令：</p>
+<ul>
+<li class=""><code>node run --host &lt;gateway-host&gt; --port 18789</code></li>
+<li class=""><code>node status</code></li>
+<li class=""><code>node install [--host &lt;gateway-host&gt;] [--port &lt;port&gt;] [--tls] [--tls-fingerprint &lt;sha256&gt;] [--node-id &lt;id&gt;] [--display-name &lt;name&gt;] [--runtime &lt;node|bun&gt;] [--force]</code></li>
+<li class=""><code>node uninstall</code></li>
+<li class=""><code>node stop</code></li>
+<li class=""><code>node restart</code></li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="节点">节点<a href="#节点" class="hash-link" aria-label="节点的直接链接" title="节点的直接链接" translate="no">​</a></h2>
+<p><code>nodes</code> 与网关通信并针对配对的节点。参见 <a class="" href="/moltbot-doc/nodes">/nodes</a>。</p>
+<p>常用选项：</p>
+<ul>
+<li class=""><code>--url</code>, <code>--token</code>, <code>--timeout</code>, <code>--json</code></li>
+</ul>
+<p>子命令：</p>
+<ul>
+<li class=""><code>nodes status [--connected] [--last-connected &lt;duration&gt;]</code></li>
+<li class=""><code>nodes describe --node &lt;id|name|ip&gt;</code></li>
+<li class=""><code>nodes list [--connected] [--last-connected &lt;duration&gt;]</code></li>
+<li class=""><code>nodes pending</code></li>
+<li class=""><code>nodes approve &lt;requestId&gt;</code></li>
+<li class=""><code>nodes reject &lt;requestId&gt;</code></li>
+<li class=""><code>nodes rename --node &lt;id|name|ip&gt; --name &lt;displayName&gt;</code></li>
+<li class=""><code>nodes invoke --node &lt;id|name|ip&gt; --command &lt;command&gt; [--params &lt;json&gt;] [--invoke-timeout &lt;ms&gt;] [--idempotency-key &lt;key&gt;]</code></li>
+<li class=""><code>nodes run --node &lt;id|name|ip&gt; [--cwd &lt;path&gt;] [--env KEY=VAL] [--command-timeout &lt;ms&gt;] [--needs-screen-recording] [--invoke-timeout &lt;ms&gt;] &lt;command...&gt;</code> （mac 节点或无头节点主机）</li>
+<li class=""><code>nodes notify --node &lt;id|name|ip&gt; [--title &lt;text&gt;] [--body &lt;text&gt;] [--sound &lt;name&gt;] [--priority &lt;passive|active|timeSensitive&gt;] [--delivery &lt;system|overlay|auto&gt;] [--invoke-timeout &lt;ms&gt;]</code> （仅 mac）</li>
+</ul>
+<p>摄像头：</p>
+<ul>
+<li class=""><code>nodes camera list --node &lt;id|name|ip&gt;</code></li>
+<li class=""><code>nodes camera snap --node &lt;id|name|ip&gt; [--facing front|back|both] [--device-id &lt;id&gt;] [--max-width &lt;px&gt;] [--quality &lt;0-1&gt;] [--delay-ms &lt;ms&gt;] [--invoke-timeout &lt;ms&gt;]</code></li>
+<li class=""><code>nodes camera clip --node &lt;id|name|ip&gt; [--facing front|back] [--device-id &lt;id&gt;] [--duration &lt;ms|10s|1m&gt;] [--no-audio] [--invoke-timeout &lt;ms&gt;]</code></li>
+</ul>
+<p>画布 + 屏幕：</p>
+<ul>
+<li class=""><code>nodes canvas snapshot --node &lt;id|name|ip&gt; [--format png|jpg|jpeg] [--max-width &lt;px&gt;] [--quality &lt;0-1&gt;] [--invoke-timeout &lt;ms&gt;]</code></li>
+<li class=""><code>nodes canvas present --node &lt;id|name|ip&gt; [--target &lt;urlOrPath&gt;] [--x &lt;px&gt;] [--y &lt;px&gt;] [--width &lt;px&gt;] [--height &lt;px&gt;] [--invoke-timeout &lt;ms&gt;]</code></li>
+<li class=""><code>nodes canvas hide --node &lt;id|name|ip&gt; [--invoke-timeout &lt;ms&gt;]</code></li>
+<li class=""><code>nodes canvas navigate &lt;url&gt; --node &lt;id|name|ip&gt; [--invoke-timeout &lt;ms&gt;]</code></li>
+<li class=""><code>nodes canvas eval [&lt;js&gt;] --node &lt;id|name|ip&gt; [--js &lt;code&gt;] [--invoke-timeout &lt;ms&gt;]</code></li>
+<li class=""><code>nodes canvas a2ui push --node &lt;id|name|ip&gt; (--jsonl &lt;path&gt; | --text &lt;text&gt;) [--invoke-timeout &lt;ms&gt;]</code></li>
+<li class=""><code>nodes canvas a2ui reset --node &lt;id|name|ip&gt; [--invoke-timeout &lt;ms&gt;]</code></li>
+<li class=""><code>nodes screen record --node &lt;id|name|ip&gt; [--screen &lt;index&gt;] [--duration &lt;ms|10s&gt;] [--fps &lt;n&gt;] [--no-audio] [--out &lt;path&gt;] [--invoke-timeout &lt;ms&gt;]</code></li>
+</ul>
+<p>位置：</p>
+<ul>
+<li class=""><code>nodes location get --node &lt;id|name|ip&gt; [--max-age &lt;ms&gt;] [--accuracy &lt;coarse|balanced|precise&gt;] [--location-timeout &lt;ms&gt;] [--invoke-timeout &lt;ms&gt;]</code></li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="浏览器">浏览器<a href="#浏览器" class="hash-link" aria-label="浏览器的直接链接" title="浏览器的直接链接" translate="no">​</a></h2>
+<p>浏览器控制 CLI（专用 Chrome/Brave/Edge/Chromium）。参见 <a class="" href="/moltbot-doc/cli/browser"><code>moltbot browser</code></a> 和 <a class="" href="/moltbot-doc/tools/browser">浏览器工具</a>。</p>
+<p>常用选项：</p>
+<ul>
+<li class=""><code>--url</code>, <code>--token</code>, <code>--timeout</code>, <code>--json</code></li>
+<li class=""><code>--browser-profile &lt;name&gt;</code></li>
+</ul>
+<p>管理：</p>
+<ul>
+<li class=""><code>browser status</code></li>
+<li class=""><code>browser start</code></li>
+<li class=""><code>browser stop</code></li>
+<li class=""><code>browser reset-profile</code></li>
+<li class=""><code>browser tabs</code></li>
+<li class=""><code>browser open &lt;url&gt;</code></li>
+<li class=""><code>browser focus &lt;targetId&gt;</code></li>
+<li class=""><code>browser close [targetId]</code></li>
+<li class=""><code>browser profiles</code></li>
+<li class=""><code>browser create-profile --name &lt;name&gt; [--color &lt;hex&gt;] [--cdp-url &lt;url&gt;]</code></li>
+<li class=""><code>browser delete-profile --name &lt;name&gt;</code></li>
+</ul>
+<p>检查：</p>
+<ul>
+<li class=""><code>browser screenshot [targetId] [--full-page] [--ref &lt;ref&gt;] [--element &lt;selector&gt;] [--type png|jpeg]</code></li>
+<li class=""><code>browser snapshot [--format aria|ai] [--target-id &lt;id&gt;] [--limit &lt;n&gt;] [--interactive] [--compact] [--depth &lt;n&gt;] [--selector &lt;sel&gt;] [--out &lt;path&gt;]</code></li>
+</ul>
+<p>操作：</p>
+<ul>
+<li class=""><code>browser navigate &lt;url&gt; [--target-id &lt;id&gt;]</code></li>
+<li class=""><code>browser resize &lt;width&gt; &lt;height&gt; [--target-id &lt;id&gt;]</code></li>
+<li class=""><code>browser click &lt;ref&gt; [--double] [--button &lt;left|right|middle&gt;] [--modifiers &lt;csv&gt;] [--target-id &lt;id&gt;]</code></li>
+<li class=""><code>browser type &lt;ref&gt; &lt;text&gt; [--submit] [--slowly] [--target-id &lt;id&gt;]</code></li>
+<li class=""><code>browser press &lt;key&gt; [--target-id &lt;id&gt;]</code></li>
+<li class=""><code>browser hover &lt;ref&gt; [--target-id &lt;id&gt;]</code></li>
+<li class=""><code>browser drag &lt;startRef&gt; &lt;endRef&gt; [--target-id &lt;id&gt;]</code></li>
+<li class=""><code>browser select &lt;ref&gt; &lt;values...&gt; [--target-id &lt;id&gt;]</code></li>
+<li class=""><code>browser upload &lt;paths...&gt; [--ref &lt;ref&gt;] [--input-ref &lt;ref&gt;] [--element &lt;selector&gt;] [--target-id &lt;id&gt;] [--timeout-ms &lt;ms&gt;]</code></li>
+<li class=""><code>browser fill [--fields &lt;json&gt;] [--fields-file &lt;path&gt;] [--target-id &lt;id&gt;]</code></li>
+<li class=""><code>browser dialog --accept|--dismiss [--prompt &lt;text&gt;] [--target-id &lt;id&gt;] [--timeout-ms &lt;ms&gt;]</code></li>
+<li class=""><code>browser wait [--time &lt;ms&gt;] [--text &lt;value&gt;] [--text-gone &lt;value&gt;] [--target-id &lt;id&gt;]</code></li>
+<li class=""><code>browser evaluate --fn &lt;code&gt; [--ref &lt;ref&gt;] [--target-id &lt;id&gt;]</code></li>
+<li class=""><code>browser console [--level &lt;error|warn|info&gt;] [--target-id &lt;id&gt;]</code></li>
+<li class=""><code>browser pdf [--target-id &lt;id&gt;]</code></li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="文档搜索">文档搜索<a href="#文档搜索" class="hash-link" aria-label="文档搜索的直接链接" title="文档搜索的直接链接" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="docs-query"><code>docs [query...]</code><a href="#docs-query" class="hash-link" aria-label="docs-query的直接链接" title="docs-query的直接链接" translate="no">​</a></h3>
+<p>搜索实时文档索引。</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="tui">TUI<a href="#tui" class="hash-link" aria-label="TUI的直接链接" title="TUI的直接链接" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="tui-1"><code>tui</code><a href="#tui-1" class="hash-link" aria-label="tui-1的直接链接" title="tui-1的直接链接" translate="no">​</a></h3>
+<p>打开连接到网关的终端 UI。</p>
+<p>选项：</p>
+<ul>
+<li class=""><code>--url &lt;url&gt;</code></li>
+<li class=""><code>--token &lt;token&gt;</code></li>
+<li class=""><code>--password &lt;password&gt;</code></li>
+<li class=""><code>--session &lt;key&gt;</code></li>
+<li class=""><code>--deliver</code></li>
+<li class=""><code>--thinking &lt;level&gt;</code></li>
+<li class=""><code>--message &lt;text&gt;</code></li>
+<li class=""><code>--timeout-ms &lt;ms&gt;</code> （默认为 <code>agents.defaults.timeoutSeconds</code>）</li>
+<li class=""><code>--history-limit &lt;n&gt;</code></li>
+</ul></div></article><nav class="docusaurus-mt-lg pagination-nav" aria-label="文件选项卡"><a class="pagination-nav__link pagination-nav__link--prev" href="/moltbot-doc/docs/install/bun"><div class="pagination-nav__sublabel">上一页</div><div class="pagination-nav__label">Bun</div></a><a class="pagination-nav__link pagination-nav__link--next" href="/moltbot-doc/docs/cli/setup"><div class="pagination-nav__sublabel">下一页</div><div class="pagination-nav__label">设置</div></a></nav></div></div><div class="col col--3"><div class="tocWrapper_xKoj"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#命令页面" class="table-of-contents__link toc-highlight">命令页面</a></li><li><a href="#全局标志" class="table-of-contents__link toc-highlight">全局标志</a></li><li><a href="#输出样式" class="table-of-contents__link toc-highlight">输出样式</a></li><li><a href="#颜色方案" class="table-of-contents__link toc-highlight">颜色方案</a></li><li><a href="#命令树" class="table-of-contents__link toc-highlight">命令树</a></li><li><a href="#安全性" class="table-of-contents__link toc-highlight">安全性</a></li><li><a href="#插件" class="table-of-contents__link toc-highlight">插件</a></li><li><a href="#记忆" class="table-of-contents__link toc-highlight">记忆</a></li><li><a href="#聊天斜杠命令" class="table-of-contents__link toc-highlight">聊天斜杠命令</a></li><li><a href="#设置--入门" class="table-of-contents__link toc-highlight">设置 + 入门</a><ul><li><a href="#setup" class="table-of-contents__link toc-highlight"><code>setup</code></a></li><li><a href="#onboard" class="table-of-contents__link toc-highlight"><code>onboard</code></a></li><li><a href="#configure" class="table-of-contents__link toc-highlight"><code>configure</code></a></li><li><a href="#config" class="table-of-contents__link toc-highlight"><code>config</code></a></li><li><a href="#doctor" class="table-of-contents__link toc-highlight"><code>doctor</code></a></li></ul></li><li><a href="#通道助手" class="table-of-contents__link toc-highlight">通道助手</a><ul><li><a href="#channels" class="table-of-contents__link toc-highlight"><code>channels</code></a></li><li><a href="#skills" class="table-of-contents__link toc-highlight"><code>skills</code></a></li><li><a href="#pairing" class="table-of-contents__link toc-highlight"><code>pairing</code></a></li><li><a href="#webhooks-gmail" class="table-of-contents__link toc-highlight"><code>webhooks gmail</code></a></li><li><a href="#dns-setup" class="table-of-contents__link toc-highlight"><code>dns setup</code></a></li></ul></li><li><a href="#消息传递--代理" class="table-of-contents__link toc-highlight">消息传递 + 代理</a><ul><li><a href="#message" class="table-of-contents__link toc-highlight"><code>message</code></a></li><li><a href="#agent" class="table-of-contents__link toc-highlight"><code>agent</code></a></li><li><a href="#agents" class="table-of-contents__link toc-highlight"><code>agents</code></a></li><li><a href="#acp" class="table-of-contents__link toc-highlight"><code>acp</code></a></li><li><a href="#status" class="table-of-contents__link toc-highlight"><code>status</code></a></li><li><a href="#使用量跟踪" class="table-of-contents__link toc-highlight">使用量跟踪</a></li><li><a href="#health" class="table-of-contents__link toc-highlight"><code>health</code></a></li><li><a href="#sessions" class="table-of-contents__link toc-highlight"><code>sessions</code></a></li></ul></li><li><a href="#重置--卸载" class="table-of-contents__link toc-highlight">重置 / 卸载</a><ul><li><a href="#reset" class="table-of-contents__link toc-highlight"><code>reset</code></a></li><li><a href="#uninstall" class="table-of-contents__link toc-highlight"><code>uninstall</code></a></li></ul></li><li><a href="#网关" class="table-of-contents__link toc-highlight">网关</a><ul><li><a href="#gateway" class="table-of-contents__link toc-highlight"><code>gateway</code></a></li><li><a href="#gateway-service" class="table-of-contents__link toc-highlight"><code>gateway service</code></a></li><li><a href="#logs" class="table-of-contents__link toc-highlight"><code>logs</code></a></li><li><a href="#gateway-subcommand" class="table-of-contents__link toc-highlight"><code>gateway &lt;subcommand&gt;</code></a></li></ul></li><li><a href="#模型" class="table-of-contents__link toc-highlight">模型</a><ul><li><a href="#models-根" class="table-of-contents__link toc-highlight"><code>models</code> （根）</a></li><li><a href="#models-list" class="table-of-contents__link toc-highlight"><code>models list</code></a></li><li><a href="#models-status" class="table-of-contents__link toc-highlight"><code>models status</code></a></li><li><a href="#models-set-model" class="table-of-contents__link toc-highlight"><code>models set &lt;model&gt;</code></a></li><li><a href="#models-set-image-model" class="table-of-contents__link toc-highlight"><code>models set-image &lt;model&gt;</code></a></li><li><a href="#models-aliases-listaddremove" class="table-of-contents__link toc-highlight"><code>models aliases list|add|remove</code></a></li><li><a href="#models-fallbacks-listaddremoveclear" class="table-of-contents__link toc-highlight"><code>models fallbacks list|add|remove|clear</code></a></li><li><a href="#models-image-fallbacks-listaddremoveclear" class="table-of-contents__link toc-highlight"><code>models image-fallbacks list|add|remove|clear</code></a></li><li><a href="#models-scan" class="table-of-contents__link toc-highlight"><code>models scan</code></a></li><li><a href="#models-auth-addsetup-tokenpaste-token" class="table-of-contents__link toc-highlight"><code>models auth add|setup-token|paste-token</code></a></li><li><a href="#models-auth-order-getsetclear" class="table-of-contents__link toc-highlight"><code>models auth order get|set|clear</code></a></li></ul></li><li><a href="#系统" class="table-of-contents__link toc-highlight">系统</a><ul><li><a href="#system-event" class="table-of-contents__link toc-highlight"><code>system event</code></a></li><li><a href="#system-heartbeat-lastenabledisable" class="table-of-contents__link toc-highlight"><code>system heartbeat last|enable|disable</code></a></li><li><a href="#system-presence" class="table-of-contents__link toc-highlight"><code>system presence</code></a></li></ul></li><li><a href="#cron" class="table-of-contents__link toc-highlight">Cron</a></li><li><a href="#节点主机" class="table-of-contents__link toc-highlight">节点主机</a></li><li><a href="#节点" class="table-of-contents__link toc-highlight">节点</a></li><li><a href="#浏览器" class="table-of-contents__link toc-highlight">浏览器</a></li><li><a href="#文档搜索" class="table-of-contents__link toc-highlight">文档搜索</a><ul><li><a href="#docs-query" class="table-of-contents__link toc-highlight"><code>docs [query...]</code></a></li></ul></li><li><a href="#tui" class="table-of-contents__link toc-highlight">TUI</a><ul><li><a href="#tui-1" class="table-of-contents__link toc-highlight"><code>tui</code></a></li></ul></li></ul></div><div class="tocFooter_Fu2z"><div class="themeGroup_RzWV" role="group" aria-label="Theme"><button class="themeBtn_tGr6" aria-label="Light theme" title="Light"><svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor" aria-hidden="true"><path d="M12 18a6 6 0 1 1 0-12 6 6 0 0 1 0 12zm0-2a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM11 1h2v3h-2V1zm0 19h2v3h-2v-3zM3.515 4.929l1.414-1.414L7.05 5.636 5.636 7.05 3.515 4.93zM16.95 18.364l1.414-1.414 2.121 2.121-1.414 1.414-2.121-2.121zm2.121-14.85l1.414 1.415-2.121 2.121-1.414-1.414 2.121-2.121zM5.636 16.95l1.414 1.414-2.121 2.121-1.414-1.414 2.121-2.121zM23 11v2h-3v-2h3zM4 11v2H1v-2h3z"></path></svg></button><button class="themeBtn_tGr6 themeBtnActive_A6tm" aria-label="Dark theme" title="Dark"><svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor" aria-hidden="true"><path d="M11.38 2.019a7.5 7.5 0 1 0 10.6 10.6C21.83 17.963 17.315 22 12.002 22 6.477 22 2 17.523 2 12c0-5.314 4.038-9.827 9.38-10.28z"></path></svg></button></div></div></div></div></div></div></main></div></div></div><footer class="theme-layout-footer footer footer--dark"><div class="container container-fluid"><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2026 Moltbot Docs.</div></div></div></footer></div>
+</body>
+</html>
